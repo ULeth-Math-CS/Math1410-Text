@@ -9,7 +9,11 @@ We've studied the graphing of vectors; in this chapter we'll take this a step fu
 %\item T/F: To understand how the Cartesian plane is affected by multiplication by a matrix, it helps to know how the unit square is affected.
 \item		To understand how the Cartesian plane is affected by multiplication by a matrix, it helps to study how what is affected?
 \item		Transforming the Cartesian plane through matrix multiplication transforms straight lines into what kind of lines?
-\item T/F: If one draws a picture of a sheep on the Cartesian plane, then transformed the plane using the matrix $$\bmx{cc} -1&0\\0&1\emx,$$ one could say that the sheep was ``sheared.''
+\item T/F: If one draws a picture of a sheep on the Cartesian plane, then transformed the plane using the matrix 
+\[
+\bmx{cc} -1&0\\0&1\emx,
+\]
+one could say that the sheep was ``sheared.''
 }
 
 We studied in Section \ref{sec:geom_1} how to visualize vectors and how certain matrix arithmetic operations can be graphically represented. We limited our visual understanding of matrix  multiplication to graphing a vector, multiplying it by a matrix, then graphing the resulting vector. In this section we'll explore these multiplication ideas in greater depth. Instead of multiplying individual vectors by a matrix \tta, we'll study what happens when we multiply \textit{every} vector in the Cartesian plans by \tta.\footnote{No, we won't do them one by one.} \\
@@ -89,14 +93,35 @@ Because of the Distributive Property, demonstrated way back in Example \ref{ex_m
 
 One way of studying how the whole Cartesian plane is affected by multiplication by a matrix \tta\ is to study how the \textit{unit square} is affected. The unit square is the square with corners at the points $(0,0)$, $(1,0)$, $(1,1)$, and $(0,1)$. Each corner can be represented by the vector that points to it; multiply each of these vectors by \tta\ and we can get an idea of how \tta\ affects the whole Cartesian plane. 
 
-Let's try an example.\\
+Let's try an example.
 
-\example{ex_mv_3}{Plot the vectors of the unit square before and after they have been multiplied by \tta, where $$\tta = \bmx{cc} 1&4\\2&3\emx.$$ }
-{The four corners of the unit square can be represented by the vectors $$\bmx{c}0\\0\emx, \quad \bmx{c}1\\0\emx,\quad \bmx{c}1\\1\emx,\quad \bmx{c}0\\1\emx.$$ Multiplying each by \tta\ gives the vectors $$\bmx{c}0\\0\emx,\quad \bmx{c} 1\\2\emx,\quad\bmx{c}5\\5\emx,\quad \bmx{c}4\\3\emx,$$ respectively. 
+\medskip
+
+\example{ex_mv_3}{Visualizing a matrix transformation using vectors}{Plot the vectors of the unit square before and after they have been multiplied by \tta, where 
+\[
+\tta = \bmx{cc} 1&4\\2&3\emx.
+\] }
+{The four corners of the unit square can be represented by the vectors 
+\[
+\bmx{c}0\\0\emx, \quad \bmx{c}1\\0\emx,\quad \bmx{c}1\\1\emx,\quad \bmx{c}0\\1\emx.
+\]
+Multiplying each by \tta\ gives the vectors 
+\[
+\bmx{c}0\\0\emx,\quad \bmx{c} 1\\2\emx,\quad\bmx{c}5\\5\emx,\quad \bmx{c}4\\3\emx,
+\]
+respectively. 
 
 %\drawexampleline{ex_mv_3}
 
-(Hint: one way of using your calculator to do this for you quickly is to make a $2\times 4$ matrix whose columns are each of these vectors. In this case, create a matrix $$\ttb = \bmx{cccc}0&1&1&0\\0&0&1&1\emx.$$ Then multiply \ttb\ by \tta\ and read off the transformed vectors from the respective columns: $$\tta\ttb = \bmx{cccc}0&1&5&4\\0&2&5&3\emx.$$ This saves time, especially if you do a similar procedure for multiple matrices \tta. Of course, we can save more time by skipping the first column; since it is the column of zeros, it will stay the column of zeros after multiplication by \tta.)
+(Hint: one way of using your calculator to do this for you quickly is to make a $2\times 4$ matrix whose columns are each of these vectors. In this case, create a matrix 
+\[
+\ttb = \bmx{cccc}0&1&1&0\\0&0&1&1\emx.
+\]
+Then multiply \ttb\ by \tta\ and read off the transformed vectors from the respective columns: 
+\[
+\tta\ttb = \bmx{cccc}0&1&5&4\\0&2&5&3\emx.
+\]
+This saves time, especially if you do a similar procedure for multiple matrices \tta. Of course, we can save more time by skipping the first column; since it is the column of zeros, it will stay the column of zeros after multiplication by \tta.)
 
 The unit square and its transformation are graphed in Figure \ref{fig:mv_3}, where the shaped vertices correspond to each other across the two graphs. Note how the square got turned into some sort of quadrilateral (it's actually a parallelogram). A really interesting thing is how the triangular and square vertices seem to have changed places -- it is as though the square, in addition to being stretched out of shape, was flipped. 
 %
@@ -160,12 +185,18 @@ The unit square and its transformation are graphed in Figure \ref{fig:mv_3}, whe
 \end{myfigure}
 
 To stress how ``straight lines get transformed to straight lines,'' consider Figure \ref{fig:mv_3b}. Here, the unit square has some additional points drawn on it which correspond to the shaded dots on the transformed parallelogram. Note how relative distances are also preserved; the dot halfway between the black and square dots is transformed to a position along the line, halfway between the black and square dots.
-}\\ %\eexset
+}
 
+\medskip
 
-Much more can be said about this example. Before we delve into this, though, let's try one more example.\\
+Much more can be said about this example. Before we delve into this, though, let's try one more example.
 
-\example{ex_mv_4}{Plot the transformed unit square after it has been transformed by \tta, where $$\tta = \bmx{cc}0&-1\\1&0\emx.$$
+\medskip
+
+\example{ex_mv_4}{Visualizing a matrix transformation using a region}{Plot the transformed unit square after it has been transformed by \tta, where 
+\[
+\tta = \bmx{cc}0&-1\\1&0\emx.
+\]
 }
 {We'll put the vectors that correspond to each corner in a matrix \ttb\ as before and then multiply it on the left by \tta. Doing so gives:
 \begin{align*}
@@ -200,7 +231,9 @@ In Figure \ref{fig:mv_4} the unit square is again drawn along with its transform
 \end{myfigure}
 
 Make note of how the square moved. It did not simply ``slide'' to the left;\footnote{mathematically, that is called a \textit{translation}} nor did it ``flip'' across the $y$ axis. Rather, it was \textit{rotated} counterclockwise about the origin $90^\circ$. In a rotation, the shape of an object does not change; in our example, the square remained a square of the same size.
-}\\
+}
+
+\medskip
 
 We have broached the topic of how the Cartesian plane can be transformed via multiplication by a $2\times 2$ matrix \tta. We have seen two examples so far, and our intuition as to how the plane is changed has been informed only by seeing how the unit square changes. Let's explore this further by investigating two questions:
 	\begin{enumerate}
@@ -222,7 +255,11 @@ If you are just reading on, and haven't actually gone back and looked at the exa
 
 Let's now take the time to understand these four points. The first point should be clear; \zero\ will always be transformed to \zero\ via matrix multiplication. (Hence the hint in the middle of Example \ref{ex_mv_3}, where we are told that we can ignore entering in the column of zeros in the matrix \ttb.)
 
-We can understand the second and third points simultaneously. Let $$\tta = \bmx{cc}a&b\\c&d\emx, \quad \veone = \bmx{c}1\\0\emx \quad \text{ and } \quad \vetwo = \bmx{c}0\\1\emx.$$ What are \tta\veone\ and \tta\vetwo?
+We can understand the second and third points simultaneously. Let 
+\[
+\tta = \bmx{cc}a&b\\c&d\emx, \quad \veone = \bmx{c}1\\0\emx \quad \text{ and } \quad \vetwo = \bmx{c}0\\1\emx.
+\]
+What are \tta\veone\ and \tta\vetwo?
 
 \begin{align*}
 \tta\veone &= \bmx{cc}a&b\\c&d\emx\bmx{c}1\\0\emx \\
@@ -238,14 +275,20 @@ So by mere mechanics of matrix multiplication, the square corner \veone\ is tran
 
 Revisit now the question ``How do we find the matrix that performs a given transformation on the Cartesian plane?'' The answer follows from what we just did. Think about the given transformation and how it would transform the corners of the unit square. Make the first column of \tta\ the vector where \veone\ goes, and make the second column of \tta\ the vector where \vetwo\ goes.
 
-Let's practice this in the context of an example.\\
+Let's practice this in the context of an example.
 
-\example{ex_transf_1}{Find the matrix \tta\ that flips the Cartesian plane about the $x$ axis and then stretches the plane horizontally by a factor of two.}
+\medskip
+
+\example{ex_transf_1}{Determining a matrix transformation}{Find the matrix \tta\ that flips the Cartesian plane about the $x$ axis and then stretches the plane horizontally by a factor of two.}
 {We first consider $\veone = \bmx{c}1\\0\emx$. Where does this corner go to under the given transformation? Flipping the plane across the $x$ axis does not change \veone\ at all; stretching the plane sends \veone\ to $\bmx{c}2\\0\emx$. Therefore, the first column of \tta\ is $\bmx{c}2\\0\emx$.
 
 Now consider $\vetwo = \bmx{c}0\\1\emx$. Flipping the plane about the $x$ axis sends \vetwo\ to the vector $\bmx{c}0\\-1\emx$; subsequently stretching the plane horizontally does not affect this vector. Therefore the second column of \tta\ is $\bmx{c}0\\-1\emx$. 
 
-Putting this together gives $$\tta = \bmx{cc}2&0\\0&-1\emx.$$ To help visualize this, consider Figure \ref{fig:transf_1} where a shape is transformed under this matrix. Notice how it is turned upside down and is stretched horizontally by a factor of two. (The gridlines are given as a visual aid.)
+Putting this together gives 
+\[
+\tta = \bmx{cc}2&0\\0&-1\emx.
+\]
+To help visualize this, consider Figure \ref{fig:transf_1} where a shape is transformed under this matrix. Notice how it is turned upside down and is stretched horizontally by a factor of two. (The gridlines are given as a visual aid.)
 
 \begin{myfigure}
 \begin{center}
@@ -270,7 +313,9 @@ Putting this together gives $$\tta = \bmx{cc}2&0\\0&-1\emx.$$ To help visualize 
 \mycaption{Transforming the Cartesian plane in Example \ref{ex_transf_1}}
 \label{fig:transf_1}
 \end{myfigure}
-\vskip -2\baselineskip}\\
+\vskip -2\baselineskip}
+
+\medskip
 
 A while ago we asked two questions. The first was ``How do we find the matrix that performs a given transformation?'' We have just answered that question (although we will do more to explore it in the future). The second question was ``How does knowing how the unit square is transformed really help us understand how the entire plane is transformed?'' 
 
@@ -288,7 +333,14 @@ Consider Figure \ref{fig:trans} where the unit square (with vertices marked with
 \label{fig:trans}
 \end{myfigure}
 
-There are two ways to consider the solution to this question. First, we know now how to compute the transformation matrix; the new position of \veone\ is the first column of \tta, and the new position of \vetwo\ is the second column of \tta. Therefore, by looking at the figure, we can deduce that $$\tta = \bmx{cc} 1 & -1\\ 1&2\emx.\footnote{At least, \tta\ is close to that. The square corner could actually be at the point $(1.01,.99)$.}$$ To find where the point $(2,3)$ is sent, simply multiply $$\bmx{cc} 1 & -1\\ 1&2\emx\bmx{c}2\\3\emx = \bmx{c}-1\\8\emx.$$
+There are two ways to consider the solution to this question. First, we know now how to compute the transformation matrix; the new position of \veone\ is the first column of \tta, and the new position of \vetwo\ is the second column of \tta. Therefore, by looking at the figure, we can deduce that 
+\[
+\tta = \bmx{cc} 1 & -1\\ 1&2\emx.\footnote{At least, \tta\ is close to that. The square corner could actually be at the point $(1.01,.99)$.}
+\]
+To find where the point $(2,3)$ is sent, simply multiply 
+\[
+\bmx{cc} 1 & -1\\ 1&2\emx\bmx{c}2\\3\emx = \bmx{c}-1\\8\emx.
+\]
 
 There is another way of doing this which isn't as computational -- it doesn't involve computing the transformation matrix. Consider the following equalities:
 \begin{align*}
@@ -313,14 +365,23 @@ This last equality states something that is somewhat obvious: to arrive at the v
 \label{fig:trans2}
 \end{myfigure}
 
-We are coming to grips with how matrix transformations work. We asked two basic questions: ``How do we find the matrix for a given transformation?'' and ``How do we understand the transformation without the matrix?'', and we've answered each accompanied by one example. Let's do another example that demonstrates both techniques at once.\\
+We are coming to grips with how matrix transformations work. We asked two basic questions: ``How do we find the matrix for a given transformation?'' and ``How do we understand the transformation without the matrix?'', and we've answered each accompanied by one example. Let's do another example that demonstrates both techniques at once.
 
-\example{ex_transf_2}{First, find the matrix \tta\ that transforms the Cartesian plane by stretching it vertically by a factor of $1.5$, then stretches it horizontally by a factor of $0.5$, then rotates it clockwise about the origin $90^\circ$. Secondly, using the new locations of \veone\ and \vetwo, find the transformed location of the point $(-1,2)$.}
+\medskip
+
+\example{ex_transf_2}{Determining and analyzing a matrix transformation}{First, find the matrix \tta\ that transforms the Cartesian plane by stretching it vertically by a factor of $1.5$, then stretches it horizontally by a factor of $0.5$, then rotates it clockwise about the origin $90^\circ$. Secondly, using the new locations of \veone\ and \vetwo, find the transformed location of the point $(-1,2)$.}
 {To find \tta, first consider the new location of \veone. Stretching the plane vertically does not affect \veone; stretching the plane horizontally by a factor of $0.5$ changes \veone to $\bmx{c} 1/2\\0\emx$, and then rotating it $90^\circ$ about the origin moves it to $\bmx{c} 0\\-1/2\emx$. This is the first column of \tta. 
 
-Now consider the new location of \vetwo. Stretching the plane vertically changes it to $\bmx{c} 0\\ 3/2\emx$; stretching horizontally does not affect it, and rotating $90^\circ$ moves it to $\bmx{c} 3/2\\0\emx$. This is then the second column of \tta. This gives $$\tta = \bmx{cc} 0 & 3/2 \\ -1/2 & 0 \emx.$$
+Now consider the new location of \vetwo. Stretching the plane vertically changes it to $\bmx{c} 0\\ 3/2\emx$; stretching horizontally does not affect it, and rotating $90^\circ$ moves it to $\bmx{c} 3/2\\0\emx$. This is then the second column of \tta. This gives 
+\[
+\tta = \bmx{cc} 0 & 3/2 \\ -1/2 & 0 \emx.
+\]
 
-Where does the point $(-1,2)$ get sent to? The corresponding vector $\bmx{c}-1\\2\emx$ is found by going $-1$ units in the \veone\ direction and $2$ units in the \vetwo\ direction. Therefore, the transformation will send the vector to $-1$ units in the new \veone\ direction and $2$ units in the new \vetwo\ direction. This is sketched in Figure \ref{fig:transf_2_1}, along with the transformed unit square. We can also check this multiplicatively: $$\bmx{cc} 0 & 3/2 \\ -1/2 & 0 \emx \bmx{c}-1\\2\emx = \bmx{c} 3\\1/2\emx.$$ Figure \ref{fig:transf_2_2} shows the effects of the transformation on another shape.
+Where does the point $(-1,2)$ get sent to? The corresponding vector $\bmx{c}-1\\2\emx$ is found by going $-1$ units in the \veone\ direction and $2$ units in the \vetwo\ direction. Therefore, the transformation will send the vector to $-1$ units in the new \veone\ direction and $2$ units in the new \vetwo\ direction. This is sketched in Figure \ref{fig:transf_2_1}, along with the transformed unit square. We can also check this multiplicatively: 
+\[
+\bmx{cc} 0 & 3/2 \\ -1/2 & 0 \emx \bmx{c}-1\\2\emx = \bmx{c} 3\\1/2\emx.
+\]
+Figure \ref{fig:transf_2_2} shows the effects of the transformation on another shape.
 
 \begin{myfigure}
 \begin{center}
@@ -360,8 +421,9 @@ Where does the point $(-1,2)$ get sent to? The corresponding vector $\bmx{c}-1\\
 \mycaption{Transforming the Cartesian plane in Example \ref{ex_transf_2}}
 \label{fig:transf_2_2}
 \end{myfigure}
-\vskip -2\baselineskip}\\
-\clearpage
+\vskip -2\baselineskip}
+
+\medskip
 
 Right now we are focusing on transforming the Cartesian plane -- we are making 2D transformations. Knowing how to do this provides a foundation for transforming 3D space,\footnote{Actually, it provides a foundation for doing it in 4D, 5D, $\ldots$, 17D, etc. Those are just harder to visualize.} which, among other things, is very important when producing 3D computer graphics. Basic shapes can be drawn and then rotated, stretched, and/or moved to other regions of space. This also allows for things like ``moving the camera view.'' 
 
@@ -375,7 +437,9 @@ Let's look at some common transformations of the Cartesian plane and the matrice
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Horizontal stretch} by a factor of $k$.
-$$\bmx{cc}k&0\\0&1\emx$$
+\[
+\bmx{cc}k&0\\0&1\emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -396,7 +460,9 @@ $$\bmx{cc}k&0\\0&1\emx$$
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Vertical stretch} by a factor of $k$.
-$$\bmx{cc}1&0\\0&k\emx$$
+\[
+\bmx{cc}1&0\\0&k\emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -418,7 +484,9 @@ $$\bmx{cc}1&0\\0&k\emx$$
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Horizontal shear} by a factor of $k$.
-$$\bmx{cc}1&k\\0&1\emx$$
+\[
+\bmx{cc}1&k\\0&1\emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -439,7 +507,9 @@ $$\bmx{cc}1&k\\0&1\emx$$
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Vertical shear} by a factor of $k$.
-$$\bmx{cc}1&0\\k&1\emx$$
+\[
+\bmx{cc}1&0\\k&1\emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -460,7 +530,9 @@ $$\bmx{cc}1&0\\k&1\emx$$
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Horizontal reflection} across the $y$ axis.
-$$\bmx{cc}-1&0\\0&1\emx$$
+\[
+\bmx{cc}-1&0\\0&1\emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -480,7 +552,9 @@ $$\bmx{cc}-1&0\\0&1\emx$$
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Vertical reflection} across the $x$ axis.
-$$\bmx{cc}1&0\\0&-1\emx$$
+\[
+\bmx{cc}1&0\\0&-1\emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -500,7 +574,9 @@ $$\bmx{cc}1&0\\0&-1\emx$$
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Diagonal reflection} across the line $y=x$.
-$$\bmx{cc}0&1\\1&0\emx$$
+\[
+\bmx{cc}0&1\\1&0\emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -521,7 +597,9 @@ $$\bmx{cc}0&1\\1&0\emx$$
 
 \begin{minipage}{.3\linewidth}
 \raggedright\textbf{Rotation} around the origin by an angle of $\theta$.
-$$\bmx{cc}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta  \emx$$
+\[
+\bmx{cc}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta  \emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -546,7 +624,9 @@ $$\bmx{cc}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta  \emx$$
 
 (Note how the square is ``squashed'' down onto the $x$-axis.)
 
-$$\bmx{cc}1&0\\0&0  \emx$$
+\[
+\bmx{cc}1&0\\0&0  \emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -571,7 +651,9 @@ $$\bmx{cc}1&0\\0&0  \emx$$
 
 (Note how the square is ``squashed'' over onto the $y$-axis.)
 
-$$\bmx{cc}0&0\\0&1  \emx$$
+\[
+\bmx{cc}0&0\\0&1  \emx
+\]
 \end{minipage}
 \begin{minipage}{.7\linewidth}
 \begin{center}
@@ -589,9 +671,11 @@ $$\bmx{cc}0&0\\0&1  \emx$$
 
 \vskip 1cm
 
-Now that we have seen a healthy list of transformations that we can perform on the Cartesian plane, let's practice a few more times creating the matrix that gives the desired transformation. In the following example, we develop our understanding one more critical step.\\
+Now that we have seen a healthy list of transformations that we can perform on the Cartesian plane, let's practice a few more times creating the matrix that gives the desired transformation. In the following example, we develop our understanding one more critical step.
 
-\example{ex_transf_3}{Find the matrix \tta\ that transforms the Cartesian plane by performing the following operations in order:
+\medskip
+
+\example{ex_transf_3}{Determining the matrix of a transformation}{Find the matrix \tta\ that transforms the Cartesian plane by performing the following operations in order:
 
 \begin{minipage}[t]{.4\linewidth}
 \begin{enumerate}
@@ -608,11 +692,23 @@ Now that we have seen a healthy list of transformations that we can perform on t
 }
 {Wow! We already know how to do this -- sort of. We know we can find the columns of \tta\ by tracing where \veone\ and \vetwo\ end up, but this also seems difficult. There is so much that is going on. Fortunately, we can accomplish what we need without much difficulty by being systematic.
 
-First, let's perform the vertical shear. The matrix that performs this is $$\tta_1 = \bmx{cc}1&0\\0.5&1\emx.$$ After that, we want to rotate everything clockwise by $30^\circ$. To do this, we use $$\tta_2 = \bmx{cc} \cos 30^\circ & -\sin 30^\circ\\ \sin 30^\circ & \cos 30^\circ \emx = \bmx{cc} \sqrt{3}/2 & -1/2 \\ 1/2 & \sqrt{3}/2\emx.$$ In order to do both of these operations, in order, we multiply $\tta_2\tta_1$.\footnote{The reader might ask, ``Is it important to do multiply these in that order? Could we have multiplied $\tta_1\tta_2$ instead?'' Our answer starts with ``Is matrix multiplication commutative?'' The answer to our question is ``No,'' so the answers to the reader's questions are ``Yes'' and ``No,'' respectively.} 
+First, let's perform the vertical shear. The matrix that performs this is 
+\[
+\tta_1 = \bmx{cc}1&0\\0.5&1\emx.
+\]
+After that, we want to rotate everything clockwise by $30^\circ$. To do this, we use 
+\[
+\tta_2 = \bmx{cc} \cos 30^\circ & -\sin 30^\circ\\ \sin 30^\circ & \cos 30^\circ \emx = \bmx{cc} \sqrt{3}/2 & -1/2 \\ 1/2 & \sqrt{3}/2\emx.
+\]
+In order to do both of these operations, in order, we multiply $\tta_2\tta_1$.\footnote{The reader might ask, ``Is it important to do multiply these in that order? Could we have multiplied $\tta_1\tta_2$ instead?'' Our answer starts with ``Is matrix multiplication commutative?'' The answer to our question is ``No,'' so the answers to the reader's questions are ``Yes'' and ``No,'' respectively.} 
 
 %\drawexampleline{ex_transf_3}
 
-To perform the final two operations, we note that $$\tta_3 = \bmx{cc}2&0\\0&1\emx \quad \text{ and } \quad \tta_4 = \bmx{cc} 0&1 \\ 1&0\emx$$ perform the horizontal stretch and diagonal reflection, respectively. Thus to perform all of the operations ``at once,'' we need to multiply by 
+To perform the final two operations, we note that 
+\[
+\tta_3 = \bmx{cc}2&0\\0&1\emx \quad \text{ and } \quad \tta_4 = \bmx{cc} 0&1 \\ 1&0\emx
+\]
+perform the horizontal stretch and diagonal reflection, respectively. Thus to perform all of the operations ``at once,'' we need to multiply by 
 \begin{align*} \tta &= \tta_4\tta_3\tta_2\tta_1 \\
 										& = \bmx{cc} 0&1 \\ 1&0\emx\bmx{cc}2&0\\0&1\emx\bmx{cc} \sqrt{3}/2 & -1/2 \\ 1/2 & \sqrt{3}/2\emx\bmx{cc}1&0\\0.5&1\emx \\
 										& = \bmx{cc} (\sqrt{3}+2)/4 & \sqrt{3}/2 \\ (2\sqrt{3}-1)/2 & -1\emx\\
@@ -666,7 +762,9 @@ Most readers are not able to visualize exactly what the given list of operations
 \mycaption{A transformed shape in Example \ref{ex_transf_3}.}
 \label{fig:trans_3_2}
 \end{myfigure}
-\vskip -2\baselineskip}\\
+\vskip -2\baselineskip}
+
+\medskip
 
 Once we know what matrices perform the basic transformations,\footnote{or know where to find them} performing complex transformations on the Cartesian plane really isn't that $\ldots$ complex. It boils down to multiplying by a series of matrices. \\
 

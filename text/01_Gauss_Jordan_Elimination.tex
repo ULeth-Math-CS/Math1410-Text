@@ -21,13 +21,18 @@ We saw earlier how we could write all the information of a system of equations i
 
 We didn't justify our ability to  manipulate our equations in the above three ways; it seems rather obvious that we should be able to do that. In that sense, these operations are ``elementary.'' These operations are \textit{elementary} in another sense; they are \textit{fundamental} -- they form the basis for much of what we will do in matrix algebra. Since these operations are so important, we list them again here in the context of matrices.
 
-\keyidea{idea:elementary_row_operations}{\textbf{Elementary Row Operations}
+\smallskip
+
+\keyidea{idea:elementary_row_operations}{Elementary Row Operations}{
+\index{elementary row operations}
 \begin{enumerate}
 \item		Add a scalar multiple of one row to another row, and replace the latter row with that sum
 \item		Multiply one row by a nonzero scalar
 \item		Swap the position of two rows
 \end{enumerate}
-}\index{elementary row operations}
+}
+
+\smallskip
 
 Given any system of linear equations, we can find a solution (if one exists) by using these three row operations. Elementary row operations give us a new linear system, but the solution to the new system is the same as the old. We can use these operations as much as we want and not change the solution. This brings to mind two good questions:
 \begin{enumerate}
@@ -39,9 +44,9 @@ We'll answer the first question first. Most of the time\footnote{unless one pref
 
 In the previous section, when we manipulated matrices to find solutions, we were unwittingly putting the matrix into \rref. However, not all solutions come in such a simple manner as we've seen so far. Putting a matrix into \rref\ helps us identify all types of solutions. We'll explore the topic of understanding what the reduced row echelon form of a matrix tells us in the following sections; in this section we focus on finding it.
 
-\index{reduced echelon form}
-\definition{def:rref}{{\bf Reduced Row Echelon Form}\\
+\smallskip
 
+\definition{def:rref}{Reduced Row Echelon Form}{\index{reduced echelon form}\index{reduced row echelon form}\index{row echelon form}
 A matrix is in \textit{reduced row echelon form} if its entries satisfy the following conditions.
 \begin{enumerate}
 \item		The first nonzero entry in each row is a 1 (called a \textit{leading 1})\index{leading one}.
@@ -50,9 +55,11 @@ A matrix is in \textit{reduced row echelon form} if its entries satisfy the foll
 \item		If a column contains a leading 1, then all other entries in that column are 0.
 \end{enumerate}
 
-A matrix that satisfies the first three conditions is said to be in \textit{row echelon form}.}\index{reduced row echelon form}\index{row echelon form}
+A matrix that satisfies the first three conditions is said to be in \textit{row echelon form}.}
 
-\example{ex_rref}{Which of the following matrices is in reduced row echelon form?
+\medskip
+
+\example{ex_rref}{Determining if a matrix is in reduced row echelon form}{Which of the following matrices is in reduced row echelon form?
 
 \begin{center}\begin{tabular}{lll}
 a) $\bmx{cc}1&0\\0&1\emx$ &$\quad \quad$& b) $\bmx{ccc} 1&0&1\\0&1&2\emx$\\
@@ -71,19 +78,22 @@ g) $\bmx{cccccc}0&1&2&3&0&4\\ 0&0&0&0&1&5\\0&0&0&0&0&0\emx$&$\quad \quad$&h) $\b
 
 The matrix in e) is not in reduced row echelon form since the row of all zeros is not at the bottom. The matrix in f) is not in reduced row echelon form since the first nonzero entries in rows 2 and 3 are not 1. Finally, the matrix in h) is not in reduced row echelon form since the first entry in column 2 is not zero; the second 1 in column 2 is a leading one, hence all other entries in that column should be 0. 
 
-We end this example with a preview of what we'll learn in the future. Consider the matrix in b). If this matrix came from the augmented matrix of a system of linear equations, then we can readily recognize that the solution of the system is $x_1=1$ and $x_2=2$. Again, in previous examples, when we found the solution to a linear system, we were unwittingly putting our matrices into reduced row echelon form.} \\ % \eexset
+We end this example with a preview of what we'll learn in the future. Consider the matrix in b). If this matrix came from the augmented matrix of a system of linear equations, then we can readily recognize that the solution of the system is $x_1=1$ and $x_2=2$. Again, in previous examples, when we found the solution to a linear system, we were unwittingly putting our matrices into reduced row echelon form.} 
 
+\medskip
 
 We began this section discussing how we can manipulate the entries in a matrix with elementary row operations. This led to two questions, ``Where do we go?'' and ``How do we get there quickly?'' We've just answered the first question: most of the time we are ``going to'' reduced row echelon form. We now address the second question.
 
 There is no one ``right'' way of using these operations to transform a matrix into reduced row echelon form. However, there is a general technique that works very well in that it is very efficient (so we don't waste time on unnecessary steps). This technique is called 
 %Edited out due to confusion about the "true" meaning of Gauss Jordan
 %\textit{Gauss-Jordan Elimination}. It is named in honor of the mathematicians Karl Friedrich Gauss and Wilhelm Jordan.
-\textit{Gaussian elimination}.\index{Gaussian elimination} It is named in honor of the great mathematician Karl Friedrich Gauss.
+\textit{Gaussian elimination}.\index{Gaussian elimination} It is named in honour of the great mathematician Karl Friedrich Gauss.
 
-While this technique isn't very difficult to use, it is one of those things that is easier understood by watching it being used than explained as a series of steps. With this in mind, we will go through one more example highlighting important steps and then we'll explain the procedure in detail.\\
+While this technique isn't very difficult to use, it is one of those things that is easier understood by watching it being used than explained as a series of steps. With this in mind, we will go through one more example highlighting important steps and then we'll explain the procedure in detail.
 
-\example{ex_gaussian_elimination}{Put the augmented matrix of the following system of linear equations into reduced row echelon form.
+\medskip
+
+\example{ex_gaussian_elimination}{Using row operations to simplify an augmented matrix}{Put the augmented matrix of the following system of linear equations into reduced row echelon form.
 $$\begin{array}{ccccccc}
 -3x_1&-&3x_2&+&9x_3&=&12\\
 2x_1&+&2x_2&-&4x_3&=&-2\\
@@ -92,14 +102,14 @@ $$\begin{array}{ccccccc}
 }
 {We start by converting the linear system into an augmented matrix.
 
-$$\bmx{cccc}\fbox{$-3$}&-3&9&12\\ 2&2&-4&-2\\0&-2&-4&-8\emx$$
+\[\bam{3}\fbox{$-3$}&-3&9&12\\ 2&2&-4&-2\\0&-2&-4&-8\eam\]
 
 Our next step is to change the entry in the box to a 1. To do this, let's multiply row 1 by $-\frac13$.
 
 \begin{center}\begin{tabular}{ccc}
 \parbox{70pt}{\centering\small $-\frac13R_1\rightarrow R_1$}
 &$\quad \quad$&
-$\bmx{cccc}1&1&-3&-4\\ 2&2&-4&-2\\0&-2&-4&-8\emx$
+$\bam{3}1&1&-3&-4\\ 2&2&-4&-2\\0&-2&-4&-8\eam$
 \end{tabular}\end{center}
 
 We have now created a \textit{leading 1}; that is, the first entry in the first row is a 1. Our next step is to put zeros under this 1. To do this, we'll use the elementary row operation given below.
@@ -107,7 +117,7 @@ We have now created a \textit{leading 1}; that is, the first entry in the first 
 \begin{center}\begin{tabular}{ccc}
 \parbox{70pt}{\centering\small $-2R_1+R_2\rightarrow R_2$}
 &$\quad \quad$&
-$\bmx{cccc}1&1&-3&-4\\ 0&\fbox{0}&2&6\\0&-2&-4&-8\emx$
+$\bam{3}1&1&-3&-4\\ 0&\fbox{0}&2&6\\0&-2&-4&-8\eam$
 \end{tabular}\end{center}
 
 Once this is accomplished, we shift our focus from the leading one down one row, and to the right one column, to the position that is boxed. We again want to put a 1 in this position. We can use any elementary row operations, but we need to restrict ourselves to using only the second row and any rows below it. Probably the simplest thing we can do is interchange rows 2 and 3, and then scale the new second row so that there is a 1 in the desired position.
@@ -115,11 +125,11 @@ Once this is accomplished, we shift our focus from the leading one down one row,
 \begin{center}\begin{tabular}{ccl}
 \parbox{70pt}{\centering\small $R_2\leftrightarrow R_3$}
 &$\quad \quad$&
-$\bmx{cccc}1&1&-3&-4\\0&\fbox{$-2$}&-4&-8 \\0&0&2&6\emx$\\
+$\bam{3}1&1&-3&-4\\0&\fbox{$-2$}&-4&-8 \\0&0&2&6\eam$\\
 \\
 \parbox{70pt}{\centering\small $-\frac12R_2\rightarrow R_2$}
 &$\quad \quad$&
-$\bmx{cccc}1&1&-3&-4\\0&1&2&4 \\0&0&\fbox{2}&6\emx$
+$\bam{3}1&1&-3&-4\\0&1&2&4 \\0&0&\fbox{2}&6\eam$
 \end{tabular}\end{center}
 
 We have now created another leading 1, this time in the second row. Our next desire is to put zeros  underneath it, but this has already been accomplished by our previous steps. Therefore we again shift our attention to the right one column and down one row, to the next position put in the box. We want that to be a 1. A simple scaling will accomplish this.
@@ -127,7 +137,7 @@ We have now created another leading 1, this time in the second row. Our next des
 \begin{center}\begin{tabular}{ccl}
 \parbox{70pt}{\centering\small $\frac12R_3\rightarrow R_3$}
 &$\quad \quad$&
-$\bmx{cccc}1&1&-3&-4\\0&1&2&4 \\0&0&1&3\emx$
+$\bam{3}1&1&-3&-4\\0&1&2&4 \\0&0&1&3\eam$
 \end{tabular}\end{center}
 
 %\enlargethispage{3\baselineskip}
@@ -139,14 +149,16 @@ This ends what we will refer to as the \textit{forward steps}. Our next task is 
 
 $-2R_3+R_2\rightarrow R_2$}
 &$\quad \quad$&
-$\bmx{cccc}1&1&0&5\\0&1&0&-2 \\0&0&1&3\emx$\\
+$\bam{3}1&1&0&5\\0&1&0&-2 \\0&0&1&3\eam$\\
 \\
 \parbox{70pt}{\centering\small$-R_2+R_1\rightarrow R_1$}
 &$\quad \quad$&
-$\bmx{cccc}1&0&0&7\\0&1&0&-2 \\0&0&1&3\emx$
+$\bam{3}1&0&0&7\\0&1&0&-2 \\0&0&1&3\eam$
 \end{tabular}\end{center}
 
-It is now easy to read off the solution as $x_1 = 7$, $x_2 = -2$ and $x_3 = 3$.}\\ % \eexset
+It is now easy to read off the solution as $x_1 = 7$, $x_2 = -2$ and $x_3 = 3$.}
+
+\medskip
 
 We now formally explain the procedure used to find the solution above. As you read through the procedure, follow along with the example above so that the explanation makes more sense.\\
 
@@ -182,20 +194,25 @@ Note that this means we have just put a matrix into row echelon form. The next s
 
 The basic method of Gaussian elimination is this: create leading ones and then use elementary row operations to put zeros above and below these leading ones. We can do this in any order we please, but by following the ``Forward Steps'' and ``Backward Steps,'' we make use of the presence of zeros to make the overall computations easier. This method is very efficient, so it gets its own name (which we've already been using).
 
-\definition{def:gaussian_elimination}{\textbf{Gaussian Elimination}\\
+\smallskip
 
-\textit{Gaussian elimination} is the technique for finding the reduced row echelon form of a matrix using the above procedure. It can be abbreviated to:
+\definition{def:gaussian_elimination}{Gaussian Elimination}{\index{Gaussian elimination}
+\sword{Gaussian elimination} is the technique for finding the reduced row echelon form of a matrix using the above procedure. It can be abbreviated to:
 
 \begin{enumerate}
 \item		Create a leading 1.
 \item		Use this leading 1 to put zeros underneath it.
 \item		Repeat the above steps until all possible rows have leading 1s.
 \item		Put zeros above these leading 1s.
-\end{enumerate}}\index{Gaussian elimination}
+\end{enumerate}}
+
+\smallskip
 
 Let's practice some more.\\
 
-\example{ex_rref_2}{Use Gaussian elimination to put the matrix \tta\ into \rref, where  $$\tta = \bmx{ccccc}-2&-4&-2&-10&0\\2&4&1&9&-2\\3&6&1&13&-4\emx.$$}
+\medskip
+
+\example{ex_rref_2}{Using Gaussian elimination}{Use Gaussian elimination to put the matrix \tta\ into \rref, where  $$\tta = \bmx{ccccc}-2&-4&-2&-10&0\\2&4&1&9&-2\\3&6&1&13&-4\emx.$$}
 {We start by wanting to make the entry in the first column and first row a 1 (a leading 1). To do this we'll scale the first row by a factor of $-\frac12$. 
 
 \begin{center}\begin{tabular}{ccl}
@@ -240,11 +257,13 @@ Our next goal is to put a 0 above each of the leading 1s (in this case there is 
 $\bmx{ccccc}1&2&0&4&-2\\0&0&1&1&2\\0&0&0&0&0\emx$
 \end{tabular}\end{center}
 
-This final matrix is in \rref.}\\ % \eexset
+This final matrix is in \rref.}
+
+\medskip
 
 %\enlargethispage{3\baselineskip}
 
-\example{ex_rref_3}{Put the matrix $$\bmx{cccc} 1&2&1&3\\2&1&1&1\\3&3&2&1\emx$$ into \rref.}
+\example{ex_rref_3}{Gaussian elimination, again}{Put the matrix $$\bmx{cccc} 1&2&1&3\\2&1&1&1\\3&3&2&1\emx$$ into \rref.}
 {Here we will show all steps without explaining each one.
 
 \begin{center}\begin{tabular}{ccl}
@@ -287,12 +306,15 @@ $\bmx{cccc} 1&2&1&0\\0&1&1/3&0\\0&0&0&1\emx$
 $\bmx{cccc} 1&0&1/3&0\\0&1&1/3&0\\0&0&0&1\emx$
 \end{tabular}
 \end{center}
-}\\  %\eexset
-\clearpage
+}
 
-The last matrix in the above example is in \rref. If one thinks of the original matrix as representing the augmented matrix of a system of linear equations, this final result is interesting. What does it mean to have a leading one in the last column? We'll figure this out in the next section.\\
+\medskip
 
-\example{ex_back_substitution}{Put the matrix \tta\ into \rref, where  $$\tta = \bmx{cccc}2&1&-1&4\\1&-1&2&12\\2&2&-1&9\\ \emx.$$}
+The last matrix in the above example is in \rref. If one thinks of the original matrix as representing the augmented matrix of a system of linear equations, this final result is interesting. What does it mean to have a leading one in the last column? We'll figure this out in the next section.
+
+\medskip
+
+\example{ex_back_substitution}{Using back substitution}{Put the matrix \tta\ into \rref, where  $$\tta = \bmx{cccc}2&1&-1&4\\1&-1&2&12\\2&2&-1&9\\ \emx.$$}
 {We'll again show the steps without explanation, although we will stop at the end of the forward steps and make a comment.
 
 \begin{center}\begin{tabular}{ccl}
@@ -361,7 +383,9 @@ $-\frac12R_2+R_1\rightarrow R_1$\\
 $\bmx{cccc}1&0&0&3\\0&1&0&5\\0&0&1&7\\ \emx$
 \end{tabular}\end{center}
 
-We did our operations slightly ``out of order'' in that we didn't put the zeros above our leading 1 in the third column in the same step, highlighting how back substitution works. }\\ %\eexset
+We did our operations slightly ``out of order'' in that we didn't put the zeros above our leading 1 in the third column in the same step, highlighting how back substitution works. }
+
+\medskip
 
 In all of our practice, we've only encountered systems of linear equations with exactly one solution. Is this always going to be the case? Could we ever have systems with more than one solution? If so, how many solutions could there be? Could we have systems without a solution? These are some of the questions we'll address in the next section.\\
  

@@ -1,0 +1,331 @@
+\indexentry{set ! definition of|hyperpage}{1}
+\indexentry{set ! verbal description|hyperpage}{1}
+\indexentry{set ! roster method|hyperpage}{1}
+\indexentry{set ! set-builder notation|hyperpage}{1}
+\indexentry{set-builder notation|hyperpage}{1}
+\indexentry{set ! inclusion|hyperpage}{2}
+\indexentry{$\in $|hyperpage}{2}
+\indexentry{set ! exclusion|hyperpage}{2}
+\indexentry{$\notin  $|hyperpage}{2}
+\indexentry{subset ! definition of|hyperpage}{2}
+\indexentry{set ! intersection|hyperpage}{2}
+\indexentry{intersection of two sets|hyperpage}{2}
+\indexentry{set ! union|hyperpage}{2}
+\indexentry{union of two sets|hyperpage}{2}
+\indexentry{set ! empty|hyperpage}{3}
+\indexentry{empty set|hyperpage}{3}
+\indexentry{diagram ! Venn Diagram|hyperpage}{3}
+\indexentry{Venn Diagram|hyperpage}{3}
+\indexentry{real number ! set of|hyperpage}{3}
+\indexentry{real number ! definition of|hyperpage}{3}
+\indexentry{set ! sets of numbers|hyperpage}{4}
+\indexentry{set ! empty|hyperpage}{4}
+\indexentry{empty set|hyperpage}{4}
+\indexentry{natural number ! set of|hyperpage}{4}
+\indexentry{natural number ! definition of|hyperpage}{4}
+\indexentry{integer ! set of|hyperpage}{4}
+\indexentry{integer ! definition of|hyperpage}{4}
+\indexentry{rational number ! set of|hyperpage}{4}
+\indexentry{rational number ! definition of|hyperpage}{4}
+\indexentry{real number ! set of|hyperpage}{4}
+\indexentry{real number ! definition of|hyperpage}{4}
+\indexentry{irrational number ! set of|hyperpage}{4}
+\indexentry{irrational number ! definition of|hyperpage}{4}
+\indexentry{complex number ! set of|hyperpage}{4}
+\indexentry{complex number ! definition of|hyperpage}{4}
+\indexentry{trichotomy|hyperpage}{6}
+\indexentry{interval ! definition of|hyperpage}{6}
+\indexentry{interval ! notation for|hyperpage}{6}
+\indexentry{relatively prime|hyperpage}{13}
+\indexentry{base|hyperpage}{17}
+\indexentry{exponent|hyperpage}{17}
+\indexentry{$n^{\text  {th}}$ root ! principal|hyperpage}{20}
+\indexentry{principal $n^{\text  {th}}$ root|hyperpage}{20}
+\indexentry{root ! index|hyperpage}{20}
+\indexentry{index of a root|hyperpage}{20}
+\indexentry{root ! radicand|hyperpage}{20}
+\indexentry{radicand|hyperpage}{20}
+\indexentry{radical ! properties of|hyperpage}{21}
+\indexentry{product rule ! for radicals|hyperpage}{21}
+\indexentry{quotient rule ! for radicals|hyperpage}{21}
+\indexentry{power rule ! for radicals|hyperpage}{21}
+\indexentry{rational exponent|hyperpage}{21}
+\indexentry{Cartesian coordinate plane|hyperpage}{26}
+\indexentry{$x$-axis|hyperpage}{26}
+\indexentry{$y$-axis|hyperpage}{26}
+\indexentry{ordered pair|hyperpage}{26}
+\indexentry{abscissa|hyperpage}{26}
+\indexentry{$x$-coordinate|hyperpage}{26}
+\indexentry{ordinate|hyperpage}{26}
+\indexentry{$y$-coordinate|hyperpage}{26}
+\indexentry{coordinates ! Cartesian|hyperpage}{26}
+\indexentry{Cartesian coordinates|hyperpage}{26}
+\indexentry{origin|hyperpage}{26}
+\indexentry{quadrants|hyperpage}{28}
+\indexentry{symmetry ! about the $x$-axis|hyperpage}{28}
+\indexentry{symmetry ! about the $y$-axis|hyperpage}{28}
+\indexentry{symmetry ! about the origin|hyperpage}{28}
+\indexentry{reflection ! of a point|hyperpage}{29}
+\indexentry{distance ! definition|hyperpage}{29}
+\indexentry{distance ! distance formula|hyperpage}{30}
+\indexentry{midpoint ! definition of|hyperpage}{31}
+\indexentry{midpoint ! midpoint formula|hyperpage}{31}
+\indexentry{numbers ! complex|hyperpage}{34}
+\indexentry{complex numbers|hyperpage}{34}
+\indexentry{imaginary unit, $i$|hyperpage}{34}
+\indexentry{complex number ! imaginary unit, $i$|hyperpage}{34}
+\indexentry{complex number ! definition of|hyperpage}{34}
+\indexentry{complex number ! complex conjugate ! definition of|hyperpage}{36}
+\indexentry{conjugate ! complex conjugate ! definition of|hyperpage}{36}
+\indexentry{complex number ! conjugate ! properties of|hyperpage}{36}
+\indexentry{conjugate of a complex number ! properties of|hyperpage}{36}
+\indexentry{Fundamental Theorem of Algebra|hyperpage}{39}
+\indexentry{Fundamental Theorem of Algebra|hyperpage}{39}
+\indexentry{theorem ! Fundamental Theorem of Algebra|hyperpage}{39}
+\indexentry{Complex Factorization Theorem|hyperpage}{40}
+\indexentry{factorization ! over the complex numbers|hyperpage}{40}
+\indexentry{rectangular coordinates ! also known as Cartesian coordinates|hyperpage}{42}
+\indexentry{coordinates ! rectangular|hyperpage}{42}
+\indexentry{polar coordinates ! definition of|hyperpage}{42}
+\indexentry{coordinates ! polar|hyperpage}{42}
+\indexentry{polar coordinates ! pole|hyperpage}{42}
+\indexentry{polar coordinates ! polar axis|hyperpage}{42}
+\indexentry{polar coordinates ! equivalent representations of|hyperpage}{47}
+\indexentry{polar coordinates ! conversion into rectangular|hyperpage}{48}
+\indexentry{rectangular coordinates ! conversion into polar|hyperpage}{48}
+\indexentry{complex number ! definition of|hyperpage}{56}
+\indexentry{complex number ! real part|hyperpage}{56}
+\indexentry{real part of a complex number|hyperpage}{56}
+\indexentry{imaginary part of a complex number|hyperpage}{56}
+\indexentry{complex number ! imaginary part|hyperpage}{56}
+\indexentry{real axis|hyperpage}{56}
+\indexentry{imaginary axis|hyperpage}{56}
+\indexentry{complex plane|hyperpage}{56}
+\indexentry{complex number ! rectangular form|hyperpage}{56}
+\indexentry{rectangular form of a complex number|hyperpage}{56}
+\indexentry{complex number ! modulus ! definition of|hyperpage}{56}
+\indexentry{modulus of a complex number ! definition of|hyperpage}{56}
+\indexentry{complex number ! argument ! definition of|hyperpage}{56}
+\indexentry{argument ! of a complex number ! definition of|hyperpage}{56}
+\indexentry{complex number ! principal argument|hyperpage}{56}
+\indexentry{principal argument of a complex number|hyperpage}{56}
+\indexentry{complex number ! modulus ! properties of|hyperpage}{58}
+\indexentry{modulus of a complex number ! properties of|hyperpage}{58}
+\indexentry{product rule ! for the modulus of a complex number|hyperpage}{58}
+\indexentry{power rule ! for the modulus of a complex number|hyperpage}{58}
+\indexentry{quotient rule ! for the modulus of a complex number|hyperpage}{58}
+\indexentry{complex number ! argument ! properties of|hyperpage}{60}
+\indexentry{argument ! of a complex number ! properties of|hyperpage}{60}
+\indexentry{cis($\theta$)|hyperpage}{60}
+\indexentry{complex number ! polar form ! cis-notation|hyperpage}{61}
+\indexentry{polar form of a complex number|hyperpage}{61}
+\indexentry{product rule ! for complex numbers|hyperpage}{62}
+\indexentry{DeMoivre's Theorem|hyperpage}{62}
+\indexentry{power rule ! for complex numbers|hyperpage}{62}
+\indexentry{quotient rule ! for complex numbers|hyperpage}{62}
+\indexentry{$n^{\textrm  {th}}$ root ! of a complex number|hyperpage}{66}
+\indexentry{complex number ! $n^{\textrm  {th}}$ root|hyperpage}{66}
+\indexentry{$n^{\textrm  {th}}$ root ! of a complex number|hyperpage}{67}
+\indexentry{complex number ! $n^{\textrm  {th}}$ root|hyperpage}{67}
+\indexentry{$n^{\textrm  {th}}$ Roots of Unity|hyperpage}{70}
+\indexentry{complex number ! $n^{\textrm  {th}}$ Roots of Unity|hyperpage}{70}
+\indexentry{Roots of Unity|hyperpage}{70}
+\indexentry{right hand rule!of Cartesian coordinates|hyperpage}{73}
+\indexentry{distance!between points in space|hyperpage}{74}
+\indexentry{sphere|hyperpage}{74}
+\indexentry{planes!coordinate plane|hyperpage}{75}
+\indexentry{planes!introduction|hyperpage}{75}
+\indexentry{vectors|hyperpage}{78}
+\indexentry{vectors!definition|hyperpage}{78}
+\indexentry{vectors!norm|hyperpage}{78}
+\indexentry{vectors!magnitude|hyperpage}{78}
+\indexentry{norm|hyperpage}{78}
+\indexentry{magnitude of vector|hyperpage}{78}
+\indexentry{terminal point|hyperpage}{78}
+\indexentry{initial point|hyperpage}{78}
+\indexentry{r@$\mathbb{R}$|hyperpage}{78}
+\indexentry{vectors!component form|hyperpage}{79}
+\indexentry{vectors!algebra of|hyperpage}{80}
+\indexentry{vectors!resultant|hyperpage}{80}
+\indexentry{Parallelogram Law|hyperpage}{80}
+\indexentry{vectors!Parallelogram Law|hyperpage}{80}
+\indexentry{Head To Tail Rule|hyperpage}{80}
+\indexentry{vectors!Head To Tail Rule|hyperpage}{80}
+\indexentry{vectors!zero vector|hyperpage}{80}
+\indexentry{vectors!algebraic properties|hyperpage}{82}
+\indexentry{vectors!unit vector|hyperpage}{82}
+\indexentry{unit vector|hyperpage}{82}
+\indexentry{vectors!parallel|hyperpage}{83}
+\indexentry{parallel vectors|hyperpage}{83}
+\indexentry{unit vector!properties|hyperpage}{84}
+\indexentry{vectors!unit vector|hyperpage}{84}
+\indexentry{vectors!standard unit vector|hyperpage}{85}
+\indexentry{unit vector!standard unit vector|hyperpage}{85}
+\indexentry{dot product!definition|hyperpage}{89}
+\indexentry{vectors!dot product|hyperpage}{89}
+\indexentry{dot product!properties|hyperpage}{90}
+\indexentry{vectors!dot product|hyperpage}{90}
+\indexentry{dot product!properties|hyperpage}{90}
+\indexentry{vectors!dot product|hyperpage}{90}
+\indexentry{orthogonal|hyperpage}{92}
+\indexentry{perpendicular|hyperindexformat{\see{orthogonal}}}{92}
+\indexentry{vectors!orthogonal|hyperpage}{92}
+\indexentry{orthogonal projection|hyperpage}{94}
+\indexentry{vectors!orthogonal projection|hyperpage}{94}
+\indexentry{orthogonal decomposition of vectors|hyperpage}{95}
+\indexentry{orthogonal!decomposition|hyperpage}{95}
+\indexentry{vectors!orthogonal decomposition|hyperpage}{95}
+\indexentry{work|hyperpage}{97}
+\indexentry{vectors!cross product|hyperpage}{99}
+\indexentry{cross product!definition|hyperpage}{99}
+\indexentry{vectors!cross product|hyperpage}{101}
+\indexentry{cross product!properties|hyperpage}{101}
+\indexentry{vectors!cross product|hyperpage}{101}
+\indexentry{cross product!properties|hyperpage}{101}
+\indexentry{cross product!applications|hyperpage}{102}
+\indexentry{cross product!applications!area of parallelogram|hyperpage}{103}
+\indexentry{cross product!applications!volume of parallelepiped|hyperpage}{104}
+\indexentry{cross product!applications!torque|hyperpage}{104}
+\indexentry{lines|hyperpage}{108}
+\indexentry{lines!equations for|hyperpage}{109}
+\indexentry{lines!skew|hyperpage}{110}
+\indexentry{lines!parallel|hyperpage}{110}
+\indexentry{lines!intersecting|hyperpage}{110}
+\indexentry{distance!between point and line|hyperpage}{113}
+\indexentry{distance!between lines|hyperpage}{113}
+\indexentry{lines!distances between|hyperpage}{113}
+\indexentry{vectors!normal vector|hyperpage}{117}
+\indexentry{normal vector|hyperpage}{117}
+\indexentry{planes!normal vector|hyperpage}{117}
+\indexentry{planes!equations of|hyperpage}{118}
+\indexentry{planes!distance between point and plane|hyperpage}{121}
+\indexentry{distance!between point and plane|hyperpage}{121}
+\indexentry{linear equation|hyperpage}{127}
+\indexentry{system of linear equations!definition|hyperpage}{127}
+\indexentry{system of linear equations!solution|hyperpage}{127}
+\indexentry{solution|hyperpage}{127}
+\indexentry{matrix!definition|hyperpage}{132}
+\indexentry{augmented matrix|hyperpage}{132}
+\indexentry{matrix!augmented|hyperpage}{132}
+\indexentry{elementary row operations|hyperpage}{140}
+\indexentry{reduced echelon form|hyperpage}{140}
+\indexentry{reduced row echelon form|hyperpage}{140}
+\indexentry{row echelon form|hyperpage}{140}
+\indexentry{leading one|hyperpage}{140}
+\indexentry{Gaussian elimination|hyperpage}{141}
+\indexentry{Gaussian elimination!forward steps|hyperpage}{143}
+\indexentry{Gaussian elimination!backward steps|hyperpage}{144}
+\indexentry{Gaussian elimination|hyperpage}{144}
+\indexentry{solution!types|hyperpage}{152}
+\indexentry{solution!unique|hyperpage}{152}
+\indexentry{solution!infinite|hyperpage}{152}
+\indexentry{solution!none|hyperpage}{152}
+\indexentry{system of linear equations!consistent|hyperpage}{152}
+\indexentry{system of linear equations!inconsistent|hyperpage}{152}
+\indexentry{consistent|hyperpage}{152}
+\indexentry{inconsistent|hyperpage}{152}
+\indexentry{free variable|hyperpage}{154}
+\indexentry{variable!free|hyperpage}{154}
+\indexentry{variable!dependent|hyperpage}{155}
+\indexentry{variable!basic|hyperpage}{155}
+\indexentry{basic variable|hyperpage}{155}
+\indexentry{variable!independent|hyperpage}{155}
+\indexentry{variable!free|hyperpage}{155}
+\indexentry{free variable|hyperpage}{155}
+\indexentry{system of linear equations!consistent|hyperpage}{155}
+\indexentry{leading one|hyperpage}{155}
+\indexentry{solution!infinite|hyperpage}{155}
+\indexentry{system of linear equations!consistent|hyperpage}{155}
+\indexentry{leading one|hyperpage}{155}
+\indexentry{solution!infinite|hyperpage}{155}
+\indexentry{system of linear equations!inconsistent|hyperpage}{156}
+\indexentry{leading one|hyperpage}{156}
+\indexentry{particular solution|hyperpage}{157}
+\indexentry{solution!particular|hyperpage}{157}
+\indexentry{problem solving|hyperpage}{165}
+\indexentry{matrix!equality|hyperpage}{173}
+\indexentry{matrix!addition|hyperpage}{174}
+\indexentry{matrix!scalar multiplication|hyperpage}{175}
+\indexentry{zero matrix|hyperpage}{177}
+\indexentry{matrix!the zero matrix|hyperpage}{177}
+\indexentry{matrix!arithmetic properties|hyperpage}{177}
+\indexentry{vector!column|hyperpage}{181}
+\indexentry{vector!row|hyperpage}{181}
+\indexentry{matrix!multiplication|hyperpage}{182}
+\indexentry{identity matrix|hyperpage}{191}
+\indexentry{matrix!identity matrix|hyperpage}{191}
+\indexentry{matrix!multiplication!properties|hyperpage}{191}
+\indexentry{Parallelogram Law|hyperpage}{199}
+\indexentry{vector!length|hyperpage}{204}
+\indexentry{system of linear equations!homogeneous|hyperpage}{219}
+\indexentry{homogeneous|hyperpage}{219}
+\indexentry{consistent|hyperpage}{219}
+\indexentry{system of linear equations!consistent|hyperpage}{219}
+\indexentry{homogeneous|hyperpage}{219}
+\indexentry{homogeneous|hyperpage}{220}
+\indexentry{consistent|hyperpage}{220}
+\indexentry{system of linear equations!consistent|hyperpage}{220}
+\indexentry{solution!unique|hyperpage}{220}
+\indexentry{solution!infinite|hyperpage}{220}
+\indexentry{inverse!uniqueness|hyperpage}{241}
+\indexentry{matrix!inverse|hyperpage}{241}
+\indexentry{inverse!definition|hyperpage}{241}
+\indexentry{inverse!computing|hyperpage}{242}
+\indexentry{matrix!inverse|hyperpage}{242}
+\indexentry{solution!unique|hyperpage}{244}
+\indexentry{Invertible Matrix Theorem|hyperpage}{249}
+\indexentry{inverse!properties|hyperpage}{249}
+\indexentry{inverse!Invertible Matrix Theorem|hyperpage}{249}
+\indexentry{diagonal|hyperpage}{254}
+\indexentry{inverse!properties|hyperpage}{255}
+\indexentry{transpose|hyperpage}{257}
+\indexentry{transpose!definition|hyperpage}{257}
+\indexentry{transpose!definition|hyperpage}{257}
+\indexentry{matrix!transpose|hyperpage}{257}
+\indexentry{diagonal!definition|hyperpage}{258}
+\indexentry{triangular matrix!definition|hyperpage}{258}
+\indexentry{matrix!diagonal|hyperpage}{258}
+\indexentry{matrix!triangular|hyperpage}{258}
+\indexentry{transpose!properties|hyperpage}{263}
+\indexentry{symmetric|hyperpage}{264}
+\indexentry{skew symmetric|hyperpage}{264}
+\indexentry{transpose!symmetric|hyperpage}{265}
+\indexentry{transpose!skew-symmetric|hyperpage}{265}
+\indexentry{symmetric!definition|hyperpage}{265}
+\indexentry{skew symmetric!definition|hyperpage}{265}
+\indexentry{antisymmetric|hyperpage}{265}
+\indexentry{symmetric!theorem|hyperpage}{265}
+\indexentry{skew symmetric!theorem|hyperpage}{265}
+\indexentry{pseudoinverse|hyperpage}{266}
+\indexentry{trace!definition|hyperpage}{269}
+\indexentry{trace!properties|hyperpage}{271}
+\indexentry{determinant!of $2\times 2$ matrices|hyperpage}{275}
+\indexentry{matrix!determinant|hyperpage}{275}
+\indexentry{matrix!minor|hyperpage}{276}
+\indexentry{matrix!cofactor|hyperpage}{276}
+\indexentry{minor|hyperpage}{276}
+\indexentry{cofactor|hyperpage}{276}
+\indexentry{cofactor!expansion|hyperpage}{279}
+\indexentry{matrix!determinant|hyperpage}{280}
+\indexentry{determinant!definition|hyperpage}{280}
+\indexentry{cofactor!expansion|hyperpage}{287}
+\indexentry{determinant!of triangular matrices|hyperpage}{289}
+\indexentry{triangular matrix!determinant|hyperpage}{289}
+\indexentry{elementary row operations!and determinants|hyperpage}{290}
+\indexentry{determinant!and elementary row operations|hyperpage}{290}
+\indexentry{determinant!properties|hyperpage}{295}
+\indexentry{Invertible Matrix Theorem|hyperpage}{295}
+\indexentry{Cramer's Rule|hyperpage}{299}
+\indexentry{eigenvalue!definition|hyperpage}{304}
+\indexentry{eigenvector!|hyperindexformat{\see{eigenvalue}}}{304}
+\indexentry{characteristic polynomial|hyperpage}{307}
+\indexentry{eigenvalue!finding|hyperpage}{308}
+\indexentry{eigenvalue!properties|hyperpage}{324}
+\indexentry{Invertible Matrix Theorem|hyperpage}{325}
+\indexentry{linear transformation!definition|hyperpage}{345}
+\indexentry{linear transformation!standard matrix of|hyperpage}{349}
+\indexentry{linear transformation!and \ensuremath  {\mathaccentV {vec}17E{\text  {\it  0}}}|hyperpage}{350}
+\indexentry{standard unit vector|hyperpage}{350}
+\indexentry{linear transformation!standard matrix of|hyperpage}{351}
+\indexentry{linear transformation!conditions on|hyperpage}{355}
+\indexentry{vector!length|hyperpage}{367}

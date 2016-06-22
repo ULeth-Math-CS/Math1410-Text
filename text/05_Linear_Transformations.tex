@@ -27,7 +27,10 @@ In the previous section we discussed standard transformations of the Cartesian p
 \end{center}
 \end{myfigure}
 
-Our work from the previous section allows us to find the matrix quickly. By looking at the picture, it is easy to see that \veone\ is moved to $\bmx{c} 2\\0\emx$ and \vetwo\ is moved to $\bmx{c}1\\1\emx$. Therefore, the transformation matrix should be $$\tta = \bmx{cc} 2&1\\0&1\emx.$$
+Our work from the previous section allows us to find the matrix quickly. By looking at the picture, it is easy to see that \veone\ is moved to $\bmx{c} 2\\0\emx$ and \vetwo\ is moved to $\bmx{c}1\\1\emx$. Therefore, the transformation matrix should be 
+\[
+\tta = \bmx{cc} 2&1\\0&1\emx.
+\]
 
 \textit{However}, look at Figure \ref{fig:translation2} where the unit square is drawn after being transformed by \tta. It is clear that we did not get the desired result; the unit square was not translated, but rather stretched/sheared in some way.
 
@@ -52,17 +55,33 @@ What did we do wrong? We will answer this question, but first we need to develop
 
 We've been using the term ``transformation'' to describe how we've changed vectors. In fact, ``transformation'' is synonymous to ``function.'' We are used to functions like $f(x) = x^2$, where the input is a number and the output is another number. In the previous section, we learned about transformations (functions) where the input was a vector and the output was another vector. If \tta\ is a ``transformation matrix,'' then we could create a function of the form $T(\vx) = \tta\vx$. That is, a vector \vx\ is the input, and the output is \vx\ multiplied by \tta.\footnote{We used $T$ instead of $f$ to define this function to help differentiate it from ``regular'' functions. ``Normally'' functions are defined using lower case letters when the input is a number; when the input is a vector, we use upper case letters.} 
 
-When we defined $f(x) = x^2$ above, we let the reader assume that the input was indeed a number. If we wanted to be complete, we should have stated $$f:\rrr{}{} \quad \text{ where } \quad f(x)=x^2.$$
+When we defined $f(x) = x^2$ above, we let the reader assume that the input was indeed a number. If we wanted to be complete, we should have stated 
+\[
+f:\rrr{}{} \quad \text{ where } \quad f(x)=x^2.
+\]
 The first part of that line told us that the input was a real number (that was the first \real{}) and the output was also a real number (the second \real{}).
 
-To define a transformation where a 2D vector is transformed into another 2D vector via multiplication by a $2\times 2$ matrix \tta, we should write $$T:\rrr{2}{2} \quad \text{ where } \quad T(\vx) = \tta\vx.$$ Here, the first \real{2} means that we are using 2D vectors as our input, and the second \real{2} means that a 2D vector is the output.
+To define a transformation where a 2D vector is transformed into another 2D vector via multiplication by a $2\times 2$ matrix \tta, we should write 
+\[
+T:\rrr{2}{2} \quad \text{ where } \quad T(\vx) = \tta\vx.
+\]
+Here, the first \real{2} means that we are using 2D vectors as our input, and the second \real{2} means that a 2D vector is the output.
 
-Consider a quick example: $$T:\rrr{2}{3} \quad \text{ where } \quad T\left(\bmx{c}x_1\\x_2\emx\right) = \bmx{c}x_1^2\\2x_1\\x_1x_2\emx.$$ Notice that this takes 2D vectors as input and returns 3D vectors as output. For instance, $$T\left(\bmx{c}3\\-2\emx\right) = \bmx{c}9\\6\\-6\emx.$$
+Consider a quick example: 
+\[
+T:\rrr{2}{3} \quad \text{ where } \quad T\left(\bmx{c}x_1\\x_2\emx\right) = \bmx{c}x_1^2\\2x_1\\x_1x_2\emx.
+\]
+Notice that this takes 2D vectors as input and returns 3D vectors as output. For instance, 
+\[
+T\left(\bmx{c}3\\-2\emx\right) = \bmx{c}9\\6\\-6\emx.
+\]
+
 
 We now define a special type of transformation (function).
 
-\definition{def:lin_trans}{\textbf{Linear Transformation}\index{linear transformation!definition}\\
+\smallskip
 
+\definition{def:lin_trans}{Linear Transformation}{\index{linear transformation!definition}
 A transformation $T:\realnm$ is a \textit{linear transformation} if it satisfies the following two properties:
 	\begin{enumerate}
 	\item	$T(\vx + \vy) = T(\vx) + T(\vy)$ for all vectors $\vx$ and $\vy$, and
@@ -71,16 +90,30 @@ A transformation $T:\realnm$ is a \textit{linear transformation} if it satisfies
 If $T$ is a linear transformation, it is often said that ``$T$ is \textit{linear.}''
 }
 
-Let's learn about this definition through some examples.\\
+\smallskip
 
-\example{ex_lin_trans_1}{Determine whether or not the transformation $T:\rrr{2}{3}$ is a linear transformation, where $$T\left(\bmx{c}x_1\\x_2\emx\right) = \bmx{c}x_1^2\\2x_1\\x_1x_2\emx.$$}
-{We'll arbitrarily pick two vectors \vx\ and \vy: $$\vx = \bmx{c}3\\-2\emx \quad \text{ and } \quad \vy = \bmx{c} 1\\5\emx.$$ Let's check to see if $T$ is linear by using the definition.
+Let's learn about this definition through some examples.
 
-\enlargethispage{3\baselineskip}
+\medskip
+
+\example{ex_lin_trans_1}{Identifying linear transformations}{Determine whether or not the transformation $T:\rrr{2}{3}$ is a linear transformation, where 
+\[
+T\left(\bmx{c}x_1\\x_2\emx\right) = \bmx{c}x_1^2\\2x_1\\x_1x_2\emx.
+\]}
+{We'll arbitrarily pick two vectors \vx\ and \vy: 
+\[
+\vx = \bmx{c}3\\-2\emx \quad \text{ and } \quad \vy = \bmx{c} 1\\5\emx.
+\]
+Let's check to see if $T$ is linear by using the definition.
+
+%\enlargethispage{3\baselineskip}
 
 	\begin{enumerate}
 	\item Is $T(\vx+\vy) = T(\vx)+T(\vy)$? First, compute $\vx+\vy$:
-	$$\vx+\vy = \bmx{c}3\\-2\emx + \bmx{c}1\\5\emx = \bmx{c}4\\3\emx.$$ Now compute $T(\vx)$, $T(\vy)$, and $T(\vx+\vy)$:
+\[
+\vx+\vy = \bmx{c}3\\-2\emx + \bmx{c}1\\5\emx = \bmx{c}4\\3\emx.
+\]
+Now compute $T(\vx)$, $T(\vy)$, and $T(\vx+\vy)$:
 
 	\begin{adjustwidth}{-45pt}{-60pt}
 	\begin{minipage}{.3\linewidth}
@@ -99,19 +132,36 @@ Let's learn about this definition through some examples.\\
 	
 %\ \\
 
-	Is $T(\vx+\vy) = T(\vx)+T(\vy)$? $$\bmx{c} 9\\6\\-6\emx+\bmx{c} 1\\2\\5\emx \overset{!}{\neq} \bmx{c} 16\\8\\12\emx.$$
+	Is $T(\vx+\vy) = T(\vx)+T(\vy)$? 
+\[
+\bmx{c} 9\\6\\-6\emx+\bmx{c} 1\\2\\5\emx \overset{!}{\neq} \bmx{c} 16\\8\\12\emx.
+\]
 	\end{enumerate}
 	
 	Therefore, $T$ is \textit{not} a linear transformation.
 }
 
-So we have an example of something that \textit{doesn't} work. Let's try an example where things \textit{do} work.\footnote{Recall a principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. However, doing so can be helpful in understanding the situation better.}\\
+\medskip
 
-\example{ex_lin_trans_2}{Determine whether or not the transformation $T:\rrr{2}{2}$ is a linear transformation, where $T(\vx) = \tta\vx$ and $$\tta = \bmx{cc} 1&2\\3&4\emx.$$}
-{Let's start by again considering arbitrary \vx\ and \vy. Let's choose the same \vx\ and \vy\ from Example \ref{ex_lin_trans_1}. $$\vx = \bmx{c}3\\-2\emx \quad \text{ and } \quad \vy = \bmx{c} 1\\5\emx.$$ If the lineararity properties hold for these vectors, then \textit{maybe} it is actually linear (and we'll do more work). 
+So we have an example of something that \textit{doesn't} work. Let's try an example where things \textit{do} work.\footnote{Recall a principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. However, doing so can be helpful in understanding the situation better.}
+
+\medskip
+
+\example{ex_lin_trans_2}{Identifying linear transformations}{Determine whether or not the transformation $T:\rrr{2}{2}$ is a linear transformation, where $T(\vx) = \tta\vx$ and 
+\[
+\tta = \bmx{cc} 1&2\\3&4\emx.
+\]}
+{Let's start by again considering arbitrary \vx\ and \vy. Let's choose the same \vx\ and \vy\ from Example \ref{ex_lin_trans_1}. 
+\[
+\vx = \bmx{c}3\\-2\emx \quad \text{ and } \quad \vy = \bmx{c} 1\\5\emx.
+\]
+If the lineararity properties hold for these vectors, then \textit{maybe} it is actually linear (and we'll do more work). 
 	\begin{enumerate}
 	\item	Is $T(\vx+\vy) = T(\vx)+T(\vy)$? Recall:
-	$$\vx+\vy = \bmx{c}4\\3\emx.$$ Now compute $T(\vx)$, $T(\vy)$, and $T(\vx)+T(\vy)$:
+\[
+\vx+\vy = \bmx{c}4\\3\emx.
+\]
+Now compute $T(\vx)$, $T(\vy)$, and $T(\vx)+T(\vy)$:
 
 	\begin{adjustwidth}{-45pt}{-60pt}
 	\begin{minipage}{.3\linewidth}
@@ -130,7 +180,10 @@ So we have an example of something that \textit{doesn't} work. Let's try an exam
 	
 \ \\
 
-Is $T(\vx+\vy) = T(\vx)+T(\vy)$? $$\bmx{c} -1\\1\emx+\bmx{c} 11\\23\emx \overset{!}{=} \bmx{c} 10\\24\emx.$$
+Is $T(\vx+\vy) = T(\vx)+T(\vy)$? 
+\[
+\bmx{c} -1\\1\emx+\bmx{c} 11\\23\emx \overset{!}{=} \bmx{c} 10\\24\emx.
+\]
 
 So far, so good: $T(\vx+\vy)$ is equal to  $T(\vx)+T(\vy)$.
 
@@ -145,7 +198,11 @@ So far, so good: $T(\vx+\vy)$ is equal to  $T(\vx)+T(\vy)$.
 
 So far it \textit{seems} that $T$ is indeed linear, for it worked in one example with arbitrarily chosen vectors and scalar. Now we need to try to show it is always true. 
 
-Consider $T(\vx+\vy)$. By the definition of $T$, we have $$T(\vx+\vy) = \tta(\vx+\vy).$$ By Theorem \ref{thm:matrix_multiplication}, part \ref{thm:mat_mult_dist} (on page \pageref{thm:matrix_multiplication}) we state that the Distributive Property holds for matrix multiplication.\footnote{Recall that a vector is just a special type of matrix, so this theorem applies to matrix--vector multiplication as well.} So $\tta(\vx+\vy) = \tta\vx + \tta\vy$. Recognize now that this last part is just $T(\vx) + T(\vy)$! We repeat the above steps, all together:
+Consider $T(\vx+\vy)$. By the definition of $T$, we have 
+\[
+T(\vx+\vy) = \tta(\vx+\vy).
+\]
+By Theorem \ref{thm:matrix_multiplication}, part \ref{thm:mat_mult_dist} (on page \pageref{thm:matrix_multiplication}) we state that the Distributive Property holds for matrix multiplication.\footnote{Recall that a vector is just a special type of matrix, so this theorem applies to matrix--vector multiplication as well.} So $\tta(\vx+\vy) = \tta\vx + \tta\vy$. Recognize now that this last part is just $T(\vx) + T(\vy)$! We repeat the above steps, all together:
 \begin{align*}
 T(\vx+\vy)	&= \tta(\vx+\vy) & & \quad \textsf{\small (by the definition of $T$ in this example)}\\
 						&= \tta\vx + \tta\vy & & \quad \textsf{\small (by the Distributive Property)}\\
@@ -161,27 +218,32 @@ T(k\vx)	&=	\tta(k\vx) & & \quad \textsf{\small (by the definition of $T$ is this
 \end{align*}
 
 Since $T$ satisfies both parts of the definition, we conclude that $T$ is a linear transformation.
-}\\
+}
+
+\medskip
 
 We have seen two examples of transformations so far, one which was not linear and one that was. One might wonder ``Why is linearity important?'', which we'll address shortly.
 
 First, consider how we proved the transformation in Example \ref{ex_lin_trans_2} was linear. We defined $T$ by matrix multiplication, that is, $T(\vx) = \tta\vx$. We proved $T$ was linear using properties of matrix multiplication -- \textit{we never considered the specific values of \tta!} That is, we didn't just choose a good matrix for $T$; \textit{any} matrix \tta\ would have worked. This leads us to an important theorem. The first part we have essentially just proved; the second part we won't prove, although its truth is very powerful.
 
-\theorem{thm:linear_matrix}{\textbf{Matrices and Linear Transformations}
+\smallskip
 
+\theorem{thm:linear_matrix}{Matrices and Linear Transformations}{
 \begin{enumerate}
 \item		Define $T:\rrr{n}{m}$ by $T(\vx) = \tta\vx$, where \tta\ is an $m\times n$ matrix. Then $T$ is a linear transformation.
 \item		Let $T:\rrr{n}{m}$ be any linear transformation. Then there exists an unique $m\times n$ matrix \tta\ such that $T(\vx) = \tta\vx$.
 \end{enumerate}
 }
 
+\smallskip
+
 The second part of the theorem says that \textit{all} linear transformations can be described using matrix multiplication. Given \textit{any} linear transformation, there is a matrix that completely defines that transformation. This important matrix gets its own name.
 
-\definition{def:standard_matrix}{\textbf{Standard Matrix of a Linear Transformation}\index{linear transformation!standard matrix of}\\
-
+\definition{def:standard_matrix}{Standard Matrix of a Linear Transformation}{\index{linear transformation!standard matrix of}
 Let $T:\rrr{n}{m}$ be a linear transformation. By Theorem \ref{thm:linear_matrix}, there is a matrix \tta\ such that $T(\vx) = \tta\vx$. This matrix \tta\ is called the \textit{standard matrix of the linear transformation $T$}, and is denoted $[\, T\, ]$.\footnote{The matrix--like brackets around $T$ suggest that the standard matrix \tta\ is a matrix ``with $T$ inside.''}
 }
 
+\smallskip
 
 While exploring all of the ramifications of Theorem \ref{thm:linear_matrix} is outside the scope of this text, let it suffice to say that since 1) linear transformations are very, very important in economics, science, engineering and mathematics, and 2) the theory of matrices is well developed and easy to implement by hand and on computers, then 3) it is great news that these two concepts go hand in hand.
 
@@ -191,13 +253,23 @@ This brings us back to the motivating example with which we started this section
 
 Yes, there is. Consider the second part of the linear transformation definition. It states that $T(k\vx) = kT(\vx)$ for all scalars $k$. If we let $k=0$, we have $T(0\vx) = 0\cdot T(\vx)$, or more simply, $T(\zero) = \zero$. That is, if $T$ is to be a linear transformation, it must send the zero vector  to the zero vector.
 
-This is a quick way to see that the translation transformation fails to be linear. By shifting the unit square to the right one unit, the corner at the point $(0,0)$ was sent to the point $(1,0)$, i.e., $$\text{the vector } \bmx{c}0\\0\emx \text{ was sent to the vector } \bmx{c}1\\0\emx.$$
+This is a quick way to see that the translation transformation fails to be linear. By shifting the unit square to the right one unit, the corner at the point $(0,0)$ was sent to the point $(1,0)$, i.e., 
+\[
+\text{the vector } \bmx{c}0\\0\emx \text{ was sent to the vector } \bmx{c}1\\0\emx.
+\]
 
 This property relating to \zero\ is important, so we highlight it here.
 
-\keyidea{idea:transform_zero}{\textbf{Linear Transformations and \zero}\index{linear transformation!and \zero}\\
+\smallskip
 
-Let $T:\rrr{n}{m}$ be a linear transformation. Then: $$T(\zero_n) = \zero_m.$$ That is, the zero vector in \real{n}\ gets sent to the zero vector in \real{m}.}
+\keyidea{idea:transform_zero}{Linear Transformations and \zero}{\index{linear transformation!and \zero}
+Let $T:\rrr{n}{m}$ be a linear transformation. Then: 
+\[
+T(\zero_n) = \zero_m.
+\]
+That is, the zero vector in \real{n}\ gets sent to the zero vector in \real{m}.}
+
+\smallskip
 
 The interested reader may wish to read the footnote below.\footnote{The idea that linear transformations ``send zero to zero'' has an interesting relation to terminology. The reader is likely familiar with functions like $f(x) = 2x+3$ and would likely refer to this as a ``linear function.'' However, $f(0) \neq 0$, so $f$ is \textit{not} ``linear'' by our new definition of linear. We erroneously call $f$ ``linear'' since its graph produces a line, though we should be careful to instead state that ``the graph of $f$ is a line.''}\\
 
@@ -205,29 +277,56 @@ The interested reader may wish to read the footnote below.\footnote{The idea tha
 
 It is often the case that while one can describe a linear transformation, one doesn't know what matrix performs that transformation (i.e., one doesn't know the standard matrix of that linear transformation). How do we systematically find it? We'll need a new definition.
 
-\definition{def:standard_unit}{\textbf{Standard Unit Vectors}\index{standard unit vector}\\
+\smallskip
 
+\definition{def:standard_unit}{Standard Unit Vectors}{\index{standard unit vector}
 In \real{n}, the \textit{standard unit vectors} \vei\ are the vectors with a $1$ in the $i^\text{th}$ entry and $0$s everywhere else.
 }
 
-We've already seen these vectors in the previous section. In \real{2}, we identified $$\veone = \bmx{c}1\\0\emx \quad \text{ and } \quad \vetwo = \bmx{c}0\\1\emx.$$ In \real{4}, there are 4 standard unit vectors:
-$$\veone = \bmx{c}1\\0\\0\\0\emx, \quad \vetwo = \bmx{c}0\\1\\0\\0\emx, \quad \vethree = \bmx{c}0\\0\\1\\0\emx, \quad \text{and} \quad \ven{4} = \bmx{c}0\\0\\0\\1\emx.$$
+\smallskip
 
-How do these vectors help us find the standard matrix of a linear transformation? Recall again our work in the previous section. There, we practiced looking at the transformed unit square and deducing the standard transformation matrix \tta. We did this by making the first column of \tta\ the vector where \veone\ ended up and making the second column of \tta\ the vector where \vetwo\ ended up. One could represent this with:
-$$\tta = \bmx{cc} T(\veone) & T(\vetwo) \emx = [\, T\, ].$$ That is, $T(\veone)$ is the vector where \veone\ ends up, and $T(\vetwo)$ is the vector where \vetwo\ ends up. 
+We've already seen these vectors in the previous section. In \real{2}, we identified 
+\[
+\veone = \bmx{c}1\\0\emx \quad \text{ and } \quad \vetwo = \bmx{c}0\\1\emx.
+\]
+In \real{4}, there are 4 standard unit vectors:
+\[
+\veone = \bmx{c}1\\0\\0\\0\emx, \quad \vetwo = \bmx{c}0\\1\\0\\0\emx, \quad \vethree = \bmx{c}0\\0\\1\\0\emx, \quad \text{and} \quad \ven{4} = \bmx{c}0\\0\\0\\1\emx.
+\]
+
+How do these vectors help us find the standard matrix of a linear transformation? Recall again our work in the previous section. There, we practised looking at the transformed unit square and deducing the standard transformation matrix \tta. We did this by making the first column of \tta\ the vector where \veone\ ended up and making the second column of \tta\ the vector where \vetwo\ ended up. One could represent this with:
+\[
+\tta = \bmx{cc} T(\veone) & T(\vetwo) \emx = [\, T\, ].
+\]
+That is, $T(\veone)$ is the vector where \veone\ ends up, and $T(\vetwo)$ is the vector where \vetwo\ ends up. 
 
 The same holds true in general. Given a linear transformation $T:\rrr{n}{m}$, the standard matrix of $T$ is the matrix whose $i^\text{th}$ column is the vector where \vei\ ends up. While we won't prove this is true, it is, and it is very useful. Therefore we'll state it again as a theorem.
 
-\theorem{thm:standard_matrix}{\textbf{The Standard Matrix of a Linear Transformation}\index{linear transformation!standard matrix of}\\
+\smallskip
 
-Let $T:\rrr{n}{m}$ be a linear transformation. Then $[\, T \, ]$ is the $m\times n$ matrix:  $$[\, T \, ] = \bmx{cccc} T(\veone) & T(\vetwo) & \cdots & T(\ven{n}) \emx.$$
+\theorem{thm:standard_matrix}{The Standard Matrix of a Linear Transformation}{\index{linear transformation!standard matrix of}
+Let $T:\rrr{n}{m}$ be a linear transformation. Then $[\, T \, ]$ is the $m\times n$ matrix:  
+\[
+[\, T \, ] = \bmx{cccc} T(\veone) & T(\vetwo) & \cdots & T(\ven{n}) \emx.
+\]
 }
 
-Let's practice this theorem in an example.\\
+\smallskip
 
-\example{ex_stand_mat1}{Define $T:\rrr{3}{4}$ to be the linear transformation where $$T\left(\bmx{c} x_1\\x_2\\x_3\emx\right) = \bmx{c} x_1+x_2\\ 3x_1-x_3 \\ 2x_2+5x_3 \\ 4x_1+3x_2+2x_3\emx .$$ Find $[\, T\, ]$.
+Let's practice this theorem in an example.
+
+\medskip
+
+\example{ex_stand_mat1}{Computing the matrix of a linear transformation}{Define $T:\rrr{3}{4}$ to be the linear transformation where 
+\[
+T\left(\bmx{c} x_1\\x_2\\x_3\emx\right) = \bmx{c} x_1+x_2\\ 3x_1-x_3 \\ 2x_2+5x_3 \\ 4x_1+3x_2+2x_3\emx .
+\]
+Find $[\, T\, ]$.
 }
-{$T$ takes vectors from \real3 into \real4, so $[\, T \, ]$ is going to be a $4\times 3$ matrix. Note that $$\veone = \bmx{c}1\\0\\0\emx, \quad \vetwo = \bmx{c}0\\1\\0\emx \quad \text{ and } \quad \vethree = \bmx{c}0\\0\\1\emx.$$
+{$T$ takes vectors from \real3 into \real4, so $[\, T \, ]$ is going to be a $4\times 3$ matrix. Note that 
+\[
+\veone = \bmx{c}1\\0\\0\emx, \quad \vetwo = \bmx{c}0\\1\\0\emx \quad \text{ and } \quad \vethree = \bmx{c}0\\0\\1\emx.
+\]
 We find the columns of \TT\ by finding where \veone, \vetwo\ and \vethree\ are sent, that is, we find $T(\veone)$, $T(\vetwo)$ and $T(\vethree)$. 
 
 \begin{adjustwidth}{0pt}{-35pt}
@@ -245,19 +344,35 @@ We find the columns of \TT\ by finding where \veone, \vetwo\ and \vethree\ are s
 	\end{minipage}\\											
 	\end{adjustwidth}
 	
-Thus $$\TT =\tta = \bmx{ccc} 1&1&0 \\ 3 & 0&-1\\ 0&2&5\\ 4&3&2\emx .$$
+Thus 
+\[
+\TT =\tta = \bmx{ccc} 1&1&0 \\ 3 & 0&-1\\ 0&2&5\\ 4&3&2\emx .
+\]
 
-Let's check this. Consider the vector $$\vx = \bmx{c}1\\2\\3\emx.$$ Strictly from the original definition, we can compute that $$T(\vx) = T\left(\bmx{c}1\\2\\3\emx\right) = \bmx{c} 1+2\\3-3\\4+15\\4+6+6 \emx = \bmx{c} 3\\0\\19\\16\emx.$$
+Let's check this. Consider the vector 
+\[
+\vx = \bmx{c}1\\2\\3\emx.
+\]
+Strictly from the original definition, we can compute that 
+\[
+T(\vx) = T\left(\bmx{c}1\\2\\3\emx\right) = \bmx{c} 1+2\\3-3\\4+15\\4+6+6 \emx = \bmx{c} 3\\0\\19\\16\emx.
+\]
 
 Now compute $T(\vx)$ by computing \TT\vx = \tta\vx.
 
-$$\tta\vx = \bmx{ccc} 1&1&0 \\ 3 & 0&-1\\ 0&2&5\\ 4&3&2\emx\bmx{c}1\\2\\3\emx = \bmx{c} 3\\0\\19\\16\emx.$$
+\[
+\tta\vx = \bmx{ccc} 1&1&0 \\ 3 & 0&-1\\ 0&2&5\\ 4&3&2\emx\bmx{c}1\\2\\3\emx = \bmx{c} 3\\0\\19\\16\emx.
+\]
 They match!\footnote{Of course they do. That was the whole point.} 
-}\\
+}
 
-Let's do another example, one that is more application oriented.\\
+\medskip
 
-\example{ex_stand_mat2}{A baseball team manager has collected basic data concerning his hitters. He has the number of singles, doubles, triples, and home runs they have hit over the past year. For each player, he wants two more pieces of information: the total number of hits and the total number of bases. 
+Let's do another example, one that is more application oriented.
+
+\medskip
+
+\example{ex_stand_mat2}{An application to baseball}{A baseball team manager has collected basic data concerning his hitters. He has the number of singles, doubles, triples, and home runs they have hit over the past year. For each player, he wants two more pieces of information: the total number of hits and the total number of bases. 
 
 Using the techniques developed in this section, devise a method for the manager to accomplish his goal.
 }
@@ -273,7 +388,14 @@ and \\
 %\end{adjustwidth}
 
 %\drawexampleline
-However, if he has a lot of players to do this for, he would likely want a way to automate the work.  One way of approaching the problem starts with recognizing that he wants to input four numbers into a function (i.e., the number of singles, doubles, etc.) and he wants two numbers as output (i.e., number of hits and bases). Thus he wants a transformation $T:\rrr{4}{2}$ where each vector in \real{4} can be interpreted as $$\bmx{c} \text{\#\ of singles} \\\text{\#\ of doubles} \\ \text{\#\ of triples} \\ \text{\#\ of home runs} \emx,$$ and each vector in \real{2} can be interpreted as $$\bmx{c} \text{\#\ of hits} \\\text{\#\ of bases} \emx.$$
+However, if he has a lot of players to do this for, he would likely want a way to automate the work.  One way of approaching the problem starts with recognizing that he wants to input four numbers into a function (i.e., the number of singles, doubles, etc.) and he wants two numbers as output (i.e., number of hits and bases). Thus he wants a transformation $T:\rrr{4}{2}$ where each vector in \real{4} can be interpreted as 
+\[
+\bmx{c} \text{\#\ of singles} \\\text{\#\ of doubles} \\ \text{\#\ of triples} \\ \text{\#\ of home runs} \emx,
+\]
+and each vector in \real{2} can be interpreted as 
+\[
+\bmx{c} \text{\#\ of hits} \\\text{\#\ of bases} \emx.
+\]
 
 %\drawexampleline{ex_stand_mat2}
 
@@ -294,30 +416,58 @@ To find \TT, he computes $T(\veone)$, $T(\vetwo)$, $T(\vethree)$ and $T(\ven{4})
 
 (What do these calculations mean? For example, finding $T(\vethree) = \bmx{c}1\\3\emx$ means that one triple counts as 1 hit and 3 bases.)\\
 
-Thus our transformation matrix \TT is $$\TT = \tta =\bmx{cccc}1&1&1&1\\1&2&3&4\emx.$$
+Thus our transformation matrix \TT is 
+\[
+\TT = \tta =\bmx{cccc}1&1&1&1\\1&2&3&4\emx.
+\]
 
 As an example, consider a player who had 102 singles, 30 doubles, 8 triples and 14 home runs. By using \tta, we find that 
-$$\bmx{cccc}1&1&1&1\\1&2&3&4\emx\bmx{c}102\\30\\8\\14\emx = \bmx{c} 154\\242\emx,$$ meaning the player had 154 hits and 242 total bases.
-}\\
+\[
+\bmx{cccc}1&1&1&1\\1&2&3&4\emx\bmx{c}102\\30\\8\\14\emx = \bmx{c} 154\\242\emx,
+\]
+meaning the player had 154 hits and 242 total bases.
+}
+
+\medskip
 
 A question that we should ask concerning the previous example is ``How do we know that the function the manager used was actually a linear transformation? After all, we were wrong before -- the translation example at the beginning of this section had us fooled at first.''
 
-This is a good point; the answer is fairly easy. Recall from Example \ref{ex_lin_trans_1} the transformation $$T_{\text{\scriptsize {\ref{ex_lin_trans_1}}}}\left(\bmx{c}x_1\\x_2\emx\right) = \bmx{c}x_1^2\\2x_1\\x_1x_2\emx$$ and from Example \ref{ex_stand_mat1}$$T_{\text{\scriptsize \ref{ex_stand_mat1}}}\left(\bmx{c} x_1\\x_2\\x_3\emx\right) = \bmx{c} x_1+x_2\\ 3x_1-x_3 \\ 2x_2+5x_3 \\ 4x_1+3x_2+2x_3\emx,$$ where we use the subscripts for $T$ to remind us which example they came from.
+This is a good point; the answer is fairly easy. Recall from Example \ref{ex_lin_trans_1} the transformation 
+\[
+T_{\text{\scriptsize {\ref{ex_lin_trans_1}}}}\left(\bmx{c}x_1\\x_2\emx\right) = \bmx{c}x_1^2\\2x_1\\x_1x_2\emx
+\]
+and from Example \ref{ex_stand_mat1}
+\[
+T_{\text{\scriptsize \ref{ex_stand_mat1}}}\left(\bmx{c} x_1\\x_2\\x_3\emx\right) = \bmx{c} x_1+x_2\\ 3x_1-x_3 \\ 2x_2+5x_3 \\ 4x_1+3x_2+2x_3\emx,
+\]
+where we use the subscripts for $T$ to remind us which example they came from.
 
 We found that $T_{\text{\scriptsize\ref{ex_lin_trans_1}}}$ was not a linear transformation, but stated that $T_{\text{\scriptsize\ref{ex_stand_mat1}}}$ was (although we didn't prove this). What made the difference? 
 
 Look at the entries of $T_{\text{\scriptsize\ref{ex_lin_trans_1}}}(\vx)$ and $T_{\text{\scriptsize\ref{ex_stand_mat1}}}(\vx)$. $T_{\text{\scriptsize\ref{ex_lin_trans_1}}}$ contains entries where a variable is squared and where 2 variables are multiplied together -- these prevent $T_{\text{\scriptsize\ref{ex_lin_trans_1}}}$ from being linear. On the other hand, the entries of $T_{\text{\scriptsize\ref{ex_stand_mat1}}}$ are all of the form $a_1x_1 + \cdots + a_nx_n$; that is, they are just sums of the variables multiplied by coefficients. $T$ is linear if and only if the entries of $T(\vx)$ are of this form. (Hence linear transformations are related to linear equations, as defined in Section \ref{sec:intro}.) This idea is important.
 
-\keyidea{idea:when_linear}{\textbf{Conditions on Linear Transformations}\index{linear transformation!conditions on}\\
+\smallskip
 
-Let $T:\rrr{n}{m}$ be a transformation and consider the entries of $$T(\vx) = T\left(\bmx{c}x_1\\x_2\\ \vdots \\ x_n\emx\right).$$ $T$ is linear if and only if each entry of $T(\vx)$ is of the form $a_1x_1 + a_2x_2+\cdots a_nx_n$.}
+\keyidea{idea:when_linear}{Conditions on Linear Transformations}{\index{linear transformation!conditions on}
+Let $T:\rrr{n}{m}$ be a transformation and consider the entries of 
+\[
+T(\vx) = T\left(\bmx{c}x_1\\x_2\\ \vdots \\ x_n\emx\right).
+\]
+$T$ is linear if and only if each entry of $T(\vx)$ is of the form $a_1x_1 + a_2x_2+\cdots a_nx_n$.}
 
-Going back to our baseball example, the manager could have defined his transformation as $$T\left(\bmx{c}x_1\\x_2\\x_3\\x_4\emx\right) = \bmx{c}x_1+x_2+x_3+x_4 \\ x_1+2x_2+3x_3+4x_4\emx.$$ Since that fits the model shown in Key Idea \ref{idea:when_linear}, the transformation $T$ is indeed linear and hence we can find a matrix \TT\ that represents it.
+\smallskip
 
-Let's practice this concept further in an example.\\
+Going back to our baseball example, the manager could have defined his transformation as 
+\[
+T\left(\bmx{c}x_1\\x_2\\x_3\\x_4\emx\right) = \bmx{c}x_1+x_2+x_3+x_4 \\ x_1+2x_2+3x_3+4x_4\emx.
+\]
+Since that fits the model shown in Key Idea \ref{idea:when_linear}, the transformation $T$ is indeed linear and hence we can find a matrix \TT\ that represents it.
 
+Let's practice this concept further in an example.
 
-\example{ex_is_linear}{Using Key Idea \ref{idea:when_linear}, determine whether or not each of the following transformations is linear.\\
+\medskip
+
+\example{ex_is_linear}{Using Key Idea \ref{idea:whenlinear} to identify linear transformations}{Using Key Idea \ref{idea:when_linear}, determine whether or not each of the following transformations is linear.\\
 
 $T_1\left(\bmx{c} x_1\\x_2\emx\right) = \bmx{c} x_1+1\\x_2\emx$ \hskip .5in
 $T_2\left(\bmx{c} x_1\\x_2\emx\right) = \bmx{c} x_1/x_2\\ \sqrt{x_2}\emx$
@@ -329,7 +479,9 @@ $T_3\left(\bmx{c} x_1\\x_2\emx\right) = \bmx{c} \sqrt{7}x_1-x_2\\ \pi x_2\emx$
 $T_2$ is also not linear. We cannot divide variables, nor can we put variabless inside the square root function (among other other things; again, see Section \ref{sec:intro}). This means that the baseball manager would not be able to use matrices to compute a batting average, which is (number of hits)/(number of at bats).
 
 $T_3$ is linear. Recall that $\sqrt{7}$ and $\pi$ are just numbers, just coefficients.
-}\\
+}
+
+\medskip
 
 We've mentioned before that we can draw vectors other than 2D vectors, although the more dimensions one adds, the harder it gets to understand. In the next section we'll learn about graphing vectors in 3D -- that is, how to draw on paper or a computer screen a 3D vector.\\
 

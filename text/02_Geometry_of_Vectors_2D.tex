@@ -1,4 +1,4 @@
-\clearpage
+%\clearpage
 \section{Visualizing Matrix Arithmetic in 2D}\label{sec:geom_1}
 
 
@@ -18,7 +18,11 @@ When we first learned about adding numbers together, it was useful to picture a 
 We now investigate a way to picture matrix arithmetic -- in particular, operations involving column vectors. This not only will help us better understand the arithmetic operations, it will open the door to a great wealth of interesting study. Visualizing matrix arithmetic has a wide variety of applications, the most common being computer graphics. While we often think of these graphics in terms of video games, there are numerous other important applications. For example, chemists and biologists often use computer models to ``visualize'' complex molecules to ``see'' how they interact with other molecules.%This section contains many figures. In order to reduce the clutter of the graphs, we will use the convention that each tick mark represents one unit, unless specified otherwise.}\\ %Also, in some cases the placement of the figures is a bit odd -- they don't appear immediately near the statements that refer to them. Therefore take care to look at the captions of the Figures to see what example they refer to.}\\
 
 
-We will start with vectors in two dimensions (2D) -- that is, vectors with only two entries. We assume the reader is familiar with the Cartesian plane, that is, plotting points and graphing functions on ``the $x$--$y$ plane.'' We graph vectors in a manner very similar to plotting points. Given the vector $$\vx = \bmx{c}1\\2\emx,$$ we draw \vx\ by drawing an arrow whose tip is 1 unit to the right and 2 units up from its origin.\footnote{To help reduce clutter, in all figures each tick mark represents one unit.} 
+We will start with vectors in two dimensions (2D) -- that is, vectors with only two entries. We assume the reader is familiar with the Cartesian plane, that is, plotting points and graphing functions on ``the $x$--$y$ plane.'' We graph vectors in a manner very similar to plotting points. Given the vector 
+\[
+\vx = \bmx{c}1\\2\emx,
+\]
+we draw \vx\ by drawing an arrow whose tip is 1 unit to the right and 2 units up from its origin.\footnote{To help reduce clutter, in all figures each tick mark represents one unit.} 
 
 %\begin{myfigure}%[h!]
 %\begin{center}
@@ -65,9 +69,14 @@ We will start with vectors in two dimensions (2D) -- that is, vectors with only 
 When drawing vectors, we do not specify where you start drawing; all we specify is where the tip lies based on where we started. Figure \ref{fig:draw_vectors} shows vector \vx\ drawn 3 ways. In some ways, the ``most common'' way to draw a vector has the arrow start at the origin,%\footnote{the ``origin'' of the arrow is at the origin}
  but this is by no means the only way of drawing the vector.
 
-Let's practice this concept by drawing various vectors from given starting points.\\
+Let's practice this concept by drawing various vectors from given starting points.
 
-\example{ex_draw_vectors_1}{Let $$\vx = \bmx{c}1\\-1\emx \quad \vy = \bmx{c} 2\\3\emx \quad \text{ and } \quad \vz = \bmx{c} -3\\2\emx.$$
+\medskip
+
+\example{ex_draw_vectors_1}{Sketching vectors}{Let 
+\[
+\vx = \bmx{c}1\\-1\emx \quad \vy = \bmx{c} 2\\3\emx \quad \text{ and } \quad \vz = \bmx{c} -3\\2\emx.
+\]
 Draw \vx\ starting from the point $(0,-1)$; draw \vy\ starting from the point $(-1,-1)$, and draw \vz\ starting from the point $(2,-1)$.}
 {To draw \vx, start at the point $(0,-1)$ as directed, then move to the right one unit and down one unit and draw the tip. Thus the arrow ``points'' from $(0,-1)$ to $(1,-2)$.
 
@@ -99,7 +108,9 @@ Each vector is drawn as shown in Figure \ref{fig:xyz}.
 \label{fig:xyz}
 \end{myfigure}
 %\eexset
-\vskip -2\baselineskip}\\
+\vskip -2\baselineskip}
+
+\medskip
 
 How does one draw the zero vector, $\zero =\bmx{c}0\\0\emx$?\footnote{Vectors are just special types of matrices. The zero vector, \zero, is a special type of zero matrix, \tto. It helps to distinguish the two by using different notation.} Following our basic procedure, we start by going 0 units in the $x$ direction, followed by 0 units in the $y$ direction. In other words, we don't go anywhere. 
 In general, we don't actually draw \zero. At best, one can draw a dark circle at the origin to convey the idea that \zero, when starting at the origin, points to the origin.
@@ -109,13 +120,21 @@ In section \ref{sec:matrix_arithmetic_1} we learned about matrix arithmetic oper
 
 \noindent \large \textsf{\textbf{ Vector Addition}} \normalsize\\
 
-Given two vectors \vx\ and \vy, how do we draw the vector $\vx+\vy$? Let's look at this in the context of an example, then study the result.\\
+Given two vectors \vx\ and \vy, how do we draw the vector $\vx+\vy$? Let's look at this in the context of an example, then study the result.
+
+\medskip
 
 %\enlargethispage{2\baselineskip}
 
-\example{ex_add_vectors_1}{Let $$\vx = \bmx{c}1\\1\emx \quad \text{ and } \quad \vy = \bmx{c}3\\1\emx.$$ Sketch \vx, \vy\  and $\vx+\vy$.}
+\example{ex_add_vectors_1}{Sketching vectors and their sum}{Let 
+\[
+\vx = \bmx{c}1\\1\emx \quad \text{ and } \quad \vy = \bmx{c}3\\1\emx.
+\]
+Sketch \vx, \vy\  and $\vx+\vy$.}
 {A starting point for drawing each vector was not given; by default, we'll start at the origin. (This is in many ways nice; this means that the \textit{vector} $\bmx{c}3\\1\emx$ ``points'' to the \textit{point} (3,1).) We first compute $\vx+\vy$:
-$$\vx+\vy = \bmx{c}1\\1\emx + \bmx{c}3\\1\emx = \bmx{c}4\\2\emx$$
+\[
+\vx+\vy = \bmx{c}1\\1\emx + \bmx{c}3\\1\emx = \bmx{c}4\\2\emx
+\]
 Sketching each gives the picture in Figure \ref{fig:addvectors1}.
  %\eexset
 
@@ -140,7 +159,9 @@ Sketching each gives the picture in Figure \ref{fig:addvectors1}.
 \mycaption{Adding vectors $\protect\vx$ and $\protect\vy$ in Example \ref{ex_add_vectors_1}}
 \label{fig:addvectors1}
 \end{myfigure}
-\vskip -2\baselineskip}\\
+\vskip -2\baselineskip}
+
+\medskip
 
 This example is pretty basic; we were given two vectors, told to add them together, then sketch all three vectors. Our job now is to go back and try to see a relationship between the drawings of \vx, \vy\ and $\vx+\vy$. Do you see any?
 
@@ -148,7 +169,7 @@ Here is one way of interpreting the adding of \vx\ to \vy. Regardless of where w
 
 The picture in Figure \ref{fig:addvectors2} illustrates this. The gray vectors demonstrate drawing the second vector from the tip of the first; we draw the vector $\vx+\vy$ dashed to set it apart from the rest. We also lightly filled the \textit{parallelogram} whose opposing sides are the vectors \vx\ and \vy. This highlights what is known as the \textit{Parallelogram Law}\index{Parallelogram Law}.
 
-\enlargethispage{2\baselineskip}
+%\enlargethispage{2\baselineskip}
 
 \begin{myfigure}%[h!]
 \btz[>=latex]
@@ -162,7 +183,7 @@ The picture in Figure \ref{fig:addvectors2} illustrates this. The gray vectors d
 \node[below] at (1,-0.1) {1};
 \node[left] at (0,1) {1};
  
-\ifthenelse{\boolean{in_color}}{\fill[color=blue!10] (0,0)--(1,1)--(4,2)--(3,1)--(0,0);}
+\ifthenelse{\boolean{colour}}{\fill[color=blue!10] (0,0)--(1,1)--(4,2)--(3,1)--(0,0);}
 {\fill[color=black!5] (0,0)--(1,1)--(4,2)--(3,1)--(0,0); }
  
 \draw[->,thick] (0,0)--(1,1) node [pos=.5,above] {\vx};
@@ -176,14 +197,18 @@ The picture in Figure \ref{fig:addvectors2} illustrates this. The gray vectors d
 \label{fig:addvectors2}
 \end{myfigure}
 
-\keyidea{idea:Parallelogram}{\textbf{Parallelogram Law}\\
+\smallskip
 
+\keyidea{idea:Parallelogram}{Parallelogram Law}{
 To draw the vector $\vx+\vy$, one can draw the parallelogram with \vx\ and \vy\ as its sides. The vector that points from the vertex where \vx\ and \vy\ originate to the vertex where \vx\ and \vy\ meet is the vector $\vx+\vy$.}
 
+\smallskip
 
-Knowing all of this allows us to draw the sum of two vectors without knowing specifically what the vectors are, as we demonstrate in the following example.\\
+Knowing all of this allows us to draw the sum of two vectors without knowing specifically what the vectors are, as we demonstrate in the following example.
 
-\example{ex_draw_add}{Consider the vectors \vx\ and \vy\ as drawn in Figure \ref{fig:draw_add_1}. Sketch the vector $\vx+\vy$.}
+\medskip
+
+\example{ex_draw_add}{Addition of vectors}{Consider the vectors \vx\ and \vy\ as drawn in Figure \ref{fig:draw_add_1}. Sketch the vector $\vx+\vy$.}
 {
 \begin{myfigure}%[h!]
 \btz[>=latex,scale=.75]
@@ -215,17 +240,27 @@ We'll apply the Parallelogram Law, as given in Key Idea \ref{idea:Parallelogram}
 \label{fig:draw_add_2}
 \end{myfigure}%
 %\vskip -3\baselineskip
-}\clearpage
-%\\
+}
+
+\medskip
 
 %\enlargethispage{-2\baselineskip}
 
 \noindent \large \textsf{\textbf{ Scalar Multiplication}} \normalsize\\
 
-After learning about matrix addition, we learned about scalar multiplication. We apply that concept now to vectors and see how this is represented graphically.\\
+After learning about matrix addition, we learned about scalar multiplication. We apply that concept now to vectors and see how this is represented graphically.
 
-\example{ex_scalar_vect_1}{Let $$\vx = \bmx{c}1\\1\emx \quad \text{ and } \quad \vy = \bmx{c}-2\\1\emx.$$ Sketch \vx, \vy, 3\vx\ and $-1\vy$.}
-{We begin by computing 3\vx\ and $-\vy$:$$ 3\vx = \bmx{c}3\\3\emx \quad \text { and } \quad -\vy = \bmx{c} 2\\-1\emx.$$
+\medskip
+
+\example{ex_scalar_vect_1}{Visualizing scalar multiplication}{Let 
+\[
+\vx = \bmx{c}1\\1\emx \quad \text{ and } \quad \vy = \bmx{c}-2\\1\emx.
+\]
+Sketch \vx, \vy, 3\vx\ and $-1\vy$.}
+{We begin by computing 3\vx\ and $-\vy$: 
+\[
+3\vx = \bmx{c}3\\3\emx \quad \text { and } \quad -\vy = \bmx{c} 2\\-1\emx.
+\]
 
 All four vectors are sketched in Figure \ref{fig:scalar_1}.
 
@@ -253,7 +288,9 @@ All four vectors are sketched in Figure \ref{fig:scalar_1}.
 \mycaption{Vectors $\protect \vx$, $\protect \vy$, $3\protect \vx$ and $-\protect \vy$ in Example \ref{ex_scalar_vect_1}}
 \label{fig:scalar_1}
 \end{myfigure}%
-\vskip -2\baselineskip}\\ %\eexset
+\vskip -2\baselineskip}
+
+\medskip
 
 As we often do, let us look at the previous example and see what we can learn from it. We can see that \vx\ and 3\vx\ point in the same direction (they lie on the same line), but 3\vx\ is just longer than \vx. (In fact, it looks like 3\vx\ is \textit{3} times longer than \vx. Is it? How do we measure length?)
  
@@ -263,9 +300,11 @@ As we often do, let us look at the previous example and see what we can learn fr
  
 %\enlargethispage{3\baselineskip} 
  
- Knowing this, we can sketch scalar multiples of vectors without knowing specifically what they are, as we do in the following example.\\
+ Knowing this, we can sketch scalar multiples of vectors without knowing specifically what they are, as we do in the following example.
  
-\example{ex_draw_scale_1}{Let vectors \vx\ and \vy\ be as in Figure \ref{fig:draw_scale_1}. Draw 3\vx, $-2\vx$, and $\frac12\vy$.
+\medskip
+ 
+\example{ex_draw_scale_1}{Sketching scalar multiples}{Let vectors \vx\ and \vy\ be as in Figure \ref{fig:draw_scale_1}. Draw 3\vx, $-2\vx$, and $\frac12\vy$.
 
 \begin{myfigure}%[h!]
 \btz[>=latex]
@@ -297,7 +336,9 @@ As we often do, let us look at the previous example and see what we can learn fr
 \mycaption{Vectors $\protect\vx$, $\protect\vy$, $\protect 3\vx$, $\protect -2x$ and $\protect \frac12\vx$ in Example \ref{ex_draw_scale_1}}
 \label{fig:draw_scale_2}
 \end{myfigure}%
-\vskip -2\baselineskip}\\   %\eexset
+\vskip -2\baselineskip}
+
+\medskip
 
 \noindent \large \textsf{\textbf{Vector Subtraction}} \normalsize \\
 
@@ -305,7 +346,7 @@ The final basic operation to consider between two vectors is that of vector subt
 
 If we know explicitly what \vx\ and \vy\ are, we can simply compute what $\vx-\vy$ is and then draw it. We can also think in terms of vector addition and scalar multiplication: we can \textit{add} the vectors $\vx + (-1)\vy$. That is, we can draw \vx\ and draw $-\vy$, then add them as we did in Example \ref{ex_draw_add}. This is especially useful we don't know explicitly what \vx\ and \vy\ are.\\
 
-\example{ex_subtract}{Let vectors \vx\ and \vy\ be as in Figure \ref{fig:subtract_1}. Draw $\vx-\vy$.
+\example{ex_subtract}{Sketching the difference of two vectors}{Let vectors \vx\ and \vy\ be as in Figure \ref{fig:subtract_1}. Draw $\vx-\vy$.
 
 \begin{myfigure}%[h!]
 \btz[>=latex]
@@ -338,7 +379,9 @@ If we know explicitly what \vx\ and \vy\ are, we can simply compute what $\vx-\v
 \mycaption{Vectors $\protect\vx$, $\protect\vy$ and $\protect \vx - \protect \vy$ in Example \ref{ex_subtract}}
 \label{fig:subtract_2}
 \end{myfigure}%
-\vskip -2\baselineskip}\\
+\vskip -2\baselineskip}
+
+\medskip
 
 In Figure \ref{fig:subtract_3}, we redraw Figure \ref{fig:subtract_2} from Example \ref{ex_subtract} but remove the gray vectors that tend to add clutter, and we redraw the vector $\vx-\vy$ dotted so that it starts from the tip of \vy.\footnote{Remember that we can draw vectors starting from anywhere.} Note that the dotted version of $\vx-\vy$ points from \vy\ to \vx. This is a ``shortcut'' to drawing $\vx-\vy$; simply draw the vector that starts at the tip of \vy\ and ends at the tip of \vx. This is important so we make it a Key Idea.
 
@@ -358,16 +401,19 @@ In Figure \ref{fig:subtract_3}, we redraw Figure \ref{fig:subtract_2} from Examp
 \label{fig:subtract_3}
 \end{myfigure}%
 
-\keyidea{idea:vector_subtract}{\textbf{Vector Subtraction}\\
+\smallskip
 
+\keyidea{idea:vector_subtract}{Vector Subtraction}{
 To draw the vector $\vx-\vy$, draw \vx\ and \vy\ so that they have the same origin. The vector $\vx-\vy$ is the vector that starts from the tip of \vy\ and points to the tip of \vx.}
 
 
-Let's practice this once more with a quick example.\\
-\enlargethispage{2\baselineskip}
+Let's practice this once more with a quick example.
+%\enlargethispage{2\baselineskip}
 %\clearpage
 
-\example{ex_subtract_quick}{Let \vx\ and \vy\ be as in Figure \ref{fig:subtract_quick_1} (a). Draw $\vx-\vy$.
+\medskip
+
+\example{ex_subtract_quick}{Sketching a vector difference}{Let \vx\ and \vy\ be as in Figure \ref{fig:subtract_quick_1} (a). Draw $\vx-\vy$.
 %
 %\begin{myfigure}%[h!]
 %\btz[>=latex,scale=.6]
@@ -407,7 +453,9 @@ Let's practice this once more with a quick example.\\
 \label{fig:subtract_quick_2}
 \end{myfigure}%
 \vskip -2\baselineskip
-}\\ %\eexset
+}
+
+\medskip
 
 %\pagebreak
 
@@ -442,61 +490,92 @@ Consider Figure \ref{fig:vector_length}. A vector \vx\ is drawn in black, and da
 
 It is easy to see that the dashed line has length 4 and the dotted line has length 3. We'll let $c$ denote the length of \vx; according to the Pythagorean Theorem, $4^2+3^2 = c^2$. Thus $c^2 = 25$ and we quickly deduce that $c=5$. 
 
-Notice that in our figure, \vx\ goes to the right 4 units and then up 3 units. In other words, we can write $$\vx = \bmx{c} 4\\3\emx.$$ We learned above that the length of \vx\ is $\sqrt{4^2+3^2}$.\footnote{Remember that $\sqrt{4^2+3^2} \neq 4+3$!} This hints at a basic calculation that works for all vectors \vx, and we define the length of a vector according to this rule.
+Notice that in our figure, \vx\ goes to the right 4 units and then up 3 units. In other words, we can write 
+\[
+\vx = \bmx{c} 4\\3\emx.
+\]
+We learned above that the length of \vx\ is $\sqrt{4^2+3^2}$.\footnote{Remember that $\sqrt{4^2+3^2} \neq 4+3$!} This hints at a basic calculation that works for all vectors \vx, and we define the length of a vector according to this rule.
 
-\definition{def:vector_length}{\textbf{Vector Length}\index{vector!length}\\
+\smallskip
 
-Let $$\vx = \bmx{c}x_1\\x_2\emx.$$ The \textit{length} of \vx, denoted $||\vx||$, is $$||\vx|| = \sqrt{x_1^2+x_2^2}.$$}
+\definition{def:vector_length}{Vector Length}{\index{vector!length}
 
-\example{ex_length}{Find the length of each of the vectors given below.
-$$ \vx[1] = \bmx{c}1\\1\emx \quad \vx[2] = \bmx{c} 2\\-3\emx \quad \vx[3]=\bmx{c} .6\\.8 \emx \quad \vx[4]=\bmx{c} 3\\0\emx$$}
+Let 
+\[
+\vx = \bmx{c}x_1\\x_2\emx.
+\]
+The \textit{length} of \vx, denoted $\len{\vx}$, is 
+\[
+\len{\vx} = \sqrt{x_1^2+x_2^2}.
+\]}
+
+\medskip
+
+\example{ex_length}{Calculating the length of vectors}{Find the length of each of the vectors given below.
+\[
+\vx[1] = \bmx{c}1\\1\emx \quad \vx[2] = \bmx{c} 2\\-3\emx \quad \vx[3]=\bmx{c} .6\\.8 \emx \quad \vx[4]=\bmx{c} 3\\0\emx
+\]}
 {We apply Definition \ref{def:vector_length} to each vector.\\
 
 \begin{align*}
-||\vx[1]|| &= \sqrt{1^2+1^2} = \sqrt{2}.\\
-||\vx[2]|| &= \sqrt{2^2+(-3)^2} = \sqrt{13}.\\
-||\vx[3]|| &= \sqrt{.6^2 +.8^2} = \sqrt{.36+.64} = 1.\\
-||\vx[4]|| &= \sqrt{3^2+0} = 3.
+\len{\vx[1]} &= \sqrt{1^2+1^2} = \sqrt{2}.\\
+\len{\vx[2]} &= \sqrt{2^2+(-3)^2} = \sqrt{13}.\\
+\len{\vx[3]} &= \sqrt{.6^2 +.8^2} = \sqrt{.36+.64} = 1.\\
+\len{\vx[4]} &= \sqrt{3^2+0} = 3.
 \end{align*}
 \vskip -1\baselineskip
-}\\ % \eexset
+}
  
+\medskip
 
-Now that we know how to compute the length of a vector, let's revisit a statement we made as we explored Examples \ref{ex_scalar_vect_1} and \ref{ex_draw_scale_1}: ``Multiplying a vector by a positive scalar $c$ stretches the vectors by a factor of $c$ $\ldots$'' At that time, we did not know how to measure the length of a vector, so our statement was unfounded. In the following example, we will confirm the truth of our previous statement.\\
+Now that we know how to compute the length of a vector, let's revisit a statement we made as we explored Examples \ref{ex_scalar_vect_1} and \ref{ex_draw_scale_1}: ``Multiplying a vector by a positive scalar $c$ stretches the vectors by a factor of $c$ $\ldots$'' At that time, we did not know how to measure the length of a vector, so our statement was unfounded. In the following example, we will confirm the truth of our previous statement.
 
-\example{ex_scalar_vect_2}{Let $\vx = \bmx{c} 2\\-1\emx$. Compute $||\vx||$, $||3\vx||$, $||-2\vx||$, and $||c\vx||$, where $c$ is a scalar.}
+\medskip
+
+\example{ex_scalar_vect_2}{Measuring the effect of scalar multiplication on vector length}{Let $\vx = \bmx{c} 2\\-1\emx$. Compute $\len{\vx}$, $\len{3\vx}$, $\len{-2\vx}$, and $\len{c\vx}$, where $c$ is a scalar.}
 {We apply Definition \ref{def:vector_length} to each of the vectors.\\
 
-$||\vx|| = \sqrt{4+1} = \sqrt{5}$.
+$\len{\vx} = \sqrt{4+1} = \sqrt{5}$.
 
-Before computing the length of $||3\vx||$, we note that $3\vx = \bmx{c} 6\\-3\emx$.\\
+Before computing the length of $\len{3\vx}$, we note that $3\vx = \bmx{c} 6\\-3\emx$.\\
 
-$||3\vx|| = \sqrt{36+9} = \sqrt{45} = 3\sqrt{5} = 3||\vx||.$
+$\len{3\vx} = \sqrt{36+9} = \sqrt{45} = 3\sqrt{5} = 3\len{\vx}.$
 
-Before computing the length of $||-2\vx||$, we note that $-2\vx = \bmx{c} -4\\2\emx$.\\
+Before computing the length of $\len{-2\vx}$, we note that $-2\vx = \bmx{c} -4\\2\emx$.\\
 
-$||-2\vx|| = \sqrt{16+4} = \sqrt{20} = 2\sqrt{5} = 2||\vx||.$
+$\len{-2\vx} = \sqrt{16+4} = \sqrt{20} = 2\sqrt{5} = 2\len{\vx}.$
 
-Finally, to compute $||c\vx||$, we note that $c\vx = \bmx{c} 2c\\-c\emx$. Thus:\\
+Finally, to compute $\len{c\vx}$, we note that $c\vx = \bmx{c} 2c\\-c\emx$. Thus:\\
 
-$||c\vx|| = \sqrt{(2c)^2 + (-c)^2} = \sqrt{4c^2 + c^2} = \sqrt{5c^2} = |c|\sqrt{5}.$\\
+$\len{c\vx} = \sqrt{(2c)^2 + (-c)^2} = \sqrt{4c^2 + c^2} = \sqrt{5c^2} = |c|\sqrt{5}.$\\
 
-This last line is true because the square root of any number squared is the \textit{absolute value} of that number (for example, $\sqrt{(-3)^2} = 3$).}\\% \eexset
+This last line is true because the square root of any number squared is the \textit{absolute value} of that number (for example, $\sqrt{(-3)^2} = 3$).}
+
+\medskip
 
 The last computation of our example is the most important one. It shows that, in general, multiplying a vector \vx\ by a scalar $c$ stretches \vx\ by a factor of $|c|$ (and the direction will change if $c$ is negative). This is important so we'll make it a Theorem.
 
-\theorem{thm:vect_length}{\textbf{Vector Length and Scalar Multiplication}\\
+\smallskip
 
-Let \vx\ be a vector and let $c$ be a scalar. Then the length of $c\vx$ is $$||c\vx|| = |c|\cdot ||\vx||.$$}
+\theorem{thm:vect_length}{Vector Length and Scalar Multiplication}{
+
+Let \vx\ be a vector and let $c$ be a scalar. Then the length of $c\vx$ is 
+\[
+\len{c\vx} = |c|\cdot \len{\vx}.
+\]}
 
 \noindent \large \textsf{\textbf{Matrix $-$ Vector Multiplication}} \normalsize\\
 
 The last arithmetic operation to consider visualizing is matrix multiplication. Specifically, we want to visualize the result of multiplying a vector by a matrix. In order to multiply a 2D vector by a matrix and get a 2D vector back, our matrix must be a square, $2\times 2$ matrix.\footnote{We can multiply a $3\times 2$ matrix by a 2D vector and get a 3D vector back, and this gives very interesting results. See section \ref{sec:lin_trans}.}
 
-We'll start with an example. Given a matrix \tta\ and several vectors, we'll graph the vectors before and after they've been multiplied by \tta\ and see what we learn.\\
+We'll start with an example. Given a matrix \tta\ and several vectors, we'll graph the vectors before and after they've been multiplied by \tta\ and see what we learn.
 
-\example{ex_mv_1}{Let \tta\ be a matrix, and \vx, \vy, and \vz\ be vectors as given below.
-$$\tta = \bmx{cc} 1&4\\2&3\emx,  \quad \vx = \bmx{c} 1\\1\emx, \quad \vy = \bmx{c}-1\\1\emx, \quad \vz = \bmx{c} 3\\-1\emx$$
+\medskip
+
+\example{ex_mv_1}{Multiplying a vector by a matrix}{Let \tta\ be a matrix, and \vx, \vy, and \vz\ be vectors as given below.
+\[
+\tta = \bmx{cc} 1&4\\2&3\emx,  \quad \vx = \bmx{c} 1\\1\emx, \quad \vy = \bmx{c}-1\\1\emx, \quad \vz = \bmx{c} 3\\-1\emx
+\]
 Graph \vx, \vy\ and \vz, as well as \tta\vx, \tta\vy\ and \tta\vz.}
 {\begin{myfigure}%[h!]
 \begin{center}
@@ -517,8 +596,14 @@ Graph \vx, \vy\ and \vz, as well as \tta\vx, \tta\vy\ and \tta\vz.}
 \label{fig:mv_1}
 \end{myfigure}%
 
-It is straightforward to compute: $$\tta\vx = \bmx{c} 5\\5\emx,\quad \tta\vy = \bmx{c} 3\\1\emx, \quad \text{ and } \quad \tta\vz = \bmx{c} -1\\3\emx.$$ The vectors are sketched in Figure \ref{fig:mv_1}
-}\\  %\eexset
+It is straightforward to compute: 
+\[
+\tta\vx = \bmx{c} 5\\5\emx,\quad \tta\vy = \bmx{c} 3\\1\emx, \quad \text{ and } \quad \tta\vz = \bmx{c} -1\\3\emx.
+\]
+The vectors are sketched in Figure \ref{fig:mv_1}
+}
+
+\medskip
 
 There are several things to notice. When each vector is multiplied by \tta, the result is a vector with a different length (in this example, always longer), and in two of the cases (for \vy\ and \vz), the resulting vector points in a different direction. 
 
@@ -528,14 +613,21 @@ This isn't surprising. In the previous section we learned about matrix multiplic
 
 Different matrices act on vectors in different ways.\footnote{That's one reason we call them ``different.''} Some always increase the length of a vector through  multiplication, others always decrease the length, others increase the length of some vectors and decrease the length of others, and others still don't change the length at all. A similar statement can be made about how matrices affect the direction of vectors through multiplication: some change every vector's direction, some change ``most'' vector's direction but leave some the same, and others still don't change the direction of any vector.
 
-How do we set about studying how matrix multiplication affects vectors? We could just create lots of different matrices and lots of different vectors, multiply, then graph, but this would be a lot of work with very little useful result. It would be too hard to find a pattern of behavior in this.\footnote{Remember, that's what mathematicians do. We look for patterns.}
+How do we set about studying how matrix multiplication affects vectors? We could just create lots of different matrices and lots of different vectors, multiply, then graph, but this would be a lot of work with very little useful result. It would be too hard to find a pattern of behaviour in this.\footnote{Remember, that's what mathematicians do. We look for patterns.}
 
-Instead, we'll begin by using a technique we've employed often in the past. We have a ``new'' operation; let's explore how it behaves with ``old'' operations. Specifically, we know how to sketch vector addition. What happens when we throw matrix multiplication into the mix? Let's try an example.\\
+Instead, we'll begin by using a technique we've employed often in the past. We have a ``new'' operation; let's explore how it behaves with ``old'' operations. Specifically, we know how to sketch vector addition. What happens when we throw matrix multiplication into the mix? Let's try an example.
 
-\example{ex_mv_2}{Let \tta\ be a matrix and \vx\ and \vy\ be vectors as given below. $$\tta = \bmx{cc} 1 & 1\\1&2\emx, \quad \vx = \bmx{c} 2\\1\emx, \quad \vy = \bmx{c} -1\\1\emx$$
+\medskip
+
+\example{ex_mv_2}{Combining addition and matrix multiplication}{Let \tta\ be a matrix and \vx\ and \vy\ be vectors as given below. 
+\[
+\tta = \bmx{cc} 1 & 1\\1&2\emx, \quad \vx = \bmx{c} 2\\1\emx, \quad \vy = \bmx{c} -1\\1\emx
+\]
 Sketch $\vx+\vy$, \tta\vx, \tta\vy, and $\tta(\vx+\vy)$. }
 {It is pretty straightforward to compute: 
-$$\vx+\vy = \bmx{c} 1\\2\emx;\quad \tta\vx = \bmx{c}3\\4\emx; \quad \tta\vy = \bmx{c} 0\\1\emx,\quad \tta(\vx+\vy) = \bmx{c} 3\\5\emx.$$
+\[
+\vx+\vy = \bmx{c} 1\\2\emx;\quad \tta\vx = \bmx{c}3\\4\emx; \quad \tta\vy = \bmx{c} 0\\1\emx,\quad \tta(\vx+\vy) = \bmx{c} 3\\5\emx.
+\]
 
 In Figure \ref{fig:mv_2}, we have graphed the above vectors and have included dashed gray vectors to highlight the additive nature of $\vx+\vy$ and $\tta(\vx+\vy)$. Does anything strike you as interesting?
 
@@ -562,13 +654,19 @@ Let's not focus on things which don't matter right now: let's not focus on how l
 
 In some sense, we started with three vectors, \vx, \vy, and $\vx+\vy$. This last vector is special; it is the sum of the previous two. Now, multiply all three by \tta. What happens? We get three new vectors, but the significant thing is this: the last vector is still the sum of the previous two! (We emphasize this by drawing dotted vectors to represent part of the Parallelogram Law.)
 
-Of course, we knew this already: we already knew that $\tta\vx + \tta\vy = \tta(\vx+\vy)$, for this is just the Distributive Property. However, now we get to see this graphically.}\\ %\eexset
+Of course, we knew this already: we already knew that $\tta\vx + \tta\vy = \tta(\vx+\vy)$, for this is just the Distributive Property. However, now we get to see this graphically.}
 
-In Section \ref{sec:geom_3} we'll study in greater depth how matrix multiplication affects vectors and the whole Cartesian plane. For now, we'll settle for simple practice: given a matrix and some vectors, we'll multiply and graph. Let's do one more example.\\
+\medskip
+
+In Section \ref{sec:geom_3} we'll study in greater depth how matrix multiplication affects vectors and the whole Cartesian plane. For now, we'll settle for simple practice: given a matrix and some vectors, we'll multiply and graph. Let's do one more example.
+
+\medskip
 
 
-\example{ex_mv_23}{Let \tta, \vx, \vy, and \vz\ be as given below.
-$$\tta = \bmx{cc} 1&-1\\1&-1\emx,  \quad \vx = \bmx{c} 1\\1\emx, \quad \vy = \bmx{c}-1\\1\emx, \quad \vz = \bmx{c} 4\\1\emx$$
+\example{ex_mv_23}{Sketching the effect of matrix multiplicaiton}{Let \tta, \vx, \vy, and \vz\ be as given below.
+\[
+\tta = \bmx{cc} 1&-1\\1&-1\emx,  \quad \vx = \bmx{c} 1\\1\emx, \quad \vy = \bmx{c}-1\\1\emx, \quad \vz = \bmx{c} 4\\1\emx
+\]
 Graph \vx, \vy\ and \vz, as well as \tta\vx, \tta\vy\ and \tta\vz.}
 {\begin{myfigure}%[h!]
 \begin{center}
@@ -589,10 +687,17 @@ Graph \vx, \vy\ and \vz, as well as \tta\vx, \tta\vy\ and \tta\vz.}
 \label{fig:mv_23}
 \end{myfigure}%
 
-It is straightforward to compute: $$\tta\vx = \bmx{c} 0\\0\emx,\quad \tta\vy = \bmx{c} -2\\-2\emx, \quad \text{ and } \quad \tta\vz = \bmx{c} 3\\3\emx.$$ The vectors are sketched in Figure \ref{fig:mv_23}.
+It is straightforward to compute: 
+\[
+\tta\vx = \bmx{c} 0\\0\emx,\quad \tta\vy = \bmx{c} -2\\-2\emx, \quad \text{ and } \quad \tta\vz = \bmx{c} 3\\3\emx.
+\]
+
+The vectors are sketched in Figure \ref{fig:mv_23}.
 
 These results are interesting. While we won't explore them in great detail here, notice how \vx\ got sent to the zero vector. Notice also that \tta\vx, \tta\vy\ and \tta\vz\ are all in a line (as well as \vx!). Why is that? Are \vx, \vy\ and \vz\ just special vectors, or would any other vector get sent to the same line when multiplied by \tta?\footnote{Don't just sit there, try it out!}
-}\\
+}
+
+\medskip
 
 %%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%
@@ -601,9 +706,7 @@ This section has focused on vectors in two dimensions. Later on in this book, we
 %
 %So far we've learned how to add matrices together and how to multiply a matrix by a scalar. In the next section we'll  consider what it means to multiply two matrices together.\\
 
-In the next section we'll take a new idea (matrix multiplication) and apply it to an old idea (solving systems of linear equations). This will allow us to view an old idea in a new way -- and we'll even get to ``visualize'' it.\\
-
-\clearpage
+In the next section we'll take a new idea (matrix multiplication) and apply it to an old idea (solving systems of linear equations). This will allow us to view an old idea in a new way -- and we'll even get to ``visualize'' it.
 
 \printexercises{exercises/05_01_exercises} 
  

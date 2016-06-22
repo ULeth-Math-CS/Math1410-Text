@@ -10,22 +10,28 @@
 
 In this section we'll explore how the \el s and \ev s of a matrix relate to other properties of that matrix. This section is essentially a hodgepodge of interesting facts about \el s; the goal here is not to memorize various facts about matrix algebra, but to again be amazed at the many connections between mathematical concepts.
 
-We'll begin our investigations with an example that will give a foundation for other discoveries.\\
+We'll begin our investigations with an example that will give a foundation for other discoveries.
 
-\example{ex_eigen_triangular}{Let $\tta = \bmx{ccc}1&2&3\\0&4&5\\0&0&6\emx$. Find the \el s of \tta. }
+\medskip
+
+\example{ex_eigen_triangular}{Eigenvalues of a triangular matrix}{Let $\tta = \bmx{ccc}1&2&3\\0&4&5\\0&0&6\emx$. Find the \el s of \tta. }
 {To find the \el s, we compute $\det{\tta-\lda\tti}$:
 \begin{align*}
 \det{\tta-\lda\tti}	&=	\bdt{ccc} 1-\lda & 2&3\\0&4-\lda&5\\0&0&6-\lda \edt\\
 										&= (1-\lda)(4-\lda)(6-\lda)
 \end{align*}
 
-Since our matrix is triangular, the determinant is easy to compute; it is just the product of the diagonal elements. Therefore, we found (and factored) our characteristic polynomial very easily, and we see that we have \el s of $\lda = 1, 4$, and 6.}\\ %\eexset
+Since our matrix is triangular, the determinant is easy to compute; it is just the product of the diagonal elements. Therefore, we found (and factored) our characteristic polynomial very easily, and we see that we have \el s of $\lda = 1, 4$, and 6.}
+
+\medskip
 
 This examples demonstrates a wonderful fact for us: the \el s of a triangular matrix are simply the entries on the diagonal. Finding the corresponding \ev s still takes some work, but finding the \el s is easy.
 
-With that fact in the backs of our minds, let us proceed to the next example where we will come across some more interesting facts about \el s and \ev s. \\
+With that fact in the backs of our minds, let us proceed to the next example where we will come across some more interesting facts about \el s and \ev s. 
 
-\example{ex_eigen_prop_1}{Let $\tta = \bmx{cc} -3 & 15 \\ 3 & 9 \emx$ and let $\ttb = \bmx{ccc} -7 & -2 & 10 \\-3 & 2 & 3\\ -6 & -2 & 9\emx$ (as used in Examples \ref{ex_eigen1} and \ref{ex_eigen3}, respectively). Find the following:
+\medskip
+
+\example{ex_eigen_prop_1}{Exploring properties of eigenvalues}{Let $\tta = \bmx{cc} -3 & 15 \\ 3 & 9 \emx$ and let $\ttb = \bmx{ccc} -7 & -2 & 10 \\-3 & 2 & 3\\ -6 & -2 & 9\emx$ (as used in Examples \ref{ex_eigen1} and \ref{ex_eigen3}, respectively). Find the following:
 
 \begin{enumerate}
 	\item	\el s and \ev s of \tta\ and \ttb
@@ -40,36 +46,58 @@ With that fact in the backs of our minds, let us proceed to the next example whe
 \begin{enumerate}
 	\item		We already know the answer to these for we did this work in previous examples. Therefore we just list the answers.
 	
-	For \tta, we have eigenvalues $\lda = -6$ and  $12$, with \ev s $$\vx = x_2\bmx{c} -5\\1\emx \ \text{ and }\  x_2\bmx{c}1\\1\emx\text{, respectively.}$$
+	For \tta, we have eigenvalues $\lda = -6$ and  $12$, with \ev s 
+\[
+\vx = x_2\bmx{c} -5\\1\emx \ \text{ and }\  x_2\bmx{c}1\\1\emx\text{, respectively.}
+\]
 
 %\drawexampleline{ex_eigen_prop_1}
 	
-	For \ttb, we have \el s $\lda = -1,\ 2,$ and $3$ with \ev s $$\vx = x_3 \bmx{c}3\\1\\2\emx,\ x_3 \bmx{c} 2\\1\\2\emx\ \text{ and }\ x_3 \bmx{c} 1\\0\\1\emx \text{, respectively.} $$
+	For \ttb, we have \el s $\lda = -1,\ 2,$ and $3$ with \ev s 
+\[
+\vx = x_3 \bmx{c}3\\1\\2\emx,\ x_3 \bmx{c} 2\\1\\2\emx\ \text{ and }\ x_3 \bmx{c} 1\\0\\1\emx \text{, respectively.} 
+\]
 	
 	\item		We first compute the inverses of \tta\ and \ttb. They are: 
-	$$\ttai = \bmx{cc} -1/8 & 5/24 \\ 1/24 & 1/24 \emx \quad \text{and} \quad
-	\ttbi = \bmx{ccc} -4 & 1/3 & 13/3 \\ -3/2 & 1/2 & 3/2 \\ -3 & 1/3 & 10/3 \emx.$$
+\[
+\ttai = \bmx{cc} -1/8 & 5/24 \\ 1/24 & 1/24 \emx \quad \text{and} \quad
+	\ttbi = \bmx{ccc} -4 & 1/3 & 13/3 \\ -3/2 & 1/2 & 3/2 \\ -3 & 1/3 & 10/3 \emx.
+\]
 	
 	Finding the \el s and \ev s of these matrices is not terribly hard, but it is not ``easy,'' either. Therefore, we omit showing the intermediate steps and go right to the conclusions. 
 	
-	For \ttai, we have \el s $\lda = -1/6$ and $1/12$, with \ev s $$\vx = x_2 \bmx{c} -5\\1\emx\ \text{ and }\  x_2 \bmx{c}1\\1\emx\text{, respectively.}$$
+	For \ttai, we have \el s $\lda = -1/6$ and $1/12$, with \ev s 
+\[
+\vx = x_2 \bmx{c} -5\\1\emx\ \text{ and }\  x_2 \bmx{c}1\\1\emx\text{, respectively.}
+\]
 	
-	For \ttbi, we have \el s $\lda = -1$, $1/2$ and $1/3$ with \ev s $$\vx = x_3\bmx{c} 3\\1\\2\emx,\ x_3\bmx{c} 2\\1\\2\emx \ \text{ and }\  x_3 \bmx{c} 1\\0\\1\emx\text{, respectively.}$$
+	For \ttbi, we have \el s $\lda = -1$, $1/2$ and $1/3$ with \ev s 
+\[
+\vx = x_3\bmx{c} 3\\1\\2\emx,\ x_3\bmx{c} 2\\1\\2\emx \ \text{ and }\  x_3 \bmx{c} 1\\0\\1\emx\text{, respectively.}
+\]
 	
 %	\drawexampleline{ex_eigen_prop_1}
 	
 	\item		Of course, computing the transpose of \tta\ and \ttb\ is easy; computing their \el s and \ev s takes more work. Again, we omit the intermediate steps.
 	
-	For \ttat, we have \el s $\lda = -6$ and $12$ with \ev s $$\vx = x_2 \bmx{c} -1\\1\emx\ \text{ and }\  x_2 \bmx{c} 5\\1\emx \text{, respectively.}$$
+	For \ttat, we have \el s $\lda = -6$ and $12$ with \ev s 
+\[
+\vx = x_2 \bmx{c} -1\\1\emx\ \text{ and }\  x_2 \bmx{c} 5\\1\emx \text{, respectively.}
+\]
 	
-	For \ttbt, we have \el s $\lda = -1,\ 2$ and $3$ with \ev s $$\vx = x_3 \bmx{c} -1\\0\\1\emx,\ x_3 \bmx{c} -1\\1\\1\emx\ \text{ and }\ x_3\bmx{c} 0\\-2\\1\emx\text{, respectively.}$$
+	For \ttbt, we have \el s $\lda = -1,\ 2$ and $3$ with \ev s 
+\[
+\vx = x_3 \bmx{c} -1\\0\\1\emx,\ x_3 \bmx{c} -1\\1\\1\emx\ \text{ and }\ x_3\bmx{c} 0\\-2\\1\emx\text{, respectively.}
+\]
 	
 	\item		The trace of \tta\ is 6; the trace of \ttb\ is 4.
 	
 	\item		The determinant of \tta\ is $-72$; the determinant of \ttb\ is $-6$.
 	
 \end{enumerate}
-\ } \\ %\eexset
+\ }
+
+\medskip
 
 Now that we have completed the ``grunt work,'' let's analyze the results of the previous example. We are looking for any patterns or relationships that we can find.\\
 
@@ -130,8 +158,9 @@ This is indeed true; we defend this with our argument from above. We know that t
 
 We summarize the results of our example with the following theorem.
 
-\theorem{thm:eigen_properties}{\textbf{Properties of Eigenvalues and Eigenvectors}\index{eigenvalue!properties} \\
+\smallskip
 
+\theorem{thm:eigen_properties}{Properties of Eigenvalues and Eigenvectors}{\index{eigenvalue!properties} 
 Let \tta\ be an $n\times n$ invertible matrix. The following are true:
 
 \begin{enumerate}
@@ -143,11 +172,15 @@ Let \tta\ be an $n\times n$ invertible matrix. The following are true:
 \end{enumerate}
 }
 
+\smallskip
+
 %We now explore a few more properties of the \el s of a matrix.
 
-There is one more concept concerning \el s and \ev s that we will explore. We do so in the context of an example.\\
+There is one more concept concerning \el s and \ev s that we will explore. We do so in the context of an example.
 
-\example{ex_eigen_zero}{Find the \el s and \ev s of the matrix $\tta = \bmx{cc} 1&2\\1&2\emx$. }
+\medskip
+
+\example{ex_eigen_zero}{Eigenvalues of a non-invertible matrix}{Find the \el s and \ev s of the matrix $\tta = \bmx{cc} 1&2\\1&2\emx$. }
 {To find the \el s, we compute $\det{\tta-\lda\tti}$:
 
 \begin{align*}
@@ -161,16 +194,28 @@ Our \el s are therefore $\lda =  0, 3$.
 
 For $\lda = 0$, we find the \ev s:
 
-$$\bmx{ccc} 1&2&0\\1&2&0\emx \quad \overrightarrow{\text{rref}}\quad \bmx{ccc}1&2&0\\0&0&0\emx$$
+\[
+\bmx{ccc} 1&2&0\\1&2&0\emx \quad \overrightarrow{\text{rref}}\quad \bmx{ccc}1&2&0\\0&0&0\emx
+\]
 
-This shows that $x_1 = -2x_2$, and so our \ev s $\vx$ are $$\vx = x_2\bmx{c}-2\\1\emx.$$
+This shows that $x_1 = -2x_2$, and so our \ev s $\vx$ are 
+\[
+\vx = x_2\bmx{c}-2\\1\emx.
+\]
 
 For $\lda = 3$, we find the \ev s:
 
-$$\bmx{ccc}-2&2&0\\ 1&-1&0 \emx \quad \overrightarrow{\text{rref}}\quad \bmx{ccc}1&-1&0\\0&0&0\emx$$
+\[
+\bmx{ccc}-2&2&0\\ 1&-1&0 \emx \quad \overrightarrow{\text{rref}}\quad \bmx{ccc}1&-1&0\\0&0&0\emx
+\]
 
-This shows that $x_1 = x_2$, and so our \ev s $\vx$ are $$\vx = x_2\bmx{c}1\\1\emx.$$
-\ }\\ %\eexset
+This shows that $x_1 = x_2$, and so our \ev s $\vx$ are 
+\[
+\vx = x_2\bmx{c}1\\1\emx.
+\]
+\ }
+
+\medskip
 
 One interesting thing about the above example is that we see that 0 is an \el\ of \tta; we have not officially encountered this before. Does this mean anything significant?\footnote{Since 0 is a ``special'' number, we might think so -- afterall, we found that having a determinant of 0 is important. Then again, a matrix with a trace of 0 isn't all that important. (Well, as far as we have seen; it actually \textit{is}). So, having an \el\ of 0 may or may not be significant, but we would be doing well if we recognized the possibility of significance and decided to investigate further.} 
 
@@ -178,8 +223,9 @@ Think about what an \el\ of 0 means: there exists an nonzero vector \vx\ where $
 
 So if \tta\ is invertible, there is no nontrivial solution to $\tta\vx=\zero$, and hence 0 \textit{is not} an \el\ of \tta. If \tta\ is not invertible, then there is a nontrivial solution to $\tta\vx=\zero$, and hence 0 \textit{is} an \el\ of \tta. This leads us to our final addition to the Invertible Matrix Theorem.
 
-\theorem{thm:IMT_eigen}{\textbf{Invertible Matrix Theorem}\index{Invertible Matrix Theorem}\\
+\smallskip
 
+\theorem{thm:IMT_eigen}{Invertible Matrix Theorem}{\index{Invertible Matrix Theorem}
 Let \tta\ be an $n\times n$ matrix. The following statements are equivalent.
 
 \begin{list}{(\alph{IMTcount})}{}\usecounter{IMTcount}
@@ -189,15 +235,34 @@ Let \tta\ be an $n\times n$ matrix. The following statements are equivalent.
 \setcounter{IMTcount_temp}{\value{IMTcount}}
 \addtocounter{IMTcount_temp}{-1}
 }
+
+\smallskip
+
 %\setcounter{IMTcount_temp}{\value{IMTcount}}
 
 This section is about the properties of \el s and \ev s. Of course, we have not investigated all of the numerous properties of \el s and \ev s; we have just surveyed some of the most common (and most important) concepts. Here are four quick examples of the many things that still exist to be explored.
 
-First, recall the matrix $$\tta = \bmx{cc}1&4\\2&3\emx$$ that we used in Example \ref{ex_find_el}. It's characteristic polynomial is $p(\lda)=\lda^2-4\lda-5$. Compute $p(\tta)$; that is, compute $\tta^2-4\tta-5\tti$. You should get something ``interesting,'' and you should wonder ``does this always work?''\footnote{Yes.}
+First, recall the matrix 
+\[
+\tta = \bmx{cc}1&4\\2&3\emx
+\]
+that we used in Example \ref{ex_find_el}. It's characteristic polynomial is $p(\lda)=\lda^2-4\lda-5$. Compute $p(\tta)$; that is, compute $\tta^2-4\tta-5\tti$. You should get something ``interesting,'' and you should wonder ``does this always work?''\footnote{Yes.}
 
-Second, in all of our examples, we have considered matrices where \el s ``appeared only once.'' Since we know that the \el s of a triangular matrix appear on the diagonal, we know that the \el s of $$\tta = \bmx{cc}1&1\\0&1\emx$$ are ``1 and 1;'' that is, the \el\ $\lda = 1$ appears twice. What does that mean when we consider the \ev s of $\lda = 1$? Compare the result of this to the matrix $$\tta = \bmx{cc}1&0\\0&1\emx,$$ which also has the \el\ $\lda =1$ appearing twice.\footnote{To direct further study, it helps to know that mathematicians refer to this as the \textit{duplicity} of an \el. In each of these two examples, \tta\ has the \el\ $\lda=1$ with duplicity of 2.}
+Second, in all of our examples, we have considered matrices where \el s ``appeared only once.'' Since we know that the \el s of a triangular matrix appear on the diagonal, we know that the \el s of 
+\[
+\tta = \bmx{cc}1&1\\0&1\emx
+\]
+are ``1 and 1;'' that is, the \el\ $\lda = 1$ appears twice. What does that mean when we consider the \ev s of $\lda = 1$? Compare the result of this to the matrix 
+\[
+\tta = \bmx{cc}1&0\\0&1\emx,
+\]
+which also has the \el\ $\lda =1$ appearing twice.\footnote{To direct further study, it helps to know that mathematicians refer to this as the \textit{duplicity} of an \el. In each of these two examples, \tta\ has the \el\ $\lda=1$ with duplicity of 2.}
 
-Third, consider the matrix $$\tta = \bmx{cc}0&-1\\1&0\emx.$$ What are the \el s?\footnote{Be careful; this matrix is \textit{not} triangular.} We quickly compute the characteristic polynomial to be $p(\lda) = \lda^2 + 1$. Therefore the \el s are $\pm \sqrt{-1} = \pm i$. What does this mean?
+Third, consider the matrix 
+\[
+\tta = \bmx{cc}0&-1\\1&0\emx.
+\]
+What are the \el s?\footnote{Be careful; this matrix is \textit{not} triangular.} We quickly compute the characteristic polynomial to be $p(\lda) = \lda^2 + 1$. Therefore the \el s are $\pm \sqrt{-1} = \pm i$. What does this mean?
 
 Finally, we have found the \el s of matrices by finding the roots of the characteristic polynomial. We have limited our examples to quadratic and cubic polynomials; one would expect for larger sized matrices that a computer would be used to factor the characteristic polynomials. However, in general, this is \textit{not} how the \el s are found. Factoring high order polynomials is too unreliable, even with a computer -- round off errors can cause unpredictable results. Also, to even compute the characteristic polynomial, one needs to compute the determinant, which is also expensive (as discussed in the previous chapter). 
 
@@ -205,8 +270,6 @@ So how are \el s found? There are \textit{iterative} processes that can progress
 
 These methods are so fast and reliable that some computer programs convert polynomial root finding problems into \el\ problems!
 
-Most textbooks on Linear Algebra will provide direction on exploring the above topics and give further insight to what is going on. We have mentioned all the \el\ and \ev\ properties in this section for the same reasons we gave in the previous section. First, knowing these properties helps us solve numerous real world problems, and second, it is fascinating to see how rich and deep the theory of matrices is.\\
-
-\clearpage
+Most textbooks on Linear Algebra will provide direction on exploring the above topics and give further insight to what is going on. We have mentioned all the \el\ and \ev\ properties in this section for the same reasons we gave in the previous section. First, knowing these properties helps us solve numerous real world problems, and second, it is fascinating to see how rich and deep the theory of matrices is.
 
 \printexercises{exercises/04_02_exercises}

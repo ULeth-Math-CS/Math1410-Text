@@ -9,23 +9,41 @@
 
 In the previous sections we have learned about the determinant, but we haven't given a really good reason \textit{why} we would want to compute it.\footnote{The closest we came to motivation is that if $\det{\tta} =0$, then we know that \tta\ is not invertible. But it seems that there may be easier ways to check.} This section shows one application of the determinant: solving systems of linear equations. We introduce this idea in terms of a theorem, then we will practice.
 
-\theorem{thm:cramers_rule}{\index{Cramer's Rule}\textbf{Cramer's Rule}\\
+\smallskip
 
-Let \tta\ be an $n\times n$ matrix with $\det{\tta}\neq 0$ and let \vb\ be an $n\times 1$ column vector. Then the linear system $$\ttaxb$$ has solution $$x_i = \frac{\det{\tta_i(\vb)}}{\det{\tta}},$$ where $\tta_i(\vb)$ is the matrix formed by replacing the $i^\text{th}$ column of \tta\ with \vb.}
+\theorem{thm:cramers_rule}{Cramer's Rule}{\index{Cramer's Rule}
 
-Let's do an example.\\
+Let \tta\ be an $n\times n$ matrix with $\det{\tta}\neq 0$ and let \vb\ be an $n\times 1$ column vector. Then the linear system 
+\[
+\ttaxb
+\]
+has solution 
+\[
+x_i = \frac{\det{\tta_i(\vb)}}{\det{\tta}},
+\]
+where $\tta_i(\vb)$ is the matrix formed by replacing the $i^\text{th}$ column of \tta\ with \vb.}
 
-\example{ex_cramer_1}{Use Cramer's Rule to solve the linear system \ttaxb\ where $$\tta = \bmx{ccc}1&5&-3\\1&4&2\\2&-1&0 \emx \ \text{ and }\ \vb = \bmx{c}-36\\-11\\7\emx.$$}
-{We first compute the determinant of \tta\ to see if we can apply Cramer's Rule. $$\det{\tta} = \bdt{ccc}1&5&-3\\1&4&2\\2&-1&0\edt = 49.$$
+\medskip
+
+\example{ex_cramer_1}{Using Cramer's Rule}{Use Cramer's Rule to solve the linear system \ttaxb\ where 
+\[
+\tta = \bmx{ccc}1&5&-3\\1&4&2\\2&-1&0 \emx \ \text{ and }\ \vb = \bmx{c}-36\\-11\\7\emx.
+\]}
+{We first compute the determinant of \tta\ to see if we can apply Cramer's Rule. 
+\[
+\det{\tta} = \bdt{ccc}1&5&-3\\1&4&2\\2&-1&0\edt = 49.
+\]
 
 Since $\det{\tta}\neq 0$, we can apply Cramer's Rule. Following Theorem \ref{thm:cramers_rule}, we compute \det{\tta_1(\vb)}, \det{\tta_2(\vb)} and \det{\tta_3(\vb)}. 
 
-$$\det{\tta_1(\vb)} = \bdt{ccc} {\bf -36}&5&-3\\{\bf -11}&4&2\\{\bf 7}&-1&0 \edt = 49.$$
+\[
+\det{\tta_1(\vb)} = \bdt{ccc} {\bf -36}&5&-3\\{\bf -11}&4&2\\{\bf 7}&-1&0 \edt = 49.
+\]
 (We used a bold font to show where \vb\ replaced the first column of \tta.)
-
-$$\det{\tta_2(\vb)} = \bdt{ccc} 1&{\bf -36}&-3\\1&{\bf -11}&2\\2&{\bf 7}&0\edt = -245.$$
-
-$$\det{\tta_3(\vb)} = \bdt{ccc}  1&5&{\bf -36}\\1&4&{\bf -11}\\2&-1&{\bf 7}\edt = 196.$$
+\begin{align*}
+\det{\tta_2(\vb)} &= \bdt{ccc} 1&{\bf -36}&-3\\1&{\bf -11}&2\\2&{\bf 7}&0\edt = -245.\\
+\det{\tta_3(\vb)} &= \bdt{ccc}  1&5&{\bf -36}\\1&4&{\bf -11}\\2&-1&{\bf 7}\edt = 196.
+\end{align*}
 
 Therefore we can compute \vx:
 \begin{align*}
@@ -34,23 +52,35 @@ x_2 &= \frac{\det{\tta_2(\vb)}}{\det{\tta}} = \frac{-245}{49} = -5\\
 x_3 &= \frac{\det{\tta_3(\vb)}}{\det{\tta}} = \frac{196}{49} = 4
 \end{align*}
 
-Therefore $$\vx = \bmx{c}x_1\\x_2\\x_3\emx = \bmx{c}1\\-5\\4\emx.$$
-\ } \\ %\eexset
+Therefore 
+\[
+\vx = \bmx{c}x_1\\x_2\\x_3\emx = \bmx{c}1\\-5\\4\emx.
+\]
+\ } 
 
-Let's do another example.\\
+\medskip
 
-\example{ex_cramer_2}{Use Cramer's Rule to solve the linear system \ttaxb\ where $$\tta = \bmx{cc} 1&2\\3&4\emx \ \text{ and } \ \vb = \bmx{c} -1\\1\emx.$$}
+\example{ex_cramer_2}{Using Cramer's Rule}{Use Cramer's Rule to solve the linear system \ttaxb\ where 
+\[
+\tta = \bmx{cc} 1&2\\3&4\emx \ \text{ and } \ \vb = \bmx{c} -1\\1\emx.
+\]}
 {The determinant of \tta\ is $-2$, so we can apply Cramer's Rule. 
-$$\det{\tta_1(\vb)} = \bdt{cc} {\bf -1} & 2\\ {\bf 1} & 4\edt = -6.$$
-
-$$\det{\tta_2(\vb)} = \bdt{cc} 1 & {\bf -1}\\ 3 & {\bf 1} \edt = 4.$$
+\begin{align*}
+\det{\tta_1(\vb)} &= \bdt{cc} {\bf -1} & 2\\ {\bf 1} & 4\edt = -6.\\
+\det{\tta_2(\vb)} &= \bdt{cc} 1 & {\bf -1}\\ 3 & {\bf 1} \edt = 4.
+\end{align*}
 
 Therefore 
 \begin{align*}
 x_1 &= \frac{\det{\tta_1(\vb)}}{\det{\tta}} = \frac{-6}{-2} = 3\\
 x_2 &= \frac{\det{\tta_2(\vb)}}{\det{\tta}} = \frac{4}{-2} = -2\\
 \end{align*}
-and $$\vx = \bmx{c}x_1\\x_2\emx = \bmx{c}3\\-2\emx.$$ \ } \\ %\eexset
+and 
+\[
+\vx = \bmx{c}x_1\\x_2\emx = \bmx{c}3\\-2\emx.
+\] \ }
+
+\medskip
 
 We learned in Section \ref{sec:determinant_properties} that when considering a linear system \ttaxb\ where \tta\ is square, if $\det{\tta}\neq 0$ then \tta\ is invertible and \ttaxb\ has exactly one solution. We also stated in Key Idea \ref{idea:solutions_invert} that if $\det{\tta} = 0$, then \tta\ is not invertible and so therefore either \ttaxb\ has no solution or infinite solutions. Our method of figuring out which of these cases applied was to form the augmented matrix $\bmx{cc} \tta & \vb \emx$, put it into \rref, and then interpret the results.
 
@@ -95,12 +125,7 @@ So why include it? \textit{Because its truth is amazing.} The determinant is a v
 
 %It is not accurate to say that Cramer's Rule is \textit{never} used. For certain elementary linear differential equations, especially at the introductory level, Cramer's Rule provides a systematic way of arriving at a solution. Again, however, there are generally ``better'' ways of finding the solution.
 
-In the next chapter we'll see another use for the determinant. Meanwhile, try to develop a deeper appreciation of math: odd, complicated things that seem completely unrelated often are intricately tied together. Mathematicians see these connections and describe them as ``beautiful.''\\
+In the next chapter we'll see another use for the determinant. Meanwhile, try to develop a deeper appreciation of math: odd, complicated things that seem completely unrelated often are intricately tied together. Mathematicians see these connections and describe them as ``beautiful.''
 
 \printexercises{exercises/03_05_exercises}
 
-%\Large \textbf{Answers to Odd Numbered Exercises}
-
-%\begin{multicols}{2}
-%\printanswers{exercises/03_05_exercises}
-%\end{multicols}

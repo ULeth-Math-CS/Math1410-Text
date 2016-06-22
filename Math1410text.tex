@@ -16,6 +16,11 @@
 \setboolean{printlabelname}{false}
 \ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
 
+\usepackage{import, multicol,boxedminipage}
+\usepackage{supertabular,longtable,hhline}
+\usepackage{colortbl}
+\usepackage{cancel}
+
 
 
 %% end detour
@@ -31,6 +36,8 @@
 \usepackage{refcount}
 \usepackage{pdfpages}
 
+\ifthenelse{\boolean{xetex}}{\renewcommand{\C}{\mathbb{C}}}{\newcommand{\C}{\mathbb{C}}}
+\newcommand{\R}{\mathbb{R}}
 
 \ifthenelse{\boolean{xetex}}%
 	{\sffamily
@@ -58,10 +65,11 @@
 	\setmathfont[range=\mathit]{Calibri Italic}
 	}
 	{}
+\DeclareMathOperator{\tr}{tr}
 
 \makeindex
 %%%\tracingonline=1
-
+\newcounter{HW}
 \begin{document}
 
 
@@ -71,16 +79,24 @@
 %\printexercisenames
 %\printallanswers
 
-\input{text/front_matter_and_coverIII}
+\input{text/front_matter_and_coverI}
 
 
 
-%
-%%%\addtocounter{chapter}{9}
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter{Vectors}
+\chapter{The Real and Complex Number Systems}\label{chapter:numbers}
 \thispagestyle{empty}
-\input{text/10_Space_Intro_1410}
+\input{text/00_SetTheory}
+\input{text/00_RealNumberArithmetic}
+\input{text/00_CartesianPlane}
+\input{text/00_CmpNums}
+\input{text/00_IntroPolar}
+\input{text/00_PolarComplex}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Vectors}\label{chapter:vectors}
+\thispagestyle{empty}
+\input{text/10_Space_Intro}
 \input{text/10_Vector_Introduction}
 \input{text/10_Dot_Product}
 \input{text/10_Cross_Product}
@@ -93,51 +109,51 @@
 \thispagestyle{empty}
 
 \input{text/01_Introduction_Linear_Equations}
-%\input{text/01_Using_Matrices}
-%\input{text/01_Gauss_Jordan_Elimination}
-%\input{text/01_Existence_Uniqueness_Solutions}
-%\input{text/01_Solving_Systems}
+\input{text/01_Using_Matrices}
+\input{text/01_Gauss_Jordan_Elimination}
+\input{text/01_Existence_Uniqueness_Solutions}
+\input{text/01_Solving_Systems}
 
 
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-%\chapter{Matrix Arithmetic}\label{chapter:arithmetic}
-%\thispagestyle{empty}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Matrix Arithmetic}\label{chapter:arithmetic}
+\thispagestyle{empty}
 
-%\input{text/02_Matrix_Addition}
-%\input{text/02_Matrix_Multiplication}
-%\input{text/02_Geometry_of_Vectors_2D}
-%\input{text/02_Vector_Solutions}
-%\input{text/02_Solving_AXB}
-%\input{text/02_Matrix_Inverses}
-%\input{text/02_Matrix_Inverse_Properties}
-
-
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-%\chapter{Operations on Matrices}\label{chapter:ops}
-%\thispagestyle{empty}
-
-%\input{text/03_Transpose}
-%\input{text/03_Trace}
-%\input{text/03_Determinant}
-%\input{text/03_Determinant_Properties}
-%\input{text/03_CramersRule}
+\input{text/02_Matrix_Addition}
+\input{text/02_Matrix_Multiplication}
+\input{text/02_Geometry_of_Vectors_2D}
+\input{text/02_Vector_Solutions}
+\input{text/02_Solving_AXB}
+\input{text/02_Matrix_Inverses}
+\input{text/02_Matrix_Inverse_Properties}
 
 
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-%\chapter{Eigenvalues and Eigenvectors}\label{chapter:eigen}
-%\thispagestyle{empty}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Operations on Matrices}\label{chapter:ops}
+\thispagestyle{empty}
 
-%\input{text/04_Eigen}
-%\input{text/04_Eigen_Properties}
+\input{text/03_Transpose}
+\input{text/03_Trace}
+\input{text/03_Determinant}
+\input{text/03_Determinant_Properties}
+\input{text/03_CramersRule}
+
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Eigenvalues and Eigenvectors}\label{chapter:eigen}
+\thispagestyle{empty}
+
+\input{text/04_Eigen}
+\input{text/04_Eigen_Properties}
 %
 
-%\clearpage{\pagestyle{empty}\cleardoublepage}
-%\chapter{Graphical Explorations of Vectors}\label{chapter:graph}
-%\thispagestyle{empty}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Graphical Explorations of Vectors}\label{chapter:graph}
+\thispagestyle{empty}
 
-%\input{text/05_Geometry_of_Cartesian_Plane}
-%\input{text/05_Linear_Transformations}
-%\input{text/05_Geometry_of_Vectors_3D}
+\input{text/05_Geometry_of_Cartesian_Plane}
+\input{text/05_Linear_Transformations}
+\input{text/05_Geometry_of_Vectors_3D}
 
 %
 %\refstepcounter{definitioncounter}
