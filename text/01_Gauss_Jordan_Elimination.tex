@@ -5,7 +5,9 @@
 \item	T/F: Assuming a solution exists, all linear systems of equations can be solved using only elementary row operations.
 \item	Give one reason why one might not be interested in putting a matrix into \rref.
 \item Identify the leading 1s in the following matrix:
-	$$\bmx{cccc} 1&0&0&1\\ 0&1&1&0\\0&0&1&1\\0&0&0&0\emx$$
+	\[
+	\bmx{cccc} 1&0&0&1\\ 0&1&1&0\\0&0&1&1\\0&0&0&0\emx
+	\]
 \item Using the ``forward'' and ``backward'' steps of Gaussian elimination creates lots of \underline{\hskip .5in} making computations easier.
 }
 
@@ -40,7 +42,7 @@ Given any system of linear equations, we can find a solution (if one exists) by 
 \item		Is there an efficient way of using these operations? (How do we get ``there'' the fastest?)
 \end{enumerate}
 
-We'll answer the first question first. Most of the time\footnote{unless one prefers obfuscation to clarification} we will want to take our original matrix and, using the elementary row operations, put it into something called \textit{reduced row echelon form}.\footnote{Some texts use the term \textit{reduced echelon form} instead.} This is our ``destination,'' for this form allows us to readily identify whether or not a solution exists, and in the case that it does, what that solution is. 
+We'll answer the first question first. Most of the time (unless one prefers obfuscation to clarification) we will want to take our original matrix and, using the elementary row operations, put it into something called \sword{reduced row echelon form}. This is our ``destination,'' for this form allows us to readily identify whether or not a solution exists, and in the case that it does, what that solution is. 
 
 In the previous section, when we manipulated matrices to find solutions, we were unwittingly putting the matrix into \rref. However, not all solutions come in such a simple manner as we've seen so far. Putting a matrix into \rref\ helps us identify all types of solutions. We'll explore the topic of understanding what the reduced row echelon form of a matrix tells us in the following sections; in this section we focus on finding it.
 
@@ -94,11 +96,13 @@ While this technique isn't very difficult to use, it is one of those things that
 \medskip
 
 \example{ex_gaussian_elimination}{Using row operations to simplify an augmented matrix}{Put the augmented matrix of the following system of linear equations into reduced row echelon form.
-$$\begin{array}{ccccccc}
+\[
+\begin{array}{ccccccc}
 -3x_1&-&3x_2&+&9x_3&=&12\\
 2x_1&+&2x_2&-&4x_3&=&-2\\
 &&-2x_2&-&4x_3&=&-8
-\end{array}$$
+\end{array}
+\]
 }
 {We start by converting the linear system into an augmented matrix.
 
@@ -212,7 +216,10 @@ Let's practice some more.\\
 
 \medskip
 
-\example{ex_rref_2}{Using Gaussian elimination}{Use Gaussian elimination to put the matrix \tta\ into \rref, where  $$\tta = \bmx{ccccc}-2&-4&-2&-10&0\\2&4&1&9&-2\\3&6&1&13&-4\emx.$$}
+\example{ex_rref_2}{Using Gaussian elimination}{Use Gaussian elimination to put the matrix \tta\ into \rref, where  
+\[
+\tta = \bmx{ccccc}-2&-4&-2&-10&0\\2&4&1&9&-2\\3&6&1&13&-4\emx.
+\]}
 {We start by wanting to make the entry in the first column and first row a 1 (a leading 1). To do this we'll scale the first row by a factor of $-\frac12$. 
 
 \begin{center}\begin{tabular}{ccl}
@@ -263,7 +270,11 @@ This final matrix is in \rref.}
 
 %\enlargethispage{3\baselineskip}
 
-\example{ex_rref_3}{Gaussian elimination, again}{Put the matrix $$\bmx{cccc} 1&2&1&3\\2&1&1&1\\3&3&2&1\emx$$ into \rref.}
+\example{ex_rref_3}{Gaussian elimination, again}{Put the matrix 
+\[
+\bmx{cccc} 1&2&1&3\\2&1&1&1\\3&3&2&1\emx
+\]
+into \rref.}
 {Here we will show all steps without explaining each one.
 
 \begin{center}\begin{tabular}{ccl}
@@ -314,7 +325,10 @@ The last matrix in the above example is in \rref. If one thinks of the original 
 
 \medskip
 
-\example{ex_back_substitution}{Using back substitution}{Put the matrix \tta\ into \rref, where  $$\tta = \bmx{cccc}2&1&-1&4\\1&-1&2&12\\2&2&-1&9\\ \emx.$$}
+\example{ex_back_substitution}{Using back substitution}{Put the matrix \tta\ into \rref, where  
+\[
+\tta = \bmx{cccc}2&1&-1&4\\1&-1&2&12\\2&2&-1&9\\ \emx.
+\]}
 {We'll again show the steps without explanation, although we will stop at the end of the forward steps and make a comment.
 
 \begin{center}\begin{tabular}{ccl}
@@ -353,15 +367,25 @@ $\bmx{cccc}1&1/2&-1/2&2\\0&1&-5/3&-20/3\\0&0&1&7\\ \emx$
 
 Let's take a break here and think about the state of our linear system at this moment. Converting back to linear equations, we now know
 
-$$\begin{array}{rcl}
+\[
+\begin{array}{rcl}
 x_1+1/2x_2-1/2x_3&=&2\\
 x_2-5/3x_3&=&-20/3\\
 x_3&=&7\\
-\end{array}.$$
+\end{array}.
+\]
 
-Since we know that $x_3 = 7$, the second equation turns into $$x_2 - (5/3)(7) = -20/3,$$ telling us that $x_2 = 5$.
+Since we know that $x_3 = 7$, the second equation turns into 
+\[
+x_2 - (5/3)(7) = -20/3,
+\]
+telling us that $x_2 = 5$.
 
-Finally, knowing values for $x_2$ and $x_3$ lets us substitute in the first equation and find $$x_1 +(1/2)(5)-(1/2)(7) = 2,$$ so $x_1 = 3$.\\
+Finally, knowing values for $x_2$ and $x_3$ lets us substitute in the first equation and find 
+\[
+x_1 +(1/2)(5)-(1/2)(7) = 2,
+\]
+so $x_1 = 3$.\\
 
 This process of substituting known values back into other equations is called \textit{back substitution.} This process is essentially what happens when we perform the backward steps of Gaussian elimination. We make note of this below as we finish out finding the \rref\ of our matrix.
 

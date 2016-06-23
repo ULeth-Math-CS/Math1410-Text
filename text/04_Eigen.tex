@@ -15,7 +15,7 @@ Within the matrix algebra context, though, we have two types of multiplication: 
 \item T/F: If \tta\ is a $5\times 5$ matrix, to find the \el s of \tta, we would need to find the roots of a 5$^\text{th}$ degree polynomial.
 }
 
-We start by considering the matrix \tta\ and vector \vx\ as given below.\footnote{Recall this matrix and vector were used in Example \ref{ex_mv_1} on page \pageref{ex_mv_1}.} 
+We start by considering the matrix \tta\ and vector \vx\ as given below. (Recall this matrix and vector were used in Example \ref{ex_mv_1} on page \pageref{ex_mv_1}.)
 \[
 \tta = \bmx{cc} 1&4\\2&3\emx \quad \quad \vx = \bmx{c}1\\1\emx
 \]
@@ -27,7 +27,7 @@ Multiplying \tta\vx\ gives:
 			&= 5\bmx{c}1\\1\emx \ !
 \end{align*}
 
-Wow! It looks like multiplying \tta\vx\ is the same as 5\vx! This makes us wonder lots of things: Is this the only case in the world where something like this happens?\footnote{Probably not.\label{note:prob_not}} Is \tta\ somehow a special matrix, and $\tta\vx = 5\vx$ for any vector \vx\ we pick?\footnote{Probably not.} Or maybe \vx\ was a special vector, and no matter what $2\times 2$ matrix \tta\ we picked, we would have $\tta\vx\ =5\vx$.\footnote{See footnote \ref{note:prob_not}.}
+Wow! It looks like multiplying \tta\vx\ is the same as 5\vx! This makes us wonder lots of things: Is this the only case in the world where something like this happens? (Probably not.) Is \tta\ somehow a special matrix, and $\tta\vx = 5\vx$ for any vector \vx\ we pick? (Probably not.) Or maybe \vx\ was a special vector, and no matter what $2\times 2$ matrix \tta\ we picked, we would have $\tta\vx\ =5\vx$. (Again, probably not.)
 
 A more likely explanation is this: given the matrix \tta, the number 5 and the vector \vx\ formed a special pair that happened to work together in a nice way. It is then natural to wonder if other ``special'' pairs exist. For instance, could we find a vector \vx\ where $\tta\vx=3\vx$?
 
@@ -52,15 +52,15 @@ then \vx\ is an \textit{eigenvector} of \tta\ and \lda\ is an \textit{eigenvalue
 
 The word ``eigen'' is German for ``proper'' or ``characteristic.'' Therefore, an \textit{eigenvector} of \tta\ is a ``characteristic vector of \tta.'' This vector tells us something about \tta. 
 
-Why do we use the Greek letter \lda\ (lambda)? It is pure tradition. Above, we used $a$ to represent the unknown scalar, since we are used to that notation. We now switch to \lda\ because that is how everyone else does it.\footnote{An example of mathematical peer pressure.} %If all of our friends jumped off a bridge, would we do it, too? Well $\ldots$ if \textit{all} of our friends were gone, $\ldots$}
+Why do we use the Greek letter \lda\ (lambda)? It is pure tradition. Above, we used $a$ to represent the unknown scalar, since we are used to that notation. We now switch to \lda\ because that is how everyone else does it. (An example of mathematical peer pressure.) %If all of our friends jumped off a bridge, would we do it, too? Well $\ldots$ if \textit{all} of our friends were gone, $\ldots$}
  Don't get hung up on this; \lda\ is just a number.
 
 Note that our definition requires that \tta\ be a square matrix.
 % This must be since in order for $\tta\vx$ to equal $\lda\vx$, $\vx$ and $\tta\vx$ must be the same size.
 If \tta\ isn't square then $\tta\vx$ and $\lambda\vx$ will have different sizes, and so they cannot be equal. Also note that \vx\ must be nonzero. Why? What if $\vx = \zero$? Then \textit{no matter what} \lda\ is, $\tta\vx = \lda\vx$. This would then imply that \textit{every number} is an eigenvalue; if every number is an eigenvalue, then we wouldn't need a definition for 
-it.\footnote{Recall footnote \ref{footnote:special} on page \pageref{footnote:special}.} Therefore we specify that $\vx\neq \zero$.
+it. (Recall note \ref{footnote:special} on page \pageref{footnote:special}.) Therefore we specify that $\vx\neq \zero$.
 
-Our last comment before trying to find eigenvalues and eigenvectors for given matrices deals with ``why we care.'' Did we stumble upon a mathematical curiosity, or does this somehow help us build better bridges, heal the sick, send astronauts into orbit, design optical equipment, and understand quantum mechanics? The answer, of course, is ``Yes.''\footnote{Except for the ``understand quantum mechanics'' part. Nobody truly understands that stuff; they just \textit{probably} understand it.} This is a wonderful topic in and of itself: we need no external application to appreciate its worth. At the same time, it has many, many applications to ``the real world.'' A simple Internet seach on ``applications of eigenvalues'' with confirm this.
+Our last comment before trying to find eigenvalues and eigenvectors for given matrices deals with ``why we care.'' Did we stumble upon a mathematical curiosity, or does this somehow help us build better bridges, heal the sick, send astronauts into orbit, design optical equipment, and understand quantum mechanics? The answer, of course, is ``Yes.'' (Except for the ``understand quantum mechanics'' part. Nobody truly understands that stuff; they just \textit{probably} understand it.) This is a wonderful topic in and of itself: we need no external application to appreciate its worth. At the same time, it has many, many applications to ``the real world.'' A simple Internet seach on ``applications of eigenvalues'' with confirm this.
 
 Back to our math. Given a square matrix \tta, we want to find a nonzero vector \vx\ and a scalar \lda\ such that $\tta\vx = \lda\vx$. We will solve this using the skills we developed in Chapter \ref{chapter:arithmetic}.
 
@@ -79,7 +79,7 @@ but this really doesn't make sense. After all, what does ``a matrix minus a numb
 
 Let us now think about the equation $(\tta-\lda\tti)\vx=\zero$. While it looks complicated, it really is just matrix equation of the type we solved in Section \ref{sec:vector_solutions}. We are just trying to solve $\ttb\vx=\zero$, where $\ttb = (\tta-\lda\tti)$.
 
-We know from our previous work that this type of equation\footnote{Recall this is a \textit{homogeneous} system of equations.} always has a solution, namely, $\vx = \zero$. However, we want \vx\ to be an \ev\ and, by the definition, \ev s cannot be \zero. 
+We know from our previous work that this type of equation always has a solution, namely, $\vx = \zero$. (Recall this is a \textit{homogeneous} system of equations.) However, we want \vx\ to be an \ev\ and, by the definition, \ev s cannot be \zero. 
 
 This means that we want solutions to $(\tta-\lda\tti)\vx=\zero$ other than $\vx=\zero$. Recall that Theorem \ref{thm:inverse_solution} says that if the matrix $(\tta-\lda\tti)$ is invertible, then the \textit{only} solution to $(\tta-\lda\tti)\vx=\zero$ is $\vx=\zero$. Therefore, in order to have other solutions, we need $(\tta-\lda\tti)$ to not be invertible. 
 
@@ -309,7 +309,7 @@ We solve $(\tta-(1)\tti)\vx =\zero$ for \vx\ by row reducing the appropriate mat
 \bmx{ccc} -4 & 0 &0 \\ 5 & 0 & 0 \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccc}1&0&0\\0&0&0\emx.
 \]
 
-We've seen a matrix like this before,\footnote{See page \pageref{footnote:extra_zeros}. Our future need of knowing how to handle this situation is foretold in footnote \ref{footnote:extra_zeros}.} but we may need a bit of a refreshing. Our first row tells us that $x_1 = 0$, and we see that no rows/equations involve $x_2$. We conclude that $x_2$ is free.   Therefore, our solution, in vector form, is
+We've seen a matrix like this before,  but we may need a bit of a refreshing. (See page \pageref{footnote:extra_zeros}. Our future need of knowing how to handle this situation is foretold in note \ref{footnote:extra_zeros}.) Our first row tells us that $x_1 = 0$, and we see that no rows/equations involve $x_2$. We conclude that $x_2$ is free.   Therefore, our solution, in vector form, is
 \[
 \vx = x_2\bmx{c}0\\1\emx.
 \]
@@ -327,7 +327,7 @@ and
 \[
 \text{\el\ } \lambda_2 = 1 \text{ with \ev\ } \vx[2] = \bmx{c}0\\1\emx.
 \]
-\ }
+}
 
 \medskip
 
@@ -350,10 +350,14 @@ So far, our examples have involved $2\times 2$ matrices. Let's do an example wit
 										&= -\lda^3+4\lda^2-\lda -6\\
 										&= -(\lda + 1)(\lda-2)(\lda-3)
 \end{align*}
-\drawexampleline%{ex_eigen3}
-In the last step we factored the characteristic polynomial $-\lda^3+4\lda^2-\lda -6$. Factoring polynomials of degree $>2$ is not trivial; we'll assume the reader has access to methods for doing this accurately.\footnote{You probably learned how to do this in an algebra course. As a reminder, possible roots can be found by factoring the constant term (in this case, $-6$) of the polynomial. That is, the roots of this equation could be $\pm 1, \pm 2, \pm 3$ and $\pm 6$. That's 12 things to check.
+%\drawexampleline%{ex_eigen3}
+In the last step we factored the characteristic polynomial $-\lda^3+4\lda^2-\lda -6$. Factoring polynomials of degree $>2$ is not trivial; we'll assume the reader has access to methods for doing this accurately. 
 
-One could also graph this polynomial to find the roots. Graphing will show us that $\lda = 3$ \textit{looks} like a root, and a simple calculation will confirm that it is.}
+\mnote{.5}{You should have learned how to do this in high school. As a reminder, possible roots can be found by factoring the constant term (in this case, $-6$) of the polynomial. That is, the roots of this equation could be $\pm 1, \pm 2, \pm 3$ and $\pm 6$. That's 12 things to check.
+
+One could also graph this polynomial to find the roots. Graphing will show us that $\lda = 3$ \textit{looks} like a root, and a simple calculation will confirm that it is.
+
+If your factoring skills are a bit rusty, you may want to consult the resources on the \textit{Math Basics} Moodle page.}
 
 Our \el s are $\lda_1 = -1$, $\lda_2 = 2$ and $\lda_3 = 3$. We now find corresponding \ev s.\\
 
@@ -442,7 +446,7 @@ Our \el s are $\lda_1 = -2$, $\lda_2 = 2$ and $\lda_3 = 7$. We now find correspo
 
 For $\lda_1 = -2$:\\
 
-
+\drawexampleline
 
 We need to solve the equation $(\tta - (-2)\tti)\vx = \zero$. To do this, we form the appropriate augmented matrix and put it into \rref.
 
@@ -474,7 +478,7 @@ This looks funny, so we'll look remind ourselves how to solve this. The first tw
 \[
 \vx = x_1\bmx{c} 1\\0\\0\emx.
 \]
-\drawexampleline
+
 
 We can pick any nonzero value for $x_1$; an easy choice is $x_1 = 1$ and choose $\vx[2]=\bmx{c} 1\\0\\0\emx$ as our \ev.\\
 

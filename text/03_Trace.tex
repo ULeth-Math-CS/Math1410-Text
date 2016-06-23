@@ -35,7 +35,7 @@ Finally, the diagonal of $\tti_4$ consists of four 1s. Therefore $\tr(\tti_4) = 
 
 \medskip
 
-Now that we have defined the trace of a matrix, we should think like mathematicians and ask some questions. The first questions that should pop into our minds should be along the lines of ``How does the trace work with other matrix operations?''\footnote{Recall that we asked a similar question once we learned about the transpose.} We should think about how the trace works with matrix addition, scalar multiplication, matrix multiplication, matrix inverses, and the transpose.
+Now that we have defined the trace of a matrix, we should think like mathematicians and ask some questions. The first questions that should pop into our minds should be along the lines of ``How does the trace work with other matrix operations?'' (Recall that we asked a similar question once we learned about the transpose.) We should think about how the trace works with matrix addition, scalar multiplication, matrix multiplication, matrix inverses, and the transpose.
 
 We'll give a theorem that will formally tell us what is true in a moment, but first let's play with two sample matrices and see if we can see what will happen. Let 
 \[
@@ -72,7 +72,9 @@ How are the traces of \tta\ and \ttai\ related? We compute \ttai\ and find that
 \[
 \ttai = \bmx{ccc} 1/17 & 6/17 & 1/17\\9/17 & 3/17 & -8/17\\ 2/17 & -5/17 & 2/17 \emx.
 \]
-Therefore $\tr(\ttai) = 6/17$. Again, the relationship isn't clear.\footnote{Something to think about: we know that not all square matrices are invertible. Would we be able to tell just by the trace? That seems unlikely.}
+Therefore $\tr(\ttai) = 6/17$. Again, the relationship isn't clear.
+
+\mnote{.8}{Something to think about: we know that not all square matrices are invertible. Would we be able to tell just by the trace? That seems unlikely.}
 
 Finally, let's see how the trace is related to the transpose. We actually don't have to formally compute anything. Recall from the previous section that the diagonals of \tta\ and \ttat\ are identical; therefore, $\tr(\tta) = \tr(\ttat)$. That, we know for sure, isn't a coincidence.
 
@@ -96,7 +98,9 @@ Let \tta\ and \ttb\ be $n\times n$ matrices. Then:
 One of the key things to note here is what this theorem does \textit{not} say. %It says nothing about how the trace relates to matrix multiplication; that is, we can't figure out what tr(\tta\ttb) is just by knowing what tr(\tta) and tr(\ttb) are. The theorem also 
 It says nothing about how the trace relates to inverses. The reason for the silence in these areas is that there simply is not a relationship. 
 
-We end this section by again wondering why anyone would care about the trace of matrix. One reason mathematicians are interested in it is that it can give a measurement of the ``size''\footnote{There are many different measurements of a matrix size. In this text, we just refer to its dimensions. Some measurements of size refer the magnitude of the elements in the matrix. The next section describes yet another measurement of matrix size.} of a matrix. 
+We end this section by again wondering why anyone would care about the trace of matrix. One reason mathematicians are interested in it is that it can give a measurement of the ``size'' of a matrix. 
+
+\mnote{.65}{There are many different measurements of a matrix size. In this text, we just refer to its dimensions. Some measurements of size refer the magnitude of the elements in the matrix. The next section describes yet another measurement of matrix size.}
 
 Consider the following $2 \times 2$ matrices:
 \[
@@ -116,7 +120,9 @@ These matrices have the same trace, yet \ttb\ clearly has bigger elements in it.
 							&= 222
 \end{align*}
 
-Our concern is not how to interpret what this ``size'' measurement means, but rather to demonstrate that the trace (along with the transpose) can be used to give (perhaps useful) information about a matrix.\footnote{This example brings to light many interesting ideas that we'll flesh out just a little bit here. 
+Our concern is not how to interpret what this ``size'' measurement means, but rather to demonstrate that the trace (along with the transpose) can be used to give (perhaps useful) information about a matrix.
+
+\mnote{.5}{This example brings to light many interesting ideas that we'll flesh out just a little bit here. 
 \begin{enumerate}
 \item		Notice that the elements of \tta\ are 1, $-2$,  1 and 1. Add the squares of these numbers: $1^2 + (-2)^2 + 1^2 + 1^2  = 7 = $ $\tr(\ttat\tta)$.
 
@@ -128,7 +134,7 @@ Our concern is not how to interpret what this ``size'' measurement means, but ra
 
 \item		Mathematicians are actually more interested in $\sqrt{\tr(\ttat\tta)}$ than just $\tr(\ttat\tta)$. The reason for this is a bit complicated; the short answer is that ``it works better.'' The reason ``it works better'' is related to the Pythagorean Theorem, all of all things. If we know that the legs of a right triangle have length $a$ and $b$, we are more interested in $\sqrt{a^2+b^2}$ than just $a^2+b^2$. Of course, this explanation raises more questions than it answers; our goal here is just to whet your appetite and get you to do some more reading. A Numerical Linear Algebra book would be a good place to start.
 \end{enumerate}
-}\\
+}
 
 %EXERCISES
 

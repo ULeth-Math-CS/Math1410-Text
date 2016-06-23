@@ -22,7 +22,7 @@ We will start with vectors in two dimensions (2D) -- that is, vectors with only 
 \[
 \vx = \bmx{c}1\\2\emx,
 \]
-we draw \vx\ by drawing an arrow whose tip is 1 unit to the right and 2 units up from its origin.\footnote{To help reduce clutter, in all figures each tick mark represents one unit.} 
+we draw \vx\ by drawing an arrow whose tip is 1 unit to the right and 2 units up from its origin. (To help reduce clutter, in all figures each tick mark represents one unit.)
 
 %\begin{myfigure}%[h!]
 %\begin{center}
@@ -112,8 +112,10 @@ Each vector is drawn as shown in Figure \ref{fig:xyz}.
 
 \medskip
 
-How does one draw the zero vector, $\zero =\bmx{c}0\\0\emx$?\footnote{Vectors are just special types of matrices. The zero vector, \zero, is a special type of zero matrix, \tto. It helps to distinguish the two by using different notation.} Following our basic procedure, we start by going 0 units in the $x$ direction, followed by 0 units in the $y$ direction. In other words, we don't go anywhere. 
+How does one draw the zero vector, $\zero =\bmx{c}0\\0\emx$? Following our basic procedure, we start by going 0 units in the $x$ direction, followed by 0 units in the $y$ direction. In other words, we don't go anywhere. 
 In general, we don't actually draw \zero. At best, one can draw a dark circle at the origin to convey the idea that \zero, when starting at the origin, points to the origin.
+
+\mnote{.5}{Vectors are just special types of matrices. The zero vector, \zero, is a special type of zero matrix, \tto. It helps to distinguish the two by using different notation.} 
 
 In section \ref{sec:matrix_arithmetic_1} we learned about matrix arithmetic operations: matrix addition and scalar multiplication. Let's investigate how we can ``draw'' these operations.\\
 \clearpage
@@ -383,7 +385,7 @@ If we know explicitly what \vx\ and \vy\ are, we can simply compute what $\vx-\v
 
 \medskip
 
-In Figure \ref{fig:subtract_3}, we redraw Figure \ref{fig:subtract_2} from Example \ref{ex_subtract} but remove the gray vectors that tend to add clutter, and we redraw the vector $\vx-\vy$ dotted so that it starts from the tip of \vy.\footnote{Remember that we can draw vectors starting from anywhere.} Note that the dotted version of $\vx-\vy$ points from \vy\ to \vx. This is a ``shortcut'' to drawing $\vx-\vy$; simply draw the vector that starts at the tip of \vy\ and ends at the tip of \vx. This is important so we make it a Key Idea.
+In Figure \ref{fig:subtract_3}, we redraw Figure \ref{fig:subtract_2} from Example \ref{ex_subtract} but remove the gray vectors that tend to add clutter, and we redraw the vector $\vx-\vy$ dotted so that it starts from the tip of \vy. (Remember that we can draw vectors starting from anywhere.) Note that the dotted version of $\vx-\vy$ points from \vy\ to \vx. This is a ``shortcut'' to drawing $\vx-\vy$; simply draw the vector that starts at the tip of \vy\ and ends at the tip of \vx. This is important so we make it a Key Idea.
 
 \begin{myfigure}%[h!]
 \btz[>=latex]
@@ -413,7 +415,7 @@ Let's practice this once more with a quick example.
 
 \medskip
 
-\example{ex_subtract_quick}{Sketching a vector difference}{Let \vx\ and \vy\ be as in Figure \ref{fig:subtract_quick_1} (a). Draw $\vx-\vy$.
+\example{ex_subtract_quick}{Sketching a vector difference}{Let \vx\ and \vy\ be as in Figure \ref{fig:subtract_quick_2} (a). Draw $\vx-\vy$.
 %
 %\begin{myfigure}%[h!]
 %\btz[>=latex,scale=.6]
@@ -427,7 +429,7 @@ Let's practice this once more with a quick example.
 %\label{fig:subtract_quick_1}
 %\end{myfigure}%
 }
-{We simply apply Key Idea \ref{idea:vector_subtract}: we draw an arrow from \vy\ to \vx. We do so in Figure \ref{fig:subtract_quick_2}; $\vx-\vy$ is dashed.
+{We simply apply Key Idea \ref{idea:vector_subtract}: we draw an arrow from \vy\ to \vx. We do so in Figure \ref{fig:subtract_quick_2} (b); $\vx-\vy$ is dashed.
 
 \begin{myfigure}%[h!]
 \btz[>=latex,scale=.75]
@@ -494,7 +496,7 @@ Notice that in our figure, \vx\ goes to the right 4 units and then up 3 units. I
 \[
 \vx = \bmx{c} 4\\3\emx.
 \]
-We learned above that the length of \vx\ is $\sqrt{4^2+3^2}$.\footnote{Remember that $\sqrt{4^2+3^2} \neq 4+3$!} This hints at a basic calculation that works for all vectors \vx, and we define the length of a vector according to this rule.
+We learned above that the length of \vx\ is $\sqrt{4^2+3^2}$. (Remember that $\sqrt{4^2+3^2} \neq 4+3$!) This hints at a basic calculation that works for all vectors \vx, and we define the length of a vector according to this rule.
 
 \smallskip
 
@@ -566,11 +568,13 @@ Let \vx\ be a vector and let $c$ be a scalar. Then the length of $c\vx$ is
 
 \noindent \large \textsf{\textbf{Matrix $-$ Vector Multiplication}} \normalsize\\
 
-The last arithmetic operation to consider visualizing is matrix multiplication. Specifically, we want to visualize the result of multiplying a vector by a matrix. In order to multiply a 2D vector by a matrix and get a 2D vector back, our matrix must be a square, $2\times 2$ matrix.\footnote{We can multiply a $3\times 2$ matrix by a 2D vector and get a 3D vector back, and this gives very interesting results. See section \ref{sec:lin_trans}.}
+The last arithmetic operation to consider visualizing is matrix multiplication. Specifically, we want to visualize the result of multiplying a vector by a matrix. In order to multiply a 2D vector by a matrix and get a 2D vector back, our matrix must be a square, $2\times 2$ matrix.
+
+\mnote{.5}{We can multiply a $3\times 2$ matrix by a 2D vector and get a 3D vector back, and this gives very interesting results. See section \ref{sec:lin_trans}.}
 
 We'll start with an example. Given a matrix \tta\ and several vectors, we'll graph the vectors before and after they've been multiplied by \tta\ and see what we learn.
 
-\medskip
+\pagebreak
 
 \example{ex_mv_1}{Multiplying a vector by a matrix}{Let \tta\ be a matrix, and \vx, \vy, and \vz\ be vectors as given below.
 \[
@@ -607,13 +611,13 @@ The vectors are sketched in Figure \ref{fig:mv_1}
 
 There are several things to notice. When each vector is multiplied by \tta, the result is a vector with a different length (in this example, always longer), and in two of the cases (for \vy\ and \vz), the resulting vector points in a different direction. 
 
-This isn't surprising. In the previous section we learned about matrix multiplication, which is a strange and seemingly unpredictable operation. Would you expect to see some sort of immediately recognizable pattern appear from multiplying a matrix and a vector?\footnote{This is a rhetorical question; the expected answer is ``No.''} In fact, the surprising thing from the example is that \vx\ and \tta\vx\ point in the same direction! Why does the direction of \vx\ not change after multiplication by \tta? (We'll answer this in Section \ref{sec:eigen} when we learn about something called ``eigenvectors.'')
+This isn't surprising. In the previous section we learned about matrix multiplication, which is a strange and seemingly unpredictable operation. Would you expect to see some sort of immediately recognizable pattern appear from multiplying a matrix and a vector? (This is a rhetorical question; the expected answer is ``No.'') In fact, the surprising thing from the example is that \vx\ and \tta\vx\ point in the same direction! Why does the direction of \vx\ not change after multiplication by \tta? (We'll answer this in Section \ref{sec:eigen} when we learn about something called ``eigenvectors.'')
 
 %One may recall that \tta\ and \vx\ previously appeared in Section \ref{sec:eigen}, where \vx\ is an eigenvector of \tta\ with an \el\ of 5. Therefore this example lets us visualize the significance of \ev s: ``normally,'' when a vector is multiplied by a matrix, its length and direction changes. However, when the vector is an \ev, its direction does not change, only its length\footnote{If the \el\ is 1, then of course, nothing changes. The careful reader will also note that if the $\el <0$, then the resulting vector will point in the opposite direction, meaning the direction \textit{did} change. However, in this case, \vx\ and \tta\vx\ lie on the same line which is still significant}.
 
-Different matrices act on vectors in different ways.\footnote{That's one reason we call them ``different.''} Some always increase the length of a vector through  multiplication, others always decrease the length, others increase the length of some vectors and decrease the length of others, and others still don't change the length at all. A similar statement can be made about how matrices affect the direction of vectors through multiplication: some change every vector's direction, some change ``most'' vector's direction but leave some the same, and others still don't change the direction of any vector.
+Different matrices act on vectors in different ways. (That's one reason we call them ``different.'') Some always increase the length of a vector through  multiplication, others always decrease the length, others increase the length of some vectors and decrease the length of others, and others still don't change the length at all. A similar statement can be made about how matrices affect the direction of vectors through multiplication: some change every vector's direction, some change ``most'' vector's direction but leave some the same, and others still don't change the direction of any vector.
 
-How do we set about studying how matrix multiplication affects vectors? We could just create lots of different matrices and lots of different vectors, multiply, then graph, but this would be a lot of work with very little useful result. It would be too hard to find a pattern of behaviour in this.\footnote{Remember, that's what mathematicians do. We look for patterns.}
+How do we set about studying how matrix multiplication affects vectors? We could just create lots of different matrices and lots of different vectors, multiply, then graph, but this would be a lot of work with very little useful result. It would be too hard to find a pattern of behaviour in this. (Remember, that's what mathematicians do. We look for patterns.)
 
 Instead, we'll begin by using a technique we've employed often in the past. We have a ``new'' operation; let's explore how it behaves with ``old'' operations. Specifically, we know how to sketch vector addition. What happens when we throw matrix multiplication into the mix? Let's try an example.
 
@@ -694,7 +698,7 @@ It is straightforward to compute:
 
 The vectors are sketched in Figure \ref{fig:mv_23}.
 
-These results are interesting. While we won't explore them in great detail here, notice how \vx\ got sent to the zero vector. Notice also that \tta\vx, \tta\vy\ and \tta\vz\ are all in a line (as well as \vx!). Why is that? Are \vx, \vy\ and \vz\ just special vectors, or would any other vector get sent to the same line when multiplied by \tta?\footnote{Don't just sit there, try it out!}
+These results are interesting. While we won't explore them in great detail here, notice how \vx\ got sent to the zero vector. Notice also that \tta\vx, \tta\vy\ and \tta\vz\ are all in a line (as well as \vx!). Why is that? Are \vx, \vy\ and \vz\ just special vectors, or would any other vector get sent to the same line when multiplied by \tta? (Don't just sit there, try it out!)
 }
 
 \medskip

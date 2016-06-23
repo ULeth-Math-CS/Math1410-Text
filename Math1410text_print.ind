@@ -1,0 +1,413 @@
+\begin{theindex}
+
+  \item $\in $, \hyperpage{2}
+  \item $\notin  $, \hyperpage{2}
+  \item $n^{\text  {th}}$ root 
+    \subitem  principal, \hyperpage{20}
+  \item $n^{\textrm  {th}}$ Roots of Unity, \hyperpage{69}
+  \item $n^{\textrm  {th}}$ root 
+    \subitem  of a complex number, \hyperpage{65}
+  \item $x$-axis, \hyperpage{26}
+  \item $x$-coordinate, \hyperpage{26}
+  \item $y$-axis, \hyperpage{26}
+  \item $y$-coordinate, \hyperpage{26}
+
+  \indexspace
+
+  \item abscissa, \hyperpage{26}
+  \item antisymmetric, \hyperpage{241}
+  \item argument 
+    \subitem  of a complex number 
+      \subsubitem  definition of, \hyperpage{55}
+      \subsubitem  properties of, \hyperpage{59}
+  \item augmented matrix, \hyperpage{130}
+
+  \indexspace
+
+  \item base, \hyperpage{17}
+  \item basic variable, \hyperpage{148}
+
+  \indexspace
+
+  \item Cartesian coordinate plane, \hyperpage{26}
+  \item Cartesian coordinates, \hyperpage{26}
+  \item characteristic polynomial, \hyperpage{275}
+  \item cis($\theta$), \hyperpage{59}
+  \item cofactor, \hyperpage{249}
+    \subitem expansion, \hyperpage{251}, \hyperpage{257}
+  \item Complex Factorization Theorem, \hyperpage{39}
+  \item complex number 
+    \subitem  $n^{\textrm  {th}}$ root, \hyperpage{65}
+    \subitem  $n^{\textrm  {th}}$ Roots of Unity, \hyperpage{69}
+    \subitem  argument 
+      \subsubitem  definition of, \hyperpage{55}
+      \subsubitem  properties of, \hyperpage{59}
+    \subitem  complex conjugate 
+      \subsubitem  definition of, \hyperpage{36}
+    \subitem  conjugate 
+      \subsubitem  properties of, \hyperpage{36}
+    \subitem  definition of, \hyperpage{4}, \hyperpage{34}, 
+		\hyperpage{55}
+    \subitem  imaginary part, \hyperpage{55}
+    \subitem  imaginary unit, $i$, \hyperpage{34}
+    \subitem  modulus 
+      \subsubitem  definition of, \hyperpage{55}
+      \subsubitem  properties of, \hyperpage{57}
+    \subitem  polar form 
+      \subsubitem  cis-notation, \hyperpage{60}
+    \subitem  principal argument, \hyperpage{55}
+    \subitem  real part, \hyperpage{55}
+    \subitem  rectangular form, \hyperpage{55}
+    \subitem  set of, \hyperpage{4}
+  \item complex numbers, \hyperpage{34}
+  \item complex plane, \hyperpage{55}
+  \item conjugate 
+    \subitem  complex conjugate 
+      \subsubitem  definition of, \hyperpage{36}
+  \item conjugate of a complex number 
+    \subitem  properties of, \hyperpage{36}
+  \item consistent, \hyperpage{145}, \hyperpage{205, 206}
+  \item coordinates 
+    \subitem  Cartesian, \hyperpage{26}
+    \subitem  polar, \hyperpage{41}
+    \subitem  rectangular, \hyperpage{41}
+  \item Cramer's Rule, \hyperpage{267}
+  \item cross product
+    \subitem applications, \hyperpage{100}
+      \subsubitem area of parallelogram, \hyperpage{101}
+      \subsubitem torque, \hyperpage{102}
+      \subsubitem volume of parallelepiped, \hyperpage{102}
+    \subitem definition, \hyperpage{97}
+    \subitem properties, \hyperpage{99}
+
+  \indexspace
+
+  \item DeMoivre's Theorem, \hyperpage{61}
+  \item determinant
+    \subitem and elementary row operations, \hyperpage{260}
+    \subitem definition, \hyperpage{252}
+    \subitem of $2\times 2$ matrices, \hyperpage{248}
+    \subitem of triangular matrices, \hyperpage{259}
+    \subitem properties, \hyperpage{264}
+  \item diagonal, \hyperpage{233}
+    \subitem definition, \hyperpage{236}
+  \item diagram 
+    \subitem  Venn Diagram, \hyperpage{3}
+  \item distance
+    \subitem between lines, \hyperpage{111}
+    \subitem between point and line, \hyperpage{111}
+    \subitem between point and plane, \hyperpage{119}
+    \subitem between points in space, \hyperpage{72}
+  \item distance 
+    \subitem  definition, \hyperpage{29}
+    \subitem  distance formula, \hyperpage{30}
+  \item dot product
+    \subitem definition, \hyperpage{87}
+    \subitem properties, \hyperpage{88}
+
+  \indexspace
+
+  \item eigenvalue
+    \subitem definition, \hyperpage{272}
+    \subitem finding, \hyperpage{275}
+    \subitem properties, \hyperpage{288}
+  \item eigenvector, \hyperindexformat{\see{eigenvalue}}{272}
+  \item elementary row operations, \hyperpage{135}
+    \subitem and determinants, \hyperpage{260}
+  \item empty set, \hyperpage{3, 4}
+  \item exponent, \hyperpage{17}
+
+  \indexspace
+
+  \item factorization 
+    \subitem  over the complex numbers, \hyperpage{39}
+  \item free variable, \hyperpage{146}, \hyperpage{148}
+  \item Fundamental Theorem of Algebra, \hyperpage{39}
+
+  \indexspace
+
+  \item Gaussian elimination, \hyperpage{137}, \hyperpage{140}
+    \subitem backward steps, \hyperpage{139}
+    \subitem forward steps, \hyperpage{139}
+
+  \indexspace
+
+  \item Head To Tail Rule, \hyperpage{78}
+  \item homogeneous, \hyperpage{204--206}
+
+  \indexspace
+
+  \item identity matrix, \hyperpage{180}
+  \item imaginary axis, \hyperpage{55}
+  \item imaginary part of a complex number, \hyperpage{55}
+  \item imaginary unit, $i$, \hyperpage{34}
+  \item inconsistent, \hyperpage{145}
+  \item index of a root, \hyperpage{20}
+  \item initial point, \hyperpage{76}
+  \item integer 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+  \item intersection of two sets, \hyperpage{2}
+  \item interval 
+    \subitem  definition of, \hyperpage{6}
+    \subitem  notation for, \hyperpage{6}
+  \item inverse
+    \subitem computing, \hyperpage{223}
+    \subitem definition, \hyperpage{222}
+    \subitem Invertible Matrix Theorem, \hyperpage{228}
+    \subitem properties, \hyperpage{228}, \hyperpage{233}
+    \subitem uniqueness, \hyperpage{222}
+  \item Invertible Matrix Theorem, \hyperpage{228}, \hyperpage{264}, 
+		\hyperpage{289}
+  \item irrational number 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+
+  \indexspace
+
+  \item leading one, \hyperpage{136}, \hyperpage{148, 149}
+  \item linear equation, \hyperpage{125}
+  \item linear transformation
+    \subitem and \ensuremath  {\mathaccentV {vec}17E{\text  {\it  0}}}, 
+		\hyperpage{312}
+    \subitem conditions on, \hyperpage{315}
+    \subitem definition, \hyperpage{308}
+    \subitem standard matrix of, \hyperpage{311, 312}
+  \item lines, \hyperpage{106}
+    \subitem distances between, \hyperpage{111}
+    \subitem equations for, \hyperpage{107}
+    \subitem intersecting, \hyperpage{108}
+    \subitem parallel, \hyperpage{108}
+    \subitem skew, \hyperpage{108}
+
+  \indexspace
+
+  \item magnitude of vector, \hyperpage{76}
+  \item matrix
+    \subitem addition, \hyperpage{166}
+    \subitem arithmetic properties, \hyperpage{169}
+    \subitem augmented, \hyperpage{130}
+    \subitem cofactor, \hyperpage{249}
+    \subitem definition, \hyperpage{129}
+    \subitem determinant, \hyperpage{248}, \hyperpage{252}
+    \subitem diagonal, \hyperpage{236}
+    \subitem equality, \hyperpage{165}
+    \subitem identity matrix, \hyperpage{180}
+    \subitem inverse, \hyperpage{222, 223}
+    \subitem minor, \hyperpage{249}
+    \subitem multiplication, \hyperpage{174}
+      \subsubitem properties, \hyperpage{181}
+    \subitem scalar multiplication, \hyperpage{167}
+    \subitem the zero matrix, \hyperpage{168}
+    \subitem transpose, \hyperpage{235}
+    \subitem triangular, \hyperpage{236}
+  \item midpoint 
+    \subitem  definition of, \hyperpage{31}
+    \subitem  midpoint formula, \hyperpage{31}
+  \item minor, \hyperpage{249}
+  \item modulus of a complex number 
+    \subitem  definition of, \hyperpage{55}
+    \subitem  properties of, \hyperpage{57}
+
+  \indexspace
+
+  \item natural number 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+  \item norm, \hyperpage{76}
+  \item normal vector, \hyperpage{115}
+  \item numbers 
+    \subitem  complex, \hyperpage{34}
+
+  \indexspace
+
+  \item ordered pair, \hyperpage{26}
+  \item ordinate, \hyperpage{26}
+  \item origin, \hyperpage{26}
+  \item orthogonal, \hyperpage{90}
+    \subitem decomposition, \hyperpage{93}
+  \item orthogonal decomposition of vectors, \hyperpage{93}
+  \item orthogonal projection, \hyperpage{92}
+
+  \indexspace
+
+  \item parallel vectors, \hyperpage{81}
+  \item Parallelogram Law, \hyperpage{78}, \hyperpage{187}
+  \item particular solution, \hyperpage{150}
+  \item perpendicular, \hyperindexformat{\see{orthogonal}}{90}
+  \item planes
+    \subitem coordinate plane, \hyperpage{73}
+    \subitem distance between point and plane, \hyperpage{119}
+    \subitem equations of, \hyperpage{116}
+    \subitem introduction, \hyperpage{73}
+    \subitem normal vector, \hyperpage{115}
+  \item polar coordinates 
+    \subitem  conversion into rectangular, \hyperpage{47}
+    \subitem  definition of, \hyperpage{41}
+    \subitem  equivalent representations of, \hyperpage{46}
+    \subitem  polar axis, \hyperpage{41}
+    \subitem  pole, \hyperpage{41}
+  \item polar form of a complex number, \hyperpage{60}
+  \item power rule 
+    \subitem  for complex numbers, \hyperpage{61}
+    \subitem  for radicals, \hyperpage{21}
+    \subitem  for the modulus of a complex number, \hyperpage{57}
+  \item principal $n^{\text  {th}}$ root, \hyperpage{20}
+  \item principal argument of a complex number, \hyperpage{55}
+  \item problem solving, \hyperpage{157}
+  \item product rule 
+    \subitem  for complex numbers, \hyperpage{61}
+    \subitem  for radicals, \hyperpage{21}
+    \subitem  for the modulus of a complex number, \hyperpage{57}
+  \item pseudoinverse, \hyperpage{242}
+
+  \indexspace
+
+  \item quadrants, \hyperpage{28}
+  \item quotient rule 
+    \subitem  for complex numbers, \hyperpage{61}
+    \subitem  for radicals, \hyperpage{21}
+    \subitem  for the modulus of a complex number, \hyperpage{57}
+
+  \indexspace
+
+  \item $\mathbb{R}$, \hyperpage{76}
+  \item radical 
+    \subitem  properties of, \hyperpage{21}
+  \item radicand, \hyperpage{20}
+  \item rational exponent, \hyperpage{21}
+  \item rational number 
+    \subitem  definition of, \hyperpage{4}
+    \subitem  set of, \hyperpage{4}
+  \item real axis, \hyperpage{55}
+  \item real number 
+    \subitem  definition of, \hyperpage{3, 4}
+    \subitem  set of, \hyperpage{3, 4}
+  \item real part of a complex number, \hyperpage{55}
+  \item rectangular coordinates 
+    \subitem  also known as Cartesian coordinates, \hyperpage{41}
+    \subitem  conversion into polar, \hyperpage{47}
+  \item rectangular form of a complex number, \hyperpage{55}
+  \item reduced echelon form, \hyperpage{136}
+  \item reduced row echelon form, \hyperpage{136}
+  \item reflection 
+    \subitem  of a point, \hyperpage{29}
+  \item relatively prime, \hyperpage{13}
+  \item right hand rule
+    \subitem of Cartesian coordinates, \hyperpage{71}
+  \item root 
+    \subitem  index, \hyperpage{20}
+    \subitem  radicand, \hyperpage{20}
+  \item Roots of Unity, \hyperpage{69}
+  \item row echelon form, \hyperpage{136}
+
+  \indexspace
+
+  \item set 
+    \subitem  definition of, \hyperpage{1}
+    \subitem  empty, \hyperpage{3, 4}
+    \subitem  exclusion, \hyperpage{2}
+    \subitem  inclusion, \hyperpage{2}
+    \subitem  intersection, \hyperpage{2}
+    \subitem  roster method, \hyperpage{1}
+    \subitem  set-builder notation, \hyperpage{1}
+    \subitem  sets of numbers, \hyperpage{4}
+    \subitem  union, \hyperpage{2}
+    \subitem  verbal description, \hyperpage{1}
+  \item set-builder notation, \hyperpage{1}
+  \item skew symmetric, \hyperpage{241}
+    \subitem definition, \hyperpage{241}
+    \subitem theorem, \hyperpage{241}
+  \item solution, \hyperpage{125}
+    \subitem infinite, \hyperpage{145}, \hyperpage{148}, 
+		\hyperpage{206}
+    \subitem none, \hyperpage{145}
+    \subitem particular, \hyperpage{150}
+    \subitem types, \hyperpage{145}
+    \subitem unique, \hyperpage{145}, \hyperpage{206}, \hyperpage{225}
+  \item sphere, \hyperpage{72}
+  \item standard unit vector, \hyperpage{312}
+  \item subset 
+    \subitem  definition of, \hyperpage{2}
+  \item symmetric, \hyperpage{241}
+    \subitem definition, \hyperpage{241}
+    \subitem theorem, \hyperpage{241}
+  \item symmetry 
+    \subitem  about the $x$-axis, \hyperpage{28}
+    \subitem  about the $y$-axis, \hyperpage{28}
+    \subitem  about the origin, \hyperpage{28}
+  \item system of linear equations
+    \subitem consistent, \hyperpage{145}, \hyperpage{148}, 
+		\hyperpage{205, 206}
+    \subitem definition, \hyperpage{125}
+    \subitem homogeneous, \hyperpage{204}
+    \subitem inconsistent, \hyperpage{145}, \hyperpage{149}
+    \subitem solution, \hyperpage{125}
+
+  \indexspace
+
+  \item terminal point, \hyperpage{76}
+  \item theorem 
+    \subitem  Fundamental Theorem of Algebra, \hyperpage{39}
+  \item trace
+    \subitem definition, \hyperpage{244}
+    \subitem properties, \hyperpage{246}
+  \item transpose, \hyperpage{235}
+    \subitem definition, \hyperpage{235}
+    \subitem properties, \hyperpage{239}
+    \subitem skew-symmetric, \hyperpage{241}
+    \subitem symmetric, \hyperpage{241}
+  \item triangular matrix
+    \subitem definition, \hyperpage{236}
+    \subitem determinant, \hyperpage{259}
+  \item trichotomy, \hyperpage{6}
+
+  \indexspace
+
+  \item union of two sets, \hyperpage{2}
+  \item unit vector, \hyperpage{80}
+    \subitem properties, \hyperpage{82}
+    \subitem standard unit vector, \hyperpage{83}
+
+  \indexspace
+
+  \item variable
+    \subitem basic, \hyperpage{148}
+    \subitem dependent, \hyperpage{148}
+    \subitem free, \hyperpage{146}, \hyperpage{148}
+    \subitem independent, \hyperpage{148}
+  \item vector
+    \subitem column, \hyperpage{173}
+    \subitem length, \hyperpage{192}, \hyperpage{326}
+    \subitem row, \hyperpage{173}
+  \item vectors, \hyperpage{76}
+    \subitem algebra of, \hyperpage{78}
+    \subitem algebraic properties, \hyperpage{80}
+    \subitem component form, \hyperpage{77}
+    \subitem cross product, \hyperpage{97}, \hyperpage{99}
+    \subitem definition, \hyperpage{76}
+    \subitem dot product, \hyperpage{87, 88}
+    \subitem Head To Tail Rule, \hyperpage{78}
+    \subitem magnitude, \hyperpage{76}
+    \subitem norm, \hyperpage{76}
+    \subitem normal vector, \hyperpage{115}
+    \subitem orthogonal, \hyperpage{90}
+    \subitem orthogonal decomposition, \hyperpage{93}
+    \subitem orthogonal projection, \hyperpage{92}
+    \subitem parallel, \hyperpage{81}
+    \subitem Parallelogram Law, \hyperpage{78}
+    \subitem resultant, \hyperpage{78}
+    \subitem standard unit vector, \hyperpage{83}
+    \subitem unit vector, \hyperpage{80}, \hyperpage{82}
+    \subitem zero vector, \hyperpage{78}
+  \item Venn Diagram, \hyperpage{3}
+
+  \indexspace
+
+  \item work, \hyperpage{95}
+
+  \indexspace
+
+  \item zero matrix, \hyperpage{168}
+
+\end{theindex}

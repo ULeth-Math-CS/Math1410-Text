@@ -522,6 +522,7 @@ as a matrix--vector equation, solve the system using vector notation, and give t
 \]
 To solve the system, we put the associated augmented matrix into \rref\ and interpret the results.
 
+
 \[
 \bmx{ccccccc}1&2&-3&2&7&2\\3&4&5&2&3&-4\emx\quad \arref \quad \bmx{ccccccc}1&0&11&-2&-11&-8\\0&1&-7&2&9&5\emx
 \]
@@ -533,13 +534,10 @@ To solve the system, we put the associated augmented matrix into \rref\ and inte
   x_5&\text{ is free}
 \end{align*}
 
-%\drawexampleline{ex_vector_solution_5}
-
 We use this information to write \vx, again pulling it apart. Since we have three free variables and also constants, we'll need to pull \vx\ apart into four separate vectors.
 
 \begin{align*}
-\vx &= \bmx{c}x_1\\x_2\\x_3\\x_4\\x_5\emx\\
-    &= \bmx{c}-8-11x_3+2x_4+11x_5\\5+7x_3-2x_4-9x_5\\x_3\\x_4\\x_5\emx\\
+\vx &= \bmx{c}x_1\\x_2\\x_3\\x_4\\x_5\emx = \bmx{c}-8-11x_3+2x_4+11x_5\\5+7x_3-2x_4-9x_5\\x_3\\x_4\\x_5\emx\\
     &= \bmx{c}-8\\5\\0\\0\\0\emx + \bmx{c}-11x_3\\7x_3\\x_3\\0\\0\emx+ \bmx{c}2x_4\\-2x_4\\0\\x_4\\0\emx + \bmx{c}11x_5\\-9x_5\\0\\0\\x_5\emx \\
     &= \bmx{c}-8\\5\\0\\0\\0\emx + x_3\bmx{c}-11\\7\\1\\0\\0\emx+ x_4\bmx{c}2\\-2\\0\\1\\0\emx + x_5\bmx{c}11\\-9\\0\\0\\1\emx \\
     &= \underbrace{\vect{x_p}}_{\parbox{35pt}{\center \scriptsize {\vskip -10pt} particular solution}}+ \underbrace{x_3\vu+x_4\vv+x_5\vect{w}}_{\parbox{100pt}{\center \scriptsize {\vskip -10pt} solution to homogeneous equations $\tta\vx=\zero$}}

@@ -29,7 +29,7 @@ This examples demonstrates a wonderful fact for us: the \el s of a triangular ma
 
 With that fact in the backs of our minds, let us proceed to the next example where we will come across some more interesting facts about \el s and \ev s. 
 
-\medskip
+\pagebreak
 
 \example{ex_eigen_prop_1}{Exploring properties of eigenvalues}{Let $\tta = \bmx{cc} -3 & 15 \\ 3 & 9 \emx$ and let $\ttb = \bmx{ccc} -7 & -2 & 10 \\-3 & 2 & 3\\ -6 & -2 & 9\emx$ (as used in Examples \ref{ex_eigen1} and \ref{ex_eigen3}, respectively). Find the following:
 
@@ -135,9 +135,11 @@ We find the \el s of a matrix by computing the characteristic polynomial; that i
 
 So we see that the characteristic polynomial of \ttat\ is the same as that for \tta. Therefore they have the same \el s. 
 
-What about their respective \ev s? Is there any relationship? The simple answer is ``No.''\footnote{We have defined an \ev\ to be a column vector. Some mathematicians prefer to use row vectors instead; in that case, the typical \el /\ev\ equation looks like $\vx\tta=\lda\vx$. It turns out that doing things this way will give you the same \el s as our method. What is more, take the transpose of the above equation: you get $(\vx\tta)^T = (\lda\vx)^T$ which is also $\ttat\vx^T = \lda\vx^T$. The transpose of a row vector is a column vector, so this equation is actually the kind we are used to, and we can say that $\vx^T$ is an \ev\ of \ttat. 
+What about their respective \ev s? Is there any relationship? The simple answer is ``No.''
 
-In short, what we find is that the \ev s of \ttat\ are the ``row'' \ev s of \tta, and vice--versa.}\\
+%\mnote{.5}{We have defined an \ev\ to be a column vector. Some mathematicians prefer to use row vectors instead; in that case, the typical \el /\ev\ equation looks like $\vx\tta=\lda\vx$. It turns out that doing things this way will give you the same \el s as our method. What is more, take the transpose of the above equation: you get $(\vx\tta)^T = (\lda\vx)^T$ which is also $\ttat\vx^T = \lda\vx^T$. The transpose of a row vector is a column vector, so this equation is actually the kind we are used to, and we can say that $\vx^T$ is an \ev\ of \ttat. 
+
+%In short, what we find is that the \ev s of \ttat\ are the ``row'' \ev s of \tta, and vice--versa.}\\
 
 \noindent \textsf{\textbf{The \el s and \ev s of \tta\ and The Trace.}}\\
 
@@ -147,7 +149,11 @@ It seems that the sum of the \el s is the trace! Why is this the case?
 
 The answer to this is a bit out of the scope of this text; we can justify part of this fact, and another part we'll just state as being true without justification. 
 
-First, recall from Theorem \ref{thm:trace} that tr$(\tta\ttb) = $tr$(\ttb\tta)$. Secondly, we state without justification that given a square matrix \tta, we can find a square matrix \ttp\ such that $\ttpi\tta\ttp$ is an upper triangular matrix with the eigenvalues of \tta\ on the diagonal.\footnote{Who in the world thinks up this stuff? It seems that the answer is Marie Ennemond Camille Jordan, who, despite having at least two girl names, was a guy.} Thus tr$(\ttpi\tta\ttp)$ is the sum of the eigenvalues; also, using our Theorem \ref{thm:trace}, we know that tr$(\ttpi\tta\ttp) = $ tr$(\ttpi\ttp\tta) = $ tr(\tta). Thus the trace of \tta\ is the sum of the eigenvalues.\\
+First, recall from Theorem \ref{thm:trace} that $\tr(\tta\ttb) = \tr(\ttb\tta)$. Secondly, we state without justification that given a square matrix \tta, we can find a square matrix \ttp\ such that $\ttpi\tta\ttp$ is an upper triangular matrix with the eigenvalues of \tta\ on the diagonal.
+
+\mnote{.5}{Who in the world thinks up this stuff? It seems that the answer is Marie Ennemond Camille Jordan, who, despite having at least two girl names, was a guy.} 
+
+Thus $\tr(\ttpi\tta\ttp)$ is the sum of the eigenvalues; also, using our Theorem \ref{thm:trace}, we know that $\tr(\ttpi\tta\ttp) =  \tr(\ttpi\ttp\tta) =  \tr(\tta)$. Thus the trace of \tta\ is the sum of the eigenvalues.\\
 
 \noindent \textsf{\textbf{The \el s and \ev s of \tta\ and The Determinant.}}\\
 
@@ -167,7 +173,7 @@ Let \tta\ be an $n\times n$ invertible matrix. The following are true:
 \item		If \tta\ is triangular, then the diagonal elements of \tta\ are the \el s of \tta.
 \item		If \lda\ is an \el\ of \tta\ with \ev\ \vx, then $\frac{1}{\lda}$ is an \el\ of \ttai\ with \ev\ \vx.
 \item		If \lda\ is an \el\ of \tta\, then \lda\ is an \el\ of \ttat.
-\item		The sum of the \el s of \tta\ is equal to tr(\tta), the trace of \tta.
+\item		The sum of the \el s of \tta\ is equal to $\tr(\tta)$, the trace of \tta.
 \item		The product of the \el s of \tta\ is the equal to $\det{\tta}$, the determinant of \tta.
 \end{enumerate}
 }
@@ -217,7 +223,9 @@ This shows that $x_1 = x_2$, and so our \ev s $\vx$ are
 
 \medskip
 
-One interesting thing about the above example is that we see that 0 is an \el\ of \tta; we have not officially encountered this before. Does this mean anything significant?\footnote{Since 0 is a ``special'' number, we might think so -- afterall, we found that having a determinant of 0 is important. Then again, a matrix with a trace of 0 isn't all that important. (Well, as far as we have seen; it actually \textit{is}). So, having an \el\ of 0 may or may not be significant, but we would be doing well if we recognized the possibility of significance and decided to investigate further.} 
+One interesting thing about the above example is that we see that 0 is an \el\ of \tta; we have not officially encountered this before. Does this mean anything significant?
+
+\mnote{.5}{Since 0 is a ``special'' number, we might think so -- afterall, we found that having a determinant of 0 is important. Then again, a matrix with a trace of 0 isn't all that important. (Well, as far as we have seen; it actually \textit{is}). So, having an \el\ of 0 may or may not be significant, but we would be doing well if we recognized the possibility of significance and decided to investigate further.} 
 
 Think about what an \el\ of 0 means: there exists an nonzero vector \vx\ where $\tta\vx = 0\vx = \zero$. That is, we have a nontrivial solution to $\tta\vx = \zero$. We know this only happens when \tta\ is not invertible. 
 
@@ -246,7 +254,7 @@ First, recall the matrix
 \[
 \tta = \bmx{cc}1&4\\2&3\emx
 \]
-that we used in Example \ref{ex_find_el}. It's characteristic polynomial is $p(\lda)=\lda^2-4\lda-5$. Compute $p(\tta)$; that is, compute $\tta^2-4\tta-5\tti$. You should get something ``interesting,'' and you should wonder ``does this always work?''\footnote{Yes.}
+that we used in Example \ref{ex_find_el}. It's characteristic polynomial is $p(\lda)=\lda^2-4\lda-5$. Compute $p(\tta)$; that is, compute $\tta^2-4\tta-5\tti$. You should get something ``interesting,'' and you should wonder ``does this always work?'' (Yes.)
 
 Second, in all of our examples, we have considered matrices where \el s ``appeared only once.'' Since we know that the \el s of a triangular matrix appear on the diagonal, we know that the \el s of 
 \[
@@ -256,13 +264,15 @@ are ``1 and 1;'' that is, the \el\ $\lda = 1$ appears twice. What does that mean
 \[
 \tta = \bmx{cc}1&0\\0&1\emx,
 \]
-which also has the \el\ $\lda =1$ appearing twice.\footnote{To direct further study, it helps to know that mathematicians refer to this as the \textit{duplicity} of an \el. In each of these two examples, \tta\ has the \el\ $\lda=1$ with duplicity of 2.}
+which also has the \el\ $\lda =1$ appearing twice. 
+
+\mnote{.5}{To direct further study, it helps to know that mathematicians refer to this as the \textit{multiplicity} of an \el. In each of these two examples, \tta\ has the \el\ $\lda=1$ with multiplicity of 2.}
 
 Third, consider the matrix 
 \[
 \tta = \bmx{cc}0&-1\\1&0\emx.
 \]
-What are the \el s?\footnote{Be careful; this matrix is \textit{not} triangular.} We quickly compute the characteristic polynomial to be $p(\lda) = \lda^2 + 1$. Therefore the \el s are $\pm \sqrt{-1} = \pm i$. What does this mean?
+What are the \el s? (Be careful; this matrix is \textit{not} triangular.) We quickly compute the characteristic polynomial to be $p(\lda) = \lda^2 + 1$. Therefore the \el s are $\pm \sqrt{-1} = \pm i$. What does this mean?
 
 Finally, we have found the \el s of matrices by finding the roots of the characteristic polynomial. We have limited our examples to quadratic and cubic polynomials; one would expect for larger sized matrices that a computer would be used to factor the characteristic polynomials. However, in general, this is \textit{not} how the \el s are found. Factoring high order polynomials is too unreliable, even with a computer -- round off errors can cause unpredictable results. Also, to even compute the characteristic polynomial, one needs to compute the determinant, which is also expensive (as discussed in the previous chapter). 
 

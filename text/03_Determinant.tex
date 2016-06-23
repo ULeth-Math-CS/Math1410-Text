@@ -12,7 +12,7 @@ We give a pseudo-definition of the determinant here.
 \parbox{240pt}{The \textit{determinant} of an $n\times n$ matrix \tta\ is a number, denoted \det{\tta}, that is determined by \tta.}
 \end{center}
 
-That definition isn't meant to explain everything; it just gets us started by making us realize that the determinant is a number. The determinant is kind of a tricky thing to define. Once you know and understand it, it isn't that hard, but getting started is a bit complicated.\footnote{It's similar to learning to ride a bike. The riding itself isn't hard, it is getting started that's difficult.} We start simply; we define the determinant for $2 \times 2$ matrices.
+That definition isn't meant to explain everything; it just gets us started by making us realize that the determinant is a number. The determinant is kind of a tricky thing to define. Once you know and understand it, it isn't that hard, but getting started is a bit complicated. (It's similar to learning to ride a bike. The riding itself isn't hard, it is getting started that's difficult.) We start simply; we define the determinant for $2 \times 2$ matrices.
 
 \smallskip
 
@@ -60,7 +60,7 @@ Similar computations show that $\det{\ttb} = 3(7)- (-1)(2) = 23$ and $\det{\ttc}
 
 \medskip
 
-Finding the determinant of a $2\times2$ matrix is pretty straightforward. It is natural to ask next ``How do we compute the determinant of matrices that are not $2\times2$?'' We first need to define some terms.\footnote{This is the standard definition of these two terms, although slight variations exist.}
+Finding the determinant of a $2\times2$ matrix is pretty straightforward. It is natural to ask next ``How do we compute the determinant of matrices that are not $2\times2$?'' We first need to define some terms. 
 
 \smallskip
 
@@ -338,7 +338,7 @@ Thus the determinant is
 \tta = \bmx{cccc} 1&2&1&2\\-1&2&3&4\\8&5&-3&1\\5&9&-6&3\emx.
 \]
 }
-{This, quite frankly, will take quite a bit of work. In order to compute this determinant, we need to compute 4 minors, each of which requires finding the determinant of a $3\times 3$ matrix! Complaining won't get us any closer to the solution,\footnote{But it might make us feel a little better. Glance ahead: do you see how much work we have to do?!?} so let's get started. We first compute the cofactors:
+{This, quite frankly, will take quite a bit of work. In order to compute this determinant, we need to compute 4 minors, each of which requires finding the determinant of a $3\times 3$ matrix! Complaining won't get us any closer to the solution, (But it might make us feel a little better. Glance ahead: do you see how much work we have to do?!?) so let's get started. We first compute the cofactors:
 \begin{align*}C_{1,1} &= (-1)^{1+1}\tta_{1,1}\\
 	&= 1\cdot\bdt{ccc}2&3&4\\5&-3&1\\9&-6&3\edt \quad\quad\quad \left(\parbox{100pt}{\scriptsize we must compute the determinant of this $3\times 3$ matrix}\right)\\
 	&= 2\cdot(-1)^{1+1}\bdt{cc}-3&1\\-6&3\edt + 3\cdot(-1)^{1+2}\bdt{cc}5&1\\9&3\edt + 4\cdot(-1)^{1+3}\bdt{cc}5&-3\\9&-6\edt \\
@@ -381,11 +381,13 @@ As a way of ``visualizing'' this, let's write out the cofactor expansion again b
 	&+\\ &\quad 1(-1)^4\underbrace{\bdt{ccc}-1&2&4\\8&5&1\\5&9&3\edt}_{\parbox{60pt}{\scriptsize\centering $=144$}}\ +\  2(-1)^5\underbrace{\bdt{ccc}-1&2&3\\8&5&-3\\5&9&-6\edt}_{\parbox{60pt}{\scriptsize\centering $=210$}}\\
 	&= 60
 \end{align*}
-\vskip -\baselineskip}
+}
 
 \medskip
 
-That certainly took a while; it required more than 50 multiplications (we didn't count the additions). To compute the determinant of a $5\times5$ matrix, we'll need to compute the determinants of five $4\times 4$ matrices, meaning that we'll need over 250 multiplications! Not only is this a lot of work, but there are just too many ways to make silly mistakes.\footnote{The author made three when the above example was originally typed.} There are some tricks to make this job easier, but regardless we see the need to employ technology. Even then, technology quickly bogs down. A $25 \times 25$ matrix is considered ``small'' by today's standards,\footnote{It is common for mathematicians, scientists and engineers to consider linear systems with thousands of equations and variables.} but it is essentially impossible for a computer to compute its determinant by only using cofactor expansion; it too needs to employ ``tricks.''
+That certainly took a while; it required more than 50 multiplications (we didn't count the additions). To compute the determinant of a $5\times5$ matrix, we'll need to compute the determinants of five $4\times 4$ matrices, meaning that we'll need over 250 multiplications! Not only is this a lot of work, but there are just too many ways to make silly mistakes. (The author made three when the above example was originally typed.) There are some tricks to make this job easier, but regardless we see the need to employ technology. Even then, technology quickly bogs down. A $25 \times 25$ matrix is considered ``small'' by today's standards, but it is essentially impossible for a computer to compute its determinant by only using cofactor expansion; it too needs to employ ``tricks.''
+
+\mnote{.5}{It is common for mathematicians, scientists and engineers to consider linear systems with thousands of equations and variables.}
 
 In the next section we will learn some of these tricks as we learn some of the properties of the determinant. Right now, let's review the essentials of what we have learned. 
 	\begin{enumerate}

@@ -107,8 +107,6 @@ Perform the indicated operations.
 \begin{align*}
 (x-[1+2i])(x-[1-2i]) & =  x^2 -x[1-2i]-x[1+2i]+[1-2i][1+2i]  \tag*{F.O.I.L.}\\								 & =  x^2-x+2ix-x-2ix+1-2i+2i-4i^2  \tag*{Distribute} \\								 & =  x^2-2x + 1-4(-1) \tag*{Gather like terms}\\										 & =  x^2 -2x +5  \tag*{$i^2=-1$}
 \end{align*}
-This type of factoring will be revisited in Section \ref{ComplexZeros}. 
-
 \end{enumerate}
 }
 
@@ -147,11 +145,11 @@ The proof of the first property is a very quick exercise.  To prove the second p
 
 \mnote{.85}{Proof by Mathematical Induction is usually taught in Math 2000.}
 
-\mnote{.7}{We're assuming some prior familiarity on the part of the reader where quadratic equations are concerned. If you feel that it would be unfair to tackle quadratic equations with complex solutions before the case of real solutions has been properly addressed, you may want to briefly skip ahead to Section \ref{QuadraticFunctions}.}
+\mnote{.7}{We're assuming some prior familiarity on the part of the reader where quadratic equations are concerned. If you're a bit rusty when it comes to finding \textit{real} solutions to quadratic equations (and in particular, the quadratic formula), you may want to check out the review materials available on the ``Math Basics'' Moodle page.}
 
 \medskip
 
-We now consider the problem of solving quadratic equations. Consider  $x^2-2x+5 = 0$. The discriminant $b^2 - 4ac = -16$ is negative, so we know by Theorem \ref{discriminanttrichotomy} there are no \textit{real} solutions, since the Quadratic Formula would involve the term $\sqrt{-16}$.  Complex numbers, however, are built just for such situations, so we can go ahead and apply the Quadratic Formula to get: \[ x = \dfrac{-(-2) \pm \sqrt{(-2)^2-4(1)(5)}}{2(1)} = \dfrac{2 \pm \sqrt{-16}}{2} = \dfrac{2 \pm 4i}{2} = 1 \pm 2i.\]  
+We now consider the problem of solving quadratic equations. Consider  $x^2-2x+5 = 0$. The discriminant $b^2 - 4ac = -16$ is negative, so we know from the quadratic formula that there are no \textit{real} solutions, since the Quadratic Formula would involve the term $\sqrt{-16}$.  Complex numbers, however, are built just for such situations, so we can go ahead and apply the Quadratic Formula to get: \[ x = \dfrac{-(-2) \pm \sqrt{(-2)^2-4(1)(5)}}{2(1)} = \dfrac{2 \pm \sqrt{-16}}{2} = \dfrac{2 \pm 4i}{2} = 1 \pm 2i.\]  
 
 \medskip
 
@@ -225,7 +223,9 @@ Thus we get \textit{three} solutions to $z^3 + 1 = 0$ - one real: $z = -1$ and t
 
 \medskip
 
-It is no coincidence that the non-real solutions to the equations in Example \ref{complexsolnsreviewex} appear in  complex conjugate pairs. Any time we use the Quadratic Formula to solve an equation with \underline{real} coefficients, the answers will form a  complex conjugate pair owing to the $\pm$ in the Quadratic Formula.  This leads us to a generalization of Theorem \ref{discriminanttrichotomy} which we state on the next page.
+It is no coincidence that the non-real solutions to the equations in Example \ref{complexsolnsreviewex} appear in  complex conjugate pairs. Any time we use the Quadratic Formula to solve an equation with \underline{real} coefficients, the answers will form a  complex conjugate pair owing to the $\pm$ in the Quadratic Formula.  This is stated formally in the following theorem.
+
+\smallskip
 
 \theorem{discriminanttheoremcomplexversion}{Discriminant Theorem}{
 Given a Quadratic Equation $AX^2 + BX + C = 0$, where $A$, $B$ and $C$ are real numbers, let $D = B^2 - 4AC$ be the discriminant.
@@ -269,4 +269,4 @@ Suppose  $f$ is a polynomial of degree $n \geq 1$.  The Fundamental Theorem of A
 }
 
 
-\printexercises{exercises_pre/00_04_exercises}
+\printexercises{exercises/00_04_exercises}

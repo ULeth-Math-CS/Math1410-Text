@@ -85,8 +85,9 @@ Finally, \ttc\ is upper triangular, with \ttct\ being lower triangular. }
 
 Make note of the definitions of diagonal and triangular matrices. We specify that a diagonal matrix must be square, but triangular matrices don't have to be. (``Most'' of the time, however, the ones we study are.) Also, as we mentioned before in the example, by definition a diagonal matrix is also both upper and lower triangular. Finally, notice that by definition, the transpose of an upper triangular matrix is a lower triangular matrix, and vice-versa.
 
-There are many questions to probe concerning the transpose operations.\footnote{Remember, this is what mathematicians do. We learn something new, and then we ask lots of questions about it. Often the first questions we ask are along the lines of ``How does this new thing relate to the old things I already know about?''} The first set of questions we'll investigate involve the matrix arithmetic we learned from last chapter. We do this investigation by way of examples, and then summarize what we have learned at the end.
+There are many questions to probe concerning the transpose operations. The first set of questions we'll investigate involve the matrix arithmetic we learned from last chapter. We do this investigation by way of examples, and then summarize what we have learned at the end.
 
+\mnote{.6}{Remember, this is what mathematicians do. We learn something new, and then we ask lots of questions about it. Often the first questions we ask are along the lines of ``How does this new thing relate to the old things I already know about?''} 
 %\enlargethispage{3\baselineskip}
 
 \medskip
@@ -116,7 +117,7 @@ Also,
 
 \medskip
 
-It looks like ``the sum of the transposes is the transpose of the sum.''\footnote{This is kind of fun to say, especially when said fast. Regardless of how fast we say it, we should think about this statement. The ``is'' represents ``equals.'' The stuff before ``is'' equals the stuff afterwards.} This should lead us to wonder how the transpose works with multiplication.\\
+It looks like ``the sum of the transposes is the transpose of the sum.'' (This is kind of fun to say, especially when said fast. Regardless of how fast we say it, we should think about this statement. The ``is'' represents ``equals.'' The stuff before ``is'' equals the stuff afterwards.) This should lead us to wonder how the transpose works with multiplication.\\
 
 \medskip
 
@@ -150,7 +151,7 @@ So we can't compute $\ttat\ttbt$. Let's finish by computing $\ttbt\ttat$:
 \medskip
 
 We may have suspected that $(\tta\ttb)^T = \ttat\ttbt$. We saw that this wasn't the case, though -- and not only was it not equal, the second product wasn't even defined! Oddly enough, though, we saw that $(\tta\ttb)^T = \ttbt\ttat$.
-\footnote{Then again, maybe this isn't all that ``odd.'' It is reminiscent of the fact that, when invertible, $(\tta\ttb)^{-1} = \ttbi\ttai$.} 
+(Then again, maybe this isn't all that ``odd.'' It is reminiscent of the fact that, when invertible, $(\tta\ttb)^{-1} = \ttbi\ttai$.) 
 To help understand why this is true, look back at the work above and confirm the steps of each multiplication.
 
 We have one more arithmetic operation to look at: the inverse.
@@ -183,9 +184,9 @@ Finding $(\ttat)^{-1}$:
 
 \medskip
 
-It seems that ``the inverse of the transpose is the transpose of the inverse.''\footnote{Again, we should think about this statement. The part before ``is'' states that we take the transpose of a matrix, then find the inverse. The part after ``is'' states that we find the inverse of the matrix, then take the transpose. Since these two statements are linked by an ``is,'' they are equal.}\\
+It seems that ``the inverse of the transpose is the transpose of the inverse.'' (Again, we should think about this statement. The part before ``is'' states that we take the transpose of a matrix, then find the inverse. The part after ``is'' states that we find the inverse of the matrix, then take the transpose. Since these two statements are linked by an ``is,'' they are equal.)\\
 
-We have just looked at some examples of how the transpose operation interacts with matrix arithmetic operations.\footnote{These examples don't \textit{prove} anything, other than it worked in specific examples.} We now give a theorem that tells us that what we saw wasn't a coincidence, but rather is always true.
+We have just looked at some examples of how the transpose operation interacts with matrix arithmetic operations. (These examples don't \textit{prove} anything, other than it worked in specific examples.) We now give a theorem that tells us that what we saw wasn't a coincidence, but rather is always true.
 
 \smallskip
 
@@ -249,7 +250,7 @@ We'll formally define this in a moment, but a matrix that is equal to its transp
 
 Look at the next part of the example; what do we notice about $\tta+\ttat$? We should see that it, too, is symmetric. Finally, consider the last part of the example: do we notice anything about $\tta-\ttat$? 
 
-We should immediately notice that it is not symmetric, although it does seem ``close.'' Instead of it being equal to its transpose, we notice that this matrix is the \textit{opposite} of its transpose. We call this type of matrix \textit{skew symmetric.}\footnote{Some mathematicians use the term \textit{antisymmetric}} \index{symmetric}\index{skew symmetric} We formally define these matrices here.
+We should immediately notice that it is not symmetric, although it does seem ``close.'' Instead of it being equal to its transpose, we notice that this matrix is the \textit{opposite} of its transpose. We call this type of matrix \textit{skew symmetric.} (Some mathematicians use the term \textit{antisymmetric}) \index{symmetric}\index{skew symmetric} We formally define these matrices here.
 
 \smallskip
 
@@ -262,7 +263,7 @@ A matrix \tta\ is \textit{skew symmetric} if $\ttat = -\tta$.}
 
 Note that in order for a matrix to be either symmetric or skew symmetric, it must be square.
 
-So why was \tta\ttat\ symmetric in our previous example? Did we just luck out?\footnote{Of course not.} Let's take the transpose of \tta\ttat\ and see what happens.
+So why was \tta\ttat\ symmetric in our previous example? Did we just luck out? (Of course not.) Let's take the transpose of \tta\ttat\ and see what happens.
 \begin{align*}
 	(\tta\ttat)^T &= (\ttat)^T(\tta)^T  \tag*{transpose multiplication rule} \\
 	&=	\tta\ttat	\tag*{$(\ttat)^T = \tta$}
@@ -270,7 +271,7 @@ So why was \tta\ttat\ symmetric in our previous example? Did we just luck out?\f
 
 We have just \textit{proved} that no matter what matrix \tta\ we start with, the matrix \tta\ttat\ will be symmetric. Nothing in our string of equalities even demanded that \tta\ be a square matrix; it is always true. 
 
-We can do a similar proof to show that as long as \tta\ is square, $\tta+\ttat$ is a symmetric matrix.\footnote{Why do we say that \tta\ has to be square?} We'll instead show here that if \tta\ is a square matrix, then $\tta-\ttat$ is skew symmetric.
+We can do a similar proof to show that as long as \tta\ is square, $\tta+\ttat$ is a symmetric matrix. (Why do we say that \tta\ has to be square?) We'll instead show here that if \tta\ is a square matrix, then $\tta-\ttat$ is skew symmetric.
 \begin{align*} 
 (\tta-\ttat)^T &= \ttat - (\ttat)^T	\quad\ \text{\scriptsize transpose subtraction rule} \\
 		&= \ttat - \tta \\
@@ -295,7 +296,7 @@ We'll take what we learned from Example \ref{ex_transpose_3} and put it in a box
 	
 Why do we care about the transpose of a matrix? Why do we care about symmetric matrices?
 
-There are two answers that each answer both of these questions. First, we are interested in the tranpose of a matrix and symmetric matrices because they are interesting.\footnote{Or: ``neat,'' ``cool,'' ``bad,'' ``wicked,'' ``phat,'' ``fo-shizzle.''} One particularly interesting thing about symmetric and skew symmetric matrices is this: consider the sum of $(\tta+\ttat)$ and $(\tta-\ttat)$:
+There are two answers that each answer both of these questions. First, we are interested in the transpose of a matrix and symmetric matrices because they are interesting. One particularly interesting thing about symmetric and skew symmetric matrices is this: consider the sum of $(\tta+\ttat)$ and $(\tta-\ttat)$:
 \[
 (\tta+\ttat)+(\tta-\ttat) = 2\tta.
 \]

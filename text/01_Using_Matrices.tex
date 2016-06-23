@@ -14,54 +14,68 @@ b&=r+g
 \end{align*}
 
 Let's rewrite these equations so that all variables are on the left of the equal sign and all constants are on the right. Also, for a bit more consistency, let's list the variables in alphabetical order in each equation. Therefore we can write the equations as
-\begin{equation}\begin{array}{ccccccc}
+\begin{equation}
+\begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
  &-&2g&+&r&=&0\\
 -b&+&g&+&r&=&0
-\end{array}.\label{eq:before_matrix}\end{equation}
+\end{array}.\label{eq:before_matrix}
+\end{equation}
 
 As we mentioned before, there isn't just one ``right'' way of finding the solution to this system of equations. Here is another way to do it, a way that is a bit different from our method in Section \ref{sec:intro}. 
 
 First, let's add the first and last equations together, and write the result as a new
-third equation. This gives us:$$\begin{array}{ccccccc}
+third equation. This gives us:
+\[
+\begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
  &-&2g&+&r&=&0\\
  & &2g&+&2r&=&30
-\end{array}.$$
+\end{array}.
+\]
 A nice feature of this is that the only equation with a $b$ in it is the first equation.
 
-Now let's multiply the second equation by $-\frac12$. This gives $$\begin{array}{ccccccc}
+Now let's multiply the second equation by $-\frac12$. This gives 
+\[
+\begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
  & & g&-&1/2r&=&0\\
  & &2g&+&2r&=&30
-\end{array}.$$
+\end{array}.
+\]
 
 Let's now do two steps in a row; our goal is to get rid of the $g$'s in the first and third equations. In order to remove the $g$ in the first equation, let's multiply the second equation by $-1$ and add that to the first equation, replacing the first equation with that sum. To remove the $g$ in the third equation, let's multiply the second equation by $-2$ and add that to the third equation, replacing the third equation. Our new system of equations now becomes
-$$\begin{array}{ccccccc}
+\[
+\begin{array}{ccccccc}
 b&+& & &3/2r&=&30\\
  & &g&-&1/2r&=&0\\
  & & & &3r&=&30
-\end{array}.$$
+\end{array}.
+\]
 
 Clearly we can multiply the third equation by $\frac13$ and find that $r=10$; let's make this our new third equation, giving
-$$\begin{array}{ccccccc}
+\[
+\begin{array}{ccccccc}
 b&+& & &3/2r&=&30\\
  & &g&-&1/2r&=&0\\
  & & & &r&=&10
-\end{array}.$$
+\end{array}.
+\]
 
 Now let's get rid of the $r$'s in the first and second equation. To remove the $r$ in the first equation, let's multiply the third equation by $-\frac32$ and add the result to the first equation, replacing the first equation with that sum. To remove the $r$ in the second equation, we can multiply the third equation by $\frac12$ and add that to the second equation, replacing the second equation with that sum. This gives us:
-$$\begin{array}{ccccccc}
+\[
+\begin{array}{ccccccc}
 b& & & & &=&15\\
  & &g& & &=&5\\
  & & & &r&=&10
-\end{array}.$$
+\end{array}.
+\]
 Clearly we have discovered the same result as when we solved this problem in Section \ref{sec:intro}. 
 
 Now again revisit the idea that all that really matters are the coefficients and the constants. There is nothing special about the letters $b$, $g$ and $r$; we could have used $x$, $y$ and $z$ or $x_1$, $x_2$ and $x_3$. And even then, since we wrote our equations so carefully, we really didn't need to write the variable names at all as long as we put things ``in the right place.''
 
 Let's look again at our system of equations in \eqref{eq:before_matrix} and write the coefficients and the constants in a rectangular array. This time we won't ignore the zeros, but rather write them out.
-$$
+\[
 \begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
  &-&2g&+&r&=&0\\
@@ -71,7 +85,8 @@ b&+&g&+&r&=&30\\
 \bmx{cccc}
 1&1&1&30\\
 0&-2&1&0\\
--1&1&1&0\emx$$
+-1&1&1&0\emx
+\]
 Notice how even the equal signs are gone; we don't need them, for we know that the last {\em column} contains the coefficients. 
 
 We have just created a {\em matrix}. The definition of matrix is remarkable only in how unremarkable it seems.
@@ -86,12 +101,14 @@ A {\em matrix} is a rectangular array of numbers.\\
 The horizontal lines of numbers form {\em rows} and the vertical lines of numbers form {\em columns}. A matrix with $m$ rows and $n$ columns is said to be an $m\times n$ matrix (``an $m$ by $n$ matrix''). \\
 
 The entries of an $m\times n$ matrix are indexed as follows:
-$$\bmx{ccccc}
+\[
+\bmx{ccccc}
 a_{11}&a_{12}&a_{13}&\cdots&a_{1n}\\
 a_{21}&a_{22}&a_{23}&\cdots&a_{2n}\\
 a_{31}&a_{32}&a_{33}&\cdots&a_{3n}\\
 \vdots&\vdots&\vdots&\ddots&\vdots\\
-a_{m1}&a_{m2}&a_{m3}&\cdots&a_{mn} \emx.$$
+a_{m1}&a_{m2}&a_{m3}&\cdots&a_{mn} \emx.
+\]
 
 That is, $a_{32}$ means ``the number in the third row and second column.''}
 
@@ -227,11 +244,13 @@ Let's practice this manipulation again.
 \medskip
 
 \example{ex_eq_mat}{Solving a system using augmented matrices}{Find a solution to the following system of linear equations by simultaneously manipulating the equations and the corresponding augmented matrices.
-$$\begin{array}{ccccccc}
+\[
+\begin{array}{ccccccc}
 x_1&+&x_2&+&x_3&=&0\\
 2x_1&+&2x_2&+&x_3&=&0\\
 -1x_1&+&x_2&-&2x_3&=&2
-\end{array}$$}
+\end{array}
+\]}
 {We'll first convert this system of equations into a matrix, then we'll proceed by manipulating the system of equations (and hence the matrix) to find a solution. Again, there is not just one ``right'' way of proceeding; we'll choose a method that is pretty efficient, but other methods certainly exist (and may be ``better''!). The method use here, though, is a good one, and it is the method that we will be learning in the future.
 
 The given system and its corresponding augmented matrix are seen below.

@@ -7,7 +7,11 @@
 }
 
 
-In the previous sections we have learned about the determinant, but we haven't given a really good reason \textit{why} we would want to compute it.\footnote{The closest we came to motivation is that if $\det{\tta} =0$, then we know that \tta\ is not invertible. But it seems that there may be easier ways to check.} This section shows one application of the determinant: solving systems of linear equations. We introduce this idea in terms of a theorem, then we will practice.
+In the previous sections we have learned about the determinant, but we haven't given a really good reason \textit{why} we would want to compute it.  This section shows one application of the determinant: solving systems of linear equations. We introduce this idea in terms of a theorem, then we will practice.
+
+\mnote{.7}{The closest we came to motivating the determinant is that if $\det{\tta} =0$, then we know that \tta\ is not invertible. But it seems that there may be easier ways to check.
+
+It is interesting to note that despite the presentation given here, determinants actually pre-date the modern usage of matrices by more than a century. \href{https://en.wikipedia.org/wiki/Cramer's_rule}{\underline{Cramer's rule}} was published by Cramer in 1750, and the term \href{https://en.wikipedia.org/wiki/Matrix_(mathematics)}{\underline{matrix}} was introduced by James Joseph Sylvester in 1850. (Even then, Sylvester's description of matrices was in terms of minors -- that's right, determinants.) The interested reader is encouraged to read up on the history of the subject. (Wikipedia is not a bad place to start.)}
 
 \smallskip
 
@@ -119,9 +123,11 @@ When $\det{\tta}=0$ we are not able to discern whether infinite solutions or no 
 
 We end this section with a practical consideration. We have mentioned before that finding determinants is a computationally intensive operation. To solve a linear system with 3 equations and 3 unknowns, we need to compute 4 determinants. Just think: with 10 equations and 10 unknowns, we'd need to compute 11 really hard determinants of $10\times 10$ matrices! That is a lot of work!
 
-The upshot of this is that Cramer's Rule makes for a poor choice in solving numerical linear systems. It simply is not done in practice; it is hard to beat Gaussian elimination.\footnote{A version of Cramer's Rule is often taught in introductory differential equations courses as it can be used to find solutions to certain linear differential equations. In this situation, the entries of the matrices are functions, not numbers, and hence computing determinants is easier than using Gaussian elimination. Again, though, as the matrices get large, other solution methods are resorted to.}
+The upshot of this is that Cramer's Rule makes for a poor choice in solving numerical linear systems. It simply is not done in practice; it is hard to beat Gaussian elimination.
 
-So why include it? \textit{Because its truth is amazing.} The determinant is a very strange operation; it produces a number in a very odd way. It should seem incredible to the reader that by manipulating determinants in a particular way, we can solve linear systems.
+\mnote{.5}{A version of Cramer's Rule is often taught in introductory differential equations courses as it can be used to find solutions to certain linear differential equations. In this situation, the entries of the matrices are functions, not numbers, and hence computing determinants is easier than using Gaussian elimination. Again, though, as the matrices get large, other solution methods are resorted to.}
+
+So why include it? \textit{Because its truth is amazing.} The determinant is a very strange operation; it produces a number in a very odd way. It should seem incredible to the reader that by manipulating determinants in a particular way, we can solve linear systems.  
 
 %It is not accurate to say that Cramer's Rule is \textit{never} used. For certain elementary linear differential equations, especially at the introductory level, Cramer's Rule provides a systematic way of arriving at a solution. Again, however, there are generally ``better'' ways of finding the solution.
 

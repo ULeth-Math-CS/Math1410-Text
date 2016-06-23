@@ -136,7 +136,11 @@ However, we don't have the identity on the left hand side. Our conclusion: \tta\
 
 \medskip
 
-We have just seen that not all matrices are invertible.\footnote{\label{footnote:special}Hence our previous definition; why bother calling \tta\ ``invertible'' if every square matrix is? If everyone is special, then no one is. Then again, everyone \textit{is} special.} With this thought in mind, let's complete the array of boxes we started before the example. We've discovered that if a matrix has an inverse, it has only one. Therefore, we gave that special matrix a name, ``\textit{the} inverse.'' Finally, we describe the most general way to find the inverse of a matrix, and a way to tell if it does not have one.
+We have just seen that not all matrices are invertible.
+
+\mnote{.5}{\label{footnote:special} Example \ref{ex_inverse_2} shows that not all square matrices (or even non-zero square matrices) are invertible, hence Definition \ref{def:inverse} is necessary: why bother calling \tta\ ``invertible'' if every square matrix is? If everyone is special, then no one is. Then again, everyone \textit{is} special.} 
+
+With this thought in mind, let's complete the array of boxes we started before the example. We've discovered that if a matrix has an inverse, it has only one. Therefore, we gave that special matrix a name, ``\textit{the} inverse.'' Finally, we describe the most general way to find the inverse of a matrix, and a way to tell if it does not have one.
 
 \smallskip
 
@@ -171,7 +175,9 @@ Multiply \tta\ttai\ to verify that it is indeed the inverse of \tta.}
 
 \medskip
 
-In general, given a matrix \tta, to find \ttai\ we need to form the augmented matrix $\bmx{cc}\tta&\tti \emx$ and put it into \rref\ and interpret the result. In the case of a $2\times 2$ matrix, though, there is a shortcut. We give the shortcut in terms of a theorem.\footnote{We don't prove this theorem here, but it really isn't hard to do. Put the matrix 
+In general, given a matrix \tta, to find \ttai\ we need to form the augmented matrix $\bmx{cc}\tta&\tti \emx$ and put it into \rref\ and interpret the result. In the case of a $2\times 2$ matrix, though, there is a shortcut. We give the shortcut in terms of a theorem.
+
+\mnote{.5}{We don't prove Theorem \ref{thm:2by2} here, but it really isn't hard to do. Put the matrix 
 \[
 \bmx{cccc}a&b&1&0\\c&d&0&1\emx
 \]
@@ -254,13 +260,16 @@ Let \tta\ be an invertible $n\times n$ matrix, and let \vb\ be any $n\times 1$ c
 
 \smallskip
 
-A corollary\footnote{a \textit{corollary} is an idea that follows directly from a theorem} to this theorem is: If \tta\ is not invertible, then \ttaxb\ does not have exactly one solution. It may have infinite solutions and it may have no solution, and we would need to examine the \rref\ of the augmented matrix $\bmx{cc} \tta & \vb \emx$ to see which case applies.
+A corollary to this theorem is: If \tta\ is not invertible, then \ttaxb\ does not have exactly one solution. It may have infinite solutions and it may have no solution, and we would need to examine the \rref\ of the augmented matrix $\bmx{cc} \tta & \vb \emx$ to see which case applies.
+
+\mnote{.5}{A \textit{corollary} is an idea that follows directly from a theorem; typically all the hard work is done in proving the theorem, and any resulting corollaries are easy consequences.}
 
 We demonstrate our theorem with an example.
 
 \medskip
 
-\example{ex_inverse_solution_1}{Using a matrix inverse to solve a system}{Solve \ttaxb\ by computing $\vx = \ttai\vb$, where 
+\example{ex_inverse_solution_1}{Using a matrix inverse to solve a system}{
+Solve \ttaxb\ by computing $\vx = \ttai\vb$, where 
 \[
 \tta = \left[ \begin {array}{ccc} 1&0&-3\\  -3&-4&10
 \\  4&-5&-11\end {array} \right]\ \text{ and }\ \vb = \left[ \begin {array}{c} -15\\   57 \\  -46\end {array} \right].
@@ -288,8 +297,9 @@ We can easily check our answer:
 
 \mnote{.5}{The method employed in Example \ref{ex_inverse_solution_1} is useful in theory, but not in practice: the amount of work required to solve a system this way is significantly greater than the amount of work involved in Gaussian Elimination. The only scenario where you should consider using the inverse to solve a system (aside from being asked to do so on a test!) is when there are \textit{several} systems you need to solve that all have the same coefficient matrix.}
 
-Knowing a matrix is invertible is incredibly useful.\footnote{As odd as it may sound, \textit{knowing} a matrix is invertible is useful; actually computing the inverse isn't. This is discussed at the end of the next section.} Among many other reasons, if you know \tta\ is invertible, then you know for sure that $\ttaxb$ has a solution (as we just stated in Theorem \ref{thm:inverse_solution}). In the next section we'll demonstrate many different properties of invertible matrices, including stating several different ways in which we know that a matrix is invertible.
+Knowing a matrix is invertible is incredibly useful. Among many other reasons, if you know \tta\ is invertible, then you know for sure that $\ttaxb$ has a solution (as we just stated in Theorem \ref{thm:inverse_solution}). In the next section we'll demonstrate many different properties of invertible matrices, including stating several different ways in which we know that a matrix is invertible.
 
+\mnote{.3}{As odd as it may sound, \textit{knowing} a matrix is invertible is useful; actually computing the inverse isn't. This is discussed at the end of the next section.}
 
 %\clearpage
 

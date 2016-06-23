@@ -142,7 +142,9 @@ Another interesting thing that came from our previous example is that
 \]
 It seems like this should be a special matrix; after all, every entry is 0 and 0 is a special number. 
 
-In fact, this is a special matrix. We define \tto, which we read as ``the zero matrix,'' to be the matrix of all zeros.\footnote{We use the bold face to distinguish the zero matrix, \tto, from the number zero, 0. } We should be careful; this previous ``definition'' is a bit ambiguous, for we have not stated what size the zero matrix should be. Is $\bmx{cc}0&0\\0&0\\ \emx$ the zero matrix? How about $\bmx{cc} 0&0\emx$?
+In fact, this is a special matrix. We define \tto, which we read as ``the zero matrix,'' to be the matrix of all zeros. We should be careful; this previous ``definition'' is a bit ambiguous, for we have not stated what size the zero matrix should be. Is $\bmx{cc}0&0\\0&0\\ \emx$ the zero matrix? How about $\bmx{cc} 0&0\emx$?
+
+\mnote{.6}{We use the bold face to distinguish the zero matrix, \tto, from the number zero, 0. }
 
 Let's not get bogged down in semantics. If we ever see \tto\ in an expression, we will usually know right away what size \tto\ should be; it will be the size that allows the expression to make sense. If \tta\ is a $3\times 5$ matrix, and we write $\tta + \tto$, we'll simply assume that \tto\ is also a $3\times 5$ matrix. If we are ever in doubt, we can add a subscript; for instance, $\tto_{2\times 7}$ is the $2\times7$ matrix of all zeros.
 
@@ -181,9 +183,10 @@ Be sure that this last property makes sense; it says that if we multiply any mat
 
 We began this section with the concept of matrix equality. Let's put our matrix addition properties to use and solve a matrix equation.\\
 
-\medskip
+\pagebreak
 
-\example{ex_equal}{Solving a matrix equation}{Let 
+\example{ex_equal}{Solving a matrix equation}{
+Let 
 \[
 \tta = \bmx{cc} 2&-1\\3&6\emx.
 \]
@@ -203,7 +206,8 @@ Now divide both sides by 3 to get
 Now we just need to compute $-2\tta$; we find that 
 \[
 \ttx = \bmx{cc} -4&2\\ -6&-12\emx.
-\] \ }
+\]
+}
 
 \medskip
 

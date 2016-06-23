@@ -203,8 +203,12 @@ Another important concept in Geometry is the notion of length.  If we are going 
 
 With a little more imagination, we can envision a right triangle whose hypotenuse has length $d$ as drawn above on the right.  From the latter figure, we see that the lengths of the legs of the triangle are $\left|x_{\mbox{\tiny$1$}} - x_{\mbox{\tiny$0$}}\right|$ and $\left|y_{\mbox{\tiny$1$}} - y_{\mbox{\tiny$0$}}\right|$ so the \href{http://en.wikipedia.org/wiki/Pythagorean_Theorem}{\underline{Pythagorean Theorem}} gives us
  
- \[ \left|x_{\mbox{\tiny$1$}} - x_{\mbox{\tiny$0$}}\right|^2 + \left|y_{\mbox{\tiny$1$}} - y_{\mbox{\tiny$0$}}\right|^2 = d^2\]
- \[ \left(x_{\mbox{\tiny$1$}} - x_{\mbox{\tiny$0$}}\right)^2 + \left(y_{\mbox{\tiny$1$}} - y_{\mbox{\tiny$0$}}\right)^2 = d^2\]
+ \[ 
+ \left|x_{\mbox{\tiny$1$}} - x_{\mbox{\tiny$0$}}\right|^2 + \left|y_{\mbox{\tiny$1$}} - y_{\mbox{\tiny$0$}}\right|^2 = d^2
+ \]
+ \[ 
+ \left(x_{\mbox{\tiny$1$}} - x_{\mbox{\tiny$0$}}\right)^2 + \left(y_{\mbox{\tiny$1$}} - y_{\mbox{\tiny$0$}}\right)^2 = d^2
+ \]
  
 (Do you remember why we can replace the absolute value notation with parentheses?)  By extracting the square root of both sides of the second equation and using the fact that distance is never negative, we get
  
@@ -299,14 +303,11 @@ If we let $d$ denote the distance between $P$ and $Q$, we leave it as Exercise \
 Find the midpoint of the line segment connecting $P(-2,3)$ and  $Q(1,-3)$.  
 }
 {
-\setlength{\extrarowheight}{10pt}
-
-\[ \begin{array}{rcl}
- M & = & \left( \dfrac{x_{\mbox{\tiny$0$}}+x_{\mbox{\tiny$1$}}}{2},  \dfrac{y_{\mbox{\tiny$0$}}+y_{\mbox{\tiny$1$}}}{2} \right) \\
-   & = & \left( \dfrac{(-2)+1}{2},  \dfrac{3+(-3)}{2} \right)  = \left(- \dfrac{1}{2}, \dfrac{0}{2} \right) \\
-   & = & \left(- \dfrac{1}{2}, 0 \right) 
-   \end{array} \]
-   
+\begin{align*}
+ M & = \left( \dfrac{x_{\mbox{\tiny$0$}}+x_{\mbox{\tiny$1$}}}{2},  \dfrac{y_{\mbox{\tiny$0$}}+y_{\mbox{\tiny$1$}}}{2} \right) \\
+   & =  \left( \dfrac{(-2)+1}{2},  \dfrac{3+(-3)}{2} \right)  = \left(- \dfrac{1}{2}, \dfrac{0}{2} \right) \\
+   & =  \left(- \dfrac{1}{2}, 0 \right) 
+\end{align*}
 The midpoint is  $\left(- \frac{1}{2}, 0 \right)$.}
 
 \medskip
@@ -315,7 +316,7 @@ The midpoint is  $\left(- \frac{1}{2}, 0 \right)$.}
 
 \label{inversemidpoint}
 
-We close with a more abstract application of the Midpoint Formula.  We will revisit the following example in Exercise \ref{inversemidpointex2} in Section \ref{LinearFunctions}.  
+We close with a more abstract application of the Midpoint Formula.  
 
 \medskip
 
@@ -328,14 +329,14 @@ To prove the claim, we use Equation \ref{midpointformula} to find the midpoint
 
 %\setlength{\extrarowheight}{10pt}
 
-\[ \begin{array}{rcl}
-
- M & = & \left( \dfrac{a+b}{2},  \dfrac{b+a}{2} \right) \\
-   & = & \left( \dfrac{a+b}{2},  \dfrac{a+b}{2} \right)  \\ \end{array} \]
+\begin{align*}
+ M & =  \left( \dfrac{a+b}{2},  \dfrac{b+a}{2} \right) \\
+   & =  \left( \dfrac{a+b}{2},  \dfrac{a+b}{2} \right)
+\end{align*}
 
 Since the $x$ and $y$ coordinates of this point are the same, we find that the midpoint lies on the line $y=x$, as required. 
 }
 
 %\setlength{\extrarowheight}{2pt}
 %\closegraphsfile
-\printexercises{exercises_pre/01_01_exercises}
+\printexercises{exercises/00_03_exercises}

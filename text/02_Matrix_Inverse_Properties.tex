@@ -178,7 +178,7 @@ In examining the expression $(\tta\ttb)\ttc$, we see that we want \ttb\ to someh
 \[
 \tta\ttb\ttai\ttbi \overset{\text{?}}{=} \tti,
 \]
-but algebraically speaking, it is hard to cancel out these terms.\footnote{Recall that matrix multiplication is not commutative.}
+but algebraically speaking, it is hard to cancel out these terms.(Recall that matrix multiplication is not commutative: $\tta\ttb\neq \ttb\tta$ in general.)
 		However, switching the order of \ttai\ and \ttbi\ gives us some hope. Is $(\tta\ttb)^{-1} = \ttbi\ttai$? Let's see.
 		
 \begin{align*}
@@ -219,7 +219,9 @@ However, we saw that in our example, the matrix $(\tta+\ttb)$ isn't even inverti
 
 Let's summarize the results of this example. If \tta\ and \ttb\ are both invertible matrices, then so is their product, \tta\ttb. We demonstrated this with our example, and there is more to be said. Let's suppose that \tta\ and \ttb\ are $n\times n$ matrices, but we don't yet know if they are invertible. If \tta\ttb\ is invertible, then each of \tta\ and \ttb\ are; if \tta\ttb\ is not invertible, then \tta\ or \ttb\ is also not invertible.
 
-In short, invertibility ``works well'' with matrix multiplication. However, we saw that it doesn't work well with matrix addition. Knowing that \tta\ and \ttb\ are invertible does not help us find the inverse of $(\tta+\ttb)$; in fact, the latter matrix may not even be invertible.\footnote{The fact that invertibility works well with matrix multiplication should not come as a surprise. After all, saying that \tta\ is invertible makes a statement about the mulitiplicative properties of \tta. It says that I can multiply \tta\ with a special matrix to get \tti. Invertibility, in and of itself, says nothing about matrix addition, therefore we should not be too surprised that it doesn't work well with it.}
+In short, invertibility ``works well'' with matrix multiplication. However, we saw that it doesn't work well with matrix addition. Knowing that \tta\ and \ttb\ are invertible does not help us find the inverse of $(\tta+\ttb)$; in fact, the latter matrix may not even be invertible.
+
+\mnote{.5}{The fact that invertibility works well with matrix multiplication should not come as a surprise. After all, saying that \tta\ is invertible makes a statement about the mulitiplicative properties of \tta. It says that I can multiply \tta\ with a special matrix to get \tti. Invertibility, in and of itself, says nothing about matrix addition, therefore we should not be too surprised that it doesn't work well with it.}
 
 Let's do one more example, then we'll summarize the results of this section in a theorem.\\
 
@@ -239,7 +241,9 @@ Therefore
 
 \medskip
 
-The matrix \tta\ in the previous example is a \textit{diagonal} matrix: the only nonzero entries of \tta\ lie on the \textit{diagonal}.\footnote{We still haven't formally defined \textit{diagonal}, but the definition is rather visual so we risk it. \index{diagonal} See Definition \ref{def:diagonal} on page \pageref{def:diagonal} for more details.}  The relationship between \tta\ and \ttai\ in the above example seems pretty strong, and it holds true in general. We'll state this and summarize the results of this section with the following theorem.
+The matrix \tta\ in the previous example is a \textit{diagonal} matrix: the only nonzero entries of \tta\ lie on the \textit{diagonal}.  The relationship between \tta\ and \ttai\ in the above example seems pretty strong, and it holds true in general. We'll state this and summarize the results of this section with the following theorem.
+
+\mnote{.5}{We still haven't formally defined \textit{diagonal}, but the definition is rather visual so we risk it. \index{diagonal} See Definition \ref{def:diagonal} on page \pageref{def:diagonal} for more details.}
 
 \smallskip
 
@@ -261,13 +265,15 @@ Furthermore,
 
 \smallskip
 
-We end this section with a comment about solving systems of equations ``in real life.''\footnote{Yes, real people do solve linear equations in real life. Not just mathematicians, but economists, engineers, and scientists of all flavours regularly need to solve linear equations, and the matrices they use are often \textit{huge.}
+We end this section with a comment about solving systems of equations ``in real life.'' Solving a system \ttaxb\ by computing \ttai\vb\ seems pretty slick, so it would make sense that this is the way it is normally done. However, in practice, this is rarely done. There are two main reasons why this is the case.
 
-Most people see matrices at work without thinking about it. Digital pictures are simply ``rectangular arrays'' of numbers representing colors -- they are matrices of colors. Many of the standard image processing operations involve matrix operations. The author's wife has a ``7 megapixel'' camera which creates pictures that are $3072\times 2304$ in size, giving over 7 million pixels, and that isn't even considered a ``large'' picture these days.} Solving a system \ttaxb\ by computing \ttai\vb\ seems pretty slick, so it would make sense that this is the way it is normally done. However, in practice, this is rarely done. There are two main reasons why this is the case.
+\mnote{.5}{Yes, real people do solve linear equations in real life. Not just mathematicians, but economists, engineers, and scientists of all flavours regularly need to solve linear equations, and the matrices they use are often \textit{huge.}
+
+Most people see matrices at work without thinking about it. Digital pictures are simply ``rectangular arrays'' of numbers representing colours -- they are matrices of colours. Many of the standard image processing operations involve matrix operations. The author's wife has a ``7 megapixel'' camera which creates pictures that are $3072\times 2304$ in size, giving over 7 million pixels, and that isn't even considered a ``large'' picture these days.}
 
 First, computing \ttai\ and \ttai\vb\ is ``expensive'' in the sense that it takes up a lot of computing time. Certainly, our calculators have no trouble dealing with the $3 \times 3$ cases we often consider in this textbook, but in real life the matrices being considered are very large (as in, hundreds of thousand rows and columns). Computing \ttai\ alone is rather impractical, and we waste a lot of time if we come to find out that \ttai\ does not exist. Even if we already know what \ttai\ is, computing $\ttai\vb$ is computationally expensive -- Gaussian elimination is faster.
 
-Secondly, computing \ttai\ using the method we've described often gives rise to numerical roundoff errors. Even though computers often do computations with an accuracy to more than 8 decimal places, after thousands of computations, roundoffs can cause big errors. (A ``small'' $1,000 \times 1,000$ matrix has $1,000,000$ entries! That's a lot of places to have roundoff errors accumulate!) It is not unheard of to have a computer compute \ttai\ for a large matrix, and then immediately have it compute \tta\ttai\ and \textit{not} get the identity matrix.\footnote{The result is usually very close, with the numbers on the diagonal close to 1 and the other entries near 0. But it isn't exactly the identity matrix.}
+Secondly, computing \ttai\ using the method we've described often gives rise to numerical roundoff errors. Even though computers often do computations with an accuracy to more than 8 decimal places, after thousands of computations, rounding off can cause big errors. (A ``small'' $1,000 \times 1,000$ matrix has $1,000,000$ entries! That's a lot of places to have roundoff errors accumulate!) It is not unheard of to have a computer compute \ttai\ for a large matrix, and then immediately have it compute \tta\ttai\ and \textit{not} get the identity matrix. (The result is usually very close, with the numbers on the diagonal close to 1 and the other entries near 0. But it isn't exactly the identity matrix.)
 
 Therefore, in real life, solutions to \ttaxb\ are usually found using the methods we learned in Section \ref{sec:vector_solutions}. It turns out that even with all of our advances in mathematics, it is hard to beat the basic method that Gauss introduced a long time ago.
 

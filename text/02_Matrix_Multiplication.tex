@@ -22,7 +22,7 @@ You are likely to have guessed
 \[
 \bmx{cc} 1&-2\\6&8\emx
 \]
-but this is, in fact, \textit{not} right.\footnote{I guess you \textit{could} define multiplication this way. If you'd prefer this type of multiplication, write your own book.} The actual answer is  
+but this is, in fact, \textit{not} right. (I guess you \textit{could} define multiplication this way. If you'd prefer this type of multiplication, you'll have to write your own book.) The actual answer is  
 \[
 \bmx{cc}5&3\\11&5\emx.
 \]
@@ -48,7 +48,9 @@ A $1\times n$ matrix is called a \textit{row vector}.}
 
 \smallskip
 
-While it isn't obvious right now, column vectors are going to become far more useful to us than row vectors. Therefore, we often omit the word ``column'' when referring to column vectors, and we just call them ``vectors.''\footnote{In this text, row vectors are only used in this section when we discuss matrix multiplication, whereas we'll make extensive use of column vectors. Other texts make great use of row vectors, but little use of column vectors. It is a matter of preference and tradition: ``most'' texts use column vectors more.} 
+While it isn't obvious right now, column vectors are going to become far more useful to us than row vectors. Therefore, we often omit the word ``column'' when referring to column vectors, and we just call them ``vectors.''
+
+\mnote{.5}{In this text, row vectors are only used in this section when we discuss matrix multiplication, whereas we'll make extensive use of column vectors. Other texts make great use of row vectors, but little use of column vectors. It is a matter of preference and tradition: ``most'' texts use column vectors more. In some more advanced textbooks, row vectors are considered to be ``dual'' to column vectors. Abstractly, a \textit{dual vector} is an object that eats a vector and spits out a number. Here, we see that the way a row vector eats a column vector and produces a number is via multiplication.} 
 
 We have been using upper case letters to denote matrices; we use lower case letters with an arrow overtop to denote row and column vectors. An example of a row vector is 
 \[
@@ -156,7 +158,7 @@ So now we know that
 \[
 \tta\ttb = \bmx{ccc}5 & m_{12} & m_{13}\\m_{21} & m_{22} & m_{23}\emx.
 \]
-
+\drawexampleline
 Finishing out the first row, we have 
 \[
 m_{12} = \bmx{cc}1&2\emx\bmx{c}-1\\2\emx = 1(-1)+2(2) = 3
@@ -263,7 +265,7 @@ After performing all 9 multiplications, we find
 
 In this last example, we saw a ``nonstandard'' multiplication (at least, it felt nonstandard). Studying the entries of this matrix, it seems that there are several different patterns that can be seen amongst the entries. (Remember that mathematicians like to look for patterns. Also remember that we often guess wrong at first; don't be scared and try to identify some patterns.)\\
 
-In Section \ref{sec:matrix_arithmetic_1}, we identified the zero matrix \tto\ that had a nice property in relation to matrix addition (i.e., $\tta+\tto = \tta$ for any matrix \tta). In the following example we'll identify a matrix that works well with multiplication as well as some multiplicative properties. For instance, we've learned how $1\cdot\tta = \tta$; is there a \textit{matrix} that acts like the number 1? That is, can we find a matrix $\ttx$ where $\ttx\cdot\tta=\tta$?\footnote{We made a guess in Section \ref{sec:matrix_arithmetic_1} that maybe a matrix of all 1s would work.}
+In Section \ref{sec:matrix_arithmetic_1}, we identified the zero matrix \tto\ that had a nice property in relation to matrix addition (i.e., $\tta+\tto = \tta$ for any matrix \tta). In the following example we'll identify a matrix that works well with multiplication as well as some multiplicative properties. For instance, we've learned how $1\cdot\tta = \tta$; is there a \textit{matrix} that acts like the number 1? That is, can we find a matrix $\ttx$ where $\ttx\cdot\tta=\tta$? (We made a guess in Section \ref{sec:matrix_arithmetic_1} that maybe a matrix of all 1s would work, but you can probably already see that this guess is doomed to failure.)
 
 \medskip
 
@@ -315,6 +317,8 @@ Find the following products.
 
 \item		$\tti\tta = \eyethree\bmx{ccc}1&2&3\\2&-7&5\\-2&-8&3\emx = \bmx{ccc}1&2&3\\2&-7&5\\-2&-8&3\emx$
 
+\drawexampleline
+
 \item		We haven't formally defined what $\tti^2$ means, but we could probably make the reasonable guess that $\tti^2=\tti\cdot\tti $. Thus 
 \[
 \tti^2 = \eyethree\eyethree = \eyethree
@@ -324,7 +328,7 @@ Find the following products.
 
 \item		$\ttb^2 = \ttb\ttb = \bmx{ccc}1&1&1\\1&1&1\\1&1&1\emx\bmx{ccc}1&1&1\\1&1&1\\1&1&1\emx=\bmx{ccc}3&3&3\\3&3&3\\3&3&3\emx$
 \end{enumerate}
-\vskip -\topsep \vskip -\baselineskip} 
+\ } 
 
 \medskip
 
@@ -393,10 +397,14 @@ Find the following:
 
 \medskip
 
-In looking at our example, we should notice two things. First, it looks like the ``distributive property'' holds; that is, $\tta(\ttb+\ttc) = \tta\ttb + \tta\ttc$. This is nice as many algebraic techniques we have learned about in the past (when doing ``ordinary algebra'') will still work. Secondly, it looks like the ``associative property'' holds; that is, $\tta(\ttb\ttc) = (\tta\ttb)\ttc$. This is nice, for it tells us that when we are multiplying several matrices together, we don't have to be particularly careful in what order we multiply certain pairs of matrices together.\footnote{Be careful: in computing $\tta\ttb\ttc$ together, we can first multiply $\tta\ttb$ or $\ttb\ttc$, but we cannot change the \textit{order} in which these matrices appear. We cannot multiply $\ttb\tta$ or $\tta\ttc$, for instance.}							
+In looking at our example, we should notice two things. First, it looks like the ``distributive property'' holds; that is, $\tta(\ttb+\ttc) = \tta\ttb + \tta\ttc$. This is nice as many algebraic techniques we have learned about in the past (when doing ``ordinary algebra'') will still work. Secondly, it looks like the ``associative property'' holds; that is, $\tta(\ttb\ttc) = (\tta\ttb)\ttc$. This is nice, for it tells us that when we are multiplying several matrices together, we don't have to be particularly careful in what order we multiply certain pairs of matrices together.
+
+\mnote{.5}{Be careful: in computing $\tta\ttb\ttc$ together, we can first multiply $\tta\ttb$ or $\ttb\ttc$, but we cannot change the \textit{order} in which these matrices appear. We cannot multiply $\ttb\tta$ or $\tta\ttc$, for instance.}							
 
 
-In leading to an important theorem, let's define a matrix we saw in an earlier example.\footnote{The following definition uses a term we won't define until Definition \ref{def:diagonal} on page \pageref{def:diagonal}: \textit{diagonal}. In short, a ``diagonal matrix'' is one in which the only nonzero entries are the ``diagonal entries.'' The examples given here and in the exercises should suffice until we meet the full definition later.}
+In leading to an important theorem, let's define a matrix we saw in an earlier example.
+
+\mnote{.3}{Definition \ref{def:identity} uses a term we won't define until Definition \ref{def:diagonal} on page \pageref{def:diagonal}: \textit{diagonal}. In short, a ``diagonal matrix'' is one in which the only nonzero entries are the ``diagonal entries.'' The examples given here and in the exercises should suffice until we meet the full definition later.}
 
 \smallskip
 

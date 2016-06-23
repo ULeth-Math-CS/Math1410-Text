@@ -104,11 +104,8 @@ Suppose $a$ and $b$ are real numbers.
 }
 
 \mnote{.8}{
-The Zero Product Property drives most of the equation solving algorithms in Algebra because it allows us to take complicated equations and reduce them to simpler ones.  For example, you may recall that one way to solve  $x^2+x-6=0$ is by factoring the left hand side of this equation to get  $(x-2)(x+3) = 0$.  From here, we apply the Zero Product Property and set each factor equal to zero.  This yields  $x-2=0$ or $x+3=0$ so $x=2$ or $x=-3$.  This application to solving equations leads, in turn,  to some deep and profound structure theorems in Chapter \ref{Polynomials}. 
+The Zero Product Property drives most of the equation solving algorithms in Algebra because it allows us to take complicated equations and reduce them to simpler ones.  For example, you may recall that one way to solve  $x^2+x-6=0$ is by factoring the left hand side of this equation to get  $(x-2)(x+3) = 0$.  From here, we apply the Zero Product Property and set each factor equal to zero.  This yields  $x-2=0$ or $x+3=0$ so $x=2$ or $x=-3$.  This type of calculation is key to finding the eigenvalues of a matrix, as we'll see in Section \ref{sec:eigen}.
 }
-
-\mnote{.65}{The expression $\frac{0}{0}$ is technically an `indeterminate form' as opposed to being strictly `undefined' meaning that with Calculus we can make some sense of it in certain situations.  We'll talk more about this in Chapter \ref{Rationals}.}
-
 
 
 \medskip
@@ -485,10 +482,10 @@ The reasons for the added stipulations for even-indexed roots in Definition \ref
 
 \smallskip
 
-Dealing with odd powers is much easier. For example, $x^3 = -8$ has one and only one real solution, namely $x = -2$, which means not only does $\sqrt[3]{-8}$ exist, there is only one choice, namely $\sqrt[3]{-8} = -2$. Of course, when it comes to solving $x^{5213} = -117$, it's not so clear that there is one and only one real solution, let alone that the solution is $\sqrt[5213]{-117}$. Such pills are easier to swallow once we've thought a bit about such equations graphically, (see Chapter \ref{Polynomials}) and ultimately, these things come from the completeness property of the real numbers mentioned earlier.  
+Dealing with odd powers is much easier. For example, $x^3 = -8$ has one and only one real solution, namely $x = -2$, which means not only does $\sqrt[3]{-8}$ exist, there is only one choice, namely $\sqrt[3]{-8} = -2$. Of course, when it comes to solving $x^{5213} = -117$, it's not so clear that there is one and only one real solution, let alone that the solution is $\sqrt[5213]{-117}$. 
 
 \mnote{.7}{
-It's important that you understand the difference between the statements $y=\sqrt{x}$ and $y^2=x$. As we'll discuss in Chapter \ref{RelationsandFunctions}, the equation $y=\sqrt{x}$ defines $y$ as a \textbf{function} of $x$, which means that for each value of $x\geq 0$ there is \text{only one} value of $y$ such that $y=\sqrt{x}$. For example, $y=\sqrt{4}$ is equivalent to $y=2$. On the other hand, there are \textbf{two} solutions to $y^2=x$; namely, $y=\sqrt{x}$ and $y=-\sqrt{x}$. For example, the equation $y^2=4$ is equivalent to the two equations $y=2$ and $y=-2$ (or, more concisely, $y=\pm 2$). Since these two equations are closely related, it's easy to mix them up. The main thing to remember is that $\sqrt{x}$ always denotes the {\em positive} square root of $x$.
+It's important that you understand the difference between the statements $y=\sqrt{x}$ and $y^2=x$. The equation $y=\sqrt{x}$ defines $y$ as a \textbf{function} of $x$, which means that for each value of $x\geq 0$ there is \text{only one} value of $y$ such that $y=\sqrt{x}$. For example, $y=\sqrt{4}$ is equivalent to $y=2$. On the other hand, there are \textbf{two} solutions to $y^2=x$; namely, $y=\sqrt{x}$ and $y=-\sqrt{x}$. For example, the equation $y^2=4$ is equivalent to the two equations $y=2$ and $y=-2$ (or, more concisely, $y=\pm 2$). Since these two equations are closely related, it's easy to mix them up. The main thing to remember is that $\sqrt{x}$ always denotes the {\em positive} square root of $x$.
 }
 
 \smallskip
@@ -514,8 +511,6 @@ Let $a$ and $b$ be real numbers and let $m$ and $n$ be natural numbers.  If $\sq
 \medskip
 
 The proof of Theorem \ref{radicalprops} is based on the definition of the principal $n^{\textbf{th}}$ root and the Properties of Exponents.  To establish the product rule, consider the following.  If $n$ is odd, then by definition $\sqrt[n]{ab}$ is the \underline{unique} real number such that $(\sqrt[n]{ab})^{n} = ab$.  Given that $( \sqrt[n]{a} \, \sqrt[n]{b})^n = (\sqrt[n]{a})^n (\sqrt[n]{b})^n = ab$ as well, it must be the case that $\sqrt[n]{ab} = \sqrt[n]{a} \, \sqrt[n]{b}$. If $n$ is even, then $\sqrt[n]{ab}$ is the unique non-negative real number such that $(\sqrt[n]{ab})^{n} = ab$.  Note that since $n$ is even, $\sqrt[n]{a}$ and $\sqrt[n]{b}$ are also non-negative thus $\sqrt[n]{a}\sqrt[n]{b} \geq 0$ as well.  Proceeding as above, we find that $\sqrt[n]{ab} = \sqrt[n]{a} \, \sqrt[n]{b}$.  The quotient rule is proved similarly and is left as an exercise.  The power rule results from repeated application of the product rule, so long as $\sqrt[n]{a}$ is a real number to start with. We leave that as an exercise as well.
-
-\mnote{.3}{Things get more complicated once complex numbers are involved. Fortunately (disappointingly?), that's not a can of worms we'll be opening in this course.} 
 
 \smallskip
 
@@ -627,4 +622,4 @@ At this point, we could start looking for common denominators but it turns out t
 \end{enumerate}
 }
 
-\printexercises{exercises_pre/00_02_exercises}
+\printexercises{exercises/00_02_exercises}

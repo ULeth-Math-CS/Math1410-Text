@@ -16,29 +16,57 @@ We start with a simple example.
 
 \medskip
 
-\example{ex_application_easy}{Counting marbles, again}{A jar contains 100 blue, green, red and yellow marbles. There are twice as many yellow marbles as blue; there are 10 more blue marbles than red; the sum of the red and yellow marbles is the same as the sum of the blue and green. How many marbles of each color are there?}
-{Let's call the number of blue balls $b$, and the number of the other balls $g$, $r$ and $y$, each representing the obvious. Since we know that we have 100 marbles, we have the equation $$b+g+r+y=100.$$ The next sentence in our problem statement allows us to create three more equations. 
+\example{ex_application_easy}{Counting marbles, again}{
+A jar contains 100 blue, green, red and yellow marbles. There are twice as many yellow marbles as blue; there are 10 more blue marbles than red; the sum of the red and yellow marbles is the same as the sum of the blue and green. How many marbles of each color are there?}
+{Let's call the number of blue balls $b$, and the number of the other balls $g$, $r$ and $y$, each representing the obvious. Since we know that we have 100 marbles, we have the equation 
+\[
+b+g+r+y=100.
+\]
+The next sentence in our problem statement allows us to create three more equations. 
 
-We are told that there are twice as many yellow marbles as blue. One of the following two equations is correct, based on this statement; which one is it? $$2y=b \quad\quad \text{or} \quad\quad2b=y$$
+We are told that there are twice as many yellow marbles as blue. One of the following two equations is correct, based on this statement; which one is it? 
+\[
+2y=b \quad\quad \text{or} \quad\quad2b=y
+\]
 
 %\drawexampleline{ex_application_easy}
 %\drawexampleline
 
 The first equation says that if we take the number of yellow marbles, then double it, we'll have the number of blue marbles. That is not what we were told. The second equation states that if we take the number of blue marbles, then double it, we'll have the number of yellow marbles. This \textit{is} what we were told.
 
-The next statement of ``there are 10 more blue marbles as red'' can be written as either $$b=r+10 \quad\quad \text{or} \quad\quad r=b+10.$$ Which is it?
+The next statement of ``there are 10 more blue marbles as red'' can be written as either 
+\[
+b=r+10 \quad\quad \text{or} \quad\quad r=b+10.
+\]
+Which is it?
 
 The first equation says that if we take the number of red marbles, then add 10, we'll have the number of blue marbles. This is what we were told. The next equation is wrong; it implies there are more red marbles than blue.
 
-The final statement tells us that the sum of the red and yellow marbles is the same as the sum of the blue and green marbles, giving us the equation $$r+y=b+g.$$
+The final statement tells us that the sum of the red and yellow marbles is the same as the sum of the blue and green marbles, giving us the equation 
+\[
+r+y=b+g.
+\]
 
-We have four equations; altogether, they are \begin{align*} b+g+r+y&= 100\\ 2b&=y\\ b&=r+10\\ r+y&=b+g.\\ \end{align*}
+We have four equations; altogether, they are 
+\begin{align*}
+  b+g+r+y &= 100\\
+  2b&=y\\
+  b&=r+10\\
+  r+y&=b+g. 
+\end{align*}
 
-We want to write these equations in a standard way, with all the unknowns on the left and the constants on the right. Let us also write them so that the variables appear in the same order in each equation (we'll use alphabetical order to make it simple). We now have \begin{align*} b+g+r+y&=100\\2b-y&=0\\b-r&=10\\-b-g+r+y&=0\\ \end{align*}
+We want to write these equations in a standard way, with all the unknowns on the left and the constants on the right. Let us also write them so that the variables appear in the same order in each equation (we'll use alphabetical order to make it simple). We now have \begin{align*}
+ b+g+r+y&=100\\
+ 2b-y&=0\\b-r&=10\\
+ -b-g+r+y&=0 
+\end{align*}
 
-To find the solution, let's form the appropriate augmented matrix and put it into \rref. We do so here, without showing the steps.$$\bmx{ccccc}1&1&1&1&100\\2&0&0&-1&0\\1&0&-1&0&10\\-1&-1&1&1&0\\ \emx \quad\quad \overrightarrow{\text{rref}} \quad\quad \bmx{ccccc} 1&0&0&0&20\\0&1&0&0&30\\0&0&1&0&10\\0&0&0&1&40\\ \emx$$
+To find the solution, let's form the appropriate augmented matrix and put it into \rref. We do so here, without showing the steps.
+\[
+\bmx{ccccc}1&1&1&1&100\\2&0&0&-1&0\\1&0&-1&0&10\\-1&-1&1&1&0\\ \emx \quad\quad \overrightarrow{\text{rref}} \quad\quad \bmx{ccccc} 1&0&0&0&20\\0&1&0&0&30\\0&0&1&0&10\\0&0&0&1&40\\ \emx
+\]
 
-We interpret from the \rref\ of the matrix that we have 20 blue, 30 green, 10 red and 40 yellow marbles. }
+We interpret from the \rref\ of the matrix that we have 20 blue, 30 green, 10 red and 40 yellow marbles.\ }
 
 \medskip
 
@@ -79,11 +107,32 @@ Having identified some steps, let us put them into practice with some examples.
 
 (It is tempting, perhaps, to name our variables for the number of prizes given away. However, when we think more about this, we realize that we already know this -- that information is given to us. Rather, we should name our variables for the things we don't know.)
 
-Having our unknowns identified and variables named, we now proceed to forming equations from the information given. Knowing that Prize A goes to guests in the first and second sections and that we'll need 105 of these prizes tells us $$x_1+x_2 = 105.$$ Proceeding in a similar fashion, we get two more equations, $$x_2+x_3 = 103\quad\text{ and }\quad x_1+x_3 = 88.$$ Thus our linear system is $$\begin{array}{rcl}x_1+x_2&=&105\\x_2+x_3&=&103\\x_1+x_3&=&88\\ \end{array}$$ and the corresponding augmented matrix is $$\bmx{cccc}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \emx.$$
+Having our unknowns identified and variables named, we now proceed to forming equations from the information given. Knowing that Prize A goes to guests in the first and second sections and that we'll need 105 of these prizes tells us 
+\[
+x_1+x_2 = 105.
+\]
+Proceeding in a similar fashion, we get two more equations, 
+\[
+x_2+x_3 = 103\quad\text{ and }\quad x_1+x_3 = 88.
+\]
+Thus our linear system is 
+\[
+\begin{array}{rcl}
+  x_1+x_2&=&105\\
+  x_2+x_3&=&103\\
+  x_1+x_3&=&88
+\end{array}
+\]
+and the corresponding augmented matrix is 
+\[
+\bmx{cccc}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \emx.
+\]
 
 To solve our system, let's put this matrix into \rref.
 
-$$\bmx{cccc}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \emx \quad \quad \overrightarrow{\text{rref}} \quad\quad \bmx{cccc}1&0&0&45\\0&1&0&60\\0&0&1&43\\ \emx$$
+\[
+\bmx{cccc}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \emx \quad \quad \overrightarrow{\text{rref}} \quad\quad \bmx{cccc}1&0&0&45\\0&1&0&60\\0&0&1&43\\ \emx
+\]
 
 We can now read off our solution. The first section has 45 seats, the second has 60 seats, and the third has 43 seats.}
 
@@ -119,9 +168,16 @@ When the boat returns going against the current, its overall speed is the rate o
 
 %\begin{align*} 0.5b + 0.5r &=2\\ 1b-0.5r&= 2\\ \end{align*}
 
-The corresponding augmented matrix is $$\bmx{ccc} 1 & 1 & 4\\ 2&-1&4\\ \emx.$$ Note that we decided to let the first column hold the coefficients of $b$.
+The corresponding augmented matrix is 
+\[
+\bmx{ccc} 1 & 1 & 4\\ 2&-1&4\\ \emx.
+\]
+Note that we decided to let the first column hold the coefficients of $b$.
 
-Putting this matrix in \rref\ gives us: $$\bmx{ccc} 1 & 1 & 4\\ 2&-1&4\\ \emx\quad\quad\overrightarrow{\text{rref}}\quad\quad\bmx{ccc}1&0&8/3\\0&1&4/3\\ \emx.$$
+Putting this matrix in \rref\ gives us: 
+\[
+\bmx{ccc} 1 & 1 & 4\\ 2&-1&4\\ \emx\quad\quad\overrightarrow{\text{rref}}\quad\quad\bmx{ccc}1&0&8/3\\0&1&4/3\\ \emx.
+\]
 
 We finish by interpreting this solution: the speed of the boat (going downstream) is 8/3 mph, or $2.\overline{6}$ mph, and the speed of the river is 4/3 mph, or $1.\overline{3}$ mph. All we really wanted to know was the speed of the river, at about 1.3 mph.}
 
@@ -131,13 +187,25 @@ We finish by interpreting this solution: the speed of the boat (going downstream
 \example{ex_polynomial_1}{Fitting a quadratic curve}{Find the equation of the quadratic function that goes through the points $(-1,6)$, $(1,2)$ and $(2,3)$.}
 {This may not seem like a ``linear'' problem since we are talking about a quadratic function, but closer examination will show that it really is.
 
-We normally write quadratic functions as $y=ax^2+bx+c$ where $a$, $b$ and $c$ are the coefficients; in this case, they are our unknowns. We have three points; consider the point $(-1,6)$. This tells us directly that if $x=-1$, then $y=6$. Therefore we know that $6=a(-1)^2+b(-1)+c$. Writing this in a more standard form, we have the linear equation $$a - b+c=6.$$
+We normally write quadratic functions as $y=ax^2+bx+c$ where $a$, $b$ and $c$ are the coefficients; in this case, they are our unknowns. We have three points; consider the point $(-1,6)$. This tells us directly that if $x=-1$, then $y=6$. Therefore we know that $6=a(-1)^2+b(-1)+c$. Writing this in a more standard form, we have the linear equation 
+\[
+a - b+c=6.
+\]
 
-The second point tells us that $a(1)^2+b(1)+c = 2$, which we can simplify as $a+b+c=2$, and the last point tells us $a(2)^2+b(2)+c = 3$, or $4a+2b+c=3$. Thus our linear system is $$\begin{array}{rcl} a-b+c&=&6\\ a+b+c&=&2\\ 4a+2b+c&=&3.\\ \end{array}$$ 
+The second point tells us that $a(1)^2+b(1)+c = 2$, which we can simplify as $a+b+c=2$, and the last point tells us $a(2)^2+b(2)+c = 3$, or $4a+2b+c=3$. Thus our linear system is 
+\[
+\begin{array}{rcl}
+ a-b+c&=&6\\ 
+ a+b+c&=&2\\ 
+ 4a+2b+c&=&3. 
+\end{array}
+\] 
 
 Again, to solve our system, we find the \rref\ of the corresponding augmented matrix. We don't show the steps here, just the final result.
 
-$$\bmx{cccc}1&-1&1&6\\1&1&1&2\\4&2&1&3\\ \emx \quad\quad \overrightarrow{\text{ rref }}\quad\quad \bmx{cccc}1&0&0&1\\0&1&0&-2\\0&0&1&3\\ \emx$$
+\[
+\bmx{cccc}1&-1&1&6\\1&1&1&2\\4&2&1&3\\ \emx \quad\quad \overrightarrow{\text{ rref }}\quad\quad \bmx{cccc}1&0&0&1\\0&1&0&-2\\0&0&1&3\\ \emx
+\]
 
 This tells us that $a=1$, $b=-2$ and $c=3$, giving us the quadratic function $y=x^2-2x+3$.}
 
@@ -157,12 +225,26 @@ Of course, we can do the same type of thing to find polynomials that go through 
 
 
 \example{ex_ex_un_application_1}{A money counting problem}{A woman has 32 \$1, \$5 and \$10 bills in her purse, giving her a total of \$100. How many bills of each denomination does she have?}
-{Let's name our unknowns $x$, $y$ and $z$ for our ones, fives and tens, respectively (it is tempting to call them $o$, $f$ and $t$, but $o$ looks too much like 0). We know that there are a total of 32 bills, so we have the equation $$x+y+z = 32.$$ We also know that we have \$100, so we have the equation $$x+5y+10z = 100.$$ We have three unknowns but only two equations, so we know that we cannot expect a unique solution. Let's try to solve this system anyway and see what we get.
+{Let's name our unknowns $x$, $y$ and $z$ for our ones, fives and tens, respectively (it is tempting to call them $o$, $f$ and $t$, but $o$ looks too much like 0). We know that there are a total of 32 bills, so we have the equation 
+\[
+x+y+z = 32.
+\]
+We also know that we have \$100, so we have the equation 
+\[
+x+5y+10z = 100.
+\]
+We have three unknowns but only two equations, so we know that we cannot expect a unique solution. Let's try to solve this system anyway and see what we get.
 
 Putting the system into a matrix and then finding the \rref, we have 
-$$\bmx{cccc}1&1&1&32\\ 1&5&10&100\\ \emx \qquad \overrightarrow{\text{rref}}\qquad \bmx{cccc}1&0&-\frac54&15\\0&1&\frac94&17\\ \emx.$$
+\[
+\bmx{cccc}1&1&1&32\\ 1&5&10&100\\ \emx \qquad \overrightarrow{\text{rref}}\qquad \bmx{cccc}1&0&-\frac54&15\\0&1&\frac94&17\\ \emx.
+\]
 
-Reading from our reduced matrix, we have the infinite solution set \begin{align*}x &=15+\frac54z\\ y&=17 - \frac94z\\ z & \text{ is free.}\end{align*}
+Reading from our reduced matrix, we have the infinite solution set \begin{align*}
+ x &=15+\frac54z\\ 
+ y&=17 - \frac94z\\ 
+ z & \text{ is free.}
+\end{align*}
 
 While we do have infinite solutions, most of these solutions really don't make sense in the context of this problem. (Setting $z = \frac12$ doesn't make sense, for having half a ten dollar bill doesn't give us \$5. Likewise, having $z = 8$ doesn't make sense, for then we'd have ``$-1$'' \$5 bills.) So we must make sure that our choice of $z$ doesn't give us fractions of bills or negative amounts of bills. 
 
@@ -175,14 +257,34 @@ So it seems that we have two answers; one with $z=0$ and one with $z=4$. Of cour
 \example{ex_football}{Recreating a football score}{In a football game, teams can score points through touchdowns worth 6 points, extra points (that follow touchdowns) worth 1 point, two point conversions (that also follow touchdowns) worth 2 points and field goals, worth 3 points. You are told that in a football game, the two competing teams scored on 7 occasions, giving a total score of 24 points. Each touchdown was followed by either a successful extra point or two point conversion. In what ways were these points scored?}
 {The question asks how the points were scored; we can interpret this as asking how many touchdowns, extra points, two point conversions and field goals were scored. We'll need to assign variable names to our unknowns; let $t$ represent the number of \textbf{t}ouchdowns scored; let $x$ represent the number of e\textbf xtra points scored, let $w$ represent the number of t\textbf wo point conversions, and let $f$ represent the number of \textbf field goals scored.
 
-Now we address the issue of writing equations with these variables using the given information. Since we have a total of 7 scoring occasions, we know that $$t+x+w+f=7.$$ The total points scored is 24; considering the value of each type of scoring opportunity, we can write the equation $$6t+x+2w+3f = 24.$$ Finally, we know that each touchdown was followed by a successful extra point or two point conversion. This is subtle, but it tells us that the number of touchdowns is equal to the sum of extra points and two point conversions. In other words, $$t = x+w.$$
+Now we address the issue of writing equations with these variables using the given information. Since we have a total of 7 scoring occasions, we know that 
+\[
+t+x+w+f=7.
+\]
+The total points scored is 24; considering the value of each type of scoring opportunity, we can write the equation 
+\[
+6t+x+2w+3f = 24.
+\]
+Finally, we know that each touchdown was followed by a successful extra point or two point conversion. This is subtle, but it tells us that the number of touchdowns is equal to the sum of extra points and two point conversions. In other words, 
+\[
+t = x+w.
+\]
 
 %\drawexampleline{ex_football}
 %\drawexampleline
 
-To solve our problem, we put these equations into a matrix and put the matrix into \rref. Doing so, we find $$\bmx{ccccc}1&1&1&1&7\\ 6&1&2&3&24\\1&-1&-1&0&0\\ \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccccc} 1&0&0&0.5&3.5\\0&1&0&1&4\\ 0&0&1&-0.5&-0.5\\ \emx.$$
+To solve our problem, we put these equations into a matrix and put the matrix into \rref. Doing so, we find 
+\[
+\bmx{ccccc}1&1&1&1&7\\ 6&1&2&3&24\\1&-1&-1&0&0\\ \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccccc} 1&0&0&0.5&3.5\\0&1&0&1&4\\ 0&0&1&-0.5&-0.5\\ \emx.
+\]
 
-Therefore, we know that \begin{align*} t &=3.5-0.5f\\ x&=4-f\\ w&=-0.5+0.5f. \\ \end{align*} We recognize that this means there are ``infinite solutions,'' but of course most of these will not make sense in the context of a real football game. We must apply some logic to make sense of the situation.
+Therefore, we know that 
+\begin{align*}
+ t &=3.5-0.5f\\ 
+ x&=4-f\\ 
+ w&=-0.5+0.5f. 
+\end{align*} 
+We recognize that this means there are ``infinite solutions,'' but of course most of these will not make sense in the context of a real football game. We must apply some logic to make sense of the situation.
 
 Progressing in no particular order, consider the second equation, $x = 4-f$. In order for us to have a positive number of extra points, we must have $f\leq 4$. (And of course, we need $f\geq 0$, too.) Therefore, right away we know we have a total of only 5 possibilities, where $f = 0$, $1$, $2$, $3$ or $4$.
 

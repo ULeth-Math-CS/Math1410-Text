@@ -53,7 +53,9 @@ Our work from the previous section allows us to find the matrix quickly. By look
 
 What did we do wrong? We will answer this question, but first we need to develop a few thoughts and vocabulary terms. 
 
-We've been using the term ``transformation'' to describe how we've changed vectors. In fact, ``transformation'' is synonymous to ``function.'' We are used to functions like $f(x) = x^2$, where the input is a number and the output is another number. In the previous section, we learned about transformations (functions) where the input was a vector and the output was another vector. If \tta\ is a ``transformation matrix,'' then we could create a function of the form $T(\vx) = \tta\vx$. That is, a vector \vx\ is the input, and the output is \vx\ multiplied by \tta.\footnote{We used $T$ instead of $f$ to define this function to help differentiate it from ``regular'' functions. ``Normally'' functions are defined using lower case letters when the input is a number; when the input is a vector, we use upper case letters.} 
+We've been using the term ``transformation'' to describe how we've changed vectors. In fact, ``transformation'' is synonymous to ``function.'' We are used to functions like $f(x) = x^2$, where the input is a number and the output is another number. In the previous section, we learned about transformations (functions) where the input was a vector and the output was another vector. If \tta\ is a ``transformation matrix,'' then we could create a function of the form $T(\vx) = \tta\vx$. That is, a vector \vx\ is the input, and the output is \vx\ multiplied by \tta.
+
+\mnote{.5}{We used $T$ instead of $f$ to define the function $T(\vx)=\tta\vx$ to help differentiate it from ``regular'' functions. ``Normally'' functions are defined using lower case letters when the input is a number; when the input is a vector, we use upper case letters. (It also appears to be tradition to use the letter $T$ to describe linear transformations, and mathematicians are suckers for tradition.)} 
 
 When we defined $f(x) = x^2$ above, we let the reader assume that the input was indeed a number. If we wanted to be complete, we should have stated 
 \[
@@ -143,7 +145,9 @@ Now compute $T(\vx)$, $T(\vy)$, and $T(\vx+\vy)$:
 
 \medskip
 
-So we have an example of something that \textit{doesn't} work. Let's try an example where things \textit{do} work.\footnote{Recall a principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. However, doing so can be helpful in understanding the situation better.}
+So we have an example of something that \textit{doesn't} work. Let's try an example where things \textit{do} work.
+
+\mnote{.5}{It's important to remember the following principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. (An example is not a proof.) However, doing so can be helpful in understanding the situation better.}
 
 \medskip
 
@@ -202,13 +206,13 @@ Consider $T(\vx+\vy)$. By the definition of $T$, we have
 \[
 T(\vx+\vy) = \tta(\vx+\vy).
 \]
-By Theorem \ref{thm:matrix_multiplication}, part \ref{thm:mat_mult_dist} (on page \pageref{thm:matrix_multiplication}) we state that the Distributive Property holds for matrix multiplication.\footnote{Recall that a vector is just a special type of matrix, so this theorem applies to matrix--vector multiplication as well.} So $\tta(\vx+\vy) = \tta\vx + \tta\vy$. Recognize now that this last part is just $T(\vx) + T(\vy)$! We repeat the above steps, all together:
+By Theorem \ref{thm:matrix_multiplication}, part \ref{thm:mat_mult_dist} (on page \pageref{thm:matrix_multiplication}) we state that the Distributive Property holds for matrix multiplication. (Recall that a vector is just a special type of matrix, so this theorem applies to matrix--vector multiplication as well.) So $\tta(\vx+\vy) = \tta\vx + \tta\vy$. Recognize now that this last part is just $T(\vx) + T(\vy)$! We repeat the above steps, all together:
 \begin{align*}
 T(\vx+\vy)	&= \tta(\vx+\vy) & & \quad \textsf{\small (by the definition of $T$ in this example)}\\
 						&= \tta\vx + \tta\vy & & \quad \textsf{\small (by the Distributive Property)}\\
 						&= T(\vx) + T(\vy) & & \quad \textsf{\small (again, by the definition of $T$)}
 \end{align*}
-Therefore, no matter what \vx\ and \vy\ are chosen, $T(\vx+\vy) = T(\vx) + T(\vy)$. Thus the first part of the lineararity definition is satisfied.
+Therefore, no matter what \vx\ and \vy\ are chosen, $T(\vx+\vy) = T(\vx) + T(\vy)$. Thus the first part of the linearity definition is satisfied.
 
 The second part is satisfied in a similar fashion. Let $k$ be a scalar, and consider:
 \begin{align*}
@@ -240,8 +244,10 @@ First, consider how we proved the transformation in Example \ref{ex_lin_trans_2}
 The second part of the theorem says that \textit{all} linear transformations can be described using matrix multiplication. Given \textit{any} linear transformation, there is a matrix that completely defines that transformation. This important matrix gets its own name.
 
 \definition{def:standard_matrix}{Standard Matrix of a Linear Transformation}{\index{linear transformation!standard matrix of}
-Let $T:\rrr{n}{m}$ be a linear transformation. By Theorem \ref{thm:linear_matrix}, there is a matrix \tta\ such that $T(\vx) = \tta\vx$. This matrix \tta\ is called the \textit{standard matrix of the linear transformation $T$}, and is denoted $[\, T\, ]$.\footnote{The matrix--like brackets around $T$ suggest that the standard matrix \tta\ is a matrix ``with $T$ inside.''}
+Let $T:\rrr{n}{m}$ be a linear transformation. By Theorem \ref{thm:linear_matrix}, there is a matrix \tta\ such that $T(\vx) = \tta\vx$. This matrix \tta\ is called the \textit{standard matrix of the linear transformation $T$}, and is denoted $[\, T\, ]$. 
 }
+
+\mnote{.5}{The matrix--like brackets around $T$ are intended to suggest that the standard matrix \tta\ is a matrix ``with $T$ inside.''}
 
 \smallskip
 
@@ -249,7 +255,7 @@ While exploring all of the ramifications of Theorem \ref{thm:linear_matrix} is o
 
 We have already used the second part of this theorem in a small way. In the previous section we looked at transformations graphically and found the matrices that produced them. At the time, we didn't realize that these transformations were linear, but indeed they were.
 
-This brings us back to the motivating example with which we started this section. We tried to find the matrix that translated the unit square one unit to the right. Our attempt failed, and we have yet to determine why. Given our link between matrices and linear transformations, the answer is likely ``the translation transformation is not a linear transformation.'' While that is a true statement, it doesn't really explain things all that well. Is there some way we could have recognized that this transformation wasn't linear?\footnote{That is, apart from applying the definition directly?}
+This brings us back to the motivating example with which we started this section. We tried to find the matrix that translated the unit square one unit to the right. Our attempt failed, and we have yet to determine why. Given our link between matrices and linear transformations, the answer is likely ``the translation transformation is not a linear transformation.'' While that is a true statement, it doesn't really explain things all that well. Is there some way we could have recognized that this transformation wasn't linear? (That is, apart from applying the definition directly?)
 
 Yes, there is. Consider the second part of the linear transformation definition. It states that $T(k\vx) = kT(\vx)$ for all scalars $k$. If we let $k=0$, we have $T(0\vx) = 0\cdot T(\vx)$, or more simply, $T(\zero) = \zero$. That is, if $T$ is to be a linear transformation, it must send the zero vector  to the zero vector.
 
@@ -271,7 +277,7 @@ That is, the zero vector in \real{n}\ gets sent to the zero vector in \real{m}.}
 
 \smallskip
 
-The interested reader may wish to read the footnote below.\footnote{The idea that linear transformations ``send zero to zero'' has an interesting relation to terminology. The reader is likely familiar with functions like $f(x) = 2x+3$ and would likely refer to this as a ``linear function.'' However, $f(0) \neq 0$, so $f$ is \textit{not} ``linear'' by our new definition of linear. We erroneously call $f$ ``linear'' since its graph produces a line, though we should be careful to instead state that ``the graph of $f$ is a line.''}\\
+\mnote{.5}{The idea that linear transformations ``send zero to zero'' has an interesting relation to terminology. The reader is likely familiar with functions like $f(x) = 2x+3$ and would likely refer to this as a ``linear function.'' However, $f(0) \neq 0$, so $f$ is \textit{not} ``linear'' by our new definition of linear. We erroneously call $f$ ``linear'' since its graph produces a line, though we should be careful to instead state that ``the graph of $f$ is a line.''}
 
 \noindent \large \textsf{\textbf{ The Standard Matrix of a Linear Transformation}} \normalsize\\
 
@@ -279,7 +285,7 @@ It is often the case that while one can describe a linear transformation, one do
 
 \smallskip
 
-\definition{def:standard_unit}{Standard Unit Vectors}{\index{standard unit vector}
+\definition{def:standard_unit1}{Standard Unit Vectors}{\index{standard unit vector}
 In \real{n}, the \textit{standard unit vectors} \vei\ are the vectors with a $1$ in the $i^\text{th}$ entry and $0$s everywhere else.
 }
 
@@ -363,7 +369,7 @@ Now compute $T(\vx)$ by computing \TT\vx = \tta\vx.
 \[
 \tta\vx = \bmx{ccc} 1&1&0 \\ 3 & 0&-1\\ 0&2&5\\ 4&3&2\emx\bmx{c}1\\2\\3\emx = \bmx{c} 3\\0\\19\\16\emx.
 \]
-They match!\footnote{Of course they do. That was the whole point.} 
+They match! (Of course they do. That was the whole point.)
 }
 
 \medskip
@@ -467,7 +473,7 @@ Let's practice this concept further in an example.
 
 \medskip
 
-\example{ex_is_linear}{Using Key Idea \ref{idea:whenlinear} to identify linear transformations}{Using Key Idea \ref{idea:when_linear}, determine whether or not each of the following transformations is linear.\\
+\example{ex_is_linear}{Using Key Idea \ref{idea:when_linear} to identify linear transformations}{Using Key Idea \ref{idea:when_linear}, determine whether or not each of the following transformations is linear.\\
 
 $T_1\left(\bmx{c} x_1\\x_2\emx\right) = \bmx{c} x_1+1\\x_2\emx$ \hskip .5in
 $T_2\left(\bmx{c} x_1\\x_2\emx\right) = \bmx{c} x_1/x_2\\ \sqrt{x_2}\emx$
@@ -476,7 +482,7 @@ $T_3\left(\bmx{c} x_1\\x_2\emx\right) = \bmx{c} \sqrt{7}x_1-x_2\\ \pi x_2\emx$
 }
 {$T_1$ is \textit{not} linear! This may come as a surprise, but we are not allowed to add constants to the variables. By thinking about this, we can see that this transformation is trying to accomplish the translation that got us started in this section -- it adds 1 to all the $x$ values and leaves the $y$ values alone, shifting everything to the right one unit. However, this is not linear; again, notice how \zero\ does not get mapped to \zero.
 
-$T_2$ is also not linear. We cannot divide variables, nor can we put variabless inside the square root function (among other other things; again, see Section \ref{sec:intro}). This means that the baseball manager would not be able to use matrices to compute a batting average, which is (number of hits)/(number of at bats).
+$T_2$ is also not linear. We cannot divide variables, nor can we put variables inside the square root function (among other other things; again, see Section \ref{sec:intro}). This means that the baseball manager would not be able to use matrices to compute a batting average, which is (number of hits)/(number of at bats).
 
 $T_3$ is linear. Recall that $\sqrt{7}$ and $\pi$ are just numbers, just coefficients.
 }

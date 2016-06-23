@@ -14,11 +14,25 @@ So far, whenever we have solved a system of linear equations, we have always fou
 
 %So far, all of the examples of systems of linear equations that we have seen have had a solution; in fact, there has always been exactly one solution. We hinted at the end of the last section that this will not always be the case. In this section we explore the different possibilities and how we can recognize when they arise.
 
-We start with a very simple example. Consider the following linear system: $$x-y=0.$$ There are obviously infinite solutions to this system; as long as $x=y$, we have a solution. We can picture all of these solutions by thinking of the graph of the equation $y=x$ on the traditional $x,y$ coordinate plane.
+We start with a very simple example. Consider the following linear system: 
+\[
+x-y=0.
+\]
+There are obviously infinite solutions to this system; as long as $x=y$, we have a solution. We can picture all of these solutions by thinking of the graph of the equation $y=x$ on the traditional $x,y$ coordinate plane.
 
-Let's continue this visual aspect of considering solutions to linear systems. Consider the system \begin{align*} x+y&=2\\ x-y&=0. \end{align*} Each of these equations can be viewed as lines in the coordinate plane, and since their slopes are different, we know they will intersect somewhere (see Figure \ref{fig:visual_solution} (a)). In this example, they intersect at the point $(1,1)$ -- that is, when $x=1$ and $y=1$, both equations are satisfied and we have a solution to our linear system. Since this is the only place the two lines intersect, this is the only solution. 
+Let's continue this visual aspect of considering solutions to linear systems. Consider the system 
+\begin{align*}
+ x+y&=2\\ 
+ x-y&=0. 
+\end{align*} 
+Each of these equations can be viewed as lines in the coordinate plane, and since their slopes are different, we know they will intersect somewhere (see Figure \ref{fig:visual_solution} (a)). In this example, they intersect at the point $(1,1)$ -- that is, when $x=1$ and $y=1$, both equations are satisfied and we have a solution to our linear system. Since this is the only place the two lines intersect, this is the only solution. 
 
-Now consider the linear system \begin{align*} x+y&=1\\2x+2y&=2.\end{align*} It is clear that while we have two equations, they are essentially the same equation; the second is just a multiple of the first. Therefore, when we graph the two equations, we are graphing the same line twice (see Figure \ref{fig:visual_solution} (b); the thicker line is used to represent drawing the line twice). In this case, we have an infinite solution set, just as if we only had the one equation $x+y=1$. We often write the solution as $x=1-y$ to demonstrate that $y$ can be any real number, and $x$ is determined once we pick a value for $y$. 
+Now consider the linear system 
+\begin{align*}
+ x+y&=1\\
+ 2x+2y&=2.
+\end{align*}
+It is clear that while we have two equations, they are essentially the same equation; the second is just a multiple of the first. Therefore, when we graph the two equations, we are graphing the same line twice (see Figure \ref{fig:visual_solution} (b); the thicker line is used to represent drawing the line twice). In this case, we have an infinite solution set, just as if we only had the one equation $x+y=1$. We often write the solution as $x=1-y$ to demonstrate that $y$ can be any real number, and $x$ is determined once we pick a value for $y$. 
 
 %\begin{figure}\begin{center}\includegraphics[width=.25\linewidth]{MA_103_MetaPost_Figures/01_Existence_Intersect}$\quad$\includegraphics[width=.25\linewidth]{MA_103_MetaPost_Figures/01_Existence_Nonunique}$\quad$\includegraphics[width=.25\linewidth]{MA_103_MetaPost_Figures/01_Existence_Inconsistent}\caption{The three possibilities for two linear equations with two unknowns.} \label{fig:visual_solution}\end{center}\end{figure}
 
@@ -47,7 +61,12 @@ Now consider the linear system \begin{align*} x+y&=1\\2x+2y&=2.\end{align*} It i
 \end{center}
 \end{myfigure}
 
-Finally, consider the linear system \begin{align*} x+y&=1\\x+y&=2.\end{align*} We should immediately spot a problem with this system; if the sum of $x$ and $y$ is 1, how can it also be 2? There is no solution to such a problem; this linear system has no solution. We can visualize this situation in Figure \ref{fig:visual_solution} (c); the two lines are parallel and never intersect.
+Finally, consider the linear system 
+\begin{align*}
+ x+y&=1\\
+ x+y&=2.
+\end{align*}
+We should immediately spot a problem with this system; if the sum of $x$ and $y$ is 1, how can it also be 2? There is no solution to such a problem; this linear system has no solution. We can visualize this situation in Figure \ref{fig:visual_solution} (c); the two lines are parallel and never intersect.
 
 If we were to consider a linear system with three equations and two unknowns, we could visualize the solution by graphing the corresponding three lines. We can picture that perhaps all three lines would meet at one point, giving exactly 1 solution; perhaps all three equations describe the same line, giving an infinite number of solutions; perhaps we have different lines, but they do not all meet at the same point, giving no solution. We further visualize similar situations with, say, 20 equations with two variables.
 
@@ -88,13 +107,28 @@ Our first example explores officially a quick example used in the introduction o
 
 \medskip
 
-\example{ex_ex_un_01}{Solving a linear system}{Find the solution to the linear system $$\begin{array}{ccccc} x_1 & +& x_2 & = & 1\\ 2x_1 & + & 2x_2 & = &2\end{array} . $$}
+\example{ex_ex_un_01}{Solving a linear system}{Find the solution to the linear system 
+\[
+\begin{array}{ccccc}
+  x_1 & +& x_2 & = & 1\\ 
+  2x_1 & + & 2x_2 & = &2
+\end{array} . 
+\]}
 {Create the corresponding augmented matrix, and then put the matrix into \rref. 
 
-$$\bmx{ccc} 1&1&1\\2&2&2\emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{ccc} 1&1&1\\0&0&0\emx $$
+\[
+\bmx{ccc} 1&1&1\\2&2&2\emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{ccc} 1&1&1\\0&0&0\emx 
+\]
 
-Now convert the reduced matrix back into equations. In this case, we only have one equation, $$x_1+x_2=1$$ or, equivalently, 
-\begin{align*} x_1 &=1-x_2\\ x_2&\text{ is free}. \end{align*}
+Now convert the reduced matrix back into equations. In this case, we only have one equation, 
+\[
+x_1+x_2=1
+\]
+or, equivalently, 
+\begin{align*}
+ x_1 &=1-x_2\\ 
+ x_2&\text{ is free}. 
+\end{align*}
 
 We have just introduced a new term, the word \textit{free}.\index{free variable}\index{variable!free} It is used to stress that idea that $x_2$ can take on \textit{any} value; we are ``free'' to choose any value for $x_2$. Once this value is chosen, the value of $x_1$ is determined. We have infinite choices for the value of $x_2$, so therefore we have infinite solutions.
 
@@ -108,19 +142,30 @@ Let's try another example, one that uses more variables.
 \medskip
 
 \example{ex_ex_un_1}{Solving another linear system}{Find the solution to the linear system 
-$$\begin{array}{ccccccc}
+\[
+\begin{array}{ccccccc}
  & &x_2&-&x_3&=&3\\
 x_1&  & &+&2x_3&=&2\\
- &&-3x_2&+&3x_3&=&-9\\
- \end{array}.$$}
+ &&-3x_2&+&3x_3&=&-9
+\end{array}.
+ \]}
 {To find the solution, put the corresponding matrix into \rref.
 
-$$\bmx{cccc} 0&1&-1&3\\ 1&0&2&2\\ 0&-3&3&-9\emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{cccc}1&0&2&2\\ 0&1&-1&3\\ 0&0&0&0 \emx$$
+\[
+\bmx{cccc} 0&1&-1&3\\ 1&0&2&2\\ 0&-3&3&-9\emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{cccc}1&0&2&2\\ 0&1&-1&3\\ 0&0&0&0 \emx
+\]
 
 Now convert this reduced matrix back into equations. We have 
-\begin{align*} x_1 + 2x_3 &= 2 \\ x_2-x_3&=3 \end{align*} 
+\begin{align*}
+ x_1 + 2x_3 &= 2 \\ 
+ x_2-x_3&=3 
+\end{align*} 
 or, equivalently, 
-\begin{align*} x_1 &= 2-2x_3 \\ x_2&=3+x_3\\x_3&\text{ is free.} \end{align*}
+\begin{align*}
+ x_1 &= 2-2x_3 \\ 
+ x_2&=3+x_3\\
+ x_3&\text{ is free.} 
+\end{align*}
 
 These two equations tell us that the values of $x_1$ and $x_2$ depend on what $x_3 $ is. As we saw before, there is no restriction on what $x_3$ must be; it is ``free'' to take on the value of any real number. Once $x_3$ is chosen, we have a solution. Since we have infinite choices for the value of $x_3$, we have infinitely many solutions. 
 
@@ -197,16 +242,29 @@ We have now seen examples of consistent systems with exactly one solution and ot
 \medskip
 
 \example{ex_ex_un_2}{An inconsistent system}{Find the solution to the linear system
-$$\begin{array}{ccccccc}
+\[
+\begin{array}{ccccccc}
 x_1&+&x_2&+&x_3&=&1\\
 x_1&+&2x_2&+&x_3&=&2\\
-2x_1&+&3x_2&+&2x_3&=&0\\
-\end{array}.$$}
+2x_1&+&3x_2&+&2x_3&=&0
+\end{array}.
+\]}
 {We start by putting the corresponding matrix into \rref.
 
-$$\bmx{cccc} 1&1&1&1\\1&2&1&2\\ 2&3&2&0\\ \emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{cccc} 1&0&1&0\\ 0&1&0&0\\ 0&0&0&1\\ \emx$$
+\[
+\bmx{cccc} 1&1&1&1\\1&2&1&2\\ 2&3&2&0\\ \emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{cccc} 1&0&1&0\\ 0&1&0&0\\ 0&0&0&1\\ \emx
+\]
 
-Now let us take the reduced matrix and write out the corresponding equations. The first two rows give us the equations \begin{align*} x_1+x_3&=0\\ x_2 &= 0.\\ \end{align*} So far, so good. However the last row gives us the equation $$0x_1+0x_2+0x_3 = 1$$ or, more concisely, $0=1$. Obviously, this is not true; we have reached a contradiction. Therefore, no solution exists; this system is inconsistent.}
+Now let us take the reduced matrix and write out the corresponding equations. The first two rows give us the equations 
+\begin{align*}
+ x_1+x_3&=0\\ 
+ x_2 &= 0.
+\end{align*} 
+So far, so good. However the last row gives us the equation 
+\[
+0x_1+0x_2+0x_3 = 1
+\]
+or, more concisely, $0=1$. Obviously, this is not true; we have reached a contradiction. Therefore, no solution exists; this system is inconsistent.}
 
 \medskip
 
@@ -222,10 +280,21 @@ A system of linear equations is inconsistent if the \rref\ of its corresponding 
 
 \medskip
 
-\example{ex_ex_un_3}{Verifying that a system is inconsistent}{Confirm that the linear system $$\begin{array}{ccccc} x&+&y&=&0 \\2x&+&2y&=&4 \end{array}$$ has no solution. }
+\example{ex_ex_un_3}{Verifying that a system is inconsistent}{Confirm that the linear system 
+\[
+\begin{array}{ccccc}
+  x&+&y&=&0 \\
+  2x&+&2y&=&4 
+\end{array}
+\]
+has no solution. }
 {We can verify that this system has no solution in two ways. First, let's just think about it. If $x+y=0$, then it stands to reason, by multiplying both sides of this equation by 2, that $2x+2y = 0$. However, the second equation of our system says that $2x+2y= 4$. Since $0\neq 4$, we have a contradiction and hence our system has no solution. (We cannot possibly pick values for $x$ and $y$ so that $2x+2y$ equals both 0 and 4.)
 
-Now let us confirm this using the prescribed technique from above. The \rref\  of the corresponding augmented matrix is $$\bmx{ccc} 1&1&0\\0&0&1\\ \emx.$$ We have a leading 1 in the last column, so therefore the system is inconsistent. }
+Now let us confirm this using the prescribed technique from above. The \rref\  of the corresponding augmented matrix is 
+\[
+\bmx{ccc} 1&1&0\\0&0&1\\ \emx.
+\]
+We have a leading 1 in the last column, so therefore the system is inconsistent. }
 
 \medskip
 
@@ -245,7 +314,7 @@ Now let us confirm this using the prescribed technique from above. The \rref\  o
 %
 %More examples will help us.
 
-Let's summarize what we have learned up to this point. Consider the \rref\ of the augmented matrix of a system of linear equations.\footnote{That sure seems like a mouthful in and of itself. However, it boils down to ``look at the reduced form of the usual matrix.''} If there is a leading 1 in the last column, the system has no solution. Otherwise, if there is a leading 1 for each variable, then there is exactly one solution; otherwise (i.e., there are free variables) there are infinite solutions.
+Let's summarize what we have learned up to this point. Consider the \rref\ of the augmented matrix of a system of linear equations. (That sure seems like a mouthful in and of itself. However, it boils down to ``look at the reduced form of the usual matrix.'') If there is a leading 1 in the last column, the system has no solution. Otherwise, if there is a leading 1 for each variable, then there is exactly one solution; otherwise (i.e., there are free variables) there are infinite solutions.
 
 Systems with exactly one solution or no solution are the easiest to deal with; systems with infinite solutions are a bit harder to deal with. Therefore, we'll do a little more practice. First, a definition: if there are infinite solutions, what do we call one of those infinite solutions?
 
@@ -258,12 +327,28 @@ The easiest way to find a particular solution is to pick values for the free var
 
 \medskip
 
-\example{ex_ex_un_4}{Finding general and particular solutions}{Give the solution to a linear system whose augmented matrix in \rref\ is $$\bmx{ccccc} 1&-1&0&2&4\\ 0&0&1&-3&7\\ 0&0&0&0&0\\ \emx$$ and give two particular solutions.}
-{We can essentially ignore the third row; it does not divulge any information about the solution.\footnote{Then why include it? Rows of zeros sometimes appear ``unexpectedly'' in matrices after they have been put in \rref. When this happens, we do learn \textit{something}; it means that at least one equation was a combination of some of the others.} 
+\example{ex_ex_un_4}{Finding general and particular solutions}{Give the solution to a linear system whose augmented matrix in \rref\ is 
+\[
+\bmx{ccccc} 1&-1&0&2&4\\ 0&0&1&-3&7\\ 0&0&0&0&0\\ \emx
+\]
+and give two particular solutions.}
+{We can essentially ignore the third row; it does not divulge any information about the solution.
+\mnote{.5}{Why include the row of zeros in Example \ref{ex_ex_un_4}? Rows of zeros sometimes appear ``unexpectedly'' in matrices after they have been put in \rref. When this happens, we do learn \textit{something}; it means that at least one equation was a combination of some of the others.} 
 %We will learn more about this later.
- The first and second rows can be rewritten as the following equations: \begin{align*} x_1 - x_2 + 2x_4 &=4 \\ x_3 - 3x_4 &= 7. \\ \end{align*} Notice how the variables $x_1$ and $x_3$ correspond to the leading 1s of the given matrix. Therefore $x_1$ and $x_3$ are dependent variables; all other variables (in this case, $x_2$ and $x_4$) are free variables.
+ The first and second rows can be rewritten as the following equations: 
+\begin{align*} 
+ x_1 - x_2 + 2x_4 &=4 \\
+ x_3 - 3x_4 &= 7.
+\end{align*} 
+Notice how the variables $x_1$ and $x_3$ correspond to the leading 1s of the given matrix. Therefore $x_1$ and $x_3$ are dependent variables; all other variables (in this case, $x_2$ and $x_4$) are free variables.
 
-We generally write our solution with the dependent variables on the left and independent variables and constants on the right. It is also a good practice to acknowledge the fact that our free variables are, in fact, free. So our final solution would look something like \begin{align*} x_1 &= 4 +x_2 - 2x_4 \\ x_2 & \text{ is free} \\ x_3 &= 7+3x_4 \\ x_4 & \text{ is free}.\end{align*}
+We generally write our solution with the dependent variables on the left and independent variables and constants on the right. It is also a good practice to acknowledge the fact that our free variables are, in fact, free. So our final solution would look something like 
+\begin{align*} 
+ x_1 &= 4 +x_2 - 2x_4 \\ 
+ x_2 & \text{ is free} \\
+ x_3 &= 7+3x_4 \\ 
+ x_4 & \text{ is free}.
+\end{align*}
 
 To find particular solutions, choose values for our free variables. There is no ``right'' way of doing this; we are ``free'' to choose whatever we wish. 
 
@@ -274,35 +359,70 @@ By setting $x_2 = 0 = x_4$, we have the solution $x_1 = 4$, $x_2 = 0$, $x_3 = 7$
 \begin{center}
 \begin{minipage}{.4\linewidth}
 One particular solution is:
-\begin{align*} x_1 &= 4\\ x_2 &=0 \\ x_3 &= 7 \\ x_4 &= 0. \end{align*}
+\begin{align*} 
+ x_1 &= 4\\ 
+ x_2 &=0 \\ 
+ x_3 &= 7 \\ 
+ x_4 &= 0. 
+\end{align*}
 \end{minipage}
 \begin{minipage}{.4\linewidth}
 Another particular solution is:
-\begin{align*} x_1 &= 15\\ x_2 &=1 \\ x_3 &= -8 \\ x_4 &= -5. \end{align*}
+\begin{align*}
+ x_1 &= 15\\ 
+ x_2 &=1 \\ 
+ x_3 &= -8 \\ 
+ x_4 &= -5. 
+\end{align*}
 \end{minipage}
 \end{center}
 }
 
 \medskip
 
-\example{ex_ex_un_5}{Finding general and particular solutions}{Find the solution to a linear system whose augmented matrix in \rref\ is $$\bmx{ccccc} 1&0&0&2&3\\0&1&0&4&5\\ \emx$$ and give two particular solutions.}
-{Converting the two rows into equations we have \begin{align*} x_1 + 2x_4 &= 3 \\ x_2 + 4x_4&=5.\\ \end{align*}
+\example{ex_ex_un_5}{Finding general and particular solutions}{Find the solution to a linear system whose augmented matrix in \rref\ is 
+\[
+\bmx{ccccc} 1&0&0&2&3\\0&1&0&4&5\\ \emx
+\]
+and give two particular solutions.}
+{Converting the two rows into equations we have 
+\begin{align*}
+ x_1 + 2x_4 &= 3 \\ 
+ x_2 + 4x_4&=5. 
+\end{align*}
 
-We see that $x_1$ and $x_2$ are our dependent variables, for they correspond to the leading 1s. Therefore, $x_3$ and $x_4$ are independent variables. This situation feels a little unusual,\footnote{What kind of situation would lead to a column of all zeros? To have such a column, the original matrix needed to have a column of all zeros, meaning that while we acknowledged the existence of a certain variable, we never actually used it in any equation. In practical terms, we could respond by removing the corresponding column from the matrix and just keep in mind that that variable is free. In very large systems, it might be hard to determine whether or not a variable is actually used and one would not worry about it.
+We see that $x_1$ and $x_2$ are our dependent variables, for they correspond to the leading 1s. Therefore, $x_3$ and $x_4$ are independent variables. This situation feels a little unusual, for $x_3$ doesn't appear in any of the equations above, but cannot overlook it; it is still a free variable since there is not a leading 1 that corresponds to it. We write our solution as:
+\begin{align*}
+ x_1 &= 3-2x_4 \\ 
+ x_2 &=5-4x_4 \\ 
+ x_3 & \text{ is free} \\ 
+ x_4 &  \text{ is free}.
+\end{align*}
 
-When we learn about \ev s and \el s, we will see that under certain circumstances this situation arises. In those cases we leave the variable in the system just to remind ourselves that it is there.\label{footnote:extra_zeros}} for $x_3$ doesn't appear in any of the equations above, but cannot overlook it; it is still a free variable since there is not a leading 1 that corresponds to it. We write our solution as:
-\begin{align*} x_1 &= 3-2x_4 \\ x_2 &=5-4x_4 \\ x_3 & \text{ is free} \\ x_4 &  \text{ is free}. \\ \end{align*}
+\mnote{.5}{What kind of situation would lead to a column of all zeros? To have such a column, the original matrix needed to have a column of all zeros, meaning that while we acknowledged the existence of a certain variable, we never actually used it in any equation. In practical terms, we could respond by removing the corresponding column from the matrix and just keep in mind that that variable is free. In very large systems, it might be hard to determine whether or not a variable is actually used and one would not worry about it.
+
+When we learn about \ev s and \el s, we will see that under certain circumstances this situation arises. In those cases we leave the variable in the system just to remind ourselves that it is there.\label{footnote:extra_zeros}}
 
 To find two particular solutions, we pick values for our free variables. Again, there is no ``right'' way of doing this (in fact, there are $\ldots$ infinite ways of doing this) so we give only an example here.
 
 \begin{center}
 \begin{minipage}{.4\linewidth}
 One particular solution is:
-\begin{align*} x_1 &= 3\\ x_2 &=5 \\ x_3 &= 1000 \\ x_4 &= 0. \end{align*}
+\begin{align*}
+ x_1 &= 3\\ 
+ x_2 &=5 \\ 
+ x_3 &= 1000 \\ 
+ x_4 &= 0. 
+\end{align*}
 \end{minipage}
 \begin{minipage}{.4\linewidth}
 Another particular solution is:
-\begin{align*} x_1 &= 3-2\pi\\ x_2 &=5-4\pi \\ x_3 &= e^2 \\ x_4 &= \pi. \end{align*}
+\begin{align*} 
+ x_1 &= 3-2\pi\\ 
+ x_2 &=5-4\pi \\ 
+ x_3 &= e^2 \\ 
+ x_4 &= \pi. 
+\end{align*}
 \end{minipage}
 \end{center}
 (In the second particular solution we picked ``unusual'' values for $x_3$ and $x_4$ just to highlight the fact that we can.)}
@@ -313,19 +433,48 @@ Another particular solution is:
 %\enlargethispage{2\baselineskip}
 
 
-\example{ex_ex_un_6}{Finding general and particular solutions}{Find the solution to the linear system $$\begin{array}{ccccccc}x_1&+&x_2&+&x_3&=&5\\x_1&-&x_2&+&x_3&=&3\\ \end{array}$$ and give two particular solutions.}
-{The corresponding augmented matrix and its reduced row echelon form are given below.$$\bmx{cccc}1&1&1&5\\1&-1&1&3\\ \emx\quad \quad \overrightarrow{\text{rref}}\quad\quad \bmx{cccc}1&0&1&4\\0&1&0&1\\ \emx$$ Converting these two rows into equations, we have \begin{align*} x_1+x_3&=4\\x_2&=1\\ \end{align*} giving us the solution \begin{align*} x_1&= 4-x_3\\x_2&=1\\x_3 &\text{ is free}.\\ \end{align*}
+\example{ex_ex_un_6}{Finding general and particular solutions}{Find the solution to the linear system 
+\[
+\begin{array}{ccccccc}
+  x_1&+&x_2&+&x_3&=&5\\
+  x_1&-&x_2&+&x_3&=&3
+\end{array}
+\]
+and give two particular solutions.}
+{The corresponding augmented matrix and its reduced row echelon form are given below.
+\[
+\bmx{cccc}1&1&1&5\\1&-1&1&3\\ \emx\quad \quad \overrightarrow{\text{rref}}\quad\quad \bmx{cccc}1&0&1&4\\0&1&0&1\\ \emx
+\]
+Converting these two rows into equations, we have 
+\begin{align*}
+ x_1+x_3&=4\\
+ x_2&=1
+\end{align*}
+giving us the solution 
+\begin{align*}
+ x_1&= 4-x_3\\
+ x_2&=1\\
+ x_3 &\text{ is free}.
+\end{align*}
 
 Once again, we get a bit of an ``unusual'' solution; while $x_2$ is a dependent variable, it does not depend on any free variable; instead, it is always 1. (We can think of it as depending on the value of 1.) By picking two values for $x_3$, we get two particular solutions.
 %We can check our work by finding a particular solution and plugging it into our original equations. For instance, set $x_3 = 0$. This makes $x_1 =4$, and this satisfies both of the original equations. 
 \begin{center}
 \begin{minipage}{.4\linewidth}
 One particular solution is:
-\begin{align*} x_1 &= 4\\ x_2 &=1 \\ x_3 &= 0 . \end{align*}
+\begin{align*}
+ x_1 &= 4\\
+ x_2 &=1 \\ 
+ x_3 &= 0 . 
+\end{align*}
 \end{minipage}
 \begin{minipage}{.4\linewidth}
 Another particular solution is:
-\begin{align*} x_1 &= 3\\ x_2 &=1 \\ x_3 &= 1 . \end{align*}
+\begin{align*}
+ x_1 &= 3\\ 
+ x_2 &=1 \\ 
+ x_3 &= 1 . 
+\end{align*}
 \end{minipage}
 \end{center}
  }
@@ -339,10 +488,17 @@ The constants and coefficients of a matrix work together to determine whether a 
 \medskip
 
 \example{ex_variable_k}{Solving a system with a variable coefficient}{For what values of $k$ will the given system have exactly one solution, infinite solutions, or no solution?
-$$ \begin{array}{ccccc}x_1&+&2x_2&=&3\\ 3x_1&+&kx_2&=&9\end{array}$$}
+\[
+\begin{array}{ccccc}
+  x_1&+&2x_2&=&3\\ 
+  3x_1&+&kx_2&=&9
+\end{array}
+\]}
 {We answer this question by forming the augmented matrix and starting the process of putting it into \rref. Below we see the augmented matrix and one elementary row operation that starts the Gaussian elimination process.
 
-$$\bmx{ccc} 1&2&3\\3&k&9\emx \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bmx{ccc} 1&2&3\\0&k-6&0\emx$$
+\[
+\bmx{ccc} 1&2&3\\3&k&9\emx \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bmx{ccc} 1&2&3\\0&k-6&0\emx
+\]
 
 This is as far as we need to go. In looking at the second row, we see that if $k=6$, then that row contains only zeros and $x_2$ is a free variable; we have infinite solutions. If $k\neq 6$, then our next step would be to make that second row, second column entry a leading one. We don't particularly care about the solution, only that we would have exactly one as both $x_1$ and $x_2$ would correspond to a leading one and hence be dependent variables.
 
@@ -351,7 +507,9 @@ Our final analysis is then this. If $k\neq 6$, there is exactly one solution; if
 \medskip
 
 As an extension of the previous example, consider the similar augmented matrix where the constant 9 is replaced with a 10. Performing the same elementary row operation gives
-$$\bmx{ccc} 1&2&3\\3&k&10\emx \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bmx{ccc} 1&2&3\\0&k-6&1\emx.$$
+\[
+\bmx{ccc} 1&2&3\\3&k&10\emx \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bmx{ccc} 1&2&3\\0&k-6&1\emx.
+\]
 
 As in the previous example, if $k\neq6$, we can make the second row, second column entry a leading one and hence we have one solution. However, if $k=6$, then our last row is $[0\ 0\ 1]$, meaning we have no solution.\\
 
