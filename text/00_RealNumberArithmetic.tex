@@ -2,7 +2,9 @@
 \label{RealNumberArithmetic}
 
 
-In this section we list the properties of real number arithmetic.  We will focus on those aspects that are most needed for Math 1410 (things like the algebraic axioms, and working with fractions), and gloss over those that are more calculus related (exponents, roots, etc.). Students wanting more detail than what is provided here might want to consult the resources available on the \textit{Math Basics} page on Moodle. We begin with the axioms for addition of real numbers.
+In this section we list the properties of real number arithmetic.  We will focus on those aspects that are most needed for Math 1410 (things like the algebraic axioms, and working with fractions), and gloss over those that are more calculus related (exponents, roots, etc.). Students wanting more detail than what is provided here might want to consult the resources available on the \textit{Math Basics} page on Moodle. In particular, since this is an \textit{algebra} textbook, we will assume that the reader has encountered the real number system before, and omit a definition, focusing instead on the algebraic properties of real numbers. We begin with the axioms for addition of real numbers.
+
+\mnote{.7}{The set of real numbers is denoted usually denoted $\R$. A careful definition of $\R$ is actually quite complicated, and even most calculus classes choose not to include it. If you want to \textit{really} understand what the real numbers are, you'll need to take a course in Real Analysis, such as Math 3500.}
 
 \medskip
 
@@ -330,64 +332,7 @@ Since $64 = 3 \cdot 3 \cdot 7$ and $65 = 5 \cdot 13$ have no common factors, our
 
 Of the issues discussed in the previous set of examples none causes students more trouble than simplifying compound fractions.  We presented two different methods for simplifying them:  one in which we simplified the overall numerator and denominator and then performed the division and one in which we removed the compound nature of the fraction at the very beginning.   We encourage the reader to go back and use both methods on each of the compound fractions presented.  Keep in mind that when a compound fraction is encountered in the rest of the text it will usually be simplified using only one method and we may not choose your favourite method.  Feel free to use the other one in your notes.
 
-\smallskip
 
-For completeness, we next list the properties of exponents.   Recall that $2 \cdot 2 \cdot 2$  can be written as $2^3$ because exponential notation expresses repeated multiplication.  In the expression $2^3$, $2$ is called the \textbf{base}\index{base} and $3$ is called the \textbf{exponent}\index{exponent}. In order to generalize exponents from natural numbers to the integers, and eventually to rational and real numbers, it is helpful to think of the exponent as a count of the number of factors of the base we are multiplying by $1$.  For instance, \[2^3 = 1 \cdot (\text{three factors of two}) = 1 \cdot (2 \cdot 2 \cdot 2) = 8.\] From this, it makes sense that \[2^{0} = 1 \cdot (\text{zero factors of two}) = 1.\]  What about $2^{-3}$?  The `$-$' in the exponent indicates that we are `taking away' three factors of two, essentially dividing by three factors of two.  So, \[2^{-3} = 1 \div (\text{three factors of two}) = 1 \div (2 \cdot 2 \cdot 2) = \frac{1}{2 \cdot 2 \cdot 2} = \frac{1}{8}.\]  We summarize the properties of integer exponents below.
-
-\medskip
-
-\definition{propertiesofintegerexponents}{Properties of Integer Exponents}{
-Suppose $a$ and $b$ are nonzero real numbers and $n$ and $m$ are integers.
-
-\begin{itemize}
-
-\item  \textbf{Product Rules:} $(ab)^{n} = a^n b^n$ and $a^n a^m = a^{n+m}$.
-
-\item  \textbf{Quotient Rules:} $\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$ and $\dfrac{a^n}{a^m} = a^{n-m}$. 
-
-\item \textbf{Power Rule:}  $\left(a^{n}\right)^{m} = a^{nm}$.
-
-\item  \textbf{Negatives in Exponents:}  $a^{-n} = \dfrac{1}{a^n}$.
-
- In particular, $\left(\dfrac{a}{b}\right)^{-n} = \left(\dfrac{b}{a}\right)^{n} = \dfrac{b^n}{a^n}$ and $\dfrac{1}{a^{-n}} = a^{n}$.
-
-\item  \textbf{Zero Powers:}  $a^{0} = 1$.
-
-\mnote{.35}{Note:  The expression $0^{0}$ is an indeterminate form. See the comment regarding `$\frac{0}{0}$' on page \pageref{propertiesofzero}.}
-
-\item  \textbf{Powers of Zero:}  For any \textit{natural} number $n$, $0^{n} = 0$.
-
-\textbf{Note:}  The expression $0^{n}$ for integers $n \leq 0$ is not defined.
-
-\end{itemize}
-}
-
-While it is important the state the Properties of Exponents, it is also equally important to take a moment to discuss one of the most common errors in Algebra.  It is true that $(ab)^2 = a^2 b^2$ (which some students refer to as `distributing' the exponent to each factor) but you {\bf cannot} do this sort of thing with addition.  That is, in general,   $(a+b)^2 \neq a^2 + b^2$. (For example, take $a= 3$ and $b = 4$.)  The same goes for any other powers.
-
-\smallskip
-
-There won't be a lot of work with exponents in Math 1410,  but including them gives us an opportunity to remind you of the conventions on the ``order of operations'' for arithmetic:
-
-\medskip
-
-\definition{orderofoperations}{Order of Operations Agreement}{
-When evaluating an expression involving real numbers:
-
-\begin{enumerate}
-
-\item  Evaluate any expressions in \textbf{p}arentheses (or other grouping symbols.)
-\item  Evaluate \textbf{e}xponents.
-\item  Evaluate \textbf{d}ivision and \textbf{m}ultiplication as you read from left to right.
-\item  Evaluate \textbf{a}ddition and \textbf{s}ubtraction as you read from left to right.
-
-\end{enumerate}
-}
-
-\mnote{.3}{Order of operations follows the  ``PEDMAS'' rule some of you may have encountered.}
-
-\medskip
-
-For example, $2 + 3\cdot 4^2 = 2 + 3\cdot 16 = 2 + 48 = 50$.  Where students get into trouble is with things like $-3^2$.  If we think of this as $0 - 3^2$, then it is clear that we evaluate the exponent first:  $-3^2 =0 -3^2 =0 -9 = -9$.  In general, we interpret $-a^n = -\left(a^n\right)$.  If we want the `negative' to also be raised to a power, we must  write $(-a)^n$ instead.  To summarize, $-3^2 = -9$ but $(-3)^2  = 9$. For the sake of brevity, we've chosen to skip examples involving exponents, as well as any material on fractional exponents (i.e. roots). If you feel the need to see a few examples, feel free to consult the textbook for Math 1010 (which has a longer version of this section) or the review handouts on the Math Basics site on Moodle.
 
 
 \printexercises{exercises/00_02_exercises}

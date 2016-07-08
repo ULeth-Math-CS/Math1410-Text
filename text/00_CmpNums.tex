@@ -25,21 +25,27 @@ The imaginary unit $i$ satisfies the two following properties:
 
 \mnote{.45}{Some Technical Mathematics textbooks label the imaginary unit `$j$', usually to avoid confusion with the use of the letter $i$ to denote electric current.  While it carries the adjective `imaginary', these numbers have essential real-world implications.  For example, every electronic device owes its existence to the study of `imaginary' numbers.}
 
-Property 1 in Definition \ref{idefn} establishes that $i$ does act as a square root of $-1$, and property 2 establishes what we mean by the `principal square root' of a negative real number.  In property 2, it is important to remember the restriction on $c$.  For example, it is perfectly acceptable to say  $\sqrt{-4} = i \sqrt{4} = i(2) = 2i$. However, $\sqrt{-(-4)} \neq i \sqrt{-4}$, otherwise, we'd get\[ 2 = \sqrt{4} = \sqrt{-(-4)} = i \sqrt{-4} = i (2i) = 2i^2 = 2(-1) = -2,\] which is unacceptable. The moral of this story is that the general properties of radicals do not apply for even roots of negative quantities.  With Definition \ref{idefn} in place, we are now in position to define the \index{complex number ! definition of}\sword{complex numbers}.
+Property 1 in Definition \ref{idefn} establishes that $i$ does act as a square root of $-1$, and property 2 establishes what we mean by the `principal square root' of a negative real number.  In property 2, it is important to remember the restriction on $c$.  For example, it is perfectly acceptable to say  $\sqrt{-4} = i \sqrt{4} = i(2) = 2i$. However, $\sqrt{-(-4)} \neq i \sqrt{-4}$, otherwise, we'd get\[ 2 = \sqrt{4} = \sqrt{-(-4)} = i \sqrt{-4} = i (2i) = 2i^2 = 2(-1) = -2,\] which is unacceptable. The moral of this story is that the general properties of radicals do not apply for even roots of negative quantities.  With Definition \ref{idefn} in place, we are now in position to define the \sword{complex numbers}.
 
 \medskip
 
 \definition{complexdefn}{Complex number}{
+\index{complex number ! definition of}
 A \sword{complex number} is a number of the form $a+bi$, where $a$ and $b$ are real numbers and $i$ is the imaginary unit.  The set of complex numbers is denoted $\C$.
 }
 
 \medskip
 
-Complex numbers include things you'd normally expect, like $3+2i$ and $\frac{2}{5} - i\sqrt{3}$.  However, don't forget that $a$ or $b$ could be zero, which means numbers like $3i$ and $6$ are also complex numbers.  In other words, don't forget that the complex numbers \textit{include} the real numbers, so $0$ and $\pi - \sqrt{21}$ are both considered complex numbers.   The arithmetic of complex numbers is as you would expect.  The only things you need to remember are the two properties in Definition \ref{idefn}.  The next example should help recall how these animals behave.
+Complex numbers include things you'd normally expect, like $3+2i$ and $\frac{2}{5} - i\sqrt{3}$.  However, don't forget that $a$ or $b$ could be zero, which means numbers like $3i$ and $6$ are also complex numbers.  In other words, don't forget that the complex numbers \textit{include} the real numbers, so $0$ and $\pi - \sqrt{21}$ are both considered complex numbers. We want to study the arithmetic of complex numbers, but before we can do so, we first need to make sure we understand what it means for two complex numbers to be equal.
 
-\mnote{.3}{To use the language  of Section \ref{SetsofNumbers}, $\R \subseteq \C$.}
+\smallskip
 
+\definition{def:compequality}{Equality of complex numbers}{
+\index{complex numbers ! equality} Let $z=a+ib$ and $w=c+id$ be two complex numbers. We say that $z$ and $w$ are \sword{equal}, and write $z=w$, if and only if $a=c$ and $b=d$.}
 
+\smallskip
+
+The arithmetic of complex numbers is as you would expect.  The only things you need to remember are the two properties in Definition \ref{idefn}.  The next example should help recall how these animals behave.
 
 \medskip
 
@@ -49,26 +55,16 @@ Complex numbers include things you'd normally expect, like $3+2i$ and $\frac{2}{
 Perform the indicated operations.
 
 
-\begin{multicols}{3}
+\begin{multicols}{2}
 \begin{enumerate}
 
-\item  $(1-2i) - (3+4i)$ \vphantom{$\dfrac{1-2i}{3-4i}$}
-\item  $(1-2i)(3+4i)$ \vphantom{$\dfrac{1-2i}{3-4i}$}
+\item  $(1-2i) - (3+4i)$
+\item  $(1-2i)(3+4i)$ 
 \item  $\dfrac{1-2i}{3-4i}$
-
-\setcounter{HW}{\value{enumi}}
-\end{enumerate}
-\end{multicols}
-
-\begin{multicols}{3}
-\begin{enumerate}
-\setcounter{enumi}{\value{HW}}
-
 \item  $\sqrt{-3} \sqrt{-12}$
 \item  $\sqrt{(-3)(-12)}$
 \item  $(x-[1+2i])(x-[1-2i])$
 
-\setcounter{HW}{\value{enumi}}
 \end{enumerate}
 \end{multicols}
 }
@@ -91,9 +87,8 @@ Technically, we'd have to rewrite our answer  $-2-6i$ as $(-2) + (-6)i$ to be (i
 								& =  11 - 2i 
 \end{align*}
 
-\drawexampleline
-
-\item  How in the world are we supposed to simplify $\frac{1-2i}{3-4i}$?  Well, we deal with the denominator $3-4i$ as we would any other denominator containing two terms, one of which is a square root: we and multiply both numerator and denominator by $3+4i$, the (complex) conjugate of $3 - 4i$.  Doing so produces\\begin{align*}
+\item  How in the world are we supposed to simplify $\frac{1-2i}{3-4i}$?  Well, we deal with the denominator $3-4i$ as we would any other denominator containing two terms, one of which is a square root: we and multiply both numerator and denominator by $3+4i$, the (complex) conjugate of $3 - 4i$.  Doing so produces
+\begin{align*}
  \dfrac{1-2i}{3-4i} & =  \dfrac{(1-2i)(3+4i)}{(3-4i)(3+4i)}  \tag*{Equivalent Fractions} \\[5pt]
                     & =    \dfrac{3 + 4i - 6i - 8i^2}{9 - 16i^2}  \tag*{F.O.I.L.}\\[5pt]
 					& =  \dfrac{3 - 2i - 8(-1)}{9  - 16(-1)}  \tag*{$i^2 = -1$}\\[5pt]
@@ -120,7 +115,7 @@ Technically, we'd have to rewrite our answer  $-2-6i$ as $(-2) + (-6)i$ to be (i
 
 In the previous example, we used the idea of a `conjugate' to divide two complex numbers. (You may recall using conjugates to rationalize expressions involving square roots.)  More generally, the \index{complex number ! complex conjugate ! definition of}\index{conjugate ! complex conjugate ! definition of}\sword{complex conjugate} of a complex number $a+bi$ is the number $a-bi$.  The notation commonly used for complex conjugation is a `bar':  $\overline{a+bi} = a-bi$. For example, $\overline{3+2i} = 3-2i$ and $\overline{3-2i} = 3+2i$. To find $\overline{6}$, we note that $\overline{6} = \overline{6+0i}= 6 - 0i = 6$, so $\overline{6} = 6$. Similarly, $\overline{4i} = -4i$, since $\overline{4i} = \overline{0 + 4i} = 0 - 4i =  -4i$.  Note that $\overline{3+\sqrt{5}} = 3 + \sqrt{5}$, not $3 - \sqrt{5}$, since  $\overline{3+\sqrt{5}} = \overline{3+\sqrt{5} + 0i} = 3+\sqrt{5}  - 0i = 3+\sqrt{5}$. Here, the conjugation specified by the `bar' notation involves reversing the sign before $i = \sqrt{-1}$, not before  $\sqrt{5}$.  The properties of the conjugate are summarized in the following theorem.
 
-\medskip
+\pagebreak
 
 \theorem{conjugateprops}{Properties of the Complex Conjugate}{
 \index{complex number ! conjugate ! properties of}\index{conjugate of a complex number ! properties of}
@@ -147,25 +142,64 @@ Essentially, Theorem \ref{conjugateprops} says that complex conjugation works we
 
 \smallskip
 
-The proof of the first property is a very quick exercise.  To prove the second property, we compare $\overline{z+w}$ with $\overline{z} + \overline{w}$.  We have $\overline{z} + \overline{w} = \overline{a+bi} + \overline{c+di}  = a-bi + c-di$.  To find $\overline{z+w}$, we first compute \[z+w = (a+bi) + (c+di) = (a+c)+(b+d)i\] so \[\overline{z+w} = \overline{(a+c)+(b+d)i} = (a+c) - (b+d)i = a - bi + c - di = \overline{z} + \overline{w}\]  As such, we have established  $\overline{z+w} = \overline{z}+\overline{w}$. The proof for multiplication works similarly.  The proof that the conjugate works well with powers can be viewed as a repeated application of the product rule, and is best proved using a technique called Mathematical Induction.  The last property is a characterization of real numbers.  If $z$ is real, then $z = a + 0i$, so $\overline{z} = a - 0i = a = z$.  On the other hand, if $z=\overline{z}$, then $a+bi = a - bi$ which means $b=-b$ so $b=0$.  Hence, $z = a +0i = a$ and is real.
+The proof of the first property is a very quick exercise.  To prove the second property, we compare $\overline{z+w}$ with $\overline{z} + \overline{w}$.  We have $\overline{z} + \overline{w} = \overline{a+bi} + \overline{c+di}  = a-bi + c-di$.  To find $\overline{z+w}$, we first compute 
+\[
+z+w = (a+bi) + (c+di) = (a+c)+(b+d)i
+\]
+ so 
+\[
+ \overline{z+w} = \overline{(a+c)+(b+d)i} = (a+c) - (b+d)i = a - bi + c - di = \overline{z} + \overline{w}
+\]  
+ As such, we have established  $\overline{z+w} = \overline{z}+\overline{w}$. The proof for multiplication works similarly.  The proof that the conjugate works well with powers can be viewed as a repeated application of the product rule.  A rigorous proof requires a technique called Mathematical Induction, which is beyond the scope of this course, so we omit the proof.  The last property is a characterization of real numbers.  If $z$ is real, then $z = a + 0i$, so $\overline{z} = a - 0i = a = z$.  On the other hand, if $z=\overline{z}$, then $a+bi = a - bi$ which means $b=-b$ so $b=0$.  Hence, $z = a +0i = a$ and is real.
 
-\mnote{.85}{Proof by Mathematical Induction is usually taught in Math 2000.}
+\mnote{.25}{Proof by Mathematical Induction usually isn't encountered until Math 2000. It provides a way of formally proving statements that are claimed to hold true for all natural numbers.}
 
-\mnote{.7}{We're assuming some prior familiarity on the part of the reader where quadratic equations are concerned. If you're a bit rusty when it comes to finding \textit{real} solutions to quadratic equations (and in particular, the quadratic formula), you may want to check out the review materials available on the ``Math Basics'' Moodle page.}
+
 
 \medskip
+
+It is worth noting that although the arithmetic of complex numbers seems, at first impression, to be very different and strange compared to the arithmetic of real numbers, it actually satisfies all the same properties. (Some of which we implicitly assumed in the previous example.) In fact, both $\R$ and $\C$ are examples of what are called \sword{fields}.
+
+\mnote{.15}{The formal definition of a \sword{field} is usually not encountered until a second course in abstract algebra, such as Math 4500. For now, you should think of a field as any number system where the rules of arithmetic behave exactly as you expect them to.}
+
+\smallskip
+
+\theorem{thm:comparithprops}{Properties of Complex Arithmetic}{
+The addition and multiplication of complex numbers satisfy the following properties:
+\begin{itemize}
+\item \textbf{Closure under addition:} For any complex numbers $z$ and $w$, $z+w$ is a complex number.
+\item \textbf{Commutativity of addition:} For any complex numbers $z$ and $w$, $z+w = w+z$.
+\item \textbf{Associativity of addition:} For any complex numbers $z_1, z_2, z_3$, $z_1+(z_2+z_3) = (z_1+z_2)+z_3$.
+\item \textbf{Additive identity:} There exists a complex number $0$ such that $z+0 = 0+z=z$ for every complex number $z$.
+\item \textbf{Additive inverses:} For every complex number $z$ there exists a complex number $-z$ such that $z+(-z)=-z+z=0$.
+\item \textbf{Closure under multiplication:} For any complex numbers $z$ and $w$, $zw$ is a complex number.
+\item \textbf{Commutativity of multiplication:} For any complex numbers $z$ and $w$, $zw=wz$.
+\item \textbf{Assiciativity of multiplication:} For any complex numbers $z_1, z_2, z_3$, $z_1(z_2z_3) = (z_1z_2)z_3$
+\item \textbf{Multiplicative identity:} There exists a complex number $1$ such that $1\cdot z = z\cdot 1 = z$ for every complex number $z$.
+\item \textbf{Multiplicative inverses:} For every complex number $z\neq 0$, there exists a complex number $z^{-1}$ such that $zz^{-1}=z^{-1}z=1$.
+\item \textbf{Distributive property:} For all complex numbers $z_1, z_2, z_3$, we have $z_1(z_2+z_3) = z_1z_2+z_1z_3$.
+\end{itemize}
+}
+
+\smallskip
+
+We leave the proof of Theorem \ref{thm:comparithprops} as a long (but straightforward) exercises. Working through the proof is a good way to confirm for yourself that you understand the corresponding rules for real number arithmetic from Section \ref{RealNumberArithmetic}, and how the properties for complex arithmetic are inherited from their real counterparts.
+
+\smallskip
 
 We now consider the problem of solving quadratic equations. Consider  $x^2-2x+5 = 0$. The discriminant $b^2 - 4ac = -16$ is negative, so we know from the quadratic formula that there are no \textit{real} solutions, since the Quadratic Formula would involve the term $\sqrt{-16}$.  Complex numbers, however, are built just for such situations, so we can go ahead and apply the Quadratic Formula to get:
  \[
   x = \dfrac{-(-2) \pm \sqrt{(-2)^2-4(1)(5)}}{2(1)} = \dfrac{2 \pm \sqrt{-16}}{2} = \dfrac{2 \pm 4i}{2} = 1 \pm 2i.
 \]  
 
-\medskip
+\mnote{.2}{We're assuming some prior familiarity on the part of the reader where quadratic equations are concerned. If you're a bit rusty when it comes to finding \textit{real} solutions to quadratic equations (and in particular, the quadratic formula), you may want to check out the review materials available on the ``Math Basics'' Moodle page.}
+
+\pagebreak
 
 \example{complexsolnsreviewex}{Finding complex solutions}{
 Find the complex solutions to the following equations.
 
-\mnote{.52}{Remember, all real numbers are complex numbers, so `complex solutions' means both real and non-real answers.} 
+\mnote{.85}{Remember, all real numbers are complex numbers, so `complex solutions' means both real and non-real answers.} 
 
 \begin{multicols}{3}
 \begin{enumerate}
@@ -267,17 +301,20 @@ Theorem \ref{discriminanttheoremcomplexversion} tells us that if ever we obtain 
 
 The Fundamental Theorem of Algebra is an example of an `existence' theorem in Mathematics.  It  guarantees the existence of at least one zero, but gives us no algorithm to use in finding it.  The authors are fully aware that the full impact and profound nature of the Fundamental Theorem of Algebra  is lost on most students, and that's fine.  It took mathematicians literally hundreds of years to prove the theorem in its full generality, and some of that history is recorded \href{http://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra}{\underline{in this Wikipedia article}}.  Note that the Fundamental Theorem of Algebra  applies to not only polynomial functions with real coefficients, but to those with complex number coefficients as well.  
 
-\mnote{.25}{The Fundamental Theorem of Algebra has since been proved many times, using many different methods, by many mathematicians. There are probably very few, if any, results in mathematics with the variety of proofs this result has. Unfortunately, none of the proofs can be understood within the realm of this text, but if the reader is sufficiently interested, a collection of proofs can be found at \href{http://www.cut-the-knot.org/fta/analytic.shtml}{\underline{this website}}.}
+\mnote{.75}{The Fundamental Theorem of Algebra has since been proved many times, using many different methods, by many mathematicians. There are probably very few, if any, results in mathematics with the variety of proofs this result has. Unfortunately, none of the proofs can be understood within the realm of this text, but if the reader is sufficiently interested, a collection of proofs can be found at \href{http://www.cut-the-knot.org/fta/analytic.shtml}{\underline{this website}}.}
 
 
 \smallskip
 
-Suppose  $f$ is a polynomial of degree $n \geq 1$.  The Fundamental Theorem of Algebra guarantees us at least one complex zero, $z_{\mbox{\tiny $1$}}$, and as such, the Factor Theorem guarantees that $f(x)$ factors as $f(x) = \left(x - z_{\mbox{\tiny $1$}}\right) q_{\mbox{\tiny $1$}}(x)$ for a polynomial function $q_{\mbox{\tiny $1$}}$,  of degree exactly $n-1$.  If $n-1 \geq 1$, then the Fundamental Theorem of Algebra guarantees a complex zero of $q_{\mbox{\tiny $1$}}$ as well, say $z_{\mbox{\tiny $2$}}$, so then the Factor Theorem gives us $q_{\mbox{\tiny $1$}}(x) = \left(x - z_{\mbox{\tiny $2$}}\right) q_{\mbox{\tiny $2$}}(x)$, and hence $f(x) = \left(x - z_{\mbox{\tiny $1$}}\right) \left(x - z_{\mbox{\tiny $2$}}\right) q_{\mbox{\tiny $2$}}(x)$.  We can continue this process exactly $n$ times, at which point our quotient polynomial $q_{\mbox{\tiny $n$}}$ has degree $0$ so it's a constant.  This argument gives us the following factorization theorem.
+Suppose  $f$ is a polynomial of degree $n \geq 1$.  The Fundamental Theorem of Algebra guarantees us at least one complex zero, $z_{1}$, and as such, the Factor Theorem guarantees that $f(x)$ factors as $f(x) = \left(x - z_{1}\right) q_{1}(x)$ for a polynomial function $q_{1}$,  of degree exactly $n-1$.  If $n-1 \geq 1$, then the Fundamental Theorem of Algebra guarantees a complex zero of $q_{1}$ as well, say $z_{2}$, so then the Factor Theorem gives us $q_{1}(x) = \left(x - z_{2}\right) q_{2}(x)$, and hence $f(x) = \left(x - z_{1}\right) \left(x - z_{2}\right) q_{2}(x)$.  We can continue this process exactly $n$ times, at which point our quotient polynomial $q_{n}$ has degree $0$ so it's a constant.  This argument gives us the following factorization theorem.
 
 \smallskip
 
-\theorem{complexfactorization}{Complex Factorization Theorem}{ Suppose $f$ is a polynomial function with complex number coefficients.  If the degree of $f$ is $n$ and $n \geq 1$, then  $f$ has exactly $n$ complex zeros, counting multiplicity.  If $z_{\mbox{\tiny $1$}}$, $z_{\mbox{\tiny $2$}}$, \ldots, $z_{\mbox{\tiny $k$}}$ are the distinct zeros of $f$, with multiplicities $m_{\mbox{\tiny $1$}}$, $m_{\mbox{\tiny $2$}}$, \ldots, $m_{\mbox{\tiny $k$}}$, respectively, then $f(x) = a\left(x - z_{\mbox{\tiny $1$}}  \right)^{m_{\mbox{\tiny $1$}}}\left(x - z_{\mbox{\tiny $2$}}  \right)^{m_{\mbox{\tiny $2$}}} \cdots \left(x - z_{\mbox{\tiny $k$}}  \right)^{m_{\mbox{\tiny $k$}}}$. \index{Complex Factorization Theorem}\index{factorization ! over the complex numbers}
+\theorem{complexfactorization}{Complex Factorization Theorem}{ Suppose $f$ is a polynomial function with complex number coefficients.  If the degree of $f$ is $n$ and $n \geq 1$, then  $f$ has exactly $n$ complex zeros, counting multiplicity.  If $z_{1}$, $z_{2}$, \ldots, $z_{k}$ are the distinct zeros of $f$, with multiplicities $m_{1}$, $m_{2}$, \ldots, $m_{k}$, respectively, then $f(x) = a\left(x - z_{1}  \right)^{m_{1}}\left(x - z_{2}  \right)^{m_{2}} \cdots \left(x - z_{k}  \right)^{m_{k}}$. \index{Complex Factorization Theorem}\index{factorization ! over the complex numbers}
 }
 
+\smallskip
+
+To complete our study of the arithmetic of complex numbers, we should discuss powers and roots. Computing powers can be done using the form $z=x+iy$, but it quickly becomes unpleasant (try computing $(4+3i)^7$, for example). Roots, on the other hand, are nearly impossible. Luckily for us, there is a better way: using the \textit{polar form} of complex numbers. Before we get to this discussion, however, we need to pause to introduce the \textit{polar coordinate system} for the Cartesian coordinate system.
 
 \printexercises{exercises/00_04_exercises}

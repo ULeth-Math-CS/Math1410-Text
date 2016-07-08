@@ -15,38 +15,49 @@ This nail provides a ``handle'' for the cardboard. Moving the cardboard around m
 The previous section showed that one can define a line given a point on the line and the direction of the line (usually given by a vector). One can make a similar statement about planes: we can define a plane in space given a point on the plane and the direction the plane ``faces'' (using the description above, the direction of the nail). Once again, the direction information will be supplied by a vector, called a \textbf{normal vector}, that is orthogonal to the plane.
 \index{vectors!normal vector}\index{normal vector}\index{planes!normal vector}
 
-What exactly does ``orthogonal to the plane'' mean? Choose any two points $P$ and $Q$ in the plane, and consider the vector $\vv{PQ}$. We say a vector $\vec n$ is orthogonal to the plane if $\vec n$ is perpendicular to $\vv{PQ}$ for all choices of $P$ and $Q$; that is, if $\vec n\cdot \vv{PQ}=0$ for all $P$ and $Q$.
+What exactly does ``orthogonal to the plane'' mean? Choose any two points $P$ and $Q$ in the plane, and consider the vector $\overrightarrow{PQ}$. We say a vector $\vec n$ is orthogonal to the plane if $\vec n$ is perpendicular to $\overrightarrow{PQ}$ for all choices of $P$ and $Q$; that is, if $\vec n\cdot \overrightarrow{PQ}=0$ for all $P$ and $Q$.
 
-This gives us way of writing an equation describing the plane. Let $P=(x_0,y_0,z_0)$ be a point in the plane and let $\vec n = \la a,b,c\ra $ be a normal vector to the plane. A point $Q = (x,y,z)$ lies in the plane defined by $P$ and $\vec n$ if, and only if, $\vv{PQ}$ is orthogonal to $\vec n$. Knowing $\vv{PQ} = \la x-x_0,y-y_0,z-z_0\ra$, consider:
+This gives us way of writing an equation describing the plane. Let $P=(x_0,y_0,z_0)$ be a point in the plane and let $\vec n = \la a,b,c\ra $ be a normal vector to the plane. A point $Q = (x,y,z)$ lies in the plane defined by $P$ and $\vec n$ if, and only if, $\overrightarrow{PQ}$ is orthogonal to $\vec n$. Knowing $\overrightarrow{PQ} = \la x-x_0,y-y_0,z-z_0\ra$, consider:
 
 \begin{align}
-\vv{PQ}\cdot\vec n &= 0 \notag\\
-				\la x-x_0,y-y_0,z-z_0\ra\cdot \la a,b,c\ra &=0\notag\\
-				a(x-x_0)+b(y-y_0)+c(z-z_0) &=0 \label{eq:planes1}
-\intertext{Equation \eqref{eq:planes1} defines an \emph{implicit} function describing the plane. More algebra produces:}
-ax+by+cz &= ax_0+by_0+cz_0. \notag
-\intertext{The right hand side is just a number, so we replace it with $d$:}
-ax+by+cz &= d\label{eq:planes2}.
-\intertext{As long as $c\neq 0$, we can solve for $z$:}
-z &= \frac1c(d-ax-by).\label{eq:planes3}
+  \overrightarrow{PQ}\cdot\vec n &= 0 \notag\\
+  \la x-x_0,y-y_0,z-z_0\ra\cdot \la a,b,c\ra &=0\notag\\
+  a(x-x_0)+b(y-y_0)+c(z-z_0) &=0 \label{eq:planes1}
 \end{align}
- Equation \eqref{eq:planes3} is especially useful as many computer programs can graph functions in this form. Equations \eqref{eq:planes1} and \eqref{eq:planes2} have specific names, given next.
+More algebra produces:
+\begin{equation}\label{eq:planes2}
+ax+by+cz =d,
+\end{equation}
+where $d = ax_0+by_0+cz_0$ is a real number. Both of the equations \eqref{eq:planes1} or \eqref{eq:planes2} are referred to as \textbf{scalar equations} for the plane. Note that choosing the numbers $a, b, c$ for the normal vector defines a whole \textit{family} of parallel planes; the value of the constant $d$ determines a particular member of that family.
+
+As long as $c\neq 0$, we can solve for $z$:
+\begin{equation}
+z = \frac1c(d-ax-by).\label{eq:planes3}
+\end{equation}
+Equation \eqref{eq:planes3} is especially useful as many computer programs can graph functions in this form. Equations \eqref{eq:planes1} and \eqref{eq:planes2} have specific names, given next.
 
 \definition{def:planes}{Equations of a Plane in Standard and General Forms}
-{The plane passing through the point $P=(x_0,y_0,z_0)$ with normal vector $\vec n=\la a,b,c\ra$ can be described by an equation with \textbf{standard form} $$a(x-x_0)+b(y-y_0)+c(z-z_0) =0;$$
+{The plane passing through the point $P=(x_0,y_0,z_0)$ with normal vector $\vec n=\la a,b,c\ra$ can be described by an equation with \textbf{standard form} 
+\[
+a(x-x_0)+b(y-y_0)+c(z-z_0) =0;
+\]
 the equation's \textbf{general form} is 
 \index{planes!equations of}
-$$ax+by+cz = d.$$
+\[
+ax+by+cz = d.
+\]
 }
 
 A key to remember throughout this section is this: to find the equation of a plane, we need a point and a normal vector. We will give several examples of finding the equation of a plane, and in each one different types of information are given. In each case, we need to use the given information to find a point on the plane and a normal vector.\\
 
 \example{ex_planes1}{Finding the equation of a plane.}{
 Write the equation of the plane that passes through the points $P=(1,1,0)$, $Q = (1,2,-1)$ and $R = (0,1,2)$ in standard form.}
-{We need a vector $\vec n$ that is orthogonal to the plane. Since $P$, $Q$ and $R$ are in the plane, so are the vectors $\vv{PQ}$ and $\vv{PR}$; $\vv{PQ}\times\vv{PR}$ is orthogonal to $\vv{PQ}$ and $\vv{PR}$ and hence the plane itself.
+{We need a vector $\vec n$ that is orthogonal to the plane. Since $P$, $Q$ and $R$ are in the plane, so are the vectors $\overrightarrow{PQ}$ and $\overrightarrow{PR}$; $\overrightarrow{PQ}\times\overrightarrow{PR}$ is orthogonal to $\overrightarrow{PQ}$ and $\overrightarrow{PR}$ and hence the plane itself.
 
-It is straightforward to compute $\vec n = \vv{PQ}\times\vv{PR} = \la 2,1,1\ra$. We can use any point we wish in the plane (any of $P$, $Q$ or $R$ will do) and we arbitrarily choose $P$. Following Definition \ref{def:planes}, the equation of the plane in standard form is 
-$$2(x-1) + (y-1)+z = 0.$$
+It is straightforward to compute $\vec n = \overrightarrow{PQ}\times\overrightarrow{PR} = \la 2,1,1\ra$. We can use any point we wish in the plane (any of $P$, $Q$ or $R$ will do) and we arbitrarily choose $P$. Following Definition \ref{def:planes}, the equation of the plane in standard form is 
+\[
+2(x-1) + (y-1)+z = 0.
+\]
 The plane is sketched in Figure \ref{fig:planes1}.
 \mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=-0.8901640937366284,
@@ -62,14 +73,19 @@ We have just demonstrated the fact that any three non-collinear points define a 
 
 \example{ex_planes2}{Finding the equation of a plane.}{
 Verify that lines $\ell_1$ and $\ell_2$, whose parametric equations are given below, intersect, then give the equation of the  plane that contains these two lines in general form.
-$$ \ell_1: \begin{array}{ccc} x&=&-5+2s \\ y&=&1+s \\ z&=&-4+2s\end{array} \qquad\qquad
-				\ell_2: \begin{array}{ccc} x &=& 2+3t\\ y&=&1-2t \\ z&=&1+t\end{array}$$
+\[
+ \ell_1: \begin{array}{ccc} x&=&-5+2s \\ y&=&1+s \\ z&=&-4+2s\end{array} \qquad\qquad
+				\ell_2: \begin{array}{ccc} x &=& 2+3t\\ y&=&1-2t \\ z&=&1+t\end{array}
+\]
 }
 {The lines clearly are not parallel. If they do not intersect, they are skew, meaning there is not a plane that contains them both. If they do intersect, there is such a plane. 
 
 To find their point of intersection, we set the $x$, $y$ and $z$ equations equal to each other and solve for $s$ and $t$:
-$$\begin{array}{ccc}
--5+2s &=&2+3t \\ 1+s &=& 1-2t \\ -4+2s &=& 1+t \end{array}\quad  \Rightarrow  \quad s=2,\quad t=-1.$$
+\[
+\begin{array}{ccc}
+-5+2s &=&2+3t \\ 1+s &=& 1-2t \\ -4+2s &=& 1+t 
+\end{array}\quad  \Rightarrow  \quad s=2,\quad t=-1.
+\]
 
 When $s=2$ and $t=-1$, the lines intersect at the point $P= (-1,3,0)$. 
 
@@ -88,23 +104,37 @@ The plane's equation in general form is $5x+4y-7z=7$; it is sketched in Figure \
 3Dc2c=-0.8846508860588074 0.46156787872314453 0.06593840569257736,
 3Dcoo=-0.8311560153961182 6.697127819061279 -4.196700572967529,
 3Droo=149.99999773205013,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{}{.7}{Sketching the plane in Example \ref{ex_planes2}.}{fig:planes2}{figures/figplanes2}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{}{.75}{Sketching the plane in Example \ref{ex_planes2}.}{fig:planes2}{figures/figplanes2}
 %\mfigure{.7}{Sketching the plane in Example \ref{ex_planes2}.}{fig:planes2}{figures/figplanes2}
 }\\
 
-\enlargethispage{2\baselineskip}
+The two previous examples hint at an alternative method for describing a plane in $\R^3$: instead of providing a single direction orthogonal to the plane (given by the normal vector), we can give two directions that are \textit{parallel} to the plane, such as the vectors $\overrightarrow{PQ}$ and $\overrightarrow{PR}$ in Figure \ref{fig:planes1} of the direction vectors $\vec{d}_1$ and $\vec{d}_2$ to the lines in Figure \ref{fig:planes2}. Suppose $(x,y,z)$ is a point on the plane $5x+4y-7z=7$ from Example \ref{ex_planes2}. We can treat the point $(-1,3,0)$ where the lines $\vec\ell_1$ and $\vec\ell_2$ intersect as our point of reference on the plane. From this point, we can reach the point $(x,y,z)$ by first travelling some distance in the direction of $\vec{d}_1$ (parallel to $\vec\ell_1$), and then some distance in the direction of $\vec{d}_2$ (parallel to $\vec\ell_2$). We can express this mathematically as follows:
+\begin{align}
+\la x,y,z\ra & = \la -1, 3, 0\ra + s\vec{d}_1+t\vec{d}_2\label{eq:planes2a}\\
+ & = \la -1 +2s+3t, 3+s-2t, 2s+t\ra.\notag
+\end{align}
+Equation \eqref{eq:planes2a} can be viewed as a two-dimensional analogue of the vector equation of a line given in the previous section. It tells us that to get from the origin $(0,0,0)$ to the point $(x,y,z)$ on the plane, we should first travel to the point $(-1,3,0)$ on the plane, and then move parallel to the lines $\vec\ell_1$ and $\vec\ell_2$ until we reach our point. This vector equation for a plane is not particularly useful in Science or Engineering applications, but it is useful mathematically. In particular, if we wanted to describe a two-dimensional plane in $\R^4$ (or any higher-dimensional space), we would have to resort to this method. (Keeping this method for describing a plane in mind will also help us to access some geometric intuition when we discuss span and linear independence later in the text.)\\
+
+\mnote{.55}{We can think of the point $(-1,3,0)$ in Example \ref{ex_planes2} as defining a point of ``origin'' on the plane, and, even though they are not perpendicular, we can think of the lines $\vec\ell_1$ and $\vec\ell_2$ as defining a pair of coordinate axes on the plane. Any other point can be located with respect to these axes. (Any two non-parallel lines define a coordinate system in a plane; perpendicular lines are simply more convenient.)}
+
 \example{ex_planes3}{Finding the equation of a plane}{
 Give the equation, in standard form, of the plane that passes through the point $P=(-1,0,1)$ and is orthogonal to the line with vector equation $\vec \ell(t) = \la -1,0,1\ra + t\la 1,2,2\ra$.}
-{As the plane is to be orthogonal to the line, the plane must be orthogonal to the direction of the line given by $\vec d = \la 1,2,2\ra$. We use this as our normal vector. Thus the plane's equation, in standard form, is $$(x+1) +2y+2(z-1)=0.$$ The line and plane are sketched in Figure \ref{fig:planes3}.
+{As the plane is to be orthogonal to the line, the plane must be orthogonal to the direction of the line given by $\vec d = \la 1,2,2\ra$. We use this as our normal vector. Thus the plane's equation, in standard form, is 
+\[
+(x+1) +2y+2(z-1)=0.
+\]
+The line and plane are sketched in Figure \ref{fig:planes3}.
 \mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=-0.19776251118795246,
 3Dortho=0.0055,
 3Dc2c=0.7284952998161316 0.6353668570518494 0.2561318576335907,
 3Dcoo=-0.8311604261398315 6.69713020324707 -4.196701526641846,
 3Droo=149.99999682944613,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 0mm 5mm 5mm,clip=true}{.35}{The line and plane in Example \ref{ex_planes3}.}{fig:planes3}{figures/figplanes3}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 0mm 5mm 5mm,clip=true}{.25}{The line and plane in Example \ref{ex_planes3}.}{fig:planes3}{figures/figplanes3}
 %\mfigure[scale=1.25,trim=5mm 0mm 5mm 5mm,clip=true]{.35}{The line and plane in Example \ref{ex_planes3}.}{fig:planes3}{figures/figplanes3}
 }\\
+
+%The next example shows how to find the intersection of two planes using the techniques we have developed so far. In the next chapter we will be able to devise a much more elegant solution by treating the equations of the two planes as a system of linear equations.\\
 
 \example{ex_planes4}{Finding the intersection of two planes}{
 Give the parametric equations of the line that is the intersection of the planes $p_1$ and $p_2$, where:
@@ -131,7 +161,9 @@ We can choose any value for $x$; we choose $x=1$. This determines that $y=1$. We
 We now need the direction of the line. Since the line lies in each plane, its direction is orthogonal to a normal vector for each plane. Considering the equations for $p_1$ and $p_2$, we can quickly determine their normal vectors. For $p_1$, $\vec n_1 = \la 1,-1,1\ra$ and for $p_2$, $\vec n_2 = \la -2,1,1\ra.$ A direction orthogonal to both of these directions is their cross product: $\vec d = \vec n_1\times \vec n_2 = \la -2,-3,-1\ra.$
 
 The parametric equations of the line through $P=(1,1,-1)$ in the direction of $d=\la -2,-3,-1\ra$ is:
-$$\ell: \quad x= -2t+1\quad y = -3t+1\quad z=-t-1.$$
+\[
+\ell: \quad x= -2t+1\quad y = -3t+1\quad z=-t-1.
+\]
 The planes and line are graphed in Figure \ref{fig:planes4}.
 \mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=-1.123268578351379,
@@ -139,9 +171,50 @@ The planes and line are graphed in Figure \ref{fig:planes4}.
 3Dc2c=0.3357679545879364 0.7699711322784424 0.5425903797149658,
 3Dcoo=-0.8311622142791748 6.697126388549805 -4.196705341339111,
 3Droo=149.99999623071383,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 0mm 5mm 5mm,clip=true}{.75}{Graphing the planes and their line of intersection in Example \ref{ex_planes4}.}{fig:planes4}{figures/figplanes4}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=5mm 0mm 5mm 5mm,clip=true}{.55}{Graphing the planes and their line of intersection in Example \ref{ex_planes4}.}{fig:planes4}{figures/figplanes4}
 %\mfigure[scale=1.25,trim=5mm 0mm 5mm 5mm,clip=true]{.5}{Graphing the planes and their line of intersection in Example \ref{ex_planes4}.}{fig:planes4}{figures/figplanes4}
 }\\
+
+In the previous example, note that any point $(x,y,z)$ on the line $\ell$ is a point on \textit{both} of the planes $p_1$ and $p_2$. We can view the pair of equations defining $p_1$ and $p_2$ as a \textit{system} 
+\[
+\begin{array}{ccccccc}
+x&-&y&+&z&=&-1\\
+-2x&+&y&+&z&=&-2
+\end{array}
+\]
+of two linear equations in the three variables $x,y,z$. Any point $(x,y,z)$ on $\ell$ belongs to both planes, and thus satisfies both equations; we say that $(x,y,z)$ is a \textit{solution} to the system above. We expect our line to be the set of all such solutions. 
+
+Another way to obtain our description of $\ell$ is as follows. Instead of solving both equations immediately for $z$, we first use the equation for $p_1$ to eliminate the $x$ variable from the equation for $p_2$: multiplying both sides of the first equation by 2, we get $2x-2y+2z=-2$. Adding this equation to the equation for $p_2$, we obtain the equation
+\[
+-y+3z=-4.
+\]
+Solving for $y$, we get $y=3z+4$; note that we have now solved for $y$ in terms of $z$ only. Note also that any point $(x,y,z)$ that satisfied both of our original equations must also satisfy our new equation. (Make sure you understand why!) If we substitute $y=3z+4$ into the equation for $p_1$, we obtain
+\[
+x-(3z+4)+z = -1,
+\]
+and solving for $x$ gives $x=2z-1$. Summing up, we have
+\begin{align*}
+x & = -1+2z\\
+y & = 4+3z\\
+z & = z.
+\end{align*}
+This looks a lot like the parametric equations for a line, except that we have the trivial equation $z=z$ at the bottom, and no parameter $t$. The key here is to realize that because $z=z$ is always satisfied, the variable $z$ is free to take on any value that it wants, so there's no harm in declaring that $z$ \textbf{is} the parameter. If we introduce a new variable $t$ and declare that $z=t$, then we obtain the parametric equations
+\begin{align*}
+z & = -1+2t\\
+Y & = 4+3t\\
+z = t,
+\end{align*}
+which are now definitely the parametric equations of a line. In vector form, we have
+\[
+\vec\ell(t) = \langle \la -1, 4, 0\ra + t\la 2, 3, 1\ra.
+\]
+Is this the same line as before? Our direction vector is note the same as before, but it is parallel: $\la 2,3,1\ra = -\vec{d}$. Our point on the line is also different. However, note that if we set $t=-1$ in the parametric equations we found in Example \ref{ex_planes4}, we get
+\[
+x = -2+1 = -1, y = -3(-1)+1 = 4, \text{ and } z = -(-1)-1 = 0,
+\]
+so we have indeed found the same line as before.\\
+
+\mnote{.3}{\textbf{Note:} Once again, the system of equations we solved in the discussion following Example \ref{ex_planes4} is exactly the sort of thing we'll learn how to tackle in general in Chapter \ref{chapter:linear}. In this case, we would say that the system has \textit{infinitely many solutions}, or, if we wanted to be more specific, a \textit{one-parameter family} of solutions.}
 
 \example{ex_planes5}{Finding the intersection of a plane and a line}{
 Find the point of intersection, if any, of the line $\ell(t) = \la 3,-3,-1\ra +t\la-1,2,1\ra$ and the plane with equation in general form $2x+y+z=4$.
@@ -149,7 +222,9 @@ Find the point of intersection, if any, of the line $\ell(t) = \la 3,-3,-1\ra +t
 {The equation of the plane shows that the vector $\vec n = \la 2,1,1\ra$ is a normal vector to the plane, and the equation of the line shows that the line moves parallel to $\vec d = \la -1,2,1\ra$. Since these are not orthogonal, we know there is a point of intersection. (If there were orthogonal, it would mean that the plane and line were parallel to each other, either never intersecting or the line was in the plane itself.)
 
 To find the point of intersection, we need to find a $t$ value such that $\ell(t)$ satisfies the equation of the plane. Rewriting the equation of the line with parametric equations will help:
-$$\ell(t) = \left\{\begin{aligned} x&= 3-t\\ y&=-3+2t\\ z&= -1+t \end{aligned}\right..$$
+\[
+\ell(t) = \left\{\begin{aligned} x&= 3-t\\ y&=-3+2t\\ z&= -1+t \end{aligned}\right..
+\]
 Replacing $x$, $y$ and $z$ in the equation of the plane with the expressions containing $t$ found in the equation of the line allows us to determine a $t$ value that indicates the point of intersection:
 \begin{align*}
 2x+y+z &=4 \\
@@ -163,7 +238,7 @@ When $t=2$, the point on the line satisfies the equation of the plane; that poin
 3Dc2c=0.6873484253883362 0.6952667832374573 0.2101338654756546,
 3Dcoo=7.167160511016846 -9.016068458557129 21.630752563476562,
 3Droo=149.9999995928182,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=2mm 0mm 2mm 0mm,clip}{.5}{Illustrating the intersection of a line and a plane in Example \ref{ex_planes5}.}{fig:planes5}{figures/figplanes5}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=2mm 0mm 2mm 0mm,clip}{.3}{Illustrating the intersection of a line and a plane in Example \ref{ex_planes5}.}{fig:planes5}{figures/figplanes5}
 %\mfigure[scale=1.25,trim=2mm 0mm 2mm 0mm,clip]{.7}{Illustrating the intersection of a line and a plane in Example \ref{ex_planes5}.}{fig:planes5}{figures/figplanes5}
 }\\
 
@@ -171,43 +246,83 @@ When $t=2$, the point on the line satisfies the equation of the plane; that poin
 
 Just as it was useful to find distances between points and lines in the previous section, it is also often necessary to find the distance from a point to a plane. 
 
-Consider Figure \ref{fig:planes_dist}, where a plane with normal vector $\vec n$ is sketched containing a point $P$ and a point $Q$, not on the plane, is given. We measure the distance from $Q$ to the plane by measuring the length of the projection of $\vv{PQ}$ onto $\vec n$. That is, we want:
-\begin{equation}\snorm{\text{proj}_{\,\vec n}\,{\vv{PQ}}} = \snorm{\frac{\vec n\cdot \vv{PQ}}{\vnorm n^2}\vec n} = \frac{|\vec n\cdot \vv{PQ}|}{\vnorm n}\label{eq:plane_dist}
+Consider Figure \ref{fig:planes_dist}, where a plane with normal vector $\vec n$ is sketched containing a point $P$ and a point $Q$, not on the plane, is given. We measure the distance from $Q$ to the plane by measuring the length of the projection of $\overrightarrow{PQ}$ onto $\vec n$. That is, we want:
+\begin{equation}\snorm{\text{proj}_{\,\vec n}\,{\overrightarrow{PQ}}} = \snorm{\frac{\vec n\cdot \overrightarrow{PQ}}{\vnorm n^2}\vec n} = \frac{|\vec n\cdot \overrightarrow{PQ}|}{\vnorm n}\label{eq:plane_dist}
 \end{equation}
-Equation \eqref{eq:plane_dist} is important as it does more than just give the distance between a point and a plane. We will see how it allows us to find several other distances as well: the distance between parallel planes and the distance from a line and a plane. Because Equation \eqref{eq:plane_dist} is important, we restate it as a Key Idea.
+
+\mnote{.5}{\textbf{Note:} Equation \eqref{eq:plane_dist} is useful as it does more than just give the distance between a point and a plane. We will see how it allows us to find several other distances as well: the distance between parallel planes and the distance from a line and a plane. %Because Equation \eqref{eq:plane_dist} is important, we restate it as a Key Idea.
+
+However, as with the distance problems in the previous section, learning to follow the steps in Key Idea \ref{idea:distance_method} will pay off more in the long run than memorizing a formula. Here, our key steps are to draw a diagram such as Figure \ref{fig:planes_dist}, which doesn't need to be accurate, but does need to contain all the  information needed to construct the projection whose length gives us the desired distance.}
+
 \mfigurethree{width=125pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=1.7009341752827345,
 3Dortho=0.007484772708266974,
 3Dc2c=0.6873484253883362 0.6952667832374573 0.2101338654756546,
 3Dcoo=1.2409521341323853 -5.606988430023193 29.735889434814453,
 3Droo=149.9999995928182,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{.2}{Illustrating finding the distance from a point to a plane.}{fig:planes_dist}{figures/figplanes_dist}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25}{.7}{Illustrating finding the distance from a point to a plane.}{fig:planes_dist}{figures/figplanes_dist}
 %\mfigure[scale=1.25]{.4}{Illustrating finding the distance from a point to a plane.}{fig:planes_dist}{figures/figplanes_dist}
 
-\keyidea{idea:planes_dist}{Distance from a Point to a Plane}
-{Let a plane with normal vector $\vec n$ be given, and let $Q$ be a point. The distance $h$ from $Q$ to the plane is 
-$$h = \frac{|\vec n\cdot \vv{PQ}|}{\vnorm n},$$
-where $P$ is any point in the plane.
-\index{planes!distance between point and plane}\index{distance!between point and plane}
-}
+%\keyidea{idea:planes_dist}{Distance from a Point to a Plane}
+%{Let a plane with normal vector $\vec n$ be given, and let $Q$ be a point. The distance $h$ from $Q$ to the plane is 
+%\[
+%h = \frac{|\vec n\cdot \overrightarrow{PQ}|}{\vnorm n},
+%\]
+%where $P$ is any point in the plane.
+%\index{planes!distance between point and plane}\index{distance!between point and plane}
+%}
 
 \example{ex_planes6}{Distance between a point and a plane}{
 Find the distance bewteen the point $Q = (2,1,4)$ and the plane with equation $2x-5y+6z=9$.}
-{Using the equation of the plane, we find the normal vector $\vec n = \la 2,-5,6\ra$. To find a point on the plane, we can let $x$ and $y$ be anything we choose, then let $z$ be whatever satisfies the equation. Letting $x$ and $y$ be 0 seems simple; this makes $z = 1.5$. Thus we let $P = \la 0,0,1.5\ra$, and $\vv{PQ} = \la 2,1,2.5\ra.$
+{Referring to Figure \ref{fig:planes_dist}, we need to determine the normal vector $\vec n$ and a point $P$ on the plane. Using the equation of the plane, we find the normal vector $\vec n = \la 2,-5,6\ra$. To find a point on the plane, we can let $x$ and $y$ be anything we choose, then let $z$ be whatever satisfies the equation. Letting $x$ and $y$ be 0 seems simple; this makes $z = \frac{3}{2}$. Thus we let $P = \la 0,0,\frac{3}{2}\ra$, and $\overrightarrow{PQ} = \la 2,1,\frac{5}{2}\ra.$
 
-The distance $h$ from $Q$ to the plane is given by Key Idea \ref{idea:planes_dist}:
+We can now compute the projection of $\overrightarrow{PQ}$ onto $\vec n$. We have:
 \begin{align*}
-h &= \frac{|\vec n\cdot \vv{PQ}|}{\vnorm n} \\
-  &= \frac{|\la 2,-5,-6\ra \cdot \la 2,1,2.5\ra|}{\norm{\la 2,-5,-6\ra}} \\
-	&= \frac{ |-16|}{\sqrt{65}} \\
-	&\approx 1.98.
+\operatorname{proj}_{\vec n}\overrightarrow{PQ} & = \left(\frac{\overrightarrow{PQ}\boldsymbol{\cdot}\vec n}{\len{\vec n}^2}\right)\vec n\\
+ & = \left(\frac{\la 2, 1, \frac{5}{2}\ra \boldsymbol{\cdot} \la 2, -5, 6\ra}{(2^2+5^2+6^2)}\right)\la 2, -5, 6\ra\\
+ & = \frac{14}{65}\la 2, -5, 6\ra.
 \end{align*}
+The desired distance is then given by
+\[
+\len{\vec n} = \frac{14}{65}\len{\la 2, -5, 6\ra} = \frac{14}{\sqrt{65}}.
+\]
 \vskip-2\baselineskip
 }\\
 
-We can use Key Idea \ref{idea:planes_dist} to find other distances. Given two parallel planes, we can find the distance between these planes by letting $P$ be a point on one plane and $Q$ a point on the other. If $\ell$ is a line parallel to a plane, we can use the Key Idea to find the distance between them as well: again, let $P$ be a point in the plane and let $Q$ be any point on the line. (One can also use Key Idea \ref{idea:line_distance}.) The Exercise section contains problems of these types.
+Although it was not requested in Example \ref{ex_planes6}, note that we can also find the point $R$ on the plane that is closest to $Q$. The desired point must be such that $\overrightarrow{RQ} = \operatorname{proj}_{\vec n}\overrightarrow{PQ}$. Since we know the point $Q$ and the vector $\overrightarrow{RQ}$, we can find the point $R$: since $\overrightarrow{RQ} = \overrightarrow{OQ}-\overrightarrow{OR}$, we find that
+\begin{align*}
+\overrightarrow{OR} & = \overrightarrow{OQ}-\overrightarrow{RQ}\\
+ & = \la 2, 1, 4\ra - \frac{14}{65}\la 2, -5, 6\ra\\
+ & = \frac{1}{65}\la 102, 135, 176\ra.
+\end{align*}
+The desired point $R$ thus has coordinates $\left(\dfrac{102}{65}, \dfrac{135}{65}, \dfrac{176}{65}\right)$. To make sure that we haven't made any mistakes, let's make sure that this point is indeed on the plane. We have
+\[
+2\left(\frac{102}{65}\right)-5\left(\frac{135}{65}\right)+6\left(\frac{176}{65}\right) = \frac{1}{65}(204-675+1056) = \frac{585}{65}=9,
+\]
+as expected.\\
 
-\enlargethispage{2\baselineskip}
-These past two sections have not explored lines and planes in space as an exercise of mathematical curiosity. However, there are many, many applications of these fundamental concepts. Complex shapes can be modeled (or, \textit{approximated}) using planes. For instance, part of the exterior of an aircraft may have a complex, yet smooth, shape, and engineers will want to know how air flows across this piece as well as how heat might build up due to air friction. Many equations that help determine air flow and heat dissipation are difficult to apply to arbitrary surfaces, but simple to apply to planes. By approximating a surface with millions of small planes one can more readily model the needed behavior.
+\example{ex_planes7}{Distance between a line and a plane}{
+Let $\ell$ be the line with vector equation
+\[
+\vec\ell(t) = \la 3, 2, -4\ra + t\la 3, 1, -1\ra,
+\]
+and let $p$ be the plane with equation $x-2y+z=4$. Verify that the $\ell$ is parallel to the plane $p$, and find the distance between them.
+}
+{From the vector equation for $\ell$ we have the direction vector $\vec{d} = \la 3, 1, -1\ra$, and from the equation for $p$ we can read off the normal vector $\vec{n} = \la 1, -2, 1\ra$. Since
+\[
+\dotp dn = 3(1)+1(-2)-1(1) = 0,
+\]
+we know that $\vec{d}$ is orthogonal to $\vec{n}$, and thus $\ell$ is parallel to $p$. To find the distance from $\ell$ to $p$, we first choose a point on each object. From the vector equation for $\ell$ we have the point $P=(2,0,-4)$, and setting $y=z=0$ in the equation for $p$, we get $x=4$ and the point $Q=(4,0,0)$.
+
+From these two points we can construct the vector 
+\[
+\vec v = \overrightarrow{PQ} = \la 1, -2, 4\ra
+\]
+which begins on $\ell$ and ends on $p$. The distance from $\ell$ to $p$ is then given by the normal component of $\vec{v}$: we have
+\[
+h = \len{\operatorname{proj}_{\vec{n}}\vec{v}} = \frac{\abs{\dotp nv}}{\len{\vec{n}}} = \frac{9}{6} = \frac{3}{2}.
+\]}\\
+
+These past two sections have not explored lines and planes in space as merely an exercise of mathematical curiosity. There are many, many applications of these fundamental concepts. Complex shapes can be modelled (or, \textit{approximated}) using planes. For instance, part of the exterior of an aircraft may have a complex, yet smooth, shape, and engineers will want to know how air flows across this piece as well as how heat might build up due to air friction. Many equations that help determine air flow and heat dissipation are difficult to apply to arbitrary surfaces, but simple to apply to planes. By approximating a surface with millions of small planes one can more readily model the needed behaviour.
 
 \printexercises{exercises/10_06_exercises}

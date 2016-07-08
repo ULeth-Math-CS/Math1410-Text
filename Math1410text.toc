@@ -1,48 +1,47 @@
 \thispagestyle {empty}
 \contentsline {chapter}{Table of Contents}{iii}{Doc-Start}
 \contentsline {chapter}{Preface}{v}{section*.2}
-\contentsline {chapter}{\numberline {1}The Real and Complex Number Systems}{1}{chapter.1}
+\contentsline {chapter}{\numberline {1}The Real Numbers}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Some Basic Set Theory Notions}{1}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Sets of Real Numbers}{3}{subsection.1.1.1}
-\contentsline {section}{\numberline {1.2}Real Number Arithmetic}{10}{section.1.2}
-\contentsline {section}{\numberline {1.3}The Cartesian Coordinate Plane}{26}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Distance in the Plane}{29}{subsection.1.3.1}
-\contentsline {section}{\numberline {1.4}Complex Numbers}{34}{section.1.4}
-\contentsline {section}{\numberline {1.5}Polar Coordinates}{41}{section.1.5}
-\contentsline {section}{\numberline {1.6}The Polar Form of Complex Numbers}{55}{section.1.6}
-\contentsline {chapter}{\numberline {2}Vectors}{71}{chapter.2}
-\contentsline {section}{\numberline {2.1}Introduction to Cartesian Coordinates in Space}{71}{section.2.1}
-\contentsline {section}{\numberline {2.2}An Introduction to Vectors}{76}{section.2.2}
-\contentsline {section}{\numberline {2.3}The Dot Product}{87}{section.2.3}
-\contentsline {section}{\numberline {2.4}The Cross Product}{97}{section.2.4}
-\contentsline {section}{\numberline {2.5}Lines}{106}{section.2.5}
-\contentsline {section}{\numberline {2.6}Planes}{115}{section.2.6}
-\contentsline {chapter}{\numberline {3}Systems of Linear Equations}{123}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction to Linear Equations}{123}{section.3.1}
-\contentsline {section}{\numberline {3.2}Using Matrices To Solve Systems of Linear Equations}{128}{section.3.2}
-\contentsline {section}{\numberline {3.3}Elementary Row Operations and Gaussian Elimination}{135}{section.3.3}
-\contentsline {section}{\numberline {3.4}Existence and Uniqueness of Solutions}{144}{section.3.4}
-\contentsline {section}{\numberline {3.5}Applications of Linear Systems}{155}{section.3.5}
-\contentsline {chapter}{\numberline {4}Matrix Arithmetic}{165}{chapter.4}
-\contentsline {section}{\numberline {4.1}Matrix Addition and Scalar Multiplication}{165}{section.4.1}
-\contentsline {section}{\numberline {4.2}Matrix Multiplication}{172}{section.4.2}
-\contentsline {section}{\numberline {4.3}Visualizing Matrix Arithmetic in 2D}{185}{section.4.3}
-\contentsline {section}{\numberline {4.4}Vector Solutions to Linear Systems}{198}{section.4.4}
-\contentsline {section}{\numberline {4.5}Solving Matrix Equations $\ensuremath {A}\ensuremath {X}=\ensuremath {B}$}{214}{section.4.5}
-\contentsline {section}{\numberline {4.6}The Matrix Inverse}{220}{section.4.6}
-\contentsline {section}{\numberline {4.7}Properties of the Matrix Inverse}{228}{section.4.7}
-\contentsline {chapter}{\numberline {5}Operations on Matrices}{235}{chapter.5}
-\contentsline {section}{\numberline {5.1}The Matrix Transpose}{235}{section.5.1}
-\contentsline {section}{\numberline {5.2}The Matrix Trace}{244}{section.5.2}
-\contentsline {section}{\numberline {5.3}The Determinant}{248}{section.5.3}
-\contentsline {section}{\numberline {5.4}Properties of the Determinant}{257}{section.5.4}
-\contentsline {section}{\numberline {5.5}Cramer's Rule}{267}{section.5.5}
-\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{271}{chapter.6}
-\contentsline {section}{\numberline {6.1}Eigenvalues and Eigenvectors}{271}{section.6.1}
-\contentsline {section}{\numberline {6.2}Properties of Eigenvalues and Eigenvectors}{284}{section.6.2}
-\contentsline {chapter}{\numberline {7}Graphical Explorations of Vectors}{293}{chapter.7}
-\contentsline {section}{\numberline {7.1}Transformations of the Cartesian Plane}{293}{section.7.1}
-\contentsline {section}{\numberline {7.2}Properties of Linear Transformations}{307}{section.7.2}
-\contentsline {section}{\numberline {7.3}Visualizing Vectors: Vectors in Three Dimensions}{318}{section.7.3}
+\contentsline {section}{\numberline {1.2}Real Number Arithmetic}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}The Cartesian Coordinate Plane}{12}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Distance in the Plane}{14}{subsection.1.3.1}
+\contentsline {chapter}{\numberline {2}Vector Geometry}{19}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction to Cartesian Coordinates in Space}{19}{section.2.1}
+\contentsline {section}{\numberline {2.2}An Introduction to Vectors}{23}{section.2.2}
+\contentsline {section}{\numberline {2.3}The Dot Product}{35}{section.2.3}
+\contentsline {section}{\numberline {2.4}The Cross Product}{45}{section.2.4}
+\contentsline {section}{\numberline {2.5}Lines}{57}{section.2.5}
+\contentsline {section}{\numberline {2.6}Planes}{69}{section.2.6}
+\contentsline {chapter}{\numberline {3}Matrix Arithmetic}{79}{chapter.3}
+\contentsline {section}{\numberline {3.1}Matrix Addition and Scalar Multiplication}{79}{section.3.1}
+\contentsline {section}{\numberline {3.2}Matrix Multiplication}{86}{section.3.2}
+\contentsline {section}{\numberline {3.3}Visualizing Matrix Arithmetic in 2D}{99}{section.3.3}
+\contentsline {section}{\numberline {3.4}Transformations of the Cartesian Plane}{112}{section.3.4}
+\contentsline {section}{\numberline {3.5}Properties of Linear Transformations}{125}{section.3.5}
+\contentsline {chapter}{\numberline {4}Systems of Linear Equations}{137}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction to Linear Equations}{137}{section.4.1}
+\contentsline {section}{\numberline {4.2}Using Matrices To Solve Systems of Linear Equations}{142}{section.4.2}
+\contentsline {section}{\numberline {4.3}Elementary Row Operations and Gaussian Elimination}{149}{section.4.3}
+\contentsline {section}{\numberline {4.4}Existence and Uniqueness of Solutions}{158}{section.4.4}
+\contentsline {section}{\numberline {4.5}Applications of Linear Systems}{169}{section.4.5}
+\contentsline {chapter}{\numberline {5}Matrix Algebra}{179}{chapter.5}
+\contentsline {section}{\numberline {5.1}Vector Solutions to Linear Systems}{179}{section.5.1}
+\contentsline {section}{\numberline {5.2}Solving Matrix Equations $\ensuremath {A}\ensuremath {X}=\ensuremath {B}$}{195}{section.5.2}
+\contentsline {section}{\numberline {5.3}The Matrix Inverse}{201}{section.5.3}
+\contentsline {section}{\numberline {5.4}Properties of the Matrix Inverse}{209}{section.5.4}
+\contentsline {chapter}{\numberline {6}Operations on Matrices}{217}{chapter.6}
+\contentsline {section}{\numberline {6.1}The Matrix Transpose}{217}{section.6.1}
+\contentsline {section}{\numberline {6.2}The Matrix Trace}{226}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Determinant}{230}{section.6.3}
+\contentsline {section}{\numberline {6.4}Properties of the Determinant}{239}{section.6.4}
+\contentsline {section}{\numberline {6.5}Cramer's Rule}{249}{section.6.5}
+\contentsline {chapter}{\numberline {7}The Complex Numbers}{253}{chapter.7}
+\contentsline {section}{\numberline {7.1}Complex Numbers}{253}{section.7.1}
+\contentsline {section}{\numberline {7.2}Polar Coordinates}{262}{section.7.2}
+\contentsline {section}{\numberline {7.3}The Polar Form of Complex Numbers}{276}{section.7.3}
+\contentsline {chapter}{\numberline {8}Eigenvalues and Eigenvectors}{293}{chapter.8}
+\contentsline {section}{\numberline {8.1}Eigenvalues and Eigenvectors}{293}{section.8.1}
+\contentsline {section}{\numberline {8.2}Properties of Eigenvalues and Eigenvectors}{306}{section.8.2}
 \contentsline {chapter}{\numberline {A}Answers To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.15}{section*.173}
+\contentsline {chapter}{Index}{A.15}{section*.234}
