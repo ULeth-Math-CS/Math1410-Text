@@ -2,25 +2,20 @@
 \label{CartesianPlane}
 
 As a warm-up for the discussions of vectors and three-dimensional geometry yet to come, we will make a quick review of the \index{Cartesian coordinate plane} \sword{Cartesian Coordinate Plane}. 
-Imagine two real number lines crossing at a right angle at $0$ as drawn below.
+Imagine two real number lines crossing at a right angle at $0$ as shown in Figure \ref{fig:cartplane}.
 
-\mnote{.85}{The Cartesian Plane is named in honour of \href{http://en.wikipedia.org/wiki/Descartes}{\underline{Ren\'{e} Descartes}}.} 
+\mnote{.5}{The Cartesian Plane is named in honour of \href{http://en.wikipedia.org/wiki/Descartes}{\underline{Ren\'{e} Descartes}}.} 
 
-\mnote{.7}{We will also soon see that the best way to visualize the set of \textit{complex numbers} is by identifying complex numbers with points in the Cartesian plane.}
-\begin{center}
 
-\myincludegraphics{figures/CartesianPlane-21}
 
-\end{center}
+\mfigure[width=0.95\marginparwidth]{.75}{The Cartesian coordinate plane}{fig:cartplane}{figures/CartesianPlane-21}
 
-\medskip
 
 The horizontal number line is usually called the \index{$x$-axis} \sword{\boldmath $x$-axis} while the vertical number line is usually called the \index{$y$-axis} \sword{\boldmath $y$-axis}.  As with the usual number line, we imagine these axes extending off indefinitely in both directions.   Having two number lines allows us to locate the positions of points off of the number lines as well as points on the lines themselves.  
 
-\mnote{.4}{Usually extending off  towards infinity is indicated by arrows, but here, the arrows are used to indicate the \textit{direction} of increasing values of $x$ and $y$.}
+\mnote{.6}{Usually extending off  towards infinity is indicated by arrows, but here, the arrows are used to indicate the \textit{direction} of increasing values of $x$ and $y$.}
 
-
-\mnote{.2}{The names of the coordinates can vary depending on the context of the application.  If, for example, the horizontal axis represented time we might choose to call it the $t$-axis.  The first number in the ordered pair would then be the $t$-coordinate.}
+\mnote{.4}{The names of the coordinates can vary depending on the context of the application.  If, for example, the horizontal axis represented time we might choose to call it the $t$-axis.  The first number in the ordered pair would then be the $t$-coordinate.}
 
 \medskip
 
@@ -29,7 +24,7 @@ For example, consider the point $P$ on the next page.  To use the numbers on the
 
 \medskip
 
-\noindent\ifthenelse{\isodd{\thepage}}{\hskip-110pt}{}
+\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-110pt}
 \noindent\begin{minipage}{1.3\linewidth}
 \begin{tabular}{cc}
 \myincludegraphics{figures/CartesianPlane-22} &
@@ -39,9 +34,9 @@ For example, consider the point $P$ on the next page.  To use the numbers on the
 \end{tabular}
 \end{minipage}
 
-When we speak of the Cartesian Coordinate Plane, we mean the set of all possible ordered pairs $(x,y)$ as $x$ and $y$ take values from the real numbers.  Below is a summary of important facts about Cartesian coordinates.
 
-\mnote{.5}{Cartesian coordinates are sometimes referred to as \textit{rectangular coordinates}, to distinguish them from other coordinate systems such as \textit{polar coordinates}. }
+
+When we speak of the Cartesian Coordinate Plane, we mean the set of all possible ordered pairs $(x,y)$ as $x$ and $y$ take values from the real numbers.  Below is a summary of important facts about Cartesian coordinates.
 
 
 \smallskip 
@@ -62,7 +57,14 @@ When we speak of the Cartesian Coordinate Plane, we mean the set of all possible
 \end{itemize}
 }
 
-\mnote{0.3}{The letter $O$ is almost always reserved for the origin.}
+\mnote{.65}{Cartesian coordinates are sometimes referred to as \textit{rectangular coordinates}, to distinguish them from other coordinate systems such as \textit{polar coordinates}: see Section \ref{IntroPolar}. }
+
+\mnote{.55}{We will also see in Chapter \ref{chapter:complex} that the best way to visualize the set of \textit{complex numbers} is by identifying complex numbers with points in the Cartesian plane.}
+
+
+
+
+\mnote{.75}{The letter $O$ is almost always reserved for the origin.}
 \example{ex_cartplot}{Plotting points in the Cartesian Plane}{
 Plot the following points: $A(5,8)$, $B\left(-\frac{5}{2}, 3\right)$, $C(-5.8, -3)$, $D(4.5, -1)$, $E(5,0)$, $F(0,5)$, $G(-7,0)$, $H(0, -9)$, $O(0,0)$.
 }
@@ -79,12 +81,12 @@ To plot these points, we start at the origin and move to the right if the $x$-co
 
 \medskip
 
-%\pagebreak
+\pagebreak
 
 The axes divide the plane into four regions called \index{quadrants} \sword{quadrants}.  They are labelled with Roman numerals and proceed counterclockwise around the plane: see Figure \ref{quadrant}.
 
 
-\mtable{.35}{The four quadrants of the Cartesian plane}{quadrant}{
+\mtable{.75}{The four quadrants of the Cartesian plane}{quadrant}{
 \begin{tabular}{c}
 \myincludegraphics[scale=0.9]{figures/CartesianPlane-25}
 \end{tabular}
@@ -97,26 +99,32 @@ For example, $(1,2)$ lies in Quadrant I, $(-1,2)$ in Quadrant II, $(-1,-2)$ in Q
 
 \subsection{Distance in the Plane}
 
-Another important concept in Geometry is the notion of length.  If we are going to unite Algebra and Geometry using the Cartesian Plane, then we need to develop an algebraic understanding of what distance in the plane means.  Suppose we have two points, $P\left(x_{0}, y_{0}\right)$ and $Q\left(x_{1}, y_{1}\right),$ in the plane. By the \index{distance ! definition} \sword{distance} $d$  between $P$ and $Q$, we mean the length of the line segment joining $P$ with $Q$.  (Remember, given any two distinct points in the plane, there is a unique line containing both points.)  Our goal now is to create an algebraic formula to compute the distance between these two points. Consider the generic situation in Figure \ref{fig:cartdist}.
+Another important concept in Geometry is the notion of length.  If we are going to unite Algebra and Geometry using the Cartesian Plane, then we need to develop an algebraic understanding of what distance in the plane means.  Suppose we have two points, $P\left(x_{0}, y_{0}\right)$ and $Q\left(x_{1}, y_{1}\right),$ in the plane. By the \index{distance ! definition} \sword{distance} $d$  between $P$ and $Q$, we mean the length of the line segment joining $P$ with $Q$.  (Remember, given any two distinct points in the plane, there is a unique line containing both points.)  Our goal now is to create an algebraic formula to compute the distance between these two points. Consider the generic situation in Figure \ref{fig:cartdist}(a).
 
 \medskip
 
-\mtable{.7}{Distance between $P$ and $Q$}{fig:cartdist}{
+\mtable{.45}{Distance between $P$ and $Q$}{fig:cartdist}{
 \begin{tabular}{c}
 \myincludegraphics{figures/CartesianPlane-28} \\
+(a)\\
 \\
-\myincludegraphics{figures/CartesianPlane-29}
+\myincludegraphics{figures/CartesianPlane-29}\\
+(b)
 \end{tabular}
 }
 
 \medskip
 
-With a little more imagination, we can envision a right triangle whose hypotenuse has length $d$ as drawn above on the right.  From the latter figure, we see that the lengths of the legs of the triangle are $\left|x_{1} - x_{0}\right|$ and $\left|y_{1} - y_{0}\right|$ so the \href{http://en.wikipedia.org/wiki/Pythagorean_Theorem}{\underline{Pythagorean Theorem}} gives us
+With a little more imagination, we can envision a right triangle whose hypotenuse has length $d$ as drawn in Figure \ref{fig:cartdist}(b).  From the latter figure, we see that the lengths of the legs of the triangle are $\left\lvert x_{1} - x_{0}\right\rvert$ and $\left\lvert y_{1} - y_{0}\right\rvert$ so the \href{http://en.wikipedia.org/wiki/Pythagorean_Theorem}{\underline{Pythagorean Theorem}} gives us
  
-  \[ \left|x_{1} - x_{0}\right|^2 + \left|y_{1} - y_{0}\right|^2 = d^2\]
- \[ \left(x_{1} - x_{0}\right)^2 + \left(y_{1} - y_{0}\right)^2 = d^2\]
+  \begin{align*}
+   \left\lvert x_{1} - x_{0}\right\rvert^2 + \left\lvert y_{1} - y_{0}\right\rvert^2 &= d^2\\
+   \left(x_{1} - x_{0}\right)^2 + \left(y_{1} - y_{0}\right)^2 &= d^2
+  \end{align*}
  
-(Do you remember why we can replace the absolute value notation with parentheses?)  By extracting the square root of both sides of the second equation and using the fact that distance is never negative, we get
+\mnote{.2}{Recall that the \sword{absolute value} \index{absolute value} of a real number $a$, denoted by $\abs{a}$, measures the distance of $a$ from the origin. Since we never want a negative distance, this means $\abs{a}=a$ if $a\geq 0$, while if $a<0$, $\abs{a}=-a$. For example, $\abs{4}=4$, and $\abs{-7} = -(-7)= 7$. Given two real numbers $a$ and $b$, $\abs{a-b}$ measures the distance between them.}
+
+(Since the square of a number is always positive, we can drop the absolute value signs.) By extracting the square root of both sides of the second equation and using the fact that distance is never negative, we get
  
 \medskip
  
@@ -130,7 +138,7 @@ With a little more imagination, we can envision a right triangle whose hypotenus
 
 It is not always the case that the points $P$ and $Q$ lend themselves to constructing such a triangle.  If the points $P$ and $Q$ are arranged vertically or horizontally, or describe the exact same point, we cannot use the above geometric argument to derive the distance formula.  It is left to the reader in Exercise \ref{distanceothercases} to verify Equation \ref{distanceformula} for these cases.
 
-\medskip
+\pagebreak
 
 \example{ex_twoptdist}{Distance between two points}{
 Find and simplify the distance between $P(-2,3)$ and  $Q(1,-3)$.  
@@ -172,7 +180,7 @@ y & =  2 \pm 2 \sqrt{3}
 
 We obtain two answers:  $(1, 2 + 2 \sqrt{3})$ and $(1, 2-2 \sqrt{3}).$  The reader is encouraged to think about why there are two answers.}
 
-\mtable{.8}{Diagram for Example \ref{ex_pointwithdist}}{fig:pointdist}{
+\mtable{.5}{Diagram for Example \ref{ex_pointwithdist}}{fig:pointdist}{
 \begin{tabular}{c}
 \myincludegraphics{figures/CartesianPlane-30}
 \end{tabular}
@@ -182,7 +190,7 @@ We obtain two answers:  $(1, 2 + 2 \sqrt{3})$ and $(1, 2-2 \sqrt{3}).$  The read
 
 Related to finding the distance between two points is the problem of finding the \index{midpoint ! definition of} \sword{midpoint} of the line segment connecting two points.  Given two points, $P\left(x_{0}, y_{0}\right)$ and $Q\left(x_{1}, y_{1}\right)$, the \textbf{midpoint} $M$  of $P$ and $Q$ is defined to be the point on the line segment connecting $P$ and $Q$ whose distance from $P$ is equal to its distance from  $Q$.  
 
-\mtable{.4}{The midpoint of a line segment}{fig:midptseg}{
+\mtable{.16}{The midpoint of a line segment}{fig:midptseg}{
 \begin{tabular}{c}
 \myincludegraphics{figures/CartesianPlane-31}
 \end{tabular}

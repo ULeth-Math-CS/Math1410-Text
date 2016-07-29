@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  8 JUL 2016 10:14
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  28 JUL 2016 15:54
 entering extended mode
 **Math1410text.tex
 (Math1410text.tex
@@ -2003,19 +2003,12 @@ U1/Calibri(0)/m/n/10 of the elements doesn’t matter, so $[]$
  []
 
 
-Overfull \hbox (43.60371pt too wide) in paragraph at lines 39--41
-\EU1/Calibri(0)/m/n/10 sign ‘$\OT1/cmr/m/n/10 =$\EU1/Calibri(0)/m/n/10 ’ and wr
-ite $[] \OT1/cmr/m/n/10 = []$ \EU1/Calibri(0)/m/n/10 or $[] \OT1/cmr/m/n/10 = \
-OMS/cmsy/m/n/10 f[] j []g$\EU1/Calibri(0)/m/n/10 .
- []
-
-
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 55--56
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 57--58
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
@@ -2031,43 +2024,25 @@ ex-text;" at 9.0pt
 
 
 ]
-Overfull \hbox (10.94987pt too wide) in paragraph at lines 59--60
-[]\EU1/Calibri(0)/m/n/10 Now let’s consider the set $[] \OT1/cmr/m/n/10 = \OMS/
-cmsy/m/n/10 f[] j []g$\EU1/Calibri(0)/m/n/10 .
- []
-
-
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 65--66
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 73--74
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 83--84
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 91--92
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-[2]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 97--98
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-File: figures/SetTheory-1.pdf Graphic file (type QTm)
-<use  "figures/SetTheory-1.pdf" >
 Requested font "cmr9" at 9.0pt
 Requested font "cmmi9" at 9.0pt
 Requested font "cmsy9" at 9.0pt
@@ -2082,6 +2057,18 @@ Requested font "[cmmi10]/OT:mapping=tex-text;" at 9.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 Requested font "[cmmi10]/I/OT:mapping=tex-text;" at 9.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+[2]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 105--106
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+File: figures/SetTheory-1.pdf Graphic file (type QTm)
+<use  "figures/SetTheory-1.pdf" >
 File: figures/SetTheory-2.pdf Graphic file (type QTm)
  <use  "figures/SetTheory-2.pdf" >
 File: figures/SetTheory-3.pdf Graphic file (type QTm)
@@ -2100,78 +2087,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 52--53
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 54--55
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-[4
-
-]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 71--72
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 107--108
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-
- []
-
-[5]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 152--153
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
 =tex-text;" at 9.0pt
  -> C:/WINDOWS/Fonts/calibrib.ttf
+[4
+
+]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 73--74
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 109--110
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--110
+
+ []
+
+[5]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 155--156
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
 
 Underfull \hbox (badness 2181) has occurred while \output is active
 []\EU1/Calibri(0)/bx/n/9 Note: \EU1/Calibri(0)/m/n/9 A common denominator \EU1/
 Calibri(0)/bx/n/9 is \EU1/Calibri(0)/m/n/9 re-
  []
 
-
-Underfull \hbox (badness 2189) has occurred while \output is active
-\EU1/Calibri(0)/m/n/9 mon factors - this is really just read-
- []
-
 [6]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 181--182
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 184--185
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
 
  []
 
 
-Overfull \hbox (7.54182pt too wide) in paragraph at lines 329--329
+Overfull \hbox (7.54182pt too wide) in paragraph at lines 331--331
 []$[]$ 
  []
 
 
-Overfull \hbox (21.28006pt too wide) in paragraph at lines 329--329
+Overfull \hbox (21.28006pt too wide) in paragraph at lines 331--331
 []$[]$[] 
  []
 
@@ -2197,17 +2179,17 @@ Underfull \hbox (badness 2753) has occurred while \output is active
  []
 
 [7]
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 329--329
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 331--331
 []$[]$ 
  []
 
 [8]
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 329--329
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 331--331
 []$[]$ 
  []
 
 
-Overfull \hbox (18.67111pt too wide) detected at line 329
+Overfull \hbox (18.67111pt too wide) detected at line 331
 [] \OT1/cmr/m/n/10 = []
  []
 
@@ -2253,9 +2235,6 @@ Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
  [11
 
 ]) (text/00_CartesianPlane.tex
-File: figures/CartesianPlane-21.pdf Graphic file (type QTm)
-
-<use  "figures/CartesianPlane-21.pdf" >
 Requested font "cmbx10" at 10.0pt
 Requested font "cmbx7" at 7.0pt
 Requested font "cmbx5" at 5.0pt
@@ -2271,40 +2250,52 @@ File: figures/CartesianPlane-22.pdf Graphic file (type QTm)
 File: figures/CartesianPlane-23.pdf Graphic file (type QTm)
 
 <use  "figures/CartesianPlane-23.pdf" >
-Overfull \hbox (11.99802pt too wide) in paragraph at lines 34--40
+Overfull \hbox (11.99802pt too wide) in paragraph at lines 29--35
 [][] 
  []
 
 
-Overfull \hbox (97.50815pt too wide) in paragraph at lines 32--41
- $[]$ 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12
-
-]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 63--64
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 58--59
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
- []
-
-File: figures/CartesianPlane-24.pdf Graphic file (type QTm)
-<use  "figures/CartesianPlane-24.pdf" >
-Overfull \hbox (1.9992pt too wide) in paragraph at lines 78--78
- [] 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
+File: figures/CartesianPlane-21.pdf Graphic file (type QTm)
+
+<use  "figures/CartesianPlane-21.pdf" >
+Underfull \hbox (badness 4048) has occurred while \output is active
+[]\EU1/Calibri(0)/m/n/9 Figure 1.3: |The Cartesian coordinate
+ []
+
+[12
+
+]
+File: figures/CartesianPlane-24.pdf Graphic file (type QTm)
+ <use  "figures/CartesianPlane-24.pdf" >
+Overfull \hbox (1.9992pt too wide) in paragraph at lines 80--80
+ [] 
+ []
+
+[13]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 135--136
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
 File: figures/CartesianPlane-25.pdf Graphic file (type QTm)
 
 <use  "figures/CartesianPlane-25.pdf" >
@@ -2321,26 +2312,18 @@ Overfull \hbox (6.99963pt too wide) has occurred while \output is active
  [][] 
  []
 
+
+Underfull \hbox (badness 2020) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 distance of $[]$ from the origin. Since
+ []
+
 [14]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 127--128
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 209--210
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
- []
-
-
-Underfull \vbox (badness 4634) has occurred while \output is active []
-
- [15]
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 201--202
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
@@ -2348,7 +2331,7 @@ File: figures/CartesianPlane-30.pdf Graphic file (type QTm)
 <use  "figures/CartesianPlane-30.pdf" >
 File: figures/CartesianPlane-31.pdf Graphic file (type QTm)
 
-<use  "figures/CartesianPlane-31.pdf" > [16] [17]
+<use  "figures/CartesianPlane-31.pdf" > [15] [16]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -2383,40 +2366,47 @@ File: figures/CartesianPlane-31.pdf Graphic file (type QTm)
 
 File: figures/CartesianPlane-35.pdf Graphic file (type QTm)
 
-<use  "figures/CartesianPlane-35.pdf" > [18
+<use  "figures/CartesianPlane-35.pdf" > [17
 
-])
+]) [18
+
+
+
+]
 Chapter 2.
 (text/10_Space_Intro.tex
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
+ []
+
+
+Underfull \hbox (badness 1226) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 in \EU1/Calibri(0)/m/it/9 any \EU1/Calibri(0)/m/n/9 dimen
+sion, including dimension
+ []
+
+
+Underfull \hbox (badness 2318) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 four or greater. The only thing that
  []
 
 File: figures/figcartcoord1_3D.pdf Graphic file (type QTm)
 <use  "figures/figcartcoord1_3D.pdf" > <figures/figcartcoord1_3D.prc>
 <asylabels.js> <3Dmenu.js> [19
 
-
-
-
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
 
-Overfull \hbox (1.39998pt too wide) in paragraph at lines 52--53
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 54--55
 [][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
  []
 
 
@@ -2425,17 +2415,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
 
  []
 
@@ -2447,12 +2442,17 @@ File: figures/figspaceyz_3D.pdf Graphic file (type QTm)
 File: figures/figspacexz_3D.pdf Graphic file (type QTm)
 
 <use  "figures/figspacexz_3D.pdf" > <figures/figspacexz_3D.prc>
-Overfull \hbox (1.0pt too wide) in paragraph at lines 150--178
+Overfull \hbox (1.0pt too wide) in paragraph at lines 155--183
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--181
+Underfull \hbox (badness 10000) in paragraph at lines 154--187
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--187
 
  []
 
@@ -2463,17 +2463,17 @@ File: figures/figcartcoord2_3D.pdf Graphic file (type QTm)
 
 <use  "figures/figcartcoord2_3D.pdf" > <figures/figcartcoord2_3D.prc>
 Underfull \hbox (badness 3623) has occurred while \output is active
-[]\EU1/Calibri(0)/m/n/9 Figure 2.3: |Plotting the point $[] \OT1/cmr/m/n/9 =
+[]\EU1/Calibri(0)/m/n/9 Figure 2.2: |Plotting the point $[] \OT1/cmr/m/n/9 =
  []
 
 File: figures/figspace1_3D.pdf Graphic file (type QTm)
 <use  "figures/figspace1_3D.pdf" > <figures/figspace1_3D.prc> [20]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
@@ -3402,10 +3402,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--317
  []
 
 
-LaTeX Warning: Reference `idea:line_distance' on page 62 undefined on input lin
-e 326.
-
-
 Overfull \hbox (0.53003pt too wide) in paragraph at lines 326--326
 []$[]$\EU1/Calibri(0)/m/n/10 The equation of the line line gives us the point $
 [] \OT1/cmr/m/n/10 = ([]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@[]\OML/cmm/m/it/
@@ -3451,11 +3447,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
 Underfull \hbox (badness 10000) in paragraph at lines 376--378
 
- []
-
-
-Overfull \hbox (21.53119pt too wide) in paragraph at lines 423--423
-[] 
  []
 
 
@@ -3523,10 +3514,6 @@ Overfull \hbox (5.24432pt too wide) in paragraph at lines 479--479
 Underfull \hbox (badness 10000) in paragraph at lines 479--479
 
  []
-
-
-LaTeX Warning: Reference `idea:line_distance' on page 67 undefined on input lin
-e 479.
 
 [67
 
@@ -3619,9 +3606,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-
-LaTeX Warning: Reference `ex_plane4' on page 73 undefined on input line 245.
-
 File: figures/figplanes5_3D.pdf Graphic file (type QTm)
 <use  "figures/figplanes5_3D.pdf" > <figures/figplanes5_3D.prc> [73]
 Underfull \hbox (badness 10000) in paragraph at lines 245--246
@@ -3632,9 +3616,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 245--246
 Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
-
-
-LaTeX Warning: Reference `ex_plane6' on page 74 undefined on input line 292.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 301--303
@@ -3649,12 +3630,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--325
  []
 
 
-Overfull \hbox (1.32175pt too wide) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
+
+ []
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
+
+ []
+
+
+Overfull \hbox (1.32175pt too wide) in paragraph at lines 356--357
 []\EU1/Calibri(0)/m/n/10 These past two sections have not explored lines and pl
 anes in space as merely
  []
 
-[75]
+[76]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -3687,13 +3678,9 @@ anes in space as merely
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [76
+ [77
 
-] [77]) [78
-
-
-
-]
+] [78])
 Chapter 3.
 (text/02_Matrix_Addition.tex
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 33--34
@@ -3706,6 +3693,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
  []
 
 [79
+
+
+
 
 ]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 76--77
@@ -6611,20 +6601,7 @@ Underfull \hbox (badness 2503) has occurred while \output is active
 it/9 ; []\OT1/cmr/m/n/9 )$ \EU1/Calibri(0)/m/n/9 and polar coordinates
  []
 
-[269]
-
-LaTeX Warning: Reference `furtherequineqexercises' on page 270 undefined on inp
-ut line 542.
-
-
-LaTeX Warning: Reference `AlgebraicFunctions' on page 270 undefined on input li
-ne 542.
-
-[270]
-
-LaTeX Warning: Reference `Relations' on page 271 undefined on input line 545.
-
-
+[269] [270]
 Underfull \hbox (badness 2744) has occurred while \output is active
 \EU1/Calibri(0)/m/n/9 of a point are ‘equivalent’, we mean
  []
@@ -7326,15 +7303,15 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 228.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 228.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
  ) 
 Here is how much of TeX's memory you used:
- 53654 strings out of 428755
- 1138526 string characters out of 3164219
- 1494807 words of memory out of 3000000
- 54973 multiletter control sequences out of 15000+200000
+ 53891 strings out of 428755
+ 1143848 string characters out of 3164219
+ 1494933 words of memory out of 3000000
+ 55210 multiletter control sequences out of 15000+200000
  19688 words of font info for 148 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
  62i,24n,110p,10385b,1012s stack positions out of 5000i,500n,10000p,200000b,50000s

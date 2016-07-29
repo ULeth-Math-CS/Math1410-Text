@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  8 JUL 2016 10:38
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  8 JUL 2016 10:48
 entering extended mode
 **Math1410text_print.tex
 (Math1410text_print.tex
@@ -1881,9 +1881,6 @@ Overfull \hbox (140.0pt too wide) in paragraph at lines 3--56
 File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 )
-
-LaTeX Warning: Reference `LastPage' on page i undefined on input line 44.
-
 [1
 
 
@@ -2059,10 +2056,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-
-LaTeX Warning: Reference `intersectionunion' on page 2 undefined on input line 
-87.
-
 [2]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 97--98
 [][][]
@@ -2072,12 +2065,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 97--98
 Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
-
-
-LaTeX Warning: Reference `venndiagram' on page 3 undefined on input line 103.
-
-
-LaTeX Warning: Reference `venndiagram' on page 3 undefined on input line 109.
 
 File: figures/SetTheory-1BW.pdf Graphic file (type QTm)
 <use  "figures/SetTheory-1BW.pdf" >
@@ -2154,16 +2141,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-
-LaTeX Warning: Reference `realnumberaddition' on page 6 undefined on input line
- 157.
-
 Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
 =tex-text;" at 9.0pt
  -> C:/WINDOWS/Fonts/calibrib.ttf
-
-LaTeX Warning: Reference `sec:eigen' on page 6 undefined on input line 158.
-
 
 Underfull \hbox (badness 2181) has occurred while \output is active
 []\EU1/Calibri(0)/bx/n/9 Note: \EU1/Calibri(0)/m/n/9 A common denominator \EU1/
@@ -2325,14 +2305,8 @@ Overfull \hbox (1.9992pt too wide) in paragraph at lines 78--78
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
-
-LaTeX Warning: Reference `quadrant' on page 14 undefined on input line 84.
-
-
-LaTeX Warning: Reference `fig:cartdist' on page 14 undefined on input line 100.
-
-
 File: figures/CartesianPlane-25BW.pdf Graphic file (type QTm)
+
 <use  "figures/CartesianPlane-25BW.pdf" >
 Overfull \hbox (25.79848pt too wide) has occurred while \output is active
  [][] 
@@ -2358,18 +2332,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--128
  []
 
 
-LaTeX Warning: Reference `distanceothercases' on page 15 undefined on input lin
-e 131.
-
-
-LaTeX Warning: Reference `distanceformula' on page 15 undefined on input line 1
-31.
-
-
-LaTeX Warning: Reference `distanceformula' on page 15 undefined on input line 1
-73.
-
-
 Underfull \vbox (badness 4634) has occurred while \output is active []
 
  [15]
@@ -2382,31 +2344,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-
-LaTeX Warning: Reference `verifymidpointformula' on page 16 undefined on input 
-line 205.
-
-
-LaTeX Warning: Reference `midpointformula' on page 16 undefined on input line 2
-05.
-
 File: figures/CartesianPlane-30BW.pdf Graphic file (type QTm)
 <use  "figures/CartesianPlane-30BW.pdf" >
-
-LaTeX Warning: Reference `ex_pointwithdist' on page 16 undefined on input line 
-230.
-
-
-LaTeX Warning: Reference `ex_pointwithdist' on page 16 undefined on input line 
-230.
-
 File: figures/CartesianPlane-31BW.pdf Graphic file (type QTm)
-<use  "figures/CartesianPlane-31BW.pdf" > [16]
 
-LaTeX Warning: Reference `midpointformula' on page 17 undefined on input line 2
-46.
-
-[17]
+<use  "figures/CartesianPlane-31BW.pdf" > [16] [17]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -2440,36 +2382,15 @@ LaTeX Warning: Reference `midpointformula' on page 17 undefined on input line 2
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 File: figures/CartesianPlane-35BW.pdf Graphic file (type QTm)
- <use  "figures/CartesianPlane-35BW.pdf" >
 
-LaTeX Warning: Reference `distanceformula' on page 18 undefined on input line 2
-50.
-
-[18
+<use  "figures/CartesianPlane-35BW.pdf" > [18
 
 ])
 Chapter 2.
 (text/10_Space_Intro.tex
-
-LaTeX Warning: Reference `sec:vector_intro' on page 19 undefined on input line 
-1.
-
-
-LaTeX Warning: Reference `CartesianPlane' on page 19 undefined on input line 7.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
-
-
-LaTeX Warning: Reference `fig:cartcoord1' on page 19 undefined on input line 29
-.
-
-
-LaTeX Warning: Reference `fig:cartcoord2' on page 19 undefined on input line 31
-.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
@@ -2489,14 +2410,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
  []
 
 
-LaTeX Warning: Reference `distanceformula' on page 20 undefined on input line 3
-5.
-
-
-LaTeX Warning: Reference `distanceformula' on page 20 undefined on input line 3
-5.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 52--53
 [][][]
  []
@@ -2512,13 +2425,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
  []
 
 
-LaTeX Warning: Reference `fig:space1' on page 20 undefined on input line 81.
-
-
-LaTeX Warning: Reference `def:space_distance' on page 20 undefined on input lin
-e 81.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
@@ -2527,10 +2433,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
-
-
-LaTeX Warning: Reference `fig:coordplanes' on page 20 undefined on input line 1
-16.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 116--119
@@ -2565,45 +2467,21 @@ Underfull \hbox (badness 3623) has occurred while \output is active
  []
 
 File: figures/figspace1_3DBW.pdf Graphic file (type QTm)
-<use  "figures/figspace1_3DBW.pdf" > <figures/figspace1_3D.prc>
-
-LaTeX Warning: Reference `ex_space1' on page 20 undefined on input line 181.
-
-
-LaTeX Warning: Reference `ex_space1' on page 20 undefined on input line 181.
-
-[20]
-
-LaTeX Warning: Reference `fig:space2' on page 21 undefined on input line 182.
-
-
+<use  "figures/figspace1_3DBW.pdf" > <figures/figspace1_3D.prc> [20]
 Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
-
-
-LaTeX Warning: Reference `fig:space3' on page 21 undefined on input line 203.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-
-LaTeX Warning: Reference `sec:planes' on page 21 undefined on input line 207.
-
 File: figures/figspace2_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figspace2_3DBW.pdf" > <figures/figspace2_3D.prc>
 File: figures/figspace3_3DBW.pdf Graphic file (type QTm)
 
-<use  "figures/figspace3_3DBW.pdf" > <figures/figspace3_3D.prc>
-
-LaTeX Warning: Reference `ex_space3' on page 21 undefined on input line 209.
-
-
-LaTeX Warning: Reference `ex_space3' on page 21 undefined on input line 209.
-
-[21]
+<use  "figures/figspace3_3DBW.pdf" > <figures/figspace3_3D.prc> [21]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -2638,7 +2516,8 @@ LaTeX Warning: Reference `ex_space3' on page 21 undefined on input line 209.
 
  [22
 
-]) (text/10_Vector_Introduction.tex
+])
+(text/10_Vector_Introduction.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -2667,18 +2546,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 16--17
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
-
-
-LaTeX Warning: Reference `fig:vectintro1' on page 23 undefined on input line 18
-.
-
-
-LaTeX Warning: Reference `fig:vectintro2' on page 23 undefined on input line 26
-.
-
-
-LaTeX Warning: Reference `fig:vectintro2' on page 23 undefined on input line 28
-.
 
 File: figures/figvectintro1BW.pdf Graphic file (type QTm)
 <use  "figures/figvectintro1BW.pdf" >
@@ -2714,19 +2581,6 @@ S/cmsy/m/n/10 ^^@[]\OT1/cmr/m/n/10 )$
  []
 
 
-LaTeX Warning: Reference `fig:vect1' on page 24 undefined on input line 105.
-
-
-LaTeX Warning: Reference `def:vector_component' on page 24 undefined on input l
-ine 105.
-
-
-LaTeX Warning: Reference `fig:vect1' on page 24 undefined on input line 105.
-
-
-LaTeX Warning: Reference `fig:vect1' on page 24 undefined on input line 105.
-
-
 Underfull \hbox (badness 2980) has occurred while \output is active
 \EU1/Calibri(0)/m/n/9 tain essentially the same information,
  []
@@ -2744,12 +2598,6 @@ File: figures/figvectintro3b_3DBW.pdf Graphic file (type QTm)
 Overfull \hbox (3.99965pt too wide) has occurred while \output is active
  [][] 
  []
-
-
-LaTeX Warning: Reference `ex_vect1' on page 24 undefined on input line 108.
-
-
-LaTeX Warning: Reference `ex_vect1' on page 24 undefined on input line 108.
 
 [24]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 137--138
@@ -2773,39 +2621,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
  []
 
 
-LaTeX Warning: Reference `fig:vect2' on page 25 undefined on input line 150.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-
-LaTeX Warning: Reference `fig:vect2b' on page 25 undefined on input line 157.
-
-
-LaTeX Warning: Reference `fig:vect2b' on page 25 undefined on input line 159.
-
 File: figures/figvect2BW.pdf Graphic file (type QTm)
-<use  "figures/figvect2BW.pdf" >
-
-LaTeX Warning: Reference `ex_vect2' on page 25 undefined on input line 160.
-
-
-LaTeX Warning: Reference `ex_vect2' on page 25 undefined on input line 160.
-
-[25]
-
-LaTeX Warning: Reference `def:vector_algebra' on page 26 undefined on input lin
-e 165.
-
-
+<use  "figures/figvect2BW.pdf" > [25]
 Underfull \hbox (badness 10000) in paragraph at lines 168--170
 
  []
-
-
-LaTeX Warning: Reference `fig:vect4' on page 26 undefined on input line 182.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 182--183
@@ -2817,27 +2641,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--212
 
  []
 
-
-LaTeX Warning: Reference `fig:vect3' on page 26 undefined on input line 212.
-
 File: figures/figvect2bBW.pdf Graphic file (type QTm)
 <use  "figures/figvect2bBW.pdf" >
 File: figures/figvect4BW.pdf Graphic file (type QTm)
  <use  "figures/figvect4BW.pdf" >
 File: figures/figvect3BW.pdf Graphic file (type QTm)
 
-<use  "figures/figvect3BW.pdf" >
-
-LaTeX Warning: Reference `ex_vect3' on page 26 undefined on input line 215.
-
-
-LaTeX Warning: Reference `ex_vect3' on page 26 undefined on input line 215.
-
-[26]
-
-LaTeX Warning: Reference `ex_vect3' on page 27 undefined on input line 216.
-
-
+<use  "figures/figvect3BW.pdf" > [26]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 223--224
 [][][]
  []
@@ -2848,10 +2658,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
  []
 
 
-LaTeX Warning: Reference `thm:vecscale' on page 27 undefined on input line 225.
-
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 258--259
 [][][]
  []
@@ -2860,10 +2666,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 258--259
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
-
-
-LaTeX Warning: Reference `thm:vector_properties' on page 27 undefined on input 
-line 267.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 277--278
@@ -2878,27 +2680,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `thm:vecscale' on page 27 undefined on input line 278.
-
-
-[27]
-
-LaTeX Warning: Reference `thm:norm_prop' on page 28 undefined on input line 281
-.
-
-
-LaTeX Warning: Reference `thm:vector_properties' on page 28 undefined on input 
-line 281.
-
-
+ [27]
 Underfull \hbox (badness 10000) in paragraph at lines 285--287
 
  []
-
-
-LaTeX Warning: Reference `fig:vect5' on page 28 undefined on input line 308.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 308--309
@@ -2906,14 +2691,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--309
  []
 
 File: figures/figvect5BW.pdf Graphic file (type QTm)
-<use  "figures/figvect5BW.pdf" >
-
-LaTeX Warning: Reference `ex_vect5' on page 28 undefined on input line 327.
-
-
-LaTeX Warning: Reference `ex_vect5' on page 28 undefined on input line 327.
-
-[28]
+<use  "figures/figvect5BW.pdf" > [28]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 327--328
 [][][]
  []
@@ -2939,46 +2717,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 353--354
  []
 
 
-LaTeX Warning: Reference `fig:vect6' on page 29 undefined on input line 388.
-
-
 Overfull \hbox (0.93759pt too wide) in paragraph at lines 388--388
 []$[]$\EU1/Calibri(0)/m/n/10 Knowing that gravity is pulling the 50lb weight st
 raight down,
  []
 
 
-LaTeX Warning: Reference `fig:vect6b' on page 29 undefined on input line 388.
-
-
-LaTeX Warning: Reference `idea:unit_vectors' on page 29 undefined on input line
- 388.
-
-
-LaTeX Warning: Reference `def:parallel_vectors' on page 29 undefined on input l
-ine 388.
-
-
-LaTeX Warning: Reference `note:crossp' on page 29 undefined on input line 388.
-
-
 Underfull \hbox (badness 1137) has occurred while \output is active
 \EU1/Calibri(0)/m/n/9 grounded in the fact that unit vectors
  []
 
-
-LaTeX Warning: Reference `idea:unit_vectors' on page 29 undefined on input line
- 388.
-
 File: figures/figvect6BW.pdf Graphic file (type QTm)
-<use  "figures/figvect6BW.pdf" >
-
-LaTeX Warning: Reference `ex_vect6' on page 29 undefined on input line 388.
-
-
-LaTeX Warning: Reference `ex_vect6' on page 29 undefined on input line 388.
-
-[29]
+<use  "figures/figvect6BW.pdf" > [29]
 Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
@@ -2999,23 +2749,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 427--427
  []
 
 File: figures/figvect6bBW.pdf Graphic file (type QTm)
-<use  "figures/figvect6bBW.pdf" >
-
-LaTeX Warning: Reference `ex_vect6' on page 30 undefined on input line 427.
-
-
-LaTeX Warning: Reference `ex_vect6' on page 30 undefined on input line 427.
-
-[30]
+<use  "figures/figvect6bBW.pdf" > [30]
 Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
-
-
-LaTeX Warning: Reference `fig:vect8' on page 31 undefined on input line 465.
-
-
-LaTeX Warning: Reference `eq:vect8' on page 31 undefined on input line 465.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 465--466
@@ -3023,14 +2760,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--466
  []
 
 File: figures/figvect8BW.pdf Graphic file (type QTm)
-<use  "figures/figvect8BW.pdf" >
-
-LaTeX Warning: Reference `ex_vect8' on page 31 undefined on input line 466.
-
-
-LaTeX Warning: Reference `ex_vect8' on page 31 undefined on input line 466.
-
-[31] [32]
+<use  "figures/figvect8BW.pdf" > [31] [32]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -3064,7 +2794,8 @@ LaTeX Warning: Reference `ex_vect8' on page 31 undefined on input line 466.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 File: figures/fig10_02_ex_11BW.pdf Graphic file (type QTm)
- <use  "figures/fig10_02_ex_11BW.pdf" >
+
+<use  "figures/fig10_02_ex_11BW.pdf" >
 Underfull \hbox (badness 10000) in paragraph at lines 469--469
 
  []
@@ -3088,13 +2819,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 469--469
  []
 
 
-LaTeX Warning: Reference `idea:unit_vectors' on page 33 undefined on input line
- 469.
-
-
-Overfull \hbox (13.46489pt too wide) in paragraph at lines 469--469
-[]\EU1/Calibri(0)/m/n/9 Verify, from Key Idea [], that $[] \OT1/cmr/m/n/9 = []$
-
+Overfull \hbox (9.6856pt too wide) in paragraph at lines 469--469
+[]\EU1/Calibri(0)/m/n/9 Verify, from Key Idea []7[], that $[] \OT1/cmr/m/n/9 = 
+[]$
  []
 
 [33
@@ -3137,10 +2864,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--38
  []
 
 
-LaTeX Warning: Reference `def:dot_product' on page 35 undefined on input line 3
-8.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
@@ -3161,15 +2884,6 @@ Underfull \vbox (badness 3679) has occurred while \output is active []
  [35
 
 ]
-
-LaTeX Warning: Reference `fig:dotpangle' on page 36 undefined on input line 64.
-
-
-
-LaTeX Warning: Reference `fig:dotpangle' on page 36 undefined on input line 81.
-
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 92--93
 [][][]
  []
@@ -3178,30 +2892,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 92--93
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 36 undefined on input line 9
-6.
-
-
-LaTeX Warning: Reference `thm:dot_product_properties' on page 36 undefined on i
-nput line 96.
-
-
-LaTeX Warning: Reference `fig:dotprodproof' on page 36 undefined on input line 
-96.
-
-
-LaTeX Warning: Reference `fig:dotpsign' on page 36 undefined on input line 110.
-
-
-
-LaTeX Warning: Reference `thm:dot_product_properties' on page 36 undefined on i
-nput line 111.
-
-
-LaTeX Warning: Reference `RealNumberArithmetic' on page 36 undefined on input l
-ine 111.
 
 Requested font "cmbx9" at 9.0pt
 Requested font "cmbx6" at 6.0pt
@@ -3225,32 +2915,12 @@ Overfull \hbox (8.9996pt too wide) has occurred while \output is active
  [][][] 
  []
 
-
-LaTeX Warning: Reference `thm:dot_product' on page 36 undefined on input line 1
-11.
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 36 undefined on input line 1
-11.
-
 [36]
 File: figures/figdotpanglesign.pdf Graphic file (type QTm)
  <use  "figures/figdotpanglesign.pdf" >
-
-LaTeX Warning: Reference `thm:dot_product' on page 37 undefined on input line 1
-20.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
-
-
-LaTeX Warning: Reference `fig:dotp2' on page 37 undefined on input line 149.
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 37 undefined on input line 1
-49.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
@@ -3258,35 +2928,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
  []
 
 
-LaTeX Warning: Reference `fig:dotp2' on page 37 undefined on input line 151.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-
-LaTeX Warning: Reference `fig:dotp3' on page 37 undefined on input line 178.
-
 File: figures/figdotp2BW.pdf Graphic file (type QTm)
-<use  "figures/figdotp2BW.pdf" >
-
-LaTeX Warning: Reference `ex_dotp2' on page 37 undefined on input line 178.
-
-
-LaTeX Warning: Reference `ex_dotp2' on page 37 undefined on input line 178.
-
-[37]
-
-LaTeX Warning: Reference `fig:dotp3' on page 38 undefined on input line 178.
-
-
+<use  "figures/figdotp2BW.pdf" > [37]
 Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
-
-
-LaTeX Warning: Reference `ex_dotp2' on page 38 undefined on input line 188.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 193--194
@@ -3300,49 +2950,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
 File: figures/figdotp3_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figdotp3_3DBW.pdf" > <figures/figdotp3_3D.prc>
-
-LaTeX Warning: Reference `ex_dotp3' on page 38 undefined on input line 201.
-
-
-LaTeX Warning: Reference `ex_dotp3' on page 38 undefined on input line 201.
-
-
 Underfull \hbox (badness 1189) has occurred while \output is active
 \EU1/Calibri(0)/m/n/9 vectors in 5-dimensional space are or-
  []
-
-
-LaTeX Warning: Reference `def:orthogonal' on page 38 undefined on input line 20
-1.
 
 [38]
 Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
-
-
-LaTeX Warning: Reference `fig:dotpproj' on page 39 undefined on input line 231.
-
-
-
-LaTeX Warning: Reference `fig:dotpproj' on page 39 undefined on input line 233.
-
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 39 undefined on input line 2
-54.
-
-
-LaTeX Warning: Reference `thm:dot_product_properties' on page 39 undefined on i
-nput line 254.
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 39 undefined on input line 2
-54.
-
-
-LaTeX Warning: Reference `thm:dot_product_properties' on page 39 undefined on i
-nput line 254.
 
 File: figures/figdotpproja.pdf Graphic file (type QTm)
 <use  "figures/figdotpproja.pdf" >
@@ -3362,16 +2977,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--316
 
  []
 
-
-LaTeX Warning: Reference `def:orthogonal_projection' on page 40 undefined on in
-put line 316.
-
-
-LaTeX Warning: Reference `fig:dotp4' on page 40 undefined on input line 316.
-
-
-LaTeX Warning: Reference `fig:dotp4' on page 40 undefined on input line 316.
-
 File: figures/figdotp4a.pdf Graphic file (type QTm)
 <use  "figures/figdotp4a.pdf" >
 File: figures/figdotp4b_3DBW.pdf Graphic file (type QTm)
@@ -3384,22 +2989,7 @@ Overfull \hbox (1.99965pt too wide) has occurred while \output is active
  [][] 
  []
 
-
-LaTeX Warning: Reference `ex_dotp4' on page 40 undefined on input line 319.
-
-
-LaTeX Warning: Reference `ex_dotp4' on page 40 undefined on input line 319.
-
 [40]
-
-LaTeX Warning: Reference `fig:dotpprojc' on page 41 undefined on input line 320
-.
-
-
-LaTeX Warning: Reference `eq:orthogproj' on page 41 undefined on input line 328
-.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 350--351
 [][][]
  []
@@ -3419,33 +3009,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 391--391
 
  []
 
-
-LaTeX Warning: Reference `ex_dotp4' on page 41 undefined on input line 391.
-
-
-LaTeX Warning: Reference `ex_dotp4' on page 41 undefined on input line 391.
-
-
-LaTeX Warning: Reference `ex_dotp4' on page 41 undefined on input line 391.
-
-
-LaTeX Warning: Reference `ex_dotp4' on page 41 undefined on input line 391.
-
 File: figures/figdotpprojcBW.pdf Graphic file (type QTm)
-<use  "figures/figdotpprojcBW.pdf" >
-
-LaTeX Warning: Reference `def:orthogonal_projection' on page 41 undefined on in
-put line 391.
-
-
-LaTeX Warning: Reference `fig:dotpproj' on page 41 undefined on input line 391.
-
-
-
-LaTeX Warning: Reference `idea:orthog_proj' on page 41 undefined on input line 
-391.
-
-[41]
+<use  "figures/figdotpprojcBW.pdf" > [41]
 Underfull \hbox (badness 10000) in paragraph at lines 391--392
 
  []
@@ -3456,17 +3021,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 393--394
  []
 
 
-LaTeX Warning: Reference `fig:dotp6' on page 42 undefined on input line 430.
-
-
 Overfull \hbox (2.38313pt too wide) in paragraph at lines 430--430
 []\EU1/Calibri(0)/m/n/10 To find the force of gravity in the direction of the r
 amp, we compute $[][][]$: 
  []
-
-
-LaTeX Warning: Reference `idea:orthog_proj' on page 42 undefined on input line 
-430.
 
 File: figures/figdotp6.pdf Graphic file (type QTm)
 <use  "figures/figdotp6.pdf" >
@@ -3476,20 +3034,10 @@ Overfull \hbox (14.99962pt too wide) has occurred while \output is active
  [][] 
  []
 
-
-LaTeX Warning: Reference `ex_dotp6' on page 42 undefined on input line 433.
-
-
-LaTeX Warning: Reference `ex_dotp6' on page 42 undefined on input line 433.
-
 [42]
 Underfull \hbox (badness 10000) in paragraph at lines 434--435
 
  []
-
-
-LaTeX Warning: Reference `fig:dotpwork' on page 43 undefined on input line 438.
-
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 453--454
@@ -3500,9 +3048,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 453--454
 Underfull \hbox (badness 10000) in paragraph at lines 453--454
 
  []
-
-
-LaTeX Warning: Reference `fig:dotp7' on page 43 undefined on input line 464.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 464--465
@@ -3518,14 +3063,7 @@ n explores another “prod-
 File: figures/figdotpworkBW.pdf Graphic file (type QTm)
 <use  "figures/figdotpworkBW.pdf" >
 File: figures/figdotp7BW.pdf Graphic file (type QTm)
- <use  "figures/figdotp7BW.pdf" >
-
-LaTeX Warning: Reference `ex_dotp7' on page 43 undefined on input line 468.
-
-
-LaTeX Warning: Reference `ex_dotp7' on page 43 undefined on input line 468.
-
-[43]
+ <use  "figures/figdotp7BW.pdf" > [43]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -3559,14 +3097,6 @@ LaTeX Warning: Reference `ex_dotp7' on page 43 undefined on input line 468.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-
-LaTeX Warning: Reference `ex:10_03_ex_21' on page 44 undefined on input line 46
-8.
-
-
-LaTeX Warning: Reference `ex:10_03_ex_24' on page 44 undefined on input line 46
-8.
-
 [44
 
 ]) (text/10_Cross_Product.tex
@@ -3585,39 +3115,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
  []
 
 
-LaTeX Warning: Reference `def:cross_product' on page 45 undefined on input line
- 42.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-
-LaTeX Warning: Reference `sec:determinant_1' on page 45 undefined on input line
- 44.
-
-
-LaTeX Warning: Reference `chapter:linear' on page 45 undefined on input line 51
-.
-
-
-LaTeX Warning: Reference `def:cross_product' on page 45 undefined on input line
- 51.
-
 [45
 
-]
-
-LaTeX Warning: Reference `ex_crossp1' on page 46 undefined on input line 68.
-
-
-LaTeX Warning: Reference `eq:crossdet' on page 46 undefined on input line 92.
-
-
-LaTeX Warning: Reference `ex_crossp1' on page 46 undefined on input line 92.
-
-[46]
+] [46]
 Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
@@ -3633,10 +3137,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
  []
 
 
-LaTeX Warning: Reference `def:cross_product' on page 47 undefined on input line
- 121.
-
-
 Overfull \hbox (16.39998pt too wide) in paragraph at lines 143--146
 [][][]
  []
@@ -3649,46 +3149,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--146
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `ex_crossp1' on page 47 undefined on input line 146.
-
-[47]
-
-LaTeX Warning: Reference `def:cross_product' on page 48 undefined on input line
- 147.
-
-
-LaTeX Warning: Reference `thm:cross_prod_prop' on page 48 undefined on input li
-ne 147.
-
-
-LaTeX Warning: Reference `thm:cross_prod_prop' on page 48 undefined on input li
-ne 149.
-
-
-LaTeX Warning: Reference `thm:cross_prod_prop' on page 48 undefined on input li
-ne 174.
-
-Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
-=tex-text;" at 7.0pt
- -> C:/WINDOWS/Fonts/calibrib.ttf
-
-LaTeX Warning: Reference `thm:cross_prod_prop' on page 48 undefined on input li
-ne 174.
-
-
-LaTeX Warning: Reference `thm:cross_prod_prop' on page 48 undefined on input li
-ne 174.
-
-
-LaTeX Warning: Reference `thm:cross_prod_prop' on page 48 undefined on input li
-ne 174.
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 48 undefined on input line 1
-76.
-
+ [47]
 [48]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 185--186
 [][][]
@@ -3698,14 +3159,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 185--186
 Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
-
-
-LaTeX Warning: Reference `thm:zero_norm' on page 49 undefined on input line 188
-.
-
-
-LaTeX Warning: Reference `thm:vector_properties' on page 49 undefined on input 
-line 188.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 188--189
@@ -3718,57 +3171,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--191
  []
 
 
-LaTeX Warning: Reference `ex_crossp2' on page 49 undefined on input line 211.
-
-
-LaTeX Warning: Reference `thm:cross_product' on page 49 undefined on input line
- 211.
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 49 undefined on input line 2
-11.
-
-
-LaTeX Warning: Reference `ex_crossp2' on page 49 undefined on input line 211.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
 
-LaTeX Warning: Reference `thm:cross_product' on page 49 undefined on input line
- 213.
-
-
-Overfull \hbox (8.2381pt too wide) in paragraph at lines 213--214
-[]\EU1/Calibri(0)/m/n/10 To see that Theorem [] holds in general, let $[] \OT1/
-cmr/m/n/10 = []$ \EU1/Calibri(0)/m/n/10 and $[] \OT1/cmr/m/n/10 = []$
+Overfull \hbox (4.03888pt too wide) in paragraph at lines 213--214
+[]\EU1/Calibri(0)/m/n/10 To see that Theorem []7[] holds in general, let $[] \O
+T1/cmr/m/n/10 = []$ \EU1/Calibri(0)/m/n/10 and $[] \OT1/cmr/m/n/10 = []$
  []
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 49 undefined on input line 2
-23.
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 49 undefined on input line 2
-23.
-
-
-LaTeX Warning: Reference `def:orthogonal' on page 49 undefined on input line 22
-3.
-
-
-LaTeX Warning: Reference `thm:dot_product' on page 49 undefined on input line 2
-23.
-
-
-LaTeX Warning: Reference `thm:cross_product' on page 49 undefined on input line
- 223.
-
-
-LaTeX Warning: Reference `note:parallel' on page 49 undefined on input line 223
-.
 
 [49]
 Underfull \hbox (badness 10000) in paragraph at lines 223--225
@@ -3779,10 +3190,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--225
 Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
-
-
-LaTeX Warning: Reference `fig:crossp_rhr' on page 50 undefined on input line 23
-3.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 244--245
@@ -3798,21 +3205,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--249
 Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
-
-
-LaTeX Warning: Reference `fig:crossp_parallelogram' on page 50 undefined on inp
-ut line 252.
-
-
-LaTeX Warning: Reference `fig:crossp_parallelogram' on page 50 undefined on inp
-ut line 252.
-
-
-LaTeX Warning: Reference `thm:cross_product' on page 50 undefined on input line
- 254.
-
-
-LaTeX Warning: Reference `eq:crossp1' on page 50 undefined on input line 263.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 253--265
@@ -3832,13 +3224,6 @@ File: figures/figcrossp_parallelogram1.pdf Graphic file (type QTm)
 File: figures/figcrossp_parallelogram2.pdf Graphic file (type QTm)
 
 <use  "figures/figcrossp_parallelogram2.pdf" > [50]
-
-LaTeX Warning: Reference `fig:crossp4' on page 51 undefined on input line 296.
-
-
-LaTeX Warning: Reference `fig:crossp4' on page 51 undefined on input line 296.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
@@ -3847,9 +3232,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--297
 Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
-
-
-LaTeX Warning: Reference `fig:crossp5' on page 51 undefined on input line 311.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 311--312
@@ -3865,43 +3247,11 @@ Overfull \hbox (1.99965pt too wide) has occurred while \output is active
  [][] 
  []
 
-
-LaTeX Warning: Reference `ex_crossp4' on page 51 undefined on input line 316.
-
-
-LaTeX Warning: Reference `ex_crossp4' on page 51 undefined on input line 316.
-
 File: figures/figcrossp5BW.pdf Graphic file (type QTm)
-<use  "figures/figcrossp5BW.pdf" >
-
-LaTeX Warning: Reference `ex_crossp5' on page 51 undefined on input line 316.
-
-
-LaTeX Warning: Reference `ex_crossp5' on page 51 undefined on input line 316.
-
-[51]
-
-LaTeX Warning: Reference `fig:crossp_parallelepiped' on page 52 undefined on in
-put line 319.
-
-
-LaTeX Warning: Reference `fig:parallelepiped_volume' on page 52 undefined on in
-put line 319.
-
-
-LaTeX Warning: Reference `thm:cross_prod_prop' on page 52 undefined on input li
-ne 342.
-
-
-LaTeX Warning: Reference `eq:crossp2' on page 52 undefined on input line 365.
-
-
+<use  "figures/figcrossp5BW.pdf" > [51]
 Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
-
-
-LaTeX Warning: Reference `eq:crossp2' on page 52 undefined on input line 367.
 
 File: figures/figcrosspparallelpiped_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figcrosspparallelpiped_3DBW.pdf" >
@@ -3914,19 +3264,7 @@ File: figures/parallelepiped2BW.pdf Graphic file (type QTm)
 <use  "figures/parallelepiped2BW.pdf" >
 File: figures/figcrossp6_3DBW.pdf Graphic file (type QTm)
  <use  "figures/figcrossp6_3DBW.pdf" >
-<figures/figcrossp6_3D.prc>
-
-LaTeX Warning: Reference `ex_crossp6' on page 52 undefined on input line 379.
-
-
-LaTeX Warning: Reference `ex_crossp6' on page 52 undefined on input line 379.
-
-[52]
-
-LaTeX Warning: Reference `sec:determinant_1' on page 53 undefined on input line
- 380.
-
-
+<figures/figcrossp6_3D.prc> [52]
 Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
@@ -3936,29 +3274,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
-
-LaTeX Warning: Reference `fig:crossp7' on page 53 undefined on input line 427.
-
-
-LaTeX Warning: Reference `fig:crossp7' on page 53 undefined on input line 427.
-
-
-LaTeX Warning: Reference `eq:crossp3' on page 53 undefined on input line 427.
-
 [53]
 Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
 File: figures/figcrossp7BW.pdf Graphic file (type QTm)
-<use  "figures/figcrossp7BW.pdf" >
-
-LaTeX Warning: Reference `ex_crossp7' on page 54 undefined on input line 433.
-
-
-LaTeX Warning: Reference `ex_crossp7' on page 54 undefined on input line 433.
-
-[54]
+<use  "figures/figcrossp7BW.pdf" > [54]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -3998,16 +3320,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-
-LaTeX Warning: Reference `fig:lines_intro' on page 57 undefined on input line 1
-4.
-
-
-LaTeX Warning: Reference `eq:lines1' on page 57 undefined on input line 27.
-
-
-LaTeX Warning: Reference `eq:lines1' on page 57 undefined on input line 75.
-
 File: figures/figlines_intro_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figlines_intro_3DBW.pdf" > <figures/figlines_intro_3D.prc>
 [57
@@ -4023,17 +3335,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
  []
 
 
-LaTeX Warning: Reference `def:lines' on page 58 undefined on input line 148.
-
-
-Overfull \hbox (1.02246pt too wide) in paragraph at lines 148--148
-\EU1/Calibri(0)/m/n/10 Give all three equations, as given in Definition [], of 
-the line through $[] \OT1/cmr/m/n/10 = ([]\OML/cmm/m/it/10 ; []; []\OT1/cmr/m/n
-/10 )$
+Overfull \hbox (1.8916pt too wide) in paragraph at lines 148--148
+\EU1/Calibri(0)/m/n/10 Give all three equations, as given in Definition []21[],
+ of the line through $[] \OT1/cmr/m/n/10 = ([]\OML/cmm/m/it/10 ; []; []\OT1/cmr
+/m/n/10 )$
  []
-
-
-LaTeX Warning: Reference `fig:lines1' on page 58 undefined on input line 148.
 
 LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 148
 .
@@ -4044,28 +3350,10 @@ Requested font "[lmmono10-regular]" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/opentype/public/lm/lmmono10-regular.otf
 File: figures/figlines1_3DBW.pdf Graphic file (type QTm)
 
-<use  "figures/figlines1_3DBW.pdf" > <figures/figlines1_3D.prc>
-
-LaTeX Warning: Reference `ex_lines1' on page 58 undefined on input line 148.
-
-
-LaTeX Warning: Reference `ex_lines1' on page 58 undefined on input line 148.
-
-[58]
-
-LaTeX Warning: Reference `fig:lines1' on page 59 undefined on input line 148.
-
-
+<use  "figures/figlines1_3DBW.pdf" > <figures/figlines1_3D.prc> [58]
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
-
-
-LaTeX Warning: Reference `fig:lines6' on page 59 undefined on input line 168.
-
-
-LaTeX Warning: Reference `fig:lines_eq' on page 59 undefined on input line 168.
-
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 168--169
@@ -4083,18 +3371,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 184--185
  []
 
 File: figures/figlines6_3DBW.pdf Graphic file (type QTm)
-<use  "figures/figlines6_3DBW.pdf" > <figures/figlines6_3D.prc>
-
-LaTeX Warning: Reference `ex_lines6' on page 59 undefined on input line 219.
-
-
-LaTeX Warning: Reference `ex_lines6' on page 59 undefined on input line 219.
-
-[59]
-
-LaTeX Warning: Reference `fig:lines2' on page 60 undefined on input line 219.
-
-
+<use  "figures/figlines6_3DBW.pdf" > <figures/figlines6_3D.prc> [59]
 Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
@@ -4105,30 +3382,12 @@ Overfull \hbox (58.03828pt too wide) in paragraph at lines 256--256
  []
 
 File: figures/figlines2_3DBW.pdf Graphic file (type QTm)
-<use  "figures/figlines2_3DBW.pdf" > <figures/figlines2_3D.prc>
-
-LaTeX Warning: Reference `ex_lines2' on page 60 undefined on input line 256.
-
-
-LaTeX Warning: Reference `ex_lines2' on page 60 undefined on input line 256.
-
-
-LaTeX Warning: Reference `ex_lines2' on page 60 undefined on input line 256.
-
-
-LaTeX Warning: Reference `chapter:linear' on page 60 undefined on input line 25
-6.
-
-[60]
+<use  "figures/figlines2_3DBW.pdf" > <figures/figlines2_3D.prc> [60]
 Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 [61]
-
-LaTeX Warning: Reference `fig:lines3' on page 62 undefined on input line 302.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
@@ -4139,19 +3398,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 304--305
  []
 
 
-LaTeX Warning: Reference `fig:lines_dist1' on page 62 undefined on input line 3
-06.
-
-
-LaTeX Warning: Reference `eq:lines2' on page 62 undefined on input line 316.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
-
-
-LaTeX Warning: Reference `eq:lines2' on page 62 undefined on input line 326.
 
 
 Overfull \hbox (0.53003pt too wide) in paragraph at lines 326--326
@@ -4166,9 +3415,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--327
  []
 
 
-LaTeX Warning: Reference `eq:lines2' on page 62 undefined on input line 328.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 338--339
 [][][]
  []
@@ -4180,66 +3426,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
 File: figures/figlines3_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figlines3_3DBW.pdf" > <figures/figlines3_3D.prc>
-
-LaTeX Warning: Reference `ex_lines3' on page 62 undefined on input line 339.
-
-
-LaTeX Warning: Reference `ex_lines3' on page 62 undefined on input line 339.
-
 File: figures/figlines_dist1BW.pdf Graphic file (type QTm)
+
 <use  "figures/figlines_dist1BW.pdf" >
 Underfull \hbox (badness 2229) has occurred while \output is active
 []\EU1/Calibri(0)/m/n/9 Figure 2.43: |Establishing the distance
  []
 
 [62]
-
-LaTeX Warning: Reference `idea:distance_method' on page 63 undefined on input l
-ine 342.
-
-
-LaTeX Warning: Reference `eq:lines2' on page 63 undefined on input line 342.
-
-
-LaTeX Warning: Reference `fig:linedistsetup' on page 63 undefined on input line
- 370.
-
-
-LaTeX Warning: Reference `eq:lines2' on page 63 undefined on input line 370.
-
-
-LaTeX Warning: Reference `eq:lines2' on page 63 undefined on input line 370.
-
-
-LaTeX Warning: Reference `idea:orthog_proj' on page 63 undefined on input line 
-370.
-
-
-LaTeX Warning: Reference `idea:orthog_proj' on page 63 undefined on input line 
-370.
-
-
-LaTeX Warning: Reference `idea:distance_method' on page 63 undefined on input l
-ine 370.
-
-
-LaTeX Warning: Reference `fig:linedistsetup' on page 63 undefined on input line
- 370.
-
-
-LaTeX Warning: Reference `ex_lines4a' on page 63 undefined on input line 370.
-
 File: figures/pointlinedistBW.png Graphic file (type QTm)
-<use  "figures/pointlinedistBW.png" >
+ <use  "figures/pointlinedistBW.png" >
 Overfull \hbox (7.9996pt too wide) has occurred while \output is active
  [][][] 
  []
-
-
-LaTeX Warning: Reference `ex_lines4a' on page 63 undefined on input line 370.
-
-
-LaTeX Warning: Reference `ex_lines4a' on page 63 undefined on input line 370.
 
 [63]
 Underfull \hbox (badness 10000) in paragraph at lines 370--371
@@ -4247,16 +3446,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--371
  []
 
 
-LaTeX Warning: Reference `fig:lines_dist2' on page 64 undefined on input line 3
-72.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 376--378
 
  []
-
-
-LaTeX Warning: Reference `ex_lines2' on page 64 undefined on input line 423.
 
 
 Overfull \hbox (21.53119pt too wide) in paragraph at lines 423--423
@@ -4264,44 +3456,21 @@ Overfull \hbox (21.53119pt too wide) in paragraph at lines 423--423
  []
 
 
-LaTeX Warning: Reference `eq:skewlinesdist' on page 64 undefined on input line 
-423.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 423--424
 
  []
-
-
-LaTeX Warning: Reference `eq:skewlinesdist' on page 64 undefined on input line 
-425.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 427--428
 
  []
 
-
-LaTeX Warning: Reference `ex_lines5' on page 64 undefined on input line 470.
-
 File: figures/figlines_dist2_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figlines_dist2_3DBW.pdf" > <figures/figlines_dist2_3D.prc>
 [64]
-
-LaTeX Warning: Reference `eq:skewpoint1' on page 65 undefined on input line 470
-.
-
-
-LaTeX Warning: Reference `eq:skewpoint2' on page 65 undefined on input line 470
-.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
-
-
-LaTeX Warning: Reference `ex_lines7' on page 65 undefined on input line 472.
 
 [65] [66]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -4352,44 +3521,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 479--479
 
  []
 
-
-LaTeX Warning: Reference `eq:lines2' on page 67 undefined on input line 479.
-
-
-LaTeX Warning: Reference `eq:skewlinesdist' on page 67 undefined on input line 
-479.
-
-
-LaTeX Warning: Reference `eq:skewlinesdist' on page 67 undefined on input line 
-479.
-
 [67
 
 ] [68]) (text/10_Planes.tex
-
-LaTeX Warning: Reference `fig:planes_intro' on page 69 undefined on input line 
-3.
-
-
 Overfull \hbox (3.45007pt too wide) in paragraph at lines 13--14
 []\EU1/Calibri(0)/m/n/10 This nail provides a “handle” for the cardboard. Movin
 g the cardboard around
  []
-
-
-LaTeX Warning: Reference `eq:planes1' on page 69 undefined on input line 31.
-
-
-LaTeX Warning: Reference `eq:planes2' on page 69 undefined on input line 31.
-
-
-LaTeX Warning: Reference `eq:planes3' on page 69 undefined on input line 37.
-
-
-LaTeX Warning: Reference `eq:planes1' on page 69 undefined on input line 37.
-
-
-LaTeX Warning: Reference `eq:planes2' on page 69 undefined on input line 37.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 49--50
@@ -4411,12 +3549,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
  []
 
 
-LaTeX Warning: Reference `def:planes' on page 70 undefined on input line 70.
-
-
-LaTeX Warning: Reference `fig:planes1' on page 70 undefined on input line 70.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
@@ -4426,37 +3558,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-
-LaTeX Warning: Reference `def:planes' on page 70 undefined on input line 109.
-
 File: figures/figplanes1_3DBW.pdf Graphic file (type QTm)
-<use  "figures/figplanes1_3DBW.pdf" > <figures/figplanes1_3D.prc>
-
-LaTeX Warning: Reference `ex_planes1' on page 70 undefined on input line 109.
-
-
-LaTeX Warning: Reference `ex_planes1' on page 70 undefined on input line 109.
-
-[70]
-
-LaTeX Warning: Reference `fig:planes2' on page 71 undefined on input line 109.
-
-
+<use  "figures/figplanes1_3DBW.pdf" > <figures/figplanes1_3D.prc> [70]
 Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
-
-
-LaTeX Warning: Reference `fig:planes1' on page 71 undefined on input line 111.
-
-
-LaTeX Warning: Reference `fig:planes2' on page 71 undefined on input line 111.
-
-
-LaTeX Warning: Reference `ex_planes2' on page 71 undefined on input line 111.
-
-
-LaTeX Warning: Reference `eq:planes2a' on page 71 undefined on input line 116.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 115--117
@@ -4471,59 +3577,26 @@ ion $[]\OT1/cmr/m/n/10 ([]) = [] +
  []
 
 
-LaTeX Warning: Reference `fig:planes3' on page 71 undefined on input line 135.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 File: figures/figplanes2_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figplanes2_3DBW.pdf" > <figures/figplanes2_3D.prc>
-
-LaTeX Warning: Reference `ex_planes2' on page 71 undefined on input line 176.
-
-
-LaTeX Warning: Reference `ex_planes2' on page 71 undefined on input line 176.
-
-
-LaTeX Warning: Reference `ex_planes2' on page 71 undefined on input line 176.
-
 File: figures/figplanes3_3DBW.pdf Graphic file (type QTm)
-<use  "figures/figplanes3_3DBW.pdf" > <figures/figplanes3_3D.prc>
 
-LaTeX Warning: Reference `ex_planes3' on page 71 undefined on input line 176.
-
-
-LaTeX Warning: Reference `ex_planes3' on page 71 undefined on input line 176.
-
-[71]
-
-LaTeX Warning: Reference `fig:planes4' on page 72 undefined on input line 176.
-
-
+<use  "figures/figplanes3_3DBW.pdf" > <figures/figplanes3_3D.prc> [71]
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 File: figures/figplanes4_3DBW.pdf Graphic file (type QTm)
 <use  "figures/figplanes4_3DBW.pdf" > <figures/figplanes4_3D.prc>
-
-LaTeX Warning: Reference `ex_planes4' on page 72 undefined on input line 202.
-
-
-LaTeX Warning: Reference `ex_planes4' on page 72 undefined on input line 202.
-
-
 Underfull \hbox (badness 1442) has occurred while \output is active
 []\EU1/Calibri(0)/m/n/9 Figure 2.50: |Graphing the planes and
  []
 
 [72]
-
-LaTeX Warning: Reference `ex_planes4' on page 73 undefined on input line 211.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
@@ -4535,40 +3608,15 @@ Overfull \hbox (1.00092pt too wide) in paragraph at lines 243--243
  []
 
 
-LaTeX Warning: Reference `fig:planes5' on page 73 undefined on input line 243.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-
-LaTeX Warning: Reference `ex_planes4' on page 73 undefined on input line 245.
-
-
-LaTeX Warning: Reference `chapter:linear' on page 73 undefined on input line 24
-5.
-
 File: figures/figplanes5_3DBW.pdf Graphic file (type QTm)
-<use  "figures/figplanes5_3DBW.pdf" > <figures/figplanes5_3D.prc>
-
-LaTeX Warning: Reference `ex_planes5' on page 73 undefined on input line 245.
-
-
-LaTeX Warning: Reference `ex_planes5' on page 73 undefined on input line 245.
-
-[73]
+<use  "figures/figplanes5_3DBW.pdf" > <figures/figplanes5_3D.prc> [73]
 Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
-
-
-LaTeX Warning: Reference `fig:planes_dist' on page 74 undefined on input line 2
-49.
-
-
-LaTeX Warning: Reference `fig:planes_dist' on page 74 undefined on input line 2
-90.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 290--291
@@ -4576,38 +3624,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 290--291
  []
 
 
-LaTeX Warning: Reference `ex_planes6' on page 74 undefined on input line 292.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 301--303
 
- []
-
-
-LaTeX Warning: Reference `eq:plane_dist' on page 74 undefined on input line 303
-.
-
-
-LaTeX Warning: Reference `idea:distance_method' on page 74 undefined on input l
-ine 303.
-
-
-LaTeX Warning: Reference `fig:planes_dist' on page 74 undefined on input line 3
-03.
-
-
-Underfull \hbox (badness 1430) has occurred while \output is active
-\EU1/Calibri(0)/m/n/9 low the steps in Key Idea [] will pay
- []
-
-
-Underfull \hbox (badness 1087) has occurred while \output is active
-\EU1/Calibri(0)/m/n/9 off more in the long run than memo-
- []
-
-
-Underfull \hbox (badness 1024) has occurred while \output is active
-\EU1/Calibri(0)/m/n/9 rizing a formula. Here, our key steps
  []
 
 File: figures/figplanes_dist_3DBW.pdf Graphic file (type QTm)
@@ -4656,14 +3674,7 @@ anes in space as merely
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-
-LaTeX Warning: Reference `10_05_ex_30' on page 76 undefined on input line 328.
-
-
-LaTeX Warning: Reference `sec:lines' on page 76 undefined on input line 328.
-
-[76
+ [76
 
 ] [77]) [78
 
@@ -4713,6 +3724,10 @@ Overfull \hbox (30.94482pt too wide) in paragraph at lines 132--132
  []
 
 [81]
+Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
+=tex-text;" at 7.0pt
+ -> C:/WINDOWS/Fonts/calibrib.ttf
+
 Underfull \hbox (badness 10000) in paragraph at lines 158--158
 
  []
@@ -4817,11 +3832,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
  []
 
 [87]
-
-LaTeX Warning: Reference `def:vector_multiply' on page 88 undefined on input li
-ne 109.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 118--119
 [][][]
  []
@@ -4831,23 +3841,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-[88] [89]
-
-LaTeX Warning: Reference `ex_vector_multiplication' on page 90 undefined on inp
-ut line 262.
-
-[90]
+[88] [89] [90]
 Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
-
-
-LaTeX Warning: Reference `sec:matrix_arithmetic_1' on page 91 undefined on inpu
-t line 268.
-
-
-LaTeX Warning: Reference `sec:matrix_arithmetic_1' on page 91 undefined on inpu
-t line 268.
 
 [91] [92]
 Underfull \hbox (badness 10000) in paragraph at lines 342--343
@@ -4873,18 +3870,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 440--441
 Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
  []
-
-
-LaTeX Warning: Reference `def:identity' on page 94 undefined on input line 441.
-
-
-
-LaTeX Warning: Reference `def:diagonal' on page 94 undefined on input line 441.
-
-
-
-LaTeX Warning: Reference `def:diagonal' on page 94 undefined on input line 441.
-
 
 [94]
 Underfull \hbox (badness 10000) in paragraph at lines 451--452
@@ -4942,29 +3927,14 @@ Overfull \hbox (6.66595pt too wide) in paragraph at lines 65--65
  [] 
  []
 
-
-LaTeX Warning: Reference `fig:draw_vectors' on page 99 undefined on input line 
-69.
-
 [99
 
 ]
-
-LaTeX Warning: Reference `fig:xyz' on page 100 undefined on input line 111.
-
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_draw_vectors_1' on page 100 undefined on input lin
-e 111.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 111--111
  [] 
  []
-
-
-LaTeX Warning: Reference `sec:matrix_arithmetic_1' on page 100 undefined on inp
-ut line 120.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 120--121
@@ -4977,21 +3947,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
  []
 
 
-LaTeX Warning: Reference `fig:addvectors1' on page 101 undefined on input line 
-164.
-
-
-LaTeX Warning: Reference `ex_add_vectors_1' on page 101 undefined on input line
- 164.
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 164--164
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:addvectors2' on page 101 undefined on input line 
-172.
 
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 198--198
@@ -5011,30 +3969,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--206
 [101
 
 ]
-
-LaTeX Warning: Reference `fig:draw_add_1' on page 102 undefined on input line 2
-45.
-
-
-LaTeX Warning: Reference `ex_draw_add' on page 102 undefined on input line 245.
-
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 245--245
  [] 
  []
-
-
-LaTeX Warning: Reference `idea:Parallelogram' on page 102 undefined on input li
-ne 245.
-
-
-LaTeX Warning: Reference `fig:draw_add_2' on page 102 undefined on input line 2
-45.
-
-
-LaTeX Warning: Reference `ex_draw_add' on page 102 undefined on input line 245.
-
 
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 245--245
@@ -5046,40 +3983,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
  []
 
-
-LaTeX Warning: Reference `fig:scalar_1' on page 102 undefined on input line 293
-.
-
 [102]
-
-LaTeX Warning: Reference `ex_scalar_vect_1' on page 103 undefined on input line
- 293.
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 293--293
  [] 
  []
 
 
-LaTeX Warning: Reference `fig:draw_scale_1' on page 103 undefined on input line
- 341.
-
-
-LaTeX Warning: Reference `ex_draw_scale_1' on page 103 undefined on input line 
-341.
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 341--341
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:draw_scale_2' on page 103 undefined on input line
- 341.
-
-
-LaTeX Warning: Reference `ex_draw_scale_1' on page 103 undefined on input line 
-341.
 
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 341--341
@@ -5092,52 +4004,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 345--346
  []
 
 
-LaTeX Warning: Reference `ex_draw_add' on page 103 undefined on input line 349.
-
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
 [103]
-
-LaTeX Warning: Reference `fig:subtract_1' on page 104 undefined on input line 3
-84.
-
-
-LaTeX Warning: Reference `ex_subtract' on page 104 undefined on input line 384.
-
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 384--384
  [] 
  []
 
 
-LaTeX Warning: Reference `fig:subtract_2' on page 104 undefined on input line 3
-84.
-
-
-LaTeX Warning: Reference `ex_subtract' on page 104 undefined on input line 384.
-
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 384--384
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:subtract_3' on page 104 undefined on input line 3
-88.
-
-
-LaTeX Warning: Reference `fig:subtract_2' on page 104 undefined on input line 3
-88.
-
-
-LaTeX Warning: Reference `ex_subtract' on page 104 undefined on input line 388.
-
 
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 402--402
@@ -5155,23 +4034,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--410
  []
 
 [104]
-
-LaTeX Warning: Reference `fig:subtract_quick_2' on page 105 undefined on input 
-line 458.
-
-
-LaTeX Warning: Reference `idea:vector_subtract' on page 105 undefined on input 
-line 458.
-
-
-LaTeX Warning: Reference `fig:subtract_quick_2' on page 105 undefined on input 
-line 458.
-
-
-LaTeX Warning: Reference `ex_subtract_quick' on page 105 undefined on input lin
-e 458.
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 458--458
  [] 
  []
@@ -5180,10 +4042,6 @@ Overfull \hbox (6.66595pt too wide) in paragraph at lines 458--458
 Underfull \hbox (badness 10000) in paragraph at lines 466--467
 
  []
-
-
-LaTeX Warning: Reference `fig:vector_length' on page 105 undefined on input lin
-e 470.
 
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 489--489
@@ -5201,32 +4059,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 512--513
  []
 
 [105]
-
-LaTeX Warning: Reference `def:vector_length' on page 106 undefined on input lin
-e 529.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 529--529
 
  []
 
 
-LaTeX Warning: Reference `ex_scalar_vect_1' on page 106 undefined on input line
- 533.
-
-
-LaTeX Warning: Reference `ex_draw_scale_1' on page 106 undefined on input line 
-533.
-
-
 Overfull \hbox (7.03784pt too wide) in paragraph at lines 554--554
- $[]$ $[]$\EU1/Calibri(0)/bx/n/10 Measuring the effect of scalar multiplication
- on vector length 
+ $[]$ $[]$[]\EU1/Calibri(0)/bx/n/10 Measuring the effect of scalar multiplicati
+on on vector length 
  []
-
-
-LaTeX Warning: Reference `def:vector_length' on page 106 undefined on input lin
-e 554.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 554--554
@@ -5271,49 +4112,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 569--570
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Warning: Reference `sec:lin_trans' on page 107 undefined on input line 57
-8.
-
-[107]
+ [107]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-
-LaTeX Warning: Reference `ex_mv_1' on page 108 undefined on input line 608.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 608--608
  [] 
  []
 
-
-LaTeX Warning: Reference `fig:mv_1' on page 108 undefined on input line 608.
-
-
-LaTeX Warning: Reference `sec:eigen' on page 108 undefined on input line 614.
-
 [108]
-
-LaTeX Warning: Reference `fig:mv_2' on page 109 undefined on input line 661.
-
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_mv_2' on page 109 undefined on input line 661.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 661--661
  [] 
  []
-
-
-LaTeX Warning: Reference `sec:geom_3' on page 109 undefined on input line 665.
 
 [109]
 Missing character: There is no ; in font nullfont!
@@ -5321,16 +4138,9 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-
-LaTeX Warning: Reference `ex_mv_23' on page 110 undefined on input line 702.
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 702--702
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:mv_23' on page 110 undefined on input line 702.
 
 [110]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -5369,12 +4179,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-
-LaTeX Warning: Reference `def:vector_length' on page 111 undefined on input lin
-e 715.
-
-[111
+ [111
 
 ]) (text/05_Geometry_of_Cartesian_Plane.tex
 Overfull \hbox (1.4682pt too wide) in paragraph at lines 17--17
@@ -5382,18 +4187,9 @@ Overfull \hbox (1.4682pt too wide) in paragraph at lines 17--17
 lication transforms
  []
 
-
-LaTeX Warning: Reference `sec:geom_1' on page 112 undefined on input line 19.
-
-
-LaTeX Warning: Reference `ex_mv_2' on page 112 undefined on input line 92.
-
 [112
 
 ]
-
-LaTeX Warning: Reference `fig:mv_3' on page 113 undefined on input line 188.
-
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5404,9 +4200,6 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_mv_3' on page 113 undefined on input line 188.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 188--188
  [] 
@@ -5422,27 +4215,17 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_mv_3' on page 113 undefined on input line 188.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 188--188
  [] 
  []
 
 [113]
-
-LaTeX Warning: Reference `fig:mv_3b' on page 114 undefined on input line 188.
-
-
 Overfull \hbox (2.6796pt too wide) in paragraph at lines 192--193
 []\EU1/Calibri(0)/m/n/10 Much more can be said about this example. Before we de
 lve into this, though,
  []
 
-
-LaTeX Warning: Reference `fig:mv_4' on page 114 undefined on input line 234.
-
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5453,33 +4236,16 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_mv_4' on page 114 undefined on input line 234.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 234--234
  [] 
  []
 
-[114]
-
-LaTeX Warning: Reference `ex_mv_3' on page 115 undefined on input line 246.
-
-
-LaTeX Warning: Reference `ex_mv_4' on page 115 undefined on input line 246.
-
-
-LaTeX Warning: Reference `ex_mv_3' on page 115 undefined on input line 256.
-
-[115]
+[114] [115]
 Overfull \hbox (1.31363pt too wide) in paragraph at lines 316--316
 \EU1/Calibri(0)/m/n/10 Find the matrix $[]$ that flips the Cartesian plane abou
 t the $[]$ axis and then stretches
  []
-
-
-LaTeX Warning: Reference `fig:transf_1' on page 116 undefined on input line 316
-.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5489,16 +4255,15 @@ Overfull \hbox (21.83284pt too wide) in paragraph at lines 316--316
  []
 
 
-LaTeX Warning: Reference `ex_transf_1' on page 116 undefined on input line 316.
-
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 316--316
  [] 
  []
 
 
-LaTeX Warning: Reference `fig:trans' on page 116 undefined on input line 322.
+Overfull \hbox (2.75565pt too wide) in paragraph at lines 322--323
+[]\EU1/Calibri(0)/m/n/10 Consider Figure []3.22[] where the unit square (with v
+ertices marked with shapes
+ []
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5509,9 +4274,6 @@ Missing character: There is no ; in font nullfont!
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 332--332
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:trans2' on page 117 undefined on input line 352.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5530,34 +4292,17 @@ Overfull \hbox (6.66595pt too wide) in paragraph at lines 364--364
  [] 
  []
 
-
-LaTeX Warning: Reference `fig:transf_2_1' on page 118 undefined on input line 4
-24.
-
-
-LaTeX Warning: Reference `fig:transf_2_2' on page 118 undefined on input line 4
-24.
-
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 [118]
-
-LaTeX Warning: Reference `ex_transf_2' on page 119 undefined on input line 424.
-
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 424--424
  [] 
  []
 
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_transf_2' on page 119 undefined on input line 424.
-
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 424--424
  [] 
@@ -5699,26 +4444,14 @@ Underfull \hbox (badness 4205) in paragraph at lines 765--765
 Underfull \vbox (badness 5203) has occurred while \output is active []
 
  [121]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 
-LaTeX Warning: Reference `fig:trans_3_1' on page 122 undefined on input line 76
-5.
-
-
-LaTeX Warning: Reference `fig:trans_3_2' on page 122 undefined on input line 76
-5.
-
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
 [122]
-
-LaTeX Warning: Reference `ex_transf_3' on page 123 undefined on input line 765.
-
-
-
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 765--765
  [] 
  []
@@ -5729,10 +4462,6 @@ Missing character: There is no ; in font nullfont!
 Overfull \hbox (21.83284pt too wide) in paragraph at lines 765--765
  [] 
  []
-
-
-LaTeX Warning: Reference `ex_transf_3' on page 123 undefined on input line 765.
-
 
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 765--765
@@ -5805,10 +4534,6 @@ Missing character: There is no ; in font nullfont!
  [124
 
 ]) (text/05_Linear_Transformations.tex
-
-LaTeX Warning: Reference `fig:translation' on page 125 undefined on input line 
-11.
-
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5823,10 +4548,6 @@ Missing character: There is no ; in font nullfont!
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 25--25
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:translation2' on page 125 undefined on input line
- 35.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5862,11 +4583,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
  []
 
 [126]
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 127 undefined on input line 2
-25.
-
-
 Overfull \hbox (1.79837pt too wide) in paragraph at lines 225--225
 []$[]$\EU1/Calibri(0)/m/n/10 Let’s start by again considering arbitrary $[]$ an
 d $[]$. Let’s choose
@@ -5877,44 +4593,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--225
 
  []
 
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 127 undefined on input line 2
-25.
-
 [127]
-
-LaTeX Warning: Reference `thm:matrix_multiplication' on page 128 undefined on i
-nput line 225.
-
-
-LaTeX Warning: Reference `thm:mat_mult_dist' on page 128 undefined on input lin
-e 225.
-
-
-LaTeX Warning: Reference `thm:matrix_multiplication' on page 128 undefined on i
-nput line 225.
-
-
-LaTeX Warning: Reference `thm:matrix_multiplication' on page 128 undefined on i
-nput line 225.
-
-
-LaTeX Warning: Reference `thm:mat_mult_scalar' on page 128 undefined on input l
-ine 225.
-
-
-LaTeX Warning: Reference `thm:matrix_multiplication' on page 128 undefined on i
-nput line 225.
-
-
-LaTeX Warning: Reference `thm:mat_mult_scalar' on page 128 undefined on input l
-ine 225.
-
-
-LaTeX Warning: Reference `ex_lin_trans_2' on page 128 undefined on input line 2
-31.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 240--241
 [][][]
  []
@@ -5928,11 +4607,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--241
 Underfull \vbox (badness 1281) has occurred while \output is active []
 
  [128]
-
-LaTeX Warning: Reference `thm:linear_matrix' on page 129 undefined on input lin
-e 248.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 248--249
 [][][]
  []
@@ -5941,10 +4615,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 248--249
 Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
-
-
-LaTeX Warning: Reference `thm:linear_matrix' on page 129 undefined on input lin
-e 254.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 276--277
@@ -6030,54 +4700,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--435
  []
 
 [132]
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 133 undefined on input line 4
-41.
-
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 133 undefined on input line 4
-43.
-
-
-LaTeX Warning: Reference `ex_stand_mat1' on page 133 undefined on input line 44
-5.
-
-
-LaTeX Warning: Reference `ex_stand_mat1' on page 133 undefined on input line 44
-7.
-
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 133 undefined on input line 4
-51.
-
-
-LaTeX Warning: Reference `ex_stand_mat1' on page 133 undefined on input line 45
-1.
-
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 133 undefined on input line 4
-53.
-
-
-LaTeX Warning: Reference `ex_stand_mat1' on page 133 undefined on input line 45
-3.
-
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 133 undefined on input line 4
-53.
-
-
-LaTeX Warning: Reference `ex_lin_trans_1' on page 133 undefined on input line 4
-53.
-
-
-LaTeX Warning: Reference `ex_stand_mat1' on page 133 undefined on input line 45
-3.
-
-
-LaTeX Warning: Reference `sec:intro' on page 133 undefined on input line 453.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 462--463
 [][][]
  []
@@ -6088,25 +4710,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 462--463
  []
 
 [133]
-
-LaTeX Warning: Reference `idea:when_linear' on page 134 undefined on input line
- 470.
-
-
-LaTeX Warning: Reference `idea:when_linear' on page 134 undefined on input line
- 488.
-
-
-LaTeX Warning: Reference `idea:when_linear' on page 134 undefined on input line
- 488.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 488--488
 
  []
-
-
-LaTeX Warning: Reference `sec:intro' on page 134 undefined on input line 488.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 492--493
@@ -6162,37 +4768,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 [137
 
 ]
-
-LaTeX Warning: Reference `eq:r2g' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:brg' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:brg' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:rbg30' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:r2g' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:b3g' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:rbg30' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:g5' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `eq:r2g' on page 138 undefined on input line 28.
-
-
-LaTeX Warning: Reference `ex_by_hand' on page 138 undefined on input line 40.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 72--72
 
  []
@@ -6212,11 +4787,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-[138]
-
-LaTeX Warning: Reference `ex_by_hand' on page 139 undefined on input line 76.
-
-[139]
+[138] [139]
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
@@ -6256,27 +4827,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  [141
 
-]) (text/01_Using_Matrices.tex
-
-LaTeX Warning: Reference `sec:intro' on page 142 undefined on input line 9.
-
-
-LaTeX Warning: Reference `ex_by_hand' on page 142 undefined on input line 9.
-
-
-LaTeX Warning: Reference `sec:intro' on page 142 undefined on input line 25.
-
-[142
+]) (text/01_Using_Matrices.tex [142
 
 ]
-
-LaTeX Warning: Reference `sec:intro' on page 143 undefined on input line 73.
-
-
-LaTeX Warning: Reference `eq:before_matrix' on page 143 undefined on input line
- 77.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 113--113
 
  []
@@ -6297,11 +4850,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--114
  []
 
 [143]
-
-LaTeX Warning: Reference `eq:before_matrix' on page 144 undefined on input line
- 119.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
@@ -6466,25 +5014,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  [157
 
-]) (text/01_Existence_Uniqueness_Solutions.tex
-
-LaTeX Warning: Reference `fig:visual_solution' on page 158 undefined on input l
-ine 28.
-
-
-LaTeX Warning: Reference `fig:visual_solution' on page 158 undefined on input l
-ine 35.
-
-[158
+]) (text/01_Existence_Uniqueness_Solutions.tex [158
 
 ]
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 60--60
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:visual_solution' on page 159 undefined on input l
-ine 69.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 79--80
@@ -6517,14 +5052,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
  []
 
 [160]
-
-LaTeX Warning: Reference `ex_ex_un_01' on page 161 undefined on input line 185.
-
-
-
-LaTeX Warning: Reference `ex_ex_un_1' on page 161 undefined on input line 187.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 199--199
 
  []
@@ -6570,10 +5097,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
  []
 
 
-LaTeX Warning: Reference `idea:consistent' on page 162 undefined on input line 
-227.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
@@ -6599,7 +5122,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--325
  []
 
 
-LaTeX Warning: Reference `ex_ex_un_4' on page 164 undefined on input line 379.
+Underfull \hbox (badness 3158) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 pear “unexpectedly” in matrices after
+ []
 
 [164] [165]
 Overfull \hbox (7.26248pt too wide) in paragraph at lines 486--487
@@ -6712,81 +5237,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
 Chapter 5.
 (text/02_Vector_Solutions.tex [179
 
-] [180]
-
-LaTeX Warning: Reference `thm:existence_uniqueness' on page 181 undefined on in
-put line 87.
-
-[181]
-
-LaTeX Warning: Reference `fig:vect_sol_101' on page 182 undefined on input line
- 163.
-
+] [180] [181]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_vector_solution_101' on page 182 undefined on inpu
-t line 163.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 163--163
  [] 
  []
 
 [182]
-
-LaTeX Warning: Reference `fig:vect_sol_102' on page 183 undefined on input line
- 228.
-
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_vect_sol_102' on page 183 undefined on input line 
-228.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 228--228
  [] 
  []
 
-[183]
-
-LaTeX Warning: Reference `ex_vector_solution_101' on page 184 undefined on inpu
-t line 307.
-
-[184]
-
-LaTeX Warning: Reference `fig:vect_sol_103' on page 185 undefined on input line
- 307.
-
+[183] [184]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
-
-LaTeX Warning: Reference `ex_vect_sol_103' on page 185 undefined on input line 
-307.
-
 
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 307--307
  [] 
  []
-
-
-LaTeX Warning: Reference `ex_vector_solution_101' on page 185 undefined on inpu
-t line 337.
-
-
-LaTeX Warning: Reference `ex_vect_sol_103' on page 185 undefined on input line 
-337.
-
-
-LaTeX Warning: Reference `ex_vect_sol_103' on page 185 undefined on input line 
-341.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 350--350
@@ -6804,15 +5283,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 350--351
  []
 
 [185]
-
-LaTeX Warning: Reference `ex_vector_solution_101' on page 186 undefined on inpu
-t line 354.
-
-
-LaTeX Warning: Reference `ex_vect_sol_103' on page 186 undefined on input line 
-354.
-
-
 Overfull \hbox (4.10709pt too wide) in paragraph at lines 354--355
 []\EU1/Calibri(0)/m/n/10 The term \EU1/Calibri(0)/m/it/10 homogeneous \EU1/Cali
 bri(0)/m/n/10 comes from two Greek words; \EU1/Calibri(0)/m/it/10 homo \EU1/Cal
@@ -6828,10 +5298,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 362--363
 Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
-
-
-LaTeX Warning: Reference `idea:consistent' on page 186 undefined on input line 
-366.
 
 [186]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 441--442
@@ -6859,21 +5325,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 510--510
 
  []
 
-[189] [190]
-
-LaTeX Warning: Reference `idea:unique_solutions' on page 191 undefined on input
- line 576.
-
-
-LaTeX Warning: Reference `idea:unique_solutions' on page 191 undefined on input
- line 613.
-
-
+[189] [190] [191]
 Underfull \hbox (badness 10000) in paragraph at lines 613--614
 
  []
 
-[191] [192]
+[192]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -7016,14 +5473,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-
-LaTeX Warning: Reference `ex_inverse_2' on page 203 undefined on input line 157
-.
-
-
-LaTeX Warning: Reference `def:inverse' on page 203 undefined on input line 157.
-
-
 [203]
 Underfull \hbox (badness 10000) in paragraph at lines 198--198
 
@@ -7039,23 +5488,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
-
-LaTeX Warning: Reference `ex_inverse_2' on page 204 undefined on input line 202
-.
-
-
-LaTeX Warning: Reference `thm:2by2' on page 204 undefined on input line 208.
-
 [204]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
-
-
-LaTeX Warning: Reference `thm:2by2' on page 205 undefined on input line 228.
-
-
-LaTeX Warning: Reference `thm:2by2' on page 205 undefined on input line 228.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 259--260
@@ -7067,16 +5503,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
-[205]
-
-LaTeX Warning: Reference `thm:inverse_solution' on page 206 undefined on input 
-line 300.
-
-
-LaTeX Warning: Reference `ex_inverse_solution_1' on page 206 undefined on input
- line 306.
-
-[206]
+[205] [206]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -7109,19 +5536,7 @@ LaTeX Warning: Reference `ex_inverse_solution_1' on page 206 undefined on input
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-
-LaTeX Warning: Reference `thm:2by2' on page 207 undefined on input line 306.
-
-
-LaTeX Warning: Reference `idea:finding_inverses' on page 207 undefined on input
- line 306.
-
-
-LaTeX Warning: Reference `thm:inverse_solution' on page 207 undefined on input 
-line 306.
-
-[207
+ [207
 
 ] [208]) (text/02_Matrix_Inverse_Properties.tex
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 32--33
@@ -7133,40 +5548,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-
-LaTeX Warning: Reference `thm:IMT' on page 209 undefined on input line 48.
-
 [209
 
 ]
-
-LaTeX Warning: Reference `thm:inverse1' on page 210 undefined on input line 48.
-
-
-
-LaTeX Warning: Reference `idea:finding_inverses' on page 210 undefined on input
- line 50.
-
-
-LaTeX Warning: Reference `thm:inverse1' on page 210 undefined on input line 50.
-
-
-
-LaTeX Warning: Reference `idea:finding_inverses' on page 210 undefined on input
- line 50.
-
-
-LaTeX Warning: Reference `idea:finding_inverses' on page 210 undefined on input
- line 50.
-
-
-LaTeX Warning: Reference `thm:inverse_solution' on page 210 undefined on input 
-line 51.
-
-
-LaTeX Warning: Reference `thm:IMT' on page 210 undefined on input line 60.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 72--73
 [][][]
  []
@@ -7180,10 +5564,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [210]
-
-LaTeX Warning: Reference `thm:IMT' on page 211 undefined on input line 76.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
@@ -7193,30 +5573,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--216
 
  []
 
-
-LaTeX Warning: Reference `thm:2by2' on page 211 undefined on input line 216.
-
-
-LaTeX Warning: Reference `thm:2by2' on page 211 undefined on input line 216.
-
-
-LaTeX Warning: Reference `thm:2by2' on page 211 undefined on input line 216.
-
-[211]
-
-LaTeX Warning: Reference `thm:2by2' on page 212 undefined on input line 216.
-
-
-LaTeX Warning: Reference `thm:2by2' on page 212 undefined on input line 216.
-
-[212]
+[211] [212]
 Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
-
-
-LaTeX Warning: Reference `idea:finding_inverses' on page 213 undefined on input
- line 240.
 
 [213]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 264--265
@@ -7227,18 +5587,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 264--265
 Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
-
-
-LaTeX Warning: Reference `sec:vector_solutions' on page 214 undefined on input 
-line 278.
-
-
-LaTeX Warning: Reference `def:diagonal' on page 214 undefined on input line 280
-.
-
-
-LaTeX Warning: Reference `def:diagonal' on page 214 undefined on input line 280
-.
 
 
 Underfull \hbox (badness 1043) has occurred while \output is active
@@ -7278,11 +5626,7 @@ Underfull \hbox (badness 1043) has occurred while \output is active
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-
-LaTeX Warning: Reference `thm:2by2' on page 215 undefined on input line 280.
-
-[215
+ [215
 
 ]) [216
 
@@ -7378,10 +5722,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 260--261
 Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
-
-
-LaTeX Warning: Reference `ex_transpose_3' on page 223 undefined on input line 2
-83.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 293--294
@@ -7509,11 +5849,7 @@ i(0)/m/n/9 .
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-
-LaTeX Warning: Reference `thm:trace' on page 229 undefined on input line 145.
-
-[229
+ [229
 
 ]) (text/03_Determinant.tex
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 29--30
@@ -7524,10 +5860,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 29--30
 Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
-
-
-LaTeX Warning: Reference `sec:inverses' on page 230 undefined on input line 33.
-
 
 [230
 
@@ -7577,10 +5909,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 246--247
 Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
-
-
-LaTeX Warning: Reference `ex_cofactor' on page 234 undefined on input line 293.
-
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 293--293
@@ -7666,17 +5994,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-
-LaTeX Warning: Reference `ex_cofactor' on page 239 undefined on input line 23.
-
 [239
 
-]
-
-LaTeX Warning: Reference `ex_determinant_4' on page 240 undefined on input line
- 53.
-
-[240]
+] [240]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 91--92
 [][][]
  []
@@ -7695,10 +6015,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 152--153
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
-
-
-LaTeX Warning: Reference `thm:determinant_row_operations' on page 242 undefined
- on input line 178.
 
 
 Overfull \hbox (2.15099pt too wide) in paragraph at lines 178--178
@@ -7753,11 +6069,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 364--365
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [245]
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 246 undefined on 
-input line 368.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 381--382
 [][][]
  []
@@ -7766,10 +6077,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 381--382
 Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
-
-
-LaTeX Warning: Reference `chapter:eigen' on page 246 undefined on input line 38
-5.
 
 [246]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -7804,23 +6111,9 @@ LaTeX Warning: Reference `chapter:eigen' on page 246 undefined on input line 38
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+ [247
 
-
-LaTeX Warning: Reference `thm:determinant_row_operations' on page 247 undefined
- on input line 455.
-
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 247 undefined on 
-input line 455.
-
-[247
-
-]
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 248 undefined on 
-input line 455.
-
-[248]) (text/03_CramersRule.tex
+] [248]) (text/03_CramersRule.tex
 Overfull \hbox (5.97668pt too wide) in paragraph at lines 7--7
 []\EU1/Calibri(0)/m/n/10 Mathematicians use what word to describe the connectio
 ns between seem-
@@ -7837,10 +6130,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
  []
 
 
-LaTeX Warning: Reference `thm:cramers_rule' on page 249 undefined on input line
- 63.
-
-
 Underfull \hbox (badness 4353) has occurred while \output is active
 []\EU1/Calibri(0)/m/n/9 It is interesting to note that despite
  []
@@ -7853,15 +6142,6 @@ Underfull \hbox (badness 2717) has occurred while \output is active
 [249
 
 ]
-
-LaTeX Warning: Reference `sec:determinant_properties' on page 250 undefined on 
-input line 89.
-
-
-LaTeX Warning: Reference `idea:solutions_invert' on page 250 undefined on input
- line 89.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
@@ -7919,12 +6199,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
  []
 
 
-LaTeX Warning: Reference `idefn' on page 253 undefined on input line 28.
-
-
-LaTeX Warning: Reference `idefn' on page 253 undefined on input line 28.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 35--36
 [][][]
  []
@@ -7955,17 +6229,9 @@ Underfull \hbox (badness 1603) has occurred while \output is active
 
 
 ]
-
-LaTeX Warning: Reference `idefn' on page 254 undefined on input line 48.
-
-
 Underfull \vbox (badness 3977) has occurred while \output is active []
 
  [254]
-
-LaTeX Warning: Reference `idefn' on page 255 undefined on input line 112.
-
-
 Overfull \hbox (4.87463pt too wide) in paragraph at lines 112--112
 \EU1/Calibri(0)/m/n/10 plicable to real numbers to get $[][] \OT1/cmr/m/n/10 = 
 [] [] = [][][] =
@@ -7985,10 +6251,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--138
  []
 
 
-LaTeX Warning: Reference `conjugateprops' on page 256 undefined on input line 1
-41.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 182--183
 [][][]
  []
@@ -8002,24 +6264,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [256]
-
-LaTeX Warning: Reference `thm:comparithprops' on page 257 undefined on input li
-ne 186.
-
-
-LaTeX Warning: Reference `RealNumberArithmetic' on page 257 undefined on input 
-line 186.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [257]
 [258]
-
-LaTeX Warning: Reference `complexsolnsreviewex' on page 259 undefined on input 
-line 271.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 289--290
 [][][]
  []
@@ -8028,14 +6276,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 289--290
 Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
-
-
-LaTeX Warning: Reference `discriminanttheoremcomplexversion' on page 259 undefi
-ned on input line 293.
-
-
-LaTeX Warning: Reference `complexzeroex1' on page 259 undefined on input line 2
-93.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 298--299
@@ -8110,20 +6350,14 @@ Underfull \hbox (badness 2326) has occurred while \output is active
  [261
 
 ]) (text/00_IntroPolar.tex
-
-LaTeX Warning: Reference `CartesianPlane' on page 262 undefined on input line 5
-.
-
 File: figures/IntroPolar-1BW.pdf Graphic file (type QTm)
-<use  "figures/IntroPolar-1BW.pdf" >
+ <use  "figures/IntroPolar-1BW.pdf" >
 File: figures/IntroPolar-2BW.pdf Graphic file (type QTm)
- <use  "figures/IntroPolar-2BW.pdf" >
+
+<use  "figures/IntroPolar-2BW.pdf" >
 Overfull \hbox (8.9991pt too wide) in paragraph at lines 13--17
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:polar1' on page 262 undefined on input line 25.
 
 File: figures/IntroPolar-3BW.pdf Graphic file (type QTm)
 <use  "figures/IntroPolar-3BW.pdf" >
@@ -8135,9 +6369,6 @@ File: figures/IntroPolar-5BW.pdf Graphic file (type QTm)
 Overfull \hbox (8.99913pt too wide) in paragraph at lines 33--38
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:polar2' on page 262 undefined on input line 46.
 
 [262
 
@@ -8157,9 +6388,6 @@ Overfull \hbox (29.99895pt too wide) in paragraph at lines 55--60
 Overfull \hbox (111.50717pt too wide) in paragraph at lines 52--65
  $[]$ 
  []
-
-
-LaTeX Warning: Reference `fig:polar3' on page 263 undefined on input line 68.
 
 File: figures/IntroPolar-9BW.pdf Graphic file (type QTm)
 <use  "figures/IntroPolar-9BW.pdf" >
@@ -8187,12 +6415,6 @@ File: figures/IntroPolar-14BW.pdf Graphic file (type QTm)
 Overfull \hbox (34.999pt too wide) in paragraph at lines 100--105
  [] 
  []
-
-
-LaTeX Warning: Reference `fig:polar3' on page 263 undefined on input line 107.
-
-
-LaTeX Warning: Reference `fig:polar3' on page 263 undefined on input line 107.
 
 
 Overfull \hbox (81.50717pt too wide) in paragraph at lines 97--110
@@ -8227,19 +6449,14 @@ Overfull \hbox (40.999pt too wide) in paragraph at lines 146--151
  []
 
 [263]
-
-LaTeX Warning: Reference `fig:polar7' on page 264 undefined on input line 352.
-
 File: figures/IntroPolar-21BW.pdf Graphic file (type QTm)
-<use  "figures/IntroPolar-21BW.pdf" >
+ <use  "figures/IntroPolar-21BW.pdf" >
 File: figures/IntroPolar-22BW.pdf Graphic file (type QTm)
- <use  "figures/IntroPolar-22BW.pdf" >
+
+<use  "figures/IntroPolar-22BW.pdf" >
 Overfull \hbox (5.00003pt too wide) in paragraph at lines 352--352
  $[]$ 
  []
-
-
-LaTeX Warning: Reference `fig:polar8' on page 264 undefined on input line 352.
 
 File: figures/IntroPolar-23BW.pdf Graphic file (type QTm)
 <use  "figures/IntroPolar-23BW.pdf" >
@@ -8274,10 +6491,6 @@ Overfull \hbox (11.19727pt too wide) in paragraph at lines 352--352
 Overfull \hbox (5.00003pt too wide) in paragraph at lines 352--352
  $[]$ 
  []
-
-
-LaTeX Warning: Reference `fig:polar11' on page 265 undefined on input line 352.
-
 
 File: figures/IntroPolar-29BW.pdf Graphic file (type QTm)
 <use  "figures/IntroPolar-29BW.pdf" >
@@ -8337,15 +6550,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 400--401
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [267]
-
-LaTeX Warning: Reference `polarrectangularconversion' on page 268 undefined on 
-input line 404.
-
-
-LaTeX Warning: Reference `polarrectangularconversion' on page 268 undefined on 
-input line 404.
-
-
 Overfull \hbox (14.60414pt too wide) in paragraph at lines 447--447
 \OT1/cmr/m/n/10 ([][]) [] = \OMS/cmsy/m/n/10 ^^@[]$ \EU1/Calibri(0)/m/n/10 and 
 $[] \OT1/cmr/m/n/10 = [] []([]) = ([][]) [] [] = ([][]) [] =
@@ -8363,10 +6567,6 @@ Overfull \hbox (5.72878pt too wide) in paragraph at lines 447--447
 S/cmsy/m/n/10 ^^@[]\OT1/cmr/m/n/10 )$ \EU1/Calibri(0)/m/n/10 lies along the neg
 ative $[]$-axis. While we could go through
  []
-
-
-LaTeX Warning: Reference `polarrectangularconversion' on page 269 undefined on 
-input line 451.
 
 File: figures/IntroPolar-38BW.pdf Graphic file (type QTm)
 <use  "figures/IntroPolar-38BW.pdf" >
@@ -8400,27 +6600,7 @@ Underfull \hbox (badness 2503) has occurred while \output is active
 it/9 ; []\OT1/cmr/m/n/9 )$ \EU1/Calibri(0)/m/n/9 and polar coordinates
  []
 
-[269]
-
-LaTeX Warning: Reference `recteqntopolar' on page 270 undefined on input line 5
-42.
-
-
-LaTeX Warning: Reference `ris6costheta' on page 270 undefined on input line 542
-.
-
-[270]
-
-LaTeX Warning: Reference `yisnegx' on page 271 undefined on input line 542.
-
-
-LaTeX Warning: Reference `polarrectangularconversion' on page 271 undefined on 
-input line 542.
-
-
-LaTeX Warning: Reference `risneg3' on page 271 undefined on input line 542.
-
-
+[269] [270]
 Underfull \hbox (badness 2744) has occurred while \output is active
 \EU1/Calibri(0)/m/n/9 of a point are ‘equivalent’, we mean
  []
@@ -8436,20 +6616,7 @@ Underfull \hbox (badness 1502) has occurred while \output is active
 /Calibri(0)/m/n/9 are different, but when inter-
  []
 
-[271]
-
-LaTeX Warning: Reference `recteqntopolar' on page 272 undefined on input line 5
-46.
-
-
-LaTeX Warning: Reference `polareqntorect' on page 272 undefined on input line 5
-46.
-
-
-LaTeX Warning: Reference `cardioidtorect' on page 272 undefined on input line 5
-46.
-
-[272]
+[271] [272]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -8484,32 +6651,9 @@ LaTeX Warning: Reference `cardioidtorect' on page 272 undefined on input line 5
 
  [273
 
-]
-
-LaTeX Warning: Reference `solvethetaone' on page 274 undefined on input line 54
-8.
-
-
-LaTeX Warning: Reference `solvethetafour' on page 274 undefined on input line 5
-48.
-
-
-LaTeX Warning: Reference `solvethetaone' on page 274 undefined on input line 54
-8.
-
-
-LaTeX Warning: Reference `solvethetafour' on page 274 undefined on input line 5
-48.
-
-[274] [275]) (text/00_PolarComplex.tex
-
-LaTeX Warning: Reference `CmpNums' on page 276 undefined on input line 5.
-
-
-LaTeX Warning: Reference `def:compequality' on page 276 undefined on input line
- 5.
-
+] [274] [275]) (text/00_PolarComplex.tex
 File: figures/PolarComplex-1BW.pdf Graphic file (type QTm)
+
 <use  "figures/PolarComplex-1BW.pdf" >
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 36--37
 [][][]
@@ -8521,13 +6665,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
  []
 
 
-LaTeX Warning: Reference `modulusargumentdefn' on page 276 undefined on input l
-ine 40.
-
-
-LaTeX Warning: Reference `IntroPolar' on page 276 undefined on input line 40.
-
-
 Underfull \hbox (badness 1092) has occurred while \output is active
 []\EU1/Calibri(0)/m/n/9 Saying that $[]\OT1/cmr/m/n/9 ([])$ \EU1/Calibri(0)/m/n
 /9 and $[]\OT1/cmr/m/n/9 ([])$ \EU1/Calibri(0)/m/n/9 are ‘well-
@@ -8536,21 +6673,8 @@ Underfull \hbox (badness 1092) has occurred while \output is active
 [276
 
 ] [277]
-
-LaTeX Warning: Reference `fig:polarcom1' on page 278 undefined on input line 83
-.
-
 File: figures/PolarComplex-2BW.pdf Graphic file (type QTm)
-<use  "figures/PolarComplex-2BW.pdf" >
-
-LaTeX Warning: Reference `plotmodargex' on page 278 undefined on input line 83.
-
-
-
-LaTeX Warning: Reference `plotmodargex' on page 278 undefined on input line 83.
-
-
-
+ <use  "figures/PolarComplex-2BW.pdf" >
 Overfull \hbox (25.00003pt too wide) in paragraph at lines 83--83
 $[]$ 
  []
@@ -8565,21 +6689,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-
-LaTeX Warning: Reference `modprops' on page 278 undefined on input line 112.
-
-
-LaTeX Warning: Reference `IntroPolar' on page 278 undefined on input line 112.
-
 [278]
-
-LaTeX Warning: Reference `complexzeroex1' on page 279 undefined on input line 1
-21.
-
-
-LaTeX Warning: Reference `CmpNums' on page 279 undefined on input line 121.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 169--169
 []\EU1/Calibri(0)/m/n/10 If $[]\OT1/cmr/m/n/10 ([]) = []$ \EU1/Calibri(0)/m/n/1
 0 and $[]\OT1/cmr/m/n/10 ([]) \OML/cmm/m/it/10 > []$\EU1/Calibri(0)/m/n/10 , th
@@ -8603,34 +6713,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-
-LaTeX Warning: Reference `argprops' on page 279 undefined on input line 173.
-
-
-LaTeX Warning: Reference `IntroPolar' on page 279 undefined on input line 173.
-
-
-LaTeX Warning: Reference `modulusargumentdefn' on page 279 undefined on input l
-ine 173.
-
-
-LaTeX Warning: Reference `modprops' on page 279 undefined on input line 174.
-
-
-LaTeX Warning: Reference `modprops' on page 279 undefined on input line 174.
-
 [279]
-
-LaTeX Warning: Reference `fig:polarcom2' on page 280 undefined on input line 17
-8.
-
 File: figures/PolarComplex-3BW.pdf Graphic file (type QTm)
-<use  "figures/PolarComplex-3BW.pdf" >
-
-LaTeX Warning: Reference `polarrectangularconversion' on page 280 undefined on 
-input line 192.
-
-
+ <use  "figures/PolarComplex-3BW.pdf" >
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 199--200
 [][][]
  []
@@ -8641,24 +6726,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--200
  []
 
 
-LaTeX Warning: Reference `polarformcomplex' on page 280 undefined on input line
- 203.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 282--282
 
  []
 
 [280]
-
-LaTeX Warning: Reference `plotmodargex' on page 281 undefined on input line 282
-.
-
-
-LaTeX Warning: Reference `plotmodargex' on page 281 undefined on input line 282
-.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 301--302
 [][][]
  []
@@ -8668,72 +6740,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
-[281]
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 282 undefined on input 
-line 318.
-
-
-LaTeX Warning: Reference `modprops' on page 282 undefined on input line 342.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 282 undefined on input 
-line 345.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 282 undefined on input 
-line 356.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 282 undefined on input 
-line 356.
-
-
-LaTeX Warning: Reference `eulerformulaexercise' on page 282 undefined on input 
-line 356.
-
-[282]
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 283 undefined on input 
-line 394.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 283 undefined on input 
-line 432.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 283 undefined on input 
-line 432.
-
-[283]
-
-LaTeX Warning: Reference `polararithmeticex' on page 284 undefined on input lin
-e 436.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 284 undefined on input 
-line 436.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 284 undefined on input 
-line 436.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 284 undefined on input 
-line 440.
-
-
-LaTeX Warning: Reference `polararithmeticex' on page 284 undefined on input lin
-e 440.
-
-
-LaTeX Warning: Reference `fig:polarcomp' on page 284 undefined on input line 44
-0.
-
+[281] [282] [283]
 File: figures/PolarComplex-4BW.pdf Graphic file (type QTm)
-<use  "figures/PolarComplex-4BW.pdf" >
+ <use  "figures/PolarComplex-4BW.pdf" >
 File: figures/PolarComplex-5BW.pdf Graphic file (type QTm)
- <use  "figures/PolarComplex-5BW.pdf" >
+
+<use  "figures/PolarComplex-5BW.pdf" >
 Overfull \hbox (151.50717pt too wide) in paragraph at lines 444--457
  $[]$ 
  []
@@ -8742,11 +6754,8 @@ Overfull \hbox (151.50717pt too wide) in paragraph at lines 444--457
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [284]
-
-LaTeX Warning: Reference `polararithmeticex' on page 285 undefined on input lin
-e 460.
-
 File: figures/PolarComplex-6BW.pdf Graphic file (type QTm)
+
 <use  "figures/PolarComplex-6BW.pdf" >
 File: figures/PolarComplex-7BW.pdf Graphic file (type QTm)
  <use  "figures/PolarComplex-7BW.pdf" >
@@ -8764,15 +6773,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
-
-LaTeX Warning: Reference `complexfactorization' on page 285 undefined on input 
-line 490.
-
 [285]
-
-LaTeX Warning: Reference `IntroPolar' on page 286 undefined on input line 497.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 506--507
 [][][]
  []
@@ -8782,48 +6783,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 506--507
 
  []
 
-
-LaTeX Warning: Reference `nthrootscomplexthm' on page 286 undefined on input li
-ne 510.
-
-
-LaTeX Warning: Reference `nthrootscomplexthm' on page 286 undefined on input li
-ne 516.
-
-
-LaTeX Warning: Reference `complexfactorization' on page 286 undefined on input 
-line 516.
-
-
-LaTeX Warning: Reference `nthrootscomplexthm' on page 286 undefined on input li
-ne 516.
-
 [286]
-
-LaTeX Warning: Reference `nthrootscomplexthm' on page 287 undefined on input li
-ne 553.
-
-
-LaTeX Warning: Reference `nthrootscomplexthm' on page 287 undefined on input li
-ne 553.
-
-
-LaTeX Warning: Reference `nthrootscomplexthm' on page 287 undefined on input li
-ne 553.
-
-
-LaTeX Warning: Reference `fig:polarroot1' on page 287 undefined on input line 5
-53.
-
-
 Overfull \hbox (1.21848pt too wide) in paragraph at lines 553--553
 [] [] [] \OT1/cmr/m/n/10 = [] [] []$\EU1/Calibri(0)/m/n/10 . In rectangular for
 m, the two square
  []
-
-
-LaTeX Warning: Reference `fig:polarroot2' on page 287 undefined on input line 5
-53.
 
 
 Overfull \hbox (15.86995pt too wide) in paragraph at lines 553--553
@@ -8836,10 +6800,6 @@ Overfull \hbox (25.70126pt too wide) in paragraph at lines 553--553
 [] [] []$\EU1/Calibri(0)/m/n/10 , $[][] \OT1/cmr/m/n/10 = [] [] [] = [] [] []$\
 EU1/Calibri(0)/m/n/10 , $[][] \OT1/cmr/m/n/10 = [] [] [] =
  []
-
-
-LaTeX Warning: Reference `fig:polarroot3' on page 287 undefined on input line 5
-53.
 
 File: figures/PolarComplex01BW.png Graphic file (type QTm)
 <use  "figures/PolarComplex01BW.png" >
@@ -8860,20 +6820,8 @@ Overfull \hbox (13.99959pt too wide) has occurred while \output is active
  []
 
 [287]
-
-LaTeX Warning: Reference `fig:polarroot1' on page 288 undefined on input line 5
-57.
-
-
-LaTeX Warning: Reference `fig:polarroot4' on page 288 undefined on input line 5
-57.
-
-
-LaTeX Warning: Reference `nthrootscomplexthm' on page 288 undefined on input li
-ne 557.
-
 File: figures/PolarComplex04BW.png Graphic file (type QTm)
-<use  "figures/PolarComplex04BW.png" >
+ <use  "figures/PolarComplex04BW.png" >
 Overfull \hbox (12.9996pt too wide) has occurred while \output is active
  [][][] 
  []
@@ -8913,56 +6861,13 @@ Overfull \hbox (12.9996pt too wide) has occurred while \output is active
 
  [289
 
-]
-
-LaTeX Warning: Reference `nthrootscomplexex' on page 290 undefined on input lin
-e 561.
-
-
-LaTeX Warning: Reference `halfanglecuberoot' on page 290 undefined on input lin
-e 561.
-
-
-LaTeX Warning: Reference `nthrootscomplexex' on page 290 undefined on input lin
-e 561.
-
-
-LaTeX Warning: Reference `calculatorfifthroot' on page 290 undefined on input l
-ine 561.
-
-
-LaTeX Warning: Reference `modprops' on page 290 undefined on input line 561.
-
-
-LaTeX Warning: Reference `CmpNums' on page 290 undefined on input line 561.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 290 undefined on input 
-line 561.
-
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 290 undefined on input 
-line 561.
-
-[290]
-
-LaTeX Warning: Reference `prodquotpolarcomplex' on page 291 undefined on input 
-line 561.
-
-[291]) [292
+] [290] [291]) [292
 
 
 
 ]
 Chapter 8.
-(text/04_Eigen.tex
-
-LaTeX Warning: Reference `ex_mv_1' on page 293 undefined on input line 18.
-
-
-LaTeX Warning: Reference `ex_mv_1' on page 293 undefined on input line 18.
-
-[293
+(text/04_Eigen.tex [293
 
 ]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 49--50
@@ -8974,32 +6879,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
-
-LaTeX Warning: Reference `footnote:special' on page 294 undefined on input line
- 61.
-
-
-LaTeX Warning: Reference `footnote:special' on page 294 undefined on input line
- 61.
-
-
-LaTeX Warning: Reference `chapter:arithmetic' on page 294 undefined on input li
-ne 65.
-
-
-LaTeX Warning: Reference `sec:vector_solutions' on page 294 undefined on input 
-line 80.
-
-[294]
-
-LaTeX Warning: Reference `thm:inverse_solution' on page 295 undefined on input 
-line 84.
-
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 295 undefined on 
-input line 86.
-
-[295]
+[294] [295]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 178--179
 [][][]
  []
@@ -9010,13 +6890,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--179
  []
 
 [296]
-
-LaTeX Warning: Reference `ex_find_el' on page 297 undefined on input line 184.
-
-
-LaTeX Warning: Reference `ex_find_ev' on page 297 undefined on input line 184.
-
-
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 194--195
 [][][]
  []
@@ -9045,14 +6918,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--271
 Underfull \hbox (badness 10000) in paragraph at lines 330--330
 
  []
-
-
-LaTeX Warning: Reference `footnote:extra_zeros' on page 299 undefined on input 
-line 330.
-
-
-LaTeX Warning: Reference `footnote:extra_zeros' on page 299 undefined on input 
-line 330.
 
 [299]
 Overfull \hbox (49.45227pt too wide) in paragraph at lines 420--420
@@ -9187,12 +7052,6 @@ Underfull \vbox (badness 2698) has occurred while \output is active []
  [306
 
 ]
-
-LaTeX Warning: Reference `ex_eigen1' on page 307 undefined on input line 98.
-
-
-LaTeX Warning: Reference `ex_eigen3' on page 307 undefined on input line 98.
-
 [307]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
@@ -9213,40 +7072,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-
-LaTeX Warning: Reference `thm:transpose' on page 308 undefined on input line 12
-4.
-
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 308 undefined on 
-input line 125.
-
-
-LaTeX Warning: Reference `thm:transpose' on page 308 undefined on input line 13
-4.
-
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 308 undefined on 
-input line 134.
-
-
-LaTeX Warning: Reference `thm:transpose' on page 308 undefined on input line 13
-4.
-
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 308 undefined on 
-input line 134.
-
 [308]
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
-
-
-LaTeX Warning: Reference `thm:trace' on page 309 undefined on input line 152.
-
-
-LaTeX Warning: Reference `thm:trace' on page 309 undefined on input line 156.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 156--157
@@ -9257,10 +7086,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
-
-
-LaTeX Warning: Reference `thm:determinant_properties' on page 309 undefined on 
-input line 163.
 
 
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 179--180
@@ -9289,9 +7114,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 245--246
 Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
-
-
-LaTeX Warning: Reference `ex_find_el' on page 311 undefined on input line 257.
 
 [311] [312]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -9326,12 +7148,7 @@ LaTeX Warning: Reference `ex_find_el' on page 311 undefined on input line 257.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-
-LaTeX Warning: Reference `thm:eigen_properties' on page 313 undefined on input 
-line 285.
-
-[313
+ [313
 
 ]) [314
 
@@ -9474,33 +7291,24 @@ File: figures/IntroPolar-55BW.pdf Graphic file (type QTm)
 
 ] (Math1410text_print.ind [15
 
-] [16] [17])
+] [16]
+Package atenddvi Info: Last page = 337.
+ [17])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 227.
 
-(Math1410text_print.aux
-
-Package atenddvi Warning: Rerun LaTeX, last page not yet found.
-
-)
+(Math1410text_print.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 227.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 227.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 227.
  ) 
 Here is how much of TeX's memory you used:
- 53481 strings out of 428755
- 1135137 string characters out of 3164219
- 1432820 words of memory out of 3000000
- 54770 multiletter control sequences out of 15000+200000
+ 53668 strings out of 428755
+ 1139191 string characters out of 3164219
+ 1494657 words of memory out of 3000000
+ 54957 multiletter control sequences out of 15000+200000
  19688 words of font info for 148 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
- 62i,24n,109p,10391b,1164s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,24n,110p,10391b,1012s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on Math1410text_print.pdf (337 pages).

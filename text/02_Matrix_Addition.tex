@@ -1,3 +1,5 @@
+In the last chapter we studied vectors from a geometric point of view. In this chapter we make the transition to algebra. (This is, after all, an algebra textbook.) We will see shortly that vectors are a special case of more general objects called \sword{matrices}.
+
 A fundamental topic of mathematics is arithmetic; adding, subtracting, multiplying and dividing numbers. After learning how to do this, most of us went on to learn how to add, subtract, multiply and divide ``$x$''. We are comfortable with expressions such as 
 \[
 x+3x-x\cdot x^2+x^5\cdot x^{-1}
@@ -11,21 +13,109 @@ This chapter deals with the idea of doing similar operations, but instead of an 
 \[
 \tta+3\tta-\tta\cdot \tta^2+\tta^5\cdot \tta^{-1}
 \]
-mean? We are going to need to learn to define what matrix addition, scalar multiplication, matrix multiplication and matrix inversion are. We will learn just that, plus some more good stuff, in this chapter.
+mean? Before we can do anything, we need to actually define what a matrix is! Once we've taken care of that, we are going to need to learn to define what matrix addition, scalar multiplication, matrix multiplication and matrix inversion are. We will learn just that, plus some more good stuff, in this chapter.
 
 \section{Matrix Addition and Scalar Multiplication}\label{sec:matrix_arithmetic_1}
 
 \asyouread{
+\item What is remarkable about the definition of a matrix?
 \item When are two matrices equal?
 \item Write an explanation of how to add matrices as though writing to someone who knows what a matrix is but not much more.
 \item T/F: There is only 1 zero matrix.
 \item T/F: To multiply a matrix by 2 means to multiply each entry in the matrix by 2.
 }
 
-In the past, when we dealt with expressions that used ``$x$,'' we didn't just add and multiply $x$'s together for the fun of it, %\footnote{although that would have been fun} 
-but rather because we were usually given some sort of \textit{equation} that had $x$ in it and we had to ``solve for $x$.''
+As mentioned above, a \textit{matrix} is a construction that allows us to organize information in a tabular form. For example, we may be interested in the following (made up) data involving crop yields on several Southern Alberta farms, given in tabular form:
 
-This begs the question, ``What does it mean to be equal?'' Two numbers are equal, when, $\ldots$, uh, $\ldots$, never mind. What does it mean for two matrices to be equal? We say that matrices \tta\ and \ttb\ are equal when their corresponding entries are equal. This seems like a very simple definition, but it is rather important, so we give it a box.
+\noindent\begin{minipage}{\textwidth}
+\begin{center}
+\begin{tabular}{l|cccc|}
+	 & Corn & Potatoes & Soybeans & Wheat\\
+\hline 
+ Farm A & 48 & 18 & 92 & 0\\
+ Farm B & 0 & 0 & 73 & 152\\
+ Farm C & 34 & 203 & 0 & 88\\
+ \hline
+\end{tabular}
+\end{center}
+\captionsetup{type=figure}
+\caption{2014 crop yields, in metric tonnes}
+\end{minipage}
+
+\medskip
+
+Someone in charge of compiling data on farms and crops probably already has a program or spreadsheet set up with all of the farms and crops pre-defined; what they are interested in are the numbers giving the crop yields. Thus, when they enter their data into the computer, they are probably more interested in the array
+\begin{equation}\label{eq:farmmatrix}
+A = \bbm 48 & 18 & 92 & 0\\ 0 & 0 & 73 & 152\\ 34 & 203 & 0 & 88 \ebm.
+\end{equation}
+As long as we're consistent and always assign each farm to the same row, and each crop to the same column, we can dispense with the labels and work directly with the data.
+
+\mnote{.4}{Matrices work well in situations such as our farming example where the data we need to organize falls into two categories, in this case, farms and crops. What if our data depends on three or more categories? (Perhaps we also want to track type of fertilizer?) It turns out that along with matrices, mathematicians have invented higher-dimensional arrays called tensors, that can handle almost any data organization scenario you can think of. Tensors are usually encountered in more advanced courses in abstract algebra.}
+
+The array above is our first example of a matrix, which we now define.
+The definition of matrix is remarkable only in how unremarkable it seems -- it is simply a way of organizing information (usually numbers) into an array.
+
+%\enlargethispage{2\baselineskip}
+\smallskip
+
+\definition{def:matrix}{Matrix}{
+\index{matrix!definition}
+A {\em matrix} is a rectangular array of numbers.\\
+
+The horizontal lines of numbers form {\em rows} and the vertical lines of numbers form {\em columns}. A matrix with $m$ rows and $n$ columns is said to be an $m\times n$ matrix (``an $m$ by $n$ matrix'', or a matrix of \sword{size} $m\times n$). \\
+
+The entries of an $m\times n$ matrix are indexed as follows:
+\[
+\bmx{ccccc}
+a_{11}&a_{12}&a_{13}&\cdots&a_{1n}\\
+a_{21}&a_{22}&a_{23}&\cdots&a_{2n}\\
+a_{31}&a_{32}&a_{33}&\cdots&a_{3n}\\
+\vdots&\vdots&\vdots&\ddots&\vdots\\
+a_{m1}&a_{m2}&a_{m3}&\cdots&a_{mn} \emx.
+\]
+
+That is, $a_{32}$ means ``the number in the third row and second column.'' To save space, we will sometimes use the shorthand notation $A = [a_{ij}]$ to denote a matrix $A$ with entries $a_{ij}$. If we need to specify the size, we can also write $A=[a_{ij}]_{m\times n}$.}
+
+\smallskip
+
+Two special types of matrix are worth noting: those with a single row or column. Such matrices are known as \textit{vectors}.
+
+\smallskip
+
+\definition{def:rcvect}{Row and column vectors}{
+\index{row vector}\index{column vector}\index{vector ! row} \index{vector ! column}
+A \sword{row vector} is a $1\times n$ matrix of the form
+\[
+R = \bbm r_1 & r_2 & \cdots & r_n\ebm.
+\]
+A \sword{column vector} is a $m\times 1$ matrix of the form
+\[
+C = \bbm c_1\\c_2\\ \vdots \\ c_m\ebm.
+\]
+}
+
+\smallskip
+
+In particular, we can obtain row or column vectors by isolating any row or column of a given $m\times n$ matrix. For example, given our matrix of crop data in Equation \eqref{eq:farmmatrix}, we might be interested only in Farm B, in which case we would want the row vector
+\[
+R_B = \bbm 0 & 0 & 73 & 152\ebm.
+\]
+Similarly, we might only be interested in yields for soybean crops, in which case the column vector
+\[
+C_{\text{soy}} = \bbm 92 \\ 73\\0\ebm
+\]
+is our object of interest.
+
+
+Continuing with our farming example, suppose that in addition to the matrix $A$ of 2014 crop yields above we also have data for 2015 crop yields given by
+\[
+B = \bbm 41 & 25 & 15 & 20\\ 0 & 72 & 0 & 165\\ 47 & 193 & 0 & 77\ebm.
+\]
+We might be interested in quantities such as the total crop yields over two years. If we arrange these totals into a matrix $T$, it seems like it should be reasonable to define matrix addition in such a way that we can write
+\[
+T = A + B.
+\]
+This leads to two questions. First, how do we define matrix addition in order to ensure this outcome? Second, and perhaps more fundamentally, what do we mean by ``$=$'' in the context of matrices? Let us tackle the second question first.
 
 \smallskip
 
@@ -34,58 +124,98 @@ This begs the question, ``What does it mean to be equal?'' Two numbers are equal
 
 \smallskip
 
-Notice that our more formal definition specifies that if matrices are equal, they have the same dimensions. This should make sense.
+Notice that our more formal definition specifies that if matrices are equal, they have the same size. This should make sense.
 
-Now we move on to describing how to add two matrices together. To start off, take a wild stab: what do you think the following sum is equal to? 
-\[
-\bmx{cc}1&2\\3&4\emx + \bmx{cc}2&-1\\5&7\emx = \text{?}
-\]
+Now we move on to describing how to add two matrices together. To start off, take a wild stab: how do you think we should add our matrices of crop data above? Well, if we want the sum to represent the total yields for each crop, then it stands to reason that to add the two matrices, we add together each of the corresponding crop yields within them:
 
+\begin{align*}
+T & = A+B\\
+  & = \bbm 48 & 18 & 92 & 0\\ 0 & 0 & 73 & 152\\ 34 & 203 & 0 & 88 \ebm + \bbm 41 & 25 & 15 & 20\\ 0 & 72 & 0 & 165\\ 47 & 193 & 0 & 77\ebm\\
+  & = \bbm 48+41 & 18+25 & 92+15 & 0+20\\ 0 + 0 & 0 + 72 & 73 + 0 & 152 +165\\ 34+47 & 203 + 193 & 0 + 0 & 88+77\ebm\\
+  & = \bbm 89 & 43 & 107 & 20\\0& 72 & 73 & 317\\81 & 396 & 0 & 165\ebm.
+\end{align*}
 
-If you guessed 
-\[
-\bmx{cc}3&1\\8&11\emx,
-\]
-you guessed correctly. That wasn't so hard, was it?
-
-Let's keep going, hoping that we are starting to get on a roll. Make another wild guess: what do you think the following expression is equal to? 
-\[
-3\cdot\bmx{cc}1&2\\3&4\emx=\text{?}
-\]
-
-If you guessed 
-\[
-\bmx{cc}3&6\\9&12\emx,
-\]
-you guessed correctly! 
-
-Even if you guessed wrong both times, you probably have seen enough in these two examples to have a fair idea now what matrix addition and scalar multiplication are all about. 
-
-Before we formally define how to perform the above operations, let us first recall that if \tta\ is an $m\times n$ matrix, then we can write \tta\ as 
-\[
-\tta =\bmx{cccc}a_{11}&a_{12}&\cdots&a_{1n}\\a_{21}&a_{22}&\cdots&a_{2n}\\\vdots&\vdots&\ddots&\vdots\\a_{m1}&a_{m2}&\cdots&a_{mn}\emx.
-\]
-Secondly, we should define what we mean by the word \textit{scalar}. A scalar is any number that we multiply a matrix by. (In some sense, we use that number to \textit{scale} the matrix.) We are now ready to define our first arithmetic operations.
+So to add the two matrices, we added their corresponding entries. This is exactly how we define matrix addition in general:
 
 \smallskip
 
 \definition{def:addition}{Matrix Addition}{\index{matrix!addition}
-Let \tta\ and \ttb\ be $m\times n$ matrices. The \textit{sum} of \tta\ and \ttb, denoted $\tta+\ttb$, is 
+Let $A=[a_{ij}]$ and $B=[b_{ij}]$ be $m\times n$ matrices. The \textit{sum} of \tta\ and \ttb, denoted $\tta+\ttb$, is 
 \[
 \bmx{cccc} a_{11}+b_{11}&a_{12}+b_{12}&\cdots&a_{1n}+b_{1n}\\ a_{21}+b_{21}&a_{22}+b_{22}&\cdots&a_{2n}+b_{2n}\\\vdots&\vdots&\ddots&\vdots\\ a_{m1}+b_{m1}&a_{m2}+b_{m2}&\cdots&a_{mn}+b_{mn}\emx.
 \]}
 
 \smallskip
 
+For another example, suppose we wanted to know the total production for each farm in 2014, assuming that our matrices represent all of the crops each farm produces. This would be obtained by simply calculating the total for each row in the matrix \tta\. Another way to accomplish the same task is as follows: let
+\[
+C_1 = \bbm 48\\0\\34\ebm, C_2 = \bbm 18\\0\\203\ebm, C_3 = \bbm 92\\73\\0\ebm, C_4 = \bbm 0\\152\\88\ebm
+\]
+denote the columns of the matrix $A$; note that each column represents the yields across all three farms for each crop. The total yield for each farm can then be calculated according to
+\begin{align*}
+Y & = C_1+C_2+C_3+C_4\\
+ & \bbm 48\\0\\34\ebm + \bbm 18\\0\\203\ebm + \bbm 92\\73\\0\ebm + \bbm 0\\152\\88\ebm = \bbm 158\\225\\325\ebm.
+\end{align*}
+The column vector $Y$ then contains the total yields for each farm. Notice that although we only defined the sum of \textit{two} matrices in Definition \ref{def:addition}, it makes sense to add any number of matrices, and there is no need to add parentheses.
+
+Recall from Chapter \ref{chapter:vectors} that we defined the multiplication of a vector $\vec{v} = \langle a, b, c\rangle$ by a scalar $t\in\mathbb{R}$ by
+\[
+t\vec{v} = t\langle a, b, c\rangle = \langle ta, tb, tc\rangle.
+\]
+
+\mnote{.6}{\textbf{Note:}
+From this point onwards, we dispense with this notation in favour of row and column vectors. For the remainder of the book, when we use the term ``vector'', we will almost always be referring to a column vector.
+We'll see in Sections \ref{sec:matrix_multiplication} and \ref{sec:geom_3} that writing vectors as column vectors allows us to define \textit{transformations} of vectors in terms of matrix multiplication.}
+
+It stands to reason that scalar multiplication should be defined in exactly the same way for row and column vectors; after all, in most cases these are just different ways of writing down the same mathematical object. Thus, in order to multiply a row or column vector by a scalar, we should multiply each entry in the vector by that scalar. From here, it's not too much of a stretch to conclude that the same definition is reasonable for matrices in general.
+
+\mnote{.4}{\textbf{Note:} In Linear Algebra, a \sword{scalar}\index{scalar} is simply a number. For most of this text, the scalars we consider are real numbers, although one can also use complex numbers as scalars. (Complex numbers will be introduced in Chapter \ref{chapter:complex}.)  As we saw in Chapter \ref{chapter:vectors}, multiplying a vector by a scalar \textit{scales} the length of that vector.}
+
+
+
 \definition{def:scalar_multiplication}{Scalar Multiplication}{\index{matrix!scalar multiplication}
-Let \tta\ be an $m\times n$ matrix and let $k$ be a scalar. The \textit{scalar multiplication} of $k$ and \tta, denoted $k\tta$, is 
+Let $\tta = [a_[ij}]$ be an $m\times n$ matrix and let $k$ be a scalar. The \textit{scalar multiplication} \tta\ by $k$, denoted $k\tta$, is defined by
 \[
 \bmx{cccc}ka_{11}&ka_{12}&\cdots&ka_{1n}\\ka_{21}&ka_{22}&\cdots&ka_{2n}\\\vdots&\vdots&\ddots&\vdots\\ka_{m1}&ka_{m2}&\cdots&ka_{mn}\emx.
 \]}
 
 \smallskip
 
-We are now ready for an example.
+Referring one last time to our farming data, we could imagine that a fertilizer company is advertising a new product they claim will increase crop yields by 30\%. Increasing the yield of each crop by 30\% amounts to multiplying each of the entries in the matrices $A$ or $B$ by a factor of 1.3; according to Definition \ref{def:scalar_multiplication}, this is the same as forming the scalar multiples $1.3\tta$ and $1.3\ttb$.
+
+Since we have two years' worth of crop data, we could also ask for the \textit{average} yield for each crop on each farm. For example, Farm A produced 48 tonnes of corn in 2014, and 41 tonnes of corn in 2015. The two-year average for corn on Farm A is thus
+\[
+\frac{48+41}{2} = \frac{89}{2} = 44.5 \text{ tonnes}.
+\]
+Notice that we can obtain the average for each entry by dividing each entry in $T=A+B$ by 2, which is the same thing as multiplying by $\frac{1}{2}$. Our matrix of averages is
+\[
+\frac{1}{2}T = \frac{1}{2}\bbm 89 & 43 & 107 & 20\\0& 72 & 73 & 317\\81 & 396 & 0 & 165\ebm = \bbm 89/2 & 43/2 & 107/2 & 10\\0& 36 & 73/2 & 317/2\\81/2 & 198 & 0 & 165/2\ebm.
+\]
+Finally, notice also that since
+\[
+\frac{48+41}{2} = \frac{1}{2}(48)+\frac{1}{2}(41),
+\]
+with similar considerations for the other entries, we also could have obtained the average by first dividing $A$ and $B$ by $\frac{1}{2}$, and then adding the result. That is,
+\[
+\frac{1}{2}T = \frac{1}{2}(A+B) = \frac{1}{2}A +\frac{1}{2}B.
+\]
+We'll see shortly that this result is due to a general property of matrix arithmetic, called the \textit{distributive property}.
+
+Expressions such as $\frac12 A+\frac12 B$ that use both addition and scalar multiplication together occur frequently in Linear Algebra, and are known as \sword{linear combinations}. In general, a linear combination can be formed from any number of matrices, as long as they're all of the same size.
+
+\smallskip
+
+\definition{def:linear_combination}{Linear combination}{
+\index{linear combination}
+Given $m\times n$ matrices $A_1, A_2, \ldots, A_k$, a \sword{linear combination} of these matrices is any expression of the form
+\[
+B = c_1A_1+c_2A_2+\cdots +c_kA_k,
+\]
+where $c_1, c_2, \ldots, c_k$ are scalars.}
+
+\smallskip
+
+It is time to forget our farm data and move into some abstract computational examples to make sure we have the hang of these new operations.
 
 \medskip
 
@@ -179,11 +309,31 @@ The following equalities hold for all $m\times n$ matrices \tta, \ttb\ and \ttc\
 
 \smallskip
 
-Be sure that this last property makes sense; it says that if we multiply any matrix by the \textit{number} 0, the result is the \textit{zero matrix}, or \tto.
+Be sure that this last property makes sense; it says that if we multiply any matrix by the \textit{number} 0, the result is the \textit{zero matrix}, or \tto. (You now have more than one kind of zero to keep track of!)
+
+It's important to understand that since matrix addition and scalar multiplication are defined in terms of the entries of our matrices, the properties in Theorem \ref{thm:addition_properties} follow directly from the properties of real number arithmetic in Section \ref{RealNumberArithmetic}. For example to prove item 1 above, let $A=[a_{ij}]$ and $B=[b_{ij}]$ be $m\times n$ matrices. We then have
+\begin{align*}
+A+B & = [a_{ij}]+[b_{ij}]\\
+& = [a_{ij}+b_{ij}] \tag*{by Definition \ref{def:addition}}\\
+& = [b_{ij}+a_{ij}] \tag*{since addition of real numbers commutes}\\
+& = [b_{ij}]+[a_{ij}] \tag*{by Definition \ref{def:addition}\\
+& = B+A.
+\end{align*}
+Similarly, the distributive property in item 3 is valid since
+\begin{align*}
+k(A+B) & = k([a_{ij}]+[b_{ij}])\\
+ & = k[a_{ij}+b_{ij}] \tag*{definition of matrix addition}\\
+ & = [k(a_{ij}+b_{ij})] \tag*{definition of scalar multiplication}\\
+ & = [k\cdot a_{ij}+k\cdot b_{ij}] \tag*{distributive property of real numbers}\\
+ & = [k\cdot a_{ij}] + [\cdot b_{ij}] \tag*{definition of matrix addition}\\
+ & = k[a_{ij}]+k[b_{ij}] \tag*{definition of scalar multiplication}\\
+ & = kA +kB.
+ \end{align*}
+The verification of the remaining properties in Theorem \ref{addition_properties} is similar, and left as an exercise for the reader.
 
 We began this section with the concept of matrix equality. Let's put our matrix addition properties to use and solve a matrix equation.\\
 
-\pagebreak
+%\pagebreak
 
 \example{ex_equal}{Solving a matrix equation}{
 Let 

@@ -2,6 +2,8 @@ This chapter introduces a new mathematical object, the \sword{vector}. Defined i
 
 This chapter begins with moving our mathematics out of the plane and into ``space.'' That is, we begin to think mathematically not only in two dimensions, but in three. With this foundation, we can explore vectors both in the plane and in space. 
 
+\mnote{.7}{In this chapter we restrict ourselves to vectors in two and three dimensions so that we're able to understand things visually. However, we'll also see that the \textit{algebraic} behaviour of vectors is the same in \textit{any} dimension, including dimension four or greater. The only thing that changes is the number of coordinates involved. This is one of the great powers of mathematics: we are aided by our visual imagination, but not limited by it. }
+
 \section{Introduction to Cartesian Coordinates in Space}\label{sec:space_coord}
 
 We reviewed the two-dimensional Cartesian Plane in Section \ref{CartesianPlane}. This is the familiar background on which much of your high school mathematics played out, and it provides the setting for the Calculus of one variable encountered in courses like Math 1010 and Math 1560.
@@ -53,6 +55,15 @@ D = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}.
 
 We refer to the line segment that connects points $P$ and $Q$ in space as $\overline{PQ}$, and refer to the length of this segment as $\len{\overline{PQ}}$. The above distance formula allows us to compute the length of this segment.\\
 
+\mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
+3Droll=0,
+3Dortho=0.0044,
+3Dc2c=0.6474442481994629 0.6759132146835327 0.35207563638687134,
+3Dcoo=32.306640625 39.99113082885742 5.668694019317627,
+3Droo=113.20770262248418,
+3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=1mm 5mm 2mm 2mm,clip=true}{.4}{Plotting points $P$ and $Q$ in Example \ref{ex_space1}.}%
+{fig:space1}{figures/figspace1}
+
 \example{ex_space1}{Length of a line segment}{
 Let $P = (1,4,-1)$ and let $Q = (2,1,1)$. Draw the line segment $\overline{PQ}$ and find its length.}
 {The points $P$ and $Q$ are plotted in Figure \ref{fig:space1}; no special consideration need be made to draw the line segment connecting these two points; simply connect them with a straight line. One \textit{cannot} actually measure this line on the page and deduce anything meaningful; its true length must be measured analytically. Applying Definition \ref{def:space_distance}, we have
@@ -69,14 +80,7 @@ Let $P = (1,4,-1)$ and let $Q = (2,1,1)$. Draw the line segment $\overline{PQ}$ 
 \[
 \len{\overline{PQ}} = \sqrt{(2-1)^2+(1-4)^2+(1-(-1))^2} = \sqrt{14}\approx 3.74.
 \]
-\mfigurethree{width=150pt,3Dmenu,activate=onclick,deactivate=onclick,
-3Droll=0,
-3Dortho=0.0044,
-3Dc2c=0.6474442481994629 0.6759132146835327 0.35207563638687134,
-3Dcoo=32.306640625 39.99113082885742 5.668694019317627,
-3Droo=113.20770262248418,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=1mm 5mm 2mm 2mm,clip=true}{.4}{Plotting points $P$ and $Q$ in Example \ref{ex_space1}.}%
-{fig:space1}{figures/figspace1}
+
 \vskip-1.5\baselineskip
 }\\
 
@@ -146,6 +150,7 @@ This, in fact, gives us an equation that describes this plane: $z=0$. Likewise, 
 %the $x$-$z$ plane
 %\end{tabular} 
 %}
+\addtocounter{figure}{2}
 \noindent\begin{minipage}{\textwidth}
 \begin{tabular}{ccc}
 \myincludegraphicsthree{width=95pt,3Dmenu,activate=onclick,deactivate=onclick,
@@ -177,10 +182,12 @@ the $x$-$z$ plane
 \captionsetup{type=figure}%
 \caption{The coordinate planes.}\label{fig:coordplanes}
 \end{minipage}
+\addtocounter{figure}{-3}
 \\
 
 The equation $x=2$ describes all points in space where the $x$-value is 2. This is a plane, parallel to the $y$-$z$ coordinate plane, shown in Figure \ref{fig:space2}.\\
 
+\addtocounter{figure}{1}
 \mfigurethree{width=100pt,3Dmenu,activate=onclick,deactivate=onclick,
 3Droll=0,
 3Dortho=0.0044,

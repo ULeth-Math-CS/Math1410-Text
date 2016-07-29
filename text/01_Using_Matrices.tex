@@ -89,32 +89,7 @@ b&+&g&+&r&=&30\\
 \]
 Notice how even the equal signs are gone; we don't need them, for we know that the last {\em column} contains the coefficients. 
 
-We have just created a {\em matrix}. The definition of matrix is remarkable only in how unremarkable it seems.
-
-%\enlargethispage{2\baselineskip}
-\smallskip
-
-\definition{def:matrix}{Matrix}{
-\index{matrix!definition}
-A {\em matrix} is a rectangular array of numbers.\\
-
-The horizontal lines of numbers form {\em rows} and the vertical lines of numbers form {\em columns}. A matrix with $m$ rows and $n$ columns is said to be an $m\times n$ matrix (``an $m$ by $n$ matrix''). \\
-
-The entries of an $m\times n$ matrix are indexed as follows:
-\[
-\bmx{ccccc}
-a_{11}&a_{12}&a_{13}&\cdots&a_{1n}\\
-a_{21}&a_{22}&a_{23}&\cdots&a_{2n}\\
-a_{31}&a_{32}&a_{33}&\cdots&a_{3n}\\
-\vdots&\vdots&\vdots&\ddots&\vdots\\
-a_{m1}&a_{m2}&a_{m3}&\cdots&a_{mn} \emx.
-\]
-
-That is, $a_{32}$ means ``the number in the third row and second column.''}
-
-\smallskip
-
-In the future, we'll want to create matrices with just the coefficients of a system of linear equations and leave out the constants. Therefore, when we include the constants, we often refer to the resulting matrix as an \textit{augmented matrix}.\index{augmented matrix}\index{matrix!augmented}
+We have seen this sort of creature before! From Definition \ref{def:matrix}, we know that the object we have just created is called a {\em matrix}. We will often want to distinguish matrices with just the coefficients of a system of linear equations (without the constants from the right-hand sides) and matrices that do contain the column of constants, as above. Therefore, when we include the constants, we often refer to the resulting matrix as an \textit{augmented matrix}.\index{augmented matrix}\index{matrix!augmented}
 
 It is common (but not mandatory) to place a vertical line separating the final column of an augmented matrix (containing the constants) from the other columns (containing the coefficients). One advantage of doing so is that we can quickly recognize that we're dealing with an augmented matrix rather than a matrix of coefficients. For example, the augmented matrix for the system \eqref{eq:before_matrix} would be written as seen below on the right:
 

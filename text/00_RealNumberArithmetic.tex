@@ -31,6 +31,8 @@ In this section we list the properties of real number arithmetic.  We will focus
 
 Next, we give real number multiplication a similar treatment.  Recall that we may denote the product of two real numbers $a$ and $b$ a variety of ways:  $ab$, $a \cdot b$, $a(b)$, $(a)(b)$ and so on.  We'll refrain from using $a \times b$ for real number multiplication in this text.
 
+\mnote{.3}{While it is true that $ab=ba$ for any pair of real numbers $a$ and $b$, there are plenty of algebraic systems where this property does not hold. In particular, in Chapter \ref{chapter:arithmetic} we'll learn how to multiply \textit{matrices} $A$ and $B$, and see that in most cases, the matrix product $AB$ is \textbf{not} equal to the product $BA$. (We'll also see that such products are not even guaranteed to be \textit{defined}!) Students are so used to the commutative property for multiplication of real numbers that it can be difficult to make the adjustment to the non-commutative nature matrix multiplication, and this is the source of many common errors in a course like Math 1410.}
+
 \medskip
 
 \definition{realnumbermultiplication}{Properties of Real Number Multiplication}{
@@ -76,7 +78,7 @@ For all real numbers $a$, $b$ and $c$:
 
 \medskip
 
-\mnote{.6}{Taken together, the axioms for addition and multiplication of real numbers, along with the distributive property, tell us that algebraically, the set of real numbers is a \href{https://en.wikipedia.org/wiki/Field_(mathematics)}{\underline{field}}.}
+%\mnote{.6}{Taken together, the axioms for addition and multiplication of real numbers, along with the distributive property, tell us that algebraically, the set of real numbers is a \href{https://en.wikipedia.org/wiki/Field_(mathematics)}{\underline{field}}.}
 
 It is worth pointing out that we didn't really need to list the Distributive Property both for $a(b+c)$ (distributing from the left) and $(a+b)c$ (distributing from the right), since the commutative property of multiplication gives us one from the other.  Also, `factoring' really is the same equation as the distributive property, just read from right to left. These are the first of many redundancies in this section, and they exist in this review section for one reason only - in our experience, many students \textit{see} these things differently so we will list them as such.   
 
@@ -131,9 +133,9 @@ Suppose $a$, $b$, $c$ and $d$ are real numbers.  Assume them to be nonzero whene
 
 \item  \textbf{Division of Fractions:}  $\dfrac{a}{b} \left/ \dfrac{c}{d}\right. = \dfrac{a}{b} \cdot \dfrac{d}{c} = \dfrac{ad}{bc}$. 
 
-In particular: $1 \left/ \dfrac{a}{b}\right. = \dfrac{b}{a}$ and  $\dfrac{a}{b} \left/ c \right. = \dfrac{a}{b} \left/ \dfrac{c}{1}\right.  = \dfrac{a}{b} \cdot \dfrac{1}{c} = \dfrac{a}{bc}$
+In particular: $1 \left/ \dfrac{a}{b}\right. = \dfrac{b}{a}$ and  $\left.\dfrac{a}{b} \right/ c  = \dfrac{a}{b} \left/ \dfrac{c}{1}\right.  = \dfrac{a}{b} \cdot \dfrac{1}{c} = \dfrac{a}{bc}$
 
-\mnote{.48}{It's always worth remembering that division is the same as multiplication by the reciprocal. You'd be surprised how often this comes in handy.}
+\mnote{.48}{It's always worth remembering that \textbf{division is the same as multiplication by the reciprocal}. You'd be surprised how often this comes in handy.}
 
 \item  \textbf{Addition and Subtraction of Fractions:}  $\dfrac{a}{b} \pm \dfrac{c}{b} = \dfrac{a \pm c}{b}$.  
 
@@ -147,7 +149,8 @@ In particular: $1 \left/ \dfrac{a}{b}\right. = \dfrac{b}{a}$ and  $\dfrac{a}{b} 
 
 In particular, $\dfrac{ab}{b} = a$ since $\dfrac{ab}{b} = \dfrac{ab}{1 \cdot b} =  \dfrac{a \cancel{b}}{1 \cdot \cancel{b}} = \dfrac{a}{1} = a$ and $\dfrac{b-a}{a-b} = \dfrac{(-1)\cancel{(a-b)}}{\cancel{(a-b)}} = -1$.
 
-\mnote{.2}{We reduce fractions by `cancelling' common factors - this is really just reading the previous property `from right to left'.\textbf{Caution:}  We may only cancel common \textbf{factors} from both numerator and denominator.}
+\mnote{.15}{We reduce fractions by `cancelling' common factors - this is really just reading the previous property `from right to left'.\\
+\textbf{Caution:}  We may only cancel common \textbf{factors} from both numerator and denominator: we can cancel the twos in $\dfrac{3(2)}{5(2)}$, but \textbf{not} in $\dfrac{3+2}{5+2}$. }
 \end{itemize}
 }
 
@@ -252,10 +255,10 @@ The numerator and denominator are relatively prime so the fraction is in lowest 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\item What we are asked to simplify in this problem is known as a  `complex' or `compound' fraction.  Simply put, we have fractions within a fraction.  The longest division line (also called a `vinculum') acts as a grouping symbol, quite literally dividing the compound fraction into a numerator (containing fractions) and a denominator (which in this case does not contain fractions):
+\item What we are asked to simplify in this problem is known as a  `complex' or `compound' fraction.  Simply put, we have fractions within a fraction.  The longest division line (also called a `vinculum') performs the same sort of grouping function as parentheses:
 
 \[
-\dfrac{\dfrac{12}{5} - \dfrac{7}{24}}{1 + \left(\dfrac{12}{5}\right) \left(\dfrac{7}{24}\right)} =  \dfrac{\left(\dfrac{12}{5} - \dfrac{7}{24}\right)}{\left(1 + \left(\dfrac{12}{5}\right) \left(\dfrac{7}{24}\right)\right)} 
+\dfrac{\dfrac{12}{5} - \dfrac{7}{24}}{1 + \left(\dfrac{12}{5}\right) \left(\dfrac{7}{24}\right)} =  \dfrac{\left(\dfrac{12}{5} - \dfrac{7}{24}\right)}{\left(1 + \left(\dfrac{12}{5}\right) \left(\dfrac{7}{24}\right)\right)} .
 \] 
 
 The first step to simplifying a compound fraction like this one is to see if you can simplify the little fractions inside it. There are two ways to proceed. One is to simplify the numerator and denominator separately, and then use the fact that division is the same thing as multiplication by the reciprocal, as follows:
@@ -305,8 +308,7 @@ which is the same as we obtained above.
 This means that we should simplify the numerator and denominator first, then perform the division last.  We tend to what's in parentheses first, giving multiplication priority over addition and subtraction.
 \begin{align*}
 \dfrac{(2(2)+1)(-3-(-3)) - 5(4-7)}{4-2(3)} & =  \dfrac{(4+1)(-3+3)-5(-3)}{4 - 6}   \\
-	& =  \dfrac{(5)(0) + 15}{-2}   \\ 
-	& =  \dfrac{15}{-2}  \\[5pt] 
+	& =  \dfrac{(5)(0) + 15}{-2}  =  \dfrac{15}{-2}  \\[5pt] 
 	& =  -\dfrac{15}{2}  \tag*{Properties of Negatives}
 \end{align*}
 Since $15 = 3\cdot 5$ and $2$ have no common factors, we are done.
@@ -315,7 +317,7 @@ Since $15 = 3\cdot 5$ and $2$ have no common factors, we are done.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\item  In this problem, we have multiplication and subtraction.  Multiplication takes precedence so we perform it first.  Recall that to multiply fractions, we do \textit{not} need to obtain common denominators;  rather, we multiply the corresponding numerators together along with the corresponding denominators.  Like the previous example, we have parentheses and negative signs for added fun!
+\item  In this problem, we have multiplication and subtraction.  Multiplication takes precedence so we perform it first.  Recall that to multiply fractions, we do \textit{not} need to obtain common denominators;  rather, we multiply the corresponding numerators together along with the corresponding denominators.  However, when we perform the subtraction, we \textit{do} need a common denominator, so we will resist the temptation to cancel the fives in the first term straight away.
 \begin{align*}
 \left(\dfrac{3}{5} \right) \left(\dfrac{5}{13} \right) - \left(\dfrac{4}{5}\right) \left( - \dfrac{12}{13}\right) & =  \dfrac{3 \cdot 5}{5 \cdot 13} - \dfrac{4\cdot (-12)}{5 \cdot 13}  \tag*{Multiply fractions}\\[5pt] 
 & =  \dfrac{15}{65} - \dfrac{-48}{65}  \\[5pt]
@@ -324,7 +326,7 @@ Since $15 = 3\cdot 5$ and $2$ have no common factors, we are done.
 & =  \dfrac{63}{65} 
 \end{align*}
 
-Since $64 = 3 \cdot 3 \cdot 7$ and $65 = 5 \cdot 13$ have no common factors, our answer $\dfrac{63}{65}$ is in lowest terms and we are done.
+Since $64 = 3 \cdot 3 \cdot 7$ and $65 = 5 \cdot 13$ have no common factors, our answer $\dfrac{63}{65}$ is in lowest terms and we are done. 
 \end{enumerate}
 } 
 

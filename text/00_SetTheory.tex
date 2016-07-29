@@ -1,4 +1,4 @@
-We begin this text with a review of some basic concepts and terminology that will be used throughout the book. As with almost any undergraduate mathematics course, the language of sets plays a fundamental role, and so we begin with a short survey of the main terminology. This is meant to be an introductory text, with a focus on computation. Most of the computational work will require the reader to be comfortable with the arithmetic of real numbers (and in particular, fractions). For those who are a bit rusty, we've included a review of the essentials. Other readers may find that they can get away with a quick skim through this first chapter before moving onto the next.
+This first chapter is intended as a resource for those students needing a quick review of some of the essential high school mathematics for this course. We begin with some basic set theory terminology that may pop up from time to time, followed by a reminder on the rules for arithmetic with real numbers, and a tour of the Cartesian coordinate plane. Students who are already comfortable with these topics can feel free to jump ahead to Chapter 2.
 
 \section{Some Basic Set Theory Notions}
 \label{SetTheory}
@@ -16,7 +16,7 @@ A \sword{set}\index{set ! definition of} is a well-defined collection of objects
 
 For example, the collection of letters that make up the word ``pronghorns'' is well-defined and is a set, but  the collection of the worst math teachers in the world is \textbf{not} well-defined, and so is \textbf{not} a set.  In general, there are three ways to describe sets.  They are
 
-\mnote{.55}{One thing that student evaluations teach us is that any given Mathematics instructor can be simultaneously the best and worst teacher ever, depending on who is completing the evaluation.}
+\mnote{.5}{One thing that student evaluations teach us is that any given Mathematics instructor can be simultaneously the best and worst teacher ever, depending on who is completing the evaluation.}
 
 \smallskip
 
@@ -36,8 +36,10 @@ For example, the collection of letters that make up the word ``pronghorns'' is w
 For example, let $S$ be the set described \textit{verbally} as the set of letters that make up the word ``pronghorns''.  A  \sword{roster} description of $S$ would be  $\left\{ p, r, o, n, g, h, s \right\}$. Note that we listed `r', `o', and `n' only once, even though they appear twice in ``pronghorns.''  Also, the \textit{order} of the elements doesn't matter, so $\left\{ o, n, p, r, g, s, h \right\}$ is also a roster description of $S$.   A \sword{set-builder} description of $S$ is: \[ \{ x \, | \, \mbox{$x$ is a
 letter in the word ``pronghorns''.}\} \]
 
-The way to read this is: `The set of elements $x$ \underline{such that} $x$ is a letter in the word ``pronghorns.'''   In each of the above cases, we may use the familiar equals sign `$=$' and write  $S = \left\{  p, r, o, n, g, h, s  \right\}$ or $S = \{ x \, | \, \mbox{$x$ is a
-letter in the word ``pronghorns''.}\}$.  Clearly $r$ is in $S$ and $q$ is not in $S$.  We express these sentiments mathematically by writing  $r \in S$ and $q \notin S$. 
+The way to read this is: `The set of elements $x$ \underline{such that} $x$ is a letter in the word ``pronghorns.'''   We define to sets to be equal if they have exactly the same elements, and denote this using the familiar equals sign `$=$'. Thus, we may write
+$S = \left\{  p, r, o, n, g, h, s  \right\}$ or  $S = \{ x \, | \, \mbox{$x$ is a
+letter in the word ``pronghorns''.}\}$.
+Clearly $r$ is an element of $S$ and $q$ is not an element $S$.  We express these sentiments mathematically by writing  $r \in S$ and $q \notin S$. 
 
 More precisely, we have the following.
 
@@ -54,9 +56,15 @@ More precisely, we have the following.
 \end{itemize}
 }
 
+\mnote{.75}{The notation $x\in A$ can be read as ``$x$ is in $A$'', or ``$x$ is an element of $A$'', or ``$x$ belongs to $A$'', with similar readings for $x\notin A$.}
+
 \medskip
 
-Now let's consider the set $C =  \{ x \, | \, \mbox{$x$ is a consonant in the word ``pronghorns''}\}$.  A roster description of $C$ is  $C = \{ p, r, n, g, h, s\}$.  Note that by construction, every element of $C$ is also in $S$.  We express this relationship by stating that the set $C$ is a \textbf{subset} of the set $S$, which is written in symbols as $C \subseteq S$.  The more formal definition is given below.
+Now let's consider the set 
+\[
+C =  \{ x \, | \, \mbox{$x$ is a consonant in the word ``pronghorns''}\}.
+\]
+A roster description of $C$ is  $C = \{ p, r, n, g, h, s\}$.  Note that by construction, every element of $C$ is also in $S$.  We express this relationship by stating that the set $C$ is a \textbf{subset} of the set $S$, which is written in symbols as $C \subseteq S$.  The more formal definition is given below.
 
 \medskip
 
@@ -110,7 +118,7 @@ In Figure \ref{venndiagram} we have three circles - one for each of the sets $C$
 
 \medskip
 
-All of these circles lie in a rectangle labelled $U$ (for `universal' set).  A universal set contains all of the elements under discussion, so it could always be taken as the union of all of the sets in question, or an even larger set.  In this case, we could take $U = S \cup V$ or $U$ as the set of letters in the entire alphabet.    The usual triptych of Venn Diagrams indicating generic sets $A$ and  $B$ along with $A \cap B$ and $A \cup B$ is given below.
+All of these circles lie in a rectangle labelled $U$ (for `universal' set).  A universal set contains all of the elements under discussion, so it could always be taken as the union of all of the sets in question, or an even larger set.  In this case, we could take $U = S \cup V$ or $U$ as the set of letters in the entire alphabet.    The usual triptych of Venn Diagrams indicating generic sets $A$ and  $B$ along with $A \cap B$ and $A \cup B$ is given in Figure \ref{fig:intunion}.
 
 (The reader may well wonder if there is an ultimate universal set which contains \textit{everything}.  The short answer is `no'. Our definition of a set turns out to be overly simplistic, but correcting this takes us well beyond the confines of this course. If you want the longer answer, you can begin by reading about \href{http://en.wikipedia.org/wiki/Russell's_paradox}{\underline{Russell's Paradox}} on Wikipedia.)
 

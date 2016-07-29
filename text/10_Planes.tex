@@ -214,9 +214,9 @@ x = -2+1 = -1, y = -3(-1)+1 = 4, \text{ and } z = -(-1)-1 = 0,
 \]
 so we have indeed found the same line as before.\\
 
-\mnote{.3}{\textbf{Note:} Once again, the system of equations we solved in the discussion following Example \ref{ex_planes4} is exactly the sort of thing we'll learn how to tackle in general in Chapter \ref{chapter:linear}. In this case, we would say that the system has \textit{infinitely many solutions}, or, if we wanted to be more specific, a \textit{one-parameter family} of solutions.}
+\mnote{.5}{\textbf{Note:} Once again, the system of equations we solved in the discussion following Example \ref{ex_planes4} is exactly the sort of thing we'll learn how to tackle in general in Chapter \ref{chapter:linear}. In this case, we would say that the system has \textit{infinitely many solutions}, or, if we wanted to be more specific, a \textit{one-parameter family} of solutions.}
 
-\example{ex_planes5}{Finding the intersection of a plane and a line}{
+\example{ex_planes5}{Finding the intersection of a line and a plane}{
 Find the point of intersection, if any, of the line $\ell(t) = \la 3,-3,-1\ra +t\la-1,2,1\ra$ and the plane with equation in general form $2x+y+z=4$.
 }
 {The equation of the plane shows that the vector $\vec n = \la 2,1,1\ra$ is a normal vector to the plane, and the equation of the line shows that the line moves parallel to $\vec d = \la -1,2,1\ra$. Since these are not orthogonal, we know there is a point of intersection. (If there were orthogonal, it would mean that the plane and line were parallel to each other, either never intersecting or the line was in the plane itself.)
@@ -238,7 +238,7 @@ When $t=2$, the point on the line satisfies the equation of the plane; that poin
 3Dc2c=0.6873484253883362 0.6952667832374573 0.2101338654756546,
 3Dcoo=7.167160511016846 -9.016068458557129 21.630752563476562,
 3Droo=149.9999995928182,
-3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=2mm 0mm 2mm 0mm,clip}{.3}{Illustrating the intersection of a line and a plane in Example \ref{ex_planes5}.}{fig:planes5}{figures/figplanes5}
+3Dlights=Headlamp,add3Djscript=asylabels.js}{scale=1.25,trim=2mm 0mm 2mm 0mm,clip}{.2}{Illustrating the intersection of a line and a plane in Example \ref{ex_planes5}.}{fig:planes5}{figures/figplanes5}
 %\mfigure[scale=1.25,trim=2mm 0mm 2mm 0mm,clip]{.7}{Illustrating the intersection of a line and a plane in Example \ref{ex_planes5}.}{fig:planes5}{figures/figplanes5}
 }\\
 
@@ -284,7 +284,7 @@ We can now compute the projection of $\overrightarrow{PQ}$ onto $\vec n$. We hav
 \end{align*}
 The desired distance is then given by
 \[
-\len{\vec n} = \frac{14}{65}\len{\la 2, -5, 6\ra} = \frac{14}{\sqrt{65}}.
+\len{\operatorname{proj}_{\vec n}\overrightarrow{PQ}} = \frac{14}{65}\len{\la 2, -5, 6\ra} = \frac{14}{\sqrt{65}}.
 \]
 \vskip-2\baselineskip
 }\\
@@ -323,6 +323,38 @@ which begins on $\ell$ and ends on $p$. The distance from $\ell$ to $p$ is then 
 h = \len{\operatorname{proj}_{\vec{n}}\vec{v}} = \frac{\abs{\dotp nv}}{\len{\vec{n}}} = \frac{9}{6} = \frac{3}{2}.
 \]}\\
 
+In the previous section we used Equation \eqref{eq:skewlinesdist} to find the shortest distance between a pair of skew lines. Although we provided some discussion of how this formula was obtained, it's once again the case that memorizing such a formula is not as effective as understanding the process that leads to it. In the next example, we repeat Example \ref{ex_lines5}, but this time we try to understand the problem using planes.\\
+
+\example{ex_planes8}{Distance between skew lines}{
+Find the distance between the skew lines
+\begin{align*}
+\ell_1: \langle x, y, z\rangle & = \langle 1, 2, 0\rangle + t\langle 3, -1, 1\rangle\\
+\ell_2: \langle x, y, z\rangle & = \langle -2, 3, 5\rangle +t\langle 4, 1, 2\rangle.
+\end{align*}
+}
+{We already found the distance between these two lines in Example \ref{ex_lines5} using Equation \eqref{eq:skewlinesdist}. Supposing that we forgot this formula, how would we proceed? The key is to realize that whenever we have a pair of skew lines, we also have a pair of parallel planes, each of which contains one of the lines. To see this, we first compute the cross product of the direction vectors $\vec{d}_1 = \langle 3, -1, 1\rangle$ and $\vec{d}_2 = \langle 4, 1, 2\rangle$ for the two lines. We find
+\[
+\vec{n} = \vec{d}_1\times\vec{d}_2 =  \langle -3, -2, 7\rangle,
+\]
+which is the same as the cross product we computed in Example \ref{ex_lines5}. Since $\vec{n}$ is orthogonal to $\vec{d}_1$, the plane through the point $(1,2,0)$ with normal vector $\vec{n}$ contains the line $\ell_1$. Similarly, the plane through $(-2,3,5)$ with normal vector $\vec{n}$ contains $\ell_2$. We now have our parallel planes.
+
+The next step is to realize that at this point, the problem is no different from the one we solved in Example \ref{ex_planes6}: the distance from $\ell_1$ to $\ell_2$ is the same as the distance between the parallel planes, and the distance between parallel planes is equal to the distance between the first plane, and any point on the second plane.
+
+By definition, the point $P_1 = (1,2,0)$ on $\ell_1$ lies on the first plane, and the point $P_2 = (-2, 3, 5)$ on $\ell_2$ lies on the second plane. We compute the vector $\overrightarrow{P_1P_2} = \langle -3, 1, 5\rangle$, and then find the projection of this vector onto $\vec{n}$, as in Example \ref{ex_planes6}. We have
+\begin{align*}
+\operatorname{proj}_{\vec n}\overrightarrow{P_1P_2} & = \left(\frac{\overrightarrow{P_1P_2}\boldsymbol{\cdot}\vec n}{\len{\vec n}^2}\right)\vec n\\
+ & = \left(\frac{\la -3, 1, 5\ra \boldsymbol{\cdot} \la -3, -2, 7\ra}{(3^2+2^2+7^2)}\right)\la -3, -2, 7\ra\\
+ & = \frac{42}{62}\la -3, -2, 7\ra.
+\end{align*}
+The distance is then given by
+\[
+\len{\operatorname{proj}_{\vec n}\overrightarrow{P_1P_2}} = \frac{42}{\sqrt{62}},
+\]
+as before.
+}\\
+
 These past two sections have not explored lines and planes in space as merely an exercise of mathematical curiosity. There are many, many applications of these fundamental concepts. Complex shapes can be modelled (or, \textit{approximated}) using planes. For instance, part of the exterior of an aircraft may have a complex, yet smooth, shape, and engineers will want to know how air flows across this piece as well as how heat might build up due to air friction. Many equations that help determine air flow and heat dissipation are difficult to apply to arbitrary surfaces, but simple to apply to planes. By approximating a surface with millions of small planes one can more readily model the needed behaviour.
+
+The focus of this chapter was on the geometry of vectors. In the next chapter, we'll study vectors from an algebraic point of view. Algebraically, there is no need to restrict ourselves to two or three dimensions: the properties given in Theorem \ref{thm:vector_properties} are valid for vectors with three, four, or even thousands of components. Vectors give us the ability to systematically organize and manipulate information involving any number of variables, making vectors an important tool in many quantitative fields, from the physical sciences to finance and economics.
 
 \printexercises{exercises/10_06_exercises}

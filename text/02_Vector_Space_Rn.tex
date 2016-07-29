@@ -1,0 +1,61 @@
+\section{The vector space $\mathbb{R}^n$}\label{sec:Rn}
+
+In Section \ref{sec:matrix_arithmetic_1} we mentioned that an $n\times 1$ matrix consisting of a single column is known as a \textit{column vector}, and that column vectors are closely related to the vectors we encountered in Chapter \ref{chapter:vectors} in the cases where $n=2$ or $n=3$. 
+
+For each positive integer $n$, the set of all $n\times 1$ column vectors provides an example of what is known as a \sword{vector space}.\index{vector space} 
+
+\mnote{.4}{Vector spaces are defined in general in terms of their algebraic properties. Examples of vector spaces other than $\R^n$ include the space of $m\times n$ matrices (each choice of $m$ and $n$ gives a different space), and the space of all polynomial functions of a real variable. }
+
+\definition{def:spaceRn}{The vector space $\mathbb{R}^n$}{
+\index{vector space ! of column vectors}
+The space of all $n\times 1$ column vectors of real numbers is denoted by
+\[
+\mathbb{R}^n = \left\{\left.\bbm x_1\\x_2 \\ \vdots \\x_n\ebm \,\,\right| \, x_1, x_2, \ldots, x_n\in \mathbb{R}\right\}.
+\]}
+
+As with the vectors in $\mathbb{R}^2$ and $\mathbb{R}^3$ we encountered in Chapter \ref{chapter:vectors}, we allow the notation $\mathbb{R}^n$ to represent both the \textit{space} of points $(x_1,x_2, \ldots, x_n)$, and the set of vectors defined within that space. Since we can identify any point $P$ with the position vector $\overrightarrow{OP}$, the difference between viewing $\mathbb{R}^n$ as a set of points or as a set of vectors is primarily one of perspective.
+
+When $n\geq 4$ we can no longer visualize vectors in $\mathbb{R}^n$ as we did in Chapter \ref{chapter:vectors}, but we can handle them algebraically exactly as we did before, and we can extend the definitions of Chapter \ref{chapter:vectors} to apply to vectors in $\mathbb{R}^n$.
+
+In particular, we can define the \sword{length} of a vector 
+\[
+\vec{x}=\bbm x_1\\x_2\\ \vdots\\ x_n\ebm\in\mathbb{R}^n
+\] 
+by
+\[
+\len{\vec{x}} = \sqrt{x_1^2+x_2^2+\cdots +x_n^2},
+\]
+and the dot product of vectors $\vec{x}, \vec{y}\in\mathbb{R}^n$ by
+\[
+\dotp xy = x_1y_1+x_2y_2+\cdots + x_ny_n.
+\]
+Having defined the dot product, we can still declare two vectors $\vec x$ and $\vec y$ to be orthogonal if $\dotp xy = 0$, and define the angle between two vectors by requiring that the identity
+\[
+\dotp xy = \len{\vec{x}}\len{\vec{y}}\cos\theta
+\]
+remain valid. Using these definitions, along with Theorem \ref{thm:addition_properties}, we can see that all of the properties of vector operations given in Theorem \ref{thm:vector_properties} remain valid in $\mathbb{R}^n$.
+
+\smallskip
+
+\theorem{thm:Rn_properties}{Algebraic properties of $\R^n$}{
+The following properties hold for the space $\R^n$ of $n\times 1$ column vectors:
+\begin{enumerate}
+\item If $\vec v$ and $\vec w$ are vectors in $\mathbb{R}^n$, $\vec{v}+\vec{w}$ is also a vector in $\mathbb{R}^n$.
+\item For any vectors $\vec v, \vec w$, $\vec v + \vec w = \vec w+ \vec v$.
+\item For any vectors $\vec u, \vec v, \vec w$, $(\vec u + \vec v)+\vec w = \vec u + (\vec v + \vec w)$.
+\item For any vector $\vec v$, $\vec v+\vec 0 = \vec v$.
+\item For any vector $\vec v$, we can define $-\vec v$ such that $\vec v + (-\vec v) = \vec 0$.
+\item If $k$ is a scalar and $\vec v$ is a vector in $\mathbb{R}^n$, then $k\vec v$ is also a vector in $\mathbb{R}^n$.
+\item For any vector $\vec v$, $1\cdot \vec v = \vec v$.
+\item For any scalars $c, d$ and any vector $\vec v$, $c(d\vec v) = (cd)\vec v)$.
+\item For any scalar $c$ and vectors $\vec v$, $\vec w$, $c(\vec v+\vec w) = c\vec v+c\vec w$.
+\item For any scalars $c, d$ and vector $\vec v$, $(c+d)\vec v = c\vec v+d\vec v$.
+\end{enumerate}
+}
+
+\smallskip
+
+Then ten properties listed in Theorem \ref{thm:Rn_properties} are known as the \sword{vector space axioms}. Any set of objects satisfying these axioms is known as a \sword{vector space}. 
+
+***To add here: linear combinations, subspaces, span, linear independence
+
