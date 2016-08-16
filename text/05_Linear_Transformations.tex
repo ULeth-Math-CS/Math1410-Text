@@ -8,7 +8,7 @@
 }
 
 
-In the previous section we discussed standard transformations of the Cartesian plane -- rotations, reflections, etc. As a motivational example for this section's study, let's consider another transformation -- let's find the matrix that moves the unit square one unit to the right (see Figure \ref{fig:translation}). This is called a \textit{translation}.
+In the previous section we discussed standard transformations of the Cartesian plane -- rotations, reflections, etc. As a motivational example for this section's study, let's consider another transformation -- let's find the matrix that moves the unit square one unit to the right (see Figure \ref{fig:translation}). This is called a \sword{translation}.
 
 \begin{myfigure}
 \begin{center}
@@ -55,8 +55,6 @@ What did we do wrong? We will answer this question, but first we need to develop
 
 We've been using the term ``transformation'' to describe how we've changed vectors. In fact, ``transformation'' is synonymous to ``function.'' We are used to functions like $f(x) = x^2$, where the input is a number and the output is another number. In the previous section, we learned about transformations (functions) where the input was a vector and the output was another vector. If \tta\ is a ``transformation matrix,'' then we could create a function of the form $T(\vx) = \tta\vx$. That is, a vector \vx\ is the input, and the output is \vx\ multiplied by \tta.
 
-\mnote{.5}{We used $T$ instead of $f$ to define the function $T(\vx)=\tta\vx$ to help differentiate it from ``regular'' functions. ``Normally'' functions are defined using lower case letters when the input is a number; when the input is a vector, we use upper case letters. (It also appears to be tradition to use the letter $T$ to describe linear transformations, and mathematicians are suckers for tradition.)} 
-
 When we defined $f(x) = x^2$ above, we let the reader assume that the input was indeed a number. If we wanted to be complete, we should have stated 
 \[
 f:\rrr{}{} \quad \text{ where } \quad f(x)=x^2.
@@ -68,6 +66,8 @@ To define a transformation where a 2D vector is transformed into another 2D vect
 T:\rrr{2}{2} \quad \text{ where } \quad T(\vx) = \tta\vx.
 \]
 Here, the first \real{2} means that we are using 2D vectors as our input, and the second \real{2} means that a 2D vector is the output.
+
+\mnote{.5}{We use $T$ instead of $f$ to define the function $T(\vx)=\tta\vx$ to help differentiate it from ``regular'' functions. ``Normally'' functions are defined using lower case letters when the input is a number; when the input is a vector, we use upper case letters. (It also appears to be tradition to use the letter $T$ to describe linear transformations, and mathematicians are suckers for tradition.)} 
 
 Consider a quick example: 
 \[
@@ -84,12 +84,12 @@ We now define a special type of transformation (function).
 \smallskip
 
 \definition{def:lin_trans}{Linear Transformation}{\index{linear transformation!definition}
-A transformation $T:\realnm$ is a \textit{linear transformation} if it satisfies the following two properties:
+A transformation $T:\realnm$ is a \sword{linear transformation} if it satisfies the following two properties:
 	\begin{enumerate}
 	\item	$T(\vx + \vy) = T(\vx) + T(\vy)$ for all vectors $\vx$ and $\vy$, and
 	\item	$T(k\vx)= kT(\vx)$ for all vectors $\vx$ and all scalars $k$.
 	\end{enumerate}
-If $T$ is a linear transformation, it is often said that ``$T$ is \textit{linear.}''
+If $T$ is a linear transformation, it is often said that ``$T$ is \sword{linear.}''
 }
 
 \smallskip
@@ -140,14 +140,14 @@ Now compute $T(\vx)$, $T(\vy)$, and $T(\vx+\vy)$:
 \]
 	\end{enumerate}
 	
-	Therefore, $T$ is \textit{not} a linear transformation.
+	Therefore, $T$ is \sword{not} a linear transformation.
 }
 
 \medskip
 
 So we have an example of something that \textit{doesn't} work. Let's try an example where things \textit{do} work.
 
-\mnote{.5}{It's important to remember the following principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. (An example is not a proof.) However, doing so can be helpful in understanding the situation better.}
+\mnote{.4}{In Example \ref{ex_lin_trans_2}, it's important to remember the following principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. (An example is not a proof.) However, doing so can be helpful in understanding the situation better, and can give us clues as to how to construct a general proof.}
 
 \medskip
 
@@ -155,11 +155,11 @@ So we have an example of something that \textit{doesn't} work. Let's try an exam
 \[
 \tta = \bmx{cc} 1&2\\3&4\emx.
 \]}
-{Let's start by again considering arbitrary \vx\ and \vy. Let's choose the same \vx\ and \vy\ from Example \ref{ex_lin_trans_1}. 
+{Let's start by again choosing a couple of vectors and seeing what happens. \vx\ and \vy. Let's choose the same \vx\ and \vy\ from Example \ref{ex_lin_trans_1}. 
 \[
 \vx = \bmx{c}3\\-2\emx \quad \text{ and } \quad \vy = \bmx{c} 1\\5\emx.
 \]
-If the lineararity properties hold for these vectors, then \textit{maybe} it is actually linear (and we'll do more work). 
+If the linearity properties hold for these vectors, then \textit{maybe} it is actually linear (and we'll do more work). 
 	\begin{enumerate}
 	\item	Is $T(\vx+\vy) = T(\vx)+T(\vy)$? Recall:
 \[
@@ -191,7 +191,7 @@ Is $T(\vx+\vy) = T(\vx)+T(\vy)$?
 
 So far, so good: $T(\vx+\vy)$ is equal to  $T(\vx)+T(\vy)$.
 
-	\item		Is $T(k\vx) = kT(\vx)$? Let's arbitrarily pick $k=7$, and use $\vx$ as before.
+	\item		Is $T(k\vx) = kT(\vx)$? Let's pick $k=7$ (or whatever value you prefer), and use $\vx$ as before.
 	\begin{align*} 
 			T(7\vx) &= T\left(\bmx{c}21\\-14\emx\right) \\
 							&= \bmx{c}-7\\7\emx \\
@@ -208,17 +208,17 @@ T(\vx+\vy) = \tta(\vx+\vy).
 \]
 By Theorem \ref{thm:matrix_multiplication}, part \ref{thm:mat_mult_dist} (on page \pageref{thm:matrix_multiplication}) we state that the Distributive Property holds for matrix multiplication. (Recall that a vector is just a special type of matrix, so this theorem applies to matrix--vector multiplication as well.) So $\tta(\vx+\vy) = \tta\vx + \tta\vy$. Recognize now that this last part is just $T(\vx) + T(\vy)$! We repeat the above steps, all together:
 \begin{align*}
-T(\vx+\vy)	&= \tta(\vx+\vy) & & \quad \textsf{\small (by the definition of $T$ in this example)}\\
-						&= \tta\vx + \tta\vy & & \quad \textsf{\small (by the Distributive Property)}\\
-						&= T(\vx) + T(\vy) & & \quad \textsf{\small (again, by the definition of $T$)}
+T(\vx+\vy)	&= \tta(\vx+\vy) \tag*{(by the definition of $T$ in this example)}\\
+						&= \tta\vx + \tta\vy \tag*{(by the Distributive Property)}\\
+						&= T(\vx) + T(\vy) \tag*{(again, by the definition of $T$)}
 \end{align*}
 Therefore, no matter what \vx\ and \vy\ are chosen, $T(\vx+\vy) = T(\vx) + T(\vy)$. Thus the first part of the linearity definition is satisfied.
 
 The second part is satisfied in a similar fashion. Let $k$ be a scalar, and consider:
 \begin{align*}
-T(k\vx)	&=	\tta(k\vx) & & \quad \textsf{\small (by the definition of $T$ is this example)}\\
-				&=	k\tta\vx & & \quad \textsf{\small (by Theorem \ref{thm:matrix_multiplication} part \ref{thm:mat_mult_scalar})}\\
-				&= kT(\vx) & & \quad \textsf{\small (again, by the definition of $T$)}
+T(k\vx)	&=	\tta(k\vx) \tag*{(by the definition of $T$ is this example)}\\
+				&=	k\tta\vx \tag*{(by Theorem \ref{thm:matrix_multiplication} part \ref{thm:mat_mult_scalar})}\\
+				&= kT(\vx) \tag*{(again, by the definition of $T$)}
 \end{align*}
 
 Since $T$ satisfies both parts of the definition, we conclude that $T$ is a linear transformation.
@@ -244,10 +244,10 @@ First, consider how we proved the transformation in Example \ref{ex_lin_trans_2}
 The second part of the theorem says that \textit{all} linear transformations can be described using matrix multiplication. Given \textit{any} linear transformation, there is a matrix that completely defines that transformation. This important matrix gets its own name.
 
 \definition{def:standard_matrix}{Standard Matrix of a Linear Transformation}{\index{linear transformation!standard matrix of}
-Let $T:\rrr{n}{m}$ be a linear transformation. By Theorem \ref{thm:linear_matrix}, there is a matrix \tta\ such that $T(\vx) = \tta\vx$. This matrix \tta\ is called the \textit{standard matrix of the linear transformation $T$}, and is denoted $[\, T\, ]$. 
+Let $T:\rrr{n}{m}$ be a linear transformation. By Theorem \ref{thm:linear_matrix}, there is a matrix \tta\ such that $T(\vx) = \tta\vx$. This matrix \tta\ is called the \sword{standard matrix of the linear transformation $T$}, and is denoted $[\, T\, ]$. 
 }
 
-\mnote{.5}{The matrix--like brackets around $T$ are intended to suggest that the standard matrix \tta\ is a matrix ``with $T$ inside.''}
+\mnote{.6}{The matrix--like brackets around $T$ are intended to suggest that the standard matrix \tta\ is a matrix ``with $T$ inside.''}
 
 \smallskip
 
@@ -277,7 +277,9 @@ That is, the zero vector in \real{n}\ gets sent to the zero vector in \real{m}.}
 
 \smallskip
 
-\mnote{.5}{The idea that linear transformations ``send zero to zero'' has an interesting relation to terminology. The reader is likely familiar with functions like $f(x) = 2x+3$ and would likely refer to this as a ``linear function.'' However, $f(0) \neq 0$, so $f$ is \textit{not} ``linear'' by our new definition of linear. We erroneously call $f$ ``linear'' since its graph produces a line, though we should be careful to instead state that ``the graph of $f$ is a line.''}
+
+
+\mnote{.7}{The idea that linear transformations ``send zero to zero'' has an interesting relation to terminology. The reader is likely familiar with functions like $f(x) = 2x+3$ and would likely refer to this as a ``linear function.'' However, $f(0) \neq 0$, so $f$ is \textit{not} ``linear'' by our new definition of linear. We erroneously call $f$ ``linear'' since its graph produces a line, though we should be careful to instead state that ``the graph of $f$ is a line.'' In the context of calculus are only linear transformations if $b=0$. In the case of maps $T:\realnm$, we can similarly consider functions of the form $T(\vec x) = A\vec x + \vec b$; such functions are again useful in areas such as vector calculus, but unless $\vec b = \vec 0$, they are not linear transformations, since $T(\vec 0) = \vec b$.}
 
 \noindent \large \textsf{\textbf{ The Standard Matrix of a Linear Transformation}} \normalsize\\
 
@@ -286,7 +288,7 @@ It is often the case that while one can describe a linear transformation, one do
 \smallskip
 
 \definition{def:standard_unit1}{Standard Unit Vectors}{\index{standard unit vector}
-In \real{n}, the \textit{standard unit vectors} \vei\ are the vectors with a $1$ in the $i^\text{th}$ entry and $0$s everywhere else.
+In \real{n}, the \sword{standard unit vectors} \vei\ are the vectors with a $1$ in the $i^\text{th}$ entry and $0$s everywhere else.
 }
 
 \smallskip
@@ -306,7 +308,18 @@ How do these vectors help us find the standard matrix of a linear transformation
 \]
 That is, $T(\veone)$ is the vector where \veone\ ends up, and $T(\vetwo)$ is the vector where \vetwo\ ends up. 
 
-The same holds true in general. Given a linear transformation $T:\rrr{n}{m}$, the standard matrix of $T$ is the matrix whose $i^\text{th}$ column is the vector where \vei\ ends up. While we won't prove this is true, it is, and it is very useful. Therefore we'll state it again as a theorem.
+The same holds true in general. Given a linear transformation $T:\rrr{n}{m}$, the standard matrix of $T$ is the matrix whose $i^\text{th}$ column is the vector where \vei\ ends up. To see that this is the case, note that any vector $\vec x\in\R^n$ can be written as
+\[
+\vec x = x_1\veone + x_2\vetwo + \cdots + x_n\ven{n},
+\]
+and by Definition \ref{def:lin_trans}, we have
+\begin{align*}
+T(\vec x) & = T(x_1\veone + x_2\vetwo + \cdots + x_n\ven{n})\\
+ & = x_1T(\veone) + x_2T(\vetwo) + \cdots + x_nT(\ven{n})\\
+ & = \bmx{cccc}T(\veone) & T(\vetwo) & \cdots & T(\ven{n})\emx\bmx{c} x_1\\x_2\\ \vdots \\ x_n\emx\\
+ & = A\vec x,
+\end{align*}
+where $A = \bmx{cccc}T(\veone) & T(\vetwo) & \cdots & T(\ven{n})\emx$ is the $m\times n$ matrix whose columns are given by the vectors $T(\ven{i})$, for $i=1,2,\ldots, n$. Thus, we have the following theorem. \label{page:standard_matrix}
 
 \smallskip
 
@@ -489,7 +502,243 @@ $T_3$ is linear. Recall that $\sqrt{7}$ and $\pi$ are just numbers, just coeffic
 
 \medskip
 
-We've mentioned before that we can draw vectors other than 2D vectors, although the more dimensions one adds, the harder it gets to understand. In the next section we'll learn about graphing vectors in 3D -- that is, how to draw on paper or a computer screen a 3D vector.\\
+We close this section with a couple of discussions of a theoretical nature. First, we will attempt to gain some additional insight into the (initially mysterious) definition of matrix multiplication by revisiting it from the point of view of linear transformations. We'll then introduce two fundamental subspaces associated with a matrix transformation.
+
+\subsection*{Matrix multiplication as function composition}
+Recall that one of the ways we can obtain new functions from old ones is via \sword{function composition}. Given two functions $f(x)$ and $g(x)$ (where $x\in\R$), we can form the compositions
+\begin{align*}
+(f\circ g)(x) &= f(g(x)) \text{ and}\\
+(g\circ f)(x) & = g(f(x)),
+\end{align*}
+as long as we meet certain conditions on the compatibility of the domains and ranges of the two functions. If you paid attention in high school, you probably also remember that the order of composition matters: in general,
+\[
+(f\circ g)(x) \neq (g\circ f)(x).
+\]
+For example, if $f(x) = 2x+1$ and $g(x) = x^2$, then
+\[
+(f\circ g)(x) = f(g(x)) = 2g(x)+1 = 2x^2+1,
+\]
+while
+\[
+(g\circ f)(x) = g(f(x)) = (f(x))^2 = (2x+1)^2 = 4x^2+4x+1.
+\]
+In this example, both functions are defined from $\R$ to $\R$, and neither is a linear transformation in the sense of this section. In fact, if $f:\R\to\R$ satisfies Definition \ref{def:lin_trans}, then we must have $f(x) = ax$ for some real number $a$. If $g(x) = bx$ is another linear transformation from $\R$ to $\R$, notice that we have
+\[
+(f\circ g)(x) = f(g(x))=a(g(x)) = a(bx) = (ab)x.
+\]
+Thus, to compose two linear transformations from $\R$ to $\R$, we simply multiply the constants used to define the transformations.
+
+Now, what about a general linear transformation $S:\R^n\to \R^m$? We know that any such transformation is a matrix transformation: we must have
+\[
+S(\vec x) = A\vec x
+\]
+for any $\vec x\in\R^n$, where $A$ is an $m\times n$ matrix. Since we're multiplying an $m\times n$ matrix by an $n\times 1$ matrix, the rules of matrix multiplication ensure that the output $\vec y = A\vec x$ is an element of $\R^m$.
+
+Suppose now that we want to define the composition $(S\circ T)(\vec x)$ for some other linear transformation $T$. Recall the following rule of function composition:
+\begin{quote}
+In order for the composition $S\circ T$ to be defined, \textbf{the range of $T$ must be contained in the domain of $S$}.
+\end{quote}
+That is, since $S\circ T$ is defined by $(S\circ T)(\vec x) = S(T(\vec x))$, the vector $T(\vec x)$ (which by definition is in the range of $T$) must belong to the domain of $S$. This means that we must have $T(\vec x)\in \R^n$, so we have
+\[
+T:\R^k\to \R^n
+\]
+for some natural number $k$. On the other hand, we know that if $T$ is a linear transformation, then $T$ is defined by matrix multiplication: $T(\vec x) = B\vec x$ for some $n\times k$ matrix $B$.
+
+
+Let us now recall one of the rules of matrix multiplication:
+
+\begin{quote}
+For the matrix product $AB$ to be defined, \textbf{the number of columns of $A$ must equal the number of rows of $B$}.
+\end{quote}
+
+That is, if $A$ is an $m\times n$ matrix, then $B$ must be an $n\times k$ matrix for some $k$. But this is the same conclusion as above! What is the connection? Well, if we follow the rules for function composition, if $T(\vec x) = B\vec x$ and $S(\vec y) = A\vec y$, we must have
+\[
+(S\circ T)(\vec x) = S(T(\vec x)) = A(T(\vec x)) = A(B\vec x) = (AB)\vec x,
+\]
+where the last equality is due to the associative property of matrix multiplication from Theorem \ref{thm:matrix_multiplication}. Thus, we see that
+\begin{quote}
+\textbf{Composition of linear transformations is the same as multiplication of the corresponding matrices}!
+\end{quote}
+
+Looking at things from the point of view of matrix transformations gives us two insights on the nature of matrix multiplication:
+\begin{enumerate}
+\item When $A$ and $B$ are both $n\times n$ matrices, the transformations $S(\vec x) = A\vec x$ and $T(\vec x) = B\vec x$ are both maps from $\mathbb{R}^n$ to $\mathbb{R}^n$, and we can define both
+\[
+(S\circ T)(\vec x) = (AB)\vec x
+\]
+and
+\[
+(T\circ S)(\vec x) = (BA)\vec x.
+\]
+Our experience with functions teaches us that most of the time, $S\circ T \neq T\circ S$, so of course it makes sense that $AB\neq BA$ in general!
+
+\item The fact that $AB$ is defined only when the number of columns of $A$ matches the number of rows of $B$ is simply a consequence of the fact that $S\circ T$ is only defined if the range of $T$ is a subset of the domain of $A$.
+\end{enumerate}
+
+What about the ``row times column'' rule for determining the entries of $AB$? Let's look at how things work in 2D. Suppose we've defined linear transformations
+\begin{align*}
+S\left(\bbm x\\y\ebm\right) & = A\bbm x\\y\ebm = \bbm a_{11} & a_{12}\\ a_{21} & a_{22}\ebm \bbm x\\y\ebm \text{ and}\\
+T\left(\bbm x\\y\ebm\right) & = B\bbm x\\y\ebm = \bbm b_{11} & b_{12}\\ b_{21} & b_{22}\ebm \bbm x\\y\ebm.
+\end{align*}
+If we write $T\left(\bbm x\\y\ebm\right) = \bbm u\\v\ebm$, where $u = b_{11}x+b_{12}y$ and $v = b_{21}x+b_{22}y$, then we have
+\begin{align*}
+(S\circ T)\left(\bbm x\\y\ebm\right) = S\left(T\left(\bbm x\\y\ebm\right)\right) & = S\left(\bbm u\\v\ebm\right)\\
+ & = \bbm a_{11} & a_{12}\\a_{21} & a_{22}\ebm \bbm u\\v\ebm\\
+ & = \bbm a_{11}u + a_{12}v\\a_{21}u+a_{22}v\ebm\\
+ & = \bbm a_{11}(b_{11}x+b_{12}y) + a_{12}(b_{21}x+b_{22}y)\\
+          a_{21}(b_{11}x+b_{12}y) + a_{22}(b_{21}x+b_{22}y)\ebm\\
+ & = \bbm (a_{11}b_{11}+a_{12}b_{21})x + (a_{11}b_{12}+a_{12}b_{22})y\\
+          (a_{21}b_{11}+a_{22}b_{21})x + (a_{21}b_{12}+a_{22}b_{22})y\ebm\\
+ & = \bbm a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\
+          a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\ebm
+     \bbm x\\y\ebm.
+\end{align*}
+But we also argued above that we should have 
+\[
+(S\circ T)\left(\bbm x\\y\ebm\right) = (AB)\bbm x\\y\ebm,
+\]
+from which we're forced to conclude that
+\[
+AB = \bbm a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\
+          a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}\ebm,
+\]
+and this is exactly the rule for multiplying two $2\times 2$ matrices! Of course, we can repeat the above argument for the general case where $A$ is $m\times n$ and $B$ is $n\times k$, but you can probably guess that the algebra gets a bit messy on that one, so we'll spare you the details.
+
+\subsection*{Column space and null space}
+When we discussed the composition of linear transformations above, we briefly mentioned that this involves the consideration of the \sword{range}\index{range ! of a linear transformation}. Recall that the range of a function is the set of all possible outputs when every input in the domain is considered. For example, with the function $f(x)=x^2$, where $x$ can be any real number, the range is the set of all real numbers $y\geq 0$. (If $y=x^2$ and $x$ is real, then $y$ can't be negative.)
+
+If we're given a linear transformation $T:\R^n\to \R^m$, we might want to know what sort of vectors $\vec y \in \R^m$ can be obtained from $T$. Consider Examples \ref{ex_mv_2} and \ref{ex_mv_23} from way back at the beginning of the section. In Example \ref{ex_mv_2}, the vectors $A\vec x$ and $A\vec y$ were non-parallel, and therefore independent. It follows that for any other vector $\vec z\in\R^2$, we can find scalars $a$ and $b$ such that
+\[
+\vec z = a(A\vec x) + b(A\vec y) = A(a\vec x) + A(b\vec y) = A(a\vec x+b\vec y),
+\]
+so every vector in $\R^2$ can be written as the output of the transformation $T(\vec x) = A\vec x$. On the other hand, using the matrix $A = \bbm 1&-1\\1&-1\ebm$ in Example \ref{ex_mv_23}, for any vector $\bbm a\\b\ebm\in\R^2$, we have
+\[
+A\bbm a\\b\ebm = \bbm 1& -1\\1&-1\ebm \bbm a\\b\ebm = \bbm a-b\\a-b\ebm = (a-b)\bbm 1\\1\ebm,
+\]
+so the only vectors in the range of $T(\vec x) = A\vec x$ are those parallel to the vector $\bbm 1\\1\ebm$.
+
+Next, we're going to consider a general matrix transformation $T:\R^n\to \R^m$ given by $T(\vec x) = A\vec x$, but we'll play around with the multiplication a little bit. By definition (and a bit of manipulation), we have
+\begin{align*}
+T(\vec x) = A\vec x & = 
+		\bbm a_{11} & a_{12} & \cdots & a_{1n}\\
+			 a_{21} & a_{22} & \cdots & a_{2n}\\
+			 \vdots & \vdots & \ddots & \vdots\\
+			 a_{m1} & a_{m2} & \cdots & a_{mn}\ebm 
+		\bbm x_1\\x_2\\ \vdots \\ x_n\ebm\\
+    & = \bbm a_{11}x_1+a_{12}x_2 + \cdots + a_{1n}x_n\\
+             a_{21}x_1+a_{22}x_2 + \cdots + a_{2n}x_n\\
+             \vdots\\
+             a_{m1}x_1+a_{m2}x_2 + \cdots + a_{mn}x_n\ebm\\
+    & = \bbm a_{11}x_1\\a_{21}x_1\\ \vdots \\ a_{m1}x_1\ebm + 
+        \bbm a_{12}x_2\\a_{22}x_2\\ \vdots \\ a_{m2}x_2\ebm + \cdots +
+        \bbm a_{1n}x_n\\a_{2n}x_n\\ \vdots \\ a_{mn}x_n\ebm\\
+    & = x_1 \bbm a_{11}\\a_{21}\\ \vdots \\ a_{m1}\ebm + 
+        x_2 \bbm a_{12}\\a_{22}\\ \vdots \\ a_{m2}\ebm + \cdots + 
+        x_n \bbm a_{1n}\\a_{2n}\\ \vdots \\ a_{mn}\ebm.
+\end{align*}
+Thus, whenever we multiply a vector by a matrix, \textbf{the result is a linear combination of the columns of $A$}! If we think of each column of $A$ as a column vector in $\R^m$, we can make the following definition:
+
+\mnote{.7}{\textbf{Note}: although we didn't say so at the time, we already encountered this rule for multiplying a vector by a matrix in the argument we gave in support of Theorem \ref{thm:standard_matrix} on page \pageref{page:standard_matrix}. Some textbooks actually use this observation to give an alternative definition of matrix multiplication. Once we know how the product $A\vec x$ is defined for an $m\times n$ matrix $A$ and $n\times 1$ vector $\vec x$, we can define $AB$ for an $n\times p$ matrix $B$ as follows: first, we write
+\[
+B = \bbm \vec{b}_1 &\vec{b}_2 & \cdots & \vec{b}_p\ebm,
+\]
+where the $n\times 1$ vectors $\vec{b}_1,\ldots, \vec{b}_p$ are the columns of $B$. We then define
+\begin{align*}
+AB & = A\bbm \vec{b}_1 &\vec{b}_2 & \cdots & \vec{b}_p\ebm\\
+   & = \bbm A\vec{b}_1 & A\vec{b}_2 & \cdots & A\vec{b}_p\ebm.
+\end{align*}
+It's a good exercise to verify (with a few examples) that this definition of the product $AB$ is the same as the ``row times column'' definition we gave earlier.\label{note:ABvect}}
+
+
+\smallskip
+
+\definition{def:colspace}{The column space of a matrix}{
+The \sword{column space}\index{column space} of an $m\times n$ matrix $A$ is the subspace of $\R^m$ spanned by the columns of $A$:
+\[
+\operatorname{col}(A) = \operatorname{span}\left\{\bbm a_{11}\\a_{21}\\\vdots \\ a_{m1}\ebm, \bbm a_{12}\\a_{22}\\ \vdots \\ a_{m2}\ebm, \ldots , \bbm a_{1n}\\a_{2n}\\ \vdots \\ a_{mn}\ebm\right\}.
+\]}
+
+\smallskip
+
+From the discussion above, we can make two conclusions. First, if $T(\vec x) = A\vec x$ is a linear transformation, we have
+\[
+\operatorname{range}(T) = \operatorname{col}(A).
+\]
+Second, as mentioned in Definition \ref{def:colspace}, since the range of $T$ can be written as a span, it is automatically a subspace of $\R^m$ according to Theorem \ref{thm:subspan}. The range of a linear transformation is one of the more important examples of a subspace.
+
+\medskip
+
+The other important example is the \sword{null space} of a matrix. The null space of an $m\times n$ matrix $A$ is simply the set of all those vectors $\vec{x}\in\R^n$ such that $A\vec x = \vec 0$.
+
+\smallskip
+
+\definition{def:nullspace}{The null space of a matrix}{
+The \sword{null space}\index{null space} of an $m\times n$ matrix $A$ is denoted by $\operatorname{null}(A)$, and defined by
+\[
+\operatorname{null}(A) = \{\vec x\in\R^n \, | \, A\vec x = \vec 0\}.
+\]
+}
+
+\smallskip
+
+For example, we saw in Example \ref{ex_mv_23} that the vector $\vec x = \bbm 1\\1\ebm$ belongs to the null space of the matrix $A = \bbm 1&-1\\1&-1\ebm$, since
+\[
+A\vec x = \bbm 1 & -1\\1 & -1\ebm \bbm 1\\1\ebm = \bbm 1-1\\1-1\ebm  = \bbm 0\\0\ebm.
+\]
+
+The null space is interesting for a few reasons. For one, it is a \textit{subspace} of $\R^n$:
+
+\smallskip
+
+\theorem{thm:nullsub}{The null space of a matrix is a subspace}{
+For any $m\times n$ matrix $A$, $\operatorname{null}(A)$ is a subspace of $\R^n$.}
+
+\smallskip
+
+The proof of this theorem is simple. Suppose $\vec x, \vec y\in \operatorname{null}(A)$. By definition, this means $A\vec x = \vec 0$ and $A\vec y = \vec 0$. Using the properties of matrix multiplication, we have
+\[
+A(\vec x + \vec y) = A\vec x + A\vec y = \vec 0 + \vec 0 = \vec 0,
+\]
+so $\vec x + \vec y\in \operatorname{null}(A)$, and
+\[
+A(c\vec x) = c(A\vec x) = c\vec 0 = \vec 0,
+\]
+so $c\vec x\in \operatorname{null}(A)$. It follows from the definition of a subspace that $\operatorname{null}(A)$ is a subspace of $\R^n$.
+
+Another reason the null space is interesting is that it lets us determine whether or not a linear transformation is \sword{one-to-one}. Suppose $T:\realnm$ is a linear transformation defined by $T(\vec x) = A\vec x$. We know that $T(\vec 0) = \vec 0$, so $\vec 0\in \operatorname{null}(A)$ (as it must be, since $\operatorname{null}(A)$ is a subspace). If we have any non-zero vector $\vec v\in\operatorname{null}(A)$, then $T$ cannot be one-to-one, since we'd have
+\[
+T(\vec v) = A\vec v = \vec 0 = T(\vec 0).
+\]
+Thus, if $\operatorname{null}(A)\neq \{\vec 0\}$, then $T$ is not one-to-one. On the other hand, suppose $\operatorname{null}(A)=\{\vec 0\}$, and that $T(\vec x) = T(\vec y)$ for vectors $\vec x, \vec y\in R^n$. Then we have
+\[
+\vec 0 - T(\vec x) - T(\vec y) = T(\vec x - \vec y) = A(\vec x - \vec y),
+\]
+so that $\vec x - \vec y\in \operatorname{null}(A) = \{0\}$, which means that $\vec x - \vec y = vec 0$, and thus $\vec x = \vec y$. We have proved the following:
+
+\mnote{.4}{Recall that a function $f$ is one-to-one if no two inputs give the same output. In other words, if $f$ is one-to-one, then whenever $f(a)=f(b)$, we can conclude that $a=b$.}
+
+\smallskip
+
+\theorem{thm:onetoonenull}{Null space and one-to-one transformations}{
+Let $T:\realnm$ be defined by $T(\vec x) = A\vec x$ for some $m\times n$ matrix $A$. Then $T$ is one-to-one if and only if $\operatorname{null}(A) = \{\vec 0\}$.}
+
+\smallskip
+
+The final result we'll state provides an interesting (and powerful) relationship between the null and column spaces. The proof of this result is covered in more advanced courses in linear algebra.
+
+\smallskip
+
+\theorem{thm:fund_thm_lin_maps}{The Fundamental Theorem of Linear Transformations}{
+Let $T:\realnm$ be a linear transformation defined by $T(\vec x) = A\vec x$ for some $m\times n$ matrix $A$. Then
+\[
+\dim \operatorname{null}(A) + \dim \operatorname{col}(A) = n.
+\]}
+
+\smallskip
+
+This result is sometimes known as the ``rank-nullity theorem''; it gives the relationship between the \sword{rank}\index{rank ! in terms of column space} of a matrix $A$, which is equal to the dimension of its column space, and the \sword{nullity} of $A$, which is defined to be the dimension of its null space.
+
+As with span and linear independence, the column space and null space of a matrix are theoretically powerful results, but they cannot be computed without being able to solve systems of linear equations. With that being the case, we immediately move on to Chapter \ref{chapter:linear}, where we will learn the techniques necessary to investigate these concepts further.
 
 \printexercises{exercises/05_04_exercises}
 

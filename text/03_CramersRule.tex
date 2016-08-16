@@ -1,15 +1,19 @@
-\section{Cramer's Rule}\label{sec:cramer}
+\section{Applications of the Determinant}\label{sec:cramer}
 
 \asyouread{
 \item	T/F: Cramer's Rule is another method to compute the determinant of a matrix.
 \item	T/F: Cramer's Rule is often used because it is more efficient than Gaussian elimination.
 \item Mathematicians use what word to describe the connections between seemingly unrelated ideas?
+\item T/F: Computing an inverse using the adjugate formula takes less work than using row operations.
 }
 
 
-In the previous sections we have learned about the determinant, but we haven't given a really good reason \textit{why} we would want to compute it.  This section shows one application of the determinant: solving systems of linear equations. We introduce this idea in terms of a theorem, then we will practice.
+In the previous sections we have learned about the determinant, but we haven't given a really good reason \textit{why} we would want to compute it.  This section shows two applications of the determinant:  solving systems of linear equations and computing the inverse of a matrix. 
 
-\mnote{.7}{The closest we came to motivating the determinant is that if $\det{\tta} =0$, then we know that \tta\ is not invertible. But it seems that there may be easier ways to check.
+\section*{Cramer's Rule}
+
+
+\mnote{.4}{The closest we came to motivating the determinant is that if $\det(A) =0$, then we know that \tta\ is not invertible. But it seems that there may be easier ways to check.
 
 It is interesting to note that despite the presentation given here, determinants actually pre-date the modern usage of matrices by more than a century. \href{https://en.wikipedia.org/wiki/Cramer's_rule}{\underline{Cramer's rule}} was published by Cramer in 1750, and the term \href{https://en.wikipedia.org/wiki/Matrix_(mathematics)}{\underline{matrix}} was introduced by James Joseph Sylvester in 1850. (Even then, Sylvester's description of matrices was in terms of minors -- that's right, determinants.) The interested reader is encouraged to read up on the history of the subject. (Wikipedia is not a bad place to start.)}
 
@@ -17,13 +21,13 @@ It is interesting to note that despite the presentation given here, determinants
 
 \theorem{thm:cramers_rule}{Cramer's Rule}{\index{Cramer's Rule}
 
-Let \tta\ be an $n\times n$ matrix with $\det{\tta}\neq 0$ and let \vb\ be an $n\times 1$ column vector. Then the linear system 
+Let \tta\ be an $n\times n$ matrix with $\det(A)\neq 0$ and let \vb\ be an $n\times 1$ column vector. Then the linear system 
 \[
 \ttaxb
 \]
 has solution 
 \[
-x_i = \frac{\det{\tta_i(\vb)}}{\det{\tta}},
+x_i = \frac{\det(\tta_i(\vb))}{\det(A)},
 \]
 where $\tta_i(\vb)$ is the matrix formed by replacing the $i^\text{th}$ column of \tta\ with \vb.}
 
@@ -35,32 +39,32 @@ where $\tta_i(\vb)$ is the matrix formed by replacing the $i^\text{th}$ column o
 \]}
 {We first compute the determinant of \tta\ to see if we can apply Cramer's Rule. 
 \[
-\det{\tta} = \bdt{ccc}1&5&-3\\1&4&2\\2&-1&0\edt = 49.
+\det(A) = \bdt{ccc}1&5&-3\\1&4&2\\2&-1&0\edt = 49.
 \]
 
-Since $\det{\tta}\neq 0$, we can apply Cramer's Rule. Following Theorem \ref{thm:cramers_rule}, we compute \det{\tta_1(\vb)}, \det{\tta_2(\vb)} and \det{\tta_3(\vb)}. 
+Since $\det(A)\neq 0$, we can apply Cramer's Rule. Following Theorem \ref{thm:cramers_rule}, we compute $\det(\tta_1(\vb))$, $\det(\tta_2(\vb))$ and $\det(\tta_3(\vb))$. 
 
 \[
-\det{\tta_1(\vb)} = \bdt{ccc} {\bf -36}&5&-3\\{\bf -11}&4&2\\{\bf 7}&-1&0 \edt = 49.
+\det(\tta_1(\vb)) = \bdt{ccc} \boldmath{-36}&5&-3\\ \boldmath{-11}&4&2\\ \boldmath{7}&-1&0 \edt = 49.
 \]
 (We used a bold font to show where \vb\ replaced the first column of \tta.)
 \begin{align*}
-\det{\tta_2(\vb)} &= \bdt{ccc} 1&{\bf -36}&-3\\1&{\bf -11}&2\\2&{\bf 7}&0\edt = -245.\\
-\det{\tta_3(\vb)} &= \bdt{ccc}  1&5&{\bf -36}\\1&4&{\bf -11}\\2&-1&{\bf 7}\edt = 196.
+\det(\tta_2(\vb)) &= \bdt{ccc} 1& \boldmath{-36}&-3\\1&\boldmath{-11}&2\\2&\boldmath{7}&0\edt = -245.\\
+\det(\tta_3(\vb)) &= \bdt{ccc}  1&5&\boldmath{-36}\\1&4&\boldmath{-11}\\2&-1& \boldmath{7}\edt = 196.
 \end{align*}
 
 Therefore we can compute \vx:
 \begin{align*}
-x_1 &= \frac{\det{\tta_1(\vb)}}{\det{\tta}} = \frac{49}{49} = 1\\
-x_2 &= \frac{\det{\tta_2(\vb)}}{\det{\tta}} = \frac{-245}{49} = -5\\
-x_3 &= \frac{\det{\tta_3(\vb)}}{\det{\tta}} = \frac{196}{49} = 4
+x_1 &= \frac{\det(\tta_1(\vb))}{\det(A)} = \frac{49}{49} = 1\\
+x_2 &= \frac{\det(\tta_2(\vb))}{\det(A)} = \frac{-245}{49} = -5\\
+x_3 &= \frac{\det(\tta_3(\vb))}{\det(A)} = \frac{196}{49} = 4
 \end{align*}
 
 Therefore 
 \[
 \vx = \bmx{c}x_1\\x_2\\x_3\emx = \bmx{c}1\\-5\\4\emx.
 \]
-\ } 
+} 
 
 \medskip
 
@@ -70,14 +74,14 @@ Therefore
 \]}
 {The determinant of \tta\ is $-2$, so we can apply Cramer's Rule. 
 \begin{align*}
-\det{\tta_1(\vb)} &= \bdt{cc} {\bf -1} & 2\\ {\bf 1} & 4\edt = -6.\\
-\det{\tta_2(\vb)} &= \bdt{cc} 1 & {\bf -1}\\ 3 & {\bf 1} \edt = 4.
+\det(\tta_1(\vb)) &= \bdt{cc} \boldmath{-1} & 2\\ \boldmath{1} & 4\edt = -6.\\
+\det(\tta_2(\vb)) &= \bdt{cc} 1 & \boldmath{-1}\\ 3 & \boldmath{1} \edt = 4.
 \end{align*}
 
 Therefore 
 \begin{align*}
-x_1 &= \frac{\det{\tta_1(\vb)}}{\det{\tta}} = \frac{-6}{-2} = 3\\
-x_2 &= \frac{\det{\tta_2(\vb)}}{\det{\tta}} = \frac{4}{-2} = -2\\
+x_1 &= \frac{\det(\tta_1(\vb))}{\det(A)} = \frac{-6}{-2} = 3\\
+x_2 &= \frac{\det(\tta_2(\vb))}{\det(A)} = \frac{4}{-2} = -2\\
 \end{align*}
 and 
 \[
@@ -86,10 +90,10 @@ and
 
 \medskip
 
-We learned in Section \ref{sec:determinant_properties} that when considering a linear system \ttaxb\ where \tta\ is square, if $\det{\tta}\neq 0$ then \tta\ is invertible and \ttaxb\ has exactly one solution. We also stated in Key Idea \ref{idea:solutions_invert} that if $\det{\tta} = 0$, then \tta\ is not invertible and so therefore either \ttaxb\ has no solution or infinite solutions. Our method of figuring out which of these cases applied was to form the augmented matrix $\bmx{cc} \tta & \vb \emx$, put it into \rref, and then interpret the results.
+We learned in Section \ref{sec:determinant_properties} that when considering a linear system \ttaxb\ where \tta\ is square, if $\det(A)\neq 0$ then \tta\ is invertible and \ttaxb\ has exactly one solution. We also stated in Key Idea \ref{idea:solutions_invert} that if $\det(A) = 0$, then \tta\ is not invertible and so therefore either \ttaxb\ has no solution or infinite solutions. Our method of figuring out which of these cases applied was to form the augmented matrix $\bmx{cc} \tta & \vb \emx$, put it into \rref, and then interpret the results.
 
-Cramer's Rule specifies that $\det{\tta}\neq 0$ (so we are guaranteed a solution). % New material for 3rd Edition
-When $\det{\tta}=0$ we are not able to discern whether infinite solutions or no solution exists for a given vector \vb. Cramer's Rule is only applicable to the case when exactly one solution exists. \\
+Cramer's Rule specifies that $\det(A)\neq 0$ (so we are guaranteed a solution). % New material for 3rd Edition
+When $\det(A)=0$ we are not able to discern whether infinite solutions or no solution exists for a given vector \vb. Cramer's Rule is only applicable to the case when exactly one solution exists. \\
 
 %What if $\det{\tta}=0$? Can we determine anything using Cramer's Rule--like techniques? The answer is yes, which we'll demonstrate through the next example.\\
 %
@@ -125,11 +129,156 @@ We end this section with a practical consideration. We have mentioned before tha
 
 The upshot of this is that Cramer's Rule makes for a poor choice in solving numerical linear systems. It simply is not done in practice; it is hard to beat Gaussian elimination.
 
-\mnote{.5}{A version of Cramer's Rule is often taught in introductory differential equations courses as it can be used to find solutions to certain linear differential equations. In this situation, the entries of the matrices are functions, not numbers, and hence computing determinants is easier than using Gaussian elimination. Again, though, as the matrices get large, other solution methods are resorted to.}
+\mnote{.7}{A version of Cramer's Rule is often taught in introductory differential equations courses as it can be used to find solutions to certain linear differential equations. In this situation, the entries of the matrices are functions, not numbers, and hence computing determinants is easier than using Gaussian elimination. Again, though, as the matrices get large, other solution methods are resorted to.}
 
 So why include it? \textit{Because its truth is amazing.} The determinant is a very strange operation; it produces a number in a very odd way. It should seem incredible to the reader that by manipulating determinants in a particular way, we can solve linear systems.  
 
 %It is not accurate to say that Cramer's Rule is \textit{never} used. For certain elementary linear differential equations, especially at the introductory level, Cramer's Rule provides a systematic way of arriving at a solution. Again, however, there are generally ``better'' ways of finding the solution.
+
+\section*{The Adjugate Formula}
+Recall that Theorem \ref{thm:2by2} in Section \ref{sec:inverses} gave us a ``shortcut'' for computing the inverse of a $2\times 2$ matrix $A=\bbm a&b\\c&d\ebm$: as long as $\det(A)\neq 0$, we have
+\[
+A^{-1} = \frac{1}{\det(A)}\bbm d&-b\\-c&a\ebm.
+\]
+This result can be easily verified by checking that $AA^{-1}=I_2$ as required. The reader may have wondered if there is a similar formula for $A^{-1}$ for a general $n\times n$ matrix $A$, and whether or not such a formula would still constitute a ``shortcut''. The results here are mixed. Yes, there's a formula, and we will present it shortly. However, as with Cramer's rule, it is \textit{not} a shortcut. The reasons are the same as those we just mentioned for Cramer's rule: as long as we're dealing with a matrix whose entries are numbers, computing the inverse using row operations is vastly more efficient.
+
+We begin with a definition.
+
+\smallskip
+
+\definition{def:adjugate}{The adjugate of a matrix}{
+Let $A$ be an $n\times n$ matrix. 
+\begin{itemize}
+\item The \sword{matrix of cofactors}\index{matrix!cofactor}\index{cofactor!matrix} of $A$ is the $n\times n$ matrix
+\[
+\operatorname{cof}(A) = [C_{ij}]
+\]
+whose $(i,j)$-entry is given by the $(i,j)$-cofactor of $A$.
+\item The \sword{adjugate}\index{adjugate}\index{matrix!adjugate} of $A$ is the $n\times n$ matrix
+\[
+\operatorname{adj}(A) = (\operatorname{cof}(A))^T = [C_{ij}]^T.
+\]
+\end{itemize}
+}
+
+\smallskip
+
+Thus to obtain the matrix of cofactors for $A$, we replace each entry of $A$ by the corresponding cofactor. Taking the transpose of this matrix produces the adjugate of $A$.
+
+Why do we care about the adjugate matrix? Consider the product $A\cdot \operatorname{adj}(A)$:
+\[
+A\cdot \operatorname{adj}(A) = \bbm a_{11} & a_{12} & \cdots & a_{1n}\\
+a_{21} & a_{22} & \cdots & a_{2n}\\ \vdots & \vdots & \ddots & \vdots\\
+a_{n1} & a_{n2} & \cdots & a_{nn}\ebm \bbm C_{11} & C_{21} & \cdots & C_{n1}\\
+C_{12} & C_{22} & \cdots & C_{n2}\\ \vdots & \vdots & \ddots & \vdots\\
+C_{1n} & C_{2n} & \cdots & C_{nn}\ebm
+\]
+(Notice that the indices for $\operatorname{adj}(A)$ are reversed, since we took the transpose of the cofactor matrix. What is the $(i,j)$ entry of this product? Consider first the case where $i=j$. We find that the $(i,i)$-entry is
+\[
+a_{i1}C_{i1}+a_{i2}C_{i2}+\cdots + a_{in}C_{in}.
+\]
+But this is just the cofactor expansion of $\det(A)$ along the $i^{\text{th}}$ row! Thus, the $(i,i)$ entry of $A\cdot \operatorname{adj}(A)$ is simply $\det(A)$. This tells us what the diagonal is. What about the off-diagonal entries?
+
+\mnote{.6}{Here we see exactly why we want to take the transpose in our definition of $\operatorname{adj}(A)$: when we multiply matrices, we multiply rows times columns, and taking the transpose ensures that each column of $\operatorname{adj}(A)$ is the corresponding row of $\operatorname{cof}(A)$.}
+
+When $i\neq j$, we have the $(i,j)$-entry
+\[
+a_{i1}C_{j1}+a_{i2}C_{j2}+\cdots + a_{in}C_{jn}.
+\]
+This is no longer a cofactor expansion for the determinant of $A$, since we're taking entries from one row of $A$, and cofactors from another. This is, however, a cofactor expansion for the determinant of the matrix $B$ that we obtain if we replace Row $j$ of $A$ with another copy of Row $i$. (Take a moment to think about why this is true.) But this means that the matrix $B$ has two identical rows, and using Theorem \ref{thm:determinant_row_operations}, we can see that we must have $\det(B)=0$. This means that all of the off-diagonal entries of our product are zero! We have
+\[
+A\cdot \operatorname{adj}(A) = \bbm \det(A) & 0 &\cdots & 0\\
+0&\det(A) & \cdots & 0\\
+\vdots & \vdots &\ddots & \vdots\\
+0& 0& \cdots &\det(A)\ebm = \det(A)I_n.
+\]
+Now, we know that $A$ is invertible if and only if $\det(A)\neq 0$, and as long as $\det(A)\neq 0$, we can multiply both sides of the above equation by $\dfrac{1}{\det(A)}$. With a bit of rearranging, we find
+\[
+A\cdot \left(\frac{1}{\det(A)}\operatorname{adj}(A)\right) = I_n.
+\]
+But we know that if we can find \textit{any} matrix $B$ such that $AB=I_n$, then $B$ is necessarily the inverse of $A$. We have established the following theorem.
+
+\smallskip
+
+\theorem{thm:adjugate}{The adjugate formula for the inverse}{
+Let $A$ be an $n\times n$ matrix. If $\det(A)\neq 0$, then $A$ is invertible, and
+\[
+A^{-1} = \frac{1}{\det(A)}\operatorname{adj}(A).
+\]}
+
+\smallskip
+
+\mnote{.2}{Notice that Theorem \ref{thm:2by2} is a special case of Theorem \ref{thm:adjugate}. The cofactors of a $2\times 2$ matrix are simply numbers, and it's easy to check that the adjugate of $A=\bbm a&b\\c&d\ebm$ is $\operatorname{adj}(A) = \bbm d & -b\\-c&a\ebm$.}
+
+Let us repeat our words of caution from the beginning of this discussion. Just because we have a formula for the inverse does not mean we need to use it! Consider the case of a $5\times 5$ matrix (remember that this is a relatively small matrix by practical standards). Would you want to use Theorem \ref{thm:adjugate} to compute the inverse? What would this require? Well, we'd need to compute $\det(A)$, since that appears in the formula, so there's already a $5\times 5$ determinant to deal with. But don't forget what $\operatorname{adj}(A)$ is: a matrix of cofactors. In this case, $\operatorname{adj}(A)$ would consist of \textit{twenty-five} different $4\times 4$ determinants that would all need to be computed. What do you think would be less work? Computing one $5\times 5$ determinant and 25 $4\times 4$ determinants, or using row operations? Now consider doing this for $10\times 10$, or $100\times 100$ matrices. Sometimes the first method is also the best!
+
+Let's do one example to see that even for a $3\times 3$ matrix, there's a fair amount of work involved.
+
+\medskip
+
+\example{ex_adjugate}{Using the adjugate formula}{
+Use Theorem \ref{thm:adjugate} to compute the inverse of the matrix
+\[
+A = \bbm 2 & -1 & 3\\ 4 & 0 & -2\\ 1 & 5& -3\ebm.
+\]
+}
+{
+We begin by computing $\det(A)$, to make sure that the inverse exists. Using the $-1$ in the first row to create a zero in the $(3,2)$ spot below it, we have
+\begin{align*}
+\det(A) & = \begin{vmatrix}
+2 & -1 & 3\\ 4 & 0 & -2\\ 1 & 5 & -3
+\end{vmatrix} = \begin{vmatrix}
+2 & -1 & 3\\ 4 & 0 & -2\\ 11 & 0 & 12
+\end{vmatrix}\\
+& = (-1)(-1)^{1+2}\begin{vmatrix}
+4 & -2\\ 11 & 12
+\end{vmatrix} = 1(4(12)-11(-2)) = 70.
+\end{align*}
+
+\mnote{.3}{\textbf{Caution:} The entries of $\operatorname{adj}(A)$ are the cofactors $C_{ij}$, and \textbf{not} the products $a_{ij}C_{ij}$ that appear in the cofactor expansion theorem.}
+
+Next, we set about computing all nine cofactors of $A$. We have
+\begin{align*}
+C_{11} & = (+1)\begin{vmatrix}
+0&-2\\5&-3
+\end{vmatrix} = 10\\
+C_{12} & = (-1)\begin{vmatrix}
+4&-2\\1&-3
+\end{vmatrix} = 10\\
+C_{13} & = (+1)\begin{vmatrix}
+4&0\\1&5
+\end{vmatrix} = 20\\
+C_{21} & = (-1)\begin{vmatrix}
+-1&3\\5&-3
+\end{vmatrix}=12\\
+C_{22} & = (+1)\begin{vmatrix}
+2&3\\1&-3
+\end{vmatrix} = -9\\
+C_{23} & = (-1)\begin{vmatrix}
+2&-1\\1&5
+\end{vmatrix} = -11\\
+C_{31} & = (+1)\begin{vmatrix}
+-1&3\\0&-2
+\end{vmatrix}=2\\
+C_{32} & = (-1)\begin{vmatrix}
+2&3\\4&-2
+\end{vmatrix}=16\\
+C_{33} & = (+1)\begin{vmatrix}
+2&-1\\4&0
+\end{vmatrix}=4.
+\end{align*}
+Thus, we obtain
+\[
+\operatorname{adj}(A)=\bbm 10&10&20\\12&-9&-11\\2&16&4\ebm^T = \bbm 10&12&2\\10&-9&16\\20&-11&4\ebm.
+\]
+If we haven't made any computational errors (and there's a good chance that we have!) then Theorem \ref{thm:adjugate} tells us that
+\[
+A^{-1} = \frac{1}{\det(A)}\operatorname{adj}(A) = \frac{1}{70}\bbm 10&12&2\\10&-9&16\\20&-11&4\ebm = \bbm 1/7&6/35&1/35\\1/7&-9/70&8/35\\2/7&-11/70&2/35\ebm.
+\]
+The reader should verify that $AA^{-1}=I$ to make sure that we haven't made any mistakes. (The author made two mistakes that were caught doing this verification!)}
+
+\medskip
+
 
 In the next chapter we'll see another use for the determinant. Meanwhile, try to develop a deeper appreciation of math: odd, complicated things that seem completely unrelated often are intricately tied together. Mathematicians see these connections and describe them as ``beautiful.''
 

@@ -20,7 +20,9 @@ Let \tta\ be an $n\times n$ matrix. The determinant of \tta\ can be computed usi
 
 \smallskip
 
-We alluded to this fact way back after Example \ref{ex_cofactor}. We had just learned what cofactor expansion was and we practiced along the second row and down the third column. Later, we found the determinant of this matrix by computing the cofactor expansion along the first row. In all three cases, we got the number 0. This wasn't a coincidence. The above theorem states that all three expansions were actually computing the determinant.
+\mnote{.4}{\textbf{Note:} Theorem \ref{thm:cofactor_choice} is sometimes called the \textit{Laplace Expansion Theorem}, after Pierre-Simon, Marquis de Laplace (1749-1827), a French mathematician and physicist whose importance and influence rivals that of Newton. The reader may be wondering why we have not included a proof of this result, which is one of the more important computational facts about the determinant. The answer is that in most textbooks we checked that included the proof, the complete details take up some four pages or so, and don't really add all that much to the understanding of what's going on. In a course like Math 1410, we try to stick to proofs that are short and simple, and that teach us something about the mathematics involved.}
+
+We alluded to this fact way back after Example \ref{ex_cofactor}. We had just learned what cofactor expansion was and we practised along the second row and down the third column. Later, we found the determinant of this matrix by computing the cofactor expansion along the first row. In all three cases, we got the number 0. This wasn't a coincidence. The above theorem states that all three expansions were actually computing the determinant.
 
 How does this help us? By giving us freedom to choose any row or column to use for the expansion, we can choose a row or column that looks ``most appealing.'' This usually means ``it has lots of zeros.'' We demonstrate this principle below.
 
@@ -35,13 +37,13 @@ Find the determinant of
 {
 Our first reaction may well be ``Oh no! Not another $4\times 4$ determinant!'' However, we can use cofactor expansion along any row or column that we choose. The third column looks great; it has lots of zeros in it. The cofactor expansion along this column is
 \begin{align*}
-\det{\tta} & = a_{1,3}C_{1,3} + a_{2,3}C_{2,3} + a_{3,3}C_{3,3}+a_{4,3}C_{4,3} \\
+\det(A) & = a_{1,3}C_{1,3} + a_{2,3}C_{2,3} + a_{3,3}C_{3,3}+a_{4,3}C_{4,3} \\
 	&= 0\cdot C_{1,3} + 0\cdot C_{2,3} + 3\cdot C_{3,3} + 0\cdot C_{4,3}
 \end{align*}
 
 The wonderful thing here is that three of our cofactors are multiplied by 0. We won't bother computing them since they will not contribute to the determinant. Thus 
 \begin{align*}
-\det{\tta} & = 3\cdot C_{3,3} \\
+\det(A) & = 3\cdot C_{3,3} \\
 & = 3\cdot (-1)^{3+3}\cdot \bdt{ccc}1&2&9\\2&-3&5\\-4&1&2\edt \\
 &= 3\cdot(-147) \quad\quad\quad \left(\parbox{160pt}{\centering\scriptsize we computed the determinant of the $3\times 3$ matrix without showing our work; it is $-147$}\right)\\
 &= -447
@@ -66,17 +68,17 @@ Find the determinant of
 Since we can expand along any row or column, things are not as bad as they might at first seem. In fact, this problem is very easy. 
 What row or column should we choose to find the determinant along? There are two obvious choices: the first column or the last row. Both have 4 zeros in them. We choose the first column.  We omit most of the cofactor expansion, since most of it is just 0:
 \[
-\det{\tta} = 1\cdot (-1)^{1+1}\cdot\bvm 6&7&8&9\\0&10&11&12\\0&0&13&14\\0&0&0&15\evm.
+\det(A) = 1\cdot (-1)^{1+1}\cdot\bvm 6&7&8&9\\0&10&11&12\\0&0&13&14\\0&0&0&15\evm.
 \]
 
 Similarly, this determinant is not bad to compute; we again choose to use cofactor expansion along the first column. Note: technically, this cofactor expansion is $6\cdot(-1)^{1+1}A_{1,1}$; we are going to drop the $(-1)^{1+1}$ terms from here on out in this example (it will show up a lot...).
 \[
-\det{\tta} = 1\cdot 6\cdot\bvm 10&11&12\\0&13&14\\0&0&15\evm.
+\det(A) = 1\cdot 6\cdot\bvm 10&11&12\\0&13&14\\0&0&15\evm.
 \]
 
 You can probably can see a trend. We'll finish out the steps without explaining each one.
 \begin{align*}
-\det{\tta} &= 1\cdot6\cdot10\cdot\bvm 13&14\\0&15\evm \\
+\det(A) &= 1\cdot6\cdot10\cdot\bvm 13&14\\0&15\evm \\
 	&= 1\cdot6\cdot10\cdot13\cdot15\\
 	&= 11700
 \end{align*}
@@ -111,28 +113,28 @@ Let \ttb\ be formed from \tta\ by doing one of the following elementary row oper
 \item		$5R_1 \rightarrow R_1$
 \item		$R_1\leftrightarrow R_2$
 \end{enumerate}
-Find \det{\tta}\ as well as \det{\ttb}\ for each of the row operations above.
+Find $\det(A)$ as well as $\det(B)$ for each of the row operations above.
 }
 {
-It is straightforward to compute $\det{\tta} = -2$.
+It is straightforward to compute $\det(A) = -2$.
 
 Let \ttb\ be formed by performing the row operation in 1) on \tta; thus 
 \[
 \ttb = \bmx{cc} 1&2\\5&8\emx.
 \]
-It is clear that $\det{\ttb} = -2$, the same as \det{\tta}.
+It is clear that $\det(B) = -2$, the same as $\det(A)$.
 
 Now let \ttb\ be formed by performing the elementary row operation in 2) on \tta; that is, 
 \[
 \ttb = \bmx{cc}5&10\\3&4\emx.
 \]
-We can see that $\det{\ttb} = -10$, which is $5\cdot\det{\tta}$.
+We can see that $\det(B) = -10$, which is $5\cdot\det(A)$.
 
 Finally, let \ttb\ be formed by the third row operation given; swap the two rows of \tta. We see that 
 \[
 \ttb = \bmx{cc}3&4\\1&2\emx
 \]
-and that $\det{\ttb} = 2$, which is $(-1)\cdot\det{\tta}$. \
+and that $\det(B) = 2$, which is $(-1)\cdot\det(A)$. \
 }
 
 \pagebreak
@@ -144,16 +146,16 @@ We've seen in the above example that there seems to be a relationship between th
 \theorem{thm:determinant_row_operations}{The Determinant and Elementary Row Operations}{\index{elementary row operations!and determinants}\index{determinant!and elementary row operations}
 Let \tta\ be an $n\times n$ matrix and let \ttb\ be formed by performing one elementary row operation on \tta.
 \begin{enumerate}
-	\item		If \ttb\ is formed from \tta\ by adding a scalar multiple of one row to another, then $\det{\ttb}=\det{\tta}$.
+	\item		If \ttb\ is formed from \tta\ by adding a scalar multiple of one row to another, then $\det(B)=\det(A)$.
 %	\item	If a scalar multiple of one row of \tta\ is added to another row, and the latter row is replaced with that sum to form \ttb, then $\det{\ttb} = \det{\tta}$.
-	\item	If \ttb\ is formed from \tta\ by multiplying one row of \tta\ by a scalar $k$, then $\det{\ttb} = k\cdot\det{\tta}$.
-	\item	If \ttb\ is formed from \tta\ by interchanging two rows of \tta, then $\det{\ttb} = -\det{\tta}$.
+	\item	If \ttb\ is formed from \tta\ by multiplying one row of \tta\ by a scalar $k$, then $\det(B) = k\cdot\det(A)$.
+	\item	If \ttb\ is formed from \tta\ by interchanging two rows of \tta, then $\det(B) = -\det(A)$.
 \end{enumerate}
 }
 
 \smallskip
 
-Let's put this theorem to use in an example.
+Let's put this theorem to use in a couple of examples.
 
 \medskip
 
@@ -162,32 +164,66 @@ Let
 \[
 \tta = \bmx{ccc}1&2&1\\0&1&1\\1&1&1\emx.
 \]
-Compute \det{\tta}, then find the determinants of the following matrices by inspection using Theorem \ref{thm:determinant_row_operations}.
+Compute $\det(A)$, then find the determinants of the following matrices by inspection using Theorem \ref{thm:determinant_row_operations}.
 \[
 \ttb = \bmx{ccc}1&1&1\\1&2&1\\0&1&1\emx\quad \ttc = \bmx{ccc}1&2&1\\0&1&1\\7&7&7\emx\quad \ttd = \bmx{ccc}1&-1&-2\\0&1&1\\1&1&1\emx
 \]
 }
 {
-Computing \det{\tta}\ by cofactor expansion down the first column or along the second row seems like the best choice, utilizing the one zero in the matrix. We can quickly confirm that $\det{\tta} = 1$. 
+Computing $\det(A)$ by cofactor expansion down the first column or along the second row seems like the best choice, utilizing the one zero in the matrix. We can quickly confirm that $\det(A) = 1$. 
 
-To compute \det{\ttb}, notice that the rows of \tta\ were rearranged to form \ttb. There are different ways to describe what happened; saying $R_1\leftrightarrow R_2$ was followed by $R_1\leftrightarrow R_3$ produces \ttb\ from \tta. Since there were \textit{two} row swaps, $\det{\ttb} = (-1)(-1)\det{\tta} = \det{\tta} = 1$.\\ 
+To compute $\det(B)$, notice that the rows of \tta\ were rearranged to form \ttb. There are different ways to describe what happened; saying $R_1\leftrightarrow R_2$ was followed by $R_1\leftrightarrow R_3$ produces \ttb\ from \tta. Since there were \textit{two} row swaps, $\det(B) = (-1)(-1)\det(A) = \det(A) = 1$.\\ 
 
-Notice that \ttc\ is formed from \tta\ by multiplying the third row by 7. Thus $\det{\ttc} = 7\cdot\det{\tta} = 7$.\\
+Notice that \ttc\ is formed from \tta\ by multiplying the third row by 7. Thus $\det(C) = 7\cdot\det(A) = 7$.\\
 
-It takes a little thought, but we can form \ttd\ from \tta\ by the operation $-3R_2+R_1\rightarrow R_1$. This type of elementary row operation does not change determinants, so $\det{\ttd} = \det{\tta}$.
+It takes a little thought, but we can form \ttd\ from \tta\ by the operation $-3R_2+R_1\rightarrow R_1$. This type of elementary row operation does not change determinants, so $\det(D) = \det(A)$.
+} 
+
+\pagebreak
+
+\example{ex_det_elem_row_ops_2}{Effect of elementary row operations on the determinant}{
+The matrix \ttb\ was formed from \tta\ using the following elementary row operations, though not necessarily in this order. Find $\det(A)$.\\
+
+\begin{minipage}{.5\linewidth}
+\[
+B = \bmx{ccc}1&2&3\\0&4&5\\0&0&6\emx
+\]
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+$2R_1\rightarrow R_1$
+
+$\frac 13 R_3\rightarrow R_3$
+
+$R_1 \leftrightarrow R_2$
+
+$6R_1+R_2 \rightarrow R_2$
+\end{minipage}
+}
+{
+It is easy to compute $\det\ttb=24$. In looking at our list of elementary row operations, we see that only the first three have an effect on the determinant. Therefore 
+\[
+24 = \det(B) = 2\cdot \frac13  \cdot (-1)\cdot \det(A)
+\]
+and hence 
+\[
+\det(A) = -36.
+\]
 } 
 
 \medskip
+
+In the previous example, we may have been tempted to ``rebuild'' \tta\ using the elementary row operations and then computing the determinant. This can be done, but in general it is a bad idea; it takes too much work and it is too easy to make a mistake. 
+
 
 Let's continue to think like mathematicians; mathematicians tend to remember ``problems'' they've encountered in the past, and when they learn something new, in the backs of their minds they try to apply their new knowledge to solve their old problem. (This is why mathematicians rarely smile: they are remembering their problems)
 
 What ``problem'' did we recently uncover? We stated in the last chapter that even computers could not compute the determinant of large matrices with cofactor expansion. How then can we compute the determinant of large matrices?
 
-We just learned two interesting and useful facts about matrix determinants. First, the determinant of a triangular matrix is easy to compute: just multiply the diagonal elements. Secondly, we know how elementary row operations affect the determinant. Put these two ideas together: given any square matrix, we can use elementary row operations to put the matrix in triangular form,  find the determinant of the new matrix (which is easy), and then adjust that number by recalling what elementary operations we performed. 
+We just learned two interesting and useful facts about matrix determinants. First, the determinant of a triangular matrix is easy to compute: just multiply the diagonal elements. Secondly, we know that given any square matrix, we can use elementary row operations to put the matrix in triangular form.  We can then find the determinant of the new matrix (which is easy), and adjust that number by recalling what elementary operations we performed. 
 
 \medskip
 
-\example{ex_det_elem_row_ops_1}{Using row operations to reduce a determinant to triangular form}{
+\example{ex_det_elem_row_ops_1}{Reducing a determinant to triangular form}{
 Find the determinant of \tta\ by first putting \tta\ into a triangular form, where 
 \[
 \tta = \bmx{ccc} 2&4&-2\\-1&-2&5\\3&2&1\emx.
@@ -218,7 +254,7 @@ We can finish in one step; by interchanging rows 2 and 3 we'll have our matrix i
 $\bmx{ccc} 1&2&-1\\0&-4&4\\0&0&4\emx.$
 \end{tabular}\end{center}
 
-Let's name this last matrix \ttb. The determinant of \ttb\ is easy to compute as it is triangular; $\det\ttb = -16$. We can use this to find \det\tta. 
+Let's name this last matrix \ttb. The determinant of \ttb\ is easy to compute as it is triangular; $\det(\ttb) = -16$. We can use this to find $\det(\tta)$. 
 
 Recall the steps we used to transform \tta\ into \ttb. They are:
 
@@ -236,53 +272,40 @@ The first operation multiplied a row of \tta\ by $\frac 12$. This means that the
 
 The next two operations did not affect the determinant at all. The last operation, the row swap, changed the sign. Combining these effects, we know that 
 \[
--16 = \det\ttb= (-1)\frac12\det\tta.
+-16 = \det(\ttb)= (-1)\frac12\det(\tta).
 \]
 
-Solving for $\det\tta$ we have that $\det\tta=32$. \
+Solving for $\det(\tta)$ we have that $\det(\tta)=32$. \
 }
 
 \medskip
 
 In practice, we don't need to keep track of operations where we add multiples of one row to another; they simply do not affect the determinant. Also, in practice, these steps are carried out by a computer, and computers don't care about leading 1s. Therefore, row scaling operations are rarely used. The only things to keep track of are row swaps, and even then all we care about are the number of row swaps. An odd number of row swaps means that the original determinant has the opposite sign of the triangular form matrix; an even number of row swaps means they have the same determinant.
 
-Let's practice this again.
+If you find yourself needing to compute a determinant by hand (say, on an exam), it's a good idea to keep the following principles in mind:
+\begin{enumerate}
+\item Stick to row operations of the type $R_i+kR_j\to R_i$ as much as possible: \textit{they don't change the determinant}.
+\item Getting all the way to triangular form isn't really necessary. Use row operations of the above type to create as many zeros as possible in one of the columns, and then expand along that column.
+\end{enumerate}
 
-\medskip
+\mnote{.3}{\textbf{Note:} If you want to get really fancy, since $\det(A^T)=\det(A)$, and since performing row operations on $A^T$ is the same as performing \textit{column} operations on $A$, you can  also add a multiple of one column to another without changing the determinant!}
 
-\example{ex_det_elem_row_ops_2}{Effect of elementary row operations ion the determinant}{
-The matrix \ttb\ was formed from \tta\ using the following elementary row operations, though not necessarily in this order. Find \det{\tta}.\\
+To see how these principles work in practice, let's repeat Example \ref{ex_det_elem_row_ops_1}. This time we'll focus on creating zeros, but we won't worry about getting to triangular form. Since adding a multiple of one row to another doesn't change the determinant, we can compute $\det(A)$ with a string of equalities, as follows:
+\begin{align*}
+\begin{vmatrix}
+2&4&-2\\-1&2&5\\3&2&1
+\end{vmatrix} &= \begin{vmatrix}
+0&0&8\\-1&2&5\\3&2&1
+\end{vmatrix} \tag*{(Add $2R_2$ to $R_1$)}\\
+& = 0+0+8(-1)^{1+3}\begin{vmatrix}
+-1&-2\\3&2
+\end{vmatrix} \tag*{(Expand along Row 1)}\\
+& = 8((-1)(2)-(-2)(3))\\
+& = 8(4)=32.
+\end{align*}
+Of course, in this case we got lucky and ended up with two zeros in the first row after one row operation. However, had this not been the case, we would have simply done one more row operation ($R_3+3R_2\to R_3$) to create a second zero in the first column, and then done a cofactor expansion along that column.
 
-\begin{minipage}{.5\linewidth}
-\[
-B = \bmx{ccc}1&2&3\\0&4&5\\0&0&6\emx
-\]
-\end{minipage}
-\begin{minipage}{.5\linewidth}
-$2R_1\rightarrow R_1$
-
-$\frac 13 R_3\rightarrow R_3$
-
-$R_1 \leftrightarrow R_2$
-
-$6R_1+R_2 \rightarrow R_2$
-\end{minipage}
-}
-{
-It is easy to compute $\det\ttb=24$. In looking at our list of elementary row operations, we see that only the first three have an effect on the determinant. Therefore 
-\[
-24 = \det{\ttb} = 2\cdot \frac13  \cdot (-1)\cdot \det{\tta}
-\]
-and hence 
-\[
-\det{\tta} = -36.
-\]
-} 
-
-\medskip
-
-In the previous example, we may have been tempted to ``rebuild'' \tta\ using the elementary row operations and then computing the determinant. This can be done, but in general it is a bad idea; it takes too much work and it is too easy to make a mistake. 
-
+For larger determinants, we can follow the same routine: create zeros in one column, expand along that column to get a smaller determinant, and repeat.
 
 Let's think some more like a mathematician. How does the determinant work with other matrix operations that we know? Specifically, how does the determinant interact with matrix addition, scalar multiplication, matrix multiplication, the transpose and the trace? We'll again do an example to get an idea of what is going on, then give a theorem to state what is true.
 
@@ -296,76 +319,117 @@ Let
 Find the determinants of the matrices \tta, \ttb, $\tta+\ttb$, $3\tta$, \tta\ttb, \ttat, \ttai. Can you find any connections between these values?
 }
 {
-We can quickly compute that $\det{\tta} = -2$ and that $\det{\ttb} = 7$. 
+We can quickly compute that $\det(A) = -2$ and $\det(B) = 7$. 
 
 \begin{align*}
-	\det{\tta-\ttb} &= \det{\bmx{cc}1&2\\3&4\emx-\bmx{cc} 2&1\\ 3&5\emx}\\
+	\det(\tta-\ttb) &= \det\left(\bmx{cc}1&2\\3&4\emx-\bmx{cc} 2&1\\ 3&5\emx\right)\\
 	&= \bdt{cc}-1&1\\0&-1\edt \\
 	&= 1
 \end{align*}
-It's tough to find a connection between \det{\tta-\ttb}, \det{\tta}\ and  \det{\ttb}.
+It's tough to find a connection between $\det(\tta-\ttb)$, $\det(A)$ and  $\det(B)$.
 
 \begin{align*}
-	\det{3\tta} &= \bdt{cc}3&6\\9&12\edt\\
+	\det(3\tta) &= \bdt{cc}3&6\\9&12\edt\\
 	&= -18
 \end{align*}
 
-We can figure this one out; multiplying one row of \tta\ by 3 increases the determinant by a factor of 3; doing it again (and hence multiplying both rows by 3) increases the determinant again by a factor of 3. Therefore $\det{3\tta} = 3\cdot3\cdot\det{\tta}$, or $3^2\cdot\det{\tta}$.
+We can figure this one out; multiplying one row of \tta\ by 3 increases the determinant by a factor of 3; doing it again (and hence multiplying both rows by 3) increases the determinant again by a factor of 3. Therefore $\det(3\tta) = 3\cdot3\cdot\det(A)$, or $3^2\cdot\det(A)$.
 
 \begin{align*}
-	\det{\tta\ttb} &= \det{\bmx{cc}1&2\\3&4\emx\bmx{cc} 2&1\\ 3&5\emx}\\
+	\det(\tta\ttb) &= \det\left(\bmx{cc}1&2\\3&4\emx\bmx{cc} 2&1\\ 3&5\emx\right)\\
 	&=	\bdt{cc}8&11\\18 & 23\edt\\
 	&= -14
 \end{align*}
 
-This one seems clear; $\det{\tta\ttb} = \det{\tta}\det{\ttb}$.
+This one seems clear; $\det(\tta\ttb) = \det(A)\det(B)$.
 
 %\drawexampleline{ex_determinant_8}
 
 \begin{align*}
-\det{\ttat} & = \bdt{cc} 1&3\\2&4\edt\\
+\det(A^T) & = \bdt{cc} 1&3\\2&4\edt\\
 &=	-2
 \end{align*}
 
-Obviously $\det{\ttat} = \det{\tta}$; is this always going to be the case? If we think about it, we can see that the cofactor expansion along the first \textit{row} of \tta\ will give us the same result as the cofactor expansion along the first \textit{column} of \ttat.
+Obviously $\det(A^T) = \det(A)$; is this always going to be the case? If we think about it, we can see that the cofactor expansion along the first \textit{row} of \tta\ will give us the same result as the cofactor expansion along the first \textit{column} of \ttat.
 
-\mnote{.5}{Seeing that expansion along the first row agrees with expansion along the first column can be a bit tricky to think out in your head. Try it with a 3$\times 3$ matrix \tta\ and see how it works. All the $2\times 2$ submatrices that are created in \ttat\ are the transpose of those found in \tta; this doesn't matter since it is easy to see that the determinant isn't affected by the transpose in a $2\times 2$ matrix.}
+
 
 \begin{align*}
-\det{\ttai} & = \bdt{cc} -2& 1\\ 3/2 & -1/2\edt\\
+\det(A^{-1}) & = \bdt{cc} -2& 1\\ 3/2 & -1/2\edt\\
 &=	1-3/2\\
 &=-1/2
 \end{align*}
 
 It seems as though 
 \[
-\det{\ttai} = \frac{1}{\det{\tta}}.
+\det(A^{-1}) = \frac{1}{\det(A)}.
 \]
 }
 
 \medskip
 
-We now state a theorem which will confirm our conjectures from the previous example. 
+\mnote{.8}{Seeing that expansion along the first row agrees with expansion along the first column can be a bit tricky to think out in your head. Try it with a 3$\times 3$ matrix \tta\ and see how it works. All the $2\times 2$ submatrices that are created in \ttat\ are the transpose of those found in \tta; this doesn't matter since it is easy to see that the determinant isn't affected by the transpose in a $2\times 2$ matrix.}
+
+We now state a few theorems that confirm our conjectures from the previous example. 
+
+\smallskip
+
+\theorem{thm:no_inverse_zero_determinant}{The determinant of a non-invertible matrix}{If an $n\times n$ matrix $A$ is \textbf{not} invertible, then $\det(A)=0$.}
+
+\smallskip
+
+To see that Theorem \ref{thm:no_inverse_zero_determinant} is true, note that if $A$ is not invertible, then the \rref\ $R$ of $A$ must have a row of zeros. Performing a cofactor expansion along this row, we immediately see that $\det(R)=0$. Since $R$ is obtained from $A$ by a series of elementary row operations, we know from Theorem \ref{thm:determinant_row_operations} that $\det(A)$ is a multiple of $\det(R)$, and thus $\det(A)=0$.
+
+It follows from Theorem \ref{thm:no_inverse_zero_determinant} (using the logical principle known as the \textit{contrapositive})  that if $\det(A)\neq 0$, we're guaranteed that $A$ is invertible.
+
+At this point, we naturally should ask whether or not the converse to Theorem \ref{thm:no_inverse_zero_determinant} is true as well: suppose we know $\det(A)=0$. Does that imply that $A$ is not invertible? (Or equivalently, if we know $A$ is invertible, does this imply that $\det(A)\neq 0$?) The answer is yes, but to see this, we first need a more general result.
 
 \smallskip
 
 \theorem{thm:determinant_properties}{Determinant Properties}{\index{determinant!properties}
 Let \tta\ and \ttb\ be $n\times n$ matrices and let $k$ be a scalar. The following are true:
 \begin{enumerate}
-\item		$\det{k\tta} = k^n\cdot\det{\tta}$
-\item		$\det{\ttat} = \det{\tta}$
-\item		$\det{\tta\ttb} = \det{\tta}\det{\ttb}$
-\item		If \tta\ is invertible, then 
-\[
-\det{\ttai} = \frac{1}{\det{\tta}}.
-\]
-\item		A matrix \tta\ is invertible if and only if $\det{\tta}\neq 0$.
+\item		$\det(kA) = k^n\cdot\det(A)$
+\item		$\det(A^T) = \det(A)$
+\item		$\det(\tta\ttb) = \det(A)\det(B)$
 \end{enumerate}
 }
 
 \smallskip
 
-This last statement of the above theorem is significant: what happens if $\det{\tta} = 0$? It seems that $\det{\ttai} = $``$1/0$'', which is undefined. There actually isn't a problem here; it turns out that if $\det{\tta}=0$, then \tta\ is not invertible (hence part 5 of Theorem \ref{thm:determinant_properties}). This allows us to add on to our Invertible Matrix Theorem.
+\mnote{.35}{Proving that $\det(AB)=\det(A)\det(B)$ is most easily done using what are called \textit{elementary matrices}. An elementary matrix \index{elementary matrix}\index{matrix!elementary} is any matrix we can obtain by doing a \textbf{single} row operation to the identity matrix. For example, performing the row operation $R_3-4R_2\to R_3$ on $I_3$ gives us the elementary matrix
+\[
+E = \bbm 1&0&0\\0&1&0\\0&-4&1\ebm.
+\]
+It turns out that multiplying a matrix \textit{on the left} by an elementary matrix is the same as doing the corresponding row operation: if $A$ is any $3\times 3$ matrix, then $EA$ can be obtained from $A$ using the same row operation used to create $E$.
+
+Theorem \ref{thm:determinant_row_operations} then tells us that 
+\[
+\det(EB) = \det(E)\det(B)
+\]
+for any matrix $B$ and \textit{elementary} matrix $E$. The rest boils down to two cases: either $\det(A)=0$, in which case $A$ is not invertible, so neither is $AB$, and thus $\det(AB)=0 = 0\det(B)$, or $\det(A)\neq 0$. In the latter case, $A$ is invertible, and it turns out that any invertible matrix can be written as a product of elementary matrices (these are determined by the row operations used to carry $A$ to the identity matrix). We can then prove that $\det(AB)=\det(A)\det(B)$ by applying Theorem \ref{thm:determinant_row_operations} repeatedly.}
+
+From Theorem \ref{thm:determinant_properties}, we see that $\det(AB)=\det(A)\det(B)$ for any matrices $A$ and $B$. What does this tell us in the case of an invertible matrix? Recall that if $A$ is invertible, then we can determine the inverse matrix $A^{-1}$ such that
+\[
+AA^{-1} = I_n.
+\]
+Now, the identity matrix is triangular, and all of its diagonal entries are equal to 1, so we immediately see that $\det(I_n) = 1$. Thus, taking the determinant of both sides of the above equation, we have
+\[
+\det(AA^{-1}) = \det(A)\det(A^{-1})=1.
+\]
+We have a product of two numbers equal to one, which tells us that neither of these numbers can be zero. (Otherwise, the product would be zero as well.) Thus, if $A$ is invertible, it must be the case that $\det(A)\neq 0$, so a matrix $A$ is invertible if \textit{and only if} $\det(A)\neq 0$.
+
+As an added bonus, we can rearrange the above equation to give us one more property of the determinant:
+
+\smallskip
+
+\theorem{thm:det_and_inverse}{The determinant of an inverse}{
+If $A$ is an invertible matrix, then $\det(A)\neq 0$, and
+\[
+\det(A^{-1}) = \frac{1}{\det(A)}.
+\]}
+
+Combining Theorems \ref{thm:no_inverse_zero_determinant} and \ref{thm:det_and_inverse} allows us to add on to our Invertible Matrix Theorem.
 
 \smallskip
 
@@ -374,7 +438,7 @@ Let \tta\ be an $n\times n$ matrix. The following statements are equivalent.
 
 \begin{list}{(\alph{IMTcount})}{}\usecounter{IMTcount}
 \item \tta\ is invertible. \addtocounter{IMTcount}{\value{IMTcount_temp}}
-\item $\det{\tta}\neq 0$.
+\item $\det(A)\neq 0$.
 \end{list}
 \setcounter{IMTcount_temp}{\value{IMTcount}}
 \addtocounter{IMTcount_temp}{-1}

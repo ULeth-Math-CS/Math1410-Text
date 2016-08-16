@@ -1,10 +1,11 @@
 \section{Using Matrices To Solve Systems of Linear Equations}\label{sec:matrices}
 
 \asyouread{
-\item	What is remarkable about the definition of a matrix?
-\item	Vertical lines of numbers in a matrix are called what?
-\item	In a matrix \tta, the entry $a_{53}$ refers to which entry?
-\item What is an augmented matrix?}
+\item What is the coefficient matrix of a system of linear equations?
+\item What is an augmented matrix?
+\item How do you convert between a linear system and an augmented matrix?}
+
+Matrices were introduced in Chapter \ref{chapter:arithmetic} as a method for organizing information. If we want to be able to solve linear systems with arbitrarily large numbers of variables and equations, and solve them \textit{efficiently}, we're going to need to be organized, so matrices might be just what we need.
 
 In Section \ref{sec:intro} we solved a linear system using familiar techniques. Later, we commented that in the linear equations we formed, the most important information was the coefficients and the constants; the names of the variables really didn't matter. In Example \ref{ex_by_hand} we had the following three equations:
 \begin{align*}
@@ -43,6 +44,8 @@ b&+&g&+&r&=&30\\
  & &2g&+&2r&=&30
 \end{array}.
 \]
+
+\mnote{.3}{\textbf{Note:} when we multiplied the second equation by $-\frac{1}{2}$ in our third step, we were proceeding according to a well-known algorithm (which we will soon explain) that is especially efficient when implemented on a computer. We should point out, however, that since humans tend to be less happy about working with fractions than computers, we might reasonably decide that our third step should be to first add the second equation to the third, so that the $2g$ in the third equation is cancelled by the $-2g$ in the second.}
 
 Let's now do two steps in a row; our goal is to get rid of the $g$'s in the first and third equations. In order to remove the $g$ in the first equation, let's multiply the second equation by $-1$ and add that to the first equation, replacing the first equation with that sum. To remove the $g$ in the third equation, let's multiply the second equation by $-2$ and add that to the third equation, replacing the third equation. Our new system of equations now becomes
 \[
@@ -89,9 +92,9 @@ b&+&g&+&r&=&30\\
 \]
 Notice how even the equal signs are gone; we don't need them, for we know that the last {\em column} contains the coefficients. 
 
-We have seen this sort of creature before! From Definition \ref{def:matrix}, we know that the object we have just created is called a {\em matrix}. We will often want to distinguish matrices with just the coefficients of a system of linear equations (without the constants from the right-hand sides) and matrices that do contain the column of constants, as above. Therefore, when we include the constants, we often refer to the resulting matrix as an \textit{augmented matrix}.\index{augmented matrix}\index{matrix!augmented}
+We have seen this sort of creature before! From Definition \ref{def:matrix}, we know that the object we have just created is called a {\em matrix}. We will often want to distinguish between the \sword{coefficient matrix}\index{matrix ! of coefficients} of a system; that is, the matrix containing the coefficients (the numbers in front of the variables) of a system of linear equations, and the matrix that also includes the column of constants, as above. When we include the constants, we refer to the resulting matrix as an \textit{augmented matrix}.\index{augmented matrix}\index{matrix!augmented}
 
-It is common (but not mandatory) to place a vertical line separating the final column of an augmented matrix (containing the constants) from the other columns (containing the coefficients). One advantage of doing so is that we can quickly recognize that we're dealing with an augmented matrix rather than a matrix of coefficients. For example, the augmented matrix for the system \eqref{eq:before_matrix} would be written as seen below on the right:
+It is common (but not mandatory) to place a vertical line separating the final column of an augmented matrix (containing the constants) from the other columns (containing the coefficients). One advantage of doing so is that we can quickly recognize that we're dealing with an augmented matrix rather than a coefficient matrix. For example, the augmented matrix for the system \eqref{eq:before_matrix} would be written as seen below on the right:
 
 \begin{center}
 \begin{tabular}{cc}
@@ -109,7 +112,7 @@ Without the vertical line & With the vertical line\\
 
 We can use augmented matrices to find solutions to linear equations by using essentially the same steps we used above. Every time we used the word ``equation'' above, substitute the word ``row,'' as we show below. The comments explain how we get from the current set of equations (or matrix) to the one on the next line. 
 
-We can use a shorthand to describe matrix operations; let $R_1$, $R_2$ represent ``row 1'' and ``row 2,'' respectively. We can write ``add row 1 to row 3, and replace row 3 with that sum'' as ``$R_1+R_3\rightarrow R_3$.'' The expression ``$R_1 \leftrightarrow R_2$'' means ``interchange row 1 and row 2.''\\
+We can use a shorthand to describe matrix operations; let $R_1$, $R_2$ represent ``row 1'' and ``row 2,'' respectively. We can write ``add row 1 to row 3, and replace row 3 with that sum'' as ``$R_1+R_3\to R_3$.'' The expression ``$R_1 \leftrightarrow R_2$'' means ``interchange row 1 and row 2.''\\
 
 %\small
 \begin{center}
@@ -118,12 +121,12 @@ $\begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
  &-&2g&+&r&=&0\\
 -b&+&g&+&r&=&0
-\end{array}$ &$\quad\quad$&$\bmx{cccc}1&1&1&30\\ 0&-2&1&0\\-1&1&1&0\emx$ 
+\end{array}$ &$\quad\quad$&$\bam{3}1&1&1&30\\ 0&-2&1&0\\-1&1&1&0\eam$ 
  \\
  \\
  \parbox{120pt}{\centering \small Replace equation 3 with the sum of equations 1 and 3}&& \parbox{120pt}{\centering \small Replace row 3 with the sum of rows 1 and 3.
 
-$(R_1+R_3\rightarrow R_3)$}\\
+$(R_1+R_3\to R_3)$}\\
 \\
 \end{tabular}
 
@@ -132,12 +135,12 @@ $\begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
  &-&2g&+&r&=&0\\
  & &2g&+&2r&=&30
-\end{array}$&$\quad\quad$&$\bmx{cccc}1&1&1&30\\ 0&-2&1&0\\0&2&2&30\emx$ 
+\end{array}$&$\quad\quad$&$\bam{3}1&1&1&30\\ 0&-2&1&0\\0&2&2&30\eam$ 
  \\
  \\
   \parbox{120pt}{\centering \small Multiply equation 2 by $-\frac12$}&& \parbox{120pt}{\centering \small Multiply row 2 by $-\frac12$
  
-$(-\frac12R_2\rightarrow R_2)$}
+$(-\frac12R_2\to R_2)$}
 \end{tabular}
 
 \begin{tabular}{ccc}
@@ -145,7 +148,7 @@ $\begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
  &&g&+&-1/2r&=&0\\
  & &2g&+&2r&=&30
-\end{array}$&$\quad\quad$ &$\bmx{cccc}1&1&1&30\\ 0&1&-\frac12&0\\0&2&2&30\emx$ 
+\end{array}$&$\quad\quad$ &$\bam{3}1&1&1&30\\ 0&1&-\frac12&0\\0&2&2&30\eam$ 
  \\
  \\
  \parbox{120pt}{\centering \small Replace equation 1 with the sum of $(-1)$ times equation 2 plus equation 1; 
@@ -165,7 +168,7 @@ b&+& & &3/2r&=&30\\
  & &g&-&1/2r&=&0\\
  & & & &3r&=&30
 \end{array}$ &$\quad\quad$ &
-$\bmx{cccc}1&0&\frac32&30\\0&1&-\frac12&0\\0&0&3&30\emx$
+$\bam{3}1&0&\frac32&30\\0&1&-\frac12&0\\0&0&3&30\eam$
 \\
 \\
   \parbox{120pt}{\centering \small Multiply equation 3 by $\frac13$}
@@ -183,7 +186,7 @@ b&+& & &3/2r&=&30\\
  & &g&-&1/2r&=&0\\
  & & & &r&=&10
 \end{array}$ &$\quad\quad$ &
-$\bmx{cccc}1&0&\frac32&30\\0&1&-\frac12&0\\0&0&1&10\emx$
+$\bam{3}1&0&\frac32&30\\0&1&-\frac12&0\\0&0&1&10\eam$
 \\
 \\
 \parbox{120pt}{\centering \small Replace equation 2 with the sum of $\frac12$ times equation 3 plus equation 2;
@@ -207,7 +210,7 @@ b& & & & &=&15\\
  & &g& & &=&5\\
  & & & &r&=&10
 \end{array}$ &$\quad\quad$ &
-$\bmx{cccc}1&0&0&15\\0&1&0&5\\0&0&1&10\emx$ 
+$\bam{3}1&0&0&15\\0&1&0&5\\0&0&1&10\eam$ 
  
 \end{tabular}
 \end{center}
@@ -243,9 +246,9 @@ x_1&+&x_2&+&x_3&=&0\\
 -1x_1&+&x_2&-&2x_3&=&2
 \end{array}$
 &$\quad \quad$&
-$\bmx{cccc}
+$\bam{3}
 1&1&1&0\\ 2&2&1&0\\ -1&1&-2&2\\
-\emx$
+\eam$
 \end{tabular}
 \end{center}
 %\\
@@ -275,9 +278,9 @@ x_1&+&x_2&+&x_3&=&0\\
    & &2x_2&-&x_3&=&2
 \end{array}$
 &$\quad \quad$&
-$\bmx{cccc}
+$\bam{3}
 1&1&1&0\\ 0&0&-1&0\\ 0&2&-1&2\\
-\emx$
+\eam$
 \\
 \\
 %\multicolumn{3}{c}{\parbox{320pt}{Notice that the second equation no longer contains $x_2$. We'll exchange the order of the equations so that we can follow the convention of solving for the second variable in the second equation.}}
@@ -305,9 +308,9 @@ x_1&+&x_2&+&x_3&=&0\\
    & &   & &-x_3&=&0
 \end{array}$
 &$\quad \quad$&
-$\bmx{cccc}
+$\bam{3}
 1&1&1&0\\ 0&2&-1&2\\ 0&0&-1&0\\
-\emx$
+\eam$
 \\
 \\
 \parbox{120pt}{\centering \small Multiply equation 2 by $\frac12$}
@@ -323,9 +326,9 @@ x_1&+&x_2&+&x_3&=&0\\
    & &   & &-x_3&=&0
 \end{array}$
 &$\quad \quad$&
-$\bmx{cccc}
+$\bam{3}
 1&1&1&0\\ 0&1&-\frac12&1\\ 0&0&-1&0\\
-\emx$
+\eam$
 \\
 \\
 \parbox{120pt}{\centering \small Multiply equation 3 by $-1$}
@@ -341,9 +344,9 @@ x_1&+&x_2&+&x_3&=&0\\
    & &   & &x_3&=&0
 \end{array}$
 &$\quad \quad$&
-$\bmx{cccc}
+$\bam{3}
 1&1&1&0\\ 0&1&-\frac12&1\\ 0&0&1&0\\
-\emx$
+\eam$
 \end{tabular}
 \end{center}
 
@@ -372,9 +375,9 @@ x_1&+&x_2&&&=&0\\
    & &   & &x_3&=&0
 \end{array}$
 &$\quad \quad$&
-$\bmx{cccc}
+$\bam{3}
 1&1&0&0\\ 0&1&0&1\\ 0&0&1&0\\
-\emx$
+\eam$
 \end{tabular}
 \end{center}
 
@@ -395,9 +398,9 @@ x_1& &   &&&=&-1\\
    & &   & &x_3&=&0
 \end{array}$
 &$\quad \quad$&
-$\bmx{cccc}
+$\bam{3}
 1&0&0&-1\\ 0&1&0&1\\ 0&0&1&0\\
-\emx$
+\eam$
 \end{tabular}
 \end{center}
 

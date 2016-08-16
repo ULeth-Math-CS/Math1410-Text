@@ -1,10 +1,8 @@
-We already looked at the basics of graphing vectors. In this chapter, we'll explore these ideas more fully. One often gains a better understanding of a concept by ``seeing'' it. For instance, one can study the function $f(x)=x^2$ and describe many properties of how the output relates to the input without producing a graph, but the graph can quickly bring meaning and insight to equations and formulae. Not only that, but the study of graphs of functions is in itself a wonderful mathematical world, worthy of exploration.
-
-We've studied the graphing of vectors; in this chapter we'll take this a step further and study some fantastic graphical properties of vectors and matrix arithmetic. We mentioned earlier that these concepts form the basis of computer graphics; in this chapter, we'll see even better how that is true.
-
-\section{Transformations of the Cartesian Plane}\label{sec:geom_3}
+\section{Matrix Transformations}\label{sec:geom_3}
 
 \asyouread{
+\item What do mathematicians do?
+\item T/F: Multiplying a vector by a matrix always changes its length and direction.
 %\item	T/F: Transforming the Cartesian plane through matrix multiplication makes curved lines straight.
 %\item T/F: To understand how the Cartesian plane is affected by multiplication by a matrix, it helps to know how the unit square is affected.
 \item		To understand how the Cartesian plane is affected by multiplication by a matrix, it helps to study how what is affected?
@@ -16,82 +14,161 @@ We've studied the graphing of vectors; in this chapter we'll take this a step fu
 one could say that the sheep was ``sheared.''
 }
 
-We studied in Section \ref{sec:geom_1} how to visualize vectors and how certain matrix arithmetic operations can be graphically represented. We limited our visual understanding of matrix  multiplication to graphing a vector, multiplying it by a matrix, then graphing the resulting vector. In this section we'll explore these multiplication ideas in greater depth. Instead of multiplying individual vectors by a matrix \tta, we'll study what happens when we multiply \textit{every} vector in the Cartesian plans by \tta. (No, we won't do them one by one.)
+We already looked at the basics of graphing vectors, and the arithmetic of multiplying matrices. In this section and the next, we will return to the geometric interpretation of vectors given in Chapter \ref{chapter:vectors}. Our goal in doing so is to obtain a visual understanding of the definition of matrix multiplication given in Section \ref{sec:matrix_multiplication}. Although the algebraic definition of matrix multiplication appears strange at first, we'll see that our definition of matrix multiplication allows us to use matrices to define \sword{functions} that transform one vector into another, just as the functions you're familiar with from high school or Calculus transform one number into another. We can then visualize matrices and matrix multiplication in terms of their effect on vectors.
 
-%\bex{ex_mv_1}{Let \tta\ be a matrix, and \vx, \vy, and \vz\ be as given below.
-%$$\tta = \bmx{cc} 1&4\\2&3\emx,  \quad \vx = \bmx{c} 1\\1\emx, \quad \vy = \bmx{c}-1\\1\emx, \quad \vz = \bmx{c} 3\\-1\emx$$
-%Graph \vx, \vy\ and \vz, as well as \tta\vx, \tta\vy\ and \tta\vz.}
-%{
-%\begin{figure}
-%\begin{center}
-%\begin{tikzpicture}[x={(.6cm,0)},y={(0,.6cm)}, >=latex]
-%
-%\drawxlines{-2.5}{6.5}{-2,...,6};
-%\drawylines{-2.5}{6.5}{-2,...,6};
-%\draw [->] (0,0)--(1,1) node [right ] {\vx};
-%\draw [->] (0,0)--(-1,1) node [above] {\vy};
-%\draw [->] (0,0)--(3,-1) node [below right] {\vz};
-%\draw [->] (0,0)--(5,5) node [above right] {\tta\vx};
-%\draw [->] (0,0)--(3,1) node [right] {\tta\vy};
-%\draw [->] (0,0)--(1,3) node [above] {\tta\vz};
-%
-%\end{tikzpicture}
-%\end{center}
-%\caption{Multiplying vectors by a matrix in Example \ref{ex_mv_1}.}
-%\label{fig:mv_1}
-%\end{figure}
-%
-%It is straightforward to compute: $$\tta\vx = \bmx{c} 5\\5\emx,\quad \tta\vy = \bmx{c} 3\\1\emx, \quad \text{ and } \quad \tta\vz = \bmx{c} 1\\3\emx.$$ The vectors are sketched in Figure \ref{fig:mv_1}
-%}%\eexset
-%
-%There are several things to notice. When each vector is multiplied by \tta, the result is a vector with a different length (in this example, always longer), and in two of the cases (for \vy\ and \vz), the resulting vector points in a different direction. 
-%
-%This isn't surprising. In the previous section we learned about matrix multiplication, which is a strange and seemingly unpredictable operation. Would you expect to see some sort of recognizable pattern appear from multiplying a matrix and a vector?\footnote{This is a rhetorical question; the expected answer is ``No.''} In fact, the surprising thing from the example is that \vx\ and \tta\vx\ point in the same direction! Why does the direction of \vx\ not change after multiplication by \tta? (We'll answer this in Section \ref{sec:eigen} when we learn about something called ``eigenvectors.'')
-%
+Given an $m\times n$ matrix $A$ we can define a function $T$ that takes an $n\times 1$ column vector $\vec x\in \mathbb{R}^n$ as input, and produces an $m\times 1$ column vector $\vec y\in \mathbb{R}^m$ as output, according to the relationship
+\[
+\vec y = T(\vec x) = A\vec x.
+\]
+Such a function is known as a \sword{matrix transformation}\index{matrix transformation}\index{transformation ! matrix}; it is an example of a more general class of functions between vector spaces known as \sword{linear transformations}.
+
+The graphical representation of vectors allows us to visualize matrix transformations (at least, in lower dimensions). This visualization plays a key role in applications such as computer graphics. We'll also see that the desire to define functions via matrix multiplication provides some justification for defining matrix multiplication the way we do.
+
+\subsection*{Matrix - Vector Multiplication}
+To simplify the discussion, and to make it easier for us to picture what's going on, we'll restrict ourselves (for now) to vectors in $\mathbb{R}^2$. We want to visualize the result of multiplying a vector by a matrix. In order to multiply a 2D vector by a matrix and get a 2D vector back, our matrix must be a square, $2\times 2$ matrix.
+
+\mnote{.5}{We can multiply a $3\times 2$ matrix by a 2D vector and get a 3D vector back, and this gives very interesting results. See section \ref{sec:lin_trans}.}
+
+We'll start with an example. Given a matrix \tta\ and several vectors, we'll graph the vectors before and after they've been multiplied by \tta\ and see what we learn.
+
+\medskip
+
+\example{ex_mv_1}{Multiplying a vector by a matrix}{Let \tta\ be a matrix, and \vx, \vy, and \vz\ be vectors as given below.
+\[
+\tta = \bmx{cc} 1&4\\2&3\emx,  \quad \vx = \bmx{c} 1\\1\emx, \quad \vy = \bmx{c}-1\\1\emx, \quad \vz = \bmx{c} 3\\-1\emx
+\]
+Graph \vx, \vy\ and \vz, as well as \tta\vx, \tta\vy\ and \tta\vz.}
+{\begin{myfigure}%[h!]
+\begin{center}
+\begin{tikzpicture}[x={(.6cm,0)},y={(0,.6cm)}, >=latex]
+
+\drawxlines{-2.5}{6.5}{-2,...,6};
+\drawylines{-1.5}{5.5}{-1,...,5};
+\draw [->] (0,0)--(1,1) node [right ] {\vx};
+\draw [->] (0,0)--(-1,1) node [above] {\vy};
+\draw [->] (0,0)--(3,-1) node [below right] {\vz};
+\draw [->] (0,0)--(5,5) node [above right] {\tta\vx};
+\draw [->] (0,0)--(3,1) node [right] {\tta\vy};
+\draw [->] (0,0)--(-1,3) node [above] {\tta\vz};
+
+\end{tikzpicture}
+\end{center}
+\mycaption{Multiplying vectors by a matrix in Example \ref{ex_mv_1}.}
+\label{fig:mv_1}
+\end{myfigure}%
+
+It is straightforward to compute: 
+\[
+\tta\vx = \bmx{c} 5\\5\emx,\quad \tta\vy = \bmx{c} 3\\1\emx, \quad \text{ and } \quad \tta\vz = \bmx{c} -1\\3\emx.
+\]
+The vectors are sketched in Figure \ref{fig:mv_1}
+}
+
+\medskip
+
+There are several things to notice. When each vector is multiplied by \tta, the result is a vector with a different length (in this example, always longer), and in two of the cases (for \vy\ and \vz), the resulting vector points in a different direction. 
+
+This isn't surprising. In the previous section we learned about matrix multiplication, which is a strange and seemingly unpredictable operation. Would you expect to see some sort of immediately recognizable pattern appear from multiplying a matrix and a vector? (This is a rhetorical question; the expected answer is ``No.'') In fact, the surprising thing from the example is that \vx\ and \tta\vx\ point in the same direction! Why does the direction of \vx\ not change after multiplication by \tta? (We'll answer this in Section \ref{sec:eigen} when we learn about something called ``eigenvectors.'')
+
 %One may recall that \tta\ and \vx\ previously appeared in Section \ref{sec:eigen}, where \vx\ is an eigenvector of \tta\ with an \el\ of 5. Therefore this example lets us visualize the significance of \ev s: ``normally,'' when a vector is multiplied by a matrix, its length and direction changes. However, when the vector is an \ev, its direction does not change, only its length\footnote{If the \el\ is 1, then of course, nothing changes. The careful reader will also note that if the $\el <0$, then the resulting vector will point in the opposite direction, meaning the direction \textit{did} change. However, in this case, \vx\ and \tta\vx\ lie on the same line which is still significant}.
-%
-%Different matrices act on vectors in different ways.\footnote{That's one reason we call them ``different.''} How do we set about studying this? We could just create lots of different matrices and lots of different vectors, multiply, then graph, but this would be a lot of work with very little useful result. It would be too hard to find a pattern of behavior in this.\footnote{Remember, that's what mathematicians do. We look for patterns.}
-%
-%Instead, we'll begin by using a technique we've employed often in the past. We have a ``new'' operation; let's explore how it behaves with ``old'' operations. Specifically, we know how to sketch vector addition. What happens when we throw matrix multiplication into the mix? Let's try an example.\\
-%
-%\bex{ex_mv_2}{Let \tta\ be a matrix and \vx\ and \vy\ be vectors as given below. $$\tta = \bmx{cc} 1 & 1\\1&2\emx, \quad \vx = \bmx{c} 2\\1\emx, \quad \vy = \bmx{c} -1\\1\emx$$
-%Sketch $\vx+\vy$, \tta\vx, \tta\vy, and $\tta(\vx+\vy)$. }
-%{
-%It is pretty straightforward to compute: 
-%$$\vx+\vy = \bmx{c} 1\\2\emx;\quad \tta\vx = \bmx{c}3\\4\emx; \quad \tta\vy = \bmx{c} 0\\1\emx,\quad \tta(\vx+\vy) = \bmx{c} 3\\5\emx.$$
-%
-%In Figure \ref{fig:mv_2}, we have graphed the above vectors and have included dashed gray vectors to highlight the additive nature of $\vx+\vy$ and $\tta(\vx+\vy)$. Does anything strike you as interesting?
-%
-%\begin{figure}
-%\begin{center}
-%\begin{tikzpicture}[x={(1cm,0)},y={(0,1cm)}, >=latex]
-%\drawxlines{-1}{4}{0,...,3};
-%\drawylines{-1}{5}{0,...,4};
-%\draw [->] (0,0)--(2,1) node [right] {\vx};
-%\draw [->] (0,0)--(-1,1) node [left ] {\vy};
-%\draw [->,gray,dashed] (2,1) -- (1,2);
-%\draw [->] (0,0)--(1,2) node [above] {$\vx+\vy$};
-%\draw [->] (0,0)--(3,4) node [above right] {\tta\vx};
-%\draw [->] (0,0)--(0,1) node [above left] {\tta\vy};
-%\draw [->,gray,dashed] (3,4) -- (3,5);
-%\draw [->] (0,0)--(3,5) node [above] {$\tta(\vx+\vy)$};
-%\end{tikzpicture}
-%\end{center}
-%\caption{Vector addition and matrix multiplication in Example \ref{ex_mv_2}.}
-%\label{fig:mv_2}
-%\end{figure}
-%
-%Let's not focus on things which don't matter right now: let's not focus on how long certain vectors became, nor necessarily how their direction changed. Rather, think about how matrix multiplication interacted with the vector addition.
-%
-%In some sense, we started with three vectors, \vx, \vy, and $\vx+\vy$. This last vector is special; it is the sum of the previous two. Now, multiply all three by \tta. What happens? We get three new vectors, but the significant thing is this: the last vector is still the sum of the previous two!
-%
-%Of course, we knew this already: we already knew that $\tta\vx + \tta\vy = \tta(\vx+\vy)$, for this is just the Distributive Property. However, now we get to see this graphically.}\\ %\eexset
 
-%Example \ref{ex_mv_2} has very significant implications. We usually think of the Cartesian plane as a set of points; we can adjust this thought just slightly and think of it as a set of vectors that point to each of these points. What happens to the Cartesian plane if we multiply \textit{every vector} in the plane by the same matrix \tta? 
+Different matrices act on vectors in different ways. (That's one reason we call them ``different.'') Some always increase the length of a vector through  multiplication, others always decrease the length, others increase the length of some vectors and decrease the length of others, and others still don't change the length at all. A similar statement can be made about how matrices affect the direction of vectors through multiplication: some change every vector's direction, some change ``most'' vector's direction but leave some the same, and others still don't change the direction of any vector.
 
-Because of the Distributive Property, demonstrated way back in Example \ref{ex_mv_2}, we can say that the Cartesian plane will be \textit{transformed} in a very nice, predictable way. Straight lines will be transformed into other straight lines (and they won't become curvy, or jagged, or broken). Curved lines will be transformed into other curved lines (perhaps the curve will become ``straight,'' but it won't become jagged or broken).
+How do we set about studying how matrix multiplication affects vectors? We could just create lots of different matrices and lots of different vectors, multiply, then graph, but this would be a lot of work with very little useful result. It would be too hard to find a pattern of behaviour in this. (Remember, that's what mathematicians do. We look for patterns.)
 
-One way of studying how the whole Cartesian plane is affected by multiplication by a matrix \tta\ is to study how the \textit{unit square} is affected. The unit square is the square with corners at the points $(0,0)$, $(1,0)$, $(1,1)$, and $(0,1)$. Each corner can be represented by the vector that points to it; multiply each of these vectors by \tta\ and we can get an idea of how \tta\ affects the whole Cartesian plane. 
+Instead, we'll begin by using a technique we've employed often in the past. We have a ``new'' operation; let's explore how it behaves with ``old'' operations. Specifically, we know how to sketch vector addition. What happens when we throw matrix multiplication into the mix? Let's try an example.
+
+\medskip
+
+\example{ex_mv_2}{Combining addition and matrix multiplication}{Let \tta\ be a matrix and \vx\ and \vy\ be vectors as given below. 
+\[
+\tta = \bmx{cc} 1 & 1\\1&2\emx, \quad \vx = \bmx{c} 2\\1\emx, \quad \vy = \bmx{c} -1\\1\emx
+\]
+Sketch $\vx+\vy$, \tta\vx, \tta\vy, and $\tta(\vx+\vy)$. }
+{It is pretty straightforward to compute: 
+\[
+\vx+\vy = \bmx{c} 1\\2\emx;\quad \tta\vx = \bmx{c}3\\4\emx; \quad \tta\vy = \bmx{c} 0\\1\emx,\quad \tta(\vx+\vy) = \bmx{c} 3\\5\emx.
+\]
+
+In Figure \ref{fig:mv_2}, we have graphed the above vectors and have included dashed gray vectors to highlight the additive nature of $\vx+\vy$ and $\tta(\vx+\vy)$. Does anything strike you as interesting?
+
+\begin{myfigure}%[h!]
+\begin{center}
+\begin{tikzpicture}[x={(1cm,0)},y={(0,1cm)}, >=latex]
+\drawxlines{-1}{4}{0,...,3};
+\drawylines{-1}{5}{0,...,4};
+\draw [->] (0,0)--(2,1) node [right] {\vx};
+\draw [->] (0,0)--(-1,1) node [left ] {\vy};
+\draw [->,gray,dashed] (2,1) -- (1,2);
+\draw [->] (0,0)--(1,2) node [above] {$\vx+\vy$};
+\draw [->] (0,0)--(3,4) node [above right] {\tta\vx};
+\draw [->] (0,0)--(0,1) node [above left] {\tta\vy};
+\draw [->,gray,dashed] (3,4) -- (3,5);
+\draw [->] (0,0)--(3,5) node [above] {$\tta(\vx+\vy)$};
+\end{tikzpicture}
+\end{center}
+\mycaption{Vector addition and matrix multiplication in Example \ref{ex_mv_2}.}
+\label{fig:mv_2}
+\end{myfigure}%
+
+Let's not focus on things which don't matter right now: let's not focus on how long certain vectors became, nor necessarily how their direction changed. Rather, think about how matrix multiplication interacted with the vector addition.
+
+In some sense, we started with three vectors, \vx, \vy, and $\vx+\vy$. This last vector is special; it is the sum of the previous two. Now, multiply all three by \tta. What happens? We get three new vectors, but the significant thing is this: the last vector is still the sum of the previous two! (We emphasize this by drawing dotted vectors to represent part of the Parallelogram Law.)
+
+Of course, we knew this already: we already knew that $\tta\vx + \tta\vy = \tta(\vx+\vy)$, for this is just the Distributive Property of matrix multiplication given in Theorem \ref{thm:matrix_multiplication}. However, now we get to see this graphically.}
+
+\medskip
+
+Let's do one more example.
+
+\medskip
+
+
+\example{ex_mv_23}{Sketching the effect of matrix multiplicaiton}{Let \tta, \vx, \vy, and \vz\ be as given below.
+\[
+\tta = \bmx{cc} 1&-1\\1&-1\emx,  \quad \vx = \bmx{c} 1\\1\emx, \quad \vy = \bmx{c}-1\\1\emx, \quad \vz = \bmx{c} 4\\1\emx
+\]
+Graph \vx, \vy\ and \vz, as well as \tta\vx, \tta\vy\ and \tta\vz.}
+{\begin{myfigure}%[h!]
+\begin{center}
+\begin{tikzpicture}[x={(.6cm,0)},y={(0,.6cm)}, >=latex]
+
+\drawxlines{-2.5}{3.5}{-2,...,3};
+\drawylines{-2.5}{3.5}{-2,...,3};
+\draw [->] (0,0)--(1,1) node [right ] {\vx};
+\draw [->] (0,0)--(-1,1) node [above] {\vy};
+\draw [->] (0,0)--(4,1) node [above] {\vz};
+\draw (0,0) node [below right] {\tta\vx};
+\draw [->] (0,0)--(-2,-2) node [below left] {\tta\vy};
+\draw [->] (0,0)--(3,3) node [above] {\tta\vz};
+
+\end{tikzpicture}
+\end{center}
+\mycaption{Multiplying vectors by a matrix in Example \ref{ex_mv_23}.}
+\label{fig:mv_23}
+\end{myfigure}%
+
+It is straightforward to compute: 
+\[
+\tta\vx = \bmx{c} 0\\0\emx,\quad \tta\vy = \bmx{c} -2\\-2\emx, \quad \text{ and } \quad \tta\vz = \bmx{c} 3\\3\emx.
+\]
+
+The vectors are sketched in Figure \ref{fig:mv_23}.
+
+These results are interesting. While we won't explore them in great detail here, notice how \vx\ got sent to the zero vector. Notice also that \tta\vx, \tta\vy\ and \tta\vz\ are all in a line (as well as \vx!). Why is that? Are \vx, \vy\ and \vz\ just special vectors, or would any other vector get sent to the same line when multiplied by \tta? (Don't just sit there, try it out!)
+}
+
+\medskip
+
+\subsection*{Transformations of the Cartesian Plane}
+
+We studied in Chapter \ref{chapter:vectors} how to visualize vectors and how the matrix arithmetic operations of addition and scalar multiplication can be graphically represented for vectors. In the discussion above, we limited our visual understanding of matrix  multiplication to graphing a vector, multiplying it by a matrix, then graphing the resulting vector. In rest of this section we'll explore these multiplication ideas in greater depth. Instead of multiplying individual vectors by a matrix \tta, we'll study what happens when we multiply \textit{every} vector in the Cartesian plans by \tta. (No, we won't do them one by one.)
+
+Because of the Distributive Property, as illustrated in Example \ref{ex_mv_2}, we know that the Cartesian plane will be \textit{transformed} in a very nice, predictable way. Straight lines will be transformed into other straight lines (and they won't become curvy, or jagged, or broken). Curved lines will be transformed into other curved lines (perhaps the curve will become ``straight,'' but it won't become jagged or broken).
+
+Example \ref{ex_mv_2} has very significant implications. We usually think of the Cartesian plane as a set of points; we can adjust this thought just slightly and think of it as a set of vectors that point to each of these points. What happens to the Cartesian plane if we multiply \textit{every vector} in the plane by the same matrix \tta? 
+
+Checking every single vector in the plane isn't practical, so we have to look for other ways to visualize the effects of matrix multiplication. One way of studying how the whole Cartesian plane is affected by multiplication by a matrix \tta\ is to study how the \textit{unit square} is affected. The unit square is the square with corners at the points $(0,0)$, $(1,0)$, $(1,1)$, and $(0,1)$. Each corner can be represented by the vector that points to it; multiply each of these vectors by \tta\ and we can get an idea of how \tta\ affects the whole Cartesian plane. 
 
 Let's try an example.
 
@@ -230,12 +307,12 @@ In Figure \ref{fig:mv_4} the unit square is again drawn along with its transform
 \label{fig:mv_4}
 \end{myfigure}
 
-Make note of how the square moved. It did not simply ``slide'' to the left; (mathematically, that is called a \textit{translation}) nor did it ``flip'' across the $y$ axis. Rather, it was \textit{rotated} counterclockwise about the origin $90^\circ$. In a rotation, the shape of an object does not change; in our example, the square remained a square of the same size.
+Make note of how the square moved. It did not simply ``slide'' to the left; (mathematically, that is called a \sword{translation}) nor did it ``flip'' across the $y$ axis. Rather, it was \sword{rotated} counterclockwise about the origin $90^\circ$. In a rotation, the shape of an object does not change; in our example, the square remained a square of the same size.
 }
 
 \medskip
 
-We have broached the topic of how the Cartesian plane can be transformed via multiplication by a $2\times 2$ matrix \tta. We have seen two examples so far, and our intuition as to how the plane is changed has been informed only by seeing how the unit square changes. Let's explore this further by investigating two questions:
+We have broached the topic of how the Cartesian plane can be transformed via multiplication by a $2\times 2$ matrix \tta. We have seen a few examples so far, and our intuition as to how the plane is changed has been informed only by seeing how the unit square changes. Let's explore this further by investigating two questions:
 	\begin{enumerate}
 	\item		Suppose we want to transform the Cartesian plane in a known way (for instance, we may want to rotate the plane counterclockwise $180^\circ$). How do we find the matrix (if one even exists) which performs this transformation? 
 	\item		How does knowing how the unit square is transformed really help in understanding how the entire plane is transformed?
@@ -249,8 +326,8 @@ If you are just reading on, and haven't actually gone back and looked at the exa
 \begin{enumerate}
 \item		The zero vector (\zero, the ``black'' corner) never moved. That makes sense, though; $\tta\zero = \zero$. 
 \item		The ``square'' corner, i.e., the corner corresponding to the vector $\bmx{c}1\\0\emx$, is always transformed to the vector in the first column of \tta!
-\item		Likewise, the ``triangular'' corner, i.e., the corner corresponding to the vector $\bmx{c}0\\1\emx$, is always transformed to the vector in the second column of \tta!\footnote{Although this is less of a surprise, given the result of the previous point.}
-\item		The ``white dot'' corner is always transformed to the \textit{sum} of the two column vectors of \tta.\footnote{This observation is a bit more obscure than the first three.  It follows from the fact that this corner of the unit square is the ``sum'' of the other two nonzero corners.}
+\item		Likewise, the ``triangular'' corner, i.e., the corner corresponding to the vector $\bmx{c}0\\1\emx$, is always transformed to the vector in the second column of \tta! (This is less of a surprise, given the result of the previous point.)
+\item		The ``white dot'' corner is always transformed to the \textit{sum} of the two column vectors of \tta. (This observation is a bit more obscure than the first three.  It follows from the fact that this corner of the unit square is the ``sum'' of the other two nonzero corners.)
 \end{enumerate}
 
 Let's now take the time to understand these four points. The first point should be clear; \zero\ will always be transformed to \zero\ via matrix multiplication. (Hence the hint in the middle of Example \ref{ex_mv_3}, where we are told that we can ignore entering in the column of zeros in the matrix \ttb.)
@@ -271,7 +348,7 @@ What are \tta\veone\ and \tta\vetwo?
 					&= \bmx{c}b\\d\emx
 \end{align*}
 
-So by mere mechanics of matrix multiplication, the square corner \veone\ is transformed to the first column of \tta, and the triangular corner \vetwo\ is transformed to the second column of \tta. A similar argument demonstrates why the white dot corner is transformed to the sum of the columns of \tta.\footnote{Another way of looking at all of this is to consider what $\tta\cdot\tti$ is: of course, it is just \tta. What are the columns of \tti? Just \veone\ and \vetwo.}
+So by mere mechanics of matrix multiplication, the square corner \veone\ is transformed to the first column of \tta, and the triangular corner \vetwo\ is transformed to the second column of \tta. A similar argument demonstrates why the white dot corner is transformed to the sum of the columns of \tta. (Another way of looking at all of this is to consider what $\tta\cdot\tti$ is: of course, it is just \tta. What are the columns of \tti? Just \veone\ and \vetwo.)
 
 Revisit now the question ``How do we find the matrix that performs a given transformation on the Cartesian plane?'' The answer follows from what we just did. Think about the given transformation and how it would transform the corners of the unit square. Make the first column of \tta\ the vector where \veone\ goes, and make the second column of \tta\ the vector where \vetwo\ goes.
 
@@ -335,7 +412,7 @@ Consider Figure \ref{fig:trans} where the unit square (with vertices marked with
 
 There are two ways to consider the solution to this question. First, we know now how to compute the transformation matrix; the new position of \veone\ is the first column of \tta, and the new position of \vetwo\ is the second column of \tta. Therefore, by looking at the figure, we can deduce that 
 \[
-\tta = \bmx{cc} 1 & -1\\ 1&2\emx.\footnote{At least, \tta\ is close to that. The square corner could actually be at the point $(1.01,.99)$.}
+\tta = \bmx{cc} 1 & -1\\ 1&2\emx.
 \]
 To find where the point $(2,3)$ is sent, simply multiply 
 \[
@@ -425,13 +502,13 @@ Figure \ref{fig:transf_2_2} shows the effects of the transformation on another s
 
 \medskip
 
-Right now we are focusing on transforming the Cartesian plane -- we are making 2D transformations. Knowing how to do this provides a foundation for transforming 3D space,\footnote{Actually, it provides a foundation for doing it in 4D, 5D, $\ldots$, 17D, etc. Those are just harder to visualize.} which, among other things, is very important when producing 3D computer graphics. Basic shapes can be drawn and then rotated, stretched, and/or moved to other regions of space. This also allows for things like ``moving the camera view.'' 
+Right now we are focusing on transforming the Cartesian plane -- we are making 2D transformations. Knowing how to do this provides a foundation for transforming 3D space, which, among other things, is very important when producing 3D computer graphics. Basic shapes can be drawn and then rotated, stretched, and/or moved to other regions of space. This also allows for things like ``moving the camera view.'' Of course, algebraically, there is nothing stopping us from working with transformations of vectors in $\mathbb{R}^n$ for \textit{any} value of $n$. The limitation to two and three dimensions is strictly one of visualization.
 
 What kinds of transformations are possible? We have already seen some of the things that are possible: rotations, stretches, and flips. We have also mentioned some things that are not possible. For instance, we stated that straight lines always get transformed to straight lines. Therefore, we cannot transform the unit square into a circle using a matrix.
 
 Let's look at some common transformations of the Cartesian plane and the matrices that perform these operations. In the following figures, a transformation matrix will be given alongside a picture of the transformed unit square. (The original unit square is drawn lightly as well to serve as a reference.)\\
 
-%\pagebreak
+\pagebreak
 
 \noindent \large \textsf{\textbf{ 2D Matrix Transformations}} \normalsize\\
 
@@ -700,7 +777,9 @@ After that, we want to rotate everything clockwise by $30^\circ$. To do this, we
 \[
 \tta_2 = \bmx{cc} \cos 30^\circ & -\sin 30^\circ\\ \sin 30^\circ & \cos 30^\circ \emx = \bmx{cc} \sqrt{3}/2 & -1/2 \\ 1/2 & \sqrt{3}/2\emx.
 \]
-In order to do both of these operations, in order, we multiply $\tta_2\tta_1$.\footnote{The reader might ask, ``Is it important to do multiply these in that order? Could we have multiplied $\tta_1\tta_2$ instead?'' Our answer starts with ``Is matrix multiplication commutative?'' The answer to our question is ``No,'' so the answers to the reader's questions are ``Yes'' and ``No,'' respectively.} 
+In order to do both of these operations, in order, we multiply $\tta_2\tta_1$. 
+
+\mnote{.5}{\textbf{Note:} recall from Section \ref{sec:matrix_multiplication} that matrix multiplication is \textbf{not} commutative. Since $A_1A_2\neq A_2A_1$ in general, we should expect that the transformation $A_2(A_1\vec x) = (A_2A_1)\vec x$ is not the same as the transformation $A_1(A_2\vec x) = (A_1A_2)\vec x$. Interpreted as transformations of the plane, this makes sense visually: for example, in most cases, a reflection followed by a rotation will not produce the same result as performing the rotation first, followed by the reflection. The reader is encouraged to experiment with a few examples to see what happens when the order is reversed. } 
 
 %\drawexampleline{ex_transf_3}
 
@@ -766,10 +845,9 @@ Most readers are not able to visualize exactly what the given list of operations
 
 \medskip
 
-Once we know what matrices perform the basic transformations,\footnote{or know where to find them} performing complex transformations on the Cartesian plane really isn't that $\ldots$ complex. It boils down to multiplying by a series of matrices. \\
+Once we know what matrices perform the basic transformations, (or know where to find them) performing complex transformations on the Cartesian plane really isn't that $\ldots$ complex. It boils down to multiplying by a series of matrices. 
 
-We've shown many examples of transformations that we can do, and we've mentioned just a few that we can't -- for instance, we can't turn a square into a circle. Why not? Why is it that straight lines get sent to straight lines? We spent a lot of time within this text looking at invertible matrices; what connections, if any,\footnote{By now, the reader should expect connections to exist.} are there between invertible matrices and their transformations on the Cartesian plane?
-
+We've shown many examples of transformations that we can do, and we've mentioned just a few that we can't -- for instance, we can't turn a square into a circle. Why not? Why is it that straight lines get sent to straight lines? 
 All these questions require us to think like mathematicians -- we are being asked to study the \textit{properties} of an object we just learned about and their connections to things we've already learned. We'll do all this (and more!) in the following section.\\
 
 %\clearpage

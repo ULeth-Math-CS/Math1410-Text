@@ -25,7 +25,7 @@ mean? Before we can do anything, we need to actually define what a matrix is! On
 \item T/F: To multiply a matrix by 2 means to multiply each entry in the matrix by 2.
 }
 
-As mentioned above, a \textit{matrix} is a construction that allows us to organize information in a tabular form. For example, we may be interested in the following (made up) data involving crop yields on several Southern Alberta farms, given in tabular form:
+As mentioned above, a \sword{matrix} is a construction that allows us to organize information in a tabular form. For example, we may be interested in the following (made up) data involving crop yields on several Southern Alberta farms, given in tabular form:
 
 \noindent\begin{minipage}{\textwidth}
 \begin{center}
@@ -78,7 +78,7 @@ That is, $a_{32}$ means ``the number in the third row and second column.'' To sa
 
 \smallskip
 
-Two special types of matrix are worth noting: those with a single row or column. Such matrices are known as \textit{vectors}.
+Two special types of matrix are worth noting: those with a single row or column. Such matrices are known as \sword{vectors}.
 
 \smallskip
 
@@ -120,7 +120,7 @@ This leads to two questions. First, how do we define matrix addition in order to
 \smallskip
 
 \definition{def:matrix_equality}{Matrix Equality}{
-\index{matrix!equality} Two $m\times n$ matrices \tta\ and \ttb\ are \textit{equal} if their corresponding entries are equal.} 
+\index{matrix!equality} Two $m\times n$ matrices \tta\ and \ttb\ are \sword{equal} if their corresponding entries are equal.} 
 
 \smallskip
 
@@ -140,14 +140,14 @@ So to add the two matrices, we added their corresponding entries. This is exactl
 \smallskip
 
 \definition{def:addition}{Matrix Addition}{\index{matrix!addition}
-Let $A=[a_{ij}]$ and $B=[b_{ij}]$ be $m\times n$ matrices. The \textit{sum} of \tta\ and \ttb, denoted $\tta+\ttb$, is 
+Let $A=[a_{ij}]$ and $B=[b_{ij}]$ be $m\times n$ matrices. The \sword{sum} of \tta\ and \ttb, denoted $\tta+\ttb$, is 
 \[
 \bmx{cccc} a_{11}+b_{11}&a_{12}+b_{12}&\cdots&a_{1n}+b_{1n}\\ a_{21}+b_{21}&a_{22}+b_{22}&\cdots&a_{2n}+b_{2n}\\\vdots&\vdots&\ddots&\vdots\\ a_{m1}+b_{m1}&a_{m2}+b_{m2}&\cdots&a_{mn}+b_{mn}\emx.
 \]}
 
 \smallskip
 
-For another example, suppose we wanted to know the total production for each farm in 2014, assuming that our matrices represent all of the crops each farm produces. This would be obtained by simply calculating the total for each row in the matrix \tta\. Another way to accomplish the same task is as follows: let
+For another example, suppose we wanted to know the total production for each farm in 2014, assuming that our matrices represent all of the crops each farm produces. This would be obtained by simply calculating the total for each row in the matrix $A$. Another way to accomplish the same task is as follows: let
 \[
 C_1 = \bbm 48\\0\\34\ebm, C_2 = \bbm 18\\0\\203\ebm, C_3 = \bbm 92\\73\\0\ebm, C_4 = \bbm 0\\152\\88\ebm
 \]
@@ -163,23 +163,22 @@ Recall from Chapter \ref{chapter:vectors} that we defined the multiplication of 
 t\vec{v} = t\langle a, b, c\rangle = \langle ta, tb, tc\rangle.
 \]
 
-\mnote{.6}{\textbf{Note:}
-From this point onwards, we dispense with this notation in favour of row and column vectors. For the remainder of the book, when we use the term ``vector'', we will almost always be referring to a column vector.
+\mnote{.25}{\textbf{Note:}
+From this point onwards, we dispense with the angle bracket notation for vectors in favour of row and column vectors. For the remainder of the book, when we use the term ``vector'', we will almost always be referring to a column vector.
 We'll see in Sections \ref{sec:matrix_multiplication} and \ref{sec:geom_3} that writing vectors as column vectors allows us to define \textit{transformations} of vectors in terms of matrix multiplication.}
 
 It stands to reason that scalar multiplication should be defined in exactly the same way for row and column vectors; after all, in most cases these are just different ways of writing down the same mathematical object. Thus, in order to multiply a row or column vector by a scalar, we should multiply each entry in the vector by that scalar. From here, it's not too much of a stretch to conclude that the same definition is reasonable for matrices in general.
 
-\mnote{.4}{\textbf{Note:} In Linear Algebra, a \sword{scalar}\index{scalar} is simply a number. For most of this text, the scalars we consider are real numbers, although one can also use complex numbers as scalars. (Complex numbers will be introduced in Chapter \ref{chapter:complex}.)  As we saw in Chapter \ref{chapter:vectors}, multiplying a vector by a scalar \textit{scales} the length of that vector.}
-
-
 
 \definition{def:scalar_multiplication}{Scalar Multiplication}{\index{matrix!scalar multiplication}
-Let $\tta = [a_[ij}]$ be an $m\times n$ matrix and let $k$ be a scalar. The \textit{scalar multiplication} \tta\ by $k$, denoted $k\tta$, is defined by
+Let $\tta = [a_{ij}]$ be an $m\times n$ matrix and let $k$ be a scalar. The \sword{scalar multiplication} \tta\ by $k$, denoted $k\tta$, is defined by
 \[
 \bmx{cccc}ka_{11}&ka_{12}&\cdots&ka_{1n}\\ka_{21}&ka_{22}&\cdots&ka_{2n}\\\vdots&\vdots&\ddots&\vdots\\ka_{m1}&ka_{m2}&\cdots&ka_{mn}\emx.
 \]}
 
 \smallskip
+
+\mnote{.75}{\textbf{Note:} In Linear Algebra, a \sword{scalar}\index{scalar} is simply a number. For most of this text, the scalars we consider are real numbers, although one can also use complex numbers as scalars. (Complex numbers will be introduced in Chapter \ref{chapter:complex}.)  As we saw in Chapter \ref{chapter:vectors}, multiplying a vector by a scalar \textit{scales} the length of that vector.}
 
 Referring one last time to our farming data, we could imagine that a fertilizer company is advertising a new product they claim will increase crop yields by 30\%. Increasing the yield of each crop by 30\% amounts to multiplying each of the entries in the matrices $A$ or $B$ by a factor of 1.3; according to Definition \ref{def:scalar_multiplication}, this is the same as forming the scalar multiples $1.3\tta$ and $1.3\ttb$.
 
@@ -224,36 +223,48 @@ It is time to forget our farm data and move into some abstract computational exa
 \tta = \bmx{ccc}1&2&3\\-1&2&1\\5&5&5\emx,\quad \ttb = \bmx{ccc}2&4&6\\1&2&2\\-1&0&4\emx,\quad \ttc = \bmx{ccc} 1&2&3\\9&8&7\emx.
 \]
 Simplify the following matrix expressions.
-\begin{center}
-\begin{minipage}{80pt}\begin{enumerate}
-	\item		$\tta+\ttb$
-	\item		$\ttb+\tta$
-\end{enumerate}\end{minipage}
-\begin{minipage}{80pt}
-\begin{enumerate}\addtocounter{enumi}{2}
-	\item		$\tta-\ttb$
-	\item		$\tta + \ttc$
-\end{enumerate}\end{minipage}
-\begin{minipage}{80pt}
-\begin{enumerate}\addtocounter{enumi}{4}
+\begin{multicols}{3}
+\begin{enumerate}
+	\item	$\tta+\ttb$
+	\item	$\ttb+\tta$
+	\item	$\tta-\ttb$
+	\item	$\tta + \ttc$
 	\item	$-3\tta +2\ttb$
 	\item	$\tta -\tta$
-\end{enumerate}\end{minipage}
-\begin{minipage}{80pt}
-\begin{enumerate}\addtocounter{enumi}{6}
 	\item	$5\tta + 5\ttb$
 	\item	$5(\tta+\ttb)$
-	\end{enumerate}\end{minipage}
-	\end{center}}
+\end{enumerate}
+\end{multicols}}
 {\begin{enumerate}
-	\item		$\tta + \ttb = \bmx{ccc}3&6&9\\0&4&3\\4&5&9\emx$.
-	\item		$\ttb + \tta = \bmx{ccc}3&6&9\\0&4&3\\4&5&9\emx$.
-	\item		$\tta - \ttb = \bmx{ccc}-1&-2&-3\\-2&0&-1\\6&5&1\emx$.
+	\item	Adding the corresponding entries of $A$ and $B$, we have
+	\[
+	\tta + \ttb =
+	\bmx{ccc}1+2&2+4&3+6\\-1+1&2+2&1+2\\5-1&5+0&5+4\emx = \bmx{ccc}3&6&9\\0&4&3\\4&5&9\emx.
+	\]
+	\item	To compute $B+A$, we again add the corresponding entries, but in the opposite order:
+	\[
+	\ttb + \tta = \bmx{ccc}2+14+2&6+3\\1-1&2+2&2+1\\-1+5&0+5&4+5\emx = \bmx{ccc}3&6&9\\0&4&3\\4&5&9\emx.
+	\]
+	\item  In this case, we have to subtract the entries of $B$ from those of $A$. This gives us
+	\[
+	\tta - \ttb = \bmx{ccc}-1&-2&-3\\-2&0&-1\\6&5&1\emx.
+	\]
 	\item		$\tta + \ttc$ is not defined. If we look at our definition of matrix addition, we see that the two matrices need to be the same size. Since \tta\ and \ttc\ have different dimensions, we don't even try to create something as an addition; we simply say that the sum is not defined.
-	\item		$-3\tta + 2\ttb = \bmx{ccc}1&2&3\\5&-2&1\\-17&-15&-7\emx$.
-	\item		$\tta - \tta = \bmx{ccc}0&0&0\\0&0&0\\0&0&0\emx$.
-	\item		Strictly speaking, this is $\bmx{ccc}5&10&15\\-5&10&5\\25&25&25\emx +\bmx{ccc}10&20&30\\5&10&10\\-5&0&20\emx = \bmx{ccc}15&30&45\\0&20&15\\20&25&45\emx$.
-	\item		Strictly speaking, this is 
+	\item	To compute this linear combination we first carry out the scalar multiplication, followed by the addition:
+	\begin{align*}
+	-3\tta + 2\ttb & = -3\bmx{ccc}1&2&3\\-1&2&1\\5&5&5\emx + 2\bmx{ccc}2&4&6\\1&2&2\\-1&0&4\emx\\
+	& = \bmx{ccc}-3&-6&-9\\3&-6&-3\\-15&-15&-15\emx + \bmx{ccc}4&8&12\\2&4&4\\-2&0&8\emx\\
+	&= \bmx{ccc}1&2&3\\5&-2&1\\-17&-15&-7\emx.
+	\end{align*}
+	\item	Subtracting each entry of $A$ from itself, we get 
+	\[
+	\tta - \tta = \bmx{ccc}0&0&0\\0&0&0\\0&0&0\emx.
+	\]
+	\item	Carrying out the scalar multiplication followed by the addition, we find
+	\[
+	5A+5B = \bmx{ccc}5&10&15\\-5&10&5\\25&25&25\emx +\bmx{ccc}10&20&30\\5&10&10\\-5&0&20\emx = \bmx{ccc}15&30&45\\0&20&15\\20&25&45\emx.
+	\]
+	\item	In this case, we first perform the addition, followed by the scalar multiplication. We obtain:
 \begin{align*}
 5\left(\bmx{ccc}1&2&3\\-1&2&1\\5&5&5\emx + \bmx{ccc}2&4&6\\1&2&2\\-1&0&4\emx\right) &= 5\cdot\bmx{ccc}3&6&9\\0&4&3\\4&5&9\emx  \\
                    &= \bmx{ccc}15&30&45\\0&20&15\\20&25&45\emx.
@@ -274,7 +285,7 @@ It seems like this should be a special matrix; after all, every entry is 0 and 0
 
 In fact, this is a special matrix. We define \tto, which we read as ``the zero matrix,'' to be the matrix of all zeros. We should be careful; this previous ``definition'' is a bit ambiguous, for we have not stated what size the zero matrix should be. Is $\bmx{cc}0&0\\0&0\\ \emx$ the zero matrix? How about $\bmx{cc} 0&0\emx$?
 
-\mnote{.6}{We use the bold face to distinguish the zero matrix, \tto, from the number zero, 0. }
+\mnote{.3}{We use the bold face to distinguish the zero matrix, \tto, from the number zero, 0. }
 
 Let's not get bogged down in semantics. If we ever see \tto\ in an expression, we will usually know right away what size \tto\ should be; it will be the size that allows the expression to make sense. If \tta\ is a $3\times 5$ matrix, and we write $\tta + \tto$, we'll simply assume that \tto\ is also a $3\times 5$ matrix. If we are ever in doubt, we can add a subscript; for instance, $\tto_{2\times 7}$ is the $2\times7$ matrix of all zeros.
 
@@ -283,7 +294,7 @@ Since the zero matrix is an important concept, we give it its own definition box
 \smallskip
 
 \definition{def:zero_matrix}{The Zero Matrix}{
-\index{zero matrix}\index{matrix!the zero matrix}The $m\times n$ matrix of all zeros, denoted $\tto_{m\times n}$, is the \textit{zero matrix}.\\
+\index{zero matrix}\index{matrix!the zero matrix}The $m\times n$ matrix of all zeros, denoted $\tto_{m\times n}$, is the \sword{zero matrix}.\\
 
 When the dimensions of the zero matrix are clear from the context, the subscript is generally omitted.}
 
@@ -316,7 +327,7 @@ It's important to understand that since matrix addition and scalar multiplicatio
 A+B & = [a_{ij}]+[b_{ij}]\\
 & = [a_{ij}+b_{ij}] \tag*{by Definition \ref{def:addition}}\\
 & = [b_{ij}+a_{ij}] \tag*{since addition of real numbers commutes}\\
-& = [b_{ij}]+[a_{ij}] \tag*{by Definition \ref{def:addition}\\
+& = [b_{ij}]+[a_{ij}] \tag*{by Definition \ref{def:addition}}\\
 & = B+A.
 \end{align*}
 Similarly, the distributive property in item 3 is valid since
@@ -329,11 +340,11 @@ k(A+B) & = k([a_{ij}]+[b_{ij}])\\
  & = k[a_{ij}]+k[b_{ij}] \tag*{definition of scalar multiplication}\\
  & = kA +kB.
  \end{align*}
-The verification of the remaining properties in Theorem \ref{addition_properties} is similar, and left as an exercise for the reader.
+The verification of the remaining properties in Theorem \ref{thm:addition_properties} is similar, and left as an exercise for the reader.
 
 We began this section with the concept of matrix equality. Let's put our matrix addition properties to use and solve a matrix equation.\\
 
-%\pagebreak
+\pagebreak
 
 \example{ex_equal}{Solving a matrix equation}{
 Let 

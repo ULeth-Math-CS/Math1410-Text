@@ -10,7 +10,7 @@ We've started this chapter by addressing the issue of finding the solution to a 
 
 We shouldn't lose sight of the fact that  our work in the previous sections was aimed at finding solutions to systems of linear equations. In this section, we'll learn how to apply what we've learned to actually solve some problems. 
 
-Many, many, \textit{many} problems that are addressed by engineers, businesspeople, scientists and mathematicians can be solved by properly setting up systems of linear equations. In this section we highlight only a few of the wide variety of problems that matrix algebra can help us solve.
+Many, problems that are addressed by engineers, businesspeople, scientists and mathematicians can be solved by properly setting up systems of linear equations. In this section we highlight only a few of the wide variety of problems that matrix algebra can help us solve.
 
 We start with a simple example.
 
@@ -63,7 +63,7 @@ We want to write these equations in a standard way, with all the unknowns on the
 
 To find the solution, let's form the appropriate augmented matrix and put it into \rref. We do so here, without showing the steps.
 \[
-\bmx{ccccc}1&1&1&1&100\\2&0&0&-1&0\\1&0&-1&0&10\\-1&-1&1&1&0\\ \emx \quad\quad \overrightarrow{\text{rref}} \quad\quad \bmx{ccccc} 1&0&0&0&20\\0&1&0&0&30\\0&0&1&0&10\\0&0&0&1&40\\ \emx
+\bam{4}1&1&1&1&100\\2&0&0&-1&0\\1&0&-1&0&10\\-1&-1&1&1&0\\ \eam \quad\quad \overrightarrow{\text{rref}} \quad\quad \bam{4} 1&0&0&0&20\\0&1&0&0&30\\0&0&1&0&10\\0&0&0&1&40\\ \eam
 \]
 
 We interpret from the \rref\ of the matrix that we have 20 blue, 30 green, 10 red and 40 yellow marbles.\ }
@@ -125,13 +125,13 @@ Thus our linear system is
 \]
 and the corresponding augmented matrix is 
 \[
-\bmx{cccc}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \emx.
+\bam{3}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \eam.
 \]
 
 To solve our system, let's put this matrix into \rref.
 
 \[
-\bmx{cccc}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \emx \quad \quad \overrightarrow{\text{rref}} \quad\quad \bmx{cccc}1&0&0&45\\0&1&0&60\\0&0&1&43\\ \emx
+\bam{3}1&1&0&105\\0&1&1&103\\1&0&1&88\\ \eam \quad \quad \overrightarrow{\text{rref}} \quad\quad \bam{3}1&0&0&45\\0&1&0&60\\0&0&1&43\\ \eam
 \]
 
 We can now read off our solution. The first section has 45 seats, the second has 60 seats, and the third has 43 seats.}
@@ -170,13 +170,13 @@ When the boat returns going against the current, its overall speed is the rate o
 
 The corresponding augmented matrix is 
 \[
-\bmx{ccc} 1 & 1 & 4\\ 2&-1&4\\ \emx.
+\bam{2} 1 & 1 & 4\\ 2&-1&4\\ \eam.
 \]
 Note that we decided to let the first column hold the coefficients of $b$.
 
 Putting this matrix in \rref\ gives us: 
 \[
-\bmx{ccc} 1 & 1 & 4\\ 2&-1&4\\ \emx\quad\quad\overrightarrow{\text{rref}}\quad\quad\bmx{ccc}1&0&8/3\\0&1&4/3\\ \emx.
+\bam{2} 1 & 1 & 4\\ 2&-1&4\\ \eam\quad\quad\overrightarrow{\text{rref}}\quad\quad\bam{2}1&0&8/3\\0&1&4/3\\ \eam.
 \]
 
 We finish by interpreting this solution: the speed of the boat (going downstream) is 8/3 mph, or $2.\overline{6}$ mph, and the speed of the river is 4/3 mph, or $1.\overline{3}$ mph. All we really wanted to know was the speed of the river, at about 1.3 mph.}
@@ -204,7 +204,7 @@ The second point tells us that $a(1)^2+b(1)+c = 2$, which we can simplify as $a+
 Again, to solve our system, we find the \rref\ of the corresponding augmented matrix. We don't show the steps here, just the final result.
 
 \[
-\bmx{cccc}1&-1&1&6\\1&1&1&2\\4&2&1&3\\ \emx \quad\quad \overrightarrow{\text{ rref }}\quad\quad \bmx{cccc}1&0&0&1\\0&1&0&-2\\0&0&1&3\\ \emx
+\bam{3}1&-1&1&6\\1&1&1&2\\4&2&1&3\\ \eam \quad\quad \overrightarrow{\text{ rref }}\quad\quad \bam{3}1&0&0&1\\0&1&0&-2\\0&0&1&3\\ \eam
 \]
 
 This tells us that $a=1$, $b=-2$ and $c=3$, giving us the quadratic function $y=x^2-2x+3$.}
@@ -237,7 +237,7 @@ We have three unknowns but only two equations, so we know that we cannot expect 
 
 Putting the system into a matrix and then finding the \rref, we have 
 \[
-\bmx{cccc}1&1&1&32\\ 1&5&10&100\\ \emx \qquad \overrightarrow{\text{rref}}\qquad \bmx{cccc}1&0&-\frac54&15\\0&1&\frac94&17\\ \emx.
+\bam{3}1&1&1&32\\ 1&5&10&100 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&-\frac54&15\\0&1&\frac94&17 \eam.
 \]
 
 Reading from our reduced matrix, we have the infinite solution set \begin{align*}
@@ -252,7 +252,7 @@ To avoid fractions, $z$ must be a multiple of 4 ($-4, 0, 4, 8, \ldots$). Of cour
 
 So it seems that we have two answers; one with $z=0$ and one with $z=4$. Of course, by the statement of the problem, we are led to believe that the lady has at least one \$10 bill, so probably the ``best'' answer is that we have 20 \$1 bills, 8 \$5 bills and 4 \$10 bills. The real point of this example, though, is to address how infinite solutions may appear in a real world situation, and how surprising things may result.}
 
-\medskip
+\pagebreak
 
 \example{ex_football}{Recreating a football score}{In a football game, teams can score points through touchdowns worth 6 points, extra points (that follow touchdowns) worth 1 point, two point conversions (that also follow touchdowns) worth 2 points and field goals, worth 3 points. You are told that in a football game, the two competing teams scored on 7 occasions, giving a total score of 24 points. Each touchdown was followed by either a successful extra point or two point conversion. In what ways were these points scored?}
 {The question asks how the points were scored; we can interpret this as asking how many touchdowns, extra points, two point conversions and field goals were scored. We'll need to assign variable names to our unknowns; let $t$ represent the number of \textbf{t}ouchdowns scored; let $x$ represent the number of e\textbf xtra points scored, let $w$ represent the number of t\textbf wo point conversions, and let $f$ represent the number of \textbf field goals scored.
@@ -275,7 +275,7 @@ t = x+w.
 
 To solve our problem, we put these equations into a matrix and put the matrix into \rref. Doing so, we find 
 \[
-\bmx{ccccc}1&1&1&1&7\\ 6&1&2&3&24\\1&-1&-1&0&0\\ \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccccc} 1&0&0&0.5&3.5\\0&1&0&1&4\\ 0&0&1&-0.5&-0.5\\ \emx.
+\bam{4}1&1&1&1&7\\ 6&1&2&3&24\\1&-1&-1&0&0 \eam \quad\quad\overrightarrow{\text{rref}}\quad\quad \bam{4} 1&0&0&0.5&3.5\\0&1&0&1&4\\ 0&0&1&-0.5&-0.5 \eam.
 \]
 
 Therefore, we know that 
@@ -300,7 +300,221 @@ We have seen a variety of applications of systems of linear equations. We would 
 
 We should also remind ourselves that linear equations are immensely important. The examples we considered here ask fundamentally simple questions like ``How fast is the water moving?'' or ``What is the quadratic function that goes through these three points?'' or ``How were points in a football game scored?'' The real ``important'' situations ask much more difficult questions that often require \textit{thousands} of equations! (Gauss began the systematic study of solving systems of linear equations while trying to predict the next sighting of a comet; he needed to solve a system of linear equations that had 17 unknowns. Today, this a relatively easy situation to handle with the help of computers, but to do it by hand is a real pain.) Once we understand the fundamentals of solving systems of equations, we can move on to looking at solving bigger systems of equations; this text focuses on getting us to understand the fundamentals.\\
 
+\subsection*{Span and linear independence}
+We mentioned in Section \ref{sec:Rn} that the techniques of this chapter were necessary to answer questions about vectors, including those involving span and linear independence. We complete this section by including a few examples involving these concepts.
+
+\medskip
+
+\example{ex_span1}{Determining which vectors belong to a span}{
+Let $\vec{v}_1 = \bbm 1\\-2\\0\ebm$, $\vec{v}_2 = \bbm 3\\4\\8\ebm$, and $\vec{v}_3 = \bbm 3\\-1\\4\ebm$. Determine which of the following vectors can be written as a linear combination of the vectors $\vec{v}_1$, $\vec{v}_2$, $\vec{v}_3$.
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\vec{a} = \bbm 2\\-14\\-8\ebm$
+\item $\vec{b} = \bbm 1\\0\\-4\ebm$
+\item $\vec{c} = \bbm -4\\3\\1\ebm$
+\end{enumerate}
+\end{multicols}}
+{Put another way, this problem is asking us which, if any, of the vectors $\vec{a}$, $\vec{b}$, $\vec{c}$ belong to the span of the vectors $\vec{v}_1$, $\vec{v}_2$, $\vec{v}_3$. Recall that
+\[
+\vec{a}\in \operatorname{span}\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}
+\]
+if and only if there exist scalars $x_1,x_2,x_3$ such that
+\[
+x_1\vec{v}_1+x_2\vec{v}_2+x_3\vec{v}_3 = \vec{a}.
+\]
+Plugging in values for our vectors, we are trying to solve
+\[
+x_1\bbm 1\\-2\\0\ebm + x_2\bbm 3\\4\\8\ebm + x_3\bbm 3\\-1\\4\ebm = \bbm 2\\-14\\-8\ebm.
+\]
+If we combine the vectors on the left-hand side above into a single vector and equate coefficients, we obtain the system
+\[
+\begin{array}{ccccccc}
+x_1&+&3x_2&+&3x_3&=&2\\
+-2x_1&+&4x_2&-&x_3&=&-14\\
+ & &8x_2&+&4x_3&=&-8
+\end{array}
+\]
+We now what to do from here: we set up our augmented matrix and reduce:
+\[
+\bam{3}1&3&3&2\\ -2&4&-1&-14\\0&8&4&-8 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&\frac32&5\\0&1&\frac12&-1\\0&0&0&0 \eam.
+\]
+The \rref\ of our matrix tells us that there are infinitely many solutions; in particular, there \textit{is} a solution. Our general solution is
+\begin{align*}
+x_1 &= 5-\frac32 t\\
+x_2 & = -1 -\frac12 t\\
+x_3 & = t,
+\end{align*}
+but any particular solution will do. Taking $t=0$, we get $x_1=5$, $x_2=-1$, and $x_3=0$, telling us that
+\[
+\vec a = 5\vec{v}_1 - \vec{v}_2 + 0\vec{v}_3.
+\]
+The reader is encouraged to verify that this is indeed the case.
+
+For the vector $\vec{b}$, we proceed as above. It should be clear that the system of equations we obtain differs from the one above only in the constants on the right-hand side (since these are defined by the vector $\vec{b}$), so we can proceed by replacing the right-hand column in our augmented matrix above by the vector $\vec{b}$, and reducing:
+\[
+\bam{3}1&3&3&1\\ -2&4&-1&0\\0&8&4&-4 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&\frac32&\frac25\\0&1&\frac12&\frac15\\0&0&0&-\frac{7}{10} \eam.
+\]
+This time, we see that the third row in the \rref\ of our augmented matrix corresponds to the impossible equation $0=-\frac{7}{10}$, so no solution exists. This means that it is impossible to find scalars $x_1$, $x_2$, $x_3$ such that 
+\[
+\vec b = x_1\vec{v}_1+x_2\vec{v}_2+x_3\vec{v}_3,
+\]
+and therefore the vector $\vec{b}$ \textit{cannot} be written as a linear combination of the vectors $\vec{v}_1$, $\vec{v}_2$, and $\vec{v}_3$.
+
+The solution for the vector $\vec{c}$ is similar. We replace the right-hand column in our augmented matrix by $\vec{c}$ and reduce:
+\[
+\bam{3}1&3&3&-4\\ -2&4&-1&3\\0&8&4&1 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&\frac32&-\frac52\\0&1&\frac12&-\frac12\\0&0&0&\frac58 \eam.
+\]
+Again, the third row in the \rref\ of our augmented matrix tells us that our system of equations is inconsistent, and therefore, the vector $\vec{c}$ does \textit{not} belong to the span of the vectors $\vec{v}_1$, $\vec{v}_2$, and $\vec{v}_3$.
+}
+
+\medskip
+
+Let us make a couple of observations before proceeding to the next example. First, let us write out the result for the vector $\vec{a}$ using the general solution, written in terms of the parameter $t$, and manipulate things a bit:
+\begin{align*}
+\vec{a} & = x_1\vec{v}_1+x_2\vec{v}_2+x_3\vec{v}_3\\
+ & = \left(5-\frac32 t\right)\vec{v}_1 + \left(-1-\frac12 t\right)\vec{v}_3 + t\vec{v}_3\\
+ & = 5\vec{v}_1-\vec{v}_2 + t\left(\vec{v}_3 - \frac{3}{2}\vec{v}_1 - \frac{1}{2}\vec{v}_2\right).
+\end{align*}
+Setting $t=0$ gives us the particular solution we chose. What happens if we choose other values of $t$? Well, nothing happens to the left-hand side of the equation above, so it must be that nothing happens on the right either. How can this be? Look at the vector in parentheses: we have
+\[
+\vec{v}_3-\frac{3}{2}\vec{v}_1-\frac{1}{2}\vec{v}_2 = \bbm 3\\-1\\4\ebm -\frac{3}{2}\bbm 3\\4\\8\ebm +\frac{1}{2}\bbm 3\\-1\\4\ebm = \bbm 0\\ 0\\0\ebm!
+\]
+Of course nothing happens: choosing different values for $t$ simply means we're adding different multiples of the zero vector to our particular solution! 
+
+\mnote{.7}{\textbf{Note:} In Section \ref{sec:vector_solutions}, we'll start writing our solutions to linear systems in vector form, and doing so gives us additional insight into what's going on when there are infinitely many solutions. We see something of a preview in Example \ref{ex_span1}. The parameter $t$ resulted because the vectors $\vec{v}_1$, $\vec{v}_2$, and $\vec{v}_3$ were not linearly independent: we don't really need the variable $x_3$ since the vector $\vec{v}_3$ is redundant. In general, we will end up with one or more parameters in a consistent system whenever the columns of the coefficient matrix are not linearly independent.}
+
+The other thing to note, now that we've done a few examples, is that once we have our vectors, we can jump straight to our augmented matrix, since the columns of this matrix are simply the vectors we started with. It's important to do it once the long way, however, so that we understand where everything is coming from. (Otherwise, you'll find yourself staring at the solution to a system, and having no idea what that solution is telling you!)
+
+On the subject of saving time, if you went through the row operations for each of the vectors above (if you didn't, maybe you should: working through the examples is good practice if you haven't yet got the hang of row operations), you probably noticed that you used the exact same row operations for each of the three vectors. This is because the row operations in an augmented matrix $[A|\vec{b}]$ are dictated by the matrix $A$, and not by the vector $\vec{b}$. With this observation in place, we can speed things up considerably by solving the problem for all three vectors at once. We simply set up and reduce an augmented matrix with \textit{three} columns on the right, like so:
+\[
+\left[\begin{array}{ccc|c|c|c}1&3&3&2&1&-4\\ -2&4&-1&-14&0&3\\0&8&4&-8&-4&1 \end{array}\right] \quad \overrightarrow{\text{rref}}\quad \left[\begin{array}{ccc|c|c|c} 1&0&\frac32&5&\frac25 &-\frac52 \\0&1&\frac12&-1&\frac15 &-\frac 12\\0&0&0&0&-\frac{7}{10}&\frac58 \end{array}\right].
+\]
+If we then consider each column on the right of the \rref\ separately, we obtain the same results as before. Let's keep this in mind as we do one more example.
+
+\medskip
 
 
+\example{ex_span2}{Checking membership in a subspace}{
+Consider the subspace of $\R^3$ defined by
+\[
+V = \left\{\left.\bbm s-3t\\2s+t\\-3s+4t\ebm \, \right| \, s, t\in\R\right\}.
+\]
+Determine which of the following vectors belong to $V$.
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\vec{x} = \bbm -5\\4\\5\ebm$
+\item $\vec{y} = \bbm 1\\-2\\-3\ebm$
+\item $\vec{z} = \bbm 6\\5\\-13\ebm$
+\end{enumerate}
+\end{multicols}}
+{First, we should make sure that $V$ is in fact a subspace! We notice that for any element $\vec v\in V$ we have
+\[
+\vec v = \bbm s-3t\\2s+t\\-3s+4t\ebm = s\bbm 1\\2\\-3\ebm + t\bbm -3\\1\\4\ebm
+\]
+for some $s,t\in\R$, so $V = \operatorname{span}\{\vec{v}_1,\vec{v}_2\}$, where
+\[
+\vec{v}_1 = \bbm 1\\2\\-3\ebm \quad \text{ and } \quad \vec{v}_2=\bbm -3\\1\\4\ebm,
+\]
+meaning that this example can be solved using the same techniques as Example \ref{ex_span1}.
+
+Keeping in mind the discussion following Example \ref{ex_span1}, we know that we can determine whether the given vectors belong to the span of $\vec{v}_1$ and $\vec{v}_2$, we should set up an augmented matrix of the form $[\begin{array}{cc|c|c|c} \vec{v}_1 & \vec{v}_2 & \vec x & \vec y & \vec z\end{array}]$, and reduce. We find:
+\[
+\left[\begin{array}{cc|c|c|c}
+1&-3&-5&1&6\\
+2&1&4&-2&5\\
+-3&4&5&-3&-13
+\end{array}\right]\qquad \overrightarrow{\text{rref}}\qquad
+\left[\begin{array}{cc|c|c|c}
+1&0&1&\frac{19}{7}&3\\
+0&1&2&-\frac{4}{7}&-1\\
+0&0&0&\frac{62}{35}&0
+\end{array}\right].
+\]
+The column $\bbm 19/7\\-4/7\\62/35\ebm$ in the \rref\ corresponds to the vector $\vec y$. Ignoring the $\vec x$ and $\vec z$ columns, we see that the system for $\vec y$ is inconsistent, as it results in the impossible equation $0s+0t = \frac{62}{35}$. It follows that $\vec y\notin V$. 
+
+On the other hand, we have zeros in the third row of the \rref\ for both the $\vec x$ and $\vec z$ columns, meaning that the system for each of these vectors is consistent. Looking at the $\vec x$ column, we have $s=1$ and $t=2$, so
+\[
+\vec x = 1\bbm 1\\2\\-3\ebm +2\bbm -3\\1\\4\ebm \in V,
+\]
+and looking at the $\vec z$ column, we have $s=3$ and $t=-1$, so
+\[
+\vec z = 3\bbm 1\\2\\-3\ebm -1\bbm -3\\1\\4\ebm \in V.
+\]
+
+\vskip -1.5\baselineskip
+}
+
+\medskip
+
+In Example \ref{ex_span2}, the two vectors $\vec{v}_1$ and $\vec{v}_2$ were linearly independent, but we had only two vectors in $\R^3$, which is only enough to span a plane through the origin. The vectors $\vec x$ and $\vec z$ lie in this plane, but $\vec y$ does not.
+
+We conclude this section with a pair of examples involving linear independence.
+
+\medskip
+
+\example{ex_indep1}{Determining linear independence}{
+Determine whether or not the vectors
+\[
+\vec{v}_1 = \bbm 1\\-3\\4\ebm, \vec{v}_2 = \bbm -2\\1\\-3\ebm, \vec{v}_3 = \bbm 2\\0\\-1\ebm
+\]
+are linearly independent.}
+{
+We test for linear independence by setting up and solving Equation \eqref{eq:linearindep}: we suppose that there exist scalars $x_1, x_2, x_3$ such that
+\[
+x_1\vec{v}_1+x_2\vec{v}_2+x_3\vec{v}_3 = \vec{0},
+\]
+and determine what values of $x_1, x_2, x_3$ are possible. Putting in our vectors we have
+\[
+x_1\bbm 1\\-3\\4\ebm + x_2\bbm -2\\1\\-3\ebm + x_3 \bbm 2\\0\\-1\ebm = \bbm x_1-2x_2+2x_3\\-3x_1+2x_2\\4x_1-3x_2-x_3\ebm = \bbm 0\\0\\0\ebm,
+\]
+leading to the system of linear equations
+\[
+\begin{array}{ccccccc}
+x_1&-&2x_2&+&2x_3&=&0\\
+-3x_1&+&2x_2& & &=&0\\
+4x_1&-&3x_2&-&z_3&=&0
+\end{array}.
+\]
+As with the examples involving span above, we end up with a system of linear equations. As we'll see in Section \ref{sec:vector_solutions}, this is an example of a \textit{homogeneous} system of equations. Any problem involving linear independence results in such a system, and as you've probably already noticed, we don't need to worry about whether or not the system is consistent. The so-called \textit{trivial solution} $x_1=x_2=x_3=0$ is always a possibility. With linear independence, we don't care about whether a solution \textit{exists}; what we want to know is whether or not that solution is \textit{unique}.
+
+Since a homogeneous system is, after all, a linear system, we know how to proceed: set up the corresponding augmented matrix and reduce.
+\[
+\bam{3} 1&-2&2&0\\-3&1&0&0\\4&-3&-1&0\eam
+\qquad \overrightarrow{\text{rref}}\qquad
+\bam{3} 1&0&0&0\\0&1&0&0\\0&0&1&0\eam
+\]
+From the \rref\ of the augmented matrix, we can see that our system has the unique solution $x_1=x_2=x_3=0$. Since this is the \textit{only} possible solution, we can conclude that our vectors are linearly independent.}
+
+\medskip
+
+\example{ex_indep2}{Determining linear independence}{
+Determine whether the vectors
+\[
+\vec{w}_1 = \bbm 2\\-3\\1\ebm, \vec{w}_2 = \bbm 3\\0\\4\ebm, \vec{w}_3 = \bbm 1\\12\\8\ebm
+\]
+in $\R^3$ are linearly independent.}
+{As with Example \ref{ex_indep1}, we know that Equation \eqref{eq:linearindep} leads to a system of linear equations with zeros on the right-hand sides, and the vectors $\vec{w}_1$, $\vec{w}_2$, $\vec{w}_3$ make up the columns on the left of the corresponding augmented matrix. We find
+\[
+\bam{3} 2&3&1&0\\-3&0&12&0\\1&4&8&0\eam
+\qquad \overrightarrow{\text{rref}}\qquad
+\bam{3} 1&0&-4&0\\0&1&3&0\\0&0&0&0\eam.
+\]
+In this case, lack of leading 1 in the $x_3$ column of the \rref\ of the augmented matrix tells us that we should expect infinitely many solutions. Setting $x_3=t$ as a free parameter, we have
+\begin{align*}
+x_1 = 4t\\
+x_2 = -3t\\
+x_3 = t.
+\end{align*}
+Choosing any value of $t\neq 0$ gives us a non-trivial solution. For example, setting $t=1$ gives us $4\vec{w}_1-3\vec{w}_2+\vec{w}_3=\vec{0}$, so $\vec{w}_3$ can be written as the linear combination
+\[
+\vec{w}_3 = -4\vec{w}_1+3\vec{w}_2,
+\]
+which shows that the given vectors are \textit{not} linearly independent.}
+
+\medskip
+
+In these last examples we've started to explore the connection between vectors and systems of linear equations. We'll continue to do so in the next chapter, where we begin to write our solutions in vector form.
 
 \printexercises{exercises/01_05_exercises}

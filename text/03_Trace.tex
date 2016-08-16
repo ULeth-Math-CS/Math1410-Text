@@ -74,7 +74,21 @@ How are the traces of \tta\ and \ttai\ related? We compute \ttai\ and find that
 \]
 Therefore $\tr(\ttai) = 6/17$. Again, the relationship isn't clear.
 
-\mnote{.8}{Something to think about: we know that not all square matrices are invertible. Would we be able to tell just by the trace? That seems unlikely.}
+
+
+\mnote{.5}{This example brings to light many interesting ideas that we'll flesh out just a little bit here. 
+\begin{enumerate}
+\item		Notice that the elements of \tta\ are 1, $-2$,  1 and 1. Add the squares of these numbers: $1^2 + (-2)^2 + 1^2 + 1^2  = 7 = $ $\tr(\ttat\tta)$.
+
+				Notice that the elements of \ttb\ are 6, 7, 11 and -4. Add the squares of these numbers: $6^2 + 7^2 + 11^2 + (-4)^2 = 222 =$ $\tr(\ttbt\ttb)$.
+				
+				Can you see why this is true? When looking at multiplying \ttat\tta, focus only on where the elements on the diagonal come from since they are the only ones that matter when taking the trace.
+
+\item		You can confirm on your own that regardless of the dimensions of \tta, $\tr(\ttat\tta) = \tr(\tta\ttat)$. To see why this is true, consider the previous point. (Recall also that \ttat\tta\ and \tta\ttat\ are always square, regardless of the dimensions of \tta.)
+
+\item		Mathematicians are actually more interested in $\sqrt{\tr(\ttat\tta)}$ than just $\tr(\ttat\tta)$. The reason for this is a bit complicated; the short answer is that ``it works better.'' The reason ``it works better'' is related to the Pythagorean Theorem, all of all things. If we know that the legs of a right triangle have length $a$ and $b$, we are more interested in $\sqrt{a^2+b^2}$ than just $a^2+b^2$. Of course, this explanation raises more questions than it answers; our goal here is just to whet your appetite and get you to do some more reading. A Numerical Linear Algebra book would be a good place to start.
+\end{enumerate}
+}
 
 Finally, let's see how the trace is related to the transpose. We actually don't have to formally compute anything. Recall from the previous section that the diagonals of \tta\ and \ttat\ are identical; therefore, $\tr(\tta) = \tr(\ttat)$. That, we know for sure, isn't a coincidence.
 
@@ -122,19 +136,7 @@ These matrices have the same trace, yet \ttb\ clearly has bigger elements in it.
 
 Our concern is not how to interpret what this ``size'' measurement means, but rather to demonstrate that the trace (along with the transpose) can be used to give (perhaps useful) information about a matrix.
 
-\mnote{.5}{This example brings to light many interesting ideas that we'll flesh out just a little bit here. 
-\begin{enumerate}
-\item		Notice that the elements of \tta\ are 1, $-2$,  1 and 1. Add the squares of these numbers: $1^2 + (-2)^2 + 1^2 + 1^2  = 7 = $ $\tr(\ttat\tta)$.
 
-				Notice that the elements of \ttb\ are 6, 7, 11 and -4. Add the squares of these numbers: $6^2 + 7^2 + 11^2 + (-4)^2 = 222 =$ $\tr(\ttbt\ttb)$.
-				
-				Can you see why this is true? When looking at multiplying \ttat\tta, focus only on where the elements on the diagonal come from since they are the only ones that matter when taking the trace.
-
-\item		You can confirm on your own that regardless of the dimensions of \tta, $\tr(\ttat\tta) = \tr(\tta\ttat)$. To see why this is true, consider the previous point. (Recall also that \ttat\tta\ and \tta\ttat\ are always square, regardless of the dimensions of \tta.)
-
-\item		Mathematicians are actually more interested in $\sqrt{\tr(\ttat\tta)}$ than just $\tr(\ttat\tta)$. The reason for this is a bit complicated; the short answer is that ``it works better.'' The reason ``it works better'' is related to the Pythagorean Theorem, all of all things. If we know that the legs of a right triangle have length $a$ and $b$, we are more interested in $\sqrt{a^2+b^2}$ than just $a^2+b^2$. Of course, this explanation raises more questions than it answers; our goal here is just to whet your appetite and get you to do some more reading. A Numerical Linear Algebra book would be a good place to start.
-\end{enumerate}
-}
 
 %EXERCISES
 

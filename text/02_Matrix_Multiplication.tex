@@ -2,7 +2,6 @@
 \section{Matrix Multiplication}\label{sec:matrix_multiplication}
 
 \asyouread{
-\item T/F: Column vectors are used more in this text than row vectors, although some other texts do the opposite.
 \item	T/F: To multiply $\tta\times\ttb$, the number of rows of \tta\ and \ttb\ need to be the same.
 \item	T/F: The entry in the 2$^\text{nd}$ row and 3$^\text{rd}$ column of the product \tta\ttb\ comes from multipling the 2$^\text{nd}$ row of \tta\ with the 3$^\text{rd}$ column of \ttb.
 \item	Name two properties of matrix multiplication that also hold for ``regular multiplication'' of numbers.
@@ -22,7 +21,7 @@ You are likely to have guessed
 \[
 \bmx{cc} 1&-2\\6&8\emx
 \]
-but this is, in fact, \textit{not} right. (I guess you \textit{could} define multiplication this way. If you'd prefer this type of multiplication, you'll have to write your own book.) The actual answer is  
+but this is, in fact, \textit{not} right. (I guess you \textit{could} define multiplication this way; you'll even find that it satisfies plenty of nice properties. Unfortunately, nice properties don't make up for the fact that this definition just isn't useful.) The actual answer is  
 \[
 \bmx{cc}5&3\\11&5\emx.
 \]
@@ -38,40 +37,29 @@ Our experience from the last section would lend us to believe that this is not d
 \]
 You may see some similarity in this answer to what we got before, but again, probably not enough to really figure things out.
 
-So let's take a step back and progress slowly. The first thing we'd like to do is define a special type of matrix called a vector.
+\pagebreak
 
-\smallskip
+Before diving in to the general definition of matrix multiplication, let's start simple, with row and column vectors. Recall from Definition \ref{def:rcvect} in Section \ref{sec:matrix_arithmetic_1} that a \sword{row vector} is a $1\times n$ matrix of the form $\vec a = \bbm a_1 & a_2 & \cdots & a_n\ebm$,
+and a \sword{column vector} is an $m\times 1$ matrix of the form $
+\vec{b} = \bbm b_1\\b_2\\\vdots \\ b_m\ebm$.
 
-\definition{def:vectorcr}{Column and Row Vectors}{
-\index{vector!column}\index{vector!row}A $m\times 1$ matrix is called a \textit{column vector}. \\
-A $1\times n$ matrix is called a \textit{row vector}.}
 
-\smallskip
-
-While it isn't obvious right now, column vectors are going to become far more useful to us than row vectors. Therefore, we often omit the word ``column'' when referring to column vectors, and we just call them ``vectors.''
-
-\mnote{.5}{In this text, row vectors are only used in this section when we discuss matrix multiplication, whereas we'll make extensive use of column vectors. Other texts make great use of row vectors, but little use of column vectors. It is a matter of preference and tradition: ``most'' texts use column vectors more. In some more advanced textbooks, row vectors are considered to be ``dual'' to column vectors. Abstractly, a \textit{dual vector} is an object that eats a vector and spits out a number. Here, we see that the way a row vector eats a column vector and produces a number is via multiplication.} 
-
-We have been using upper case letters to denote matrices; we use lower case letters with an arrow overtop to denote row and column vectors. An example of a row vector is 
-\[
-\vu = \bmx{cccc}1&2&-1&0\emx
-\]
-and an example of a column vector is 
-\[
-\vv = \bmx{c} 1\\7\\8\emx.
-\]
-
-Before we learn how to multiply matrices in general, we will learn what it means to multiply a row vector by a column vector.%\footnote{Recall that we learned about row vectors in the previous section, but didn't really do anything with them.} 
+\mnote{.75}{In this text, row vectors are only used in this section when we discuss matrix multiplication, whereas we'll make extensive use of column vectors. Other texts make great use of row vectors, but little use of column vectors. It is a matter of preference and tradition: ``most'' texts use column vectors more. In some more advanced textbooks, row vectors are considered to be ``dual'' to column vectors. Abstractly, a \textit{dual vector} is an object that eats a vector and spits out a number. Here, we see that the way a row vector eats a column vector and produces a number is via multiplication.} 
 
 \smallskip
 
 \definition{def:vector_multiply}{Multiplying a row vector by a column vector}{
-Let \vu\ be an $1\times n$ row vector with entries $u_1$, $u_2$, $\cdots$, $u_n$ and let \vv\ be an $n\times 1$ column vector with entries $v_1$, $v_2$, $\cdots$, $v_n$. The \textit{product of \vu\ and \vv}, denoted $\vu\cdot\vv$ or $\vu\vv$, is 
+Let \vu\ be an $1\times n$ row vector with entries $u_1$, $u_2$, $\cdots$, $u_n$ and let \vv\ be an $n\times 1$ column vector with entries $v_1$, $v_2$, $\cdots$, $v_n$. The \sword{product of \vu\ and \vv}, denoted $\dotp uv$ or $\vu\vv$, is 
 \[
-\sum_{i=1}^n  u_iv_i = u_1v_1 + u_2v_2 + \cdots + u_nv_n.
+\vu\vv = \sum_{i=1}^n  u_iv_i = u_1v_1 + u_2v_2 + \cdots + u_nv_n.
 \]}
 
-Don't worry if this definition doesn't make immediate sense. It is really an easy concept; an example will make things more clear.
+Notice that this is essentially the same as the definition of the \sword{dot product} given at the beginning of Section \ref{sec:Rn}.
+There are two key points to notice about the product defined in Definition \ref{def:vector_multiply}:
+\begin{enumerate}
+\item In order for the product $\vu\vv$ to be defined, \vu\ and \vv\ need to have the \textit{same number of entries}.
+\item To multiply \vu\ and \vv\, we \textit{multiply the corresponding entries}, and then add up the resulting values.
+\end{enumerate}
 
 \medskip
 
@@ -115,7 +103,7 @@ Now that we understand how to multiply a row vector by a column vector, we are r
 \smallskip
 
 \definition{def:matrix_multiply}{Matrix Multiplication}{\index{matrix!multiplication}
-Let \tta\ be an $m\times r$ matrix, and let \ttb\ be an $r\times n$ matrix. The \textit{matrix product of \tta\ and \ttb}, denoted $\tta\cdot\ttb$, or simply \tta\ttb, is the $m\times n$ matrix \ttm\ whose entry in the $i^{\text{th}}$ row and $j^{\text{th}}$ column is the product of the $i^{\text{th}}$ row of \tta\ and the $j^{\text{th}}$ column of \ttb.}
+Let \tta\ be an $m\times r$ matrix, and let \ttb\ be an $r\times n$ matrix. The \sword{matrix product of \tta\ and \ttb}, denoted $\tta\cdot\ttb$, or simply \tta\ttb, is the $m\times n$ matrix \ttm\ whose entry in the $i^{\text{th}}$ row and $j^{\text{th}}$ column is the product of the $i^{\text{th}}$ row of \tta\ and the $j^{\text{th}}$ column of \ttb.}
 
 \smallskip
 
@@ -158,7 +146,6 @@ So now we know that
 \[
 \tta\ttb = \bmx{ccc}5 & m_{12} & m_{13}\\m_{21} & m_{22} & m_{23}\emx.
 \]
-\drawexampleline
 Finishing out the first row, we have 
 \[
 m_{12} = \bmx{cc}1&2\emx\bmx{c}-1\\2\emx = 1(-1)+2(2) = 3
@@ -317,8 +304,6 @@ Find the following products.
 
 \item		$\tti\tta = \eyethree\bmx{ccc}1&2&3\\2&-7&5\\-2&-8&3\emx = \bmx{ccc}1&2&3\\2&-7&5\\-2&-8&3\emx$
 
-\drawexampleline
-
 \item		We haven't formally defined what $\tti^2$ means, but we could probably make the reasonable guess that $\tti^2=\tti\cdot\tti $. Thus 
 \[
 \tti^2 = \eyethree\eyethree = \eyethree
@@ -409,7 +394,7 @@ In leading to an important theorem, let's define a matrix we saw in an earlier e
 \smallskip
 
 \definition{def:identity}{Identity Matrix}{\index{identity matrix}\index{matrix!identity matrix}
-The $n\times n$ matrix with 1's on the diagonal and zeros elsewhere is the \textit{$n\times n$ identity matrix}, denoted $\tti_n$. When the context makes the dimension of the identity clear, the subscript is generally omitted.}
+The $n\times n$ matrix with 1's on the diagonal and zeros elsewhere is the \sword{$n\times n$ identity matrix}, denoted $\tti_n$. When the context makes the dimension of the identity clear, the subscript is generally omitted.}
 
 \smallskip
 
@@ -431,7 +416,7 @@ Let \tta, \ttb\ and \ttc\ be matrices with dimensions so that the following oper
 
 \begin{enumerate}
 \item	 	$\tta(\ttb\ttc) = (\tta\ttb)\ttc$\ (Associative Property)
-\item		$\tta(\ttb+\ttc) = \tta\ttb + \tta\ttb$\ and 
+\item		$\tta(\ttb+\ttc) = \tta\ttb + \tta\ttc$\ and 
 
 $(\ttb+\ttc)\tta = \ttb\tta + \ttc\tta$\ (Distributive Property)\label{thm:mat_mult_dist}
 \item		$k(\tta\ttb) = (k\tta)\ttb = \tta(k\ttb)$ \label{thm:mat_mult_scalar}
@@ -480,5 +465,7 @@ The next section is devoted to visualizing column vectors and ``seeing'' how som
 %multiply nilpotent matrices (z sent to y, y to x, x to zero. Cube it)
 
 %(A-B)(A+B) etc.
+
+
 
 \printexercises{exercises/02_02_exercises}

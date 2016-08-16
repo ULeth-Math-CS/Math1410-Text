@@ -1,8 +1,10 @@
-You have probably encountered systems of linear equations before; you can probably remember solving systems of equations where you had three equations, three unknowns, and you tried to find the value of the unknowns. In this chapter we will uncover some of the fundamental principles guiding the solution to such problems.
+In Chapter \ref{chapter:arithmetic} we introduced several concepts that led to situations where we encountered systems of linear equations, including \textit{span}, \textit{linear independence}, the \textit{column space} of a matrix, and the \textit{null space} of a matrix. In each case we were able to explain the concept, but unable to compute any examples, since we lacked the machinery for solving the systems of equations that arose.
 
-Solving such systems was a bit time consuming, but not terribly difficult. So why bother? We bother because linear equations have many, many, \textit{many} applications, from business to engineering to computer graphics to understanding more mathematics. And not only are there many applications of systems of linear equations, on most occasions where these systems arise we are using far more than three variables. (Engineering applications, for instance, often require thousands of variables.) So getting a good understanding of how to solve these systems effectively is important.\\
+\mnote{.7}{Chapter \ref{chapter:vectors} also presented us with a few situations where the ability to solve systems of equations would have come in handy, such as the derivation of the cross product formula, and when we wanted to compute the line of intersection of two planes.}
 
-But don't worry; we'll start at the beginning.
+You have probably encountered simple systems of linear equations in high school; you can might be able to remember solving systems of equations where you had two or three equations in two or three unknowns, and you tried to find the value of the unknowns. In this chapter we will uncover some of the fundamental principles guiding the solution to such problems.
+
+Solving such systems was a bit time consuming, but not terribly difficult. So why bother? We bother because, in addition to the theoretical applications mentioned above, there are many, many, \textit{many} practical applications where systems of linear equations arise, from business and finance to engineering to computer graphics to understanding more mathematics. And not only are there many applications of systems of linear equations, on most occasions where these systems arise we are using far more than three variables. (Engineering applications, for instance, often require thousands of variables.) So getting a good understanding of how to solve these systems effectively is important.\\
 
 \section{Introduction to Linear Equations}\label{sec:intro}
 
@@ -44,6 +46,8 @@ So what is a good question to ask after seeing Example \ref{ex_by_hand}? Here ar
 		\end{enumerate}
 		
 Let's look at the first question. Would the solution to our problem change if we called the red balls $q$? Of course not. At the end, we'd find that $q = 10$, and we would know that this meant that we had 10 red balls. 
+
+\mnote{.2}{Here's another ``What if?'' question: what if we had a total of 20 marbles in the jar? Could we still solve the problem? Chances are that you can still work out a solution to the system, but what does it mean? (In this case it's probably safe to assume that it doesn't make physical sense to deal with fractions of a marble.)}
 
 Now let's look at the second question. Suppose we had 60 balls, but the other relationships stayed the same. How would the situation and solution change? Let's compare the ``original'' equations to the ``new'' equations.
 \begin{center}\begin{tabular}{c|c} Original & New \\ \hline $r+b+g=30$ & $r+b+g=60$ \\ $r=2g$ & $r=2g$ \\ $b=r+g$ & $b=r+g$ \\ \end{tabular}\end{center}

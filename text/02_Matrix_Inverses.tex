@@ -27,8 +27,21 @@ If we had a matrix, which we'll call \ttai, where $\ttai\tta=\tti$, then by anal
 \[
 \vx = \ttai\vb.
 \]
+There is no guarantee that such a matrix is going to exist for an arbitrary $n\times n$ matrix $A$, but if it does, we say that $A$ is \textit{invertible}:
 
-Of course, there is a lot of speculation here. We don't know that such a matrix like \ttai\ exists. However, we do know how to solve the matrix equation $\tta\ttx = \ttb$, so we can use that technique to solve the equation $\tta\ttx = \tti$ for \ttx. This seems like it will get us close to what we want. Let's practice this once and then study our results.
+\smallskip
+
+\definition{def:inverse}{Invertible Matrices and the Inverse of \tta}{\index{matrix!inverse}\index{inverse!definition}
+We say that an $n\times n$ matrix $A$ is \sword{invertible} if there exists a matrix $X$ such that
+\[
+AX = XA = I_n.
+\]
+When this is the case, we call the matrix $X$ the \sword{inverse} of $A$ and write $X=A^{-1}$,
+}
+
+\smallskip
+
+Of course, there is a lot of speculation here. We don't know in general that such a matrix like \ttai\ exists. (And if it does, whether that matrix is \textit{unique}, despite the use of the definite article in stating that $X$ is ``the'' inverse of $A$.) However, we do know how to solve the matrix equation $\tta\ttx = \ttb$, so we can use that technique to solve the equation $\tta\ttx = \tti$ for \ttx. This seems like it will get us close to what we want. Let's practice this once and then study our results.
 
 \medskip
 
@@ -40,7 +53,7 @@ Find a matrix \ttx\ such that $\tta\ttx = \tti$.}
 {We know how to solve this from the previous section: we form the proper augmented matrix, put it into \rref\ and interpret the results. 
 
 \[
-\bmx{cccc}2&1&1&0\\1&1&0&1\emx \quad \arref \quad \bmx{cccc}1&0&1&-1\\0&1&-1&2\emx
+\bmx{cc|cc}2&1&1&0\\1&1&0&1\emx \quad \arref \quad \bmx{cc|cc}1&0&1&-1\\0&1&-1&2\emx
 \]
 
 We read from our matrix that 
@@ -70,7 +83,7 @@ These obstacles that we face are not insurmountable. The first obstacle was that
 					&=\tti
 \end{align*}
 
-Perhaps this first obstacle isn't much of an obstacle after all. Of course, we only have one example where it worked, so this doesn't mean that it always works. We have good news, though: it always does work. The only ``bad'' news to come with this is that this is a bit harder to prove. We won't worry about proving it always works, but state formally that it does in the following theorem.
+Perhaps this first obstacle isn't much of an obstacle after all. Of course, we only have one example where it worked, so this doesn't mean that it always works. We have good news, though: it always does work. The only ``bad'' news is that this is a bit harder to prove. For now, we will state it as theorem, but the proof will have to wait until later: see the proof of Theorem \ref{thm:IMT} on page \pageref{ax_xa_proof}.
 
 \smallskip
 
@@ -83,6 +96,8 @@ Let \tta\ be an $n\times n$ matrix.
 }
 
 \smallskip
+
+\mnote{.65}{\textbf{Note:} Theorem \ref{thm:inverse1} only applies to \textit{square} matrices. If $A$ is an $m\times n$ matrix, with $m\neq n$, it is sometimes possible to find an $n\times m$ matrix $B$ such that $AB=I_m$ (in this case $B$ is called a ``right inverse'' for $A$), or an $n\times m$ matrix $C$ such that $CA = I_n$ (a ``left inverse'' for $A$). However, the only case where $A$ has both a left \textit{and} a right inverse is when $m=n$, in which case $B=C$. If $m<n$, only a right inverse is possible, while if $m>n$, only a left inverse is possible.}
 
 The second obstacle is easier to address. We want to know if another matrix \tty\ exists where $\tta\tty = \tti =\tty\tta$. Let's suppose that it does. Consider the expression $\ttx\tta\tty$. Since matrix multiplication is associative, we can group this any way we choose. We could group this as $(\ttx\tta)\tty$; this results in 
 \begin{align*}
@@ -102,56 +117,76 @@ We have just proved the following theorem.
 \smallskip
 
 \theorem{thm:inverse_unique}{Uniqueness of Solutions to $\tta\ttx=\tti_n$}{\index{inverse!uniqueness}
-Let \tta\ be an $n\times n$ matrix and let \ttx\ be a matrix where $\tta\ttx = \tti_n$. Then \ttx\ is unique; it is the only matrix that satisfies this equation.}
+Let \tta\ be an $n\times n$ matrix and let \ttx\ be a matrix where $\tta\ttx = \tti_n$. Then \ttx\ is unique; it is the only matrix that satisfies this equation. In other words, if $A$ is an $n\times n$ matrix and $AX = AY = I_n$, then $X=Y = A^{-1}$.}
 
 \smallskip
 
-So given a square matrix \tta, if we can find a matrix \ttx\ where $\tta\ttx=\tti$, then we know that $\ttx\tta = \tti$ and that \ttx\ is the only matrix that does this. This makes \ttx\ special, so we give it a special name.
+%So given a square matrix \tta, if we can find a matrix \ttx\ where $\tta\ttx=\tti$, then we know that $\ttx\tta = \tti$ and that \ttx\ is the only matrix that does this. This makes \ttx\ special, so we give it a special name.
 
-\smallskip
+Thus, we were justified in Definition \ref{def:inverse} in calling $A^{-1}$ ``the'' inverse of $A$ (rather than merely ``an'' inverse). Theorem \ref{thm:inverse_unique} is incredibly important in practice. It tells us that if we are able to establish that \textit{either} $AX=I_n$ or $XA = I_n$ for some matrix $X$, then we can immediately conclude two things: first, that $A$ is invertible, and second, that $A=A^{-1}$. We put this observation to use in the next example.
 
-\definition{def:inverse}{Invertible Matrices and the Inverse of \tta}{\index{matrix!inverse}\index{inverse!definition}
-Let \tta\ and \ttx\ be $n\times n$ matrices where $\tta\ttx = \tti = \ttx\tta$. Then:
-\begin{enumerate} 
-\item		\tta\ is \textit{invertible}.
-\item		\ttx\ is the \textit{inverse} of \tta, denoted by \ttai.
-\end{enumerate}}
+\medskip
 
-\smallskip
+\example{ex_using_uniqueness}{Using Theorems \ref{thm:inverse1} and \ref{thm:inverse_unique}}{Suppose $A$ is an $n\times n$ matrix such that $A^5 = I_n$. Prove that $A$ is invertible, and find an expression for $A^{-1}$.}
+{Using Theorem \ref{thm:inverse_unique}, we can quickly kill two birds with one stone. Using properties of exponents (and the fact that $5=1+4$), we have
+\[
+A^5 = A\cdot (A\cdot A\cdot A\cdot A) = A(A^4) = I_n.
+\]
+Thus, if we set $X=A^4$, then $AX = I_n$, so by Theorems \ref{thm:inverse1} and \ref{thm:inverse_unique}, $A$ is invertible, and $A^{-1} = A^4$.}
 
-Let's do an example.
+\medskip
+
+At this point, it is natural to wonder which $n\times n$ matrices will be invertible. Will any non-zero matrix do? (No.) Are such matrices a rare occurrence? (No.) As we proceed through this chapter and the next, we will see that there are many different conditions one can place on an $n\times n$ matrix that are equivalent to the statement ``The matrix $A$ is invertible.'' Before we begin our attempt to answer this question in general, let's look at a particular example.
 
 \medskip
 
 \example{ex_inverse_2}{A non-invertible matrix}{Find the inverse of $\tta = \bmx{cc}1&2\\2&4\emx$.}
 {By solving the equation $\tta\ttx = \tti$ for \ttx\ will give us the inverse of \tta. Forming the appropriate augmented matrix and finding its \rref\ gives us 
 \[
-\bmx{cccc}1&2&1&0\\2&4&0&1\emx \quad \arref \quad \bmx{cccc}1&2&0&1/2\\0&0&1&-1/2\emx
+\bmx{cc|cc}1&2&1&0\\2&4&0&1\emx \quad \arref \quad \bmx{cc|cc}1&2&0&1/2\\0&0&1&-1/2\emx
 \]
 Yikes! We were expecting to find that the \rref\ of this matrix would look like 
 \[
-\bmx{cc}\tti & \ttai\emx.
+\bmx{c|c}\tti & \ttai\emx.
 \]
 However, we don't have the identity on the left hand side. Our conclusion: \tta\ is not invertible.}
 
 \medskip
 
-We have just seen that not all matrices are invertible.
+\mnote{.6}{\label{footnote:special} Example \ref{ex_inverse_2} shows that not all square matrices (or even non-zero square matrices) are invertible, hence Definition \ref{def:inverse} is necessary: why bother calling \tta\ ``invertible'' if every square matrix is? If everyone is special, then no one is. Then again, everyone \textit{is} special.} 
 
-\mnote{.5}{\label{footnote:special} Example \ref{ex_inverse_2} shows that not all square matrices (or even non-zero square matrices) are invertible, hence Definition \ref{def:inverse} is necessary: why bother calling \tta\ ``invertible'' if every square matrix is? If everyone is special, then no one is. Then again, everyone \textit{is} special.} 
+We have just seen that not all matrices are invertible. The attentive reader might have been able to spot the source of the trouble in the previous example: notice that the second row of $A$ is a multiple of the first, so that the row operation $R_2-2R_1\to R_2$ created a row of zeros. Can you think what sort of condition would signal trouble for a general $n\times n$ matrix? Here, we need to think back to our discussions of the various theoretical concepts we've encountered, such as rank, span, linear independence, and so on. Let us think of the rows of $A$ as row vectors. The elementary row operations that we perform on a matrix either rearrange these vectors, or create new vectors that are linear combinations of the old ones. The only way we end up with a row of zeros in the \rref\ of $A$ is if one of the rows of $A$ can be written as a linear combination of the others; that is, if the rows of $A$ are \textit{linearly dependent}. We also know that if there is a row of zeros in the \rref\ of $A$, then not every row contains a leading 1. Recalling that the rank of $A$ is equal to the number of leading 1s in the \rref\ of $A$, we have the following:
 
-With this thought in mind, let's complete the array of boxes we started before the example. We've discovered that if a matrix has an inverse, it has only one. Therefore, we gave that special matrix a name, ``\textit{the} inverse.'' Finally, we describe the most general way to find the inverse of a matrix, and a way to tell if it does not have one.
+\smallskip
+
+\theorem{thm:rank_and_inverse}{Inverses and rank}{
+Let $A$ be an $n\times n$ matrix. Then the following statements are equivalent:
+\begin{enumerate}
+\item The matrix $A$ is invertible.
+\item The rank of $A$ is equal to $n$.
+\item The rows of $A$ are linearly independent.
+\item The columns of $A$ are linearly independent.
+\end{enumerate}}
+
+\smallskip
+
+
+\mnote{.35}{Here's a useful exercise for the reader to consider: can you prove in general that for a $2\times 2$ matrix $A$, if one row of $A$ is a multiple of the other, then the same is true of the columns? (We can see that this is the case in Example \ref{ex_inverse_2}.) A fundamental theorem in linear algebra states that for a general $m\times n$ matrix, the number of linearly independent rows is equal to the number of linearly independent columns. The proof of this fact is rather technical, so we have not included it in this book. However, the rough idea is to follow the leading 1s: in the \rref\ of $A$, each leading 1 occupies both a row and a column, and the rows (or columns) that end up with leading 1s are the ones that are linearly independent.}
+
+The claim that ``the following statements are equivalent'' in Theorem \ref{thm:rank_and_inverse} means that as soon as we know that one of the statements on the list is true, we can immediately conclude that the others are true as well. This is also the case if we know one of the statements is false. For example, if we know that $\operatorname{rank}(A)<n$, then we can immediately conclude that $A$ will not be invertible. Note that the equivalence of statements 3 and 4 follows from Theorem \ref{thm:colspace_basis} (although we did not provide a proof of that result).
+
+Let's sum up what we've learned so far. We've discovered that if a matrix has an inverse, it has only one. Therefore, we gave that special matrix a name, ``\textit{the} inverse.'' Finally, we describe the most general way to find the inverse of a matrix, and a way to tell if it does not have one.
 
 \smallskip
 
 \keyidea{idea:finding_inverses}{Finding \ttai}{\index{inverse!computing}\index{matrix!inverse}
 Let \tta\ be an $n \times n$ matrix. To find \ttai, put the augmented matrix 
 \[
-\bmx{cc} \tta & \tti_n \emx
+\bmx{c|c} \tta & \tti_n \emx
 \]
 into \rref. If the result is of the form 
 \[
-\bmx{cc} I_n & \ttx \emx,
+\bmx{c|c} I_n & \ttx \emx,
 \]
 then $\ttai = \ttx$. If not, (that is, if the first $n$ columns of the \rref\ are not $\tti_n$), then \tta\ is not invertible.}
 
@@ -164,24 +199,19 @@ Let's try again.
 \example{ex_inverse_3}{Computing the inverse of a matrix}{Find the inverse, if it exists, of $\tta = \bmx{ccc} 1&1&-1\\1&-1&1\\1&2&3\emx$.}
 {We'll try to solve $\tta\ttx = \tti$ for \ttx\ and see what happens.
 \[
-\bmx{cccccc}1&1&-1&1&0&0\\1&-1&1&0&1&0\\1&2&3&0&0&1\emx \quad \arref\quad \bmx{cccccc}1&0&0&0.5&0.5&0\\0&1&0&0.2&-0.4&0.2\\0&0&1&-0.3&0.1&0.2\emx
+\bmx{ccc|ccc}1&1&-1&1&0&0\\1&-1&1&0&1&0\\1&2&3&0&0&1\emx \quad \arref\quad \bmx{ccc|ccc}1&0&0&1/2&1/2&0\\0&1&0&1/5&-2/5&1/5\\0&0&1&-3/10&1/10&1/5\emx
 \]
 
 We have a solution, so 
 \[
-\tta = \bmx{ccc}0.5&0.5&0\\0.2&-0.4&0.2\\-0.3&0.1&0.2\emx.
+\tta = \bmx{ccc}1/2&1/2&0\\1/5&-2/5&1/5\\-3/10&1/10&1/5\emx.
 \]
 Multiply \tta\ttai\ to verify that it is indeed the inverse of \tta.}
 
 \medskip
 
-In general, given a matrix \tta, to find \ttai\ we need to form the augmented matrix $\bmx{cc}\tta&\tti \emx$ and put it into \rref\ and interpret the result. In the case of a $2\times 2$ matrix, though, there is a shortcut. We give the shortcut in terms of a theorem.
+In general, given a matrix \tta, to find \ttai\ we need to form the augmented matrix $\bmx{c|c}\tta&\tti \emx$ and put it into \rref\ and interpret the result. In the case of a $2\times 2$ matrix, though, there is a shortcut. We give the shortcut in terms of a theorem.
 
-\mnote{.5}{We don't prove Theorem \ref{thm:2by2} here, but it really isn't hard to do. Put the matrix 
-\[
-\bmx{cccc}a&b&1&0\\c&d&0&1\emx
-\]
-into \rref\ and you'll discover the result of the theorem. Alternatively, multiply \tta\ by what we propose is the inverse and see that we indeed get \tti.}
 
 \smallskip
 
@@ -206,6 +236,12 @@ We can't divide by 0, so if $ad-bc=0$, we don't have an inverse. Recall Example 
 Here, $ad-bc = 1(4) - 2(2) = 0$, which is why \tta\ didn't have an inverse.
 
 Although this idea is simple, we should practice it.\\
+
+\mnote{.7}{We don't prove Theorem \ref{thm:2by2} here, but it really isn't hard to do. Put the matrix 
+\[
+\bmx{cc|cc}a&b&1&0\\c&d&0&1\emx
+\]
+into \rref\ and you'll discover the result of the theorem. Alternatively, multiply \tta\ by what we propose is the inverse and see that we indeed get \tti. It turns out that Theorem \ref{thm:2by2} is a special case of a general formula for the inverse of a matrix in terms of \textit{determinants}. We will discuss determinants in the next chapter, although we will stop short of giving this formula. While useful in certain theoretical situations, the determinant formula for the inverse is only a shortcut in the $2\times 2$ case. For larger matrices, the method given in this section is computationally much faster.}
 
 %\enlargethispage{2\baselineskip}
 
@@ -260,11 +296,13 @@ Let \tta\ be an invertible $n\times n$ matrix, and let \vb\ be any $n\times 1$ c
 
 \smallskip
 
-A corollary to this theorem is: If \tta\ is not invertible, then \ttaxb\ does not have exactly one solution. It may have infinite solutions and it may have no solution, and we would need to examine the \rref\ of the augmented matrix $\bmx{cc} \tta & \vb \emx$ to see which case applies.
+A corollary to this theorem is: If \tta\ is not invertible, then \ttaxb\ does not have exactly one solution. It may have infinite solutions and it may have no solution, and we would need to examine the \rref\ of the augmented matrix $\bmx{c|c} \tta & \vb \emx$ to see which case applies.
 
 \mnote{.5}{A \textit{corollary} is an idea that follows directly from a theorem; typically all the hard work is done in proving the theorem, and any resulting corollaries are easy consequences.}
 
 We demonstrate our theorem with an example.
+
+\mnote{.2}{The method employed in Example \ref{ex_inverse_solution_1} is useful in theory, but not in practice: the amount of work required to solve a system this way is significantly greater than the amount of work involved in Gaussian Elimination. The only scenario where you should consider using the inverse to solve a system (aside from being asked to do so on a test!) is when there are \textit{several} systems you need to solve that all have the same coefficient matrix.}
 
 \medskip
 
@@ -295,11 +333,11 @@ We can easily check our answer:
 
 \medskip
 
-\mnote{.5}{The method employed in Example \ref{ex_inverse_solution_1} is useful in theory, but not in practice: the amount of work required to solve a system this way is significantly greater than the amount of work involved in Gaussian Elimination. The only scenario where you should consider using the inverse to solve a system (aside from being asked to do so on a test!) is when there are \textit{several} systems you need to solve that all have the same coefficient matrix.}
+
 
 Knowing a matrix is invertible is incredibly useful. Among many other reasons, if you know \tta\ is invertible, then you know for sure that $\ttaxb$ has a solution (as we just stated in Theorem \ref{thm:inverse_solution}). In the next section we'll demonstrate many different properties of invertible matrices, including stating several different ways in which we know that a matrix is invertible.
 
-\mnote{.3}{As odd as it may sound, \textit{knowing} a matrix is invertible is useful; actually computing the inverse isn't. This is discussed at the end of the next section.}
+\mnote{.75}{As odd as it may sound, \textit{knowing} a matrix is invertible is useful; actually computing the inverse isn't. This is discussed at the end of the next section.}
 
 %\clearpage
 

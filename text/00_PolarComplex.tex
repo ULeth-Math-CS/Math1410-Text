@@ -86,6 +86,8 @@ Some remarks about  Definition \ref{modulusargumentdefn} are in order.  We know 
 
 Now that we've had some practice computing the modulus and argument of some complex numbers, it is time to explore their properties.  We have the following theorem.
 
+\mnote{.25}{Since the absolute value $\abs{x}$ of a real number $x$ can be viewed as the distance from $x$ to $0$ on the number line, the first property in Theorem \ref{modprops} justifies the notation $\abs{z}$ for modulus.  We leave it to the reader to show that if $z$ is real, then the definition of modulus coincides with absolute value so the notation $\abs{z}$ is unambiguous.}
+
 \smallskip
 
 \theorem{modprops}{Properties of the Modulus}{  Let $z$ and $w$ be complex numbers. \index{complex number ! modulus ! properties of} \index{modulus of a complex number ! properties of}
@@ -112,10 +114,6 @@ Now that we've had some practice computing the modulus and argument of some comp
 To prove the first three properties in Theorem \ref{modprops}, suppose $z = a + bi$ where $a$ and $b$ are real numbers.  To determine $\abs{z}$, we find a polar representation $(r,\theta)$ with $r \geq 0$ for the point $(a,b)$.  From Section \ref{IntroPolar}, we know $r^2 = a^2 + b^2$ so that $r = \pm \sqrt{a^2+b^2}$.  Since we require $r \geq 0$, then it must be that $r = \sqrt{a^2 +b^2}$, which means $\abs{z} = \sqrt{a^2+b^2}$.  Using the distance formula, we find the distance from $(0,0)$ to $(a,b)$ is also $\sqrt{a^2+b^2}$, establishing the first property.  For the second property, note that since $\abs{z}$ is a distance, $\abs{z} \geq 0$.  Furthermore,  $\abs{z} = 0$ if and only if the distance from $z$ to $0$ is $0$, and the latter happens if and only if $z = 0$, which is what we were asked to show.  For the third property, we note that since $a = \operatorname{Re}(z)$ and $b = \operatorname{Im}(z)$, $z = \sqrt{a^2+b^2} = \sqrt{\operatorname{Re}(z)^2 + \operatorname{Im}(z)^2}$.
 
 
-\mnote{.25}{Since the absolute value $\abs{x}$ of a real number $x$ can be viewed as the distance from $x$ to $0$ on the number line, the first property in Theorem \ref{modprops} justifies the notation $\abs{z}$ for modulus.  We leave it to the reader to show that if $z$ is real, then the definition of modulus coincides with absolute value so the notation $\abs{z}$ is unambiguous.}
-
-
-
 \smallskip
 
 To prove the product rule, suppose $z = a + bi$ and  $w = c + di$ for real numbers $a$, $b$, $c$ and $d$.  Then $zw = (a+bi)(c+di)$.  After the usual arithmetic  we get $zw = (ac-bd) + (ad+bc)i$. (See Example \ref{complexzeroex1} in Section \ref{CmpNums} for a review of complex number arithmetic.) Therefore,
@@ -136,13 +134,10 @@ Hence $\abs{zw} = \abs{z} \abs{w}$ as required.
 
 \mnote{.75}{In case you were not convinced by the argument for the second property in Theorem \ref{modprops}, we can work through the underlying Algebra to see this is true.  We know  $\abs{z} = 0$ if and only if $\sqrt{a^2+b^2} = 0$ if and only if $a^2+b^2 = 0$, which is true if and only if $a = b = 0$.  The latter happens if and only if $z = a + bi =0$.  There.}
 
-The Power Rule essentially follows from repeated application of the Product Rule, and again, a formal proof requires Mathematical Induction, so we leave it as a problem for you to consider when you take Math 2000.
-
-\smallskip
-
+The Power Rule essentially follows from repeated application of the Product Rule.
 Like the Power Rule, the Quotient Rule can also be established with the help of the Product Rule. We assume $w \neq 0$ (so $\abs{w} \neq 0$) and we get
 \begin{align*}
-\left| \dfrac{z}{w} \right| &  =  \left| (z) \left( \dfrac{1}{w} \right) \right|  \\ [3pt] 
+\left| \dfrac{z}{w} \right| &  =  \left| (z) \left( \dfrac{1}{w} \right) \right|  \\[3pt] 
 							& =  |z| \left| \dfrac{1}{w}\right|  \tag*{Product Rule.}
 \end{align*}
 Hence, the proof really boils down to showing $\left| \frac{1}{w} \right| = \frac{1}{\abs{w}}$.  This is left as an exercise.
@@ -330,7 +325,7 @@ We now focus on the quantity in brackets on the right hand side of the equation.
  & \quad\quad + i\sin(\alpha)\cos(\beta) + i^2 \sin(\alpha)\sin(\beta) \\																		 & =  \cos(\alpha)\cos(\beta) +  i^2 \sin(\alpha) \sin(\beta) \tag*{Rearranging terms}  \\
  & \quad\quad + \, i\sin(\alpha)\cos(\beta) +i\cos(\alpha)\sin(\beta)  \\
  & =  \left(\cos(\alpha)\cos(\beta) - \sin(\alpha) \sin(\beta)\right)\tag*{Since $i^2 = -1$}\\
- & + \quad\quad i\left(\sin(\alpha)\cos(\beta)+ \cos(\alpha)\sin(\beta)\right)  \tag*{Factor out $i$}\\	
+ &  \quad\quad + i\left(\sin(\alpha)\cos(\beta)+ \cos(\alpha)\sin(\beta)\right)  \tag*{Factor out $i$}\\	
  & = \cos(\alpha + \beta) + i \sin(\alpha+\beta)  \tag*{Sum identities} \\
  & = \operatorname{cis}(\alpha + \beta)  \tag*{Definition of `cis'}
 \end{align*}
@@ -345,7 +340,7 @@ As with with the proof of the Power Rule in Theorem \ref{modprops}, the proof of
 The last property in Theorem \ref{prodquotpolarcomplex} to prove is the quotient rule.   Assuming $\abs{w} \neq 0$ we have
 
 \begin{align*}
-\dfrac{z}{w} & =  \dfrac{|z| \operatorname{cis}(\alpha)}{|w| \operatorname{cis}(\beta)}  \\ [3pt]
+\dfrac{z}{w} & =  \dfrac{|z| \operatorname{cis}(\alpha)}{|w| \operatorname{cis}(\beta)}  \\[3pt]
 			 & =  \left( \dfrac{|z|}{|w|}\right) \dfrac{\cos(\alpha) + i \sin(\alpha)}{\cos(\beta) + i \sin(\beta)}
 \end{align*}
 						 

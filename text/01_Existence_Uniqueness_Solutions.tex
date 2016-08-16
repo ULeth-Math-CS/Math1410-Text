@@ -70,6 +70,32 @@ We should immediately spot a problem with this system; if the sum of $x$ and $y$
 
 If we were to consider a linear system with three equations and two unknowns, we could visualize the solution by graphing the corresponding three lines. We can picture that perhaps all three lines would meet at one point, giving exactly 1 solution; perhaps all three equations describe the same line, giving an infinite number of solutions; perhaps we have different lines, but they do not all meet at the same point, giving no solution. We further visualize similar situations with, say, 20 equations with two variables.
 
+On the other hand, if we increase the number of variables to three, then we know from Section \ref{sec:planes} that the correct geometric visualization of the situation involves planes. A single equation such as
+\[
+2x-3y+4z=7
+\]
+describes a plane in $\mathbb{R}^3$ with normal vector $\vec n = \bbm 2\\-3\\4\ebm$. (By inspection, we can also choose a point on the plane. Since $3(-1)+4(1)=7$, we know that the point $(0,-1,1)$ lies on the plane.)
+
+If we have two equations in three unknowns, three possibilities arise. The second equation could be a multiple of the first, in which case we still have our original plane. The second equation could also describe a parallel plane; for example, we might have
+\[
+\begin{array}{ccccccc}
+2x&-&3y&+&4z&=&7\\
+2x&-&3y&+&4z&=&3
+\end{array}
+\]
+In this case we know that there is no possible solution to the system, since there can be no point in common to these two parallel planes. The last possibility is that the planes are non-parallel, in which case they intersect in a line. For example, the system
+\[
+\begin{array}{ccccccc}
+2x&-&3y&+&4z&=&7\\
+-x&+&3y&-&z&=&1
+\end{array}
+\]
+describes a pair of planes that intersect in the line (exercise)
+\[
+\bbm x\\y\\z\ebm = \bbm 11\\3\\0\ebm + t\bbm -9\\-2\\1\ebm.
+\]
+From here, we can go on to consider three or more equations in three variables; there might be no solution, or the planes might intersect in a single point, or along a common line, or they might even all describe the same plane.
+
 While it becomes harder to visualize when we add variables, no matter how many equations and variables we have, solutions to linear equations always come in one of three forms: exactly one solution, infinite solutions, or no solution. This is a fact that we will not prove here, but it deserves to be stated.
 
 \smallskip
@@ -85,7 +111,7 @@ This leads us to a definition. Here we don't differentiate between having one so
 \smallskip
 
 \definition{def:consistent}{Consistent and Inconsistent Linear Systems}{\index{system of linear equations!consistent} \index{system of linear equations!inconsistent} \index{consistent} \index{inconsistent}
-A system of linear equations is \textit{consistent} if it has a solution (perhaps more than one). A linear system is \textit{inconsistent} if it does not have a solution.}
+A system of linear equations is \sword{consistent} if it has a solution (perhaps more than one). A linear system is \sword{inconsistent} if it does not have a solution.}
 
 \smallskip
 
@@ -93,11 +119,10 @@ How can we tell what kind of solution (if one exists) a given system of linear e
 
 Before we start with a simple example, let us make a note about finding the \rref\ of a matrix.\\
 
-\textsf{\textbf{ Technology Note:}} In the previous section, we learned how to find the \rref\ of a matrix using Gaussian elimination -- by hand. We need to know how to do this; understanding the process has benefits. However, actually executing the process by hand for every problem is not usually beneficial. In fact, with large systems, computing the \rref\ by hand is effectively impossible. Our main concern is \textit{what} ``the rref'' is, not what exact steps were used to arrive there.
+\mnote{.5}{\textbf{ Technology Note:} In the previous section, we learned how to find the \rref\ of a matrix using Gaussian elimination -- by hand. We need to know how to do this; understanding the process has benefits. However, actually executing the process by hand for every problem is not usually beneficial. In fact, with large systems, computing the \rref\ by hand is effectively impossible. The ability to use the RREF to quickly read off the solution to a system is probably more important than being able to find the RREF in the first place. There are plenty of programs available for free online that will do the Gaussian elimination for you, but use these with caution: you won't have access to a computer on the exams, so you'd better not become overly reliant on using software.}
 %In the two previous examples, we found the \rref\ of a matrix and found the solution using this form. We did not, however, show the steps necessary to find ``the rref.'' This will be our standard practice from here on out.
 %It is beneficial to know how to perform these steps, but it is not beneficial to do them every time; most often, we are not interested in the process of finding the \rref, but rather the end result. 
-Therefore, the reader is encouraged to employ some form of technology to find the \rref. Computer programs such as \textit{Mathematica}, MATLAB, Maple, and Derive can be used;
-many handheld calculators (such as Texas Instruments calculators) will perform these calculations very quickly. 
+ 
 
 As a general rule, when we are learning a new technique, it is best to not use technology to aid us. This helps us learn not only the technique but some of its ``inner workings.'' We can then use technology once we have mastered the technique and are now learning how to use it to solve problems.
 
@@ -117,7 +142,7 @@ Our first example explores officially a quick example used in the introduction o
 {Create the corresponding augmented matrix, and then put the matrix into \rref. 
 
 \[
-\bmx{ccc} 1&1&1\\2&2&2\emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{ccc} 1&1&1\\0&0&0\emx 
+\bam{2} 1&1&1\\2&2&2\eam \qquad \overrightarrow{\text{rref}} \qquad \bam{2} 1&1&1\\0&0&0\eam 
 \]
 
 Now convert the reduced matrix back into equations. In this case, we only have one equation, 
@@ -127,12 +152,19 @@ x_1+x_2=1
 or, equivalently, 
 \begin{align*}
  x_1 &=1-x_2\\ 
- x_2&\text{ is free}. 
+ x_2&\text{ is a \textit{free parameter}}. 
 \end{align*}
 
-We have just introduced a new term, the word \textit{free}.\index{free variable}\index{variable!free} It is used to stress that idea that $x_2$ can take on \textit{any} value; we are ``free'' to choose any value for $x_2$. Once this value is chosen, the value of $x_1$ is determined. We have infinite choices for the value of $x_2$, so therefore we have infinite solutions.
+We have just introduced a new term, \sword{free parameter}, or free variable, or simply, \sword{parameter}.\index{free variable}\index{variable!free}\index{parameter} It is used to stress that idea that $x_2$ can take on \textit{any} value; we are ``free'' to choose any value for $x_2$. Once this value is chosen, the value of $x_1$ is determined. We have infinitely many choices for the value of $x_2$, so therefore we have infinitely many solutions. The variable $x_1$ is also known as a \sword{leading variable}\index{variable!leading}, since the column corresponding to $x_1$ contains a leading 1 in the \rref\ of our augmented matrix.
 
-For example, if we set $x_2 = 0$, then $x_1 = 1$; if we set $x_2 = 5$, then $x_1 = -4$. 
+\mnote{.2}{In other words, any free parameters in our system can be regarded as independent variables; the remaining variables are then seen as dependent variables, and the equations determined by the \rref\ of our system tell us how the dependent variables depend on the parameters.}
+
+For example, if we set $x_2 = 0$, then $x_1 = 1$; if we set $x_2 = 5$, then $x_1 = -4$. Common practice is to assign a new name to our free parameter; $t$ is always a good choice. Doing so, we can write the solution to our system as follows:
+\begin{align*}
+x_1 &= 1-t\\
+x_2 &= t,
+\end{align*}
+where $t$ can be any real number. (Writing the solution in this way is meant to be reminiscent of the parametric equations for a line in Section \ref{sec:lines}.)
 }
 
 \medskip
@@ -152,7 +184,7 @@ x_1&  & &+&2x_3&=&2\\
 {To find the solution, put the corresponding matrix into \rref.
 
 \[
-\bmx{cccc} 0&1&-1&3\\ 1&0&2&2\\ 0&-3&3&-9\emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{cccc}1&0&2&2\\ 0&1&-1&3\\ 0&0&0&0 \emx
+\bam{3} 0&1&-1&3\\ 1&0&2&2\\ 0&-3&3&-9\eam \qquad \overrightarrow{\text{rref}} \qquad \bam{3}1&0&2&2\\ 0&1&-1&3\\ 0&0&0&0 \eam
 \]
 
 Now convert this reduced matrix back into equations. We have 
@@ -162,16 +194,28 @@ Now convert this reduced matrix back into equations. We have
 \end{align*} 
 or, equivalently, 
 \begin{align*}
- x_1 &= 2-2x_3 \\ 
- x_2&=3+x_3\\
- x_3&\text{ is free.} 
+ x_1 &= 2-2t \\ 
+ x_2&=3+t\\
+ x_3&=t,
 \end{align*}
+where the parameter $t$ can be any real number.
 
-These two equations tell us that the values of $x_1$ and $x_2$ depend on what $x_3 $ is. As we saw before, there is no restriction on what $x_3$ must be; it is ``free'' to take on the value of any real number. Once $x_3$ is chosen, we have a solution. Since we have infinite choices for the value of $x_3$, we have infinitely many solutions. 
+These two equations tell us that the values of $x_1$ and $x_2$ depend on what $t=x_3$ is. As we saw before, there is no restriction on what $t$ must be; it is ``free'' to take on the value of any real number. Once $t$ is chosen, we obtain a solution $(x_1,x_2,x_3)$ to our system. Since we have infinitely many choices for the value of $t$, we have infinitely many solutions. 
 
-As examples, $x_1 = 2$, $x_2 = 3$, $x_3 = 0$ is one solution; $x_1 = -2$, $x_2 = 5$, $x_3 = 2$ is another solution. Try plugging these values back into the original equations to verify that these indeed are solutions. (By the way, since infinitely many solutions exist, this system of equations is consistent.)}
+As examples, $x_1 = 2$, $x_2 = 3$, $x_3 = 0$ is one solution; $x_1 = -2$, $x_2 = 5$, $x_3 = 2$ is another solution. Try plugging these values back into the original equations to verify that these indeed are solutions. (By the way, since infinitely many solutions exist, this system of equations is consistent.)
+
+Examples such as these are known as \sword{particular solutions}\index{solution!particular} to our system of equations; they correspond to a \sword{particular} choice for the parameter $t$. The solution written in terms of the parameter $t$ is known as the \sword{general solution}\index{solution!general} to the system of equations. Note that we're not restricted to verifying particular solutions: we can go whole hog and plug the general solution into our system to make sure it works. For example, in the first equation, we have
+\[
+x_2-x_3 = (3+t)-t = 3,
+\]
+so the first equation is satisfied. In the second equation, we have
+\[
+x_1+2x_3 = (2-2t)+2t = 2,
+\]
+so the second equation is satisfied. The reader can just as easily verify that our solution works in the third equation as well.}
 
 \medskip
+
 
 %\eexset
 
@@ -194,13 +238,13 @@ We formally define this and a few other terms in this following definition.
 
 Consider the \rref\ of an augmented matrix of a linear system of equations. Then:\\
 
-a variable that corresponds to a leading 1 is a \textit{basic}, or \textit{dependent}, variable, and\index{variable!dependent}\index{variable!basic}\index{basic variable}\\
+a variable that corresponds to a leading 1 is a \sword{leading}, or  \sword{dependent}, variable, and\index{variable!dependent}\index{variable!basic}\index{basic variable}\\
 
-a variable that does not correspond to a leading 1 is a \textit{free}, or \textit{independent}, variable\index{variable!independent}\index{variable!free}\index{free variable}.}
+a variable that does not correspond to a leading 1 is a \sword{non-leading}, or \sword{free}, or \sword{independent}, variable\index{variable!independent}\index{variable!free}\index{free variable}. Free variables are also known as \sword{parameters}.}
 
 \smallskip
 
-One can probably see that ``free'' and ``independent'' are relatively synonymous. It follows that if a variable is not independent, it must be dependent; the word ``basic'' comes from connections to other areas of mathematics that we won't explore here.
+%One can probably see that ``free'' and ``independent'' are relatively synonymous. It follows that if a variable is not independent, it must be dependent; the word ``basic'' comes from connections to other areas of mathematics that we won't explore here.
 
 %%%%
 
@@ -208,27 +252,27 @@ One can probably see that ``free'' and ``independent'' are relatively synonymous
 
 %Since we know that we have a solution, we know that there isn't a leading 1 in the last column (since this implies no solution). If we have a leading 1 for each variable, then we would have only one solution, for each row of our reduced matrix would correspond to an equation like $x_1 = 4$; each variable would be assigned a specific value. Therefore, to have infinite solutions, we need to have more variables than leading 1s.
 
-These definitions help us understand when a consistent system of linear equations will have infinite solutions. If there are no free variables, then there is exactly one solution; if there are any free variables, there are infinite solutions. 
+These definitions help us understand when a consistent system of linear equations will have infinitely many solutions. If there are no free variables, then there is exactly one solution; if there are any free variables, there are infinitely many solutions. 
 
 \smallskip
 
 \keyidea{idea:consistent}{Consistent Solution Types}{
 
-A consistent linear system of equations will have exactly one solution if and only if there is a leading 1 for each variable in the system. \index{system of linear equations!consistent} \index{leading one} \index{solution!infinite}  \\
+A consistent linear system of equations will have exactly one solution if and only if there is a leading 1 for each variable in the system. \index{system of linear equations!consistent} \index{leading one} \index{solution!infinitely many}  \\
 
-If a consistent linear system of equations has a free variable, it has infinite solutions.\\
+If a consistent linear system of equations has a free variable, it has infinitely many solutions.\\
 
-If a consistent linear system has more variables than leading 1s, then the system will have infinite solutions.\\
+If a consistent linear system has more variables than leading 1s, then the system will have infinitely many solutions.\\
 
-A consistent linear system with more variables than equations will always have infinite solutions.\index{system of linear equations!consistent}\index{leading one}\index{solution!infinite}}
+A consistent linear system with more variables than equations will always have infinitely many solutions.\index{system of linear equations!consistent}\index{leading one}\index{solution!infinitely many}}
 
 \smallskip
 
 \textsf{\textbf{Note:}} Key Idea \ref{idea:consistent} applies only to \textit{consistent} systems. If a system is \textit{inconsistent}, then no solution exists and talking about free and basic variables is meaningless.\\
 
-When a consistent system has only one solution, each equation that comes from the \rref\ of the corresponding augmented matrix will contain exactly one variable. If the consistent system has infinite solutions, then there will be at least one equation coming from the \rref\ that contains more than one variable. The ``first'' variable will be the basic (or dependent) variable; all others will be free variables. 
+When a consistent system has only one solution, each equation that comes from the \rref\ of the corresponding augmented matrix will contain exactly one variable. If the consistent system has infinitely many solutions, then there will be at least one equation coming from the \rref\ that contains more than one variable. The ``first'' variable will be the basic (or dependent) variable; all others will be free variables. 
 
-We have now seen examples of consistent systems with exactly one solution and others with infinite solutions. How will we recognize that a system is inconsistent? Let's find out through an example.
+We have now seen examples of consistent systems with exactly one solution and others with infinitely many solutions. How will we recognize that a system is inconsistent? Let's find out through an example.
 
 %Now that we understand \textit{when} we have infinite solutions, the only remaining thing to discuss is how to properly write that situation in a meaningful way. 
 
@@ -252,7 +296,7 @@ x_1&+&2x_2&+&x_3&=&2\\
 {We start by putting the corresponding matrix into \rref.
 
 \[
-\bmx{cccc} 1&1&1&1\\1&2&1&2\\ 2&3&2&0\\ \emx \qquad \overrightarrow{\text{rref}} \qquad \bmx{cccc} 1&0&1&0\\ 0&1&0&0\\ 0&0&0&1\\ \emx
+\bam{3} 1&1&1&1\\1&2&1&2\\ 2&3&2&0\\ \eam \qquad \overrightarrow{\text{rref}} \qquad \bam{3} 1&0&1&0\\ 0&1&0&0\\ 0&0&0&1\\ \eam
 \]
 
 Now let us take the reduced matrix and write out the corresponding equations. The first two rows give us the equations 
@@ -268,7 +312,7 @@ or, more concisely, $0=1$. Obviously, this is not true; we have reached a contra
 
 \medskip
 
-In previous sections we have only encountered linear systems with unique solutions (exactly one solution). Now we have seen three more examples with different solution types. The first two examples in this section had infinite solutions, and the third had no solution. How can we tell if a system is inconsistent?
+In previous sections we have only encountered linear systems with unique solutions (exactly one solution). Now we have seen three more examples with different solution types. The first two examples in this section had infinitely many solutions, and the third had no solution. How can we tell if a system is inconsistent?
 
 A linear system will be inconsistent only when it implies that 0 equals 1. We can tell if a linear system implies this by putting its corresponding augmented matrix into \rref. If we have any row where all entries are 0 except for the entry in the last column, then the system implies 0=1. More succinctly, if we have a leading 1 in the last column of an augmented matrix, then the linear system has no solution. 
 
@@ -292,7 +336,7 @@ has no solution. }
 
 Now let us confirm this using the prescribed technique from above. The \rref\  of the corresponding augmented matrix is 
 \[
-\bmx{ccc} 1&1&0\\0&0&1\\ \emx.
+\bam{2} 1&1&0\\0&0&1\\ \eam.
 \]
 We have a leading 1 in the last column, so therefore the system is inconsistent. }
 
@@ -314,22 +358,22 @@ We have a leading 1 in the last column, so therefore the system is inconsistent.
 %
 %More examples will help us.
 
-Let's summarize what we have learned up to this point. Consider the \rref\ of the augmented matrix of a system of linear equations. (That sure seems like a mouthful in and of itself. However, it boils down to ``look at the reduced form of the usual matrix.'') If there is a leading 1 in the last column, the system has no solution. Otherwise, if there is a leading 1 for each variable, then there is exactly one solution; otherwise (i.e., there are free variables) there are infinite solutions.
+Let's summarize what we have learned up to this point. Consider the \rref\ of the augmented matrix of a system of linear equations. (That sure seems like a mouthful in and of itself. However, it boils down to ``look at the reduced form of the usual matrix.'') If there is a leading 1 in the last column, the system has no solution. Otherwise, if there is a leading 1 for each variable, then there is exactly one solution; otherwise (i.e., there are free variables) there are infinitely many solutions.
 
-Systems with exactly one solution or no solution are the easiest to deal with; systems with infinite solutions are a bit harder to deal with. Therefore, we'll do a little more practice. First, a definition: if there are infinite solutions, what do we call one of those infinite solutions?
+Systems with exactly one solution or no solution are the easiest to deal with; systems with infinitely many solutions are a bit harder to deal with. Therefore, we'll do a little more practice. First, a definition: if there are infinitely many solutions, what do we call one of those infinitely many solutions?
 
 \smallskip
 
 \definition{def:particular}{Particular Solution}{
-Consider a linear system of equations with infinite solutions. A \textit{particular solution} is one solution out of the infinite set of possible solutions.\index{particular solution}\index{solution!particular}}
+Consider a linear system of equations with infinitely many solutions. A \sword{particular solution} is one solution out of the infinitely many set of possible solutions.\index{particular solution}\index{solution!particular}}
 
 The easiest way to find a particular solution is to pick values for the free variables which then determines the values of the dependent variables. Again, more practice is called for.
 
 \medskip
 
-\example{ex_ex_un_4}{Finding general and particular solutions}{Give the solution to a linear system whose augmented matrix in \rref\ is 
+\example{ex_ex_un_4}{Finding general and particular solutions}{Give the general solution to a linear system whose augmented matrix in \rref\ is 
 \[
-\bmx{ccccc} 1&-1&0&2&4\\ 0&0&1&-3&7\\ 0&0&0&0&0\\ \emx
+\bam{4} 1&-1&0&2&4\\ 0&0&1&-3&7\\ 0&0&0&0&0\\ \eam
 \]
 and give two particular solutions.}
 {We can essentially ignore the third row; it does not divulge any information about the solution.
@@ -344,11 +388,14 @@ Notice how the variables $x_1$ and $x_3$ correspond to the leading 1s of the giv
 
 We generally write our solution with the dependent variables on the left and independent variables and constants on the right. It is also a good practice to acknowledge the fact that our free variables are, in fact, free. So our final solution would look something like 
 \begin{align*} 
- x_1 &= 4 +x_2 - 2x_4 \\ 
- x_2 & \text{ is free} \\
- x_3 &= 7+3x_4 \\ 
- x_4 & \text{ is free}.
+ x_1 &= 4 + s - 2t \\ 
+ x_2 & s \text{ is free} \\
+ x_3 &= 7+3t \\ 
+ x_4 & t \text{ is free}.
 \end{align*}
+Note that in this case we have \textit{two} free variables, $x_2$ and $x_4$, so we introduce two parameters, $s$ and $t$, in our general solution. While we would be correct in saying that this system has infinitely many solutions, we can be more precise about the nature of those solutions. Here, we say that we have a \sword{two-parameter family of solutions}, to indicate the fact that two different parameters are required to describe the most general solution.
+
+\mnote{.5}{\textbf{Note:} It's useful to state the number of parameters in the general solution to a system with infinitely many solutions, since the number of parameters has geometric significance. A one-parameter family of solutions defines a \textit{line}, while a two-parameter family of solutions defines a \textit{plane}.}
 
 To find particular solutions, choose values for our free variables. There is no ``right'' way of doing this; we are ``free'' to choose whatever we wish. 
 
@@ -382,7 +429,7 @@ Another particular solution is:
 
 \example{ex_ex_un_5}{Finding general and particular solutions}{Find the solution to a linear system whose augmented matrix in \rref\ is 
 \[
-\bmx{ccccc} 1&0&0&2&3\\0&1&0&4&5\\ \emx
+\bam{4} 1&0&0&2&3\\0&1&0&4&5\\ \eam
 \]
 and give two particular solutions.}
 {Converting the two rows into equations we have 
@@ -393,17 +440,17 @@ and give two particular solutions.}
 
 We see that $x_1$ and $x_2$ are our dependent variables, for they correspond to the leading 1s. Therefore, $x_3$ and $x_4$ are independent variables. This situation feels a little unusual, for $x_3$ doesn't appear in any of the equations above, but cannot overlook it; it is still a free variable since there is not a leading 1 that corresponds to it. We write our solution as:
 \begin{align*}
- x_1 &= 3-2x_4 \\ 
- x_2 &=5-4x_4 \\ 
- x_3 & \text{ is free} \\ 
- x_4 &  \text{ is free}.
+ x_1 &= 3-2t \\ 
+ x_2 &=5-4t \\ 
+ x_3 & = s \text{ is free} \\ 
+ x_4 & = t \text{ is free}.
 \end{align*}
 
 \mnote{.5}{What kind of situation would lead to a column of all zeros? To have such a column, the original matrix needed to have a column of all zeros, meaning that while we acknowledged the existence of a certain variable, we never actually used it in any equation. In practical terms, we could respond by removing the corresponding column from the matrix and just keep in mind that that variable is free. In very large systems, it might be hard to determine whether or not a variable is actually used and one would not worry about it.
 
 When we learn about \ev s and \el s, we will see that under certain circumstances this situation arises. In those cases we leave the variable in the system just to remind ourselves that it is there.\label{footnote:extra_zeros}}
 
-To find two particular solutions, we pick values for our free variables. Again, there is no ``right'' way of doing this (in fact, there are $\ldots$ infinite ways of doing this) so we give only an example here.
+To find two particular solutions, we pick values for our free variables. Again, there is no ``right'' way of doing this (in fact, there are $\ldots$ infinitely many ways of doing this) so we give only an example here.
 
 \begin{center}
 \begin{minipage}{.4\linewidth}
@@ -443,7 +490,7 @@ Another particular solution is:
 and give two particular solutions.}
 {The corresponding augmented matrix and its reduced row echelon form are given below.
 \[
-\bmx{cccc}1&1&1&5\\1&-1&1&3\\ \emx\quad \quad \overrightarrow{\text{rref}}\quad\quad \bmx{cccc}1&0&1&4\\0&1&0&1\\ \emx
+\bam{3}1&1&1&5\\1&-1&1&3\\ \eam\quad \quad \overrightarrow{\text{rref}}\quad\quad \bam{3}1&0&1&4\\0&1&0&1\\ \eam
 \]
 Converting these two rows into equations, we have 
 \begin{align*}
@@ -452,9 +499,9 @@ Converting these two rows into equations, we have
 \end{align*}
 giving us the solution 
 \begin{align*}
- x_1&= 4-x_3\\
+ x_1&= 4-t\\
  x_2&=1\\
- x_3 &\text{ is free}.
+ x_3 &= t \text{ is free}.
 \end{align*}
 
 Once again, we get a bit of an ``unusual'' solution; while $x_2$ is a dependent variable, it does not depend on any free variable; instead, it is always 1. (We can think of it as depending on the value of 1.) By picking two values for $x_3$, we get two particular solutions.
@@ -483,11 +530,11 @@ Another particular solution is:
  
 %Our general solution may strike us as a bit odd; while we do have infinite solutions, in each one $x_2=1$. There is nothing wrong with this, though; it just may surprise us. \eexset
 
-The constants and coefficients of a matrix work together to determine whether a given system of linear equations has one, infinite, or no solution. The concept will be fleshed out more in later chapters, but in short, the coefficients determine whether a matrix will have exactly one solution or not. In the ``or not'' case, the constants determine whether or not infinite solutions or no solution exists. (So if a given linear system has exactly one solution, it will always have exactly one solution even if the constants are changed.) Let's look at an example to get an idea of how the values of constants and coefficients work together to determine the solution type.
+The constants and coefficients of a matrix work together to determine whether a given system of linear equations has one, infinitely many, or no solution. The concept will be fleshed out more in later chapters, but in short, the coefficients determine whether a matrix will have exactly one solution or not. In the ``or not'' case, the constants determine whether or not infinitely many solutions or no solution exists. (So if a given linear system has exactly one solution, it will always have exactly one solution even if the constants are changed.) Let's look at an example to get an idea of how the values of constants and coefficients work together to determine the solution type.
 
 \medskip
 
-\example{ex_variable_k}{Solving a system with a variable coefficient}{For what values of $k$ will the given system have exactly one solution, infinite solutions, or no solution?
+\example{ex_variable_k}{Solving a system with a variable coefficient}{For what values of $k$ will the given system have exactly one solution, infinitely many solutions, or no solution?
 \[
 \begin{array}{ccccc}
   x_1&+&2x_2&=&3\\ 
@@ -497,18 +544,18 @@ The constants and coefficients of a matrix work together to determine whether a 
 {We answer this question by forming the augmented matrix and starting the process of putting it into \rref. Below we see the augmented matrix and one elementary row operation that starts the Gaussian elimination process.
 
 \[
-\bmx{ccc} 1&2&3\\3&k&9\emx \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bmx{ccc} 1&2&3\\0&k-6&0\emx
+\bam{2} 1&2&3\\3&k&9\eam \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bam{2} 1&2&3\\0&k-6&0\eam
 \]
 
-This is as far as we need to go. In looking at the second row, we see that if $k=6$, then that row contains only zeros and $x_2$ is a free variable; we have infinite solutions. If $k\neq 6$, then our next step would be to make that second row, second column entry a leading one. We don't particularly care about the solution, only that we would have exactly one as both $x_1$ and $x_2$ would correspond to a leading one and hence be dependent variables.
+This is as far as we need to go. In looking at the second row, we see that if $k=6$, then that row contains only zeros and $x_2$ is a free variable; we have infinitely many solutions. If $k\neq 6$, then our next step would be to make that second row, second column entry a leading one. We don't particularly care about the solution, only that we would have exactly one as both $x_1$ and $x_2$ would correspond to a leading one and hence be dependent variables.
 
-Our final analysis is then this. If $k\neq 6$, there is exactly one solution; if $k=6$, there are infinite solutions. In this example, it is not possible to have no solutions.}
+Our final analysis is then this. If $k\neq 6$, there is exactly one solution; if $k=6$, there are infinitely many solutions. In this example, it is not possible to have no solutions.}
 
 \medskip
 
 As an extension of the previous example, consider the similar augmented matrix where the constant 9 is replaced with a 10. Performing the same elementary row operation gives
 \[
-\bmx{ccc} 1&2&3\\3&k&10\emx \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bmx{ccc} 1&2&3\\0&k-6&1\emx.
+\bam{2} 1&2&3\\3&k&10\eam \qquad \overrightarrow{-3R_1+R_2\rightarrow R_2} \qquad \bam{2} 1&2&3\\0&k-6&1\eam.
 \]
 
 As in the previous example, if $k\neq6$, we can make the second row, second column entry a leading one and hence we have one solution. However, if $k=6$, then our last row is $[0\ 0\ 1]$, meaning we have no solution.\\
