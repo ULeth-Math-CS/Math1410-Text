@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  17 AUG 2016 15:49
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  17 AUG 2016 16:24
 entering extended mode
 **Math1410text.tex
 (Math1410text.tex
@@ -1547,24 +1547,24 @@ ex-text;" at 10.0pt
 \symLatin:m:it=\mathgroup9
 \symGreek:m:n=\mathgroup10
 \symGreek:m:it=\mathgroup11
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 42.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/Calibri(0)/bx/n on input lin
-e 50.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 50.
+e 42.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 42.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 50.
+(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 42.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 50.
+(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 42.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 42.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 50.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 42.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 50.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 42.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/Calibri(0)/bx/it on input l
-ine 50.
+ine 42.
 \symOperators:m:n=\mathgroup12
 Requested font "[cmmi10]" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1622,49 +1622,49 @@ Requested font "[cmmi10]/I/OT" at 10.0pt
 . and font adjustment code:
 . 
 .................................................
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 50.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 42.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `normal'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 50.
+e 42.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 50.
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 50.
+e 42.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 42.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `normal'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 50.
+ine 42.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 50.
+ine 42.
 Requested font "[cmmi10]/OT:mapping=tex-text;" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 \c@HW=\count336
 
 (Math1410text.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 69.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 61.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 61.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\tipa\t3cmr.fd"
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    ... okay on input line 61.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1701,7 +1701,7 @@ LaTeX Font Info:    ... okay on input line 69.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box95
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 61.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1711,9 +1711,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count337
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 61.
+LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \nameref on input line 61.
 
 (Math1410text.out) (Math1410text.out)
 \@outlinefile=\write6
@@ -7714,13 +7714,13 @@ Package atenddvi Info: Last page = 364.
  [16
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 207.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 199.
 
 (Math1410text.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 207.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 199.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 199.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
  ) 
 Here is how much of TeX's memory you used:
  52827 strings out of 428755
