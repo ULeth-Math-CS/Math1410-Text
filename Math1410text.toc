@@ -27,8 +27,8 @@
 \contentsline {section}{\numberline {5.1}Introduction to Linear Equations}{185}{section.5.1}
 \contentsline {section}{\numberline {5.2}Using Matrices To Solve Systems of Linear Equations}{190}{section.5.2}
 \contentsline {section}{\numberline {5.3}Elementary Row Operations and Gaussian Elimination}{196}{section.5.3}
-\contentsline {section}{\numberline {5.4}Existence and Uniqueness of Solutions}{205}{section.5.4}
-\contentsline {section}{\numberline {5.5}Applications of Linear Systems}{217}{section.5.5}
+\contentsline {section}{\numberline {5.4}Existence and Uniqueness of Solutions}{206}{section.5.4}
+\contentsline {section}{\numberline {5.5}Applications of Linear Systems}{218}{section.5.5}
 \contentsline {chapter}{\numberline {6}Matrix Algebra}{233}{chapter.6}
 \contentsline {section}{\numberline {6.1}Vector Solutions to Linear Systems}{233}{section.6.1}
 \contentsline {section}{\numberline {6.2}Solving Matrix Equations $\ensuremath {A}\ensuremath {X}=\ensuremath {B}$}{253}{section.6.2}
@@ -41,5 +41,7 @@
 \contentsline {section}{\numberline {7.4}Properties of the Determinant}{301}{section.7.4}
 \contentsline {section}{\numberline {7.5}Applications of the Determinant}{312}{section.7.5}
 \contentsline {chapter}{\numberline {8}Eigenvalues and Eigenvectors}{319}{chapter.8}
+\contentsline {section}{\numberline {8.1}Eigenvalues and Eigenvectors}{319}{section.8.1}
+\contentsline {section}{\numberline {8.2}Properties of Eigenvalues and Eigenvectors}{336}{section.8.2}
 \contentsline {chapter}{\numberline {A}Answers To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.13}{section*.296}
+\contentsline {chapter}{Index}{A.13}{section*.303}

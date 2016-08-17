@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  16 AUG 2016 16:09
+This is XeTeX, Version 3.14159265-2.6-0.99992 (MiKTeX 2.9 64-bit) (preloaded format=xelatex 2015.11.18)  17 AUG 2016 15:49
 entering extended mode
 **Math1410text.tex
 (Math1410text.tex
@@ -153,11 +153,6 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\cancel\cancel.sty"
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xr.sty"
-Package: xr 1994/05/28 v5.02 eXternal References (DPC)
-)
-Package xr Info: IMPORTING LABELS FROM Math2570_old_ref.aux on input line 29.
-
 (headers/Page_Size_Calculus.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -1552,24 +1547,24 @@ ex-text;" at 10.0pt
 \symLatin:m:it=\mathgroup9
 \symGreek:m:n=\mathgroup10
 \symGreek:m:it=\mathgroup11
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 54.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/Calibri(0)/bx/n on input lin
-e 54.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 54.
+e 50.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 54.
+(Font)                  OT1/cmr/m/it --> EU1/Calibri(0)/m/it on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 54.
+(Font)                  OT1/cmr/bx/it --> EU1/Calibri(0)/m/it on input line 50.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 54.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 54.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 54.
+(Font)                  OT1/cmr/bx/n --> EU1/Calibri(0)/bx/n on input line 50.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/Calibri(0)/bx/it on input l
-ine 54.
+ine 50.
 \symOperators:m:n=\mathgroup12
 Requested font "[cmmi10]" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1627,49 +1622,49 @@ Requested font "[cmmi10]/I/OT" at 10.0pt
 . and font adjustment code:
 . 
 .................................................
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 54.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:n' on input line 50.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `normal'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 54.
+e 50.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:n' in version `bold'
 (Font)                  EU1/Calibri(0)/m/n --> EU1/[cmmi10](0)/m/n on input lin
-e 54.
-LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 54.
+e 50.
+LaTeX Font Info:    Redeclaring symbol font `Greek:m:it' on input line 50.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `normal'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 54.
+ine 50.
 LaTeX Font Info:    Overwriting symbol font `Greek:m:it' in version `bold'
 (Font)                  EU1/Calibri(0)/m/it --> EU1/[cmmi10](0)/m/it on input l
-ine 54.
+ine 50.
 Requested font "[cmmi10]/OT:mapping=tex-text;" at 10.0pt
  -> C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 \c@HW=\count336
 
 (Math1410text.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 73.
-LaTeX Font Info:    ... okay on input line 73.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 73.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 73.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 69.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 69.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\tipa\t3cmr.fd"
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    ... okay on input line 69.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1706,7 +1701,7 @@ LaTeX Font Info:    ... okay on input line 73.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box95
-Package hyperref Info: Link coloring OFF on input line 73.
+Package hyperref Info: Link coloring OFF on input line 69.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1716,9 +1711,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count337
 )
-LaTeX Info: Redefining \ref on input line 73.
-LaTeX Info: Redefining \pageref on input line 73.
-LaTeX Info: Redefining \nameref on input line 73.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
 
 (Math1410text.out) (Math1410text.out)
 \@outlinefile=\write6
@@ -1885,15 +1880,43 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 
 
 ] (text/copyright_pageI.tex
-File: text/by-nc.pdf Graphic file (type QTm)
- <use  "text/by-nc.pdf" >
-Underfull \hbox (badness 3838) in paragraph at lines 10--11
-[]\EU1/Calibri(0)/m/n/10 Licensed to the public under Creative Commons
+File: figures/license.pdf Graphic file (type QTm)
+ <use  "figures/license.pdf" >
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+[]\EU1/Calibri(0)/m/n/10 Licensed under the Creative Commons Attribution-
  []
 
 
-Underfull \hbox (badness 1701) in paragraph at lines 10--11
-\EU1/Calibri(0)/m/n/10 Attribution-Noncommercial 4.0 International Public
+Overfull \hbox (6.72217pt too wide) in paragraph at lines 2--12
+ $[]$ $[]$ 
+ []
+
+File: text/by-nc.pdf Graphic file (type QTm)
+<use  "text/by-nc.pdf" >
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+[]\EU1/Calibri(0)/m/n/10 Licensed under the Creative Commons Attribution-
+ []
+
+
+Overfull \hbox (6.72217pt too wide) in paragraph at lines 20--30
+ $[]$ $[]$ 
+ []
+
+File: text/by-nc.pdf Graphic file (type QTm)
+<use  "text/by-nc.pdf" >
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
+[]\EU1/Calibri(0)/m/n/10 Licensed under the Creative Commons Attribution-
+ []
+
+
+Overfull \hbox (6.72217pt too wide) in paragraph at lines 37--47
+ $[]$ $[]$ 
+ []
+
+
+Overfull \hbox (9.98218pt too wide) in paragraph at lines 55--56
+[]\EU1/Calibri(0)/m/n/10 This work is licensed under the Creative Commons Attri
+bution-Noncommercial-
  []
 
 ) [2
@@ -1956,7 +1979,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[5
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5
 
 
 
@@ -1965,12 +1991,12 @@ Requested font "Calibri/B/OT:script=latn;language=DFLT;mapping=tex-text;mapping
 =tex-text;" at 12.0pt
  -> C:/WINDOWS/Fonts/calibrib.ttf
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 
-Overfull \hbox (18.22754pt too wide) in paragraph at lines 23--24
+Overfull \hbox (18.22754pt too wide) in paragraph at lines 35--36
 [][]\EU1/Calibri(0)/m/n/10 http://www.vmi.edu/academics/departments/applied-mat
 hematics/affordable-
  []
@@ -2130,9 +2156,6 @@ Overfull \hbox (1.39998pt too wide) in paragraph at lines 155--156
 Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
-
-
-LaTeX Warning: Reference `sec:eigen' on page 6 undefined on input line 161.
 
 
 Underfull \hbox (badness 2181) has occurred while \output is active
@@ -3908,11 +3931,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--299
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
+
+Underfull \vbox (badness 1194) has occurred while \output is active []
+
 File: figures/figcrossp4b.pdf Graphic file (type QTm)
+
 <use  "figures/figcrossp4b.pdf" >
 File: figures/figcrossp4a_3D.pdf Graphic file (type QTm)
  <use  "figures/figcrossp4a_3D.pdf" >
@@ -3923,7 +3950,7 @@ Overfull \hbox (1.99965pt too wide) has occurred while \output is active
 
 File: figures/figcrossp5.pdf Graphic file (type QTm)
 <use  "figures/figcrossp5.pdf" > [85]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
@@ -3939,17 +3966,17 @@ File: figures/parallelepiped2.pdf Graphic file (type QTm)
 File: figures/figcrossp6_3D.pdf Graphic file (type QTm)
  <use  "figures/figcrossp6_3D.pdf" >
 <figures/figcrossp6_3D.prc> [86]
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 384--385
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 [87]
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
@@ -4863,9 +4890,6 @@ Overfull \hbox (6.66595pt too wide) in paragraph at lines 65--65
  [] 
  []
 
-
-LaTeX Warning: Reference `sec:eigen' on page 153 undefined on input line 71.
-
 [153]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5005,10 +5029,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 509--510
  []
 
 [162]
-Underfull \hbox (badness 10000) in paragraph at lines 513--514
-
- []
-
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -5605,12 +5625,12 @@ Overfull \hbox (4.16396pt too wide) in paragraph at lines 146--164
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [192]
-Overfull \hbox (2.52136pt too wide) in paragraph at lines 407--407
+Overfull \hbox (2.52136pt too wide) in paragraph at lines 405--405
  [] 
  []
 
 [193]
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
@@ -5685,12 +5705,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--83
 
  []
 
-[198]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [198]
+[199]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-[199]
 Requested font "Calibri/BI/OT:script=latn;language=DFLT;mapping=tex-text;mappin
 g=tex-text;" at 10.0pt
  -> C:/WINDOWS/Fonts/calibriz.ttf
@@ -5719,12 +5742,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--414
 
  []
 
-
+[203]
 Underfull \hbox (badness 10000) in paragraph at lines 418--419
 
  []
 
-[203]
+[204]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -5757,16 +5780,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 418--419
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [204
+ [205
 
-]) (text/01_Existence_Uniqueness_Solutions.tex [205
+]) (text/01_Existence_Uniqueness_Solutions.tex [206
 
 ]
 Overfull \hbox (6.66595pt too wide) in paragraph at lines 60--60
  [] 
  []
 
-[206]
+[207]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 105--106
 [][][]
  []
@@ -5796,12 +5819,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-[207]
+[208]
 Underfull \hbox (badness 1072) has occurred while \output is active
 \EU1/Calibri(0)/m/n/9 are then seen as dependent variables,
  []
 
-[208]
+[209]
 Underfull \hbox (badness 10000) in paragraph at lines 243--243
 
  []
@@ -5821,7 +5844,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
-[209]
+[210]
 Underfull \hbox (badness 10000) in paragraph at lines 267--267
 
  []
@@ -5851,7 +5874,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
  []
 
-[210]
+[211]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 323--324
 [][][]
  []
@@ -5861,7 +5884,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
-[211]
+[212]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 368--369
 [][][]
  []
@@ -5882,13 +5905,13 @@ Underfull \hbox (badness 1237) has occurred while \output is active
 umber
  []
 
-[212] [213]
+[213] [214]
 Overfull \hbox (7.26248pt too wide) in paragraph at lines 533--534
 []\EU1/Calibri(0)/m/n/10 The constants and coefficients of a matrix work togeth
 er to determine whether
  []
 
-[214]
+[215]
 Underfull \hbox (badness 10000) in paragraph at lines 561--562
 
  []
@@ -5898,7 +5921,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 564--565
 
  []
 
-[215]
+[216]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -5931,9 +5954,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 564--565
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [216
+ [217
 
-]) (text/01_Solving_Systems.tex [217
+]) (text/01_Solving_Systems.tex [218
 
 ]
 Overfull \hbox (1.39998pt too wide) in paragraph at lines 97--98
@@ -5945,17 +5968,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-[218] [219] [220] [221] [222] [223]
+[219] [220] [221] [222] [223] [224]
 Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
-[224] [225]
+[225] [226]
 Overfull \hbox (5.92204pt too wide) detected at line 392
 []  []  [] \OML/cmm/m/it/10 :
  []
 
-[226] [227] [228] [229]
+[227] [228] [229] [230]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -5988,15 +6011,14 @@ Overfull \hbox (5.92204pt too wide) detected at line 392
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [230
+ [231
 
-] [231]) [232
-
-
-
-]
+] [232])
 Chapter 6.
 (text/02_Vector_Solutions.tex [233
+
+
+
 
 ] [234] [235]
 Underfull \hbox (badness 10000) in paragraph at lines 183--183
@@ -7210,15 +7232,354 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
 ])
 Chapter 8.
+(text/04_Eigen.tex
+Underfull \hbox (badness 4391) has occurred while \output is active
+[]\EU1/Calibri(0)/m/n/9 Eigenvalues and eigenvectors are fre-
+ []
+
+
+Underfull \hbox (badness 1178) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 quently encountered in the context of
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 “characteristic directions” for linear
+ []
+
+
+Underfull \hbox (badness 2707) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 this section, the reader might find it
+ []
+
+
+Underfull \hbox (badness 1454) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 to the idea of \EU1/Calibri(0)/m/it/9 invariant subspaces
+ \EU1/Calibri(0)/m/n/9 for
+ []
+
 [319
 
 
 
 
-] [320
+]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 51--52
+[][][]
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+
+Underfull \hbox (badness 2351) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 ics in this text having “many applica-
+ []
+
+
+Underfull \hbox (badness 3354) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 tions to the real world.” You don’t
+ []
+
+
+Underfull \hbox (badness 1502) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 need to take our word for it on this.
+ []
+
+
+Underfull \hbox (badness 2837) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 The reader is encouraged to look up
+ []
+
+
+Underfull \hbox (badness 1117) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 Schrödinger equation in Quantum Me-
+ []
+
+[320] [321] [322]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 184--185
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 200--201
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+
+ []
+
+[323]
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+
+ []
+
+[324]
+Underfull \hbox (badness 10000) in paragraph at lines 334--334
+
+ []
+
+[325]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [326]
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 422.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 422
+.
+
+[327] [328]
+Overfull \hbox (47.83936pt too wide) in paragraph at lines 580--580
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+[329]
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--580
+
+ []
+
+[330]
+Overfull \hbox (13.54915pt too wide) in paragraph at lines 580--580
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+
+ []
+
+[331]
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+
+ []
+
+
+Overfull \hbox (4.38184pt too wide) in paragraph at lines 661--661
+\EU1/Calibri(0)/m/n/10 two rows tell us that $[][] \OT1/cmr/m/n/10 = []$ \EU1/C
+alibri(0)/m/n/10 and $[][] \OT1/cmr/m/n/10 = []$\EU1/Calibri(0)/m/n/10 , respec
+tively. Notice that no row/equation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 661--661
+
+ []
+
+[332] [333]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.0pt, 470.295pt, 72.0pt)
+* v-part:(T,H,B)=(54.2025pt, 668.4975pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=470.295pt
+* \textheight=668.4975pt
+* \oddsidemargin=-0.26999pt
+* \evensidemargin=-0.26999pt
+* \topmargin=-48.13498pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=29.0pt
+* \marginparwidth=150.0pt
+* \marginparsep=32.0pt
+* \columnsep=20.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ [334
+
+] [335]) (text/04_Eigen_Properties.tex
+Underfull \vbox (badness 6300) has occurred while \output is active []
+
+ [336
 
 ]
+[337]
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+[338]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 181--182
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \hbox (badness 1442) has occurred while \output is active
+\EU1/Calibri(0)/m/n/9 wondering about the case where $[]$ is
+ []
+
+[339] [340]
+Overfull \hbox (1.39998pt too wide) in paragraph at lines 247--248
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
+
+ []
+
+[341]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(72.0pt, 470.295pt, 72.0pt)
+* v-part:(T,H,B)=(54.2025pt, 668.4975pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=470.295pt
+* \textheight=668.4975pt
+* \oddsidemargin=-0.26999pt
+* \evensidemargin=-0.26999pt
+* \topmargin=-48.13498pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=29.0pt
+* \marginparwidth=150.0pt
+* \marginparsep=32.0pt
+* \columnsep=20.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ [342
+
+])
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -7256,6 +7617,9 @@ Appendix A.
 (Math1410text.answers
 File: figures/CartesianPlane-46.pdf Graphic file (type QTm)
  <use  "figures/CartesianPlane-46.pdf" > [1
+
+
+
 
 
 ]
@@ -7307,7 +7671,7 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [9] [10]) [11]
+ [9] [10] [11]) [12]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: custom
@@ -7340,39 +7704,31 @@ Missing character: There is no ; in font nullfont!
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [12
+ (Math1410text.ind [13
 
 
 
-] (Math1410text.ind [13
 
 ] [14] [15]
-Package atenddvi Info: Last page = 342.
+Package atenddvi Info: Last page = 364.
  [16
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 228.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 228.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 207.
 
 (Math1410text.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 228.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 228.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 228.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 207.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
  ) 
 Here is how much of TeX's memory you used:
- 53462 strings out of 428755
- 1134605 string characters out of 3164219
- 1502703 words of memory out of 3000000
- 54853 multiletter control sequences out of 15000+200000
+ 52827 strings out of 428755
+ 1128079 string characters out of 3164219
+ 1443864 words of memory out of 3000000
+ 54175 multiletter control sequences out of 15000+200000
  19680 words of font info for 147 fonts, out of 3000000 for 9000
  1096 hyphenation exceptions out of 8191
- 62i,27n,110p,10385b,1012s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,27n,110p,10385b,1019s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Math1410text.pdf (342 pages).
+Output written on Math1410text.pdf (364 pages).

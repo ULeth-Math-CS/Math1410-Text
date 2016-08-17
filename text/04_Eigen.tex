@@ -1,8 +1,10 @@
-We have often explored new ideas in matrix algebra by making connections to our previous algebraic experience. Adding two numbers, $x+y$, led us to adding vectors $\vx+\vy$ and adding matrices $\tta+\ttb$. We explored multiplication, which then led us to solving the matrix equation $\ttaxb$, which was reminiscent of solving the algebra equation $ax=b$. 
+We have often explored new ideas in Linear Algebra by making connections to our previous algebraic experience. Adding two numbers, $x+y$, led us to adding vectors $\vx+\vy$ and adding matrices $\tta+\ttb$. We explored multiplication, which then led us to solving the matrix equation $\ttaxb$, which was reminiscent of solving the algebra equation $ax=b$. 
 
-This chapter is motivated by another analogy. Consider: when we multiply an unknown number $x$ by another number such as 5, what do we know about the result? Unless, $x=0$, we know that in some sense $5x$ will be ``5 times bigger than $x$.'' Applying this to vectors, we would readily agree that $5\vx$ gives a vector that is ``5 times bigger than \vx.'' Each entry in \vx\ is multiplied by 5.  
+This chapter is motivated by another analogy. Consider: when we multiply an unknown number $x$ by another number such as 5, what do we know about the result? Unless, $x=0$, we know that in some sense $5x$ will be ``5 times bigger than $x$.'' Applying this to vectors, we would readily agree that $5\vx$ gives a vector that is ``5 times bigger than \vx''; we know from Theorem \ref{thm:vecscale} that $\len{5\vx}  = 5\len{\vx}$.
 
-Within the matrix algebra context, though, we have two types of multiplication: scalar and matrix multiplication. What happens to \vx\ when we multiply it by a matrix \tta? Our first response is likely along the lines of ``You just get another vector. There is no definable relationship.'' We might wonder %\footnote{then again, we might not}
+\mnote{.3}{Eigenvalues and eigenvectors are frequently encountered in the context of ``characteristic directions'' for linear transformations. Before continuing with this section, the reader might find it useful to review the list of linear transformations of the Cartesian plane on page \pageref{page:plane_transformations} in Section \ref{sec:geom_3}. For each of the transformations listed, see if you can predict which vectors will be transformed into scalar multiples of themselves: for which $\vx\in\R^2$ is $T(\vx) = k\vx$? (We'll answer this later in the section.) This question leads to the idea of \textit{invariant subspaces} for a linear transformation $T:\R^n\to \R^n$. These are subspaces $V\subseteq \R^n$ such that $T(\vx)\in V$ for each $\vx\in V$. Such subspaces are of great importance in many areas of Mathematics and Physics.}
+
+Within the linear algebra context, though, we have two types of multiplication: scalar and matrix multiplication. What happens to \vx\ when we multiply it by a matrix \tta? Our first response is likely along the lines of ``You just get another vector. There is no definable relationship.'' We might wonder %\footnote{then again, we might not}
  if there is ever the case where a matrix -- vector multiplication is very similar to a scalar -- vector multiplication. That is, do we ever have the case where $\tta\vx = a\vx$, where $a$ is some scalar? That is the motivating question of this chapter.
 
 \section{Eigenvalues and Eigenvectors}\label{sec:eigen}
@@ -58,19 +60,19 @@ Why do we use the Greek letter \lda\ (lambda)? It is pure tradition. Above, we u
 Note that our definition requires that \tta\ be a square matrix.
 % This must be since in order for $\tta\vx$ to equal $\lda\vx$, $\vx$ and $\tta\vx$ must be the same size.
 If \tta\ isn't square then $\tta\vx$ and $\lambda\vx$ will have different sizes, and so they cannot be equal. Also note that \vx\ must be nonzero. Why? What if $\vx = \zero$? Then \textit{no matter what} \lda\ is, $\tta\vx = \lda\vx$. This would then imply that \textit{every number} is an eigenvalue; if every number is an eigenvalue, then we wouldn't need a definition for 
-it. (Recall note \ref{footnote:special} on page \pageref{footnote:special}.) Therefore we specify that $\vx\neq \zero$.
+it.  Therefore we specify that $\vx\neq \zero$.
 
-Our last comment before trying to find eigenvalues and eigenvectors for given matrices deals with ``why we care.'' Did we stumble upon a mathematical curiosity, or does this somehow help us build better bridges, heal the sick, send astronauts into orbit, design optical equipment, and understand quantum mechanics? The answer, of course, is ``Yes.'' (Except for the ``understand quantum mechanics'' part. Nobody truly understands that stuff; they just \textit{probably} understand it.) This is a wonderful topic in and of itself: we need no external application to appreciate its worth. At the same time, it has many, many applications to ``the real world.'' A simple Internet seach on ``applications of eigenvalues'' with confirm this.
+Our last comment before trying to find eigenvalues and eigenvectors for given matrices deals with ``why we care.'' Did we stumble upon a mathematical curiosity, or does this somehow help us build better bridges, heal the sick, send astronauts into orbit, design optical equipment, and understand quantum mechanics? The answer, of course, is ``Yes.'' (Except for the ``understand quantum mechanics'' part. Nobody truly understands that stuff; they just \textit{probably} understand it.) This is a wonderful topic in and of itself: we need no external application to appreciate its worth. At the same time, it has many, many applications to ``the real world.''
+
+\mnote{.35}{We frequently make claims about topics in this text having ``many applications to the real world.'' You don't need to take our word for it on this. The reader is encouraged to look up the \href{https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors}{\underline{Wikipedia page}} on eigenvalues and eigenvectors. (This is one of the better written and accessible Wikipedia pages on a mathematics topic we've encountered, by the way!) Scrolling down to the section on applications reveals an extensive list of applications, from Physics (analyzing inertial tensors in Mechanics, the Schr\"odinger equation in Quantum Mechanics, ...), Engineering, Chemistry and Geology, to image processing, data analysis, and epidemiology. Even Google's famous ``Page Rank'' algorithm involves eigenvalues and eigenvectors. For information on this, search (on Google?) for the ``\$25,000,000,000 Eigenvector''.}
 
 Back to our math. Given a square matrix \tta, we want to find a nonzero vector \vx\ and a scalar \lda\ such that $\tta\vx = \lda\vx$. We will solve this using the skills we developed in Chapter \ref{chapter:arithmetic}.
 
-\[
-\begin{array}{rclcc}
-\tta\vx & = & \lda\vx & &\parbox{100pt}{\centering\scriptsize original equation}\\
-\tta\vx - \lda\vx & = & \zero & & \parbox{100pt}{\centering\scriptsize subtract $\lda\vx$ from both sides}\\
-(\tta-\lda\tti)\vx & = & \zero & & \parbox{100pt}{\centering\scriptsize factor out \vx}\\
-\end{array}
-\]
+\begin{align*}
+\tta\vx & =  \lda\vx \tag*{original equation}\\
+\tta\vx - \lda\vx & = \zero \tag*{subtract $\lda\vx$ from both sides}\\
+(\tta-\lda\tti)\vx & = \zero \tag*{factor out \vx}\\
+\end{align*}
 Think about this last factorization. We are likely tempted to say 
 \[
 \tta\vx-\lda\vx = (\tta-\lda)\vx,
@@ -83,13 +85,13 @@ We know from our previous work that this type of equation always has a solution,
 
 This means that we want solutions to $(\tta-\lda\tti)\vx=\zero$ other than $\vx=\zero$. Recall that Theorem \ref{thm:inverse_solution} says that if the matrix $(\tta-\lda\tti)$ is invertible, then the \textit{only} solution to $(\tta-\lda\tti)\vx=\zero$ is $\vx=\zero$. Therefore, in order to have other solutions, we need $(\tta-\lda\tti)$ to not be invertible. 
 
-Finally, recall from Theorem \ref{thm:determinant_properties} that noninvertible matrices all have a determinant of 0. Therefore, if we want to find \el s \lda\ and \ev s \vx, we need $\det{\tta-\lda\tti} = 0$.
+Finally, recall from Theorem \ref{thm:determinant_properties} that noninvertible matrices all have a determinant of 0. Therefore, if we want to find \el s \lda\ and \ev s \vx, we need $\det(\tta-\lda\tti) = 0$.
 
-Let's start our practice of this theory by finding \lda\ such that $\det{\tta-\lda\tti} = 0$; that is, let's find the \el s of a matrix.
+Let's start our practice of this theory by finding \lda\ such that $\det(\tta-\lda\tti) = 0$; that is, let's find the \el s of a matrix.
 
 \medskip
 
-\example{ex_find_el}{Computing the eigenvalues of a matrix}{Find the \el s of \tta, that is, find \lda\ such that $\det{\tta-\lda\tti} = 0$, where 
+\example{ex_find_el}{Computing the eigenvalues of a matrix}{Find the \el s of \tta, that is, find \lda\ such that $\det(\tta-\lda\tti) = 0$, where 
 \[
 \tta = \bmx{cc}1&4\\2&3\emx.
 \]}
@@ -102,19 +104,19 @@ Let's start our practice of this theory by finding \lda\ such that $\det{\tta-\l
 
 Therefore, 
 \begin{align*}
-\det{\tta-\lda\tti} &= \bdt{cc}1-\lda & 4 \\ 2&3-\lda\edt \\
+\det(\tta-\lda\tti) &= \bdt{cc}1-\lda & 4 \\ 2&3-\lda\edt \\
 										&= (1-\lda)(3-\lda)-8\\
 										&= \lda^2-4\lda-5
 \end{align*}
 
-Since we want $\det{\tta-\lda\tti}=0$, we want $\lda^2-4\lda-5=0$. This is a simple quadratic equation that is easy to factor:
+Since we want $\det(\tta-\lda\tti)=0$, we want $\lda^2-4\lda-5=0$. This is a simple quadratic equation that is easy to factor:
 \begin{align*}
 \lda^2-4\lda-5 &= 0\\
 (\lda-5)(\lda+1) & = 0\\
 \lda &= -1,\ 5
 \end{align*}
 
-According to our above work, $\det{\tta-\lda\tti}=0$ when $\lda = -1,\ 5$. Thus, the \el s of \tta\ are $-1$ and 5.}
+According to our above work, $\det(\tta-\lda\tti)=0$ when $\lda = -1,\ 5$. Thus, the \el s of \tta\ are $-1$ and 5.}
 
 \medskip
 
@@ -146,23 +148,27 @@ Therefore, we need to solve the equation $(\tta-\lda\tti)\vx=\zero$ for $\vx$ wh
 
 To solve $(\tta-5\tti)\vx=\zero$, we form the augmented matrix and put it into \rref: 
 \[
-\bmx{ccc}-4&4&0\\2&-2&0\emx \quad\quad \overrightarrow{\text{rref}} \quad\quad \bmx{ccc}1&-1&0\\0&0&0\emx.
+\bmx{cc|c}-4&4&0\\2&-2&0\emx \quad\quad \overrightarrow{\text{rref}} \quad\quad \bmx{cc|c}1&-1&0\\0&0&0\emx.
 \]
 Thus 
 \begin{align*}
-x_1 &= x_2\\
-x_2 &\text{ is free}
+x_1 &= t\\
+x_2 &= t \text{ is free}
 \end{align*}
 and
 \[
-\vx = \bmx{c}x_1\\x_2\emx = x_2\bmx{c}1\\1\emx.
+\vx = \bmx{c}x_1\\x_2\emx = t\bmx{c}1\\1\emx.
 \]
-We have infinite solutions to the equation $\tta\vx = 5\vx$; any nonzero scalar multiple of the vector $\bmx{c}1\\1\emx$ is a solution. We can do a few examples to confirm this:
+We have infinitely many solutions to the equation $\tta\vx = 5\vx$; any nonzero scalar multiple of the vector $\bmx{c}1\\1\emx$ is a solution. We can do a few examples to confirm this:
 \begin{align*}
 \bmx{cc}1&4\\2&3\emx\bmx{c}2\\2\emx &= \bmx{c}10\\10\emx = 5\bmx{c}2\\2\emx;\\
 \bmx{cc}1&4\\2&3\emx\bmx{c}7\\7\emx &= \bmx{c}35\\35\emx = 5\bmx{c}7\\7\emx;\\
 \bmx{cc}1&4\\2&3\emx\bmx{c}-3\\-3\emx &= \bmx{c}-15\\-15\emx = 5\bmx{c}-3\\-3\emx.
 \end{align*}
+Of course, this works in general. For any $t$, we have
+\[
+\bmx{cc}1&4\\2&3\emx\left(t\bmx{c} 1\\1\emx\right) = t\left(\bmx{cc} 1&4\\2&3\emx\bmx{c}1\\1\emx\right) = t\left(5\bmx{c}1\\1\emx\right) = 5\left(t\bmx{c}1\\1\emx\right).
+\]
 \vskip -\baselineskip
 }
  
@@ -170,12 +176,12 @@ We have infinite solutions to the equation $\tta\vx = 5\vx$; any nonzero scalar 
 
  %\enlargethispage\baselineskip %\eexset
 
-Our method of finding the \el s of a matrix \tta\ boils down to determining which values of $\lambda$ give the matrix $(\tta - \lambda\tti)$ a determinant of 0. In computing $\det{\tta-\lambda\tti}$, we get a polynomial in $\lambda$ whose roots are the \el s of \tta. This polynomial is important and so it gets its own name.
+Our method of finding the \el s of a matrix \tta\ boils down to determining which values of $\lambda$ give the matrix $(\tta - \lambda\tti)$ a determinant of 0. In computing $\det(\tta-\lambda\tti)$, we get a polynomial in $\lambda$ whose roots are the \el s of \tta. This polynomial is important and so it gets its own name.
 
 \smallskip
 
 \definition{def:char_poly}{Characteristic Polynomial}{\index{characteristic polynomial}
-Let \tta\ be an $n\times n$ matrix. The \textit{characteristic polynomial} of \tta\ is the $n^\text{th}$ degree polynomial $p(\lambda) = \det{\tta-\lambda\tti}$.}
+Let \tta\ be an $n\times n$ matrix. The \textit{characteristic polynomial} of \tta\ is the $n^\text{th}$ degree polynomial $p(\lambda) = \det(\tta-\lambda\tti)$.}
 
 \smallskip
 
@@ -199,55 +205,51 @@ Let \tta\ be an $n\times n$ matrix.
 \[
 \tta = \bmx{cc}-3&15\\3&9\emx.
 \] }
-{To find the eigenvalues, we must compute $\det{\tta-\lambda\tti}$ and set it equal to 0. 
+{To find the eigenvalues, we must compute $\det(\tta-\lambda\tti)$ and set it equal to 0. 
 \begin{align*}
-\det{\tta-\lambda\tti} &= \bdt{cc}-3-\lambda & 15\\3 & 9-\lambda\edt\\
+\det(\tta-\lambda\tti) &= \bdt{cc}-3-\lambda & 15\\3 & 9-\lambda\edt\\
 												&= (-3-\lambda)(9-\lambda)-45 \\
 												&= \lambda^2-6\lambda-27-45\\
 												&= \lambda^2-6\lambda-72\\
 												&= (\lambda-12)(\lambda+6)
 \end{align*}
 
-Therefore, $\det{\tta-\lambda\tti} = 0$ when $\lambda = -6$ and $12$; these are our eigenvalues. (We should note that $p(\lambda) =\lambda^2-6\lambda-72$ is our characteristic polynomial.) It sometimes helps to give them ``names,'' so we'll say $\lambda_1 = -6$ and $\lambda_2 = 12$. Now we find eigenvectors.\\
+Therefore, $\det(\tta-\lambda\tti) = 0$ when $\lambda = -6$ and $12$; these are our eigenvalues. (We should note that $p(\lambda) =\lambda^2-6\lambda-72$ is our characteristic polynomial.) 
 
-For $\lambda_1=-6$:
+It sometimes helps to give them ``names,'' so we'll say $\lambda_1 = -6$ and $\lambda_2 = 12$. Now we find eigenvectors.\\
 
-
-
-We need to solve the equation $(\tta - (-6)\tti)\vx = \zero$. To do this, we form the appropriate augmented matrix and put it into \rref.
+For $\lambda_1=-6$, we need to solve the equation $(\tta - (-6)\tti)\vx = \zero$. To do this, we form the appropriate augmented matrix and put it into \rref.
 
 \[
-\bmx{ccc}3&15&0\\3&15&0\emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccc}1&5&0\\0&0&0\emx.
+\bmx{cc|c}3&15&0\\3&15&0\emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{cc|c}1&5&0\\0&0&0\emx.
 \]
 
 Our solution is 
 \begin{align*}
-x_1 &= -5x_2\\
-x_2 & \text{ is free;}
+x_1 &= -5t\\
+x_2 &= t \quad \text{ is free;}
 \end{align*}
 in vector form, we have 
 \[
-\vx = x_2\bmx{c}-5\\1\emx.
+\vx = t\bmx{c}-5\\1\emx.
 \]
-We may pick any nonzero value for $x_2$ to get an eigenvector; a simple option is $x_2 = 1$. Thus we have the eigenvector 
+We may pick any nonzero value for $t$ to get an eigenvector; a simple option is $x_2 = 1$. Thus we have the eigenvector 
 \[
 \vx[1] = \bmx{c}-5\\1\emx.
 \]
 (We used the notation $\vx[1]$ to associate this eigenvector with the eigenvalue $\lambda_1$.)\\
 
-We now repeat this process to find an eigenvector for $\lambda_2 = 12$:
-\drawexampleline%{ex_eigen1}
-
+We now repeat this process to find an eigenvector for $\lambda_2 = 12$. 
 In solving $(\tta - 12\tti)\vx = \zero$, we find
 \[
-\bmx{ccc}-15 & 15 & 0 \\ 3 & -3 & 0 \emx  \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccc}1&-1&0\\0&0&0\emx.
+\bmx{cc|c}-15 & 15 & 0 \\ 3 & -3 & 0 \emx  \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{cc|c}1&-1&0\\0&0&0\emx.
 \]
 
 In vector form, we have 
 \[
-\vx = x_2\bmx{c}1\\1\emx.
+\vx = t\bmx{c}1\\1\emx.
 \]
-Again, we may pick any nonzero value for $x_2$, and so we choose $x_2 = 1$. Thus an eigenvector for $\lambda_2$ is 
+Again, we may pick any nonzero value for $t$, and so we choose $t = 1$. Thus an eigenvector for $\lambda_2$ is 
 \[
 \vx[2] = \bmx{c}1\\1\emx.
 \] \\
@@ -262,58 +264,60 @@ and
 \]
 
 We should take a moment and check our work: is it true that $\tta\vx[1] = \lambda_1\vx[1]$?
-\begin{align*}
-\tta\vx[1]	&=	\bmx{cc}-3&15\\3&9\emx\bmx{c}-5\\1\emx \\
-						&=	\bmx{c} 30\\-6\emx\\
-						&=	(-6)\bmx{c} -5\\1\emx \\
-						&=	\lambda_1\vx[1].
-\end{align*}
-Yes; it appears we have truly found an \el/\ev\ pair for the matrix \tta.} 
+\[
+\tta\vx[1]	=	\bmx{cc}-3&15\\3&9\emx\bmx{c}-5\\1\emx 
+						=	\bmx{c} 30\\-6\emx
+						=	(-6)\bmx{c} -5\\1\emx
+						=	\lambda_1\vx[1].
+\]
+Yes; it appears we have truly found an \el/\ev\ pair for the matrix $A$.
+} 
 
-\medskip
+\pagebreak
 
-Let's do another example.
+%Let's try another example. 
 
-\medskip
+%\medskip
 
 \example{ex_eigen2}{Computing eigenvalues and eigenvectors}{Let $\tta = \bmx{cc} -3&0\\5&1\emx$. Find the \el s of \tta\ and an \ev\ for each \el.}
 {We first compute the characteristic polynomial, set it equal to 0, then solve for $\lambda$.
 \begin{align*}
-\det{\tta-\lambda\tti} 	&= 	\bdt{cc} -3-\lambda & 0\\5&1-\lambda \edt \\
+\det(\tta-\lambda\tti) 	&= 	\bdt{cc} -3-\lambda & 0\\5&1-\lambda \edt \\
 												&= 	(-3-\lambda)(1-\lambda)
 \end{align*}
 
-From this, we see that $\det{\tta-\lambda\tti}=0$ when $\lambda = -3, 1$. We'll set $\lambda_1 = -3$ and $\lambda_2 = 1$.\\
+From this, we see that $\det(\tta-\lambda\tti)=0$ when $\lambda = -3, 1$. We'll set $\lambda_1 = -3$ and $\lambda_2 = 1$.\\
 
 Finding an eigenvector for $\lambda_1$:
 
 We solve $(\tta-(-3)\tti)\vx =\zero$ for \vx\ by row reducing the appropriate matrix:
 \[
-\bmx{ccc} 0 & 0 &0 \\ 5 & 4 & 0 \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccc}1&5/4&0\\0&0&0\emx.
+\bmx{cc|c} 0 & 0 &0 \\ 5 & 4 & 0 \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{cc|c}1&5/4&0\\0&0&0\emx.
 \]
 
 Our solution, in vector form, is
 \[
-\vx = x_2\bmx{c}-5/4\\1\emx.
+\vx = t\bmx{c}-5/4\\1\emx.
 \]
-Again, we can pick any nonzero value for $x_2$; a nice choice would eliminate the fraction. Therefore we pick $x_2 = 4$, and find 
+Again, we can pick any nonzero value for $t$; a nice choice would eliminate the fraction. Therefore we pick $t = 4$, and find 
 \[
 \vx[1] = \bmx{c} -5\\4\emx.
 \]
 
+\enlargethispage{2\baselineskip}
 
 Finding an \ev\ for $\lambda_2$:
 
 We solve $(\tta-(1)\tti)\vx =\zero$ for \vx\ by row reducing the appropriate matrix:
 \[
-\bmx{ccc} -4 & 0 &0 \\ 5 & 0 & 0 \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{ccc}1&0&0\\0&0&0\emx.
+\bmx{cc|c} -4 & 0 &0 \\ 5 & 0 & 0 \emx \quad\quad\overrightarrow{\text{rref}}\quad\quad \bmx{cc|c}1&0&0\\0&0&0\emx.
 \]
 
-We've seen a matrix like this before,  but we may need a bit of a refreshing. (See page \pageref{footnote:extra_zeros}. Our future need of knowing how to handle this situation is foretold in note \ref{footnote:extra_zeros}.) Our first row tells us that $x_1 = 0$, and we see that no rows/equations involve $x_2$. We conclude that $x_2$ is free.   Therefore, our solution, in vector form, is
+We've seen a matrix like this before,  but we may need a bit of a refreshing. (See page \pageref{footnote:extra_zeros}.) Our first row tells us that $x_1 = 0$, and we see that no rows/equations involve $x_2$. We conclude that $x_2$ is free.   Therefore, our solution, in vector form, is
 \[
-\vx = x_2\bmx{c}0\\1\emx.
+\vx = t\bmx{c}0\\1\emx.
 \]
-We pick $x_2 = 1$, and find 
+We pick $t = 1$, and find 
 \[
 \vx[2] = \bmx{c} 0\\1\emx.
 \]
@@ -329,9 +333,163 @@ and
 \]
 }
 
+\pagebreak
+
+Notice that in both of our examples so far, we were able to completely factor the characteristic polynomial and obtain two distinct eigenvalues. For $2\times 2$ matrices, the characteristic polynomial will always be quadratic, and we know that finding roots of quadratic polynomials falls into three categories: those with two distinct roots, like in the examples above, those with one repeated root (for example, $x^2-2x+1=(x-1)^2$), and those with no real roots (for example, $x^2+1$). In the case of a repeated root, we will have only one eigenvalue. Will we have only one eigenvector, or could there be two? (We'll have more to say about this later.) What if there are no real roots? Then there are no (real) eigenvalues, so presumably there are no eigenvectors, either. What if we allow for complex roots? Let's look at some examples.
+
+\mtable{.5}{A horizontal shear by a factor of $k$}{fig:eigenshear}{
+\begin{center}
+
+\begin{tikzpicture}[>=latex]
+		\drawxlines{-1}{2.5}{1,2};
+		\drawylines{-1}{2.5}{1,2};
+		\begin{scope}[opacity=.5]\unitsquare[very thin];\end{scope}
+		\unitsquare[thick,cm={1,0,1.5,1,(0,0)}];
+		\node [above] at (D) {$(k,1)$};
+\end{tikzpicture}
+\end{center}}
+
+
 \medskip
 
-So far, our examples have involved $2\times 2$ matrices. Let's do an example with a $3\times 3$ matrix.
+\example{ex_repeated_root1}{A matrix with only one eigenvalue}{
+Find the eigenvalues and eigenvectors of the matrix
+\[
+A = \bbm 1&4\\0&1\ebm.
+\]}
+{Let us recall from Section \ref{sec:geom_3} that the transformation $T(\vx)=A\vx$ defined by $A$ is a \textit{horizontal shear} by a factor of 4. Such a transformation leaves horizontal vectors unaffected, but vectors with a nonzero vertical component get pulled to the right: see Figure \ref{fig:eigenshear}.
+
+From the diagram we can probably guess that the horizontal vector $\bbm 1\\0\ebm$ will be an eigenvector with eigenvalue 1, since it is left untouched by the shear transformation. Let's confirm this analytically. 
+
+We begin as usual by finding the characteristic polynomial. We have
+\[
+\det(A-\lambda I)  = \begin{vmatrix}
+1-\lambda &41\\0 & 1-\lambda
+\end{vmatrix} = (1-\lambda)^2.
+\]
+Here, we see that we have only one eigenvalue; namely, $\lambda =1$. Let's look for a corresponding eigenvector. We have
+\[
+A-\lambda = \bbm 0&4\\0&0\ebm \quad \arref \quad \bbm 0&1\\0&0\ebm.
+\]
+The corresponding system $(A-3\lambda)\vx=\zero$ has augmented matrix with \rref\
+\[
+\bam{2}0&1&0\\0&0&0\eam,
+\]
+which tells us that in our solution, $x_1=t$ is free, and $x_2=0$. Setting $t=1$, we get the single eigenvector
+\[
+\vec{x}_1=\bbm 1\\0\ebm,
+\]
+as expected.}
+
+\medskip
+
+In each of our examples to this point, every eigenvalue corresponded to a single (independent) eigenvector. Is this always the case? We will not prove it in this textbook, but it turns out that in general, the power to which the factor $(\lambda - x)$ appears in the characteristic polynomial (called the \textit{multiplicity} of the eigenvalue) places an upper limit on the number of independent eigenvectors that can correspond to that eigenvalue.
+
+In Example \ref{ex_eigen2}, we had $\det(A-\lambda I) = (-3-\lambda)^1(1-\lambda)^1$, so the two eigenvalues $\lambda = -3$ and $\lambda = 1$ each have multiplicity one, and therefore they each have one corresponding eigenvector. In Example \ref{ex_repeated_root1}, the eigenvalue $\lambda=3$ has multiplicity two, but we still had only one corresponding eigenvector. Can we ever have such an eigenvalue with two corresponding eigenvectors?
+
+\medskip
+
+\example{ex_repeated_root2}{An eigenvalue of multiplicity two}{
+Find the eigenvalues and eigenvectors of the matrix
+\[
+A = \bbm 4&0\\0&4\ebm.
+\]}
+{Here, we notice that $A$ is a scalar multiple of the identity. As a transformation of the Cartesian plane, the transformation $T(\vx)=A\vx$ is a \textit{dilation}: it expands the size of every vector in the plane by a factor of 4. Knowing that this is a transformation that stretches, but does not rotate, we might expect that \textit{every} nonzero vector is an eigenvector of $A$! Indeed, given $\vx\neq \zero$, we have
+\[
+A\vx = (4I)\vx = 4(I\vx) = \vx,
+\]
+so $\vx$ is an eigenvector corresponding to the eigenvalue 4. 
+
+Of course, this is pretty much the end of the story here, but let's get some practice with our algorithm for finding eigenvalues and eigenvectors and confirm our results. We can immediately see that
+\[
+\det(A-\lambda I) = (4-\lambda)^2,
+\]
+so that $\lambda=4$ is an eigenvalue of multiplicity 2. What about the eigenvectors? Well, computing $A-4I$ is somewhat interesting: we get
+\[
+A-4I = \bbm 4-4&0\\0&4-4\ebm = \bbm 0&0\\0&0\ebm,
+\]
+the zero matrix. Again, we see that literally \textit{any} nonzero vector $\vx\in\R^2$ qualifies as an eigenvector. We know that we can find at most two independent vectors in $\R^2$, so a simple choice is to take the standard basis vectors $\ven{1}$ and $\ven{2}$.
+
+Notice that we could have proceeded as usual and attempted to solve the system $(A-4I)\vx=\zero$. In this case we get a rather strange augmented matrix:
+\[
+\bmx{c|c}A&\zero\emx = \bmx{c|c}\boldmath{0}&\zero\emx = \bmx{cc|c}0&0&0\\0&0&0\emx!
+\]
+It might seem like there's absolutely nothing to do here, but we can read off a solution. In this case neither row places any conditions on the variables $x_1$ and $x_2$, so both are free: $x_1=s$ and $x_2=t$ are both parameters, and
+\[
+\vx = \bbm x_1\\x_2\ebm = \bbm s\\t\ebm  = s\bbm 1\\0\ebm + t\bbm 0 \\ 1\ebm.
+\]
+Setting $s=1$ and $t=0$ gives us the eigenvector $\ven{1}$, and setting $s=0$, $t=1$ gives us the eigenvector $\ven{2}$.
+}
+
+\medskip
+
+We mentioned above that another possibility is that the characteristic polynomial has no real zeros at all, in which case our matrix has no (real) eigenvalues. Let's see what we can say in such a situation.
+
+\pagebreak
+
+\example{ex_complex_roots}{A matrix with complex eigenvalues}{
+Find the eigenvalues and eigenvectors of the matrix
+\[
+A = \bbm 0&-1\\1&0\ebm.
+\]}
+{Before we proceed, let's pause and think about this in the context of matrix transformations. If we define the transformation $T(\vx) = A\vx$, we have
+\[
+T\left(\bbm x_1\\x_2\ebm\right) = \bbm 0&-1\\1&0\ebm\bbm x_1\\x_2\ebm = \bbm -x_2\\x_1\ebm.
+\]
+Notice that $T(\vx)$ is orthogonal to $\vx$:
+\[
+T(\vx)\boldsymbol{\cdot}\vx = \bbm -x_2\\x_1\ebm \boldsymbol{\cdot}\bbm x_1\\x_2\ebm = -x_2x_1+x_1x_2=0.
+\]
+This is because the transformation $T$ represents a rotation through an angle of $\frac{\pi}{2}$ (90 degrees). Indeed, $A$ is a rotation matrix (see Section \ref{sec:geom_3}) of the form
+\[
+A = \bbm \cos\theta & -\sin\theta\\ \sin\theta & \cos\theta\ebm,
+\]
+where $\theta = \frac{\pi}{2}$.
+
+Now, think about the eigenvalue equation $A\vx = \lambda\vx$. In this case, an eigenvector $\vx$ would be a vector in the plane such that rotating it by 90 degrees produces a parallel vector! Clearly, this is nonsense, and indeed, we find that
+\[
+\det(A-\lambda I) = \begin{vmatrix}
+-\lambda & -1\\1&-\lambda
+\end{vmatrix} = \lambda^2+1,
+\]
+which has no real roots, so the matrix $A$ has no eigenvalues, which makes sense from a geometric point of view.
+
+However, this is not the end of the story, provided that we're willing to work with complex numbers. Over the \textit{complex} numbers, we \textit{do} have two eigenvalues:
+\[
+\lambda^2+1 = (\lambda+i)(\lambda-i),
+\]
+so $\lambda = i$ and $\lambda = -i$ are eigenvalues. What are the eigenvectors? We proceed as always, except that the arithmetic in the row operations is a bit trickier with complex numbers. For $\lambda=i$, we have the system $(A-iI)\vx = \zero$. We set up the augmented matrix below, and in this case, we'll proceed step-by-step to the \rref. We have
+\[
+A-iI = \bbm 0&-1\\1&0\ebm - \bbm i&0\\0&i\ebm = \bbm-i&-1\\1&-i\ebm,
+\]
+so we get the augmented matrix
+\[
+\bam{2}-i&-1&0\\1&-i&0\eam \xrightarrow[]{R_1\leftrightarrow R_2}
+\bam{2}1&-i&0\\-i&-1&0\eam \xrightarrow[]{R_2+iR_1\to R_2}\bam{2}1&-i&0\\0&0&0\eam.
+\]
+Notice in the last step that $-i+i(1) = 0$ gives the zero in the first column, and $-1+i(-i)=-1+1=0$ gives the zero in the second column. This tells us that $x_2=t$ is a free (complex!) parameter while $x_1-ix_2=0$, so $x_1 = ix_2=it$. Our vector solution is thus
+\[
+\vx[1] = \bbm it\\t\ebm = t\bbm i\\1\ebm,
+\]
+and we can check that
+\[
+A\vx[1] = \bbm 0&-1\\1&0\ebm\bbm i\\1\ebm = \bbm -1\\i\ebm = \bbm i(i)\\ i(1)\ebm  = i\bbm i\\1\ebm = i\vx,
+\]
+as expected. We can similarly set up and solve
+\[
+\bmx{c|c}(A+iI)&\zero\emx = \bam{2}i&-1&0\\1&i&0\eam \quad \arref \quad \bam{2}1&i&0\\0&0&0\eam,
+\]
+giving us $x_2=t$ as a free parameter, and $x_1 = -ix_2 = -it$, so 
+\[
+\vx[2] = \bbm -it\\t\ebm = t\bbm -i\\1\ebm.
+\]
+In this context we're free to chose any complex value for $t$. Choosing $t=i$ gives us the solution $\vx[2] = \bbm 1\\i\ebm$. }
+
+\medskip
+
+Our last few examples provided interesting departures from the earlier ones where we had two distinct eigenvalues; they also provided examples where we were able to analyze the situation geometrically, by considering the linear transformations defined by the matrix. The reader is encouraged to review the other examples of transformations given in Section \ref{sec:geom_3} and attempt a similar analysis.
+
+So far, our examples have involved $2\times 2$ matrices. Let's do an example with a $3\times 3$ matrix. The only real additional complication here is that our characteristic polynomial will now be a \textit{cubic} polynomial, so factoring it is going to take some more work.
 
 \medskip
 
@@ -344,7 +502,7 @@ So far, our examples have involved $2\times 2$ matrices. Let's do an example wit
 
 
 \begin{align*}
-\det{\tta-\lda\tti} &= \bdt{ccc} -7-\lda & -2 & 10 \\-3 & 2-\lda & 3\\ -6 & -2 & 9-\lda \edt \\
+\det(\tta-\lambda\tti) &= \bdt{ccc} -7-\lda & -2 & 10 \\-3 & 2-\lda & 3\\ -6 & -2 & 9-\lda \edt \\
 										&= (-7-\lda)\bdt{cc}2-\lda & 3\\-2 & 9-\lda\edt\ -\ (-2)\bdt{cc} -3&3\\-6 & 9-\lda \edt\ +\ 10\bdt{cc} -3&2-\lda \\-6 & -2 \edt \\
 										&= (-7-\lda)(\lda^2-11\lda + 24) + 2(3\lda-9)+10(-6\lda+18)\\
 										&= -\lda^3+4\lda^2-\lda -6\\
@@ -353,7 +511,7 @@ So far, our examples have involved $2\times 2$ matrices. Let's do an example wit
 %\drawexampleline%{ex_eigen3}
 In the last step we factored the characteristic polynomial $-\lda^3+4\lda^2-\lda -6$. Factoring polynomials of degree $>2$ is not trivial; we'll assume the reader has access to methods for doing this accurately. 
 
-\mnote{.5}{You should have learned how to do this in high school. As a reminder, possible roots can be found by factoring the constant term (in this case, $-6$) of the polynomial. That is, the roots of this equation could be $\pm 1, \pm 2, \pm 3$ and $\pm 6$. That's 12 things to check.
+\mnote{.4}{You should have learned the basics of factoring degree three polynomials in high school. As a reminder, possible roots can be found by factoring the constant term (in this case, $-6$) of the polynomial. That is, the roots of this equation could be $\pm 1, \pm 2, \pm 3$ and $\pm 6$. That's 12 things to check.
 
 One could also graph this polynomial to find the roots. Graphing will show us that $\lda = 3$ \textit{looks} like a root, and a simple calculation will confirm that it is.
 
@@ -375,6 +533,8 @@ Our solution, in vector form, is
 \]
 
 We can pick any nonzero value for $x_3$; a nice choice would get rid of the fractions. So we'll set $x_3 = 2$ and choose $\vx[1]=\bmx{c} 3\\1\\2\emx$ as our \ev.\\
+
+\drawexampleline
 
 For $\lda_2 = 2$:\\
 
@@ -409,7 +569,7 @@ Our solution, in vector form, is (note that $x_2 = 0$):
 
 We can pick any nonzero value for $x_3$; an easy choice is $x_3 = 1$, so $\vx[3]=\bmx{c} 1\\0\\1\emx$ as our \ev.\\
 
-\enlargethispage{\baselineskip}
+%\enlargethispage{\baselineskip}
 To summarize, we have the following \el/\ev\ pairs: 
 
 \begin{align*}
@@ -417,13 +577,8 @@ To summarize, we have the following \el/\ev\ pairs:
 \text{\el\ } \lda_2 & = 2 \text{ with \ev\ } \vx[2] = \bmx{c}2\\1\\2\emx\\
 \text{\el\ } \lda_3 = 3 \text{ with \ev\ } \vx[3] = \bmx{c}1\\0\\1\emx
 \end{align*}
-}
-%\vskip -\baselineskip
+\vskip -\baselineskip}
 %\\ %\eexset
-
-\medskip
-
-Let's practice once more.\\
 
 \medskip
 
@@ -434,7 +589,7 @@ Let's practice once more.\\
 {We first compute the characteristic polynomial, set it equal to 0, then solve for \lda. We'll use cofactor expansion down the first column (since it has lots of zeros).
 
 \begin{align*}
-\det{\tta-\lda\tti} &= \bdt{ccc} 2-\lda & -1 & 1 \\0&1-\lda & 6\\ 0 & 3 & 4-\lda \edt \\
+\det(\tta-\lambda\tti) &= \bdt{ccc} 2-\lda & -1 & 1 \\0&1-\lda & 6\\ 0 & 3 & 4-\lda \edt \\
 										&= (2-\lda)\bdt{cc}1-\lda & 6\\3&4-\lda\edt\\
 										&= (2-\lda)(\lda^2-5\lda-14)\\
 										&= (2-\lda)(\lda-7)(\lda+2)\\
@@ -445,8 +600,6 @@ Notice that while the characteristic polynomial is cubic, we never actually saw 
 Our \el s are $\lda_1 = -2$, $\lda_2 = 2$ and $\lda_3 = 7$. We now find corresponding \ev s.\\
 
 For $\lda_1 = -2$:\\
-
-\drawexampleline
 
 We need to solve the equation $(\tta - (-2)\tti)\vx = \zero$. To do this, we form the appropriate augmented matrix and put it into \rref.
 
@@ -479,6 +632,7 @@ This looks funny, so we'll look remind ourselves how to solve this. The first tw
 \vx = x_1\bmx{c} 1\\0\\0\emx.
 \]
 
+\drawexampleline
 
 We can pick any nonzero value for $x_1$; an easy choice is $x_1 = 1$ and choose $\vx[2]=\bmx{c} 1\\0\\0\emx$ as our \ev.\\
 

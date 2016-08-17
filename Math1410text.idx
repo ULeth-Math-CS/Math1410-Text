@@ -218,37 +218,37 @@
 \indexentry{Gaussian elimination!forward steps|hyperpage}{200}
 \indexentry{Gaussian elimination!backward steps|hyperpage}{200}
 \indexentry{Gaussian elimination|hyperpage}{201}
-\indexentry{solution!types|hyperpage}{207}
-\indexentry{solution!unique|hyperpage}{207}
-\indexentry{solution!infinite|hyperpage}{207}
-\indexentry{solution!none|hyperpage}{207}
-\indexentry{system of linear equations!consistent|hyperpage}{207}
-\indexentry{system of linear equations!inconsistent|hyperpage}{207}
-\indexentry{consistent|hyperpage}{207}
-\indexentry{inconsistent|hyperpage}{207}
-\indexentry{free variable|hyperpage}{208}
-\indexentry{variable!free|hyperpage}{208}
-\indexentry{parameter|hyperpage}{208}
-\indexentry{variable!leading|hyperpage}{208}
-\indexentry{solution!particular|hyperpage}{209}
-\indexentry{solution!general|hyperpage}{209}
-\indexentry{variable!dependent|hyperpage}{209}
-\indexentry{variable!basic|hyperpage}{209}
-\indexentry{basic variable|hyperpage}{209}
-\indexentry{variable!independent|hyperpage}{209}
-\indexentry{variable!free|hyperpage}{209}
+\indexentry{solution!types|hyperpage}{208}
+\indexentry{solution!unique|hyperpage}{208}
+\indexentry{solution!infinite|hyperpage}{208}
+\indexentry{solution!none|hyperpage}{208}
+\indexentry{system of linear equations!consistent|hyperpage}{208}
+\indexentry{system of linear equations!inconsistent|hyperpage}{208}
+\indexentry{consistent|hyperpage}{208}
+\indexentry{inconsistent|hyperpage}{208}
 \indexentry{free variable|hyperpage}{209}
-\indexentry{system of linear equations!consistent|hyperpage}{210}
-\indexentry{leading one|hyperpage}{210}
-\indexentry{solution!infinitely many|hyperpage}{210}
-\indexentry{system of linear equations!consistent|hyperpage}{210}
-\indexentry{leading one|hyperpage}{210}
-\indexentry{solution!infinitely many|hyperpage}{210}
-\indexentry{system of linear equations!inconsistent|hyperpage}{211}
+\indexentry{variable!free|hyperpage}{209}
+\indexentry{parameter|hyperpage}{209}
+\indexentry{variable!leading|hyperpage}{209}
+\indexentry{solution!particular|hyperpage}{210}
+\indexentry{solution!general|hyperpage}{210}
+\indexentry{variable!dependent|hyperpage}{210}
+\indexentry{variable!basic|hyperpage}{210}
+\indexentry{basic variable|hyperpage}{210}
+\indexentry{variable!independent|hyperpage}{210}
+\indexentry{variable!free|hyperpage}{210}
+\indexentry{free variable|hyperpage}{210}
+\indexentry{system of linear equations!consistent|hyperpage}{211}
 \indexentry{leading one|hyperpage}{211}
-\indexentry{particular solution|hyperpage}{212}
-\indexentry{solution!particular|hyperpage}{212}
-\indexentry{problem solving|hyperpage}{219}
+\indexentry{solution!infinitely many|hyperpage}{211}
+\indexentry{system of linear equations!consistent|hyperpage}{211}
+\indexentry{leading one|hyperpage}{211}
+\indexentry{solution!infinitely many|hyperpage}{211}
+\indexentry{system of linear equations!inconsistent|hyperpage}{212}
+\indexentry{leading one|hyperpage}{212}
+\indexentry{particular solution|hyperpage}{213}
+\indexentry{solution!particular|hyperpage}{213}
+\indexentry{problem solving|hyperpage}{220}
 \indexentry{system of linear equations!homogeneous|hyperpage}{237}
 \indexentry{homogeneous|hyperpage}{237}
 \indexentry{solution!basic|hyperpage}{238}
@@ -320,3 +320,9 @@
 \indexentry{cofactor!matrix|hyperpage}{314}
 \indexentry{adjugate|hyperpage}{314}
 \indexentry{matrix!adjugate|hyperpage}{314}
+\indexentry{eigenvalue!definition|hyperpage}{320}
+\indexentry{eigenvector!|hyperindexformat{\see{eigenvalue}}}{320}
+\indexentry{characteristic polynomial|hyperpage}{323}
+\indexentry{eigenvalue!finding|hyperpage}{323}
+\indexentry{eigenvalue!properties|hyperpage}{340}
+\indexentry{Invertible Matrix Theorem|hyperpage}{341}

@@ -301,13 +301,12 @@ This application is perhaps more useful in finding the area of a triangle (in sh
 
 \example{ex_crossp5}{Area of a triangle}{
 Find the area of the triangle with vertices $A=(1,2)$, $B=(2,3)$ and $C=(3,1)$, as pictured in Figure \ref{fig:crossp5}.}
-{We found the area of this triangle in Example \ref{ex_abc4} to be $1.5$ using integration. There we discussed the fact that finding the area of a triangle can be inconvenient using the ``$\frac12bh$'' formula as one has to compute the height, which generally involves finding angles, etc. Using a cross product is much more direct.
+{Given the orientation of this triangle in the plane, finding the area of a triangle can be inconvenient using the ``$\frac12bh$'' formula as one has to compute the height, which generally involves finding angles, etc. Using a cross product is much more direct.
 
 We can choose any two sides of the triangle to use to form vectors; we choose $\overrightarrow{AB} = \la 1,1\ra$ and $\overrightarrow{AC}=\la 2,-1\ra$. As in the previous example, we will rewrite these vectors with a third component of 0 so that we can apply the cross product. The area of the triangle is
 \[
 \frac12\norm{\overrightarrow{AB}\times\overrightarrow{AC}} = \frac12\norm{\la 1,1,0\ra \times \la 2,-1,0\ra} = \frac12\norm{\la 0,0,-3\ra} = \frac32.
 \]
-We arrive at the same answer as before with less work.
 }\\
 
 

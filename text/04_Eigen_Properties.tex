@@ -3,7 +3,7 @@
 \asyouread{
 \item	T/F: \tta\ and \ttat\ have the same \ev s.
 \item	T/F: \tta\ and \ttai\ have the same \el s.
-\item	T/F: Marie Ennemond Camille Jordan was a guy.
+%\item	T/F: Marie Ennemond Camille Jordan was a guy.
 \item	T/F: Matrices with a trace of 0 are important, although we haven't seen why.
 \item	T/F: A matrix \tta\ is invertible only if 1 is an \el\ of \tta.
 }
@@ -105,7 +105,7 @@ Now that we have completed the ``grunt work,'' let's analyze the results of the 
 
 In our example, we found that the \el s of \tta\ are $-6$ and 12; the \el s of \ttai\ are $-1/6$ and $1/12$. Also, the \el s of \ttb\ are $-1$, 2 and 3, whereas the \el s of \ttbi\ are $-1$, $1/2$ and $1/3$. There is an obvious relationship here; it seems that if $\lda$ is an \el\ of \tta, then $1/\lda$ will be an \el\ of \ttai. We can also note that the corresponding \ev s matched, too.
 
-Why is this the case? Consider an invertible matrix \tta\ with \el\ \lda\ and \ev\ \vx. Then, by definition, we know that $\tta\vx = \lda\vx$. Now multiply both sides by \ttai:
+Why is this the case? Consider an invertible matrix \tta\ with \el\ $\lda\neq 0$ and \ev\ \vx. Then, by definition, we know that $\tta\vx = \lda\vx$. Now multiply both sides by \ttai:
 \begin{align*}
 \tta\vx & = \lda\vx \\
 \ttai\tta\vx & = \ttai\lda\vx \\
@@ -113,7 +113,7 @@ Why is this the case? Consider an invertible matrix \tta\ with \el\ \lda\ and \e
 \frac{1}{\lda}\vx & = \ttai\vx 
 \end{align*}
 
-We have just shown that $\ttai\vx = 1/\lda\vx$; this, by definition, shows that \vx\ is an \ev\ of \ttai\ with \el\ 1/\lda. This explains the result we saw above.\\
+We have just shown that $\ttai\vx = 1/\lda\vx$; this, by definition, shows that \vx\ is an \ev\ of \ttai\ with \el\ 1/\lda. This explains the result we saw above. Of course, this all falls apart if $\lambda = 0$, but this is impossible for an invertible matrix: see Theorem \ref{thm:IMT_eigen} below.\\
 
 \noindent \textsf{\textbf{The \el s and \ev s of \tta\ and \ttat.}}\\
 
@@ -149,11 +149,11 @@ It seems that the sum of the \el s is the trace! Why is this the case?
 
 The answer to this is a bit out of the scope of this text; we can justify part of this fact, and another part we'll just state as being true without justification. 
 
-First, recall from Theorem \ref{thm:trace} that $\tr(\tta\ttb) = \tr(\ttb\tta)$. Secondly, we state without justification that given a square matrix \tta, we can find a square matrix \ttp\ such that $\ttpi\tta\ttp$ is an upper triangular matrix with the eigenvalues of \tta\ on the diagonal.
+Suppose $A$ is an $n\times n$ matrix with no complex eigenvalues (that is, the characteristic polynomial can be completely factored over the real numbers). When this is the case, it turns out that we can find a square matrix \ttp\ such that $\ttpi\tta\ttp$ is an upper triangular matrix with the eigenvalues of \tta\ on the diagonal. (We unfortunately do not have the time to prove this, or to explain how the matrix $P$ is determined.)
 
-\mnote{.5}{Who in the world thinks up this stuff? It seems that the answer is Marie Ennemond Camille Jordan, who, despite having at least two girl names, was a guy.} 
+%\mnote{.5}{Who in the world thinks up this stuff? It seems that the answer is Marie Ennemond Camille Jordan, who, despite having at least two girl names, was a guy.} 
 
-Thus $\tr(\ttpi\tta\ttp)$ is the sum of the eigenvalues; also, using our Theorem \ref{thm:trace}, we know that $\tr(\ttpi\tta\ttp) =  \tr(\ttpi\ttp\tta) =  \tr(\tta)$. Thus the trace of \tta\ is the sum of the eigenvalues.\\
+Now, recall from Theorem \ref{thm:trace} that $\tr(\tta\ttb) = \tr(\ttb\tta)$. Since $\ttpi\tta\ttp$ is upper-triangular, we know that $\tr(\ttpi\tta\ttp)$ is the sum of the eigenvalues; also, using our Theorem \ref{thm:trace}, we know that $\tr(\ttpi\tta\ttp) =  \tr(\ttpi\ttp\tta) =  \tr(\tta)$. Thus the trace of \tta\ is the sum of the eigenvalues. It turns out that this result remains true when \tta\ has complex eigenvalues, and the proof is similar, except that the entries of the matrix $P$ will be complex numbers.\\
 
 \noindent \textsf{\textbf{The \el s and \ev s of \tta\ and The Determinant.}}\\
 
@@ -161,6 +161,8 @@ Again, the \el s of \tta\ are $-6$ and 12, and the determinant of \tta\ is
 $-72$. The \el s of \ttb\ are $-1$, 2 and 3; the determinant of \ttb\ is $-6$. It seems as though the product of the \el s is the determinant.
 
 This is indeed true; we defend this with our argument from above. We know that the determinant of a triangular matrix is the product of the diagonal elements. Therefore, given a matrix \tta, we can find \ttp\ such that \ttpi\tta\ttp\ is upper triangular with the eigenvalues of \tta\ on the diagonal. Thus $\det{\ttpi\tta\ttp}$ is the product of the eigenvalues. Using Theorem \ref{thm:determinant_properties}, we know that $\det{\ttpi\tta\ttp} = \det{\ttpi\ttp\tta} = \det{\tta}$. Thus the determinant of \tta\ is the product of the \el s.
+
+\mnote{.3}{\textbf{Note:} the reader would be justified in wondering about the case where $A$ is a real matrix with complex eigenvalues. Any such eigenvalues will arise from irreducible quadratic factors of the characteristic polynomial, and we know from Theorem \ref{discriminanttheoremcomplexversion} that the complex zeros of a quadratic with real coefficients occur in conjugate pairs. That is, if $\lambda$ is a complex eigenvalue of $A$, so is the complex conjugate $\overline{\lambda}$. When we multiply the eigenvalues of $A$ together, the product will contain $\lambda\cdot \overline{\lambda} = \abs{\lambda}^2$, which is always a real number. Thus, it is always true that $\det(A)$ is equal to the product of the eigenvalues of $A$, provided that we include any possible complex eigenvalues.}
 
 We summarize the results of our example with the following theorem.
 
@@ -225,7 +227,7 @@ This shows that $x_1 = x_2$, and so our \ev s $\vx$ are
 
 One interesting thing about the above example is that we see that 0 is an \el\ of \tta; we have not officially encountered this before. Does this mean anything significant?
 
-\mnote{.5}{Since 0 is a ``special'' number, we might think so -- afterall, we found that having a determinant of 0 is important. Then again, a matrix with a trace of 0 isn't all that important. (Well, as far as we have seen; it actually \textit{is}). So, having an \el\ of 0 may or may not be significant, but we would be doing well if we recognized the possibility of significance and decided to investigate further.} 
+%\mnote{.5}{Since 0 is a ``special'' number, we might think so -- afterall, we found that having a determinant of 0 is important. Then again, a matrix with a trace of 0 isn't all that important. (Well, as far as we have seen; it actually \textit{is}). So, having an \el\ of 0 may or may not be significant, but we would be doing well if we recognized the possibility of significance and decided to investigate further.} 
 
 Think about what an \el\ of 0 means: there exists an nonzero vector \vx\ where $\tta\vx = 0\vx = \zero$. That is, we have a nontrivial solution to $\tta\vx = \zero$. We know this only happens when \tta\ is not invertible. 
 
@@ -248,31 +250,7 @@ Let \tta\ be an $n\times n$ matrix. The following statements are equivalent.
 
 %\setcounter{IMTcount_temp}{\value{IMTcount}}
 
-This section is about the properties of \el s and \ev s. Of course, we have not investigated all of the numerous properties of \el s and \ev s; we have just surveyed some of the most common (and most important) concepts. Here are four quick examples of the many things that still exist to be explored.
-
-First, recall the matrix 
-\[
-\tta = \bmx{cc}1&4\\2&3\emx
-\]
-that we used in Example \ref{ex_find_el}. It's characteristic polynomial is $p(\lda)=\lda^2-4\lda-5$. Compute $p(\tta)$; that is, compute $\tta^2-4\tta-5\tti$. You should get something ``interesting,'' and you should wonder ``does this always work?'' (Yes.)
-
-Second, in all of our examples, we have considered matrices where \el s ``appeared only once.'' Since we know that the \el s of a triangular matrix appear on the diagonal, we know that the \el s of 
-\[
-\tta = \bmx{cc}1&1\\0&1\emx
-\]
-are ``1 and 1;'' that is, the \el\ $\lda = 1$ appears twice. What does that mean when we consider the \ev s of $\lda = 1$? Compare the result of this to the matrix 
-\[
-\tta = \bmx{cc}1&0\\0&1\emx,
-\]
-which also has the \el\ $\lda =1$ appearing twice. 
-
-\mnote{.5}{To direct further study, it helps to know that mathematicians refer to this as the \textit{multiplicity} of an \el. In each of these two examples, \tta\ has the \el\ $\lda=1$ with multiplicity of 2.}
-
-Third, consider the matrix 
-\[
-\tta = \bmx{cc}0&-1\\1&0\emx.
-\]
-What are the \el s? (Be careful; this matrix is \textit{not} triangular.) We quickly compute the characteristic polynomial to be $p(\lda) = \lda^2 + 1$. Therefore the \el s are $\pm \sqrt{-1} = \pm i$. What does this mean?
+This section is about the properties of \el s and \ev s. Of course, we have not investigated all of the numerous properties of \el s and \ev s; we have just surveyed some of the most common (and most important) concepts. One of the more important topics -- which you will encounter if you continue on to Math 3410 -- is the question of \textit{diagonalization}. For some $n\times n$ matrices $A$, it is possible to find an invertible matrix $P$ such that $P^{-1}AP$ is a \sword{diagonal} matrix, and the diagonal entries of this matrix are precisely the eigenvalues of $A$. When is this possible? When is it not? To a large extent, this comes down to the question of \textit{multiplicity}: when we have a repeated eigenvalue, how many independent eigenvectors are associated with it?
 
 Finally, we have found the \el s of matrices by finding the roots of the characteristic polynomial. We have limited our examples to quadratic and cubic polynomials; one would expect for larger sized matrices that a computer would be used to factor the characteristic polynomials. However, in general, this is \textit{not} how the \el s are found. Factoring high order polynomials is too unreliable, even with a computer -- round off errors can cause unpredictable results. Also, to even compute the characteristic polynomial, one needs to compute the determinant, which is also expensive (as discussed in the previous chapter). 
 
