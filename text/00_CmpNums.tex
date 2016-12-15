@@ -45,7 +45,29 @@ Complex numbers include things you'd normally expect, like $3+2i$ and $\frac{2}{
 
 \smallskip
 
-The arithmetic of complex numbers is as you would expect.  The only things you need to remember are the two properties in Definition \ref{idefn}.  The next example should help recall how these animals behave.
+The arithmetic of complex numbers is as you would expect. The definitions of addition and multiplication are as follows:
+
+\smallskip
+
+\definition{def:compaddition}{Addition of complex numbers}{
+\index{complex numbers ! addition} Given two complex numbers $z=a+ib$ and $w=c+id$, we define their \sword{sum} to be the complex number given by
+\[
+z+w = (a+c)+i(b+d).
+\]}
+
+\smallskip
+
+\definition{def:compmultiplication}{Multiplication of complex numbers}{
+\index{complex numbers ! multiplication} Give two complex numbers $z=a+ib$ and $w=c+id$, we define their \sword{product} to be the complex number
+\[
+zw = (ac-bd) + i(ad+bc).
+\]}
+
+\smallskip
+
+Addition of complex numbers is defined by simply adding the corresponding parts. The definition of multiplication looks complicated, but it's simply an application of the ``F.O.I.L.'' rule for multiplying binomials, where we have to account for the fact that $i^2=-1$.
+ As long as we remember the two properties in Definition \ref{idefn}, we can treat expressions involving $i=\sqrt{-1}$ as we would with any other radical.
+Let's work through an example to see how this works.
 
 \medskip
 
@@ -71,14 +93,14 @@ Perform the indicated operations.
 {
 \begin{enumerate}
 
-\item  As mentioned earlier, we treat expressions involving $i$ as we would any other radical. We distribute and combine like terms:
+\item  Subtraction is simply a variation on addition: We distribute the minus sign across the second complex number and combine like terms:
 \begin{align*}
  (1-2i) - (3+4i) & =   1-2i-3-4i  \tag*{Distribute} \\
                  & =   -2 - 6i  \tag*{Gather like terms} \\
 \end{align*}
 Technically, we'd have to rewrite our answer  $-2-6i$ as $(-2) + (-6)i$ to be (in the strictest sense) `in the form $a+bi$'. That being said, even pedants have their limits, and we'll consider $-2-6i$ good enough.
 
-\item  Using the Distributive Property (a.k.a. F.O.I.L.), we get
+\item  The key to multiplying complex numbers is to forget about Definition \ref{def:compmultiplication} above, and simply treat this as a product of two binomials. Using the Distributive Property (a.k.a. F.O.I.L.), we get
 \begin{align*}
   (1-2i)(3+4i)  & =  (1)(3) + (1)(4i) - (2i)(3) - (2i)(4i)  \tag*{F.O.I.L.} \\
 	              & =  3+4i-6i-8i^2  \\
@@ -112,7 +134,13 @@ Technically, we'd have to rewrite our answer  $-2-6i$ as $(-2) + (-6)i$ to be (i
 
 \medskip
 
-In the previous example, we used the idea of a `conjugate' to divide two complex numbers. (You may recall using conjugates to rationalize expressions involving square roots.)  More generally, the \index{complex number ! complex conjugate ! definition of}\index{conjugate ! complex conjugate ! definition of}\sword{complex conjugate} of a complex number $a+bi$ is the number $a-bi$.  The notation commonly used for complex conjugation is a `bar':  $\overline{a+bi} = a-bi$. For example, $\overline{3+2i} = 3-2i$ and $\overline{3-2i} = 3+2i$. To find $\overline{6}$, we note that $\overline{6} = \overline{6+0i}= 6 - 0i = 6$, so $\overline{6} = 6$. Similarly, $\overline{4i} = -4i$, since $\overline{4i} = \overline{0 + 4i} = 0 - 4i =  -4i$.  Note that $\overline{3+\sqrt{5}} = 3 + \sqrt{5}$, not $3 - \sqrt{5}$, since  $\overline{3+\sqrt{5}} = \overline{3+\sqrt{5} + 0i} = 3+\sqrt{5}  - 0i = 3+\sqrt{5}$. Here, the conjugation specified by the `bar' notation involves reversing the sign before $i = \sqrt{-1}$, not before  $\sqrt{5}$.  The properties of the conjugate are summarized in the following theorem.
+
+
+In the previous example, we used the idea of a `conjugate' to divide two complex numbers.   More generally, the \index{complex number ! complex conjugate ! definition of}\index{conjugate ! complex conjugate ! definition of}\sword{complex conjugate} of a complex number $a+bi$ is the number $a-bi$.  The notation commonly used for complex conjugation is a `bar':  $\overline{a+bi} = a-bi$. For example, 
+\[
+\overline{3+2i} = 3-2i \quad \text{ and } \quad \overline{3-2i} = 3+2i.
+\]
+To find $\overline{6}$, we note that $\overline{6} = \overline{6+0i}= 6 - 0i = 6$, so $\overline{6} = 6$. Similarly, $\overline{4i} = -4i$, since $\overline{4i} = \overline{0 + 4i} = 0 - 4i =  -4i$.  The properties of the conjugate are summarized in the following theorem.
 
 %\pagebreak
 
@@ -137,19 +165,44 @@ Let $z$ and $w$ be complex numbers.
 
 \medskip
 
+\mnote{.7}{You may recall using conjugates to rationalize expressions involving square roots. For example, we have
+\begin{align*}
+\frac{3}{\sqrt{2}+1} &= \frac{3(\sqrt{2}-1)}{(\sqrt{2}+1)(\sqrt{2}-1)}\\ &= 3\sqrt{3}-3.
+\end{align*}
+
+The key observation is that multiplying by the conjugate sets up a difference of squares: the terms involving the radical cancel out. In some ways, multiplication by a complex conjugate is even more convenient than with real radicals: since
+\begin{align*}
+(a+ib)(a-ib) &= a^2-iab+iab-i^2b^2\\
+&=a^2+b^2,
+\end{align*}
+the product $z\overline{z}$ is never negative, and only vanishes if $z=0$.}
+
 Essentially, Theorem \ref{conjugateprops} says that complex conjugation works well with addition, multiplication and powers.  The proofs of these properties can best be achieved by writing out $z = a+bi$ and $w = c+di$ for real numbers $a$, $b$, $c$ and $d$.   Next, we compute the left and right sides of each equation and verify that they are the same.  
 
 \smallskip
 
 Verifying the first property is a very quick exercise.  To prove the second property, we compare $\overline{z+w}$ with $\overline{z} + \overline{w}$.  We have $\overline{z} + \overline{w} = \overline{a+bi} + \overline{c+di}  = a-bi + c-di$.  To find $\overline{z+w}$, we first compute 
-\[
-z+w = (a+bi) + (c+di) = (a+c)+(b+d)i
-\]
+\begin{align*}
+z+w &= (a+bi) + (c+di)\\
+& = (a+c)+(b+d)i
+\end{align*}
  so 
-\[
- \overline{z+w} = \overline{(a+c)+(b+d)i} = (a+c) - (b+d)i = a - bi + c - di = \overline{z} + \overline{w}
-\]  
- As such, we have established  $\overline{z+w} = \overline{z}+\overline{w}$. The proof for multiplication works similarly.  The proof that the conjugate works well with powers can be viewed as a repeated application of the product rule.   The last property is a characterization of real numbers.  If $z$ is real, then $z = a + 0i$, so $\overline{z} = a - 0i = a = z$.  On the other hand, if $z=\overline{z}$, then $a+bi = a - bi$ which means $b=-b$ so $b=0$.  Hence, $z = a +0i = a$ and is real.
+\begin{align*}
+ \overline{z+w} &= \overline{(a+c)+(b+d)i}\\
+  & = (a+c) - (b+d)i\\
+  & = a - bi + c - di\\
+  & = \overline{z} + \overline{w}
+\end{align*}
+ 
+ As such, we have established  $\overline{z+w} = \overline{z}+\overline{w}$. The proof for multiplication works similarly: we have
+ \begin{align*}
+ \overline{zw}& = \overline{(ac-bd)+i(ad+bc)}\\
+  & = (ac-bd)-i(ad+bc)\\
+  & = (ac-(-b)(-d))+i(a(-d)+b(-c))\\
+  & = (a-ib)(c-id)\\
+  & = \overline{z}\,\overline{w}.
+ \end{align*} 
+   The proof that the conjugate works well with powers can be viewed as a repeated application of the product rule.   The last property is a characterization of real numbers.  If $z$ is real, then $z = a + 0i$, so $\overline{z} = a - 0i = a = z$.  On the other hand, if $z=\overline{z}$, then $a+bi = a - bi$ which means $b=-b$ so $b=0$.  Hence, $z = a +0i = a$ and is real.
 
 %\mnote{.25}{Proof by Mathematical Induction usually isn't encountered until Math 2000. It provides a way of formally proving statements that are claimed to hold true for all natural numbers.}
 
@@ -182,16 +235,15 @@ The addition and multiplication of complex numbers satisfy the following propert
 
 We leave the proof of Theorem \ref{thm:comparithprops} as a long (but straightforward) exercises. Working through the proof is a good way to confirm for yourself that you understand the corresponding rules for real number arithmetic from Section \ref{RealNumberArithmetic}, and how the properties for complex arithmetic are inherited from their real counterparts.
 
-\pagebreak
 
 We now consider the problem of solving quadratic equations. Consider  $x^2-2x+5 = 0$. The discriminant $b^2 - 4ac = -16$ is negative, so we know from the quadratic formula that there are no \textit{real} solutions, since the Quadratic Formula would involve the term $\sqrt{-16}$.  Complex numbers, however, are built just for such situations, so we can go ahead and apply the Quadratic Formula to get:
  \[
   x = \dfrac{-(-2) \pm \sqrt{(-2)^2-4(1)(5)}}{2(1)} = \dfrac{2 \pm \sqrt{-16}}{2} = \dfrac{2 \pm 4i}{2} = 1 \pm 2i.
 \]  
 
-\mnote{.8}{We're assuming some prior familiarity on the part of the reader where quadratic equations are concerned. If you're a bit rusty when it comes to finding \textit{real} solutions to quadratic equations (and in particular, the quadratic formula), you may want to check out the review materials available on the ``Math Basics'' Moodle page.}
 
-\medskip
+
+\pagebreak
 
 \example{complexsolnsreviewex}{Finding complex solutions}{
 Find the complex solutions to the following equations.
@@ -199,6 +251,7 @@ Find the complex solutions to the following equations.
 \begin{multicols}{3}
 \begin{enumerate}
 
+\mnote{.5}{We're assuming some prior familiarity on the part of the reader where quadratic equations are concerned. If you're a bit rusty when it comes to finding \textit{real} solutions to quadratic equations (and in particular, the quadratic formula), you may want to check out the review materials available on the ``Math Basics'' Moodle page.}
 
 \item  $\dfrac{2x}{x+1} = x+3$
 
@@ -246,7 +299,7 @@ From $2t^2 + 1 = 0$ we get $2t^2 = -1$, or $t^2 = -\frac{1}{2}$.  We extract squ
 \]
 where we have rationalized the denominator per convention.  From $t^2 = 5$, we get $t = \pm \sqrt{5}$. In total, we have four complex solutions - two real: $t = \pm \sqrt{5}$ and two non-real: $t = \pm \frac{i \sqrt{2}}{2}$.
 
-\mnote{.65}{Remember, all real numbers are complex numbers, so `complex solutions' means both real and non-real answers.} 
+\mnote{.3}{Remember, all real numbers are complex numbers, so `complex solutions' means both real and non-real answers.} 
 
 \item To find  the \textit{real} solutions to  $z^3 + 1 = 0$, we can subtract the $1$ from both sides and extract cube roots: $z^3 = -1$, so $z  = \sqrt[3]{-1} = -1$.  It turns out there are two more non-real complex number solutions to this equation.  To get at these, we factor:
 \begin{align*}
@@ -263,7 +316,7 @@ Thus we get \textit{three} solutions to $z^3 + 1 = 0$ - one real: $z = -1$ and t
 \end{enumerate}
 }
 
-\mnote{.5}{In Section \ref{PolarComplex} we will develop a much easier method for solving the equation $z^3+1=0$ using polar coordinates.}
+\mnote{.55}{In Section \ref{PolarComplex} we will develop a much easier method for solving the equation $z^3+1=0$ using polar coordinates.}
 
 \medskip
 

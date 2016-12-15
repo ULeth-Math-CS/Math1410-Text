@@ -249,7 +249,7 @@ and
 \]
 so the values $s=\frac{5}{8}$, $t=\frac{5}{2}$ work for all three equations, and since
 \begin{align*}
-\vec\ell_1\left(\frac{5}{8}\right) = \langle 2, -1, 4\rangle +\frac{5}{8}\langle 0, 4, -8\rangle = \langle 2, \frac{3}{2}, -1\rangle \tag*{and}\\
+\vec\ell_1\left(\frac{5}{8}\right) &= \langle 2, -1, 4\rangle +\frac{5}{8}\langle 0, 4, -8\rangle = \langle 2, \frac{3}{2}, -1\rangle \tag*{and}\\
 \vec\ell_2\left(\frac{5}{2}\right) & = \langle -3, 4, -6\rangle+\frac{5}{2}\langle 2, -1, 2\rangle = \langle 2, \frac{3}{2}, -1\rangle,
 \end{align*}
 our point of intersection is $(2, \frac{3}{2}, -1)$.
@@ -464,10 +464,24 @@ Our vector $\overrightarrow{R_1R_2}$ is then given by
 \]
 and the distance between the two lines is given by
 \[
-\len{\overrightarrow{R_1R_2}} = \frac{1}{31}\sqrt{63^2+42^2+147^2} = \frac{42}{\sqrt{31}},
+\len{\overrightarrow{R_1R_2}} = \frac{1}{31}\sqrt{63^2+42^2+147^2} = \frac{42}{\sqrt{62}},
 \]
 as before.
 }\\
+
+\mnote{.25}{You might be thinking, ``Are those two values really the same?'' A calculator can verify this of course, by computing the decimal approximations for the results in Examples \ref{ex_lines5} and \ref{ex_lines7}. Alternatively, you can verify that
+\[
+63^2+42^2+147^2 = 27,342 = 2(21)^2(31),
+\]
+so
+\begin{align*}
+\frac{\sqrt{63^2+42^2+147^2}}{31} &= \sqrt{2(21^2)(31)}{31}\\
+& = \frac{21\sqrt{2}\sqrt{31}}{31}\\
+& = \frac{21\sqrt{2}}{\sqrt{31}}\\
+& = \frac{21(2)}{\sqrt{31}\sqrt{2}}\\
+& = \frac{42}{\sqrt{62}}.
+\end{align*}}
+
 
 Example \ref{ex_lines7} required us to solve a system of two linear equations in two unknowns $s$ and $t$. Although this involved some messy fractions, the algebra involved was fairly straightforward. In many real life problems it is necessary to be able to solve systems involving hundreds or even thousands of equations and variables. We will begin our study of how to systematically solve such systems in the next chapter.
 

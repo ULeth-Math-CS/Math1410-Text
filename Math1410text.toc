@@ -5,43 +5,43 @@
 \contentsline {section}{\numberline {1.1}Some Basic Set Theory Notions}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Real Number Arithmetic}{4}{section.1.2}
 \contentsline {section}{\numberline {1.3}The Cartesian Coordinate Plane}{12}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Distance in the Plane}{14}{subsection.1.3.1}
 \contentsline {chapter}{\numberline {2}The Complex Numbers}{19}{chapter.2}
 \contentsline {section}{\numberline {2.1}Complex Numbers}{19}{section.2.1}
-\contentsline {section}{\numberline {2.2}Polar Coordinates}{27}{section.2.2}
-\contentsline {section}{\numberline {2.3}The Polar Form of Complex Numbers}{36}{section.2.3}
-\contentsline {chapter}{\numberline {3}Vector Geometry}{53}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction to Cartesian Coordinates in Space}{53}{section.3.1}
-\contentsline {section}{\numberline {3.2}An Introduction to Vectors}{57}{section.3.2}
-\contentsline {section}{\numberline {3.3}The Dot Product}{69}{section.3.3}
-\contentsline {section}{\numberline {3.4}The Cross Product}{79}{section.3.4}
-\contentsline {section}{\numberline {3.5}Lines}{91}{section.3.5}
-\contentsline {section}{\numberline {3.6}Planes}{103}{section.3.6}
-\contentsline {chapter}{\numberline {4}Matrix Arithmetic}{113}{chapter.4}
-\contentsline {section}{\numberline {4.1}Matrix Addition and Scalar Multiplication}{113}{section.4.1}
-\contentsline {section}{\numberline {4.2}The vector space $\mathbb {R}^n$}{123}{section.4.2}
+\contentsline {section}{\numberline {2.2}Polar Coordinates}{28}{section.2.2}
+\contentsline {section}{\numberline {2.3}The Polar Form of Complex Numbers}{34}{section.2.3}
+\contentsline {chapter}{\numberline {3}Vector Geometry}{51}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction to Cartesian Coordinates in Space}{51}{section.3.1}
+\contentsline {section}{\numberline {3.2}An Introduction to Vectors}{55}{section.3.2}
+\contentsline {section}{\numberline {3.3}The Dot Product}{67}{section.3.3}
+\contentsline {section}{\numberline {3.4}The Cross Product}{77}{section.3.4}
+\contentsline {section}{\numberline {3.5}Lines}{89}{section.3.5}
+\contentsline {section}{\numberline {3.6}Planes}{101}{section.3.6}
+\contentsline {chapter}{\numberline {4}Matrix Arithmetic}{111}{chapter.4}
+\contentsline {section}{\numberline {4.1}Matrix Addition and Scalar Multiplication}{111}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Vector Space $\mathbb {R}^n$}{121}{section.4.2}
 \contentsline {section}{\numberline {4.3}Matrix Multiplication}{139}{section.4.3}
 \contentsline {section}{\numberline {4.4}Matrix Transformations}{152}{section.4.4}
 \contentsline {section}{\numberline {4.5}Properties of Linear Transformations}{168}{section.4.5}
-\contentsline {chapter}{\numberline {5}Systems of Linear Equations}{185}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction to Linear Equations}{185}{section.5.1}
-\contentsline {section}{\numberline {5.2}Using Matrices To Solve Systems of Linear Equations}{190}{section.5.2}
-\contentsline {section}{\numberline {5.3}Elementary Row Operations and Gaussian Elimination}{196}{section.5.3}
-\contentsline {section}{\numberline {5.4}Existence and Uniqueness of Solutions}{206}{section.5.4}
-\contentsline {section}{\numberline {5.5}Applications of Linear Systems}{218}{section.5.5}
-\contentsline {chapter}{\numberline {6}Matrix Algebra}{233}{chapter.6}
-\contentsline {section}{\numberline {6.1}Vector Solutions to Linear Systems}{233}{section.6.1}
-\contentsline {section}{\numberline {6.2}Solving Matrix Equations $\ensuremath {A}\ensuremath {X}=\ensuremath {B}$}{253}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Matrix Inverse}{261}{section.6.3}
-\contentsline {section}{\numberline {6.4}Properties of the Matrix Inverse}{271}{section.6.4}
-\contentsline {chapter}{\numberline {7}Operations on Matrices}{279}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Matrix Transpose}{279}{section.7.1}
-\contentsline {section}{\numberline {7.2}The Matrix Trace}{288}{section.7.2}
-\contentsline {section}{\numberline {7.3}The Determinant}{292}{section.7.3}
-\contentsline {section}{\numberline {7.4}Properties of the Determinant}{301}{section.7.4}
-\contentsline {section}{\numberline {7.5}Applications of the Determinant}{312}{section.7.5}
-\contentsline {chapter}{\numberline {8}Eigenvalues and Eigenvectors}{319}{chapter.8}
-\contentsline {section}{\numberline {8.1}Eigenvalues and Eigenvectors}{319}{section.8.1}
-\contentsline {section}{\numberline {8.2}Properties of Eigenvalues and Eigenvectors}{336}{section.8.2}
+\contentsline {chapter}{\numberline {5}Systems of Linear Equations}{187}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction to Linear Equations}{187}{section.5.1}
+\contentsline {section}{\numberline {5.2}Using Matrices To Solve Systems of Linear Equations}{192}{section.5.2}
+\contentsline {section}{\numberline {5.3}Elementary Row Operations and Gaussian Elimination}{198}{section.5.3}
+\contentsline {section}{\numberline {5.4}Existence and Uniqueness of Solutions}{208}{section.5.4}
+\contentsline {section}{\numberline {5.5}Applications of Linear Systems}{220}{section.5.5}
+\contentsline {chapter}{\numberline {6}Matrix Algebra}{235}{chapter.6}
+\contentsline {section}{\numberline {6.1}Vector Solutions to Linear Systems}{235}{section.6.1}
+\contentsline {section}{\numberline {6.2}Solving Matrix Equations $\ensuremath {A}\ensuremath {X}=\ensuremath {B}$}{255}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Matrix Inverse}{263}{section.6.3}
+\contentsline {section}{\numberline {6.4}Properties of the Matrix Inverse}{273}{section.6.4}
+\contentsline {chapter}{\numberline {7}Operations on Matrices}{281}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Matrix Transpose}{281}{section.7.1}
+\contentsline {section}{\numberline {7.2}The Matrix Trace}{290}{section.7.2}
+\contentsline {section}{\numberline {7.3}The Determinant}{294}{section.7.3}
+\contentsline {section}{\numberline {7.4}Properties of the Determinant}{303}{section.7.4}
+\contentsline {section}{\numberline {7.5}Applications of the Determinant}{314}{section.7.5}
+\contentsline {chapter}{\numberline {8}Eigenvalues and Eigenvectors}{321}{chapter.8}
+\contentsline {section}{\numberline {8.1}Eigenvalues and Eigenvectors}{321}{section.8.1}
+\contentsline {section}{\numberline {8.2}Properties of Eigenvalues and Eigenvectors}{338}{section.8.2}
+\contentsline {section}{\numberline {8.3}Eigenvalues and Diagonalization}{345}{section.8.3}
 \contentsline {chapter}{\numberline {A}Answers To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.13}{section*.303}
+\contentsline {chapter}{Index}{A.13}{section*.302}

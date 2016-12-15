@@ -78,4 +78,6 @@
 \printanswers {exercises/04_01_exercises}
 \noindent {\bf Section 8.2} \vskip \baselineskip 
 \printanswers {exercises/04_02_exercises}
+\noindent {\bf Section 8.3} \vskip \baselineskip 
+\printanswers {exercises/04_03_exercises}
 \end {multicols}\normalsize 

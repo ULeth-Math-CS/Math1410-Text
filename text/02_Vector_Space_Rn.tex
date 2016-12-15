@@ -1,4 +1,4 @@
-\section{The vector space $\mathbb{R}^n$}\label{sec:Rn}
+\section{The Vector Space $\mathbb{R}^n$}\label{sec:Rn}
 This section introduces a collection of concepts and terminology that are at the heart of the subject of linear algebra. The reader is warned that this section is rather long and abstract. The reader may also be encouraged (or perhaps annoyed?) to know that mastery of these concepts is not essential to succeeding in Math 1410. (If you continue to Math 3410, on the other hand, your academic life will depend on understanding these ideas.) It may be productive to treat this section as a reference chapter, to be referred to whenever concepts such as linear independence or span arise later in the text.
 
 In Section \ref{sec:matrix_arithmetic_1} we mentioned that an $n\times 1$ matrix consisting of a single column is known as a \textit{column vector}, and that column vectors are closely related to the vectors we encountered in Chapter \ref{chapter:vectors} in the cases where $n=2$ or $n=3$. 
@@ -118,7 +118,7 @@ Let $\vec{u} = \bbm 2\\-1\\3\ebm, \vec{v} = \bbm -4\\ 6\\ 3\ebm, \vec{w} = \bbm 
 
 Notice that in the last example above, our linear combination works out to be the zero vector. Let's think about this geometrically for a second: using the ``tip-to-tail'' method for adding vectors and beginning with the tail of $3\vec{u}$ at the origin, if we add the vector $\vec{v}$ at the tip of $3\vec{u}$, and then subtract $\vec{w}$, we end up back at the origin. The vectors $3\vec{u}$, $\vec{v}$, and $\vec{w}$ must therefore lie in the same plane, since they form three sides of a triangle, as depicted in Figure \ref{fig:lindeptriangle}.
 
-\mfigure[width=0.95\marginparwidth]{.25}{Depicting the linear combination in Example \ref{ex_lincombRn}.4}{fig:lindeptriangle}{figures/lineardep}
+\mfigure[width=\marginparwidth]{.25}{Depicting the linear combination in Example \ref{ex_lincombRn}.4}{fig:lindeptriangle}{figures/lineardep}
 
 Viewed another way, notice that we can solve the equation $3\vec{u}+\vec{v}-\vec{w}=\vec{0}$ for $\vec{w}$: we have
 \[
@@ -199,9 +199,50 @@ which is the equation of a plane through the origin.
 \vskip-1.5\baselineskip
 }
 
+
+\mnote{.5}{For any plane through the origin, the sum of two vectors that lie in that plane (or indeed, any linear combination of vectors in the plane) is again a vector in that plane. We'll see shortly that this is the distinguishing characteristic of any \textit{subspace} of $\mathbb{R}^n$.}
+
 \medskip
 
-\mnote{.25}{For any plane through the origin, the sum of two vectors that lie in that plane (or indeed, any linear combination of vectors in the plane) is again a vector in that plane. We'll see shortly that this is the distinguishing characteristic of any \textit{subspace} of $\mathbb{R}^n$.}
+\example{ex_spanRn2}{Determining membership in a span}{
+Given the vectors $\vec{u} = \bbm 2\\-1\\1\ebm$, $\vec{v} = \bbm 3\\2\\5\ebm$, and $\vec{w} = \bbm -2\\5\\3\ebm$, determine whether or not the following vectors belong to $\operatorname{span}\{\vec{u},\vec{v},\vec{w}\}$:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\vec{x} = \bbm 3\\6\\9\ebm$
+\item $\vec{y} = \bbm 4\\1\\-3\ebm$
+\end{enumerate}
+\end{multicols}
+}
+{
+We do not yet have a general technique for solving problems of this type. Notice that the question ``Does $\vec{x}$ belong to the span of $\{\vec{u},\vec{v},\vec{w}\}$?'' is equivalent to the question, ``Do there exist scalars $a,b,c$ such that
+\[
+a\vec{u}+b\vec{v}+c\vec{w}=\vec{x}?
+\]
+Answering this question amounts to solving a system of linear equations: if we plug in our vectors, we have
+\[
+a\bbm 2\\-1\\1\ebm + b\bbm 3\\2\\5\ebm + c\bbm -2\\5\\3\ebm = \bbm 2a+3b-2c\\-a+2b+5c\\a+5b+3c\ebm = \bbm 3\\6\\9\ebm.
+\]
+By definition of the equality of vectors, this amounts to the system of equations
+\[\arraycolsep=2pt
+\begin{array}{ccccccc}
+2a&+&3b&-&2c&=&3\\
+-a&+&2b&+&5c&=&6\\
+a&+&5b&+&3c&=&9
+\end{array}
+\]
+We will develop systematic techniques for solving such systems in the next Chapter. Until then, is there anything we can say? The very astute reader might notice that the vectors $\vec{u},\vec{v}, \vec{w}$ all have something in common: their third component is the sum of the first two: $1=2+(-1)$ for $\vec{u}$, $5=3+2$ for $\vec{v}$, and $3=-2+5$ for $\vec{w}$. Thus, all three vectors are of the form $\bbm x\\y\\x+y\ebm$. Now, notice what happens if we combine two such vectors:
+\[
+s\bbm a\\b\\a+b\ebm+t\bbm c\\d\\c+d\ebm = \bbm sa+tc\\sb+td\\s(a+b)+t(c+d)\ebm = \bbm sa+tc\\sb+td\\(sa+tc)+(sb+td)\ebm,
+\]
+which is another vector of the same form. The same will be true for combinations of three or more such vectors. For the vector $\vec{x}$, we check that $3+6=9$, so $\vec{x}$ has the correct form, and indeed (with a bit of ``guess and check'' work, we find that $a=b=c=1$ works, since $\vec{u}+\vec{v}+\vec{w}=\vec{x}$. Thus, we can conclude that
+\[
+\vec{x}\in\operatorname{span}\{\vec{u},\vec{v},\vec{w}\}.
+\]
+For the vector $\vec{y}$, we add the first two components, getting $4+1=5\neq -3$. Since the third component is not the sum of the first two, there is no way that $\vec{y}$ could belong to the span of $\vec{u}$, $\vec{v}$, and $\vec{w}$.
+}
+
+\medskip
+
 
 \subsection*{Linear independence and subspaces}
 Notice in Example \ref{ex_spanRn} that the span did not change when we added the vector $\vec{w}$ to the set of spanning vectors. This was probably not too surprising, since we saw that $\vec{w} = 3\vec{u}+\vec{v}$, meaning that $\vec{w}$ is a linear combination of $\vec{u}$ and $\vec{v}$, and thus,
@@ -212,13 +253,44 @@ We don't get anything new when we include the vector $\vec{w}$ since it lies in 
 
 \smallskip
 
+\mnote{.25}{For reasons that become apparent as soon as one begins a discussion of basis and dimension (something we won't really cover in this text), we must consider any set containing the zero vector to be  linearly dependent. If we use Equation \eqref{eq:linearindep} to define linear independence, this is included in the definition: if (for example) $\vec{v}_1=\vec{0}$, then we can let $c_1$ be any real number we want, and $c_1\vec{v}_1=\vec{0}$, so it is possible to find a linear combination where not all of the scalars are zero.}
+
 \definition{def:linearindepRn}{Linear dependence}{We say that a set of vectors
 \[
 A = \{\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k\}
 \]
 in $\mathbb{R}^n$ is \sword{linearly dependent} if $\vec{0}\in A$, or if one of the vectors $\vec{v}_i$ in $A$ can be written as a linear combination of the other vectors in $A$. If the set $A$ is not linearly dependent, we say that it is \sword{linearly independent}.}
 
-\smallskip
+\pagebreak
+
+\example{ex_linindepRn}{Determining linear independence}{
+Determine whether or not following sets of vectors are linearly independent:
+\begin{enumerate}
+\item The vectors $\vec{u} = \bbm 2\\-1\\1\ebm$, $\vec{v} = \bbm 3\\2\\5\ebm$, and $\vec{w} = \bbm -2\\5\\3\ebm$ from Example \ref{ex_spanRn2}.
+\item The vectors 
+\[
+\vec{x} = \bbm 2\\-1\\0\ebm, \vec{y} = \bbm -2\\3\\1\ebm, \quad \text{ and } \quad \vec{z} = \bbm 1\\1\\0\ebm.
+\]
+\end{enumerate}
+}
+{
+Like problems involving span, a general approach to answering questions like these about linear independence will have to wait until we develop methods for solving systems of equations in the next chapter. However, for these two sets of vectors, we can reason our way to an answer.
+\begin{enumerate}
+\item Here, we noticed that all three vectors satisfy the condition $z=x+y$, if we label their respective components as $x$, $y$, and $z$. But this condition is simply the equation of a plane; namely, $x+y-z=0$. Intuition tells us that any plane can be written as the span of \textit{two} vectors, so we can expect that any one of the three vectors can be written in terms of the other two, and indeed, this is the case. With a bit of guesswork (or by asking a computer), we can determine that
+\[
+\vec{w} = -\frac{19}{7}\vec{u}+\frac{8}{7}\vec{v},
+\]
+showing that $\vec{w}$ can be written as a linear combination of $\vec{u}$ and $\vec{v}$, and thus, that our vectors are linearly dependent.
+
+\item Here, we make the useful observation that two of our three vectors have zero as their third component. Since $\vec{x}$ and $\vec{z}$ have third component zero, it is impossible for $\vec{y}$ to be written as a linear combination of $\vec{x}$ and $\vec{z}$, since any such linear combination would still have a zero in the third component. To see that $\vec{x}$ cannot be written in terms of $\vec{y}$ and $\vec{z}$, notice that for any $a$ and $b$,
+\[
+a\vec{y}+b\vec{z} = \bbm -2a+b\\3a+b\\a\ebm.
+\]
+If this is to equal $\vec{x}$, then we must have $a=0$, giving us $\vec{x}=b\vec{z}$, but it's clear that $\vec{x}$ is not a scalar multiple of $\vec{z}$. A similar argument shows that $\vec{z}$ cannot be written in terms of $\vec{x}$ and $\vec{y}$, and thus our vectors are linearly independent.
+\end{enumerate}
+}
+
+\medskip
 
 Another way to characterize linear independence is as follows: suppose we have a linear combination equal to the zero vector:
 \begin{equation}\label{eq:linearindep}
@@ -232,7 +304,12 @@ c_1\vec{v}_1 = -c_2\vec{v}_2-\cdots - c_k\vec{v}_k,
 \]
 and since $c_1\neq 0$, we can divide both sides by $c_1$, and we've written $\vec{v}_1$ as a linear combination of the remaining vectors.
 
-\mnote{.7}{For reasons that become apparent as soon as one begins a discussion of basis and dimension (something we won't really cover in this text), we must consider any set containing the zero vector to be  linearly dependent. If we use Equation \eqref{eq:linearindep} to define linear independence, this is included in the definition: if (for example) $\vec{v}_1=\vec{0}$, then we can let $c_1$ be any real number we want, and $c_1\vec{v}_1=\vec{0}$, so it is possible to find a linear combination where not all of the scalars are zero.}
+For example, from Example \ref{ex_linindepRn} we can conclude (with a bit of rearranging) that the vectors $\vec{u}$, $\vec{v}$, and $\vec{w}$ satisfy the relationship
+\[
+19\vec{u}-8\vec{v}+7\vec{w} = \vec{0}.
+\]
+
+
 
 Linear independence can be a difficult concept at first, but in three dimensions we can use Equation \eqref{eq:linearindep} to provide a visual interpretation on a case-by-case basis. 
 
@@ -252,7 +329,7 @@ Linear independence can be a difficult concept at first, but in three dimensions
 
 \smallskip
 
-\mnote{.25}{At this point in the text, we're not in a position to prove that any set of four vectors in $\mathbb{R}^3$ (or more generally, $k$ vectors in $\mathbb{R}^n$, where $k>n$) is automatically independent. However, we'll soon see in Chapter \ref{chapter:linear} that in this case, the test for independence given by Equation \eqref{eq:linearindep} results in a ``homogeneous'' system of linear equations with more variables than equations, and that such a system is guaranteed to have non-trivial solutions.}
+\mnote{.6}{At this point in the text, we're not in a position to prove that any set of four vectors in $\mathbb{R}^3$ (or more generally, $k$ vectors in $\mathbb{R}^n$, where $k>n$) is automatically independent. However, we'll soon see in Chapter \ref{chapter:linear} that in this case, the test for independence given by Equation \eqref{eq:linearindep} results in a ``homogeneous'' system of linear equations with more variables than equations, and that such a system is guaranteed to have non-trivial solutions.}
 
 One of the things we noted in Example \ref{ex_spanRn} was that since $\vec{w}$ belonged to $\operatorname{span}\{\vec{u},\vec{v}\}$, adding $\vec{w}$ to any vector in $\operatorname{span}\{\vec{u},\vec{v}\}$ resulted in another vector in $\operatorname{span}\{\vec{u},\vec{v}\}$. This leads to the notion of a \sword{subspace}, another one of the key concepts in linear algebra.
 
@@ -269,9 +346,9 @@ A subset $V\subseteq \mathbb{R}^n$ is called a \sword{subspace}\index{subspace} 
 
 \smallskip
 
-\mnote{.75}{Another way of phrasing Definition \ref{def:subspace} is to say that $V$ is a subspace if any linear combination of vectors in $V$ is another vector in $V$; that is, $V$ is closed under taking linear combinations.}
+\mnote{.3}{Another way of phrasing Definition \ref{def:subspace} is to say that $V$ is a subspace if any linear combination of vectors in $V$ is another vector in $V$; that is, $V$ is closed under taking linear combinations.}
 
-\mnote{.6}{A subspace of $\mathbb{R}^n$ is a subset that looks like a copy of $\mathbb{R}^m$, where $m\leq n$. The visual examples you should keep in mind are lines (which look like copies of $\mathbb{R}$) and planes (which look like copies of $\mathbb{R}^2$) in $\mathbb{R}^3$. However, not all lines and planes will do: as we will see, only those lines and planes that pass through the origin form subspaces.}
+\mnote{.18}{A subspace of $\mathbb{R}^n$ is a subset that looks like a copy of $\mathbb{R}^m$, where $m\leq n$. The visual examples you should keep in mind are lines (which look like copies of $\mathbb{R}$) and planes (which look like copies of $\mathbb{R}^2$) in $\mathbb{R}^3$. However, not all lines and planes will do: as we will see, only those lines and planes that pass through the origin form subspaces.}
 
 It follows from Definition \ref{def:subspace} that any linear combination of vectors in a subspace $V$ is again an element of that subspace. One other important consequence of Definition \ref{def:subspace} must be noted here: since any subspace $V$ is closed under scalar multiplication by \textit{any} scalar, and since $0\cdot\vec v = \vec 0$ for any vector $\vec v$, \textbf{every subspace contains the zero vector}. This often provides an easy test when we want to rule out the possibility that a subset is a subspace.
 
@@ -311,9 +388,9 @@ verifying that $c\vec u \in R$. Since $R$ is closed under both addition and scal
 
 \medskip
 
-Let's try a couple more examples.
+To make sure we've got the hang of things, we'll try a couple more examples.
 
-\medskip
+\pagebreak
 
 \example{ex_subspace2}{Identifying subspaces}{
 Determine which of the following subsets of $\mathbb{R}^3$ are subspaces:
@@ -341,7 +418,7 @@ which again fits the patter for vectors in $T$, so $k\vec v\in T$. From Definiti
 
 For the subset $U$, the expressions $3xy$ and $x^2$ tip us off that we are probably not dealing with a subspace here. The easiest way to make sure of this is to check the rules in Definition \ref{def:subspace} using \textit{specific} vectors.
 
-\mnote{.5}{\textbf{Note:} When we want to show that a subset is a subspace, we have to verify that Definition \ref{def:subspace} is satisfied for \textbf{all} possible vectors in that set. Since we generally have infinitely many vectors to deal with, our verification is going to require us to give a general argument, using variables instead of numbers.
+\mnote{.3}{\textbf{Note:} When we want to show that a subset is a subspace, we have to verify that Definition \ref{def:subspace} is satisfied for \textbf{all} possible vectors in that set. Since we generally have infinitely many vectors to deal with, our verification is going to require us to give a general argument, using variables instead of numbers.
 
 On the other hand, if we want to show that a subset is \textbf{not} a subspace, we just have to show that Definition \ref{def:subspace} fails for one or two \textbf{specific} vectors. A choice of vector(s) for which the definition fails is called a \textbf{counterexample}. When constructing a counterexample it's a good idea to choose small numbers to keep the arithmetic simple.}
 
@@ -358,7 +435,9 @@ Looking at the definition of the set $U$, we know that if $4\vec v\in U$, then t
 2+y = 12 \text{ and } 3(2)(y) = 6.
 \]
 The first equation tells us that $y=10$, while the second requires $y=1$. Since $10\neq 1$, this is impossible. Similarly, if $x=-2$, then we would have to have $y=14$ looking at the first component, and $y=-1$ from the second. Since this is again impossible, it must be the case that $4\vec v\notin U$. Since $U$ is not closed under scalar multiplication, $U$ is not a subspace.
-\end{enumerate}}
+\end{enumerate}
+
+\vskip-1.5\baselineskip}
 
 \medskip
 
@@ -498,7 +577,7 @@ We conclude with a discussion of how Theorem \ref{thm:subspan} and the concept o
 V_0 = \{\vec 0\}.
 \]
 
-\mnote{.2}{The trivial subspace appears at first glance to be an exception to the rule that ``every subspace is a span'', but we can consider it to be the span of the zero vector. In more advanced textbooks where the concept of a basis is discussed, the trivial subspace is often considered to be the ``span'' of the empty set. Since the empty set contains zero vectors, the trivial subspace is said to be zero-dimensional.}
+\mnote{.4}{The trivial subspace appears at first glance to be an exception to the rule that ``every subspace is a span'', but we can consider it to be the span of the zero vector. In more advanced textbooks where the concept of a basis is discussed, the trivial subspace is often considered to be the ``span'' of the empty set. Since the empty set contains zero vectors, the trivial subspace is said to be zero-dimensional.}
 
 If a subspace $V$ has at least one non-zero vector, let's say $\vec v\in V$, then by definition it must contain every scalar multiple of that vector. Thus, the next simplest type of subspace is given as the span of a single, non-zero vector:
 \[
@@ -557,12 +636,12 @@ then we say $B$ is a \sword{basis}\index{basis} for $V$. For example, the set $\
 
 \medskip
 
-This section introduced several new ideas. Some, like linear combinations, are straightforward. Others, like span and linear independence, take some getting used to. The reader might have noticed that while discussing these topics, we gave no examples that answered two very obvious questions:
+This section introduced several new ideas. Some, like linear combinations, are straightforward. Others, like span and linear independence, take some getting used to. There remain two very obvious questions to address:
 \begin{enumerate}
 \item How do we tell whether or not a given vector belongs to the span of a set of vectors?
 \item How do we tell if a set of vectors is linearly independent?
 \end{enumerate}
-We skipped these questions because we do not yet have the tools to answer them (although we soon will). It turns out that both questions lead to \sword{systems of linear equations}. In Chapters \ref{chapter:linear} and \ref{chapter:algebra} we will develop the techniques needed to systematically solve such systems, at which point we will be able to easily answer questions about linear independence and span.
+It turns out that both questions lead to \sword{systems of linear equations}. As we saw in Example \ref{ex_spanRn2}, we are currently unable to systematically solve such problems.  In Chapters \ref{chapter:linear} and \ref{chapter:algebra} we will develop the techniques needed to systematically solve such systems, at which point we will be able to easily answer questions about linear independence and span.
 
 To see how such systems arise, suppose we want to know whether or not the vector $\vec w = \bbm 2\\-1\\3\\0\ebm \in\mathbb{R}^4$ belongs to the subspace $V = \operatorname{span}\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, where
 \[
@@ -577,7 +656,7 @@ Substituting in the values for our vectors, this gives
 x_1\bbm 0\\2\\-1\\4\ebm + x_2\bbm 3\\1\\0\\-4\ebm + x_3\bbm -3\\6\\7\\2\ebm  = \bbm 3x_2-3x_3\\2x_1+x_2+6x_3\\-x_1+7x_3\\4x_1-4x_2+2x_3\ebm = \bbm 2\\-1\\3\\0\ebm .
 \]
 Since two vectors are equal if and only if each component is equal, the above vector equation leads to the following system of four equations:
-\[
+\[\arraycolsep=2pt
 \begin{array}{ccccccc}
  & &3x_2&-&3x_3&=&2\\
 2x_1&+&x_2&+&6x_3&=&-1\\

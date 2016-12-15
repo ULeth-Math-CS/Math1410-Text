@@ -2,7 +2,9 @@
 
 \label{IntroPolar}
 
-In Section \ref{CartesianPlane}, we introduced the Cartesian coordinates of a point in the plane as a means of assigning ordered pairs of numbers to points in the plane.  We defined the Cartesian coordinate plane using two number lines -- one horizontal and one vertical -- which intersect at right angles at a point we called the `origin'. To plot a point, say $P(-3,4)$, we start at the origin, travel horizontally to the left $3$ units, then up $4$ units. Alternatively, we could start at the origin, travel up $4$ units, then to the left $3$ units and arrive at the same location. For the most part, the `motions' of the Cartesian system (over and up) describe a rectangle, and most points can be thought of as the corner diagonally across the rectangle from the origin.(Excluding, of course, the points in which one or both coordinates are $0$.)  For this reason, the Cartesian coordinates of a point are often called  \index{rectangular coordinates ! also known as Cartesian coordinates} \index{coordinates ! rectangular} `rectangular' coordinates. In this section, we introduce a new system for assigning coordinates to points in the plane --  \index{polar coordinates ! definition of} \index{coordinates ! polar}\sword{polar coordinates}.  We start with an origin point, called the \index{polar coordinates ! pole} \sword{pole}, and a ray called the \index{polar coordinates ! polar axis} \sword{polar axis}. We then locate a point $P$ using two coordinates, $(r,\theta)$, where $r$ represents a \textit{directed} distance from the pole (we will explain more about this momentarily) and $\theta$ is a measure of rotation from the polar axis.  Roughly speaking,  the polar coordinates $(r,\theta)$ of a point measure `how far out' the point is from the pole (that's $r$), and `how far to rotate' from the polar axis, (that's $\theta$).
+In Section \ref{CartesianPlane}, we introduced the Cartesian coordinates of a point in the plane as a means of assigning ordered pairs of numbers to points in the plane.  We defined the Cartesian coordinate plane using two number lines -- one horizontal and one vertical -- which intersect at right angles at a point we called the `origin'. To plot a point, say $P(-3,4)$, we start at the origin, travel horizontally to the left $3$ units, then up $4$ units. Alternatively, we could start at the origin, travel up $4$ units, then to the left $3$ units and arrive at the same location. For the most part, the `motions' of the Cartesian system (over and up) describe a rectangle, and most points can be thought of as the corner diagonally across the rectangle from the origin.(Excluding, of course, the points in which one or both coordinates are $0$.)  For this reason, the Cartesian coordinates of a point are often called  \index{rectangular coordinates ! also known as Cartesian coordinates} \index{coordinates ! rectangular} `rectangular' coordinates. In this section, we introduce a new system for assigning coordinates to points in the plane --  \index{polar coordinates ! definition of} \index{coordinates ! polar}\sword{polar coordinates}.  We start with an origin point, called the \index{polar coordinates ! pole} \sword{pole}, and a ray called the \index{polar coordinates ! polar axis} \sword{polar axis}. We then locate a point $P$ using two coordinates, $(r,\theta)$, where $r$ represents the distance from the pole and $\theta$ is a measure of rotation from the polar axis.  Roughly speaking,  the polar coordinates $(r,\theta)$ of a point measure `how far out' the point is from the pole (that's $r$), and `how far to rotate' from the polar axis, (that's $\theta$).
+
+\mnote{.7}{The treatment of polar coordinates given here is a simplified version that takes into account the fact that when we introduce the polar form of a complex number in the next section, the coordinate $r$ will always satisfy $r\geq 0$. A general treatment (such as the one you'll encounter in the Calculus sequence) treats $r$ as a \textit{directed} distance, allowing for the possibility that $r<0$. This possibility becomes necessary when one wants to discuss curves defined by \textit{polar equations}, where solutions with $r<0$ are possible.}
 
 \medskip
 
@@ -65,50 +67,50 @@ We may also visualize this process by thinking of the rotation first.(As with an
 
 \medskip
 
-If $r < 0$, we begin by moving in the opposite direction on the polar axis from the pole.  For example, to plot $Q\left(-3.5, \frac{\pi}{4}\right)$ we have the steps shown in Figure \ref{fig:polar3}.
+%If $r < 0$, we begin by moving in the opposite direction on the polar axis from the pole.  For example, to plot $Q\left(-3.5, \frac{\pi}{4}\right)$ we have the steps shown in Figure \ref{fig:polar3}.
 
 
-\medskip
+%\medskip
 
-\setboxwidth{140pt}
-\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-140pt}
-\noindent\begin{minipage}{\specialboxlength}
-\begin{center}
-\begin{tabular}{ccc}
-\myincludegraphics{figures/IntroPolar-9} &
-\myincludegraphics{figures/IntroPolar-10} &
-\myincludegraphics{figures/IntroPolar-11} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Using polar coordinates when $r<0$}\label{fig:polar3}
-\end{minipage}
-\restoreboxwidth
+%\setboxwidth{140pt}
+%\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-140pt}
+%\noindent\begin{minipage}{\specialboxlength}
+%\begin{center}
+%\begin{tabular}{ccc}
+%\myincludegraphics{figures/IntroPolar-9} &
+%\myincludegraphics{figures/IntroPolar-10} &
+%\myincludegraphics{figures/IntroPolar-11} 
+%\end{tabular}
+%\end{center}
+%\captionsetup{type=figure}
+%\caption{Using polar coordinates when $r<0$}\label{fig:polar3}
+%\end{minipage}
+%\restoreboxwidth
 
-\medskip
-
-
-If we interpret the angle first, we rotate $\frac{\pi}{4}$ radians, then move back through the pole $3.5$ units.  Here we are locating a point $3.5$ units away from the pole on the terminal side of $\frac{5\pi}{4}$, not $\frac{\pi}{4}$.
+%\medskip
 
 
-\medskip
+%If we interpret the angle first, we rotate $\frac{\pi}{4}$ radians, then move back through the pole $3.5$ units.  Here we are locating a point $3.5$ units away from the pole on the terminal side of $\frac{5\pi}{4}$, not $\frac{\pi}{4}$.
 
-\setboxwidth{110pt}
-\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-110pt}
-\noindent\begin{minipage}{\specialboxlength}
-\begin{center}
-\begin{tabular}{ccc}
-\myincludegraphics{figures/IntroPolar-12} &
-\myincludegraphics{figures/IntroPolar-13} &
-\myincludegraphics{figures/IntroPolar-14} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Performing the rotation first to plot the point in Figure \ref{fig:polar3}}\label{fig:polar4}
-\end{minipage}
-\restoreboxwidth
 
-\medskip
+%\medskip
+
+%\setboxwidth{110pt}
+%\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-110pt}
+%\noindent\begin{minipage}{\specialboxlength}
+%\begin{center}
+%\begin{tabular}{ccc}
+%\myincludegraphics{figures/IntroPolar-12} &
+%\myincludegraphics{figures/IntroPolar-13} &
+%\myincludegraphics{figures/IntroPolar-14} 
+%\end{tabular}
+%\end{center}
+%\captionsetup{type=figure}
+%\caption{Performing the rotation first to plot the point in Figure \ref{fig:polar3}}\label{fig:polar4}
+%\end{minipage}
+%\restoreboxwidth
+
+%\medskip
 
 
 As you may have guessed, $\theta < 0$ means the rotation away from the polar axis is clockwise instead of counter-clockwise. Hence, to plot $R\left(3.5, -\frac{3\pi}{4}\right)$ we have the following.
@@ -140,7 +142,7 @@ From an `angles first' approach, we rotate $-\frac{3\pi}{4}$ then move out $3.5$
 \medskip
 
 \setboxwidth{110pt}
-\noindent\ifthenelse{\isodd{\thepage}}{\hskip-110pt}{}
+\noindent\ifthenelse{\isodd{\thepage}}{}{\hskip-120pt}
 \noindent\begin{minipage}{\specialboxlength}
 \begin{center}
 \begin{tabular}{ccc}
@@ -161,7 +163,7 @@ The points $Q$ and $R$ above are, in fact, the same point despite the fact that 
 
 \medskip
 
-\example{plotpolarex}{Plotting points in polar coordinates}{ For each point in polar coordinates given below plot the point and then give two additional expressions for the point, one of which has $r > 0$ and the other with $r < 0$. 
+\example{plotpolarex}{Plotting points in polar coordinates}{ For each of the points given below in polar coordinates, plot the point and then give an additional expression for the point.
 
 \begin{multicols}{2}
 
@@ -169,11 +171,7 @@ The points $Q$ and $R$ above are, in fact, the same point despite the fact that 
 
 \item  $P\left(2, 240^{\circ}\right)$
 
-\item  $P\left(-4, \frac{7\pi}{6} \right)$
-
 \item  $P\left(117, -\frac{5\pi}{2} \right)$
-
-\item  $P\left(-3, -\frac{\pi}{4} \right)$
 
 \end{enumerate}
 
@@ -199,65 +197,16 @@ The points $Q$ and $R$ above are, in fact, the same point despite the fact that 
 
 \medskip
 
+\mnote{.75}{Again, we remind the reader that in a calculus course, for a point that is 2 units from the pole, we could have $r=2$ or $r=-2$. We are sticking to $r>0$ for simplicity.}
 
-We now set about finding alternate descriptions $(r,\theta)$ for the point $P$. Since $P$ is $2$ units from the pole, $r = \pm 2$.  Next, we choose angles $\theta$ for each of the $r$ values.  The given representation for $P$ is $\left(2, 240^{\circ}\right)$ so the angle $\theta$ we choose for the  $r = 2$ case must be coterminal with $240^{\circ}$. (Can you see why?)  One such angle is $\theta = -120^{\circ}$ so one answer for this case is  $\left(2,-120^{\circ}\right)$. For the case  $r = -2$, we visualize our rotation starting $2$ units to the left of the pole.  From this position, we need only to rotate $\theta = 60^{\circ}$ to arrive at location coterminal with $240^{\circ}$.  Hence, our answer here is  $\left(-2,60^{\circ}\right)$.  We check our answers by plotting them in Figure \ref{fig:polar8}.
+\mnote{.6}{We say that two angles $\alpha$ and $\beta$ are \textbf{coterminal} if they correspond to the same point on the unit circle; that is, if $(1,\alpha) = (1,\beta)$ in polar coordinates. The reader may recall that coterminal angles differ by an integer multiple of $2\pi$ (or $360^\circ$). For example, the angles $\frac{\pi}{3}$ and $\frac{7\pi}{3}$ are coterminal, since $\frac{7\pi}{3} = \frac{\pi}{3}+2\pi$.}
 
-
-\medskip
-
-
-\noindent\hskip-20pt\begin{minipage}{\textwidth}
-\begin{center}
-\begin{tabular}{cc}
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-23} &
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-24} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Alternate polar reprentations of $P(2,240^\circ)$}\label{fig:polar8}
-\end{minipage}
+We now set about finding an alternate description $(r,\theta)$ for the point $P$. Since $P$ is $2$ units from the pole, $r = 2$.  Next, we choose an angle $\theta$.  The given representation for $P$ is $\left(2, 240^{\circ}\right)$ so the angle $\theta$ we choose for the  $r = 2$ case must be coterminal with $240^{\circ}$.   One such angle is $\theta = -120^{\circ}$ so one possible answer for this point is  $\left(2,-120^{\circ}\right)$. We check our answer by plotting it in Figure \ref{fig:polar8}.
 
 
 \medskip
 
-
-
-\item  We plot $\left(-4,\frac{7\pi}{6}\right)$ by first moving $4$ units to the left of the pole and then rotating $\frac{7\pi}{6}$ radians.  Since $r = -4 < 0$, we find our point lies $4$ units from the pole on the terminal side of $\frac{\pi}{6}$.  
-
-
-\medskip
-
-\noindent\hskip-20pt\begin{minipage}{\textwidth}
-\begin{center}
-\begin{tabular}{cc}
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-25} &
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-26} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Plotting $P(-4,\frac{7\pi}{6})$}\label{fig:polar9}
-\end{minipage}
-
-\medskip
-
-\drawexampleline
-
-To find alternate descriptions for $P$, we note that the distance from $P$ to the pole is $4$ units, so any representation $(r,\theta)$ for $P$ must have $r = \pm 4$.  As we noted above, $P$ lies on the terminal side of $\frac{\pi}{6}$, so this, coupled with $r=4$, gives us $\left(4, \frac{\pi}{6}\right)$ as one of our answers.  To find a different representation for $P$ with $r = -4$, we may choose any angle coterminal with the angle in the original representation of $P$  $\left(-4,  \frac{7\pi}{6}\right)$.  We pick $-\frac{5\pi}{6}$ and get $\left(-4, -\frac{5 \pi}{6}\right)$ as our second answer.
-
-
-\medskip
-
-\noindent\hskip-20pt\begin{minipage}{\textwidth}
-\begin{center}
-\begin{tabular}{cc}
-\myincludegraphics[width=0.48\textwidth]{figures/IntroPolar-27} &
-\myincludegraphics[width=0.48\textwidth]{figures/IntroPolar-28} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Alternate polar representations of $P(-4,\frac{7\pi}{6})$}\label{fig:polar10}
-\end{minipage}
-
+\mfigure[width=0.95\marginparwidth]{.4}{Alternate polar representation of $P(2,240^\circ)$}{fig:polar8}{figures/IntroPolar-23}
 
 \medskip
 
@@ -285,64 +234,11 @@ To find alternate descriptions for $P$, we note that the distance from $P$ to th
 
 
 
-Since $P$ is $117$ units from the pole, any representation $(r,\theta)$ for $P$ satisfies $r = \pm 117$.  For the $r=117$ case, we can  take $\theta$ to be any angle coterminal with $-\frac{5\pi}{2}$.  In this case, we choose $\theta = \frac{3\pi}{2}$, and get $\left(117, \frac{3\pi}{2}\right)$ as one answer.  For the $r = -117$ case,  we visualize moving left $117$ units from the pole and then rotating through an angle $\theta$ to reach $P$.  We find that $\theta = \frac{\pi}{2}$ satisfies this requirement, so our second answer is $\left(-117, \frac{\pi}{2}\right)$.
+Since $P$ is $117$ units from the pole, any representation $(r,\theta)$ for $P$ (with $r>0$) satisfies $r = 117$.  We can  take $\theta$ to be any angle coterminal with $-\frac{5\pi}{2}$;  we choose $\theta = \frac{3\pi}{2}$, and get $\left(117, \frac{3\pi}{2}\right)$ as one possible answer.  
 
 
+\mfigure[width=0.95\marginparwidth]{.2}{Alternate polar representations of $P(117,-\frac{5\pi}{2})$}{fig:polar12}{figures/IntroPolar-31}
 
-\medskip
-
-\noindent\hskip-20pt\begin{minipage}{\textwidth}
-\begin{center}
-\begin{tabular}{cc}
-\myincludegraphics{figures/IntroPolar-31} &
-\myincludegraphics{figures/IntroPolar-32} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Alternate polar representations of $P(117,-\frac{5\pi}{2})$}\label{fig:polar12}
-\end{minipage}
-
-\medskip
-
-
-
-\item We move three units to the left of the pole and follow up with a clockwise rotation of $\frac{\pi}{4}$ radians to  plot $P\left(-3, -\frac{\pi}{4} \right)$.  We see that $P$ lies on the terminal side of $\frac{3\pi}{4}$.
-
-
-\medskip
-
-\noindent\hskip-20pt\begin{minipage}{\textwidth}
-\begin{center}
-\begin{tabular}{cc}
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-33} &
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-34} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Plotting $P(-3,-\frac{\pi}{4})$}\label{fig:polar13}
-\end{minipage}
-
-
-\medskip
-
-
-
-Since $P$ lies on the terminal side of $\frac{3\pi}{4}$, one alternative representation for  $P$ is $\left(3, \frac{3\pi}{4}\right)$.  To find a different representation for $P$ with $r=-3$, we may choose any angle coterminal with $-\frac{\pi}{4}$.  We choose $\theta = \frac{7\pi}{4}$ for our final answer $\left(-3, \frac{7\pi}{4} \right)$.
-
-
-\medskip
-
-
-\noindent\hskip-20pt\begin{minipage}{\textwidth}
-\begin{center}
-\begin{tabular}{cc}
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-35} &
-\myincludegraphics[width=0.46\textwidth]{figures/IntroPolar-36} 
-\end{tabular}
-\end{center}
-\captionsetup{type=figure}
-\caption{Alternate polar representations of $P(-3,-\frac{\pi}{4})$}\label{fig:polar14}
-\end{minipage}
 
 
 \medskip
@@ -353,26 +249,7 @@ Since $P$ lies on the terminal side of $\frac{3\pi}{4}$, one alternative represe
 
 \medskip
 
-Now that we have had some practice with plotting points in polar coordinates, it should come as no surprise that any given point expressed in polar coordinates has infinitely many other representations in polar coordinates.  The following result characterizes when two sets of polar coordinates determine the same point in the plane.  It could be considered as a definition or a theorem, depending on your point of view.  We state it as a property of the polar coordinate system.
-
-\smallskip
-
-\keyidea{idea:polarrep}{Equivalent Representations of Points in Polar Coordinates}{ \index{polar coordinates ! equivalent representations of}
-
-\smallskip
-
-Suppose $\left(r, \theta\right)$ and $\left(r', \theta'\right)$ are polar coordinates where $r \neq 0$, $r' \neq 0$ and the angles are measured in radians.  Then $\left(r, \theta\right)$ and $\left(r', \theta'\right)$  determine the same point $P$ if and only if one of the following is true:
- 
- \begin{itemize}
- 
- \item  $r' = r$ and $\theta' =  \theta + 2\pi k$ for some integer $k$
- 
- \item  $r' = -r$ and $\theta' =  \theta + (2k + 1) \pi$ for some integer $k$
- 
- \end{itemize}
-
-All polar coordinates of the form $(0, \theta)$ represent the pole regardless of the value of $\theta$.
-}
+Now that we have had some practice with plotting points in polar coordinates, it should come as no surprise that any given point expressed in polar coordinates has infinitely many other representations in polar coordinates.  Since we are restricting ourselves to polar coordinates with $r>0$, we see that every alternate description of a point $(r,\theta)$ in polar coordinates is of the form $(r,\theta+2\pi k)$ for some integer $k$.
 
 \smallskip
 
@@ -384,9 +261,9 @@ All polar coordinates of the form $(0, \theta)$ represent the pole regardless of
 
 %\smallskip
 
-Next, we marry the polar coordinate system with the Cartesian (rectangular) coordinate system.  To do so, we identify the pole and polar axis in the polar system to the origin and positive $x$-axis, respectively, in the rectangular system. We get the following result.
+Next, we marry the polar coordinate system with the Cartesian (rectangular) coordinate system.  To do so, we identify the pole and polar axis in the polar system to the origin and positive $x$-axis, respectively, in the rectangular system. We get the following result, which is illustrated in Figure \ref{fig:polarconversion}.
 
-\mfigure{.5}{Converting between rectangular and polar coordinates}{fig:polarconversion}{figures/polarconversion}
+
 
 \smallskip
 
@@ -403,12 +280,13 @@ Next, we marry the polar coordinate system with the Cartesian (rectangular) coor
 
 \smallskip
 
-Referring to Figure \ref{fig:polarconversion}, we see that in the case $r > 0$, Theorem \ref{polarrectangularconversion} is an immediate consequence of basic triangle trigonometry. The theorem holds if $r<0$ as well, although it takes a bit of fiddling around using Key Idea \ref{idea:polarrep} to confirm this.  The following example puts Theorem \ref{polarrectangularconversion} to good use.
+%Referring to Figure \ref{fig:polarconversion}, we see that in the case $r > 0$, Theorem \ref{polarrectangularconversion} is an immediate consequence of basic triangle trigonometry. The theorem holds if $r<0$ as well, although it takes a bit of fiddling around using Key Idea \ref{idea:polarrep} to confirm this.  The following example puts Theorem \ref{polarrectangularconversion} to good use.
 
 \medskip
 
+\mfigure[width=0.95\marginparwidth]{.8}{Converting between rectangular and polar coordinates}{fig:polarconversion}{figures/polarconversion}
 
-\mfigure[width=0.95\marginparwidth]{.2}{$P$ has rectangular coordinates $(2,-2\sqrt{3})$ and polar coordinates $(4,\frac{5\pi}{3})$}{fig:polar15}{figures/IntroPolar-37}
+\mfigure[width=0.95\marginparwidth]{.5}{$P$ has rectangular coordinates $(2,-2\sqrt{3})$ and polar coordinates $(4,\frac{5\pi}{3})$}{fig:polar15}{figures/IntroPolar-37}
 
 
 \example{pointconversionex}{Converting from rectangular to polar coordinates}{   Convert each point in rectangular coordinates given below into polar coordinates with $r \geq 0$ and $0 \leq \theta < 2\pi$.  Use exact values if possible and round any approximate values to two decimal places.  Check your answer by converting them back to rectangular coordinates.
@@ -435,17 +313,18 @@ Referring to Figure \ref{fig:polarconversion}, we see that in the case $r > 0$, 
 
 \item  The point $Q(-3,-3)$ lies in Quadrant III.  Using $x = y = -3$, we get  $r^2 = (-3)^2 + (-3)^2 = 18$ so $r = \pm \sqrt{18} = \pm 3\sqrt{2}$.  Since we are asked for $r \geq 0$, we choose $r = 3 \sqrt{2}$.  We find $\tan(\theta) = \frac{-3}{-3} = 1$, which means $\theta$ has a reference angle of $\frac{\pi}{4}$.  Since $Q$ lies in Quadrant III, we choose $\theta = \frac{5\pi}{4}$, which satisfies the requirement that $0 \leq \theta < 2\pi$.  Our final answer is  $(r,\theta) = \left(3\sqrt{2}, \frac{5\pi}{4}\right)$.  To check, we find $x = r\cos(\theta) = (3\sqrt{2}) \cos\left(\frac{5\pi}{4}\right) = (3\sqrt{2})\left(-\frac{\sqrt{2}}{2}\right) = -3$ and $y = r\sin(\theta) = (3\sqrt{2}) \sin\left(\frac{5\pi}{4}\right) = (3\sqrt{2})\left(-\frac{\sqrt{2}}{2}\right) = -3$, so we are done.
 
-\mfigure[width=0.95\marginparwidth]{.75}{$Q$ has rectangular coordinates $(-3,-3)$ and polar coordinates $(3\sqrt{2},\frac{5\pi}{4})$}{fig:polar16}{figures/IntroPolar-38}
+\mfigure[width=0.95\marginparwidth]{.2}{$Q$ has rectangular coordinates $(-3,-3)$ and polar coordinates $(3\sqrt{2},\frac{5\pi}{4})$}{fig:polar16}{figures/IntroPolar-38}
 
 \item The point $R(0,-3)$ lies along the negative $y$-axis.  While we could go through the usual computations to find the polar form of $R$  (since $x=0$, we would have to determine $\theta$ geometrically), in this case we can find the polar coordinates of $R$ using the definition. Since the pole is identified with the origin, we can easily tell the point $R$ is $3$ units from the pole, which means in the polar representation $(r, \theta)$ of $R$ we know $r = \pm 3$.  Since we require $r \geq 0$, we choose $r = 3$.  Concerning $\theta$, the angle $\theta = \frac{3\pi}{2}$ satisfies $0 \leq \theta < 2\pi$ with its terminal side along the negative $y$-axis, so our answer is $\left(3, \frac{3\pi}{2}\right)$.  To check, we note $x = r \cos(\theta) = 3 \cos\left( \frac{3\pi}{2}\right) = (3)(0) = 0$ and $y = r \sin(\theta) = 3 \sin\left( \frac{3\pi}{2}\right) = 3(-1) = -3$.
 
-\mfigure[width=0.95\marginparwidth]{.5}{$R$ has rectangular coordinates $(0,-3)$ and polar coordinates $(-3,\frac{3\pi}{2})$}{fig:polar17}{figures/IntroPolar-39}
 
 \item  The point $S(-3,4)$ lies in Quadrant II.  With $x = -3$ and $y = 4$, we get $r^2 = (-3)^2 + (4)^2 = 25$ so $r = \pm 5$.  As usual, we choose $r = 5 \geq 0$ and proceed to determine $\theta$.  We have $\tan(\theta) = \frac{y}{x} = \frac{4}{-3} = -\frac{4}{3}$, and since this isn't the tangent of one the common angles, we resort to using the arctangent function. Since $\theta$ lies in Quadrant II and must satisfy $0 \leq \theta < 2\pi$, we choose $\theta = \pi - \arctan\left(\frac{4}{3}\right)$ radians.  Hence, our answer is $(r,\theta) = \left(5, \pi - \arctan\left(\frac{4}{3}\right)\right) \approx (5,2.21)$.  To check our answers requires a bit of tenacity since we need to simplify expressions of the form:  $\cos\left(\pi - \arctan\left(\frac{4}{3}\right)\right)$ and $\sin\left(\pi - \arctan\left(\frac{4}{3}\right)\right)$.  These are good review exercises and are hence left to the reader.  We find  $\cos\left(\pi - \arctan\left(\frac{4}{3}\right)\right) = -\frac{3}{5}$ and $\sin\left(\pi - \arctan\left(\frac{4}{3}\right)\right) = \frac{4}{5}$ , so that $x = r \cos(\theta) = (5)\left(-\frac{3}{5}\right) = -3$ and $y = r \sin(\theta) = (5) \left(\frac{4}{5}\right) = 4$ which confirms our answer.
 
 \end{enumerate}
 
-\mfigure[width=0.95\marginparwidth]{.25}{$S$ has rectangular coordinates $(-3,4)$ and polar coordinates $(5,\pi-\arctan(\frac{4}{3}))$}{fig:polar18}{figures/IntroPolar-40}
+\mfigure[width=0.95\marginparwidth]{.8}{$R$ has rectangular coordinates $(0,-3)$ and polar coordinates $(-3,\frac{3\pi}{2})$}{fig:polar17}{figures/IntroPolar-39}
+
+\mfigure[width=0.95\marginparwidth]{.55}{$S$ has rectangular coordinates $(-3,4)$ and polar coordinates $(5,\pi-\arctan(\frac{4}{3}))$}{fig:polar18}{figures/IntroPolar-40}
 
 }
 

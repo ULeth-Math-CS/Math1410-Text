@@ -94,7 +94,62 @@ If $T$ is a linear transformation, it is often said that ``$T$ is \sword{linear.
 
 \smallskip
 
-Let's learn about this definition through some examples.
+Note that the two defining properties of a linear transformation, when combined, tell us that linear transformations ``map linear combinations to linear combinations.'' That is, if we know the values of $T(\vec{v}_1), T(\vec{v}_2), \ldots, T(\vec{v}_k)$, and we're given $\vec{v} = c_1\vec{v}_1+c_2\vec{v}_2+\cdots+c_k\vec{v}_k$, then
+\begin{align*}
+T(\vec{v}) & = T(c_1\vec{v}_1+c_2\vec{v}_2+\cdots+c_k\vec{v}_k)\\
+&=T(c_1\vec{v}_1)+T(c_2\vec{v}_2)+\cdots + T(c_k\vec{v}_k)\\
+&=c_1T(\vec{v}_1)+c_2T(\vec{v}_2)+\cdots + c_kT(\vec{v}_k).
+\end{align*}
+
+\medskip
+
+\example{ex_lin_trans_a}{Computing a linear transformation from given values}{Given that $T:\R_3\to \R_2$ is a linear transformation such that
+\[
+T(\vec{u}) = \bbm -1\\2\ebm, T(\vec{v}) = \bbm 3\\0\ebm, \text{ and } T(\vec{w}) = \bbm 1\\-4\ebm,
+\]
+compute the value of $T(2\vec{u}-3\vec{v}+\vec{w})$.}
+{
+As argued above, we have
+\begin{align*}
+T(2\vec{u}-3\vec{v}+\vec{w})& = 2T(\vec{u})-3T(\vec{v})+T(\vec{w})\\
+& = 2\bbm -1\\2\ebm -3\bbm 3\\0\ebm + \bbm 1\\-4\ebm\\
+& = \bbm -10\\0\ebm.
+\end{align*}
+}
+
+\medskip
+
+\example{ex_lin_trans_b}{Computing a linear transformation from given values}{
+Suppose $T:\R^2\to \R^3$ is a linear transformation such that
+\[
+T\left(\bbm 2\\1\ebm\right) = \bbm 2\\-1\\3\ebm \text{ and } T\left(\bbm -1\\3\ebm\right) = \bbm 0\\4\\1\ebm.
+\]
+Compute the value of $T\left(\bbm 1\\11\ebm\right)$.}
+{
+This problem takes some more work, since we first need to figure out how to write the vector $\bbm 1\\11\ebm$ as a linear combination of the vectors $\bbm 2\\1\ebm$ and $\bbm -1\\3\ebm$. That is, we need to find scalars $a$ and $b$ such that
+\[
+a\bbm 2\\1\ebm+b\bbm -1\\3\ebm = \bbm 1\\11\ebm.
+\]
+Writing the left-hand side as the single vector $\bbm 2a-b\\a+3b\ebm$, we see that this amounts to solving the pair of equations
+\[\arraycolsep=2pt
+\begin{array}{ccccc}
+2a&-&b&=&1\\
+a&+&3b&=&11
+\end{array}
+\]
+If we multiply the first equation by 3 and add it to the second, we get $7a+0b=14$, so $a=2$. Plugging this value back into either equation gives us $b=3$, so we have
+\begin{align*}
+T\left(\bbm 1\\11\ebm\right) & = T\left(2\bbm 2\\1\ebm + 3\bbm -1\\3\ebm\right)\\
+& = 2T\left(\bbm 2\\1\ebm\right)+3 T\left(\bbm -1\\3\ebm\right)\\
+& = 2\bbm 2\\-1\\3\ebm+3\bbm 0\\4\\1\ebm = \bbm 4\\10\\9\ebm.
+\end{align*}
+}
+
+\medskip
+
+Notice that in Example \ref{ex_lin_trans_b}, in order to make use of the properties of our linear transformation, we had to first solve a system of linear equations. With two equations in two unknowns, it's not too hard to come up with the answer. As the size and number of the vectors involved increases, such problems cannot be tackled without a systematic method for solving systems of linear equations. Fortunately, we will be introducing just such a method in Chapter \ref{chapter:linear}. 
+
+The previous two examples show us what we can do if we know in advance that our transformation is linear. The next two examples show us how to determine if a given transformation is indeed a linear transformation.
 
 \medskip
 
@@ -147,7 +202,7 @@ Now compute $T(\vx)$, $T(\vy)$, and $T(\vx+\vy)$:
 
 So we have an example of something that \textit{doesn't} work. Let's try an example where things \textit{do} work.
 
-\mnote{.4}{In Example \ref{ex_lin_trans_2}, it's important to remember the following principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. (An example is not a proof.) However, doing so can be helpful in understanding the situation better, and can give us clues as to how to construct a general proof.}
+\mnote{.2}{In Example \ref{ex_lin_trans_2}, it's important to remember the following principle of logic: to show that something doesn't work, we just need to show one case where it fails, which we did in Example \ref{ex_lin_trans_1}. To show that something \textit{always} works, we need to show it works for \textit{all} cases -- simply showing it works for a few cases isn't enough. (An example is not a proof.) However, doing so can be helpful in understanding the situation better, and can give us clues as to how to construct a general proof.}
 
 \medskip
 
@@ -226,7 +281,8 @@ Since $T$ satisfies both parts of the definition, we conclude that $T$ is a line
 
 \medskip
 
-We have seen two examples of transformations so far, one which was not linear and one that was. One might wonder ``Why is linearity important?'', which we'll address shortly.
+
+In the previous two examples of transformations, we saw one transformation that was not linear and one that was. One might wonder ``Why is linearity important?'', which we'll address shortly.
 
 First, consider how we proved the transformation in Example \ref{ex_lin_trans_2} was linear. We defined $T$ by matrix multiplication, that is, $T(\vx) = \tta\vx$. We proved $T$ was linear using properties of matrix multiplication -- \textit{we never considered the specific values of \tta!} That is, we didn't just choose a good matrix for $T$; \textit{any} matrix \tta\ would have worked. This leads us to an important theorem. The first part we have essentially just proved; the second part we won't prove, although its truth is very powerful.
 
@@ -247,7 +303,7 @@ The second part of the theorem says that \textit{all} linear transformations can
 Let $T:\rrr{n}{m}$ be a linear transformation. By Theorem \ref{thm:linear_matrix}, there is a matrix \tta\ such that $T(\vx) = \tta\vx$. This matrix \tta\ is called the \sword{standard matrix of the linear transformation $T$}, and is denoted $[\, T\, ]$. 
 }
 
-\mnote{.6}{The matrix--like brackets around $T$ are intended to suggest that the standard matrix \tta\ is a matrix ``with $T$ inside.''}
+\mnote{.4}{The matrix--like brackets around $T$ are intended to suggest that the standard matrix \tta\ is a matrix representative of the given transformation.}
 
 \smallskip
 
@@ -279,7 +335,7 @@ That is, the zero vector in \real{n}\ gets sent to the zero vector in \real{m}.}
 
 
 
-\mnote{.7}{The idea that linear transformations ``send zero to zero'' has an interesting relation to terminology. The reader is likely familiar with functions like $f(x) = 2x+3$ and would likely refer to this as a ``linear function.'' However, $f(0) \neq 0$, so $f$ is \textit{not} ``linear'' by our new definition of linear. We erroneously call $f$ ``linear'' since its graph produces a line, though we should be careful to instead state that ``the graph of $f$ is a line.'' In the context of calculus are only linear transformations if $b=0$. In the case of maps $T:\realnm$, we can similarly consider functions of the form $T(\vec x) = A\vec x + \vec b$; such functions are again useful in areas such as vector calculus, but unless $\vec b = \vec 0$, they are not linear transformations, since $T(\vec 0) = \vec b$.}
+\mnote{.55}{The idea that linear transformations ``send zero to zero'' has an interesting relation to terminology. The reader is likely familiar with functions like $f(x) = 2x+3$ and would likely refer to this as a ``linear function.'' However, $f(0) \neq 0$, so $f$ is \textit{not} ``linear'' by our new definition of linear. We erroneously call $f$ ``linear'' since its graph produces a line, though we should be careful to instead state that ``the graph of $f$ is a line.'' In the context of calculus are only linear transformations if $b=0$. In the case of maps $T:\realnm$, we can similarly consider functions of the form $T(\vec x) = A\vec x + \vec b$; such functions are again useful in areas such as vector calculus, but unless $\vec b = \vec 0$, they are not linear transformations, since $T(\vec 0) = \vec b$.}
 
 \noindent \large \textsf{\textbf{ The Standard Matrix of a Linear Transformation}} \normalsize\\
 
@@ -292,6 +348,8 @@ In \real{n}, the \sword{standard unit vectors} \vei\ are the vectors with a $1$ 
 }
 
 \smallskip
+
+\mnote{.25}{Recall that in Example \ref{ex_lin_trans_b}, we had to solve a system of equations to determine how to write our given vector in terms of two other vectors for which the value of a transformation is known. The advantage of knowing the values of a transformation on the standard unit vectors is that we know immediately how to write any other vector in terms of them.}
 
 We've already seen these vectors in the previous section. In \real{2}, we identified 
 \[
@@ -638,7 +696,7 @@ T(\vec x) = A\vec x & =
 \end{align*}
 Thus, whenever we multiply a vector by a matrix, \textbf{the result is a linear combination of the columns of $A$}! If we think of each column of $A$ as a column vector in $\R^m$, we can make the following definition:
 
-\mnote{.7}{\textbf{Note}: although we didn't say so at the time, we already encountered this rule for multiplying a vector by a matrix in the argument we gave in support of Theorem \ref{thm:standard_matrix} on page \pageref{page:standard_matrix}. Some textbooks actually use this observation to give an alternative definition of matrix multiplication. Once we know how the product $A\vec x$ is defined for an $m\times n$ matrix $A$ and $n\times 1$ vector $\vec x$, we can define $AB$ for an $n\times p$ matrix $B$ as follows: first, we write
+\mnote{.5}{\textbf{Note}: Although we didn't say so at the time, we already encountered this rule for multiplying a vector by a matrix in the argument we gave in support of Theorem \ref{thm:standard_matrix} on page \pageref{page:standard_matrix}. Some textbooks actually use this observation to give an alternative definition of matrix multiplication. Once we know how the product $A\vec x$ is defined for an $m\times n$ matrix $A$ and $n\times 1$ vector $\vec x$, we can define $AB$ for an $n\times p$ matrix $B$ as follows: first, we write
 \[
 B = \bbm \vec{b}_1 &\vec{b}_2 & \cdots & \vec{b}_p\ebm,
 \]
@@ -711,11 +769,11 @@ T(\vec v) = A\vec v = \vec 0 = T(\vec 0).
 \]
 Thus, if $\operatorname{null}(A)\neq \{\vec 0\}$, then $T$ is not one-to-one. On the other hand, suppose $\operatorname{null}(A)=\{\vec 0\}$, and that $T(\vec x) = T(\vec y)$ for vectors $\vec x, \vec y\in R^n$. Then we have
 \[
-\vec 0 - T(\vec x) - T(\vec y) = T(\vec x - \vec y) = A(\vec x - \vec y),
+\vec 0 = T(\vec x) - T(\vec y) = T(\vec x - \vec y) = A(\vec x - \vec y),
 \]
-so that $\vec x - \vec y\in \operatorname{null}(A) = \{0\}$, which means that $\vec x - \vec y = vec 0$, and thus $\vec x = \vec y$. We have proved the following:
+so that $\vec x - \vec y\in \operatorname{null}(A) = \{0\}$, which means that $\vec x - \vec y = \vec{0}$, and thus $\vec x = \vec y$. We have proved the following:
 
-\mnote{.4}{Recall that a function $f$ is one-to-one if no two inputs give the same output. In other words, if $f$ is one-to-one, then whenever $f(a)=f(b)$, we can conclude that $a=b$.}
+\mnote{.3}{Recall that a function $f$ is one-to-one if no two inputs give the same output. In other words, if $f$ is one-to-one, then whenever $f(a)=f(b)$, we can conclude that $a=b$.}
 
 \smallskip
 

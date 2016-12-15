@@ -42,7 +42,7 @@ The numbers $a$, $b$ (and $c$, respectively) are the \textbf{components} of $\ve
 
 \mnote{.82}{The component form of a vector allows us to identify a point $(a,b)$ (or $(a,b,c)$) with the corresponding vector $\langle a,b\rangle$ (or $\la a,b,c\ra$), so that vectors and points contain essentially the same information, presented in different contexts. This is why mathematicians don't mind using the notation $\mathbb{R}^n$ to refer to both a set of vectors and the set of points containing those vectors.}
 
-\mnote{.65}{\textbf{Caution:} The notation $\la a,b,c\ra$ used in this chapter for a vector is common in geometry, physics, and calculus, but in later chapters we will use \textit{column vector} notation $\bbm a\\b\\c\ebm$ to represent the same vector. This notation is more natural in the context of matrix algebra.}
+\mnote{.65}{\textbf{Caution:} The notation $\la a,b,c\ra$ used in this chapter for a vector is common in geometry, physics, and calculus, but in later chapters we will use \textit{column vector} notation $\bbm a\\b\\c\ebm$ to represent the same vector: see Section \ref{sec:Rn}. This notation is more natural in the context of matrix algebra.}
 
 
 It follows from the definition that the component form of the vector $\overrightarrow{PQ}$, where $P=(x_1,y_1)$ and $Q=(x_2,y_2)$ is 
@@ -113,22 +113,22 @@ Now that we have defined vectors, and have created a nice notation by which to d
 {\begin{enumerate}
 	\item Let $\vec u = \la u_1,u_2\ra$ and $\vec v = \la v_1,v_2\ra$ be vectors in $\mathbb{R}^2$, and let $c$ be a scalar. \index{vectors!algebra of}
 				\begin{enumerate}
-					\item The addition, or sum, of the vectors $\vec u$ and $\vec v$ is the vector
+					\item The \sword{sum} of the vectors $\vec u$ and $\vec v$ is the vector
 					\[
 					\vec u+\vec v = \la u_1+v_1, u_2+v_2\ra.
 					\]
-					\item	The scalar product of $c$ and $\vec v$ is the vector 
+					\item	The \sword{scalar multiplication} of $\vec v$ by $c$ is the vector 
 					\[
 					c\vec v = c\la v_1,v_2\ra = \la cv_1,cv_2\ra.
 					\]
 				\end{enumerate}
 	\item Let $\vec u = \la u_1,u_2,u_3\ra$ and $\vec v = \la v_1,v_2,v_3\ra$ be vectors in $\mathbb{R}^3$, and let $c$ be a scalar. 
 				\begin{enumerate}
-					\item The addition, or sum, of the vectors $\vec u$ and $\vec v$ is the vector
+					\item The \sword{sum} of the vectors $\vec u$ and $\vec v$ is the vector
 					\[
 					\vec u+\vec v = \la u_1+v_1, u_2+v_2, u_3+v_3\ra.
 					\]
-					\item	The scalar product of $c$ and $\vec v$ is the vector 
+					\item	The \sword{scalar multiplication} of $\vec v$ by $c$ is the vector 
 	\[
 			c\vec v = c\la v_1,v_2,v_3\ra = \la cv_1,cv_2,cv_3\ra.
 	\]
@@ -137,6 +137,8 @@ Now that we have defined vectors, and have created a nice notation by which to d
 }
 
 In short, we say addition and scalar multiplication are computed ``component--wise.''\\
+
+\mnote{.7}{In this section we restrict ourselves to vectors in two and three dimensions, since our ability to visualize is limited to these dimensions. However, our ability to work with vectors \textit{algebraically} extends to any number of dimensions. For a general treatment of vectors in $\mathbb{R}^n$, see Section \ref{sec:Rn}.}
 
 \example{ex_vect2}{Adding vectors}{
 	Sketch the vectors $\vec u = \la1,3\ra$, $\vec v = \la 2,1\ra$ and $\vec u+\vec v$ all with initial point at the origin.}
@@ -222,7 +224,10 @@ For any vector $\vec v$ in $\R^2$ or $\R^3$, and any real number $c$, we have
 \]
 }
 
-In particular, Theorem \ref{thm:vecscale} tells us that if $c>0$, then $\len{c\vec{v}}=c\len{\vec{v}}$, so that $c\vec{v}$ is a vector in the \textit{same} direction as $\vec{v}$ whose magnitude has been stretched (if $c>1$) or shrunk (if $c<1$) by a factor of $c$ relative to that of $\vec{v}$. On the other hand, if $c<0$, then we have $\len{c\vec{v}}=-c\len{\vec{v}}$, so that $c\vec{v}$ points in the \textit{opposite} direction to that of $\vec{v}$.
+In particular, Theorem \ref{thm:vecscale} tells us that if $c>0$, then $\len{c\vec{v}}=c\len{\vec{v}}$, so that $c\vec{v}$ is a vector in the \textit{same} direction as $\vec{v}$ whose magnitude has been stretched (if $c>1$) or shrunk (if $c<1$) by a factor of $c$ relative to that of $\vec{v}$. On the other hand, if $c<0$, then we have $\len{c\vec{v}}=-c\len{\vec{v}}$, so that $c\vec{v}$ points in the \textit{opposite} direction to that of $\vec{v}$. With this in mind, we make the following definition:
+
+\definition{def:parallel_vectors}{Parallel Vectors}
+{We say that a vector $\vec{w}$ is \sword{parallel} \index{parallel vectors}\index{vectors!parallel} to a vector $\vec{v}$ if there exists a scalar $c$ such that $\vec{w}=c\vec{v}$.}
 
 \mnote{.7}{To prove Theorem \ref{thm:vecscale}, let $\vec{v}=\la a,b\ra$ be any vector in $\R^2$ (the proof for $\R^3$ is similar), and let $c$ be any scalar. Then
 \begin{align*}
@@ -237,7 +242,7 @@ In particular, Theorem \ref{thm:vecscale} tells us that if $c>0$, then $\len{c\v
 as required.\\
 (Recall that $\sqrt{c^2}=\abs{c}$, the absolute value of $c$, since $c$ might be negative, but the square root is always positive.)}
 
-The \textbf{zero vector} is the vector whose initial point is also its terminal point. It is denoted by $\vec 0$. Its component form, in $\mathbb{R}^2$, is $\la 0,0\ra$; in $\mathbb{R}^3$, it is $\la 0,0,0\ra$. Usually the context makes is clear whether $\vec 0$ is referring to a vector in the plane or in space.
+The \textbf{zero vector} is the vector whose initial point is also its terminal point. It is denoted by $\vec 0$. Its component form, in $\mathbb{R}^2$, is $\la 0,0\ra$; in $\mathbb{R}^3$, it is $\la 0,0,0\ra$. Usually the context makes is clear whether $\vec 0$ is referring to a vector in the plane or in space. 
 
 Our examples have illustrated key principles in vector algebra: how to add and subtract vectors and how to multiply vectors by a scalar. The following theorem states formally the properties of these operations.
 %\clearpage
@@ -264,7 +269,7 @@ Our examples have illustrated key principles in vector algebra: how to add and s
 %$$\norm{c\vec v} = |c|\cdot\norm{\vec v}.$$
 %}
 
-The verification of each of the properties in Theorem \ref{thm:vector_properties} is straightforward, and left as an exercises for the reader.
+The verification of each of the properties in Theorem \ref{thm:vector_properties} is straightforward, and left as an exercise for the reader.
 
 As stated before, each vector $\vec v$ conveys magnitude and direction information. We have a method of extracting the magnitude, which we write as $\norm{\vec v}$. \textit{Unit vectors} are a way of extracting just the direction information from a vector.
 
@@ -316,22 +321,18 @@ We rewrite the equation with parentheses to make a point:
 \vec v = \underbrace{\rule[-9.5pt]{0pt}{15pt}\norm{\vec v}}_{\text{\scriptsize magnitude}}\cdot\underbrace{\left(\frac{1}{\norm{\vec v}}\vec v\right)}_{\text{\scriptsize direction}}.
 \]
 
-This equation illustrates the fact that a vector has both magnitude and direction, where we view a unit vector as supplying \textit{only} direction information. Identifying unit vectors with direction allows us to define \textbf{parallel vectors}.
+This equation illustrates the fact that a vector has both magnitude and direction, where we view a unit vector as supplying \textit{only} direction information. Identifying unit vectors with direction gives us another way to characterize \textbf{parallel vectors}.
 
-\definition{def:parallel_vectors}{Parallel Vectors}
+\theorem{thm:parallel_unit}{Parallel Vectors}
 {\begin{enumerate}
-	\item Unit vectors $\vec u_1$ and $\vec u_2$ are \textbf{parallel} if $\vec u_1 = \pm \vec u_2$.
+	\item Unit vectors $\vec u_1$ and $\vec u_2$ are parallel if $\vec u_1 = \pm \vec u_2$.
 	\index{vectors!parallel}\index{parallel vectors}
-	\item	Nonzero vectors $\vec v_1$ and $\vec v_2$ are \textbf{parallel} if their respective unit vectors are parallel.
+	\item	Nonzero vectors $\vec v_1$ and $\vec v_2$ are parallel if their respective unit vectors are parallel.
 \end{enumerate}
 }
 
-It is equivalent to say that vectors $\vec v_1$ and $\vec v_2$ are parallel if there is a scalar $c\neq 0$ such that $\vec v_1 = c\vec v_2$ (see marginal note). 
-\mnote{.7}{\textbf{Note:} $\vec 0$ is directionless; because $\vnorm{0}=0$, there is no unit vector in the ``direction'' of $\vec 0$. 
-
-Some texts define two vectors as being parallel if one is a scalar multiple of the other. By this definition, $\vec 0$ is parallel to all vectors as $\vec 0 = 0\vec v$ for all $\vec v$.
-
-For this chapter on vector \textit{geometry}, we will use Definition \ref{def:parallel_vectors} of parallel as it is grounded in the fact that unit vectors provide direction information. One may adopt the convention that $\vec 0$ is parallel to all vectors if they desire. (See also the marginal note on page \pageref{note:crossp}.)\label{note:parallel} In later chapters (once we move on to vector \textit{algebra}) it will be more convenient to say that a vector $\vec w$ is parallel to a given vector $\vec{v}$ if there exists a scalar $c$ such that $\vec w = c\vec v$.}
+\mnote{.6}{\textbf{Note:} $\vec 0$ is directionless; because $\vnorm{0}=0$, there is no unit vector in the ``direction'' of $\vec 0$.  Note however that according to Definition \ref{def:parallel_vectors}, the zero vector is technically parallel to every other vector!
+(See also the marginal note on page \pageref{note:crossp}.)\label{note:parallel} }
 
 If one graphed all unit vectors in $\mathbb{R}^2$ with the initial point at the origin, then the terminal points would all lie on the unit circle $x^2+y^2=1$. Based on what we know from trigonometry, we can then say that the component form of all unit vectors in $\mathbb{R}^2$ is $\la \cos\theta,\sin\theta\ra$ for some angle $\theta$.
 
@@ -352,11 +353,11 @@ A similar construction in $\mathbb{R}^3$ shows that the terminal points all lie 
 
 These formulas can come in handy in a variety of situations, especially the formula for unit vectors in the plane.\\
 
-\mnote{.4}{\textbf{Note:} the component form given in Key Idea \ref{idea:unit_vectors} for a unit vector in $\R^3$ is derived from the \href{https://en.wikipedia.org/wiki/Spherical_coordinate_system}{\underline{spherical coordinate system}} for $\R^3$.}
+\mnote{.35}{\textbf{Note:} the component form given in Key Idea \ref{idea:unit_vectors} for a unit vector in $\R^3$ is derived from the \href{https://en.wikipedia.org/wiki/Spherical_coordinate_system}{\underline{spherical coordinate system}} for $\R^3$.}
 
 \example{ex_vect6}{Finding Component Forces}{
 Consider a weight of 50lb hanging from two chains, as shown in Figure \ref{fig:vect6}. One chain makes an angle of $30^\circ$ with the vertical, and the other an angle of $45^\circ$. Find the force applied to each chain.
-\mfigure{.2}{A diagram of a weight hanging from 2 chains in Example \ref{ex_vect6}.}{fig:vect6}{figures/figvect6}}
+\mfigure{.18}{A diagram of a weight hanging from 2 chains in Example \ref{ex_vect6}.}{fig:vect6}{figures/figvect6}}
 {Knowing that gravity is pulling the 50lb weight straight down, we can create a vector $\vec F$ to represent this force. 
 \[
 \vec F = 50\la 0,-1\ra = \la 0,-50\ra.
@@ -403,11 +404,13 @@ Unit vectors were very important in the previous calculation; they allowed us to
 \end{enumerate}
 }
 
+\pagebreak
+
 \example{ex_vect7}{Using standard unit vectors}{
 \begin{enumerate}
 	\item Rewrite $\vec v = \la 2,-3\ra$ using the standard unit vectors.
 	\item	Rewrite $\vec w = 4\vec i - 5\vec j +2\vec k$ in component form.
-\end{enumerate}\pagebreak
+\end{enumerate}
 }
 {\begin{enumerate}
 	\item  \hfill$\displaystyle \begin{aligned}[t]
@@ -428,7 +431,7 @@ These two examples demonstrate that converting between component form and the st
 
 \example{ex_vect8}{Finding Component Force}{
 A weight of 25lb is suspended from a chain of length 2ft while a wind pushes the weight to the right with constant force of 5lb as shown in Figure \ref{fig:vect8}. What angle will the chain make with the vertical as a result of the wind's pushing? How much higher will the weight be?
-\mfigure{.5}{A figure of a weight being pushed by the wind in Example \ref{ex_vect8}.}{fig:vect8}{figures/figvect8}
+\mfigure{.4}{A figure of a weight being pushed by the wind in Example \ref{ex_vect8}.}{fig:vect8}{figures/figvect8}
 }
 {The force of the wind is represented by the vector $\vec F_w = 5\vec i$. The force of gravity on the weight is represented by $\vec F_g = -25\vec j$. The direction and magnitude of the vector representing the force on the chain are both unknown. We represent this force with 
 \[

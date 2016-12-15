@@ -2,9 +2,11 @@
 
 \label{PolarComplex}
 
-In this section, we return to our study of complex numbers begun in Section \ref{CmpNums}.  Recall that a \index{complex number ! definition of}\sword{complex number} is a number of the form $z = a + bi$ where $a$ and $b$ are real numbers and $i$ is the imaginary unit defined by $i = \sqrt{-1}$. The number $a$ is called the \index{complex number ! real part} \sword{real part} \index{real part of a complex number} of $z$, denoted  $\operatorname{Re}(z)$, while the real number $b$ is called the \index{imaginary part of a complex number} \index{complex number ! imaginary part}\sword{imaginary part} of $z$, denoted $\operatorname{Im}(z)$.  From Definition \ref{def:compequality}, we know that if $z = a + bi = c + di$ where $a$, $b$, $c$ and $d$ are real numbers, then $a = c$ and $b = d$, which means $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$ are well-defined. To start off this section, we associate each complex number $z = a+bi$ with the point $(a,b)$ on the coordinate plane.  In this case, the $x$-axis is relabeled as the \index{real axis}\sword{real axis}, which corresponds to the real number line as usual,  and the $y$-axis is relabeled as the \index{imaginary axis}\sword{imaginary axis}, which is demarcated in increments of the imaginary unit $i$.  The plane determined by these two axes is called the \index{complex plane}\sword{complex plane}.
+In this section, we return to our study of complex numbers begun in Section \ref{CmpNums}.  Recall that a \index{complex number ! definition of}\sword{complex number} is a number of the form $z = a + bi$ where $a$ and $b$ are real numbers and $i$ is the imaginary unit defined by $i = \sqrt{-1}$. The number $a$ is called the \index{complex number ! real part} \sword{real part} \index{real part of a complex number} of $z$, denoted  $\operatorname{Re}(z)$, while the real number $b$ is called the \index{imaginary part of a complex number} \index{complex number ! imaginary part}\sword{imaginary part} of $z$, denoted $\operatorname{Im}(z)$.  
 
-\mnote{.7}{Saying that $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$ are `well-defined' means that no matter how we express $z$, the number $\operatorname{Re}(z)$ is always the same, and the number $\operatorname{Im}(z)$ is always the same.  In other words, $\operatorname{Re}$ and $\operatorname{Im}$ are \textit{functions} of complex numbers.}
+To start off this section, we associate each complex number $z = a+bi$ with the point $(a,b)$ on the coordinate plane.  In this case, the $x$-axis is relabelled as the \index{real axis}\sword{real axis}, which corresponds to the real number line as usual,  and the $y$-axis is relabelled as the \index{imaginary axis}\sword{imaginary axis}, which is demarcated in increments of the imaginary unit $i$.  The plane determined by these two axes is called the \index{complex plane}\sword{complex plane}.
+
+%\mnote{.7}{Saying that $\operatorname{Re}(z)$ and $\operatorname{Im}(z)$ are `well-defined' means that no matter how we express $z$, the number $\operatorname{Re}(z)$ is always the same, and the number $\operatorname{Im}(z)$ is always the same.  In other words, $\operatorname{Re}$ and $\operatorname{Im}$ are \textit{functions} of complex numbers.}
 
 \medskip
 
@@ -37,7 +39,16 @@ Since the ordered pair $(a,b)$ gives the \textit{rectangular} coordinates associ
 
 \smallskip
 
-Some remarks about  Definition \ref{modulusargumentdefn} are in order.  We know from Section \ref{IntroPolar} that every point in the plane has infinitely many polar coordinate representations $(r,\theta)$ which means it's worth our time to make sure the quantities `modulus', `argument' and `principal argument' are well-defined. Concerning the modulus, if $z = 0$ then the point associated with $z$ is the origin. In this case, the \textit{only} $r$-value which can be used here is $r=0$.  Hence for $z= 0$, $\abs{z} = 0$ is well-defined. If $z \neq 0$, then the point associated with $z$ is not the origin, and there are \textit{two} possibilities for $r$:  one positive and one negative.  However, we stipulated $r \geq 0$ in our definition so this pins down the value of $\abs{z}$ to one and only one number. Thus the modulus is well-defined in this case, too. (In case you're wondering, the use of the absolute value notation $\abs{z}$ for modulus will be explained shortly.) Even with the requirement $r \geq 0$,  there are infinitely many angles $\theta$ which can be used in a polar representation of a point $(r,\theta)$. If $z \neq 0$ then the point in question is not the origin, so all of these angles $\theta$ are coterminal.  Since coterminal angles are exactly $2\pi$ radians apart, we are guaranteed that only one of them lies in the interval $(-\pi, \pi]$, and this angle is what we call the principal argument of $z$, $\operatorname{Arg}(z)$. In fact, the set $\operatorname{arg}(z)$ of \text{all} arguments of $z$ can be described using set-builder notation as  $\operatorname{arg}(z) = \left\{ \operatorname{Arg}(z) + 2\pi k \, | \, \text{$k$ is an integer} \right\}$.  Note that since $\operatorname{arg}(z)$ is a \textit{set}, we will write `$\theta \in \operatorname{arg}(z)$' to mean `$\theta$ is in the set of arguments of $z$'.   If $z=0$ then the point in question is the origin, which we know can be represented in polar coordinates as $(0,\theta)$ for \textit{any} angle $\theta$. In this case, we have $\operatorname{arg}(0) = (-\infty, \infty)$ and since there is no one value of $\theta$ which lies $(-\pi, \pi]$, we leave $\operatorname{Arg}(0)$ undefined. It is time for an example.
+Some remarks about  Definition \ref{modulusargumentdefn} are in order.  We know from Section \ref{IntroPolar} that every point in the plane has infinitely many polar coordinate representations $(r,\theta)$. Thus, if we want to speak of ``the'' argument, we can't simply choose one value of $\theta$ that works: there are infinitely many other possible answers.
+
+One option, as given above, is to simply include \textit{all} possible answers. This idea becomes important if one wants to do calculus with complex numbers, but doesn't play a role in the algebraic considerations we're interested in. The other, also seen above, is to specify an interval of length $2\pi$ in which the argument must lie. The interval $(-\pi,\pi]$, as given above, is a common choice; another is to use the interval $[0,2\pi)$.
+
+\mnote{.7}{For the purposes of Math 1410, it suffices to speak of ``an'' argument of $z$, and choose whatever interval is convenient for a given problem. The one exception to this is \textbf{online homework}: the easiest way to program a computer to grade the answer for a problem on the polar form of a complex number is to specify an interval for the argument, so be sure to read any online homework problems carefully, and choose $\theta$ to lie in the appropriate interval.}
+
+For this course we won't worry much about distinguishing between ``argument'' and ``principal argument'': any value of $\theta$ that gives the correct complex number will do. While this ambiguity may be annoying at times, we'll see at the end of this section that being able to add an integer multiple of $2\pi$ to the argument without changing the value of $z$ gives us an ingenious method for computing roots of complex numbers.
+
+Let us explore this new terminology with an example.
+
 
 \medskip
 
@@ -62,6 +73,14 @@ Some remarks about  Definition \ref{modulusargumentdefn} are in order.  We know 
 \begin{enumerate}
 
 \item For $z = \sqrt{3} -i = \sqrt{3} + (-1)i$, we have $\operatorname{Re}(z) = \sqrt{3}$ and $\operatorname{Im}(z) = -1$.   To find $\abs{z}$, $\operatorname{arg}(z)$ and $\operatorname{Arg}(z)$, we need to find a polar representation $(r,\theta)$ with $r \geq 0$ for the point $P(\sqrt{3},-1)$ associated with $z$.   We know $r^2 = (\sqrt{3})^2 + (-1)^2 = 4$, so $r = \pm 2$.  Since we require $r \geq 0$, we choose $r =2$, so $\abs{z} = 2$.  Next, we find a corresponding angle $\theta$.  Since $r>0$ and $P$ lies in Quadrant IV, $\theta$ is a Quadrant IV angle.  We know $\tan(\theta) = \frac{-1}{\sqrt{3}} = -\frac{\sqrt{3}}{3}$, so $\theta = -\frac{\pi}{6} + 2\pi k$ for integers $k$.  Hence, $\operatorname{arg}(z) = \left\{-\frac{\pi}{6} + 2\pi k \, | \, \text{$k$ is an integer} \right\}$. Of these values, only  $\theta = -\frac{\pi}{6}$  satisfies the requirement that $-\pi < \theta \leq \pi$, hence $\operatorname{Arg}(z) = -\frac{\pi}{6}$.  
+
+\mnote{.4}{While we can always use the relationship $\tan\theta = \frac{y}{x}$ to determine a value for the argument of $z=x+iy$, it is much easier in practice to ``factor out'' the modulus, and then try to identify what's left over as a point on the unit circle. For $z=\sqrt{3}-i$ we found $\abs{z}=2$, so
+\[
+z = 2\left(\frac{\sqrt{3}}{2}+i\left(-\frac{1}{2}\right)\right).
+\]
+If we know our unit circle (or have a copy of it handy), we can immediately spot that the point $\left(\frac{\sqrt{3}}{2},-\frac{1}{2}\right)$ corresponds to the angle $\theta = -\frac{\pi}{6}$.
+}
+
 
 \item The complex number $z = -2+4i$ has  $\operatorname{Re}(z) = -2$,   $\operatorname{Im}(z) = 4$, and is associated with the point $P(-2,4)$.  Our next task is to find a polar representation $(r,\theta)$ for $P$ where $r \geq 0$. Running through the usual calculations gives $r = 2\sqrt{5}$, so $\abs{z} = 2\sqrt{5}$.  To find $\theta$, we get $\tan(\theta) = -2$, and since $r > 0$ and $P$ lies in Quadrant II, we know $\theta$  is a Quadrant II angle.  We find $\theta = \pi + \arctan(-2) + 2\pi k$, or, more succinctly  $\theta = \pi - \arctan(2) + 2\pi k$ for integers $k$.  Hence $\operatorname{arg}(z) = \left\{\pi - \arctan(2) + 2\pi k \, | \, \text{$k$ is an integer}\right\}$.  Only  $\theta = \pi - \arctan(2)$ satisfies the requirement $-\pi < \theta \leq \pi$,  so $\operatorname{Arg}(z) = \pi - \arctan(2)$. 
 
@@ -111,12 +130,14 @@ Now that we've had some practice computing the modulus and argument of some comp
 
 \smallskip
 
-To prove the first three properties in Theorem \ref{modprops}, suppose $z = a + bi$ where $a$ and $b$ are real numbers.  To determine $\abs{z}$, we find a polar representation $(r,\theta)$ with $r \geq 0$ for the point $(a,b)$.  From Section \ref{IntroPolar}, we know $r^2 = a^2 + b^2$ so that $r = \pm \sqrt{a^2+b^2}$.  Since we require $r \geq 0$, then it must be that $r = \sqrt{a^2 +b^2}$, which means $\abs{z} = \sqrt{a^2+b^2}$.  Using the distance formula, we find the distance from $(0,0)$ to $(a,b)$ is also $\sqrt{a^2+b^2}$, establishing the first property.  For the second property, note that since $\abs{z}$ is a distance, $\abs{z} \geq 0$.  Furthermore,  $\abs{z} = 0$ if and only if the distance from $z$ to $0$ is $0$, and the latter happens if and only if $z = 0$, which is what we were asked to show.  For the third property, we note that since $a = \operatorname{Re}(z)$ and $b = \operatorname{Im}(z)$, $z = \sqrt{a^2+b^2} = \sqrt{\operatorname{Re}(z)^2 + \operatorname{Im}(z)^2}$.
+The first property is simply a consequence of the distance formula: $\abs{a+ib} = \sqrt{a^2+b^2}$ is precisely the distance from the point $(a,b)$ to the origin.  For the second property, note that since $\abs{z}$ is a distance, $\abs{z} \geq 0$.  Furthermore,  $\abs{z} = 0$ if and only if the distance from $z$ to $0$ is $0$, and the latter happens if and only if $z = 0$, which is what we were asked to show. 
+
+For the third property, we note that since $a = \operatorname{Re}(z)$ and $b = \operatorname{Im}(z)$, $z = \sqrt{a^2+b^2} = \sqrt{\operatorname{Re}(z)^2 + \operatorname{Im}(z)^2}$.
 
 
 \smallskip
 
-To prove the product rule, suppose $z = a + bi$ and  $w = c + di$ for real numbers $a$, $b$, $c$ and $d$.  Then $zw = (a+bi)(c+di)$.  After the usual arithmetic  we get $zw = (ac-bd) + (ad+bc)i$. (See Example \ref{complexzeroex1} in Section \ref{CmpNums} for a review of complex number arithmetic.) Therefore,
+To prove the product rule, suppose $z = a + bi$ and  $w = c + di$ for real numbers $a$, $b$, $c$ and $d$.  By Definition \ref{def:compmultiplication}, we have $zw = (ac-bd) + (ad+bc)i$. Therefore,
 
 \begin{align*}
 \abs{zw} & =  \sqrt{(ac-bd)^2+(ad+bc)^2}  \\
@@ -137,14 +158,14 @@ Hence $\abs{zw} = \abs{z} \abs{w}$ as required.
 The Power Rule essentially follows from repeated application of the Product Rule.
 Like the Power Rule, the Quotient Rule can also be established with the help of the Product Rule. We assume $w \neq 0$ (so $\abs{w} \neq 0$) and we get
 \begin{align*}
-\left| \dfrac{z}{w} \right| &  =  \left| (z) \left( \dfrac{1}{w} \right) \right|  \\[3pt] 
-							& =  |z| \left| \dfrac{1}{w}\right|  \tag*{Product Rule.}
+\left\vert \dfrac{z}{w} \right\rvert &  =  \left\lvert (z) \left( \dfrac{1}{w} \right) \right\rvert  \\[3pt] 
+							& =  |z| \left\lvert \dfrac{1}{w}\right\rvert \tag*{Product Rule.}
 \end{align*}
-Hence, the proof really boils down to showing $\left| \frac{1}{w} \right| = \frac{1}{\abs{w}}$.  This is left as an exercise.
+Hence, the proof really boils down to showing $\left\lvert \dfrac{1}{w} \right\rvert = \dfrac{1}{\abs{w}}$.  This is left as an exercise.
 
 \smallskip
 
-Next, we characterize the argument of a complex number in terms of its real and imaginary parts.
+By restating Theorem \ref{polarrectangularconversion} in terms of complex numbers, we get the following characterization of the argument of a complex number in terms of its real and imaginary parts.
 
 \smallskip
 
@@ -165,10 +186,9 @@ Next, we characterize the argument of a complex number in terms of its real and 
 
 \smallskip
 
-To prove Theorem \ref{argprops}, suppose $z = a + bi$ for real numbers $a$ and $b$.  By definition, $a = \operatorname{Re}(z)$ and $b = \operatorname{Im}(z)$, so the point associated with $z$ is $(a,b) = \left(\operatorname{Re}(z), \operatorname{Im}(z)\right)$.  From Section \ref{IntroPolar}, we know that if $(r,\theta)$ is a polar representation for $\left(\operatorname{Re}(z), \operatorname{Im}(z)\right)$, then $\tan(\theta) = \frac{\operatorname{Im}(z)}{\operatorname{Re}(z)}$, provided $\operatorname{Re}(z) \neq 0$.  If $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) > 0$, then $z$ lies on the positive imaginary axis.  Since we take $r > 0$,  we have that $\theta$ is coterminal with $\frac{\pi}{2}$, and the result follows.   If $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) < 0$, then $z$ lies on the negative imaginary axis, and a similar argument shows $\theta$ is coterminal with $-\frac{\pi}{2}$.  The last property in the theorem was already discussed in the remarks following Definition \ref{modulusargumentdefn}.  
+%To prove Theorem \ref{argprops}, suppose $z = a + bi$ for real numbers $a$ and $b$.  By definition, $a = \operatorname{Re}(z)$ and $b = \operatorname{Im}(z)$, so the point associated with $z$ is $(a,b) = \left(\operatorname{Re}(z), \operatorname{Im}(z)\right)$.  From Section \ref{IntroPolar}, we know that if $(r,\theta)$ is a polar representation for $\left(\operatorname{Re}(z), \operatorname{Im}(z)\right)$, then $\tan(\theta) = \frac{\operatorname{Im}(z)}{\operatorname{Re}(z)}$, provided $\operatorname{Re}(z) \neq 0$.  If $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) > 0$, then $z$ lies on the positive imaginary axis.  Since we take $r > 0$,  we have that $\theta$ is coterminal with $\frac{\pi}{2}$, and the result follows.   If $\operatorname{Re}(z) = 0$ and $\operatorname{Im}(z) < 0$, then $z$ lies on the negative imaginary axis, and a similar argument shows $\theta$ is coterminal with $-\frac{\pi}{2}$.  The last property in the theorem was already discussed in the remarks following Definition \ref{modulusargumentdefn}.  
 
-\smallskip
-
+\pagebreak
 
 Our next goal is to completely marry the Geometry and the Algebra of the complex numbers.  To that end,  consider Figure \ref{fig:polarcom2} below.
 
@@ -334,7 +354,7 @@ Putting this together with our earlier work, we get $zw = \abs{z} \abs{w} \opera
 
 \smallskip
 
-As with with the proof of the Power Rule in Theorem \ref{modprops}, the proof of the Power Rule (better known  as DeMoivre's Theorem) requires Mathematical Induction, and is therefore omitted from this text. 
+As with with the proof of the Power Rule in Theorem \ref{modprops}, the proof of the Power Rule (better known  as DeMoivre's Theorem) amounts to repeated application of the product rule. A formal proof requires the technique of \textit{mathematical induction} (usually first encountered in Math 2000), and is therefore omitted. 
 \smallskip
 
 The last property in Theorem \ref{prodquotpolarcomplex} to prove is the quotient rule.   Assuming $\abs{w} \neq 0$ we have
@@ -407,7 +427,19 @@ and we are done.  The next example makes good use of Theorem \ref{prodquotpolarc
 \end{multicols}
 
 Write your final answers in rectangular form.}
-{In order to use Theorem \ref{prodquotpolarcomplex}, we need to write $z$ and $w$ in polar form.  For $z=2\sqrt{3} + 2i$, we find $\abs{z} = \sqrt{(2\sqrt{3})^2 + (2)^2} = \sqrt{16} = 4$.  If $\theta \in \operatorname{arg}(z)$, we know $\tan(\theta) = \frac{\operatorname{Im}(z)}{\operatorname{Re}(z)} = \frac{2}{2\sqrt{3}} = \frac{\sqrt{3}}{3}$.  Since $z$ lies in Quadrant I, we have $\theta = \frac{\pi}{6} + 2\pi k$ for integers $k$.  Hence, $z = 4 \operatorname{cis}\left(\frac{\pi}{6}\right)$. For $w = -1 + i\sqrt{3}$, we have $\abs{w} = \sqrt{(-1)^2+(\sqrt{3})^2} = 2$.  For an argument $\theta$ of $w$, we have $\tan(\theta) = \frac{\sqrt{3}}{-1} = -\sqrt{3}$.  Since $w$ lies in Quadrant II,  $\theta = \frac{2\pi}{3} + 2\pi k$ for integers $k$ and $w = 2\operatorname{cis}\left(\frac{2\pi}{3}\right)$.  We can now proceed.
+{In order to use Theorem \ref{prodquotpolarcomplex}, we need to write $z$ and $w$ in polar form.  For $z=2\sqrt{3} + 2i$, we find 
+\[
+\abs{z} = \sqrt{(2\sqrt{3})^2 + (2)^2} = \sqrt{16} = 4.
+\]
+We then have
+\[
+z = 4\left(\frac{1}{4}(2\sqrt{3}+2i)\right) = 4\left(\frac{\sqrt{3}}{2}+i\frac{1}{2}\right) = 4\operatorname{cis}\left(\frac{\pi}{6}\right),
+\]
+using the fact that the point $\left(\frac{\sqrt{3}}{2},\frac{1}{2}\right)$ on the unit circle corresponds to the angle $\theta = \frac{\pi}{6}$. For $w = -1 + i\sqrt{3}$, we have $\abs{w} = \sqrt{(-1)^2+(\sqrt{3})^2} = 2$, and thus, using the same method that we did for $z$, we have
+\[
+w = 2\left(\frac{1}{2}(-1+i\sqrt{3})\right) = 2\left(-\frac{1}{2}+i\frac{\sqrt{3}}{2}\right) = 2\operatorname{cis}\left(\frac{2\pi}{3}\right).
+\]
+  We can now proceed.
 
 \begin{enumerate}
 

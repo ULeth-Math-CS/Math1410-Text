@@ -236,7 +236,7 @@ x+5y+10z = 100.
 We have three unknowns but only two equations, so we know that we cannot expect a unique solution. Let's try to solve this system anyway and see what we get.
 
 Putting the system into a matrix and then finding the \rref, we have 
-\[
+\[\extrarowheight=3pt
 \bam{3}1&1&1&32\\ 1&5&10&100 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&-\frac54&15\\0&1&\frac94&17 \eam.
 \]
 
@@ -336,7 +336,7 @@ x_1&+&3x_2&+&3x_3&=&2\\
 \end{array}
 \]
 We now what to do from here: we set up our augmented matrix and reduce:
-\[
+\[\extrarowheight=3pt
 \bam{3}1&3&3&2\\ -2&4&-1&-14\\0&8&4&-8 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&\frac32&5\\0&1&\frac12&-1\\0&0&0&0 \eam.
 \]
 The \rref\ of our matrix tells us that there are infinitely many solutions; in particular, there \textit{is} a solution. Our general solution is
@@ -352,7 +352,7 @@ but any particular solution will do. Taking $t=0$, we get $x_1=5$, $x_2=-1$, and
 The reader is encouraged to verify that this is indeed the case.
 
 For the vector $\vec{b}$, we proceed as above. It should be clear that the system of equations we obtain differs from the one above only in the constants on the right-hand side (since these are defined by the vector $\vec{b}$), so we can proceed by replacing the right-hand column in our augmented matrix above by the vector $\vec{b}$, and reducing:
-\[
+\[\extrarowheight=3pt
 \bam{3}1&3&3&1\\ -2&4&-1&0\\0&8&4&-4 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&\frac32&\frac25\\0&1&\frac12&\frac15\\0&0&0&-\frac{7}{10} \eam.
 \]
 This time, we see that the third row in the \rref\ of our augmented matrix corresponds to the impossible equation $0=-\frac{7}{10}$, so no solution exists. This means that it is impossible to find scalars $x_1$, $x_2$, $x_3$ such that 
@@ -362,7 +362,7 @@ This time, we see that the third row in the \rref\ of our augmented matrix corre
 and therefore the vector $\vec{b}$ \textit{cannot} be written as a linear combination of the vectors $\vec{v}_1$, $\vec{v}_2$, and $\vec{v}_3$.
 
 The solution for the vector $\vec{c}$ is similar. We replace the right-hand column in our augmented matrix by $\vec{c}$ and reduce:
-\[
+\[\extrarowheight=3pt
 \bam{3}1&3&3&-4\\ -2&4&-1&3\\0&8&4&1 \eam \qquad \overrightarrow{\text{rref}}\qquad \bam{3}1&0&\frac32&-\frac52\\0&1&\frac12&-\frac12\\0&0&0&\frac58 \eam.
 \]
 Again, the third row in the \rref\ of our augmented matrix tells us that our system of equations is inconsistent, and therefore, the vector $\vec{c}$ does \textit{not} belong to the span of the vectors $\vec{v}_1$, $\vec{v}_2$, and $\vec{v}_3$.
@@ -387,7 +387,7 @@ Of course nothing happens: choosing different values for $t$ simply means we're 
 The other thing to note, now that we've done a few examples, is that once we have our vectors, we can jump straight to our augmented matrix, since the columns of this matrix are simply the vectors we started with. It's important to do it once the long way, however, so that we understand where everything is coming from. (Otherwise, you'll find yourself staring at the solution to a system, and having no idea what that solution is telling you!)
 
 On the subject of saving time, if you went through the row operations for each of the vectors above (if you didn't, maybe you should: working through the examples is good practice if you haven't yet got the hang of row operations), you probably noticed that you used the exact same row operations for each of the three vectors. This is because the row operations in an augmented matrix $[A|\vec{b}]$ are dictated by the matrix $A$, and not by the vector $\vec{b}$. With this observation in place, we can speed things up considerably by solving the problem for all three vectors at once. We simply set up and reduce an augmented matrix with \textit{three} columns on the right, like so:
-\[
+\[\extrarowheight=3pt
 \left[\begin{array}{ccc|c|c|c}1&3&3&2&1&-4\\ -2&4&-1&-14&0&3\\0&8&4&-8&-4&1 \end{array}\right] \quad \overrightarrow{\text{rref}}\quad \left[\begin{array}{ccc|c|c|c} 1&0&\frac32&5&\frac25 &-\frac52 \\0&1&\frac12&-1&\frac15 &-\frac 12\\0&0&0&0&-\frac{7}{10}&\frac58 \end{array}\right].
 \]
 If we then consider each column on the right of the \rref\ separately, we obtain the same results as before. Let's keep this in mind as we do one more example.
@@ -427,8 +427,8 @@ Keeping in mind the discussion following Example \ref{ex_span1}, we know that we
 -3&4&5&-3&-13
 \end{array}\right]\qquad \overrightarrow{\text{rref}}\qquad
 \left[\begin{array}{cc|c|c|c}
-1&0&1&\frac{19}{7}&3\\
-0&1&2&-\frac{4}{7}&-1\\
+1&0&1&\frac{19}{7}&3\\[3pt]
+0&1&2&-\frac{4}{7}&-1\\[3pt]
 0&0&0&\frac{62}{35}&0
 \end{array}\right].
 \]
