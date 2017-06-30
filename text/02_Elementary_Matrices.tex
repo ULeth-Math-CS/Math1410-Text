@@ -1,0 +1,201 @@
+\section{Elementary Matrices}\label{sec:elementary_matrices}
+
+In this section we introduce the concept of an \textit{elementary matrix}. Elementary matrices are relatively simple objects, as their name suggests, but as we will see, they give us a simple method for understanding why our algorithm for computing the inverse of a matrix works. When we reach the discussion of determinants and their properties, we'll also see that elementary matrices provide a simple proof of an important result: the product rule for determinants.\\
+
+\definition{def:elementary_matrix}{Elementary Matrix}{
+An \textbf{elementary matrix}\index{matrix ! elementary}\index{elementary matrix} is an $n\times n$ matrix $E$ that can be obtained from the identity matrix using a single row operation.
+}\\
+
+
+Note that by reversing the elementary row operation used to create an $n\times n$ elementary matrix $E$, we could equally well say that $E$ is a matrix of rank $n$ that is one row operation away from its reduced row-echelon form (namely, the identity matrix).
+
+\medskip
+
+The following are examples of elementary matrices, along with the elementary row operation used to obtain it from the identity:
+\begin{align*}
+E_1 & = \bbm 1&2\\0&1\ebm & & R_1\to R_1+2R_2\\
+E_2 & = \bbm 1&0&0\\0&0&1\\0&1&0\ebm & & R_2\leftrightarrow R_3\\
+E_3 & = \bbm 4&0\\0&1\ebm & & 4R_1\to R_1\\
+E_4 & = \bbm 1&0&0\\0&\frac{1}{5}&0\\0&0&1\ebm & & \frac{1}{5}R_2\to R_2\\
+E_5 & = \bbm 1&0&0\\0&1&-4\\0&0&1\ebm & & R_2-4R_3\to R_2
+\end{align*}
+
+
+The main reason that elementary matrices are useful is that they give us a way of encoding (or more to the point, keeping track of) the elementary row operations used to define them. The primary result is the following:\\
+
+\theorem{thm:elementary_effect}{Effect of Multiplication by an Elementary Matrix}{
+Let $A$ be an $n\times k$ matrix and suppose that the matrix $B$ is obtained from $A$ using an elementary row operation. Then $B=EA$, where $E$ is the elementary matrix obtained from the identity matrix using the same row operation used to obtain $B$ from $A$.
+}\\
+
+\pagebreak
+
+In other words, if use the notation $X\xrightarrow{RO}Y$ to denote that a particular row operation is applied to the matrix $X$ to obtain the matrix $Y$, if
+\[
+A\xrightarrow{RO} B
+\]
+and
+\[
+I\xrightarrow{RO} E,
+\]
+then $B=EA$.\\
+
+\example{ex_elementary_mult}{Multiplication by an elementary matrix}{
+Let $A = \bbm 2&-1&1\\0&3&2\\4&1&-1\ebm$. For each of the following elementary row operations, construct the corresponding elementary matrix, and verify that multiplication by this matrix performs the desired row operation.
+\begin{enumerate}
+\item $\ds A = \bbm 2&-1&1\\0&3&2\\4&1&-1\ebm \xrightarrow{R_1\leftrightarrow R_3} \bbm 4&1&-1\\0&3&2\\2&-1&1\ebm = B_1.$
+
+\item $\ds A = \bbm 2&-1&1\\0&3&2\\4&1&-1\ebm \xrightarrow{2R_1\to R_1} \bbm 4&-2&2\\0&3&2\\4&1&-1\ebm = B_2$
+
+\item $\ds A = \bbm 2&-1&1\\0&3&2\\4&1&-1\ebm\xrightarrow{R_3-2R_1\to R_3} \bbm 2&-1&1\\0&3&2\\0&3&-3\ebm = B_3$
+\end{enumerate}
+}
+{
+\begin{enumerate}
+\item Applying the same row operation to the $3\times 3$ identity matrix gives us the elementary matrix $E_1 = \bbm 0&0&1\\0&1&0\\1&0&0\ebm$, and we can easily verify that
+\[
+E_1A = \bbm 0&0&1\\0&1&0\\1&0&0\ebm \bbm 2&-1&1\\0&3&2\\4&1&-1\ebm = \bbm 4&1&-1\\0&3&2\\2&-1&1\ebm = B_1.
+\]
+
+\item For the row operation $2R_1\to R_1$ the corresponding elementary matrix is $E_2 = \bbm 2&0&0\\0&1&0\\0&0&1\ebm$, and we have
+\[
+E_2A = \bbm 2&0&0\\0&1&0\\0&0&1\ebm\bbm 2&-1&1\\0&3&2\\4&1&-1\ebm = \bbm 4&-2&2\\0&3&2\\4&1&-1\ebm.
+\]
+\item The elementary matrix corresponding to the row operation $R_3-2R_1\to R_3$ is $E_3 = \bbm 1&0&0\\0&1&0\\-2&0&1\ebm$, and
+\[
+E_3A = \bbm 1&0&0\\0&1&0\\-2&0&1\ebm\bbm 2&-1&1\\0&3&2\\4&1&-1\ebm = \bbm 2&-1&1\\0&3&2\\0&3&-3\ebm = B_3.
+\]
+\end{enumerate}
+}\\
+
+\subsubsection*{Inverses of Elementary Matrices}
+
+Notice that every elementary row operation is reversible. If we apply a row operation of the type $R_i\leftrightarrow R_j$ to a matrix, applying it again will return our matrix to its original state. (Swapping two rows and then swapping them back again results in no net change.) It follows that any ``Type 1'' elementary matrix obtained by a row operation of this type is its own inverse. In terms of row operations,
+\[
+I \xrightarrow{R_i\leftrightarrow R_j} E \xrightarrow{R_i\leftrightarrow R_j} I.
+\]
+But we know that applying the second row operation is the same as multiplying on the left by $E$; therefore, we have $E(E) E^2 = I$. It follows from the definition of the inverse that $E=E^{-1}$.
+
+Now let us consider the other two types of row operation. For a ``Type 2'' elementary matrix, obtained using a row operation of the type $kR_i\to R_i$, we multiply one of the rows of our matrix by a common constant $k\neq 0$. If we then multiply by $\dfrac{1}{k}$, we will be back to where we started.
+
+Thus, if $E$ is obtained from the identity using the row operation $kR_i\to R_i$, then $E^{-1}$ is obtained from the identity using the row operation $\dfrac{1}{k}R_i\to R_i$. For any matrix $A$ we have
+\[
+A \xrightarrow{kR_i\to R_i} EA \xrightarrow{\frac{1}{k}R_i\to R_i} E^{-1}(EA) = A.
+\]
+
+Finally, for a ``Type 3'' elementary matrix, obtained from the identity using a row operation of the type $R_i+kR_j\to R_i$, we add a multiple of one row to another. If we want to undo the affect of adding row $j$ to row $i$, we simply subtract the same multiple of row $j$ to row $i$. Thus, $E^{-1}$ is obtained from the identity using the row operation $R_i-kR_j\to R_i$.\\
+
+\example{ex_elem_inverse}{Inverses of elementary matrices}{
+Determine the inverse of each of the elementary matrices below:
+\begin{enumerate}
+\item $E_1 = \bbm 0&1&0\\1&0&0\\0&0&1\ebm$.
+
+\item $E_2 = \bbm 1&0&-3\\0&1&0\\0&0&1\ebm$.
+
+\item $E_3 = \bbm 1&0&0\\0&1&0\\0&0&\frac{3}{7}\ebm$.
+
+\end{enumerate}}
+{\begin{enumerate}
+\item The matrix $E_1$ is a Type 1 elementary matrix, obtained by exchanging rows 1 and 2. Thus, we have $E_1^{-1} = E_1$. This is easily verified by checking that $E_1^2 = I$.
+
+\item The matrix $E_2$ is a Type 3 elementary matrix, obtained from the identity using the row operation $R_1-3R_3\to R_1$. The opposite row operation is $R_1+3R_3\to R_1$; thus, $E_2^{-1} = \bbm 1&0&3\\0&1&0\\0&0&1\ebm$. Again, we an easily check that $E_2E_2^{-1}=I$.
+
+\item The matrix $E_3$ is a Type 2 elementary matrix, obtained from the identity matrix using the row operation $\frac{3}{7}R_3\to R_3$. The opposite row operation is $\frac{7}{3}R_3\to R_3$, since $\dfrac{1}{3/7} = \dfrac{7}{3}$. It follows that $E_3^{-1} = \bbm 1&0&0\\0&1&0\\0&0&\frac{7}{3}\ebm$.
+\end{enumerate}
+}\\
+
+\subsubsection*{Elementary matrices and inverses}
+
+Consider an $n\times n$ matrix $A$. Suppose we wish to reduce $A$ to its reduced row-echelon form (to solve a system of equations, perhaps, or determine the null space off $A$, etc.) To do so, we carry out a series of elementary row operations, say
+\[
+A \xrightarrow{RO_1} A_1 \xrightarrow{RO_2} A_2 \xrightarrow{RO_3} \cdots \xrightarrow{RO_k} A_k = R,
+\]
+where $R$ is the reduced row-echelon form of $A$. Let $E_1, E_2, \ldots, E_k$ be the elementary matrices corresponding to the elementary row operations $RO_1$, $RO_2, \ldots, RO_k$. Then we have
+\begin{align*}
+ A_1 & = E_1A\\
+ A_2 & = E_2A_1 = (E_2E_1)A\\
+ \vdots & \quad \vdots\\
+ R = A_k & = E_kA_{k-1} = (E_kE_{k-1}\cdots E_2E_1)A.
+\end{align*}
+Now, the reduced row-echelon form $R$ might have one or more rows of zeros, depending on the rank of $A$, but let us focus for now on the case where $\operatorname{rank}(A)=n$, in which case we know that $R=I_n$, the $n\times n$ identity matrix.
+
+In this case, we have (putting $R=I$ in the last equality above):
+\[
+(E_k\cdots E_2E_1)A = I_n.
+\]
+Letting $B=E_k\cdots E_2E_1$, we have $BA=I_n$, and it follows from the Invertible Matrix Theorem that $B=A^{-1}$. We have:\\
+
+\theorem{thm:elementary_inverse}{The inverse is a product of elementary matrices}{
+Let $A$ be an invertible $n\times n$ matrix, and let $E_1, E_2, \ldots, E_k$ be the elementary matrices corresponding (in order) to the elementary row operations used to reduce $A$ to the identity matrix. Then
+\[
+A^{-1} = E_k\cdots E_2E_1.
+\]
+}\\
+
+This result makes sense in the context of our algorithm for computing the inverse. Recall that to compute $A^{-1}$, we form the augmented matrix $[\begin{array}{c|c}A&I\end{array}]$, and apply elementary row operations until we reach the reduced row-echelon form $[\begin{array}{c|c} I&A^{-1}\end{array}]$. 
+
+Notice that at each step, applying an elementary row operation to an augmented matrix $[\begin{array}{c|c} M&N\end{array}]$ is the same as multiplying both $M$ and $N$ by the corresponding elementary matrix. In terms of elementary matrices, our algorithm looks like the following:
+\begin{align*}
+[\begin{array}{c|c} E&I\end{array}] &\xrightarrow{RO_1} [\begin{array}{c|c} E_1A&E_1I\end{array}]\\
+&\xrightarrow{RO_2} [\begin{array}{c|c} E_2(E_1A) & E_2(E_1)\end{array}] \tag{Note $E_1I=E_1$}\\
+& \quad \vdots\\
+& \xrightarrow{RO_k} [\begin{array}{c|c} (E_k\cdots E_2E_1)A & E_k\cdots E_2E_1\end{array}] = [\begin{array}{c|c} I_n & A^{-1}\end{array}].
+\end{align*}
+Since we have $(E_k\cdots E_2E_1)A=I_n$ on the left, it follows that we must have $E_k\cdots E_2E_1 = A^{-1}$ on the right.
+
+We also have the following consequence of our above theorem (which we may view as an additional entry in our list of equivalent statements in the Invertible Matrix Theorem):\\
+
+\theorem{thm:elementary_invertible}{Invertible matrices are products of elementary matrices}{
+An $n\times n$ matrix $A$ is invertible if and only if it is a product of elementary matrices.
+}\\
+
+To see why this result is true, recall from Theorem \ref{thm:inv_prop} that if $A$ and $B$ are invertible $n\times n$ matrices, then so is $AB$, and $(AB)^{-1} = B^{-1}A^{-1}$. We can easily extend this result to products of three or more matrices. If $A_1, A_2, \ldots, A_k$ are all invertible $n\times n$ matrices, then $A_1A_2\cdots A_k$ is invertible, and
+\[
+(A_1A_2\cdots A_k)^{-1} = A_k^{-1}\cdots A_2^{-1}A_1^{-1}.
+\]
+
+We know from our discussion above that every invertible matrix is invertible; therefore, if $A=E_1E_2\cdots E_k$ is a product of elementary matrices, then $A$ is invertible.
+
+Conversely, suppose that $A$ is invertible. From the previous theorem, we know that $A^{-1}$ is a product of elementary matrices; namely, 
+\[
+A^{-1} = E_k\cdots E_2E_1,
+\]
+where $E_1$, $E_2, \ldots, E_k$ are the elementary matrices corresponding to the elementary row operations used to carry $A$ to the identity matrix. Thus, we have
+\begin{align*}
+A & = (A^{-1})^{-1}\\
+& = (E_k\cdots E_2E_1)^{-1}\\
+& = E_1^{-1}E_2^{-1}\cdots E_k^{-1}.
+\end{align*}
+Since the inverse of an elementary matrix is another elementary matrix, our result follows. Note that when we take the inverse of the product of elementary matrices, we must reverse the order of multiplication.\\
+
+\pagebreak
+
+\setboxwidth{100pt}
+\hskip-70pt\noindent\begin{minipage}{\specialboxlength}
+\example{ex_elementary_product}{Writing an invertible matrix as a product of elementary matrices}{
+Write the matrix $A = \bbm 2&-1&3\\-1&0&4\\1&-1&3\ebm$ as a product of elementary matrices, if possible.}
+{We use Gauss-Jordan elimination to carry the matrix $A$ to its reduced row-echelon form. For each elementary row operation performed, we keep track of the corresponding elementary matrix and its inverse.
+\begin{align*}
+\bbm 2&-1&3\\-1&0&4\\1&-1&3\ebm \xrightarrow{R_1\leftrightarrow R_3}& \bbm 1&-1&3\\-1&0&4\\2&-1&3\ebm & E_1 & = \bbm 0&0&1\\0&1&0\\1&0&0\ebm & E_1^{-1} &= \bbm 0&0&1\\0&1&0\\1&0&0\ebm\\
+\xrightarrow{R_2+R_1\to R_2}& \bbm 1&-1&3\\0&-1&7\\2&-1&3\ebm & E_2 & = \bbm 1&0&0\\1&1&0\\0&0&1\ebm & E_2^{-1} &=\bbm 1&0&0\\-1&1&0\\0&0&1\ebm\\
+\xrightarrow{R_3-2R_1\to R_3} & \bbm 1&-1&3\\0&-1&7\\0&1&-3\ebm & E_3 &=\bbm 1&0&0\\0&1&0\\-2&0&1\ebm & E_3^{-1}&= \bbm 1&0&0\\0&1&0\\2&0&1\ebm\\
+\xrightarrow{R_2\leftrightarrow R_3} & \bbm 1&-1&3\\0&1&-3\\0&-1&7\ebm & E_4 &= \bbm 1&0&0\\0&0&1\\0&1&0\ebm & E_4^{-1} &= \bbm 1&0&0\\0&0&1\\0&1&0\ebm\\
+\xrightarrow{R_3+R_2\to R_3}& \bbm 1&-1&3\\0&1&-3\\0&0&4\ebm & E_5 & = \bbm 1&0&0\\0&1&0\\0&1&1\ebm & E_5^{-1} &= \bbm 1&0&0\\0&1&0\\0&-1&1\ebm\\
+\xrightarrow{\frac{1}{4}R_3\to R_3}& \bbm 1&-1&3\\0&1&-3\\0&0&1\ebm & E_6 & = \bbm 1&0&0\\0&1&0\\0&0&\frac{1}{4}\ebm & E_6^{-1} & = \bbm 1&0&0\\0&1&0\\0&0&4\ebm\\
+\xrightarrow{R_2+3R_3\to R_2} & \bbm 1&-1&3\\0&1&0\\0&0&1\ebm & E_7 & = \bbm 1&0&0\\0&1&3\\ 0&0&1\ebm & E_7^{-1} & = \bbm 1&0&0\\0&1&-3\\0&0&1\ebm\\
+\xrightarrow{R_1-3R_3\to R_1}& \bbm 1&-1&0\\0&1&0\\0&0&1\ebm & E_8 & = \bbm 1&0&-3\\0&1&0\\0&0&1\ebm & E_8^{-1} & = \bbm 1&0&3\\0&1&0\\0&0&1\ebm\\
+\xrightarrow{R_1+R_2\to R_1}& \bbm 1&0&0\\0&1&0\\0&0&1\ebm & E_9 &= \bbm 1&1&0\\0&1&0\\0&0&1\ebm & E_9^{-1} & = \bbm 1&-1&0\\0&1&0\\0&0&1\ebm.
+\end{align*}
+We then have
+\[
+A^{-1} = E_9E_8E_7E_6E_5E_4E_3E_2E_1
+\]
+and
+\[
+A = E_1^{-1}E_2^{-1}E_3^{-1}E_4^{-1}E_5^{-1}E_6^{-1}E_7^{-1}E_8^{-1}E_9^{-1}.
+\]
+(Ideally we'd actually write out the matrices above, but since we needed nine steps to get $A$ to the identity, limitations on space prevent us from doing so.) 
+}
+\end{minipage}\\
+\restoreboxwidth
+
+%\printexercises{exercises/02_07_exercises}

@@ -279,68 +279,70 @@
 \indexentry{inverse!Invertible Matrix Theorem|hyperpage}{273}
 \indexentry{diagonal|hyperpage}{278}
 \indexentry{inverse!properties|hyperpage}{278}
-\indexentry{transpose|hyperpage}{281}
-\indexentry{transpose!definition|hyperpage}{281}
-\indexentry{transpose!definition|hyperpage}{281}
-\indexentry{matrix!transpose|hyperpage}{281}
-\indexentry{diagonal!definition|hyperpage}{282}
-\indexentry{triangular matrix!definition|hyperpage}{282}
-\indexentry{matrix!diagonal|hyperpage}{282}
-\indexentry{matrix!triangular|hyperpage}{282}
-\indexentry{transpose!properties|hyperpage}{285}
-\indexentry{symmetric|hyperpage}{287}
-\indexentry{skew symmetric|hyperpage}{287}
-\indexentry{transpose!symmetric|hyperpage}{287}
-\indexentry{transpose!skew-symmetric|hyperpage}{287}
-\indexentry{symmetric!definition|hyperpage}{287}
-\indexentry{skew symmetric!definition|hyperpage}{287}
-\indexentry{antisymmetric|hyperpage}{287}
-\indexentry{symmetric!theorem|hyperpage}{287}
-\indexentry{skew symmetric!theorem|hyperpage}{287}
-\indexentry{pseudoinverse|hyperpage}{288}
-\indexentry{trace!definition|hyperpage}{290}
-\indexentry{trace!properties|hyperpage}{292}
-\indexentry{determinant!of $2\times 2$ matrices|hyperpage}{294}
-\indexentry{matrix!determinant|hyperpage}{294}
-\indexentry{matrix!minor|hyperpage}{295}
-\indexentry{matrix!cofactor|hyperpage}{295}
-\indexentry{minor|hyperpage}{295}
-\indexentry{cofactor|hyperpage}{295}
-\indexentry{cofactor!expansion|hyperpage}{297}
-\indexentry{matrix!determinant|hyperpage}{298}
-\indexentry{determinant!definition|hyperpage}{298}
+\indexentry{matrix ! elementary|hyperpage}{281}
+\indexentry{elementary matrix|hyperpage}{281}
+\indexentry{transpose|hyperpage}{287}
+\indexentry{transpose!definition|hyperpage}{287}
+\indexentry{transpose!definition|hyperpage}{287}
+\indexentry{matrix!transpose|hyperpage}{287}
+\indexentry{diagonal!definition|hyperpage}{288}
+\indexentry{triangular matrix!definition|hyperpage}{288}
+\indexentry{matrix!diagonal|hyperpage}{288}
+\indexentry{matrix!triangular|hyperpage}{288}
+\indexentry{transpose!properties|hyperpage}{291}
+\indexentry{symmetric|hyperpage}{293}
+\indexentry{skew symmetric|hyperpage}{293}
+\indexentry{transpose!symmetric|hyperpage}{293}
+\indexentry{transpose!skew-symmetric|hyperpage}{293}
+\indexentry{symmetric!definition|hyperpage}{293}
+\indexentry{skew symmetric!definition|hyperpage}{293}
+\indexentry{antisymmetric|hyperpage}{293}
+\indexentry{symmetric!theorem|hyperpage}{293}
+\indexentry{skew symmetric!theorem|hyperpage}{293}
+\indexentry{pseudoinverse|hyperpage}{294}
+\indexentry{trace!definition|hyperpage}{296}
+\indexentry{trace!properties|hyperpage}{298}
+\indexentry{determinant!of $2\times 2$ matrices|hyperpage}{300}
+\indexentry{matrix!determinant|hyperpage}{300}
+\indexentry{matrix!minor|hyperpage}{301}
+\indexentry{matrix!cofactor|hyperpage}{301}
+\indexentry{minor|hyperpage}{301}
+\indexentry{cofactor|hyperpage}{301}
 \indexentry{cofactor!expansion|hyperpage}{303}
-\indexentry{determinant!of triangular matrices|hyperpage}{305}
-\indexentry{triangular matrix!determinant|hyperpage}{305}
-\indexentry{elementary row operations!and determinants|hyperpage}{306}
-\indexentry{determinant!and elementary row operations|hyperpage}{306}
-\indexentry{elementary matrix|hyperpage}{310}
-\indexentry{matrix!elementary|hyperpage}{310}
-\indexentry{determinant!properties|hyperpage}{310}
-\indexentry{Invertible Matrix Theorem|hyperpage}{311}
-\indexentry{Cramer's Rule|hyperpage}{314}
-\indexentry{matrix!cofactor|hyperpage}{316}
-\indexentry{cofactor!matrix|hyperpage}{316}
-\indexentry{adjugate|hyperpage}{316}
-\indexentry{matrix!adjugate|hyperpage}{316}
-\indexentry{eigenvalue!definition|hyperpage}{322}
-\indexentry{eigenvector!|hyperindexformat{\see{eigenvalue}}}{322}
-\indexentry{characteristic polynomial|hyperpage}{325}
-\indexentry{eigenvalue!finding|hyperpage}{325}
-\indexentry{eigenvalue!properties|hyperpage}{342}
-\indexentry{Invertible Matrix Theorem|hyperpage}{343}
-\indexentry{similar matrices|hyperpage}{345}
-\indexentry{matrix!similar|hyperpage}{345}
-\indexentry{equivalence relation|hyperpage}{346}
-\indexentry{similar matrices!properties of|hyperpage}{346}
-\indexentry{multiplicity!of an eigenvalue|hyperpage}{347}
-\indexentry{characteristic polynomial|hyperpage}{347}
-\indexentry{multiplicity!algebraic|hyperpage}{347}
-\indexentry{eigenspace|hyperpage}{348}
-\indexentry{multiplicity!geometric|hyperpage}{349}
-\indexentry{diagonalization|hyperpage}{350}
-\indexentry{diagonalizable matrix|hyperpage}{351}
-\indexentry{matrix!diagonalizable|hyperpage}{351}
-\indexentry{multiplicity!and diagonalization|hyperpage}{354}
-\indexentry{Jordan Canonical Form|hyperpage}{355}
-\indexentry{diagonalization!orthogonal|hyperpage}{355}
+\indexentry{matrix!determinant|hyperpage}{304}
+\indexentry{determinant!definition|hyperpage}{304}
+\indexentry{cofactor!expansion|hyperpage}{309}
+\indexentry{determinant!of triangular matrices|hyperpage}{311}
+\indexentry{triangular matrix!determinant|hyperpage}{311}
+\indexentry{elementary row operations!and determinants|hyperpage}{312}
+\indexentry{determinant!and elementary row operations|hyperpage}{312}
+\indexentry{elementary matrix|hyperpage}{316}
+\indexentry{matrix!elementary|hyperpage}{316}
+\indexentry{determinant!properties|hyperpage}{316}
+\indexentry{Invertible Matrix Theorem|hyperpage}{317}
+\indexentry{Cramer's Rule|hyperpage}{320}
+\indexentry{matrix!cofactor|hyperpage}{322}
+\indexentry{cofactor!matrix|hyperpage}{322}
+\indexentry{adjugate|hyperpage}{322}
+\indexentry{matrix!adjugate|hyperpage}{322}
+\indexentry{eigenvalue!definition|hyperpage}{328}
+\indexentry{eigenvector!|hyperindexformat{\see{eigenvalue}}}{328}
+\indexentry{characteristic polynomial|hyperpage}{331}
+\indexentry{eigenvalue!finding|hyperpage}{331}
+\indexentry{eigenvalue!properties|hyperpage}{348}
+\indexentry{Invertible Matrix Theorem|hyperpage}{349}
+\indexentry{similar matrices|hyperpage}{351}
+\indexentry{matrix!similar|hyperpage}{351}
+\indexentry{equivalence relation|hyperpage}{352}
+\indexentry{similar matrices!properties of|hyperpage}{352}
+\indexentry{multiplicity!of an eigenvalue|hyperpage}{353}
+\indexentry{characteristic polynomial|hyperpage}{353}
+\indexentry{multiplicity!algebraic|hyperpage}{353}
+\indexentry{eigenspace|hyperpage}{354}
+\indexentry{multiplicity!geometric|hyperpage}{355}
+\indexentry{diagonalization|hyperpage}{356}
+\indexentry{diagonalizable matrix|hyperpage}{357}
+\indexentry{matrix!diagonalizable|hyperpage}{357}
+\indexentry{multiplicity!and diagonalization|hyperpage}{360}
+\indexentry{Jordan Canonical Form|hyperpage}{361}
+\indexentry{diagonalization!orthogonal|hyperpage}{361}

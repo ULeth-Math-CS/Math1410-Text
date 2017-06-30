@@ -33,15 +33,16 @@
 \contentsline {section}{\numberline {6.2}Solving Matrix Equations $\ensuremath {A}\ensuremath {X}=\ensuremath {B}$}{255}{section.6.2}
 \contentsline {section}{\numberline {6.3}The Matrix Inverse}{263}{section.6.3}
 \contentsline {section}{\numberline {6.4}Properties of the Matrix Inverse}{273}{section.6.4}
-\contentsline {chapter}{\numberline {7}Operations on Matrices}{281}{chapter.7}
-\contentsline {section}{\numberline {7.1}The Matrix Transpose}{281}{section.7.1}
-\contentsline {section}{\numberline {7.2}The Matrix Trace}{290}{section.7.2}
-\contentsline {section}{\numberline {7.3}The Determinant}{294}{section.7.3}
-\contentsline {section}{\numberline {7.4}Properties of the Determinant}{303}{section.7.4}
-\contentsline {section}{\numberline {7.5}Applications of the Determinant}{314}{section.7.5}
-\contentsline {chapter}{\numberline {8}Eigenvalues and Eigenvectors}{321}{chapter.8}
-\contentsline {section}{\numberline {8.1}Eigenvalues and Eigenvectors}{321}{section.8.1}
-\contentsline {section}{\numberline {8.2}Properties of Eigenvalues and Eigenvectors}{338}{section.8.2}
-\contentsline {section}{\numberline {8.3}Eigenvalues and Diagonalization}{345}{section.8.3}
+\contentsline {section}{\numberline {6.5}Elementary Matrices}{281}{section.6.5}
+\contentsline {chapter}{\numberline {7}Operations on Matrices}{287}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Matrix Transpose}{287}{section.7.1}
+\contentsline {section}{\numberline {7.2}The Matrix Trace}{296}{section.7.2}
+\contentsline {section}{\numberline {7.3}The Determinant}{300}{section.7.3}
+\contentsline {section}{\numberline {7.4}Properties of the Determinant}{309}{section.7.4}
+\contentsline {section}{\numberline {7.5}Applications of the Determinant}{320}{section.7.5}
+\contentsline {chapter}{\numberline {8}Eigenvalues and Eigenvectors}{327}{chapter.8}
+\contentsline {section}{\numberline {8.1}Eigenvalues and Eigenvectors}{327}{section.8.1}
+\contentsline {section}{\numberline {8.2}Properties of Eigenvalues and Eigenvectors}{344}{section.8.2}
+\contentsline {section}{\numberline {8.3}Eigenvalues and Diagonalization}{351}{section.8.3}
 \contentsline {chapter}{\numberline {A}Answers To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.13}{section*.302}
+\contentsline {chapter}{Index}{A.13}{section*.306}
