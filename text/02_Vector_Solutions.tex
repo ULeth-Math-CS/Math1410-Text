@@ -188,7 +188,7 @@ The term \textit{homogeneous} comes from two Greek words; \textit{homo} meaning 
 
 Notice that the line $\vx =t\vv$ in the solution of Example \ref{ex_vector_solution_101} above passes through the origin. This is an important characteristic of homogeneous systems: since $A\vec 0 = \vec 0$ for any matrix $A$, we always have (at least) the solution $\vx = \vec 0$. (We'll have more to say about this below.)
 
-Furthermore, since or set of solutions is a line through the origin, we know from Section \ref{sec:Rn} is a \textit{subspace}. In fact, it is not just any subspace: this is an object we have already defined! Recall from Section \ref{sec:lin_trans} that the \sword{null space} of an $m\times n$ matrix $A$ is the subspace
+Furthermore, since or set of solutions is a line through the origin, we know from Section \ref{sec:Rn} is a \textit{subspace}. In fact, it is not just any subspace: this is an important object known as the \sword{null space} of a matrix. We will discuss the importance of the null space in Section \ref{sec:lin_trans}, where we will see that the null space of an $m\times n$ matrix $A$ is the subspace
 \[
 V = \{\vx\in\R^n \, | \, A\vx = \vec 0\}.
 \]
@@ -198,13 +198,13 @@ At last, we see that determining the null space of a matrix is exactly the same 
 
 \medskip
 
-\example{ex_vect_sol_102}{Determining the null space of a matrix}{
-Determine the null space of the matrix
+\example{ex_vect_sol_102}{Determining the solution of a homogeneous system}{
+Determine the solution to the system $A\vx = \vec 0$, where
 \[
 \tta = \bmx{cc}2 & -3 \\ -2 & 3\emx.
 \]
 }
-{Since the null space of $A$ is equal to the set of all solutions $\vx$ to the matrix equation $A\vec x = \vec 0$, we proceed exactly as we did in Example \ref{ex_vector_solution_101}, by forming the proper augmented matrix and putting it into \rref, which we do below. 
+{We proceed exactly as we did in Example \ref{ex_vector_solution_101}, by forming the proper augmented matrix and putting it into \rref, which we do below. 
 \[
 \bam{2} 2&-3&0\\-2 & 3&0\eam \quad \arref \quad \bam{2} 1 & -3/2 & 0 \\0&0&0\eam
 \]
@@ -215,22 +215,22 @@ We interpret the \rref\ of this matrix to find that
   x_2 & = t \text{ is free.}
 \end{align*}
 
-As before, we can say that $\vx\in\operatorname{null}(A)$ provided that
+As before, we can say that $A\vx=\vec 0$ provided that
 \[
 \vx = \bbm x_1\\x_2\ebm = \bbm \frac{3}{2}t\\ t\ebm = t\bbm \frac{3}{2}\\1\ebm.
 \]
-As before, let's set 
+If we set 
 \[
-\vv = \bmx{c} 3/2\\1\emx
+\vv = \bmx{c} 3/2\\1\emx,
 \]
-so we can write our solution as 
+then our solution can be written as 
 \[
-\operatorname{null}(A) = \left\{t\vv \,|\, t\in\R \text{ and } \vv = \bmx{c} 3/2\\1\emx\right\}
+\left\{t\vv \,|\, t\in\R \text{ and } \vv = \bmx{c} 3/2\\1\emx\right\}
 \]
 
 %\drawexampleline%{ex_vect_sol_102}
 
-Again, the null space of $A$ contains infinitely many solutions to the equation $A\vx  = \vec 0$; any choice of $x_2$ gives us one of these solutions. For instance, picking $x_2=2$ gives the solution 
+Again, we have infinitely many solutions to the equation $A\vx  = \vec 0$; any choice of $x_2$ gives us one of these solutions. For instance, picking $x_2=2$ gives the solution 
 \[
 \vx = \bmx{c} 3\\2\emx.
 \]
@@ -256,7 +256,7 @@ As in the previous example, our solutions are multiples of a vector, and hence w
 \end{center}
 }
 
-Again, we see that the solution is a line through the origin, confirming that $\operatorname{null}(A)$ is a subspace, as guaranteed by Theorem \ref{thm:nullsub}.
+
 }
 
 \medskip
@@ -278,30 +278,18 @@ The \sword{basic} solutions to the system $A\vx = \vec 0$ are the vectors $\vec{
 
 \smallskip
 
-Although we will not prove it here, the basic solutions to a homogeneous system are always linearly independent. Moreover, it follows from the definition of $\operatorname{null}(A)$ that any $\vx \in\operatorname{null}(A)$ can be written as a linear combination of the basic solutions. In the language of Section \ref{sec:Rn}, the basic solutions to a homogeneous system $A\vx = \vec 0$ form a \sword{basis} \index{basis ! of a null space} for the null space of $A$. This is an important point to remember, so we emphasize it in the following Key Idea:
-
-\smallskip
-
-\keyidea{idea:nullbasis}{Basis for the null space of a matrix}{
-The basic solutions to the homogeneous system $A\vec{x}=\vec{0}$ form a basis for the null space of $A$. That is, if $\vec{v}_1, \vec{v}_2, \ldots, \vec{v}_k$ are the basic solutions to $A\vec{x}=\vec{0}$, then
-\[
-\operatorname{null}(A)=\operatorname{span}\{\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k\}.
-\]
-}
-
-\smallskip
 
 To help clarify Definition \ref{def:basic_sol}, let's do one more example where we have more than one basic solution.
 
 \medskip
 
 \example{ex_basic_sols}{A homogeneous system with two basic solutions}{
-Find a basis for the null space of $A$, where 
+Find the general solution to the homogeneous system $A\vx = \vec 0$, where 
 \[
 A = \bbm 1&-2&0&4\\3&-1&5&2\\-2&-6&-10&12\ebm.
 \]}
 {
-Again, determining $\operatorname{null}(A)$ is the same as solving the homogeneous system $A\vx = \vec 0$, and by Key Idea \ref{idea:nullbasis}, a basis for $\operatorname{null}(A)$ is given by the basic solutions to this system. As usual, to find the basic solutions, we set up the augmented matrix of the system and reduce:
+As usual, to find the basic solutions, we set up the augmented matrix of the system and reduce:
 \[
 \bam{4}1&-2&0&4&0\\3&-1&5&2&0\\-2&-6&-10&12&0\eam \quad \arref \quad
 \bam{4}1&0&2&0&0\\0&1&1&-2&0\\0&0&0&0&0\eam
@@ -321,11 +309,7 @@ From the above, we see that the general solution can be written as $\vx = s\vv +
 \[
 \vv = \bbm -2\\-1\\1\\0\ebm \quad \text{ and } \quad \vec{w} = \bbm 0\\2\\0\\1\ebm
 \]
-are the basic solutions to $A\vx = \vec 0$. Since the null space of $A$ is equal to the set of solutions to $A\vx  = \vec 0$, and since every solution to $A\vx = \vec 0$ can be written in terms of $\vv$ and $\vec{w}$, it follows that
-\[
-\operatorname{null}(A) = \operatorname{span}\{\vv, \vec{w}\},
-\]
-and that $\{\vv, \vec{w}\}$ is a basis for $\operatorname{null}(A)$.
+are the basic solutions to $A\vx = \vec 0$. 
 }
 
 \medskip
@@ -401,12 +385,12 @@ Each vector in the solution can be written as the sum of two vectors: $\vec{x}_p
 \end{tikzpicture}
 \end{center}}
 
-Notice that in this case our line does \textit{not} pass through the origin, so the set of solutions is not a subspace. On the other hand, every solution to the system $A\vec x = \vec b$ can be obtained by adding the vector $\vec{x}_p$ to an element of the subspace $\operatorname{null}(A)$. We'll elaborate on this shortly.
+Notice that in this case our line does \textit{not} pass through the origin, so the set of solutions is not a subspace. On the other hand, every solution to the system $A\vec x = \vec b$ can be obtained by adding the vector $\vec{x}_p$ to an element of the set of solutions to the homogeneous system $A\vx = \vec 0$. We'll elaborate on this shortly.
 }
 
 \medskip
 
-The previous examples illustrate some important concepts. One is that (at least, when $\vec x\in \R^2$ or $\R^3$) we can visualize the solution to a system of linear equations. Before, when we had infinitely many solutions, we knew we could arbitrarily pick values for our free variables and get different solutions. We knew this to be true, and we even practiced it, but the result was not very ``tangible.'' Now, we can view our solution as a vector; by picking different values for our free variables, we see this as multiplying certain important vectors by a scalar which gives a different solution.
+The previous examples illustrate some important concepts. One is that (at least, when $\vec x\in \R^2$ or $\R^3$) we can visualize the solution to a system of linear equations. Before, when we had infinitely many solutions, we knew we could arbitrarily pick values for our free variables and get different solutions. We knew this to be true, and we even practised it, but the result was not very ``tangible.'' Now, we can view our solution as a vector; by picking different values for our free variables, we see this as multiplying certain important vectors by a scalar which gives a different solution.
 
 \mnote{.2}{\textbf{Note:} Visually, the solutions in Examples \ref{ex_vector_solution_101} and \ref{ex_vect_sol_103} were both lines; from our experience with Section \ref{sec:lines} we know that this makes sense, since the solutions involved a single parameter $t$. The reader can similarly expect that a solution involving two parameters can be visualized as a plane. Such was the case in Example \ref{ex_basic_sols}, except that here, our solution is a plane in $\R^4$, making it somewhat harder to visualize.}
 
@@ -513,163 +497,12 @@ then there must be a leading 1 in the right-hand column of the \rref\ of $\bmx{c
 \]
 which is exactly what we expect in a system with no solutions.
 
-Items 2 and 3 in Theorem \ref{thm:rank_and_sols} simply give another way of stating the fact that the free variables are those variables that do \textbf{not} have a leading 1 in their column. This seems like an obvious fact, but it is very important. Recall that we concluded Section \ref{sec:lin_trans} with Theorem \ref{thm:fund_thm_lin_maps}, the Fundamental Theorem of Linear Transformations, which stated that for any linear transformation $T:\R^n\to \R^m$ defined by $T(\vx) = A\vx$,
-\[
-\dim \operatorname{null}(A) + \dim \operatorname{col}(A) = n,
-\]
-while Item 3 in Theorem \ref{thm:rank_and_sols} gives us the equation
-\[
- k + \operatorname{rank}(A) = n,
-\]
-where $k$ is the number of parameters in the general solution of $A\vx = \vec b$. Now, we know from Definition \ref{def:basic_sol} above that the number of parameters in the general solution to \ttaxb\ is equal to the number of basic solutions to the system $A\vx = \vec 0$, and that the basic solutions to \ttaxo\ form a basis for $\operatorname{null}(A)$. From this, we can conclude that
-\[
-k = \dim \operatorname{null}(A).
-\]
-Now, recall that at the end of Section \ref{sec:lin_trans}, we alternatively defined the rank of a matrix $A$ to be equal to the dimension of the column space of $A$. One should hope that we did not decide to use the same word for two different things in one book, and indeed it is true that
-\[
-\operatorname{rank}(A) = \dim \operatorname{col}(A).
-\]
-This fact is a direct result of Theorem \ref{thm:colspace_basis} below, whose proof is too technical for this text. To help with the statement of this theorem, we first introduce one more bit of terminology. We will call a column of a matrix $A$ a \sword{pivot column}\index{column ! pivot}\index{pivot column} if the corresponding column in the \rref\ of $A$ contains a leading 1.
+Items 2 and 3 in Theorem \ref{thm:rank_and_sols} simply give another way of stating the fact that the free variables are those variables that do \textbf{not} have a leading 1 in their column. This seems like an obvious fact, but it is very important. We will see in Section \ref{sec:null_column} that this observation leads to a major theorem, sometimes known as the Fundamental Theorem of Linear Transformations: see Theorem \ref{thm:fund_thm_lin_maps}.
 
-\smallskip
-
-\theorem{thm:colspace_basis}{Basis for the column space of a matrix}{
-A basis for the column space of an $m\times n$ matrix $A$ is given by the set of pivot columns of $A$.}
-
-\smallskip
-
-We will illustrate Theorem \ref{thm:colspace_basis} with an example. It's important to note that while we need to find the \rref\ of $A$ in order to find the pivot columns, the columns we want are those of the \textit{original} matrix $A$, not its RREF.
+Let us explore this result with a series of examples.
 
 \medskip
 
-\example{ex_colspace}{Finding a basis for the column space}{
-Determine a basis for the column space of the matrix
-\[
-A = \bbm 1&0&2&-3\\2&-1&0&4\\-1&1&3&0\ebm.
-\]}
-{We begin by computing the \rref\ $R$ of $A$. We find
-\[
-R = \bbm 1 & 0 & 0 & -17\\ 0 & 1 & 0 & -38\\ 0 & 0 & 1 & 7\ebm,
-\]
-and note that $R$ has leading 1s in columns 1, 2, and 3. It follows that 
-\[
-B = \left\{\bbm 1\\2\\-1\ebm, \bbm 0\\-1\\1\ebm, \bbm 2\\0\\3\ebm\right\}
-\]
-is a basis for $\operatorname{col}(A)$.}
-
-\medskip
-
-Let's make a few observations about the previous example. Notice that we have three leading 1s, so $\operatorname{rank}(A) = 3$. In particular, there is a leading 1 in each row, so we're guaranteed that the system \ttaxb\ is consistent, no matter what the vector $\vec{b}$ is. 
-
-Put another way, the matrix transformation $T(\vx) = A\vx$ determines a linear transformation $T:\R^4\to \R^3$. Notice that there are three vectors in the basis for $\operatorname{col}(A)$; this means that the column space of $A$ (and thus, the range of $T$) is three-dimensional, and therefore the range of $T$ is \textit{all} of $\R^3$, and thus, no matter what vector $\vec b\in\R^3$ we choose, we're guaranteed to be able to find a vector $\vx \in \R^4$ such that $A\vx = \vec b$.
-
-The key observation here is that the question ``Does \ttaxb\ have a solution?'' is equivalent to the question ``Does the vector $\vec{b}$ belong to $\operatorname{col}(A)$?'' Unfortunately, while we may gain some insight from noticing that these questions are the same, we are no further ahead when it comes to answering them. Whatever version we prefer, the only way to get an answer is to compute the \rref of $\bmx{c|c}A&\vec{b}\emx$.
-
-Let's look at a few more examples.
-
-Suppose we repeated Example \ref{ex_colspace} using the matrix $A$ from Example \ref{ex_basic_sols}. Both cases involved a matrix of size $3\times 4$, but the matrix from Example \ref{ex_basic_sols} had rank 2, so the column space of $A$ is only two-dimensional. In this case, the system \ttaxb\ will be consistent if $\vec{b}$ belongs to the span of the first two columns of $A$, and inconsistent otherwise.
-
-Reading off the first two columns of $A$, we find that
-\[
-\operatorname{col}(A) = \operatorname{span}\left\{\bbm 1\\3\\-2\ebm, \bbm -2\\-1\\-6\ebm\right\}.
-\]
-We know that this is a plane through the origin in $\mathbb{R}^3$, but how do we quickly determine what vectors belong to this plane? There's an easy way and a hard way. The easy way is to compute the cross product, as we did in many of the problems from Section \ref{sec:planes}. We find
-\[
-\bbm 1\\3\\-2\ebm\times\bbm -2\\-1\\-6\ebm = \bbm -20\\10\\5\ebm = 5\bbm -4\\2\\1\ebm = 5\vec n,
-\]
-where we've chosen to factor out the scalar multiple of 5 to simplify our normal vector. From this we know that a vector
-\[
-\vb = \bbm a\\b\\c\ebm
-\]
-belongs to the column space of $A$ if and only if
-\[
--4a+2b+c=0,
-\]
-using the scalar form for the equation of a plane in $\mathbb{R}^3$. Having done it the easy way, let us do things once more the hard way. (Why do it the hard way if the easy way works? Because if we're in any other case than a two-dimensional subspace of $\R^3$, the hard way is the only option we have!) The hard way is to solve the equation \ttaxb\ for an \textit{arbitrary} vector $\vb = \bbm a\\b\\c\ebm$. As with the previous examples, we set up the augmented matrix and reduce:
-\[
-\bam{4}1&-2&0&4&a\\3&-1&5&2&b\\-2&-6&-10&12&c\eam \quad \longrightarrow \quad \bam{4}1&-2&0&4&a\\0&1&1&-2&(b-3a)/5\\0&0&0&0&(c-4a+2b)/10\eam.
-\]
-We stopped before getting all the way to the \rref, but we're far enough along to realize that the only way our system can be consistent is if the last entry in the third row is equal to zero. This gives us the condition
-\[
-\frac{c-4a+2b}{10}=0,
-\]
-which (after multiplying both sides by 10) is exactly the same as what we found using the cross product.
-
-Let's continue with a few more examples.
-
-\pagebreak
-
-\example{ex_vector_solution_4}{Null space and column space}{Let 
-\[
-\tta = \bmx{cccc}1&-1&1&3\\4&2&4&6\emx \quad \text{and} \quad \vb = \bmx{c}1\\10\emx.
-\]
-Determine:
-\begin{enumerate}
-\item The null space of $A$.
-\item Whether or not the vector $\vec{b}$ belongs to the column space of $A$.
-\end{enumerate}
-}
-{We'll tackle the null space first. We form the augmented matrix for the system \ttaxo, put it into \rref, and interpret the result. 
-\[
-\bam{4}1&-1&1&3&0\\4&2&4&6&0\eam \quad \arref \quad \bam{4}1&0&1&2&0\\0&1&0&-1&0\eam
-\]
-\begin{align*}
- x_1&=-x_3-2x_4\\
- x_2 &= x_4\\ 
- x_3& = s \text{ is free}\\
- x_4& = t \text{ is free} 
-\end{align*} 
-We now obtain our vector solution
-\[
-\vx = \bmx{c}x_1\\x_2\\x_3\\x_4\emx = \bmx{c}-s-2t\\t\\s\\t\emx.
-\]
-
-Finally, we ``pull apart'' this vector into two vectors, one with the ``$s$ stuff'' and one with the ``$t$ stuff.''
-\begin{align*}
-\vx &= \bmx{c}-x_3-2x_4\\x_4\\x_3\\x_4\emx\\ 
-    &= \bmx{c}-x_3\\0\\x_3\\0\emx + \bmx{c}-2x_4\\x_4\\0\\x_4\emx \\
-    &=x_3\bmx{c}-1\\0\\1\\0\emx + x_4\bmx{c}-2\\1\\0\\1\emx\\
-    &=x_3\vu + x_4\vv 
-\end{align*} 
-We use \vu\ and \vv\ simply to give these vectors names (and save some space). In terms of these names, we can write
-\[
-\operatorname{null}(A) = \operatorname{span}\{\vu, \vv\}.
-\]
-It is easy to confirm that both \vu\ and \vv\ are solutions to the linear system $\tta\vx=\zero$. (Just multiply \tta\vu\ and \tta\vv\ and see that both are \zero.) Since both are solutions to a homogeneous system of linear equations, any linear combination of \vu\ and \vv\ will be a solution, too, so the vectors \vu\ and \vv\ form a basis for the null space of $A$. \\
-
-%\drawexampleline%{ex_vector_solution_4}
-
-Now let's tackle the column space. Determining whether or not $\vec b$ belongs to the column space is the same as solving the system $\tta\vx = \vb$. Once again we put the associated augmented matrix into \rref\ and interpret the results.
-
-\[
-\bam{4}1&-1&1&3&1\\4&2&4&6&10\eam \quad \arref \quad \bam{4}1&0&1&2&2\\0&1&0&-1&1\eam
-\]
-\begin{align*}
- x_1&=2-s-2t\\
- x_2 &= 1+t\\ 
- x_3& = s \text{ is free}\\
- x_4& = t\text{ is free} 
-\end{align*} 
-Since our system is consistent, we can conclude that $\vec{b}\in\operatorname{col}(A)$. Let us expand on this result a bit.
-
-Writing this solution in vector form gives 
-\[
-\vx = \bmx{c}x_1\\x_2\\x_3\\x_4\emx = \bmx{c}2-s-2t\\1+t\\s\\t\emx.
-\]
-Again, we pull apart this vector, but this time we break it into three vectors: one with ``$s$'' stuff, one with ``$t$'' stuff, and one with just constants. 
-\begin{align*}
- \vx &= \bmx{c}2-s-2t\\1+t\\s\\t\emx \\
-     &= \bmx{c}2\\1\\0\\0\emx + \bmx{c}-s\\0\\s\\0\emx + \bmx{c}-2t\\t\\0\\t\emx \\ 
-     &=\bmx{c}2\\1\\0\\0\emx+s\bmx{c}-1\\0\\1\\0\emx + t\bmx{c}-2\\1\\0\\1\emx\\
-     &=\underbrace{\vec{x}_p}_{\parbox{35pt}{\center {\vskip -10 pt} \scriptsize particular solution}}+\underbrace{s\vu + t\vv}_{\parbox{70pt}{\center {\vskip -10 pt} \scriptsize solution to homogeneous equations $\tta\vx=\zero$}}
-\end{align*}
-Note that $\tta\vec{x}_p = \vb$; by itself, $\vec{x}_p$ is a solution. The fact that we have at least one vector $\vec{x}_p$ such that $A\vec{x}_p=\vec{b}$ tells us that $\vb$ belongs to the range of the transformation $T(\vx) = A\vx$. The fact that there is more than one solution corresponds to the fact that the null space of $A$ is non-trivial.\\
-
-Why don't we graph this solution as we did in the past? Before we had only two variables, meaning the solution could be graphed in 2D. Here we have four variables, meaning that our solution ``lives'' in 4D. You \textit{can} draw this on paper, but it is \textit{very} confusing.}
-
-\medskip
-
-By now we should have a pretty good feeling for the connection between vector solutions to linear systems and concepts such as null space and column space. Let's continue to get a bit more practice with systems of equations.
 
 \example{ex_vector_solution_5}{Using matrices and vectors to solve a system of equations}{Rewrite the linear system 
 \[
@@ -705,8 +538,7 @@ We use this information to write \vx, again pulling it apart. Since we have thre
 
 
 So $\vec{x}_p$ is a particular solution; $\tta\vxp = \vb$. (Multiply it out to verify that this is true.) The other vectors, \vu, \vv\ and \vect{w}, that are multiplied by our free variables $x_3=r$, $x_4=s$ and $x_5=t$, are each solutions to the homogeneous equations, $\tta\vx=\zero$. Any linear combination of these three vectors, i.e., any vector found by choosing values for $r$, $s$ and $t$ in $r\vu+s\vv+t\vect{w}$ is a solution to $\tta\vx=\zero$.
-
-In this example we see that the rank of $A$ is 2, the dimension of the null space is 3, the number of variables is 5, and $2+3=5$, as expected.}
+}
 
 \medskip
 
@@ -735,7 +567,7 @@ This may strike us as a bit odd; we are used to having lots of different vectors
     &= \bmx{c}-1\\2\emx + \bmx{c}0\\0\emx\\
     &= \underbrace{\vxp}_{\parbox{35pt}{\scriptsize \center {\vskip -10pt}particular solution}} + \underbrace{\zero_{ \parbox{1pt}{{\vskip 5pt}} }}_{\parbox{35pt}{\center \scriptsize {\vskip -10pt} solution to $\tta\vx=\zero$}}.
 \end{align*} 
-Again, in light of Theorem \ref{thm:rank_and_sols}, this should not be too surprising. The \rref\ of $A$ is $\bbm 1&0\\0&1\ebm$, so the rank of $A$ is 2, and there are 2 variables in our system, so we expect $2-2=0$ parameters in our general solution. (Put another way, this tells us that the null space is zero-dimensional, and therefore equal to the trivial subspace $\{\vec 0\}$.)
+Again, in light of Theorem \ref{thm:rank_and_sols}, this should not be too surprising. The \rref\ of $A$ is $\bbm 1&0\\0&1\ebm$, so the rank of $A$ is 2, and there are 2 variables in our system, so we expect $2-2=0$ parameters in our general solution.
 }
 
 \medskip
@@ -769,14 +601,13 @@ Thus
 = x_2\vu.
 \]
 
-We have no solution to \ttaxb, but infinitely many solutions to \ttaxo. Again, this should be expected. Since $\operatorname{rank}(A)=1$, and there are two variables, both the null space and the column space of $A$ must be one-dimensional.}
+We have no solution to \ttaxb, but infinitely many solutions to \ttaxo. }
 
 \medskip
 
-The previous example may seem to violate the principle of Key Idea \ref{idea:unique_solutions}. After all, it seems that having infinitely many solutions to \ttaxo\ should imply infinitely many solutions to \ttaxb. However, we remind ourselves of the key word in the idea that we observed before: \textit{consistent}. If \ttaxb\ is consistent and \ttaxo\ has infinitely many solutions, then so will \ttaxb. But if \ttaxb\ is not consistent, it does not matter how many solutions \ttaxo\ has; \ttaxb\ is still inconsistent.\\
+The previous example may seem to violate the principle of Key Idea \ref{idea:unique_solutions}. After all, it seems that having infinitely many solutions to \ttaxo\ should imply infinitely many solutions to \ttaxb. However, we remind ourselves of the key word in the idea that we observed before: \textit{consistent}. If \ttaxb\ is consistent and \ttaxo\ has infinitely many solutions, then so will \ttaxb. But if \ttaxb\ is not consistent, it does not matter how many solutions \ttaxo\ has; \ttaxb\ is still inconsistent.
 
 
-This whole section is highlighting a very important concept that we won't fully understand until after two sections, but we get a glimpse of it here. When solving any system of linear equations (which we can write as $\tta\vx = \vb$), whether we have exactly one solution, infinitely many solutions, or no solution depends on an intrinsic property of \tta. We'll find out what that property is soon; in the next section we solve a problem we introduced at the beginning of this section, how to solve matrix equations $\tta\ttx=\ttb$.
 
 %Exercises
 
