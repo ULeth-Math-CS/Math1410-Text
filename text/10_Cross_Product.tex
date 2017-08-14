@@ -50,8 +50,8 @@ Consider a rectangular array $\bbm a&b\\c&d\ebm$ of four real numbers $a,b,c$, a
 Most people find it easiest to remember this in terms of the two \textit{diagonals} of the array: we take the product of the two numbers on the \textit{main diagonal} (top-left to bottom-right), and subtract the product of the two numbers on the other diagonal:
 \btz [baseline=-3pt,>=stealth]
 \node at (0,0) {$\bvm a & b\\ c& d\evm$};
-\draw[->,  thin] (-.5,.4) -- (.6,-.6) node[below right] {$ac\vphantom{bd}$};
-\draw[->, thin] (0.4,.4) -- (-.6,-.6) node[below left ] {$bd$};
+\draw[->,  thin] (-.5,.4) -- (.6,-.6) node[below right] {$ad\vphantom{bc}$};
+\draw[->, thin] (0.4,.4) -- (-.6,-.6) node[below left ] {$bc$};
 \etz
 
 For example, we have $\bvm 4&-2\\6&3\evm = 4(3)-(-2)(6)=24$. Once we get comfortable with $2\times 2$ determinants, we can write the cross product in terms of them, as follows:
