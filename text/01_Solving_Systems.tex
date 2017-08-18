@@ -252,7 +252,7 @@ To avoid fractions, $z$ must be a multiple of 4 ($-4, 0, 4, 8, \ldots$). Of cour
 
 So it seems that we have two answers; one with $z=0$ and one with $z=4$. Of course, by the statement of the problem, we are led to believe that the lady has at least one \$10 bill, so probably the ``best'' answer is that we have 20 \$1 bills, 8 \$5 bills and 4 \$10 bills. The real point of this example, though, is to address how infinite solutions may appear in a real world situation, and how surprising things may result.}
 
-\pagebreak
+%\pagebreak
 
 \example{ex_football}{Recreating a football score}{In a football game, teams can score points through touchdowns worth 6 points, extra points (that follow touchdowns) worth 1 point, two point conversions (that also follow touchdowns) worth 2 points and field goals, worth 3 points. You are told that in a football game, the two competing teams scored on 7 occasions, giving a total score of 24 points. Each touchdown was followed by either a successful extra point or two point conversion. In what ways were these points scored?}
 {The question asks how the points were scored; we can interpret this as asking how many touchdowns, extra points, two point conversions and field goals were scored. We'll need to assign variable names to our unknowns; let $t$ represent the number of \textbf{t}ouchdowns scored; let $x$ represent the number of e\textbf xtra points scored, let $w$ represent the number of t\textbf wo point conversions, and let $f$ represent the number of \textbf field goals scored.
@@ -390,65 +390,65 @@ On the subject of saving time, if you went through the row operations for each o
 \[\extrarowheight=3pt
 \left[\begin{array}{ccc|c|c|c}1&3&3&2&1&-4\\ -2&4&-1&-14&0&3\\0&8&4&-8&-4&1 \end{array}\right] \quad \overrightarrow{\text{rref}}\quad \left[\begin{array}{ccc|c|c|c} 1&0&\frac32&5&\frac25 &-\frac52 \\0&1&\frac12&-1&\frac15 &-\frac 12\\0&0&0&0&-\frac{7}{10}&\frac58 \end{array}\right].
 \]
-If we then consider each column on the right of the \rref\ separately, we obtain the same results as before. Let's keep this in mind as we do one more example.
+If we then consider each column on the right of the \rref\ separately, we obtain the same results as before. %Let's keep this in mind as we do one more example.
 
 \medskip
 
 
-\example{ex_span2}{Checking membership in a subspace}{
-Consider the subspace of $\R^3$ defined by
-\[
-V = \left\{\left.\bbm s-3t\\2s+t\\-3s+4t\ebm \, \right| \, s, t\in\R\right\}.
-\]
-Determine which of the following vectors belong to $V$.
+%\example{ex_span2}{Checking membership in a subspace}{
+%Consider the subspace of $\R^3$ defined by
+%\[
+%V = \left\{\left.\bbm s-3t\\2s+t\\-3s+4t\ebm \, \right| \, s, t\in\R\right\}.
+%\]
+%Determine which of the following vectors belong to $V$.
 
-\begin{multicols}{3}
-\begin{enumerate}
-\item $\vec{x} = \bbm -5\\4\\5\ebm$
-\item $\vec{y} = \bbm 1\\-2\\-3\ebm$
-\item $\vec{z} = \bbm 6\\5\\-13\ebm$
-\end{enumerate}
-\end{multicols}}
-{First, we should make sure that $V$ is in fact a subspace! We notice that for any element $\vec v\in V$ we have
-\[
-\vec v = \bbm s-3t\\2s+t\\-3s+4t\ebm = s\bbm 1\\2\\-3\ebm + t\bbm -3\\1\\4\ebm
-\]
-for some $s,t\in\R$, so $V = \operatorname{span}\{\vec{v}_1,\vec{v}_2\}$, where
-\[
-\vec{v}_1 = \bbm 1\\2\\-3\ebm \quad \text{ and } \quad \vec{v}_2=\bbm -3\\1\\4\ebm,
-\]
-meaning that this example can be solved using the same techniques as Example \ref{ex_span1}.
+%\begin{multicols}{3}
+%\begin{enumerate}
+%\item $\vec{x} = \bbm -5\\4\\5\ebm$
+%\item $\vec{y} = \bbm 1\\-2\\-3\ebm$
+%\item $\vec{z} = \bbm 6\\5\\-13\ebm$
+%\end{enumerate}
+%\end{multicols}}
+%{First, we should make sure that $V$ is in fact a subspace! We notice that for any element $\vec v\in V$ we have
+%\[
+%\vec v = \bbm s-3t\\2s+t\\-3s+4t\ebm = s\bbm 1\\2\\-3\ebm + t\bbm -3\\1\\4\ebm
+%\]
+%for some $s,t\in\R$, so $V = \operatorname{span}\{\vec{v}_1,\vec{v}_2\}$, where
+%\[
+%\vec{v}_1 = \bbm 1\\2\\-3\ebm \quad \text{ and } \quad \vec{v}_2=\bbm -3\\1\\4\ebm,
+%\]
+%meaning that this example can be solved using the same techniques as Example \ref{ex_span1}.
 
-Keeping in mind the discussion following Example \ref{ex_span1}, we know that we can determine whether the given vectors belong to the span of $\vec{v}_1$ and $\vec{v}_2$, we should set up an augmented matrix of the form $[\begin{array}{cc|c|c|c} \vec{v}_1 & \vec{v}_2 & \vec x & \vec y & \vec z\end{array}]$, and reduce. We find:
-\[
-\left[\begin{array}{cc|c|c|c}
-1&-3&-5&1&6\\
-2&1&4&-2&5\\
--3&4&5&-3&-13
-\end{array}\right]\qquad \overrightarrow{\text{rref}}\qquad
-\left[\begin{array}{cc|c|c|c}
-1&0&1&\frac{19}{7}&3\\[3pt]
-0&1&2&-\frac{4}{7}&-1\\[3pt]
-0&0&0&\frac{62}{35}&0
-\end{array}\right].
-\]
-The column $\bbm 19/7\\-4/7\\62/35\ebm$ in the \rref\ corresponds to the vector $\vec y$. Ignoring the $\vec x$ and $\vec z$ columns, we see that the system for $\vec y$ is inconsistent, as it results in the impossible equation $0s+0t = \frac{62}{35}$. It follows that $\vec y\notin V$. 
+%Keeping in mind the discussion following Example \ref{ex_span1}, we know that we can determine whether the given vectors belong to the span of $\vec{v}_1$ and $\vec{v}_2$, we should set up an augmented matrix of the form $[\begin{array}{cc|c|c|c} \vec{v}_1 & \vec{v}_2 & \vec x & \vec y & \vec z\end{array}]$, and reduce. We find:
+%\[
+%\left[\begin{array}{cc|c|c|c}
+%1&-3&-5&1&6\\
+%2&1&4&-2&5\\
+%-3&4&5&-3&-13
+%\end{array}\right]\qquad \overrightarrow{\text{rref}}\qquad
+%\left[\begin{array}{cc|c|c|c}
+%1&0&1&\frac{19}{7}&3\\[3pt]
+%0&1&2&-\frac{4}{7}&-1\\[3pt]
+%0&0&0&\frac{62}{35}&0
+%\end{array}\right].
+%\]
+%The column $\bbm 19/7\\-4/7\\62/35\ebm$ in the \rref\ corresponds to the vector $\vec y$. Ignoring the $\vec x$ and $\vec z$ columns, we see that the system for $\vec y$ is inconsistent, as it results in the impossible equation $0s+0t = \frac{62}{35}$. It follows that $\vec y\notin V$. 
 
-On the other hand, we have zeros in the third row of the \rref\ for both the $\vec x$ and $\vec z$ columns, meaning that the system for each of these vectors is consistent. Looking at the $\vec x$ column, we have $s=1$ and $t=2$, so
-\[
-\vec x = 1\bbm 1\\2\\-3\ebm +2\bbm -3\\1\\4\ebm \in V,
-\]
-and looking at the $\vec z$ column, we have $s=3$ and $t=-1$, so
-\[
-\vec z = 3\bbm 1\\2\\-3\ebm -1\bbm -3\\1\\4\ebm \in V.
-\]
+%On the other hand, we have zeros in the third row of the \rref\ for both the $\vec x$ and $\vec z$ columns, meaning that the system for each of these vectors is consistent. Looking at the $\vec x$ column, we have $s=1$ and $t=2$, so
+%\[
+%\vec x = 1\bbm 1\\2\\-3\ebm +2\bbm -3\\1\\4\ebm \in V,
+%\]
+%and looking at the $\vec z$ column, we have $s=3$ and $t=-1$, so
+%\[
+%\vec z = 3\bbm 1\\2\\-3\ebm -1\bbm -3\\1\\4\ebm \in V.
+%\]
 
-\vskip -1.5\baselineskip
-}
+%\vskip -1.5\baselineskip
+%}
 
-\medskip
+%\medskip
 
-In Example \ref{ex_span2}, the two vectors $\vec{v}_1$ and $\vec{v}_2$ were linearly independent, but we had only two vectors in $\R^3$, which is only enough to span a plane through the origin. The vectors $\vec x$ and $\vec z$ lie in this plane, but $\vec y$ does not.
+%In Example \ref{ex_span2}, the two vectors $\vec{v}_1$ and $\vec{v}_2$ were linearly independent, but we had only two vectors in $\R^3$, which is only enough to span a plane through the origin. The vectors $\vec x$ and $\vec z$ lie in this plane, but $\vec y$ does not.
 
 We conclude this section with a pair of examples involving linear independence.
 
@@ -515,6 +515,6 @@ which shows that the given vectors are \textit{not} linearly independent.}
 
 \medskip
 
-In these last examples we've started to explore the connection between vectors and systems of linear equations. We'll continue to do so in the next chapter, where we begin to write our solutions in vector form.
+In these last examples we've started to explore the connection between vectors and systems of linear equations. We'll continue to do so in the next section, where we begin to write our solutions in vector form.
 
 \printexercises{exercises/01_05_exercises}

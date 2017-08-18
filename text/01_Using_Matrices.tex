@@ -5,7 +5,7 @@
 \item What is an augmented matrix?
 \item How do you convert between a linear system and an augmented matrix?}
 
-Matrices were introduced in Chapter \ref{chapter:arithmetic} as a method for organizing information. If we want to be able to solve linear systems with arbitrarily large numbers of variables and equations, and solve them \textit{efficiently}, we're going to need to be organized, so matrices might be just what we need.
+%Matrices were introduced in Chapter \ref{chapter:arithmetic} as a method for organizing information. If we want to be able to solve linear systems with arbitrarily large numbers of variables and equations, and solve them \textit{efficiently}, we're going to need to be organized, so matrices might be just what we need.
 
 In Section \ref{sec:intro} we solved a linear system using familiar techniques. Later, we commented that in the linear equations we formed, the most important information was the coefficients and the constants; the names of the variables really didn't matter. In Example \ref{ex_by_hand} we had the following three equations:
 \begin{align*}
@@ -81,7 +81,7 @@ Let's look again at our system of equations in \eqref{eq:before_matrix} and writ
 \[
 \begin{array}{ccccccc}
 b&+&g&+&r&=&30\\
- &-&2g&+&r&=&0\\
+0b &-&2g&+&r&=&0\\
 -b&+&g&+&r&=&0
 \end{array}
 \quad \Leftrightarrow \quad
@@ -92,7 +92,10 @@ b&+&g&+&r&=&30\\
 \]
 Notice how even the equal signs are gone; we don't need them, for we know that the last {\em column} contains the coefficients. 
 
-We have seen this sort of creature before! From Definition \ref{def:matrix}, we know that the object we have just created is called a {\em matrix}. We will often want to distinguish between the \sword{coefficient matrix}\index{matrix ! of coefficients} of a system; that is, the matrix containing the coefficients (the numbers in front of the variables) of a system of linear equations, and the matrix that also includes the column of constants, as above. When we include the constants, we refer to the resulting matrix as an \textit{augmented matrix}.\index{augmented matrix}\index{matrix!augmented}
+
+The mathematical object we have created on the right is called a \sword{ matrix}. We will give a formal mathematical definition in Chapter \ref{chapter:algebra}, where we will see that matrices are interesting objects in their own right, with numerous interesting properties and applications.  For now we can think of a matrix simply as a rectangular table of numbers that allows us to keep track of certain information; namely, the constants that define our system of linear equations. Note that each row in our matrix represents one of the equations, while each column (except for the last) represents a variable.  We will often want to distinguish between the \sword{coefficient matrix}\index{matrix ! of coefficients} of a system; that is, the matrix containing the coefficients (the numbers in front of the variables) of a system of linear equations, and the matrix that also includes the column of constants, as above. When we include the constants, we refer to the resulting matrix as an \textit{augmented matrix}.\index{augmented matrix}\index{matrix!augmented}
+
+%We have seen this sort of creature before! From Definition \ref{def:matrix}, we know that the object we have just created is called a {\em matrix}. We will often want to distinguish between the \sword{coefficient matrix}\index{matrix ! of coefficients} of a system; that is, the matrix containing the coefficients (the numbers in front of the variables) of a system of linear equations, and the matrix that also includes the column of constants, as above. When we include the constants, we refer to the resulting matrix as an \textit{augmented matrix}.\index{augmented matrix}\index{matrix!augmented}
 
 It is common (but not mandatory) to place a vertical line separating the final column of an augmented matrix (containing the constants) from the other columns (containing the coefficients). One advantage of doing so is that we can quickly recognize that we're dealing with an augmented matrix rather than a coefficient matrix. For example, the augmented matrix for the system \eqref{eq:before_matrix} would be written as seen below on the right:
 
@@ -112,7 +115,12 @@ Without the vertical line & With the vertical line\\
 
 We can use augmented matrices to find solutions to linear equations by using essentially the same steps we used above. Every time we used the word ``equation'' above, substitute the word ``row,'' as we show below. The comments explain how we get from the current set of equations (or matrix) to the one on the next line. 
 
-We can use a shorthand to describe matrix operations; let $R_1$, $R_2$ represent ``row 1'' and ``row 2,'' respectively. We can write ``add row 1 to row 3, and replace row 3 with that sum'' as ``$R_1+R_3\to R_3$.'' The expression ``$R_1 \leftrightarrow R_2$'' means ``interchange row 1 and row 2.''\\
+Let us look back at the steps we used to solve the system of equations at the beginning of this section. Clearly, the order in which we right down our equations does not affect the solution; in terms of our matrix, this means we can rearrange the rows as we please. Note, however, that we \textbf{cannot} rearrange the columns. To do so would mix up our variables, causing us to lose track of our system.
+
+In addition to changing the order of our equations, we also saw that we can multiply both sides of any equation by a constant, and we can add a multiple of one equation to another. These three manipulations are known as the \sword{elementary operations}\index{elementary operation} used to solve a system of linear equations. We will see that with these three elementary operations, we can determine the solution (if any) to any linear system.
+
+Each of these elementary operations corresponds to an operation performed on the corresponding augmented matrix known as an \sword{elementary row operation}. \index{elementary row operation}
+We use a shorthand notation to describe these matrix operations; let $R_1$, $R_2$ represent ``row 1'' and ``row 2,'' respectively. We can write ``add row 1 to row 3, and replace row 3 with that sum'' as ``$R_1+R_3\to R_3$.'' The expression ``$R_1 \leftrightarrow R_2$'' means ``interchange row 1 and row 2.''\\
 
 %\small
 \begin{center}
@@ -349,6 +357,7 @@ $\extrarowheight=3pt\bam{3}
 \end{center}
 
 %\enlargethispage{3\baselineskip}
+\drawexampleline
 
 Notice that the last equation (and also the last row of the matrix) show that $x_3=0$. Knowing this would allow us to simply eliminate the $x_3$ from the first two equations. However, we will formally do this by manipulating the equations (and rows) as we have previously.
 
