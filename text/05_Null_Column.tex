@@ -1,3 +1,4 @@
+\section{Null Space and Column Space}\label{sec:null_column}
 We close this chapter with some discussion of a theoretical nature. First, we will attempt to gain some additional insight into the (initially mysterious) definition of matrix multiplication by revisiting it from the point of view of linear transformations. We'll then introduce two fundamental subspaces associated with a matrix transformation.
 
 \subsection*{Matrix multiplication as function composition}
@@ -472,7 +473,7 @@ We use \vu\ and \vv\ simply to give these vectors names (and save some space). I
 \]
 It is easy to confirm that both \vu\ and \vv\ are solutions to the linear system $\tta\vx=\zero$. (Just multiply \tta\vu\ and \tta\vv\ and see that both are \zero.) Since both are solutions to a homogeneous system of linear equations, any linear combination of \vu\ and \vv\ will be a solution, too, so the vectors \vu\ and \vv\ form a basis for the null space of $A$. \\
 
-%\drawexampleline%{ex_vector_solution_4}
+\drawexampleline
 
 Now let's tackle the column space. Determining whether or not $\vec b$ belongs to the column space is the same as solving the system $\tta\vx = \vb$. Once again we put the associated augmented matrix into \rref\ and interpret the results.
 

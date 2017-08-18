@@ -39,13 +39,14 @@ as long as $ad-bc\neq 0$; otherwise, the inverse does not exist. We can rephrase
 
 A brief word about the notation: notice that we can refer to the determinant by using what \textit{looks like} absolute value bars around the entries of a matrix. We discussed at the end of the last section the idea of measuring the ``size'' of a matrix, and mentioned that there are many different ways to measure size. The determinant is one such way. Just as the absolute value of a number measures its size (and ignores its sign), the determinant of a matrix is a measurement of the size of the matrix. (Be careful, though: $\det(\tta)$ can be negative!)
 
-\mnote{.68}{\textbf{Note:} Recall from Section \ref{sec:geom_3} that a matrix transformation $T(\vx) = A\vx$, where $A$ is a $2\times 2$ matrix, can be used to define a transformation of the Cartesian plane. We saw that we can understand the effect of such a transformation by its effect on the unit square, and for this, it is enough to compute $T(\ven{1})$ and $T(\ven{2})$. It's easy to see that these two vectors are the columns of $A$:
+\ifthenelse{\boolean{colour}}{
+\mnote{.68}{\textbf{Note:} We will see in Section \ref{sec:geom_3} that a matrix transformation $T(\vx) = A\vx$, where $A$ is a $2\times 2$ matrix, can be used to define a transformation of the Cartesian plane. We saw that we can understand the effect of such a transformation by its effect on the unit square, and for this, it is enough to compute $T(\ven{1})$ and $T(\ven{2})$. It's easy to see that these two vectors are the columns of $A$:
 \begin{align*}
 \bbm T(\ven{1}) & T(\ven{2})\ebm &= \bbm A\ven{1} & A\ven{2}\ebm\\
 & = A\bbm \ven{1}&\ven{2}\ebm\\
 & = AI_2 = A.
 \end{align*}
-Now, it's possible that one of these vectors is zero, or that the two vectors are parallel, but if not, the vectors $T(\ven{1})$ and $T(\ven{2})$ determine a parallelogram. With a bit of work (see Example \ref{ex_crossp4} in Section \ref{sec:cross_product}), we can show that the area of this parallelogram is given precisely by $\det(A)$. You may also recall that we already encountered the $3\times 3$ determinant once, in Section \ref{sec:cross_product}, where it was used to determine the volume of a \textit{parallelepiped}: see the discussion following Example \ref{ex_crossp6}. In general, $\det(A)$ computes the effect of the transformation $T(\vx) = A\vx$ on area, and volume (in three dimensions or higher).}
+Now, it's possible that one of these vectors is zero, or that the two vectors are parallel, but if not, the vectors $T(\ven{1})$ and $T(\ven{2})$ determine a parallelogram. With a bit of work (see Example \ref{ex_crossp4} in Section \ref{sec:cross_product}), we can show that the area of this parallelogram is given precisely by $\det(A)$. You may also recall that we already encountered the $3\times 3$ determinant once, in Section \ref{sec:cross_product}, where it was used to determine the volume of a \textit{parallelepiped}: see the discussion following Example \ref{ex_crossp6}. In general, $\det(A)$ computes the effect of the transformation $T(\vx) = A\vx$ on area, and volume (in three dimensions or higher).}}{}
 
 \medskip
 

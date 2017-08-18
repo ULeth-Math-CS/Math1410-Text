@@ -6,7 +6,7 @@
 \item	Give two reasons why one might solve for the columns of \ttx\ in the equation \tta\ttx=\ttb\ separately.
 }
 
-We began last section talking about solving numerical equations like $ax=b$ for $x$. We mentioned that solving matrix equations of the form $\tta\ttx=\ttb$ is of interest, but we first learned how to solve the related, but simpler, equations \ttaxb. In this section we will learn how to solve the general matrix equation $\tta\ttx=\ttb$ for \ttx.
+We concluded the last chapter with a discussion about solving numerical equations like $ax=b$ for $x$. We have seen how to solve equations of the form \ttaxb\ by identifying them as systems of linear equations. In this section we will learn how to solve the general matrix equation $\tta\ttx=\ttb$ for \ttx.
 
 We will start by considering the best case scenario when solving \ttaxb; that is, when \tta\ is square and we have exactly one solution. For instance, suppose we want to solve \ttaxb\ where 
 \[
@@ -141,7 +141,8 @@ Notice also that the columns of $\tta\ttx$ are $\tta\vu$, $\tta\vv$ and \tta\vw,
 \end{align*}
 This is exactly the same sort of thing we did in Section \ref{sec:solving_systems} when we had several vectors and we wanted to determine whether or not each of them belonged to a given span. Rather than perform the same set of row operations for each vector separately, we can do them all together. (See the discussion following Example \ref{ex_span1}.)
 
-Thus, we are once again making use of the following fact, which we first observed in Section \ref{sec:lin_trans} (see the margin note on Page \pageref{note:ABvect}):
+Thus, we are once again making use of the following fact:
+%, which we first observed in Section \ref{sec:lin_trans} (see the margin note on Page \pageref{note:ABvect}):
 \begin{quote}
  The columns of a matrix product \tta\ttx\  are \tta\ times the columns of \ttx.
 \end{quote}
@@ -230,14 +231,14 @@ By looking at the last three columns, we see \ttx:
 
 %We'll return to theory in a moment. First, a few examples.
 
-In each of the examples we've considered so far, the \rref\ $R$ of the matrix $A$ was equal to the $n\times n$ identity matrix: $R=I$. Recall from Definition \ref{def:rank} in Section \ref{sec:vector_solutions} that for an $n\times n$ matrix $A$, we have $R=I$ if and only if the rank of $A$ is equal to $n$. At this point we should recall Theorem \ref{thm:rank_and_sols} from Section \ref{sec:vector_solutions}, and the discussion that followed. One of the things Theorem \ref{thm:rank_and_sols} tells us is that if $A$ is an $n\times n$ matrix and $\operatorname{rank}(A)=n$, then the equation $A\vec{x}=\vec{b}$ is \sword{guaranteed} to have a unique solution, no matter what the vector $\vec{b}$ is.
+In each of the examples we've considered so far, the \rref\ $R$ of the matrix $A$ was equal to the $n\times n$ identity matrix: $R=I$. It follows from Definition \ref{def:rank} in Section \ref{sec:vector_solutions} that for an $n\times n$ matrix $A$, we have $R=I$ if and only if the rank of $A$ is equal to $n$. At this point we should recall Theorem \ref{thm:rank_and_sols} from Section \ref{sec:vector_solutions}, and the discussion that followed. One of the things Theorem \ref{thm:rank_and_sols} tells us is that if $A$ is an $n\times n$ matrix and $\operatorname{rank}(A)=n$, then the equation $A\vec{x}=\vec{b}$ is \sword{guaranteed} to have a unique solution, no matter what the vector $\vec{b}$ is.
 
-\mnote{.5}{\textbf{Note:} Recall the following argument for why the equation \ttaxb\ is guaranteed a unique solution if $A$ has rank $n$. 
-If we assume $\operatorname{rank}(A) = \dim\operatorname{col}(A) = n$, then the range of the linear transformation $T(\vx)=A\vx$ is all of $\R^n$, so for every $\vb \in \R^n$, we can find a vector $\vx$ such that $A\vx = \vb$. The solution is unique since Theorem \ref{thm:fund_thm_lin_maps} in Section \ref{sec:lin_trans} (the ``Rank-Nullity Theorem'') tells us that
-\[
-\dim\operatorname{null}(A)+\dim\operatorname{col}(A) = n,
-\]
-so the null space of $A$ must be zero-dimensional, and therefore equal to the trivial subspace $\{0\}$. By Theorem \ref{thm:onetoonenull}, this tells us that the vector $\vx$ such that \ttaxb\ is unique.}
+%\mnote{.5}{\textbf{Note:} Recall the following argument for why the equation \ttaxb\ is guaranteed a unique solution if $A$ has rank $n$. 
+%If we assume $\operatorname{rank}(A) = \dim\operatorname{col}(A) = n$, then the range of the linear transformation $T(\vx)=A\vx$ is all of $\R^n$, so for every $\vb \in \R^n$, we can find a vector $\vx$ such that $A\vx = \vb$. The solution is unique since Theorem \ref{thm:fund_thm_lin_maps} in Section \ref{sec:lin_trans} (the ``Rank-Nullity Theorem'') tells us that
+%\[
+%\dim\operatorname{null}(A)+\dim\operatorname{col}(A) = n,
+%\]
+%so the null space of $A$ must be zero-dimensional, and therefore equal to the trivial subspace $\{0\}$. By Theorem \ref{thm:onetoonenull}, this tells us that the vector $\vx$ such that \ttaxb\ is unique.}
 
 But what if $\operatorname{rank}(A)<n$? In this case, the \rref\ of $A$ is an $n\times n$ matrix $R$ with at least row of zeros on the bottom. Our experience with solving systems of the form \ttaxb\ tells us that in this case, the matrix equation $AX=B$ may have infinitely many solutions, or no solution at all. Let us consider an example.
 

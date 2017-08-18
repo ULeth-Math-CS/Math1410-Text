@@ -1,0 +1,201 @@
+\RequirePackage{ifthen}
+\newboolean{longpage}
+\setboolean{longpage}{false}
+\newboolean{colour}
+\setboolean{colour}{false}
+\ifthenelse{\boolean{longpage}}%
+{\documentclass[10pt]{article}}%
+{\documentclass[10pt]{book}}
+
+\newboolean{printlabelname}
+\setboolean{printlabelname}{false}
+\ifthenelse{\boolean{printlabelname}}{\usepackage[notref,notcite]{showkeys}}{}
+
+\usepackage{import, multicol,boxedminipage}
+\usepackage{supertabular,longtable,hhline}
+\usepackage{colortbl}
+\usepackage{cancel}
+
+
+\input{headers/Page_Size_Calculus}
+\usepackage{APEX_format}
+\input{headers/Header_Calculus}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{refcount}
+\usepackage{pdfpages}
+
+\ifthenelse{\boolean{xetex}}{\renewcommand{\C}{\mathbb{C}}}{\newcommand{\C}{\mathbb{C}}}
+\newcommand{\R}{\mathbb{R}}
+
+\ifthenelse{\boolean{xetex}}%
+	{\sffamily
+	%%\usepackage{fontspec}
+	\usepackage{mathspec}
+	\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text]{Calibri}
+	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmathsfont(Greek){[cmmi10]}}
+	{\usepackage[sfdefault,lf]{carlito}
+%% The 'lf' option for lining figures
+%% The 'sfdefault' option to make the base font sans serif
+%\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
+	
+	\ifthenelse{\boolean{luatex}}%
+	{\sffamily
+	\usepackage{fontspec}
+	\usepackage{unicode-math}
+	%\usepackage{mathspec}
+	%\setallmainfonts[Mapping=tex-text]{Calibri}
+	\setmainfont{Calibri}
+	%\setsansfont[Mapping=tex-text]{Calibri}
+	\setmathfont[range=\mathup]{Calibri}
+	\setmathfont[range=\mathit]{Calibri Italic}
+	}
+	{}
+\DeclareMathOperator{\tr}{tr}
+
+\makeindex
+%%%\tracingonline=1
+\newcounter{HW}
+\begin{document}
+
+\ifthenelse{\boolean{colour}}{\printincolor}{\printinblackandwhite}
+
+%\printexercisenames
+%\printallanswers
+
+\input{text/front_matter_and_coverI}
+
+
+
+
+
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{The Real Numbers}\label{chapter:realnumbers}
+\thispagestyle{empty}
+\input{text/00_SetTheory}
+\input{text/00_RealNumberArithmetic}
+\input{text/00_CartesianPlane}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{The Complex Numbers}\label{chapter:complex}
+\thispagestyle{empty}
+\input{text/00_CmpNums}
+\input{text/00_IntroPolar}
+\input{text/00_PolarComplex}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Vectors}\label{chapter:vectors}
+\thispagestyle{empty}
+\input{text/10_Space_Intro}
+\input{text/10_Vector_Introduction}
+\input{text/10_Dot_Product}
+\input{text/10_Cross_Product}
+\input{text/10_Lines}
+\input{text/10_Planes}
+\input{text/02_Vector_Space_Rn}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Systems of Linear Equations}\label{chapter:linear}
+\thispagestyle{empty}
+
+\input{text/01_Introduction_Linear_Equations}
+\input{text/01_Using_Matrices}
+\input{text/01_Gauss_Jordan_Elimination}
+\input{text/01_Existence_Uniqueness_Solutions}
+\input{text/01_Solving_Systems}
+\input{text/02_Vector_Solutions}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Matrix Algebra}\label{chapter:algebra}
+\thispagestyle{empty}
+
+\input{text/02_Matrix_Addition}
+\input{text/02_Matrix_Multiplication}
+\input{text/02_Solving_AXB}
+\input{text/02_Matrix_Inverses}
+\input{text/02_Matrix_Inverse_Properties}
+\input{text/02_Elementary_Matrices}
+
+
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Operations on Matrices}\label{chapter:ops}
+\thispagestyle{empty}
+
+\input{text/03_Transpose}
+\input{text/03_Trace}
+\input{text/03_Determinant}
+\input{text/03_Determinant_Properties}
+\input{text/03_CramersRule}
+
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Vector Algebra}\label{chapter:vectoralgebra}
+%\thispagestyle{empty}
+
+%Section: independence and span revisited
+%Section: subspaces, basis, dimension
+%Section: column space and null space
+%Section: orthogonality
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Eigenvalues and Eigenvectors}\label{chapter:eigen}
+\thispagestyle{empty}
+
+\input{text/04_Eigen}
+\input{text/04_Eigen_Properties}
+\input{text/04_Diagonalization}
+
+%\clearpage{\pagestyle{empty}\cleardoublepage}
+%\chapter{Matrix Transformations}\label{chapter:transf}
+%\thispagestyle{empty}
+%\input{text/05_Geometry_of_Cartesian_Plane}
+%\input{text/05_Linear_Transformations}
+%\input{text/05_Subspaces}
+%\input{text/05_Null_Column}
+
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\appendix
+\thispagestyle{empty}
+%%%%%
+%%%%\makeexercisesection{Solutions To Selected Problems}
+\pagenumbering{arabic}\renewcommand{\thepage}{A.\arabic{page}}
+\makeexercisesection{Answers To Selected Problems}
+%%%\printexercisesection
+
+
+%
+%
+%%%%
+%%%%%%%%%
+%%%%%%%		 The following makes the index and includes
+%%%%%%%		it in the file
+%%%%%%%%%
+%%%
+%%%\clearpage{\pagestyle{empty}\cleardoublepage}
+%%%\phantomsection
+%%%\addcontentsline{toc}{chapter}{\indexname}
+%%%\printindex
+%%
+%
+
+
+\qendheader
+\eendgeometry
+
+\phantomsection
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+%\includepdf[pages={863-868}]{Calculus.pdf}
+
+%\cleardoublepage
+%\input{text/Inside_Cover_Of_The_Text_Material_Complete}
+
+
+\end{document}
+

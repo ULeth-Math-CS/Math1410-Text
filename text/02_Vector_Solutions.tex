@@ -1,9 +1,4 @@
 
-In the previous two chapters, we explored the algebra of matrices and vectors, and learned how to find solutions to systems of linear equations. We've already seen a few connections between the two; in particular, we ended Section \ref{sec:solving_systems} with several examples where we solved problems involving span and linear independence by setting up and solving systems of linear equations.
-
-Other concepts we have considered, such as the column space and null space of a matrix, also lead to systems of linear equations; however, in these contexts it is more natural to express the solution to the system in terms of vectors. 
-
-Expressing the solutions of linear systems in terms of vectors will give us additional insight into the behaviour of those systems, and provides a stepping-off point for the study of the algebra of matrices. We have already seen how to add, subtract, and multiply matrices. The reader might naturally wonder if there is also such a thing as matrix division. The short answer is ``no''. The long answer is that for \textit{some} matrices it is possible to define a matrix \sword{inverse} that behaves in much the same way as the reciprocal of a non-zero number.
 
 \section{Vector Solutions to Linear Systems}\label{sec:vector_solutions}
 
@@ -15,9 +10,77 @@ Expressing the solutions of linear systems in terms of vectors will give us addi
 }
 
 
-We have often hearkened back to previous algebra experience to help understand matrix algebra concepts. We do that again here. Consider the equation $ax=b$, where $a=3$ and $b=6$. If we asked one to ``solve for $x$,'' what exactly would we be asking? We would want to find a number, which we call $x$, where $a$ times $x$ gives $b$; in this case, it is a number, when multiplied by 3, returns 6. As long as $a\neq 0$ (what if $a$ does equal zero?), we know that we can multiply both sides of the equation by $\frac{1}{a}$ to get $x = \frac{1}{a}(b) = \frac{b}{a}$.
+%In the previous two chapters, we explored the algebra of matrices and vectors, and learned how to find solutions to systems of linear equations. We've already seen a few connections between the two; in particular, we ended Section \ref{sec:solving_systems} with several examples where we solved problems involving span and linear independence by setting up and solving systems of linear equations.
 
-Now we consider matrix algebra expressions. We'll eventually consider solving equations like $\tta\ttx = \ttb$, where we know what the matrices \tta\ and \ttb\ are and we want to find the matrix \ttx. For now, we'll only consider equations of the type $\tta\vx=\vb$, where we know the matrix \tta\ and the vector \vb. We will want to find what vector \vx\ satisfies this equation; we want to ``solve for \vx.'' 
+So far in this chapter, we've learned a systematic method for solving systems of linear equations. Some of the applied examples we considered in the previous section led naturally to systems of equations, and had solutions that were best interpreted in that context. Other examples, such as those involving span and linear independence, were stated in terms of vectors. In this section, we discuss how to write a system of linear equations in terms of vectors and matrices, and express solutions as vectors. 
+
+%Other concepts we have considered, such as the column space and null space of a matrix, also lead to systems of linear equations; however, in these contexts it is more natural to express the solution to the system in terms of vectors. 
+
+Expressing the solutions of linear systems in terms of vectors will give us additional insight into the behaviour of those systems, and provides a stepping-off point for the study of the algebra of matrices. %We have already seen how to add, subtract, and multiply matrices. The reader might naturally wonder if there is also such a thing as matrix division. The short answer is ``no''. The long answer is that for \textit{some} matrices it is possible to define a matrix \sword{inverse} that behaves in much the same way as the reciprocal of a non-zero number.
+
+We have often relied on previous algebra experience to help us understand linear algebra concepts. We do that again here. Consider the equation $ax=b$, where $a=3$ and $b=6$. If we asked one to ``solve for $x$,'' what exactly would we be asking? We would want to find a number, which we call $x$, where $a$ times $x$ gives $b$; in this case, it is a number, when multiplied by 3, returns 6. As long as $a\neq 0$ (what if $a$ does equal zero?), we know that we can multiply both sides of the equation by $\frac{1}{a}$ to get $x = \frac{1}{a}(b) = \frac{b}{a}$.
+
+Consider a general system of linear equations, of the form
+\begin{equation}\label{eq:linsys}\arraycolsep=2pt
+\begin{array}{ccccccccc}
+a_{11}x_1&+&a_{12}x_2&+&\cdots&+&a_{1n}x_n&=&b_1\\
+a_{21}x_1&+&a_{22}x_2&+&\cdots&+&a_{2n}x_n&=&b_2\\
+ \vdots & & \vdots & & & & \vdots & & \vdots\\
+ a_{m1}x_1&+&a_{m2}x_2&+&\cdots&+&a_{mn}x_n&=&b_m\\
+\end{array}
+\end{equation}
+Notice that the information we place into our augmented matrix can be divided into two pieces: the coefficient matrix
+\[
+A = \bbm a_{11} & a_{12} & \cdots & a_{1n}\\
+         a_{21} & a_{22} & \cdots & a_{2n}\\
+         \vdots & \vdots & \ddots & \vdots\\
+         a_{m1} & a_{m2} & \cdots & a_{mn}
+     \ebm
+\]
+and the column vector
+\[
+\vec{b} = \bbm b_1\\b_2\\\vdots \\b_m\ebm.
+\]
+Moreover, instead of writing our solution as a list ($x_1 = , x_2 = \ldots$), we can arrange our variables into a vector
+\[
+\vec{x} = \bbm x_1\\x_2\\\vdots\\x_n\ebm,
+\]
+and express our solution as a single vector rather than a list of numbers.
+
+To create an analogy with the single variable equation $ax=b$, we ask: Is there a way to define the product $A\vec{x}$ of a matrix and a column vector in such a way that the system \eqref{eq:linsys} can be written in the form
+\[
+A\vec{x}=\vec{b}?
+\]
+Fortunately for us, the answer is yes! Even better, we'll see that the definition we give here turns out to be a special case (and motivating example) for the general definition of matrix multiplication given in Section \ref{sec:matrix_multiplication}.
+
+The definition of the product $A\vec{x}$ is straightforward. We want the result to be a column vector of size $m$ (that is, with $m$ entries), so that we can set it equal to the column vector $\vec{b}$. Furthermore, each entry in $\vec{b}$ is the right-hand side of an equation in \eqref{eq:linsys}, so we want the corresponding entry in $A\vec{x}$ to be the left-hand side. We are immediately forced to adopt the following rule:
+
+\smallskip
+
+\definition{def:Ax}{The product $A\vec{x}$}{
+The product of the matrix $A = \bbm a_{11} & a_{12} & \cdots & a_{1n}\\
+         a_{21} & a_{22} & \cdots & a_{2n}\\
+         \vdots & \vdots & \ddots & \vdots\\
+         a_{m1} & a_{m2} & \cdots & a_{mn}
+     \ebm$ and the vector $\vec{x} = \bbm x_1\\x_2\\\vdots\\x_n\ebm$ is given by
+ \[
+ A\vec{x} = \bbm a_{11}x_1+a_{12}x_2+\cdots +a_{1n}x_n\\
+                 a_{21}x_1+a_{22}x_2+\cdots +a_{2n}x_n\\
+                 \vdots\\
+                 a_{m1}x_1+a_{m2}x_2+\cdots +a_{mn}x_n
+            \ebm.    
+\]}
+
+\smallskip
+
+A few remarks about Definition \ref{def:Ax} are needed here. First, note that the number of columns in the matrix $A$ matches the number of entries in the vector $\vec{x}$, and the number of rows in $A$ matches the number of entries in the vector $\vec{b}$. Moreover,
+
+\begin{quote}
+The $i^{\textrm{th}}$ entry in the vector $A\vec{x}$ is obtained by forming the \textbf{dot product} of row $i$ in the matrix $A$ (viewed as a vector in $\R^n$) with the vector $\vec{x}$.
+\end{quote} 
+
+That is, since each row of $A$ has $n$ entries, as does the vector $\vec{x}$, we can form the dot product of $\vec{x}$ with any of the rows of $A$. Each such dot product forms the corresponding entry in the vector $A\vec{x}$.
+%Now we consider matrix algebra expressions. We'll eventually consider solving equations like $\tta\ttx = \ttb$, where we know what the matrices \tta\ and \ttb\ are and we want to find the matrix \ttx. For now, we'll only consider equations of the type $\tta\vx=\vb$, where we know the matrix \tta\ and the vector \vb. We will want to find what vector \vx\ satisfies this equation; we want to ``solve for \vx.'' 
 
 To help understand what this is asking, we'll consider an example. Let 
 \[
@@ -25,7 +88,17 @@ To help understand what this is asking, we'll consider an example. Let
 \]
 (We don't know what \vx\ is, so we have to represent its entries with the variables $x_1$, $x_2$ and $x_3$.) Let's ``solve for \vx,'' given the equation \ttaxb.
 
-We can multiply out the left hand side of this equation. We find that \[
+We multiply out the left hand side of this equation according to Definition \ref{def:Ax}. The first row of $A$ is the row vector $\vec{a}_1=\bbm 1&1&1\ebm$. Treating this as a column vector, we form the dot product with $\vec{x}$, giving us
+\[
+\vec{a}_1\boldsymbol{\cdot}\vec{x} = x_1+x_2+x_3.
+\]
+Similarly, letting $\vec{a}_2$ and $\vec{a}_3$ denote the second and third rows of $A$, respectively, we find
+\begin{align*}
+\vec{a}_2\boldsymbol{\cdot}\vec{x} &= x_1-x_2+2x_3\\
+\vec{a}_3\boldsymbol{\cdot}\vec{x} &= 2x_1+x_3.
+\end{align*}
+Putting things together, we find that 
+\[
 \tta\vx = \bmx{c}x_1+x_2+x_3\\x_1-x_2+2x_3\\2x_1+x_3\emx.
 \]
 Be sure to note that the product is just a vector; it has just one column.
@@ -41,7 +114,9 @@ x_1-x_2+2x_3&=-3\\
 2x_1+x_3&=1.
 \end{align*}
 
-This should look familiar; it is a system of linear equations! Given the matrix-vector equation $\tta\vx=\vb$, we can recognize \tta\ as the coefficient matrix from a linear system and \vb\ as the vector of the constants from the linear system. To solve a matrix--vector equation (and the corresponding linear system), we simply augment the matrix \tta\ with the vector \vb,  put this matrix into \rref, and interpret the results.
+This should look familiar; it is a system of linear equations! Given the matrix-vector equation $\tta\vx=\vb$, we can recognize \tta\ as the coefficient matrix from a linear system and \vb\ as the vector of the constants from the linear system. Given a system of equations, rewriting it in matrix form is equally straightforward. 
+
+To solve a matrix--vector equation (and the corresponding linear system), we simply augment the matrix \tta\ with the vector \vb,  put this matrix into \rref, and interpret the results.
 
 We convert the above linear system into an augmented matrix and find the \rref: 
 \[
@@ -188,13 +263,13 @@ The term \textit{homogeneous} comes from two Greek words; \textit{homo} meaning 
 
 Notice that the line $\vx =t\vv$ in the solution of Example \ref{ex_vector_solution_101} above passes through the origin. This is an important characteristic of homogeneous systems: since $A\vec 0 = \vec 0$ for any matrix $A$, we always have (at least) the solution $\vx = \vec 0$. (We'll have more to say about this below.)
 
-Furthermore, since or set of solutions is a line through the origin, we know from Section \ref{sec:Rn} is a \textit{subspace}. In fact, it is not just any subspace: this is an important object known as the \sword{null space} of a matrix. We will discuss the importance of the null space in Section \ref{sec:lin_trans}, where we will see that the null space of an $m\times n$ matrix $A$ is the subspace
+%Furthermore, since or set of solutions is a line through the origin, we know from Section \ref{sec:Rn} is a \textit{subspace}. In fact, it is not just any subspace: this is an important object known as the \sword{null space} of a matrix. We will discuss the importance of the null space in Section \ref{sec:lin_trans}, where we will see that the null space of an $m\times n$ matrix $A$ is the subspace
 \[
 V = \{\vx\in\R^n \, | \, A\vx = \vec 0\}.
 \]
-We saw in Section \ref{sec:lin_trans} that the null space of a matrix $A$ gives us useful information about the linear transformation $T(\vx) = A\vx$, but we mentioned at the time that we did not have the tools to compute it.
+%We saw in Section \ref{sec:lin_trans} that the null space of a matrix $A$ gives us useful information about the linear transformation $T(\vx) = A\vx$, but we mentioned at the time that we did not have the tools to compute it.
 
-At last, we see that determining the null space of a matrix is exactly the same thing as solving the homogeneous system $A\vx = \vec 0$. Let's try another problem like Example \ref{ex_vector_solution_101}, but this time, we'll do so in the context of Section \ref{sec:lin_trans}.
+%At last, we see that determining the null space of a matrix is exactly the same thing as solving the homogeneous system $A\vx = \vec 0$. Let's try another problem like Example \ref{ex_vector_solution_101}, but this time, we'll do so in the context of Section \ref{sec:lin_trans}.
 
 \medskip
 
@@ -351,7 +426,7 @@ This solution is different than what we've seen in the past two examples; we can
 		&= \bmx{c} 3\\0\emx + t\bmx{c}-2\\1\emx.
 \end{align*}
 
-\drawexampleline
+%\drawexampleline
 
 Once again, let's give names to the different component vectors of this solution (we are getting near the explanation of why we are doing this). Let 
 \[
@@ -497,7 +572,7 @@ then there must be a leading 1 in the right-hand column of the \rref\ of $\bmx{c
 \]
 which is exactly what we expect in a system with no solutions.
 
-Items 2 and 3 in Theorem \ref{thm:rank_and_sols} simply give another way of stating the fact that the free variables are those variables that do \textbf{not} have a leading 1 in their column. This seems like an obvious fact, but it is very important. We will see in Section \ref{sec:null_column} that this observation leads to a major theorem, sometimes known as the Fundamental Theorem of Linear Transformations: see Theorem \ref{thm:fund_thm_lin_maps}.
+Items 2 and 3 in Theorem \ref{thm:rank_and_sols} simply give another way of stating the fact that the free variables are those variables that do \textbf{not} have a leading 1 in their column. This seems like an obvious fact, but it is very important. \ifthenelse{\boolean{colour}}{We will see in Section \ref{sec:null_column} that this observation leads to a major theorem, sometimes known as the Fundamental Theorem of Linear Transformations: see Theorem \ref{thm:fund_thm_lin_maps}.}{Indeed, this observation leads to a major theorem, sometimes known as the Fundamental Theorem of Linear Transformations, or the Rank-Nullity Theorem.}
 
 Let us explore this result with a series of examples.
 
@@ -587,6 +662,8 @@ We immediately have a problem; we see that the second row tells us that $0x_1+0x
 
 \mnote{.75}{As previously noted, the fact that \ttaxb\ has no solution in Example \ref{ex_vector_solution_7} simply indicates the fact that $\vec{b}$ is not in the column space of $A$. Since the rank of $A$ is equal to one, we know that $\operatorname{col}(A)$ is spanned by the single vector $\vv = \bbm 1\\2\ebm$. Thus, we can only expect \ttaxb\ to have a solution if $\vb$ is a scalar multiple of $\vv$.}
 
+\enlargethispage{2\baselineskip}
+
 To find the solution to \ttaxo, we interpret the \rref\ of the appropriate augmented matrix. 
 \[
 \bmx{ccc}1&1&0\\2&2&0\emx \quad \arref \quad \bmx{ccc}1&1&0\\0&0&0\emx
@@ -601,14 +678,22 @@ Thus
 = x_2\vu.
 \]
 
-We have no solution to \ttaxb, but infinitely many solutions to \ttaxo. }
+We have no solution to \ttaxb, but infinitely many solutions to \ttaxo. \vskip-0.5\baselineskip}
 
-\medskip
+\pagebreak
 
 The previous example may seem to violate the principle of Key Idea \ref{idea:unique_solutions}. After all, it seems that having infinitely many solutions to \ttaxo\ should imply infinitely many solutions to \ttaxb. However, we remind ourselves of the key word in the idea that we observed before: \textit{consistent}. If \ttaxb\ is consistent and \ttaxo\ has infinitely many solutions, then so will \ttaxb. But if \ttaxb\ is not consistent, it does not matter how many solutions \ttaxo\ has; \ttaxb\ is still inconsistent.
 
 
+\medskip
 
+In this chapter, we developed a systematic method for solving systems of linear equations. A key tool in this method was the augmented matrix corresponding to a given system. In this final section, we've seen that further insight into the structure of solutions can be gained by considering our systems in terms of matrices and vectors.
+
+In the next chapter, we will begin the study of matrices as objects unto themselves. We will see that they can be added and multiplied by scalars in exactly the same way as vectors, and in addition to this, matrices of the correct sizes can be \textit{multiplied} in a way that reproduces Definition \ref{def:Ax} above as a special case. 
+
+One question that may have occurred to you as you worked through this section is the following: in the one-variable linear equation $ax=b$, we know that as long as $a\neq 0$, we can divide both sides by $a$, giving us the solution $x=b/a$. Now, given the matrix equation $A\vec{x}=\vec{b}$, is there some equivalent means of ``dividing by $A$'' to obtain the solution $\vec{x}$? The short answer is no. Indeed, there is no such thing as matrix division; the algebraic rules for matrix multiplication are much more complicated than they are for numbers. (In particular, we'll see that for matrices, $AB$ is usually \textbf{not} the same thing as $BA$!) 
+
+The slightly longer answer to our question might be phrased as ``Sometimes. Well, sort of.'' To obtain the correct (and much longer) answer, we will be led in the next chapter to the definition of the \textit{inverse} of a matrix.
 %Exercises
 
 %Lots of examples finding homogeneous and particular solutions.\\

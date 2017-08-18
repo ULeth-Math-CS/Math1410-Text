@@ -1,0 +1,310 @@
+\section{Subspaces of $\mathbb{R}^n$}\label{sec:subspace}
+
+
+
+One of the things we noted in Example \ref{ex_spanRn} was that since $\vec{w}$ belonged to $\operatorname{span}\{\vec{u},\vec{v}\}$, adding $\vec{w}$ to any vector in $\operatorname{span}\{\vec{u},\vec{v}\}$ resulted in another vector in $\operatorname{span}\{\vec{u},\vec{v}\}$. This leads to the notion of a \sword{subspace}, another one of the key concepts in linear algebra.
+
+What sets subspaces apart from other subsets of $\mathbb{R}^n$ is the requirement that all of the properties listed in Theorem \ref{thm:Rn_properties} remain valid when applied to vectors from that subspace. We will not prove it here, but it suffices that the subspace be \textit{closed} under the operations of addition and scalar multiplication.
+
+\smallskip
+
+\definition{def:subspace}{Subspace of $\mathbb{R}^n$}{
+A subset $V\subseteq \mathbb{R}^n$ is called a \sword{subspace}\index{subspace} of $\mathbb{R}^n$, provided that the following conditions hold:
+\begin{enumerate}
+\item For any vectors $\vec u, \vec v\in V$, $\vec u + \vec v \in V$
+\item For any vector $\vec v \in V$ and scalar $c\in \mathbb{R}$, $c\vec{v}\in V$.
+\end{enumerate}}
+
+\smallskip
+
+\mnote{.7}{Another way of phrasing Definition \ref{def:subspace} is to say that $V$ is a subspace if any linear combination of vectors in $V$ is another vector in $V$; that is, $V$ is closed under taking linear combinations.}
+
+\mnote{.5}{A subspace of $\mathbb{R}^n$ is a subset that looks like a copy of $\mathbb{R}^m$, where $m\leq n$. The visual examples you should keep in mind are lines (which look like copies of $\mathbb{R}$) and planes (which look like copies of $\mathbb{R}^2$) in $\mathbb{R}^3$. However, not all lines and planes will do: as we will see, only those lines and planes that pass through the origin form subspaces.}
+
+It follows from Definition \ref{def:subspace} that any linear combination of vectors in a subspace $V$ is again an element of that subspace. One other important consequence of Definition \ref{def:subspace} must be noted here: since any subspace $V$ is closed under scalar multiplication by \textit{any} scalar, and since $0\cdot\vec v = \vec 0$ for any vector $\vec v$, \textbf{every subspace contains the zero vector}. This often provides an easy test when we want to rule out the possibility that a subset is a subspace.
+
+\medskip
+
+\example{ex_subspace1}{Identifying subspaces}{
+Determine which of the following subsets of $\mathbb{R}^3$ are subspaces:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $R = \left\{\left. \bbm x\\y\\z\ebm \, \right|\, 2x-4y+3z=0\right\}$
+\item $S = \left\{\left.\bbm x\\4x\\3\ebm \, \right| \, x\in \mathbb{R}\right\}$
+\end{enumerate}
+\end{multicols}}
+{\begin{enumerate}
+\item From our work in Section \ref{sec:planes}, we notice right away that the set $R$ describes a plane with normal vector given by $\vec n = \bbm 2\\-4\\3\ebm$. Moreover, this particular plane passes through the origin, since $2(0)-4(0)+3(0)=0$, telling us that $\vec 0 \in R$.
+
+It turns out that any plane through the origin is a subspace, and $R$ is no exception, but let's verify this directly using Definition \ref{def:subspace}. Suppose 
+\[
+\vec u = \bbm u_1\\u_2\\u_3\ebm \quad \text{ and } \quad \vec v = \bbm v_1\\v_2\\v_3\ebm
+\]
+are vectors in $R$, so that $2u_1-4u_2+3u_3=0$ and $2v_1-4v_2+3v_3=0$. For the vector
+\[
+\vec u + \vec v = \bbm u_1+v_1\\u_2+v_2\\u_3+v_3\ebm,
+\]
+we find
+\[
+2(u_1+v_1)-4(u_2+v_2)+3(u_3+v_3) = (2u_1-4u_2+3u_3) + (2v_1-4v_2+3v_3) = 0 + 0 = 0,
+\]
+which shows that $\vec u+\vec v\in R$. Similarly, for any scalar $c$,
+\[
+2(cu_1)-4(cu_2)+3(cu_3) = c(2u_1-4u_2+3u_3) = 0,
+\]
+verifying that $c\vec u \in R$. Since $R$ is closed under both addition and scalar multiplication, it is a subspace.
+
+\item For the subset $S$, we immediately notice that the third component must always equal 3; therefore, it is impossible for the zero vector to belong to $S$, and thus $S$ is not a subspace.
+\end{enumerate}}
+
+\medskip
+
+To make sure we've got the hang of things, we'll try a couple more examples.
+
+%\pagebreak
+
+\medskip
+
+\example{ex_subspace2}{Identifying subspaces}{
+Determine which of the following subsets of $\mathbb{R}^3$ are subspaces:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $T = \left\{\left.\bbm 3a-2b\\a+b\\a-4b\ebm \, \right| \, a,b\in \mathbb{R}\right\}$
+\item $U = \left\{\left.\bbm x+y\\3xy\\x^2\ebm \, \right| \, x,y\in \mathbb{R}\right\}$
+\end{enumerate}
+\end{multicols}}
+{\begin{enumerate}
+\item Suppose we have two vectors $\vec v = \bbm 3a-2b\\a+b\\a-4b\ebm$ and $\vec w = \bbm 3c-2d\\c+d\\a-4b\ebm$ in the subset $T$. Then we find
+\begin{align*}
+\vec v + \vec w &= \bbm 3a-2b\\a+b\\a-4b\ebm + \bbm 3c-2d\\c+d\\a-4b\ebm = \bbm (3a-2b)+(3c-2d)\\(a+b)+(c+d)\\(a-4b)+(c-4d)\ebm\\
+& = \bbm 3(a+c)-2(b+d)\\(a+c)+(b+d)\\(a+c)-4(b+d)\ebm.
+\end{align*}
+Since $a+c$ and $b+d$ are again real numbers, we see that $\vec v+\vec w$ fits the definition of $T$, so $\vec v+\vec w\in T$.
+
+Next, if $k\in \mathbb{R}$ is a scalar, we have
+\[
+k\vec v = k\bbm 3a-2b\\a+b\\a-4b\ebm = \bbm k(3a-2b)\\k(a+b)\\k(a-4b)\ebm = \bbm 3(ka)-2(kb)\\(ka)+(kb)\\(ka)-4(kb)\ebm,
+\]
+which again fits the patter for vectors in $T$, so $k\vec v\in T$. From Definition \ref{def:subspace}, we can conclude that $T$ is a subspace.
+
+\item You probably recall from your high school mathematics that a function such as $f(x)=ax+b$ is considered \textit{linear}, since its graph is a straight line. Functions like $f(x)=x^2$ are considered non-linear, since their graphs are curved. One of the morals a student does well to learn quickly in \textit{linear} algebra is that any expressions involving non-linear functions of any variables present are not going to play well with the rules of linear algebra.
+
+For the subset $U$, the expressions $3xy$ and $x^2$ tip us off that we are probably not dealing with a subspace here. The easiest way to make sure of this is to check the rules in Definition \ref{def:subspace} using \textit{specific} vectors.
+
+\mnote{.6}{\textbf{Note:} When we want to show that a subset is a subspace, we have to verify that Definition \ref{def:subspace} is satisfied for \textbf{all} possible vectors in that set. Since we generally have infinitely many vectors to deal with, our verification is going to require us to give a general argument, using variables instead of numbers.
+
+On the other hand, if we want to show that a subset is \textbf{not} a subspace, we just have to show that Definition \ref{def:subspace} fails for one or two \textbf{specific} vectors. A choice of vector(s) for which the definition fails is called a \textbf{counterexample}. When constructing a counterexample it's a good idea to choose small numbers to keep the arithmetic simple.}
+
+If we let $x=1$ and $y=2$ in the definition of the set $U$, we get the vector
+\[
+\vec v = \bbm 1+2\\3(1)(2)\\1^2\ebm = \bbm 3\\6\\1\ebm.
+\]
+Now consider the vector $4\vec v$. We have
+\[
+4\vec v = 4\bbm 3\\6\\1\ebm = \bbm 12\\6\\4\ebm.
+\]
+Looking at the definition of the set $U$, we know that if $4\vec v\in U$, then the third component of $\vec v$ tells us $x^2=4$, so $x=\pm 2$. Now, let's look at the other two components. If $x=2$, we must have
+\[
+2+y = 12 \text{ and } 3(2)(y) = 6.
+\]
+The first equation tells us that $y=10$, while the second requires $y=1$. Since $10\neq 1$, this is impossible. Similarly, if $x=-2$, then we would have to have $y=14$ looking at the first component, and $y=-1$ from the second. Since this is again impossible, it must be the case that $4\vec v\notin U$. Since $U$ is not closed under scalar multiplication, $U$ is not a subspace.
+\end{enumerate}
+
+\vskip-1.5\baselineskip}
+
+\medskip
+
+After seeing a few examples (and a few exercises), the reader can probably develop some intuition for identifying subspaces. To make sure we don't become too reliant on intuition, however, we'll give one more example with two very similar-looking sets, only one of which is a subspace.
+
+\medskip
+
+\example{ex_subspace3}{Identifying subspaces}{
+Determine which of the following subsets of $\mathbb{R}^3$ are subspaces:
+\begin{multicols}{2}
+\begin{enumerate}
+\item $V = \left\{\left.\bbm u+2v\\v+4\\u-2\ebm \, \right| \, u,v\in \mathbb{R}\right\}$
+\item $W = \left\{\left.\bbm 2u+v\\v+4\\u-2\ebm \, \right| \, u,v\in \mathbb{R}\right\}$
+\end{enumerate}
+\end{multicols}}
+{\begin{enumerate}
+\item The expressions $v+4$ and $u-3$ in the definition of $V$ look like the sort of linear functions we see in high school, but we need to keep in mind that in linear algebra the zero vector has an important role in making sure the algebra works properly. In Linear Algebra, among all functions of the form $f(x)=mx+b$, only those with $b=0$ are considered ``linear'': these are the functions whose graphs are lines through the origin.
+
+The first thing we might check is whether or not $\vec 0 \in V$. If we want
+\[
+\bbm u+2v\\v+4\\u-2\ebm = \bbm 0\\0\\0\ebm,
+\]
+then clearly we need $v=-4$ and $u=2$ from the second and third components, but $2+2(-4) = -6\neq 0$, so there is no way to obtain the zero vector as an element of $V$, telling us that $V$ is not a subspace.
+
+\item The subset $W$ looks a lot like the subset $V$, so our instinct is probably telling us that $W$ is not a subspace, either. To know for sure, the first thing we might check is whether or not $\vec 0 \in W$. In this case, we see that $\vec 0$ is indeed in there. Setting $u=2$ and $v=-4$, we get the vector
+\[
+\bbm 2(2)+(-4)\\-4+4\\2-2\ebm = \bbm 0\\0\\0\ebm = \vec 0,
+\]
+so $\vec 0 \in W$. Let's try the addition test. Setting $u=1$ and $v=0$ gives us the vector
+\[
+\vec v = \bbm 2(1)+0\\0+4\\1-2\ebm = \bbm 2\\4\\-1\ebm \in W.
+\]
+Setting $u=0$ and $v=1$ gives us the vector
+\[
+\vec w = \bbm 2(0)+1\\1+4\\0-2\ebm = \bbm 1\\5\\-2\ebm \in W.
+\]
+We now check to see whether or not $\vec v + \vec w \in W$. We have
+\[
+\vec v + \vec w = \bbm 2\\4\\-1\ebm + \bbm 1\\5\\-2\ebm = \bbm 3\\9\\-3\ebm.
+\]
+If this is an element of $W$, then we must have $v+4=9$ for some $v\in\mathbb{R}$ (looking at the second component) and $u-2=-3$ for some $u\in \mathbb{R}$ (looking at the third component), so $u=-1$ and $v=5$. Putting these values into the first component, we need to have $2(-1)+5=3$, which is true! Does this mean $W$ is a subspace? Not so fast: we only checked addition for one pair of vectors, and we haven't checked scalar multiplication.
+
+\drawexampleline
+
+If we try a few more examples (the reader is encouraged to do so), we find that things keep working out, so we begin to suspect that maybe $W$ really is a subspace. The only way to know for sure is to attempt to verify Definition \ref{def:subspace} with a general proof. Suppose
+\[
+\vec v = \bbm 2a+b\\b+4\\a-2\ebm \text{ and } \vec w = \bbm 2c+d\\d+4\\c-2\ebm
+\]
+are arbitrary elements of $W$. Adding these vectors, we get
+\[
+\vec v + \vec w = \bbm 2(a+c)+(b+d)\\ (b+d)+8\\(a+c)-4\ebm,
+\]
+which certainly doesn't look like an element of $W$; the constants are all wrong! We have an 8 in the second component instead of a 4, and a $-4$ in the third component instead of a $-2$. (This is why constant terms in the definition of a subset are generally problematic.)
+
+However, with a bit of sleight of hand, things are not as bad as they seem. Let's write the second component as $(b+d+4)+4$, and the third as $(a+c-2)-2$, and let $v=b+d+4$, and $u=a+c-2$. If $\vec v + \vec w$ is an element of $W$, then we're going to need
+\[
+2(a+c)+(b+d) = 2u+v,
+\]
+so that $\vec v + \vec w = \bbm 2u+v\\v+4\\u-2\ebm$ fits the definition of $W$. Is this true? Let's check:
+\[
+2u+v = 2(a+c-2)+(b+d+4) = 2(a+c)-4+(b+d)+4 = 2(a+c)+(b+d).
+\]
+The extra constants cancel, so addition works! Similarly, we find
+\begin{align*}
+k\vec v &= \bbm k(2a+b)\\k(b+4)\\k(c-d)\ebm \\
+ & = \bbm 2(ka)+(kb)\\(kb)+4k\\(ka)-2k\ebm\\
+ & = \bbm 2(ka)+(kb)\\(kb+4k-4)+4\\(ka-2k+2)-2\ebm\\
+ & = \bbm 2(ka-2k+2)+(kb+4k-4)\\(kb+4k-4)+4\\(ka-2k+2)-2\ebm,
+\end{align*}
+which fits the definition of $W$. (Note that in the last equality, things cancel out again:
+\[
+2(ka-2k+2)+(kb+4k-4) = 2(ka)-4k+4+(kb)+4k-4 = 2(ka)+(kb).
+\]
+Whew! That wasn't so straightforward. Could we have made our lives a little bit easier? (The answer to this rhetorical question is almost always yes.)
+
+We know that the potential trouble here came from the constant terms, so one option we have is to try burying them. Given the element 
+\[
+\vec v = \bbm 2u+v\\v+4\\u-2\ebm \in W,
+\]
+we're under no obligation to stick with the variables $u$ and $v$. Let's try to simplify a bit: if we let $x = u-2$ (so $u=x+2$) and $y = v+4$ (so $v=y-4$), then
+\[
+2u+v = 2(x+2)+(y-4) = 2x+4+y-4 = 2x+y,
+\]
+and thus we can write $\vec v = \bbm 2x+y\\y\\x\ebm$, with no more constant terms. In this form it's much easier to verify that $W$ is a subspace.
+\end{enumerate}}
+
+\medskip
+
+Let's take a second look at the subspaces $T$ and $W$ from Examples \ref{ex_subspace2} and \ref{ex_subspace3}. Given an element $\vec v = \bbm 3a-2b\\a+b\\a-4b\ebm$ of $T$, we note that
+\[
+\vec v = \bbm 3a-2b\\a+b\\a-4b\ebm = \bbm 3a\\a\\a\ebm + \bbm -2b\\b\\-4b\ebm = a\bbm 3\\1\\1\ebm + b\bbm -2\\1\\-4\ebm;
+\]
+in other words, $T$ can be written as the span of the vectors
+\[
+\bbm 3\\1\\1\ebm \text{ and } \bbm -2\\1\\-4\ebm.
+\]
+Similarly, if we write $\vec w = \bbm 2x+y\\y\\x\ebm\in W$ for an arbitrary element of $W$ (using our change of variables), we have
+\[
+\vec w = \bbm 2x\\0\\x\ebm + \bbm y\\y\\0\ebm = x\bbm 2\\0\\1\ebm + y\bbm 1\\1\\0\ebm,
+\]
+so the subspace $W$ again can be rewritten as
+\[
+W = \operatorname{span}\left\{\bbm 2\\0\\1\ebm, \bbm 1\\1\\0\ebm\right\}.
+\]
+
+In fact, although we will not prove it in this textbook, \textit{every} subspace of $\mathbb{R}^n$ can be written as the span of some finite set of vectors. (This is usually done in Math 3410.) We can, however, prove that every span is a subspace.
+
+\smallskip
+
+\theorem{thm:subspan}{Every span is a subspace}{\index{subspace ! span}
+Let $\vec{v}_1,\vec{v}_2,\ldots, \vec{v}_k$ be vectors in $\mathbb{R}^n$. Then $V=\operatorname{span}\{\vec{v}_1, \vec{v}_2,\ldots, \vec{v}_k\}$ is a subspace of $\mathbb{R}^n$.}
+
+\smallskip
+
+To see that this is true, recall that any element of a span is by definition a linear combination. Given two arbitrary elements
+\begin{align*}
+\vec a & = a_1\vec{v}_1+a_2\vec{v}_2+\cdots + a_k\vec{v}_k\\
+\vec b & = b_1\vec{v}_1+b_2\vec{v}_2+\cdots + b_k\vec{v}_k
+\end{align*}
+of $V$, we note that
+\begin{align*}
+\vec a + \vec b & = (a_1\vec{v}_1+a_2\vec{v}_2+\cdots + a_k\vec{v}_k) + (b_1\vec{v}_1+b_2\vec{v}_2+\cdots + b_k\vec{v}_k)\\
+& = (a_1\vec{v}_1+b_1\vec{v}_1)+(a_2\vec{v}_2+b_2\vec{v}_2)+\cdots + (a_k\vec{v}_k+b_k\vec{v}_k)\\
+& = (a_1+b_1)\vec{v}_1+(a_2+b_2)\vec{v}_2 + \cdots + (a_k+b_k)\vec{v}_k,
+\end{align*}
+so that $\vec a + \vec b$ can be written as a linear combination of the vectors $\vec{v}_i$ and therefore belongs to $V$. Similarly, for any scalar $c$, we have
+\begin{align*}
+c\vec a & = c(a_1\vec{v}_1+a_2\vec{v}_2+\cdots + a_k\vec{v}_k)\\
+ & = (ca_1)\vec{v}_1+(ca_2)\vec{v}_2+\cdots (ca_k)\vec{v}_k,
+\end{align*}
+so that $c\vec a$ is an element of $V$ as well. Thus, by Definition \ref{def:subspace}, we know that $V$ is a subspace of $\mathbb{R}^n$.
+
+\smallskip
+
+We conclude with a discussion of how Theorem \ref{thm:subspan} and the concept of linear independence allows us to give a complete description of the possible subspaces of $\mathbb{R}^n$. To begin with, we have the simplest possible subspace, the \sword{trivial subspace}\index{subspace ! trivial} 
+\[
+V_0 = \{\vec 0\}.
+\]
+
+\mnote{.4}{The trivial subspace appears at first glance to be an exception to the rule that ``every subspace is a span'', but we can consider it to be the span of the zero vector. In more advanced textbooks where the concept of a basis is discussed, the trivial subspace is often considered to be the ``span'' of the empty set. Since the empty set contains zero vectors, the trivial subspace is said to be zero-dimensional.}
+
+If a subspace $V$ has at least one non-zero vector, let's say $\vec v\in V$, then by definition it must contain every scalar multiple of that vector. Thus, the next simplest type of subspace is given as the span of a single, non-zero vector:
+\[
+V_1 = \{t\vec v \, | \, t\in\mathbb{R} \text{ and } \vec v \neq \vec 0\}
+\]
+Of course, there are infinitely many possibilities for $\vec v$, but each choice of $\vec v\neq \vec 0$ leads to a subspace that looks and acts ``the same''. As discussed earlier, we can picture a subspace of this type as a line through the origin.
+
+Next, we could consider a subspace $V_2 = \operatorname{span}\{\vec v, \vec w\}$, with $\vec v, \vec w \neq \vec 0$. There are two possibilities. One is that $\vec v$ and $\vec w$ are parallel, so that the set $\{\vec v,\vec w\}$ is linearly dependent. In this case we can write $\vec w = k\vec v$ for some scalar $k$, and for any scalars $a$ and $b$,
+\[
+a\vec v+b\vec w = a\vec v + b(k\vec v) = (a+bk)\vec v,
+\]
+so our subspace $V_2$ is really of the same type as $V_1$. If, however, the vectors $\vec v$ and $\vec w$ are linearly independent, then adding the vector $\vec w$ gives us a second direction to work with, and $V_2$ becomes an object that is strictly larger than $V_1$. In this case, the visualization is that of a \textit{plane} through the origin.
+
+Depending on the size of $n$, this argument continues. If we add a third vector $\vec u$ that is already in the span of $\vec v$ and $\vec w$, then the set $\{\vec u, \vec v,\vec w\}$ is linearly dependent, and the span of this set is the same as what we already had. If, however, $\vec u \notin\operatorname{span}\{\vec v, \vec w\}$, then $\{\vec u, \vec v,\vec w\}$ is linearly independent, and
+\[
+V_3 = \operatorname{span}\{\vec u, \vec v, \vec w\}
+\]
+is a strictly larger subspace than $\operatorname{span}\{\vec v, \vec w\}$. We could then look for a fourth vector, and so on. However, in the familiar case of $\mathbb{R}^3$, the process stops at 3.
+
+\smallskip
+
+\keyidea{idea:R3subspace}{Subspaces of $\mathbb{R}^3$}{
+There are four different types of subspaces in $\mathbb{R}^3$:
+\begin{itemize}
+\item The trivial subspace, $V_0 = \{\vec 0\}$. (Zero dimensional)
+\item Lines through the origin, of the form
+\[
+V_1 = \operatorname{span}\{\vec v\},
+\]
+where $\vec v\neq \vec 0$. (One dimensional)
+\item Planes through the origin, of the form
+\[
+V_2 = \operatorname{span}\{\vec v, \vec w\},
+\]
+where the vectors $\vec v, \vec w$ are linearly independent. (Two dimensional)
+\item The complete space $V_3 = \mathbb{R}^3$. (Three dimensional)
+\end{itemize}}
+
+\smallskip
+
+Notice the reference to dimension in Key Idea \ref{idea:R3subspace}. In $\mathbb{R}^3$, we can rely on our intuitive (geometric) understanding of the concept of dimension. A complete understanding of the concept of dimension will have to wait until Math 3410; however, using the concepts in this section, we can make the following definition.
+
+\smallskip
+
+\definition{def:dimension}{Dimension of a subspace}{\index{dimension}
+The \sword{dimension} of a subspace $V\subseteq \mathbb{R}^n$ is the \textit{smallest} number of vectors needed to span $V$.}
+
+\smallskip
+
+One could also define dimension as the \textit{largest} number of linearly independent vectors one can choose from a subspace. If $B=\{\vec{v}_1, \ldots, \vec{v}_k\}$ is a set of vectors in a subspace $V$ such that 
+\begin{enumerate}
+\item $V=\operatorname{span}(B)$, and
+\item $B$ is linearly independent,
+\end{enumerate}
+then we say $B$ is a \sword{basis}\index{basis} for $V$. For example, the set $\{\veci, \vecj, \veck\}$ is a basis for $\mathbb{R}^3$. There are many possible bases for a subspace, but one can prove that the number of vectors in any basis is the same. Once this fact is established, we could alternatively define dimension as the number of vectors in any basis.
+
+\printexercises{exercises/05_06_exercises}

@@ -2,7 +2,7 @@ We have often explored new ideas in Linear Algebra by making connections to our 
 
 This chapter is motivated by another analogy. Consider: when we multiply an unknown number $x$ by another number such as 5, what do we know about the result? Unless, $x=0$, we know that in some sense $5x$ will be ``5 times bigger than $x$.'' Applying this to vectors, we would readily agree that $5\vx$ gives a vector that is ``5 times bigger than \vx''; we know from Theorem \ref{thm:vecscale} that $\len{5\vx}  = 5\len{\vx}$.
 
-\mnote{.3}{Eigenvalues and eigenvectors are frequently encountered in the context of ``characteristic directions'' for linear transformations. Before continuing with this section, the reader might find it useful to review the list of linear transformations of the Cartesian plane on page \pageref{page:plane_transformations} in Section \ref{sec:geom_3}. For each of the transformations listed, see if you can predict which vectors will be transformed into scalar multiples of themselves: for which $\vx\in\R^2$ is $T(\vx) = k\vx$? (We'll answer this later in the section.) This question leads to the idea of \textit{invariant subspaces} for a linear transformation $T:\R^n\to \R^n$. These are subspaces $V\subseteq \R^n$ such that $T(\vx)\in V$ for each $\vx\in V$. Such subspaces are of great importance in many areas of Mathematics and Physics.}
+\ifthenelse{\boolean{colour}}{\mnote{.3}{Eigenvalues and eigenvectors are frequently encountered in the context of ``characteristic directions'' for linear transformations. Before continuing with this section, the reader might find it useful to take a look at the list of linear transformations of the Cartesian plane on page \pageref{page:plane_transformations} in Section \ref{sec:geom_3}. For each of the transformations listed, see if you can predict which vectors will be transformed into scalar multiples of themselves: for which $\vx\in\R^2$ is $T(\vx) = k\vx$? (We'll answer this later in the section.) This question leads to the idea of \textit{invariant subspaces} for a linear transformation $T:\R^n\to \R^n$. These are subspaces $V\subseteq \R^n$ such that $T(\vx)\in V$ for each $\vx\in V$. Such subspaces are of great importance in many areas of Mathematics and Physics.}}{}
 
 Within the linear algebra context, though, we have two types of multiplication: scalar and matrix multiplication. What happens to \vx\ when we multiply it by a matrix \tta? Our first response is likely along the lines of ``You just get another vector. There is no definable relationship.'' We might wonder %\footnote{then again, we might not}
  if there is ever the case where a matrix -- vector multiplication is very similar to a scalar -- vector multiplication. That is, do we ever have the case where $\tta\vx = a\vx$, where $a$ is some scalar? That is the motivating question of this chapter.
@@ -17,7 +17,7 @@ Within the linear algebra context, though, we have two types of multiplication: 
 \item T/F: If \tta\ is a $5\times 5$ matrix, to find the \el s of \tta, we would need to find the roots of a 5$^\text{th}$ degree polynomial.
 }
 
-We start by considering the matrix \tta\ and vector \vx\ as given below. (Recall this matrix and vector were used in Example \ref{ex_mv_1} on page \pageref{ex_mv_1}.)
+We start by considering the matrix \tta\ and vector \vx\ as given below. %(Recall this matrix and vector were used in Example \ref{ex_mv_1} on page \pageref{ex_mv_1}.)
 \[
 \tta = \bmx{cc} 1&4\\2&3\emx \quad \quad \vx = \bmx{c}1\\1\emx
 \]
@@ -66,7 +66,7 @@ Our last comment before trying to find eigenvalues and eigenvectors for given ma
 
 \mnote{.35}{We frequently make claims about topics in this text having ``many applications to the real world.'' You don't need to take our word for it on this. The reader is encouraged to look up the \href{https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors}{\underline{Wikipedia page}} on eigenvalues and eigenvectors. (This is one of the better written and accessible Wikipedia pages on a mathematics topic we've encountered, by the way!) Scrolling down to the section on applications reveals an extensive list of applications, from Physics (analyzing inertial tensors in Mechanics, the Schr\"odinger equation in Quantum Mechanics, ...), Engineering, Chemistry and Geology, to image processing, data analysis, and epidemiology. Even Google's famous ``Page Rank'' algorithm involves eigenvalues and eigenvectors. For information on this, search (on Google?) for the ``\$25,000,000,000 Eigenvector''.}
 
-Back to our math. Given a square matrix \tta, we want to find a nonzero vector \vx\ and a scalar \lda\ such that $\tta\vx = \lda\vx$. We will solve this using the skills we developed in Chapter \ref{chapter:arithmetic}.
+Back to our math. Given a square matrix \tta, we want to find a nonzero vector \vx\ and a scalar \lda\ such that $\tta\vx = \lda\vx$. We will solve this using the skills we developed in Chapter \ref{chapter:algebra}.
 
 \begin{align*}
 \tta\vx & =  \lda\vx \tag*{original equation}\\
@@ -145,7 +145,7 @@ Therefore, we need to solve the equation $(\tta-\lda\tti)\vx=\zero$ for $\vx$ wh
 	\tta - 5\tti &= \bmx{cc} 1&4\\2&3\emx - 5\bmx{cc}1&0\\0&1\emx \\
 								&=  \bmx{cc} -4&4\\2&-2\emx
 \end{align*}
-
+\enlargethispage{\baselineskip}
 To solve $(\tta-5\tti)\vx=\zero$, we form the augmented matrix and put it into \rref: 
 \[
 \bmx{cc|c}-4&4&0\\2&-2&0\emx \quad\quad \overrightarrow{\text{rref}} \quad\quad \bmx{cc|c}1&-1&0\\0&0&0\emx.
@@ -169,10 +169,10 @@ Of course, this works in general. For any $t$, we have
 \[
 \bmx{cc}1&4\\2&3\emx\left(t\bmx{c} 1\\1\emx\right) = t\left(\bmx{cc} 1&4\\2&3\emx\bmx{c}1\\1\emx\right) = t\left(5\bmx{c}1\\1\emx\right) = 5\left(t\bmx{c}1\\1\emx\right).
 \]
-\vskip -\baselineskip
+\vskip-\baselineskip
 }
  
-\medskip
+\pagebreak
 
  %\enlargethispage\baselineskip %\eexset
 
@@ -357,7 +357,7 @@ Find the eigenvalues and eigenvectors of the matrix
 \[
 A = \bbm 1&4\\0&1\ebm.
 \]}
-{Let us recall from Section \ref{sec:geom_3} that the transformation $T(\vx)=A\vx$ defined by $A$ is a \textit{horizontal shear} by a factor of 4. Such a transformation leaves horizontal vectors unaffected, but vectors with a nonzero vertical component get pulled to the right: see Figure \ref{fig:eigenshear}.
+{The transformation $T(\vx)=A\vx$ defined by $A$ is an example of a \textit{horizontal shear}. \ifthenelse{\boolean{colour}}{(See Section \ref{sec:geom_3}).}{} Such a transformation leaves horizontal vectors unaffected, but vectors with a nonzero vertical component get pulled to the right: see Figure \ref{fig:eigenshear}.
 
 From the diagram we can probably guess that the horizontal vector $\bbm 1\\0\ebm$ will be an eigenvector with eigenvalue 1, since it is left untouched by the shear transformation. Let's confirm this analytically. 
 
@@ -440,7 +440,7 @@ Notice that $T(\vx)$ is orthogonal to $\vx$:
 \[
 T(\vx)\boldsymbol{\cdot}\vx = \bbm -x_2\\x_1\ebm \boldsymbol{\cdot}\bbm x_1\\x_2\ebm = -x_2x_1+x_1x_2=0.
 \]
-This is because the transformation $T$ represents a rotation through an angle of $\frac{\pi}{2}$ (90 degrees). Indeed, $A$ is a rotation matrix (see Section \ref{sec:geom_3}) of the form
+This is because the transformation $T$ represents a rotation through an angle of $\frac{\pi}{2}$ (90 degrees). Indeed, $A$ is a rotation matrix \ifthenelse{\boolean{colour}}{(see Section \ref{sec:geom_3})}{} of the form
 \[
 A = \bbm \cos\theta & -\sin\theta\\ \sin\theta & \cos\theta\ebm,
 \]
@@ -487,7 +487,7 @@ In this context we're free to chose any complex value for $t$. Choosing $t=i$ gi
 
 \medskip
 
-Our last few examples provided interesting departures from the earlier ones where we had two distinct eigenvalues; they also provided examples where we were able to analyze the situation geometrically, by considering the linear transformations defined by the matrix. The reader is encouraged to review the other examples of transformations given in Section \ref{sec:geom_3} and attempt a similar analysis.
+Our last few examples provided interesting departures from the earlier ones where we had two distinct eigenvalues; they also provided examples where we were able to analyze the situation geometrically, by considering the linear transformations defined by the matrix. \ifthenelse{\boolean{colour}}{The reader is encouraged to consider the other examples of transformations given in Section \ref{sec:geom_3} and attempt a similar analysis.}{}
 
 So far, our examples have involved $2\times 2$ matrices. Let's do an example with a $3\times 3$ matrix. The only real additional complication here is that our characteristic polynomial will now be a \textit{cubic} polynomial, so factoring it is going to take some more work.
 
@@ -632,7 +632,7 @@ This looks funny, so we'll look remind ourselves how to solve this. The first tw
 \vx = x_1\bmx{c} 1\\0\\0\emx.
 \]
 
-\drawexampleline
+\ifthenelse{\boolean{colour}}{\drawexampleline}{}
 
 We can pick any nonzero value for $x_1$; an easy choice is $x_1 = 1$ and choose $\vx[2]=\bmx{c} 1\\0\\0\emx$ as our \ev.\\
 
@@ -640,6 +640,7 @@ For $\lda_3 = 7$:\\
 
 We need to solve the equation $(\tta - 7\tti)\vx = \zero$. To do this, we form the appropriate augmented matrix and put it into \rref.
 
+\ifthenelse{\boolean{colour}}{}{\enlargethispage{\baselineskip}}
 \[
 \bmx{cccc} -5&-1&1&0\\ 0&-6&6&0 \\ 0&3&-3&0  \emx \quad \overrightarrow{\text{rref}} \quad \bmx{cccc} 1&0&0&0\\0&1&-1&0\\0&0&0&0\emx
 \]
@@ -658,9 +659,9 @@ To summarize, we have the following \el/\ev\ pairs:
 \text{\el\ } \lda_2 & = 2 \text{ with \ev\ } \vx[2] = \bmx{c}1\\0\\0\emx\\
 \text{\el\ } \lda_3 & = 7 \text{ with \ev\ } \vx[3] = \bmx{c}0\\1\\1\emx
 \end{align*}
-\ }
+}
 
-\medskip
+\ifthenelse{\boolean{colour}}{\medskip}{\pagebreak}
 
 In this section we have learned about a new concept: given a matrix \tta\ we can find certain values \lda\ and vectors \vx\ where $\tta\vx =\lda\vx$. In the next section we will continue to the pattern we have established in this text: after learning a new concept, we see how it interacts with other concepts we know about. That is, we'll look for connections between \el s and \ev s and things like the inverse, determinants, the trace, the transpose, etc.
 
