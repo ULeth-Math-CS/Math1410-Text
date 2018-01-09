@@ -48,7 +48,8 @@ The wonderful thing here is that three of our cofactors are multiplied by 0. We 
 &= 3\cdot(-147) \quad\quad\quad \left(\parbox{160pt}{\centering\scriptsize we computed the determinant of the $3\times 3$ matrix without showing our work; it is $-147$}\right)\\
 &= -447
 \end{align*}
-}
+
+}\\
 
 \medskip
 
@@ -82,9 +83,8 @@ You can probably can see a trend. We'll finish out the steps without explaining 
 	&= 1\cdot6\cdot10\cdot13\cdot15\\
 	&= 11700
 \end{align*}
-}
-
-\medskip
+\vskip-\baselineskip
+}\pagebreak
 
 We see that the final determinant is the product of the diagonal entries. This works for any triangular matrix (and since diagonal matrices are triangular, it works for diagonal matrices as well). This is an important enough idea that we'll put it into a box.
 
@@ -397,17 +397,13 @@ Let \tta\ and \ttb\ be $n\times n$ matrices and let $k$ be a scalar. The followi
 
 \smallskip
 
-\mnote{.35}{Proving that $\det(AB)=\det(A)\det(B)$ is most easily done using what are called \textit{elementary matrices}. An elementary matrix \index{elementary matrix}\index{matrix!elementary} is any matrix we can obtain by doing a \textbf{single} row operation to the identity matrix. For example, performing the row operation $R_3-4R_2\to R_3$ on $I_3$ gives us the elementary matrix
-\[
-E = \bbm 1&0&0\\0&1&0\\0&-4&1\ebm.
-\]
-It turns out that multiplying a matrix \textit{on the left} by an elementary matrix is the same as doing the corresponding row operation: if $A$ is any $3\times 3$ matrix, then $EA$ can be obtained from $A$ using the same row operation used to create $E$.
+\mnote{.35}{Proving that $\det(AB)=\det(A)\det(B)$ is most easily done using elementary matrices. (See Section \ref{sec:elementary_matrices}.) Recall that multiplying a matrix \textit{on the left} by an elementary matrix is the same as doing the corresponding row operation: if $A$ is any $3\times 3$ matrix, then $EA$ can be obtained from $A$ using the same row operation used to create $E$.
 
 Theorem \ref{thm:determinant_row_operations} then tells us that 
 \[
 \det(EB) = \det(E)\det(B)
 \]
-for any matrix $B$ and \textit{elementary} matrix $E$. The rest boils down to two cases: either $\det(A)=0$, in which case $A$ is not invertible, so neither is $AB$, and thus $\det(AB)=0 = 0\det(B)$, or $\det(A)\neq 0$. In the latter case, $A$ is invertible, and it turns out that any invertible matrix can be written as a product of elementary matrices (these are determined by the row operations used to carry $A$ to the identity matrix). We can then prove that $\det(AB)=\det(A)\det(B)$ by applying Theorem \ref{thm:determinant_row_operations} repeatedly.}
+for any matrix $B$ and \textit{elementary} matrix $E$. The rest boils down to two cases: either $\det(A)=0$, in which case $A$ is not invertible, so neither is $AB$, and thus $\det(AB)=0 = 0\det(B)$, or $\det(A)\neq 0$. In the latter case, $A$ is invertible, and can be written as a product of elementary matrices. We can then prove that $\det(AB)=\det(A)\det(B)$ by applying Theorem \ref{thm:determinant_row_operations} repeatedly.}
 
 From Theorem \ref{thm:determinant_properties}, we see that $\det(AB)=\det(A)\det(B)$ for any matrices $A$ and $B$. What does this tell us in the case of an invertible matrix? Recall that if $A$ is invertible, then we can determine the inverse matrix $A^{-1}$ such that
 \[

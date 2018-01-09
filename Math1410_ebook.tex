@@ -16,6 +16,9 @@
 \usepackage{colortbl}
 \usepackage{cancel}
 
+
+
+%% Done setup
 \input{headers/Page_Size_Calculus}
 \usepackage{APEX_format}
 \input{headers/Header_Calculus}
@@ -29,17 +32,18 @@
 
 \ifthenelse{\boolean{xetex}}%
 	{\sffamily
-	%%\usepackage{fontspec}
+	%\usepackage{fontspec}
 	\usepackage{mathspec}
 	\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont[Mapping=tex-text]{Calibri}
-	\setsansfont[Mapping=tex-text]{Calibri}
+	\setmainfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+	\setsansfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
 	\setmathsfont(Greek){[cmmi10]}}
 	{\usepackage[sfdefault,lf]{carlito}
 %% The 'lf' option for lining figures
 %% The 'sfdefault' option to make the base font sans serif
 %\usepackage[T1]{fontenc}
-\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
+%\renewcommand*\oldstylenums[1]{\carlitoOsF #1}
+}
 	
 	\ifthenelse{\boolean{luatex}}%
 	{\sffamily
@@ -115,6 +119,13 @@
 \input{text/02_Matrix_Inverse_Properties}
 \input{text/02_Elementary_Matrices}
 
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\chapter{Matrix Transformations}\label{chapter:transf}
+\thispagestyle{empty}
+\input{text/05_Geometry_of_Cartesian_Plane}
+\input{text/05_Linear_Transformations}
+\input{text/05_Subspaces}
+\input{text/05_Null_Column}
 
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -145,13 +156,6 @@
 \input{text/04_Eigen_Properties}
 \input{text/04_Diagonalization}
 
-\clearpage{\pagestyle{empty}\cleardoublepage}
-\chapter{Matrix Transformations}\label{chapter:transf}
-\thispagestyle{empty}
-\input{text/05_Geometry_of_Cartesian_Plane}
-\input{text/05_Linear_Transformations}
-\input{text/05_Subspaces}
-\input{text/05_Null_Column}
 
 
 

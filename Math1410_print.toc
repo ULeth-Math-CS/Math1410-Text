@@ -31,15 +31,20 @@
 \contentsline {section}{\numberline {5.4}The Matrix Inverse}{219}{section.5.4}
 \contentsline {section}{\numberline {5.5}Properties of the Matrix Inverse}{228}{section.5.5}
 \contentsline {section}{\numberline {5.6}Elementary Matrices}{236}{section.5.6}
-\contentsline {chapter}{\numberline {6}Operations on Matrices}{243}{chapter.6}
-\contentsline {section}{\numberline {6.1}The Matrix Transpose}{243}{section.6.1}
-\contentsline {section}{\numberline {6.2}The Matrix Trace}{252}{section.6.2}
-\contentsline {section}{\numberline {6.3}The Determinant}{256}{section.6.3}
-\contentsline {section}{\numberline {6.4}Properties of the Determinant}{265}{section.6.4}
-\contentsline {section}{\numberline {6.5}Applications of the Determinant}{276}{section.6.5}
-\contentsline {chapter}{\numberline {7}Eigenvalues and Eigenvectors}{283}{chapter.7}
-\contentsline {section}{\numberline {7.1}Eigenvalues and Eigenvectors}{283}{section.7.1}
-\contentsline {section}{\numberline {7.2}Properties of Eigenvalues and Eigenvectors}{300}{section.7.2}
-\contentsline {section}{\numberline {7.3}Eigenvalues and Diagonalization}{307}{section.7.3}
+\contentsline {chapter}{\numberline {6}Matrix Transformations}{243}{chapter.6}
+\contentsline {section}{\numberline {6.1}Matrix Transformations}{243}{section.6.1}
+\contentsline {section}{\numberline {6.2}Properties of Linear Transformations}{259}{section.6.2}
+\contentsline {section}{\numberline {6.3}Subspaces of $\mathbb {R}^n$}{272}{section.6.3}
+\contentsline {section}{\numberline {6.4}Null Space and Column Space}{281}{section.6.4}
+\contentsline {chapter}{\numberline {7}Operations on Matrices}{295}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Matrix Transpose}{295}{section.7.1}
+\contentsline {section}{\numberline {7.2}The Matrix Trace}{304}{section.7.2}
+\contentsline {section}{\numberline {7.3}The Determinant}{308}{section.7.3}
+\contentsline {section}{\numberline {7.4}Properties of the Determinant}{317}{section.7.4}
+\contentsline {section}{\numberline {7.5}Applications of the Determinant}{328}{section.7.5}
+\contentsline {chapter}{\numberline {8}Eigenvalues and Eigenvectors}{335}{chapter.8}
+\contentsline {section}{\numberline {8.1}Eigenvalues and Eigenvectors}{335}{section.8.1}
+\contentsline {section}{\numberline {8.2}Properties of Eigenvalues and Eigenvectors}{352}{section.8.2}
+\contentsline {section}{\numberline {8.3}Eigenvalues and Diagonalization}{359}{section.8.3}
 \contentsline {chapter}{\numberline {A}Answers To Selected Problems}{A.1}{appendix.A}
-\contentsline {chapter}{Index}{A.13}{section*.290}
+\contentsline {chapter}{Index}{A.13}{section*.307}

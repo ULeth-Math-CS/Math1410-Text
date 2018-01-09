@@ -14,8 +14,8 @@
 
   \item abscissa, \hyperpage{12}
   \item absolute value, \hyperpage{14}
-  \item adjugate, \hyperpage{280}
-  \item antisymmetric, \hyperpage{251}
+  \item adjugate, \hyperpage{330}
+  \item antisymmetric, \hyperpage{301}
   \item argument 
     \subitem  of a complex number 
       \subsubitem  definition of, \hyperpage{34}
@@ -27,22 +27,22 @@
   \item back substitution, \hyperpage{138}
   \item basic solution, \hyperpage{177}
   \item basic variable, \hyperpage{149}
-  \item basis, \hyperpage{359}
+  \item basis, \hyperpage{279}
   \item basis 
-    \subitem  of a null space, \hyperpage{368}
+    \subitem  of a null space, \hyperpage{288}
 
   \indexspace
 
   \item Cartesian coordinate plane, \hyperpage{12}
   \item Cartesian coordinates, \hyperpage{12}
-  \item characteristic polynomial, \hyperpage{289}, \hyperpage{311}
+  \item characteristic polynomial, \hyperpage{339}, \hyperpage{361}
   \item cis($\theta$), \hyperpage{38}
-  \item cofactor, \hyperpage{259}
-    \subitem expansion, \hyperpage{261}, \hyperpage{267}
-    \subitem matrix, \hyperpage{280}
+  \item cofactor, \hyperpage{309}
+    \subitem expansion, \hyperpage{311}, \hyperpage{317}
+    \subitem matrix, \hyperpage{330}
   \item column 
-    \subitem  pivot, \hyperpage{365}
-  \item column space, \hyperpage{364}
+    \subitem  pivot, \hyperpage{285}
+  \item column space, \hyperpage{284}
   \item column vector, \hyperpage{190}
   \item Complex Factorization Theorem, \hyperpage{26}
   \item complex number 
@@ -82,7 +82,7 @@
     \subitem  Cartesian, \hyperpage{12}
     \subitem  polar, \hyperpage{28}
     \subitem  rectangular, \hyperpage{28}
-  \item Cramer's Rule, \hyperpage{278}
+  \item Cramer's Rule, \hyperpage{328}
   \item cross product
     \subitem applications, \hyperpage{82}
       \subsubitem area of parallelogram, \hyperpage{82}
@@ -97,19 +97,19 @@
   \item dependent 
     \subitem  linear, \hyperpage{117}
   \item determinant
-    \subitem and elementary row operations, \hyperpage{270}
-    \subitem definition, \hyperpage{262}
-    \subitem of $2\times 2$ matrices, \hyperpage{258}
-    \subitem of triangular matrices, \hyperpage{269}
-    \subitem properties, \hyperpage{274}
-  \item diagonal, \hyperpage{235}
-    \subitem definition, \hyperpage{246}
-  \item diagonalizable matrix, \hyperpage{315}
-  \item diagonalization, \hyperpage{314}
-    \subitem orthogonal, \hyperpage{319}
+    \subitem and elementary row operations, \hyperpage{320}
+    \subitem definition, \hyperpage{312}
+    \subitem of $2\times 2$ matrices, \hyperpage{308}
+    \subitem of triangular matrices, \hyperpage{319}
+    \subitem properties, \hyperpage{324}
+  \item diagonal, \hyperpage{233}
+    \subitem definition, \hyperpage{296}
+  \item diagonalizable matrix, \hyperpage{365}
+  \item diagonalization, \hyperpage{364}
+    \subitem orthogonal, \hyperpage{369}
   \item diagram 
     \subitem  Venn Diagram, \hyperpage{3}
-  \item dimension, \hyperpage{359}
+  \item dimension, \hyperpage{279}
   \item distance
     \subitem between points in space, \hyperpage{52}
   \item distance 
@@ -121,19 +121,19 @@
 
   \indexspace
 
-  \item eigenspace, \hyperpage{312}
+  \item eigenspace, \hyperpage{362}
   \item eigenvalue
-    \subitem definition, \hyperpage{286}
-    \subitem finding, \hyperpage{289}
-    \subitem properties, \hyperpage{306}
-  \item eigenvector, \hyperindexformat{\see{eigenvalue}}{286}
-  \item elementary matrix, \hyperpage{238}, \hyperpage{274}
+    \subitem definition, \hyperpage{336}
+    \subitem finding, \hyperpage{339}
+    \subitem properties, \hyperpage{356}
+  \item eigenvector, \hyperindexformat{\see{eigenvalue}}{336}
+  \item elementary matrix, \hyperpage{236}
   \item elementary operation, \hyperpage{130}
   \item elementary row operation, \hyperpage{130}
   \item elementary row operations, \hyperpage{135}
-    \subitem and determinants, \hyperpage{270}
+    \subitem and determinants, \hyperpage{320}
   \item empty set, \hyperpage{3}
-  \item equivalence relation, \hyperpage{310}
+  \item equivalence relation, \hyperpage{360}
 
   \indexspace
 
@@ -165,17 +165,17 @@
   \item initial point, \hyperpage{55}
   \item intersection of two sets, \hyperpage{2}
   \item inverse
-    \subitem computing, \hyperpage{224}
-    \subitem definition, \hyperpage{220}
-    \subitem Invertible Matrix Theorem, \hyperpage{230}
-    \subitem properties, \hyperpage{230}, \hyperpage{235}
-    \subitem uniqueness, \hyperpage{222}
-  \item Invertible Matrix Theorem, \hyperpage{230}, \hyperpage{275}, 
-		\hyperpage{307}
+    \subitem computing, \hyperpage{223}
+    \subitem definition, \hyperpage{219}
+    \subitem Invertible Matrix Theorem, \hyperpage{228}
+    \subitem properties, \hyperpage{228}, \hyperpage{233}
+    \subitem uniqueness, \hyperpage{221}
+  \item Invertible Matrix Theorem, \hyperpage{228}, \hyperpage{325}, 
+		\hyperpage{357}
 
   \indexspace
 
-  \item Jordan Canonical Form, \hyperpage{319}
+  \item Jordan Canonical Form, \hyperpage{369}
 
   \indexspace
 
@@ -184,10 +184,10 @@
   \item linear equation, \hyperpage{125}
   \item linear transformation
     \subitem and \ensuremath  {\mathaccentV {vec}17E{\text  {\it  0}}}, 
-		\hyperpage{345}
-    \subitem conditions on, \hyperpage{349}
-    \subitem definition, \hyperpage{340}
-    \subitem standard matrix of, \hyperpage{344}, \hyperpage{346}
+		\hyperpage{265}
+    \subitem conditions on, \hyperpage{269}
+    \subitem definition, \hyperpage{260}
+    \subitem standard matrix of, \hyperpage{264}, \hyperpage{266}
   \item linearly dependent, \hyperpage{117}
   \item linearly independent, \hyperpage{117}
   \item lines, \hyperpage{89}
@@ -201,48 +201,47 @@
   \item magnitude of vector, \hyperpage{55}
   \item matrix
     \subitem addition, \hyperpage{192}
-    \subitem adjugate, \hyperpage{280}
+    \subitem adjugate, \hyperpage{330}
     \subitem arithmetic properties, \hyperpage{196}
     \subitem augmented, \hyperpage{129}
-    \subitem cofactor, \hyperpage{259}, \hyperpage{280}
+    \subitem cofactor, \hyperpage{309}, \hyperpage{330}
     \subitem definition, \hyperpage{190}
-    \subitem determinant, \hyperpage{258}, \hyperpage{262}
-    \subitem diagonal, \hyperpage{246}
-    \subitem diagonalizable, \hyperpage{315}
-    \subitem elementary, \hyperpage{274}
+    \subitem determinant, \hyperpage{308}, \hyperpage{312}
+    \subitem diagonal, \hyperpage{296}
+    \subitem diagonalizable, \hyperpage{365}
     \subitem equality, \hyperpage{191}
     \subitem identity matrix, \hyperpage{207}
-    \subitem inverse, \hyperpage{220}, \hyperpage{224}
-    \subitem minor, \hyperpage{259}
+    \subitem inverse, \hyperpage{219}, \hyperpage{223}
+    \subitem minor, \hyperpage{309}
     \subitem multiplication, \hyperpage{201}
       \subsubitem properties, \hyperpage{208}
     \subitem scalar multiplication, \hyperpage{193}
-    \subitem similar, \hyperpage{309}
+    \subitem similar, \hyperpage{359}
     \subitem the zero matrix, \hyperpage{195}
-    \subitem transpose, \hyperpage{245}
-    \subitem triangular, \hyperpage{246}
+    \subitem transpose, \hyperpage{295}
+    \subitem triangular, \hyperpage{296}
   \item matrix 
-    \subitem  elementary, \hyperpage{238}
+    \subitem  elementary, \hyperpage{236}
     \subitem  of coefficients, \hyperpage{129}
-  \item matrix transformation, \hyperpage{323}
+  \item matrix transformation, \hyperpage{243}
   \item midpoint 
     \subitem  definition of, \hyperpage{15}
     \subitem  midpoint formula, \hyperpage{15}
-  \item minor, \hyperpage{259}
+  \item minor, \hyperpage{309}
   \item modulus of a complex number 
     \subitem  definition of, \hyperpage{34}
     \subitem  properties of, \hyperpage{36}
   \item multiplicity
-    \subitem algebraic, \hyperpage{311}
-    \subitem and diagonalization, \hyperpage{318}
-    \subitem geometric, \hyperpage{313}
-    \subitem of an eigenvalue, \hyperpage{311}
+    \subitem algebraic, \hyperpage{361}
+    \subitem and diagonalization, \hyperpage{368}
+    \subitem geometric, \hyperpage{363}
+    \subitem of an eigenvalue, \hyperpage{361}
 
   \indexspace
 
   \item norm, \hyperpage{55}
   \item normal vector, \hyperpage{101}
-  \item null space, \hyperpage{367}
+  \item null space, \hyperpage{287}
   \item numbers 
     \subitem  complex, \hyperpage{19}
 
@@ -263,7 +262,7 @@
   \item parameter, \hyperpage{148}
   \item particular solution, \hyperpage{152}
   \item perpendicular, \hyperindexformat{\see{orthogonal}}{70}
-  \item pivot column, \hyperpage{365}
+  \item pivot column, \hyperpage{285}
   \item planes
     \subitem coordinate plane, \hyperpage{52}
     \subitem equations of, \hyperpage{101}
@@ -283,7 +282,7 @@
   \item product rule 
     \subitem  for complex numbers, \hyperpage{39}
     \subitem  for the modulus of a complex number, \hyperpage{36}
-  \item pseudoinverse, \hyperpage{252}
+  \item pseudoinverse, \hyperpage{302}
 
   \indexspace
 
@@ -296,9 +295,9 @@
 
   \item $\mathbb{R}$, \hyperpage{55}
   \item range 
-    \subitem  of a linear transformation, \hyperpage{363}
+    \subitem  of a linear transformation, \hyperpage{283}
   \item rank 
-    \subitem  in terms of column space, \hyperpage{370}
+    \subitem  in terms of column space, \hyperpage{290}
     \subitem  in terms of leading 1s, \hyperpage{181}
   \item real axis, \hyperpage{34}
   \item real part of a complex number, \hyperpage{34}
@@ -329,11 +328,11 @@
     \subitem  union, \hyperpage{2}
     \subitem  verbal description, \hyperpage{1}
   \item set-builder notation, \hyperpage{1}
-  \item similar matrices, \hyperpage{309}
-    \subitem properties of, \hyperpage{310}
-  \item skew symmetric, \hyperpage{251}
-    \subitem definition, \hyperpage{251}
-    \subitem theorem, \hyperpage{251}
+  \item similar matrices, \hyperpage{359}
+    \subitem properties of, \hyperpage{360}
+  \item skew symmetric, \hyperpage{301}
+    \subitem definition, \hyperpage{301}
+    \subitem theorem, \hyperpage{301}
   \item solution, \hyperpage{125}
     \subitem basic, \hyperpage{177}
     \subitem general, \hyperpage{149}
@@ -342,18 +341,18 @@
     \subitem none, \hyperpage{147}
     \subitem particular, \hyperpage{149}, \hyperpage{152}
     \subitem types, \hyperpage{147}
-    \subitem unique, \hyperpage{147}, \hyperpage{181}, \hyperpage{226}
+    \subitem unique, \hyperpage{147}, \hyperpage{181}, \hyperpage{225}
   \item span, \hyperpage{115}
-  \item standard unit vector, \hyperpage{345}
+  \item standard unit vector, \hyperpage{265}
   \item subset 
     \subitem  definition of, \hyperpage{2}
-  \item subspace, \hyperpage{352}
+  \item subspace, \hyperpage{272}
   \item subspace 
-    \subitem  span, \hyperpage{357}
-    \subitem  trivial, \hyperpage{357}
-  \item symmetric, \hyperpage{251}
-    \subitem definition, \hyperpage{251}
-    \subitem theorem, \hyperpage{251}
+    \subitem  span, \hyperpage{277}
+    \subitem  trivial, \hyperpage{277}
+  \item symmetric, \hyperpage{301}
+    \subitem definition, \hyperpage{301}
+    \subitem theorem, \hyperpage{301}
   \item system of linear equations
     \subitem consistent, \hyperpage{147}, \hyperpage{150}, 
 		\hyperpage{180, 181}
@@ -368,18 +367,18 @@
   \item theorem 
     \subitem  Fundamental Theorem of Algebra, \hyperpage{26}
   \item trace
-    \subitem definition, \hyperpage{254}
-    \subitem properties, \hyperpage{256}
+    \subitem definition, \hyperpage{304}
+    \subitem properties, \hyperpage{306}
   \item transformation 
-    \subitem  matrix, \hyperpage{323}
-  \item transpose, \hyperpage{245}
-    \subitem definition, \hyperpage{245}
-    \subitem properties, \hyperpage{249}
-    \subitem skew-symmetric, \hyperpage{251}
-    \subitem symmetric, \hyperpage{251}
+    \subitem  matrix, \hyperpage{243}
+  \item transpose, \hyperpage{295}
+    \subitem definition, \hyperpage{295}
+    \subitem properties, \hyperpage{299}
+    \subitem skew-symmetric, \hyperpage{301}
+    \subitem symmetric, \hyperpage{301}
   \item triangular matrix
-    \subitem definition, \hyperpage{246}
-    \subitem determinant, \hyperpage{269}
+    \subitem definition, \hyperpage{296}
+    \subitem determinant, \hyperpage{319}
 
   \indexspace
 

@@ -54,24 +54,36 @@
 \printanswers {exercises/02_05_exercises}
 \noindent {\bf Section 5.5} \vskip \baselineskip 
 \printanswers {exercises/02_06_exercises}
+\noindent {\bf Section 5.6} \vskip \baselineskip 
+\printanswers {exercises/02_08_exercises}
 \noindent {\Large \bf Chapter 6} \vskip \baselineskip 
 \noindent {\bf Section 6.1} \vskip \baselineskip 
 
-\printanswers {exercises/03_01_exercises}
+\printanswers {exercises/05_03_exercises}
 \noindent {\bf Section 6.2} \vskip \baselineskip 
-\printanswers {exercises/03_02_exercises}
+\printanswers {exercises/05_04_exercises}
 \noindent {\bf Section 6.3} \vskip \baselineskip 
-\printanswers {exercises/03_03_exercises}
+\printanswers {exercises/05_06_exercises}
 \noindent {\bf Section 6.4} \vskip \baselineskip 
-\printanswers {exercises/03_04_exercises}
-\noindent {\bf Section 6.5} \vskip \baselineskip 
-\printanswers {exercises/03_05_exercises}
+\printanswers {exercises/05_05_exercises}
 \noindent {\Large \bf Chapter 7} \vskip \baselineskip 
 \noindent {\bf Section 7.1} \vskip \baselineskip 
 
-\printanswers {exercises/04_01_exercises}
+\printanswers {exercises/03_01_exercises}
 \noindent {\bf Section 7.2} \vskip \baselineskip 
-\printanswers {exercises/04_02_exercises}
+\printanswers {exercises/03_02_exercises}
 \noindent {\bf Section 7.3} \vskip \baselineskip 
+\printanswers {exercises/03_03_exercises}
+\noindent {\bf Section 7.4} \vskip \baselineskip 
+\printanswers {exercises/03_04_exercises}
+\noindent {\bf Section 7.5} \vskip \baselineskip 
+\printanswers {exercises/03_05_exercises}
+\noindent {\Large \bf Chapter 8} \vskip \baselineskip 
+\noindent {\bf Section 8.1} \vskip \baselineskip 
+
+\printanswers {exercises/04_01_exercises}
+\noindent {\bf Section 8.2} \vskip \baselineskip 
+\printanswers {exercises/04_02_exercises}
+\noindent {\bf Section 8.3} \vskip \baselineskip 
 \printanswers {exercises/04_03_exercises}
 \end {multicols}\normalsize 
