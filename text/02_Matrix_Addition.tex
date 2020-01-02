@@ -287,8 +287,6 @@ It seems like this should be a special matrix; after all, every entry is 0 and 0
 
 In fact, this is a special matrix. We define \tto, which we read as ``the zero matrix,'' to be the matrix of all zeros. We should be careful; this previous ``definition'' is a bit ambiguous, for we have not stated what size the zero matrix should be. Is $\bmx{cc}0&0\\0&0\\ \emx$ the zero matrix? How about $\bmx{cc} 0&0\emx$?
 
-\mnote{.3}{We use the bold face to distinguish the zero matrix, \tto, from the number zero, 0. }
-
 Let's not get bogged down in semantics. If we ever see \tto\ in an expression, we will usually know right away what size \tto\ should be; it will be the size that allows the expression to make sense. If \tta\ is a $3\times 5$ matrix, and we write $\tta + \tto$, we'll simply assume that \tto\ is also a $3\times 5$ matrix. If we are ever in doubt, we can add a subscript; for instance, $\tto_{2\times 7}$ is the $2\times7$ matrix of all zeros.
 
 Since the zero matrix is an important concept, we give it its own definition box.
@@ -301,6 +299,8 @@ Since the zero matrix is an important concept, we give it its own definition box
 When the dimensions of the zero matrix are clear from the context, the subscript is generally omitted.}
 
 \smallskip
+
+\mnote{.8}{We use the bold face to distinguish the zero matrix, \tto, from the number zero, 0. }
 
 %\enlargethispage{3\baselineskip}
 
@@ -346,7 +346,7 @@ The verification of the remaining properties in Theorem \ref{thm:addition_proper
 
 We began this section with the concept of matrix equality. Let's put our matrix addition properties to use and solve a matrix equation.\\
 
-\pagebreak
+%\pagebreak
 
 \example{ex_equal}{Solving a matrix equation}{
 Let 

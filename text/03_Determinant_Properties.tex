@@ -84,7 +84,7 @@ You can probably can see a trend. We'll finish out the steps without explaining 
 	&= 11700
 \end{align*}
 \vskip-\baselineskip
-}\pagebreak
+}\\
 
 We see that the final determinant is the product of the diagonal entries. This works for any triangular matrix (and since diagonal matrices are triangular, it works for diagonal matrices as well). This is an important enough idea that we'll put it into a box.
 
@@ -134,10 +134,8 @@ Finally, let \ttb\ be formed by the third row operation given; swap the two rows
 \[
 \ttb = \bmx{cc}3&4\\1&2\emx
 \]
-and that $\det(B) = 2$, which is $(-1)\cdot\det(A)$. \
-}
-
-\pagebreak
+and that $\det(B) = 2$, which is $(-1)\cdot\det(A)$.
+}\\
 
 We've seen in the above example that there seems to be a relationship between the determinants of matrices ``before and after'' being changed by elementary row operations. Certainly, one example isn't enough to base a theory on, and we have not proved anything yet. Regardless, the following theorem is true.
 
@@ -177,9 +175,7 @@ To compute $\det(B)$, notice that the rows of \tta\ were rearranged to form \ttb
 Notice that \ttc\ is formed from \tta\ by multiplying the third row by 7. Thus $\det(C) = 7\cdot\det(A) = 7$.\\
 
 It takes a little thought, but we can form \ttd\ from \tta\ by the operation $-3R_2+R_1\rightarrow R_1$. This type of elementary row operation does not change determinants, so $\det(D) = \det(A)$.
-} 
-
-\pagebreak
+}\\
 
 \example{ex_det_elem_row_ops_2}{Effect of elementary row operations on the determinant}{
 The matrix \ttb\ was formed from \tta\ using the following elementary row operations, though not necessarily in this order. Find $\det(A)$.\\
@@ -368,7 +364,7 @@ It seems as though
 
 \medskip
 
-\mnote{.8}{Seeing that expansion along the first row agrees with expansion along the first column can be a bit tricky to think out in your head. Try it with a 3$\times 3$ matrix \tta\ and see how it works. All the $2\times 2$ submatrices that are created in \ttat\ are the transpose of those found in \tta; this doesn't matter since it is easy to see that the determinant isn't affected by the transpose in a $2\times 2$ matrix.}
+\mnote{.65}{Seeing that expansion along the first row agrees with expansion along the first column can be a bit tricky to think out in your head. Try it with a 3$\times 3$ matrix \tta\ and see how it works. All the $2\times 2$ submatrices that are created in \ttat\ are the transpose of those found in \tta; this doesn't matter since it is easy to see that the determinant isn't affected by the transpose in a $2\times 2$ matrix.}
 
 We now state a few theorems that confirm our conjectures from the previous example. 
 
@@ -397,7 +393,7 @@ Let \tta\ and \ttb\ be $n\times n$ matrices and let $k$ be a scalar. The followi
 
 \smallskip
 
-\mnote{.35}{Proving that $\det(AB)=\det(A)\det(B)$ is most easily done using elementary matrices. (See Section \ref{sec:elementary_matrices}.) Recall that multiplying a matrix \textit{on the left} by an elementary matrix is the same as doing the corresponding row operation: if $A$ is any $3\times 3$ matrix, then $EA$ can be obtained from $A$ using the same row operation used to create $E$.
+\mnote{.75}{Proving that $\det(AB)=\det(A)\det(B)$ is most easily done using elementary matrices. (See Section \ref{sec:elementary_matrices}.) Recall that multiplying a matrix \textit{on the left} by an elementary matrix is the same as doing the corresponding row operation: if $A$ is any $3\times 3$ matrix, then $EA$ can be obtained from $A$ using the same row operation used to create $E$.
 
 Theorem \ref{thm:determinant_row_operations} then tells us that 
 \[

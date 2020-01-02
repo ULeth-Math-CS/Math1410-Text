@@ -26,7 +26,7 @@
 
 \pagestyle{fancy}
 \fancyhead{}
-%\fancyfoot{}
+\fancyfoot{}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ \ \ \ {#1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ \ \ \  #1}}
 \fancyhf{}         %Clears all header and footer fields, in preparation.
@@ -160,6 +160,7 @@
 %%%    \endwrapfigure%
 %%%}
 
+\counterwithin{figure}{section}
 
 \ifthenelse{\boolean{longpage}}%
 		{\newcommand{\mfigure}[5][]{%
@@ -273,8 +274,9 @@
 			\begin{minipage}{\marginparwidth}%
 				\centering%
 				\ifthenelse{\boolean{in_threeD}}{% in 3D
-	  		\includemedia[#1]{\includegraphics{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
-				{\myincludegraphics[#2]{#6}}%
+	  		\includemedia[#1]{\includegraphics[#2]{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
+				%{\includegraphics[width=150pt]{#6_3D\colornamesuffix}}%
+				{\myincludegraphics[#2]{#6_3D}}%
   			\captionsetup{type=figure}%
   			%#1%
 	  		\caption{#4}\label{#5}%
@@ -283,8 +285,9 @@
 			\begin{minipage}{\marginparwidth}%
 			  \centering%
   			\ifthenelse{\boolean{in_threeD}}{% in 3D
-	  		\includemedia[#1]{\includegraphics{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
-				{\myincludegraphics[#2]{#6}}%
+	  		\includemedia[#1]{\includegraphics[#2]{#6_3D\colornamesuffix}}{#6_3D.prc}}%now not in 3D
+				%{\includegraphics[width=150pt]{#6_3D\colornamesuffix}}%
+				{\myincludegraphics[#2]{#6_3D}}%
   			\captionsetup{type=figure}%
   			%#1%
 	  		\caption{#4}\label{#5}%

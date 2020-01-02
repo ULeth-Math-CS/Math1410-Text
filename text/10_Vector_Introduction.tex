@@ -55,7 +55,7 @@ in space, where $P=(x_1,y_1,z_1)$ and $Q=(x_2,y_2,z_2)$, the component form of $
 \]
 We practice using this notation in the following example.\\
 
-\enlargethispage{2\baselineskip}
+%\enlargethispage{2\baselineskip}
 
 \example{ex_vect1}{Using component form notation for vectors}{
 \begin{enumerate}
@@ -104,7 +104,7 @@ One can readily see from Figure \ref{fig:vect1}(a) that the $x$- and $y$-displac
 \vskip-\baselineskip
 }
 
-\pagebreak
+%\pagebreak
 
 Now that we have defined vectors, and have created a nice notation by which to describe them, we start considering how vectors interact with each other. That is, we define an \textit{algebra} on vectors. 
 %\clearpage
@@ -213,7 +213,7 @@ As we suspected, $2\vec v$ is twice as long as $\vec v$.
 \vskip-\baselineskip
 }
 
-\pagebreak
+%\pagebreak
 
 In Example \ref{ex_vect3} above, we saw that $\len{2\vec v} = 2\len{\vec v}$, which makes sense geometrically: $2\vec v = \vec v+\vec v$, and adding a vector to itself should produce a vector twice as long with the same direction. The following theorem tells us that this is true in general.
 
@@ -229,7 +229,7 @@ In particular, Theorem \ref{thm:vecscale} tells us that if $c>0$, then $\len{c\v
 \definition{def:parallel_vectors}{Parallel Vectors}
 {We say that a vector $\vec{w}$ is \sword{parallel} \index{parallel vectors}\index{vectors!parallel} to a vector $\vec{v}$ if there exists a scalar $c$ such that $\vec{w}=c\vec{v}$.}
 
-\mnote{.7}{To prove Theorem \ref{thm:vecscale}, let $\vec{v}=\la a,b\ra$ be any vector in $\R^2$ (the proof for $\R^3$ is similar), and let $c$ be any scalar. Then
+\mnote{.4}{To prove Theorem \ref{thm:vecscale}, let $\vec{v}=\la a,b\ra$ be any vector in $\R^2$ (the proof for $\R^3$ is similar), and let $c$ be any scalar. Then
 \begin{align*}
 \len{c\vec{v}}  & = \len{c\la a,b\ra}\\
 				& = \len{\la ca, cb\ra}\\
@@ -331,7 +331,7 @@ This equation illustrates the fact that a vector has both magnitude and directio
 \end{enumerate}
 }
 
-\mnote{.6}{\textbf{Note:} $\vec 0$ is directionless; because $\vnorm{0}=0$, there is no unit vector in the ``direction'' of $\vec 0$.  Note however that according to Definition \ref{def:parallel_vectors}, the zero vector is technically parallel to every other vector!
+\mnote{.3}{\textbf{Note:} $\vec 0$ is directionless; because $\vnorm{0}=0$, there is no unit vector in the ``direction'' of $\vec 0$.  Note however that according to Definition \ref{def:parallel_vectors}, the zero vector is technically parallel to every other vector!
 (See also the marginal note on page \pageref{note:crossp}.)\label{note:parallel} }
 
 If one graphed all unit vectors in $\mathbb{R}^2$ with the initial point at the origin, then the terminal points would all lie on the unit circle $x^2+y^2=1$. Based on what we know from trigonometry, we can then say that the component form of all unit vectors in $\mathbb{R}^2$ is $\la \cos\theta,\sin\theta\ra$ for some angle $\theta$.
@@ -353,11 +353,11 @@ A similar construction in $\mathbb{R}^3$ shows that the terminal points all lie 
 
 These formulas can come in handy in a variety of situations, especially the formula for unit vectors in the plane.\\
 
-\mnote{.35}{\textbf{Note:} the component form given in Key Idea \ref{idea:unit_vectors} for a unit vector in $\R^3$ is derived from the \href{https://en.wikipedia.org/wiki/Spherical_coordinate_system}{\underline{spherical coordinate system}} for $\R^3$.}
+\mnote{.75}{\textbf{Note:} the component form given in Key Idea \ref{idea:unit_vectors} for a unit vector in $\R^3$ is derived from the \href{https://en.wikipedia.org/wiki/Spherical_coordinate_system}{\underline{spherical coordinate system}} for $\R^3$.}
 
 \example{ex_vect6}{Finding Component Forces}{
 Consider a weight of 50lb hanging from two chains, as shown in Figure \ref{fig:vect6}. One chain makes an angle of $30^\circ$ with the vertical, and the other an angle of $45^\circ$. Find the force applied to each chain.
-\mfigure{.18}{A diagram of a weight hanging from 2 chains in Example \ref{ex_vect6}.}{fig:vect6}{figures/figvect6}}
+\mfigure{.5}{A diagram of a weight hanging from 2 chains in Example \ref{ex_vect6}.}{fig:vect6}{figures/figvect6}}
 {Knowing that gravity is pulling the 50lb weight straight down, we can create a vector $\vec F$ to represent this force. 
 \[
 \vec F = 50\la 0,-1\ra = \la 0,-50\ra.
@@ -374,7 +374,7 @@ As the weight is not moving, we know the sum of the forces is $\vec 0$. This giv
 & = \la 0,-50\ra + m_1\la \cos 120^\circ,\sin120^\circ\ra + m_2\la \cos 45^\circ,\sin45^\circ\ra 
 \end{align*}
 
-\mfigure{.8}{A diagram of the force vectors from Example \ref{ex_vect6}.}{fig:vect6b}{figures/figvect6b}
+\mfigure{.25}{A diagram of the force vectors from Example \ref{ex_vect6}.}{fig:vect6b}{figures/figvect6b}
 The sum of the entries in the first component is 0, and the sum of the entries in the second component is also 0. This leads us to the following two equations:
 \begin{align*}
 m_1\cos120^\circ + m_2\cos45^\circ &=0 \\
@@ -404,7 +404,7 @@ Unit vectors were very important in the previous calculation; they allowed us to
 \end{enumerate}
 }
 
-\pagebreak
+%\pagebreak
 
 \example{ex_vect7}{Using standard unit vectors}{
 \begin{enumerate}
@@ -431,13 +431,14 @@ These two examples demonstrate that converting between component form and the st
 
 \example{ex_vect8}{Finding Component Force}{
 A weight of 25lb is suspended from a chain of length 2ft while a wind pushes the weight to the right with constant force of 5lb as shown in Figure \ref{fig:vect8}. What angle will the chain make with the vertical as a result of the wind's pushing? How much higher will the weight be?
-\mfigure{.4}{A figure of a weight being pushed by the wind in Example \ref{ex_vect8}.}{fig:vect8}{figures/figvect8}
 }
 {The force of the wind is represented by the vector $\vec F_w = 5\vec i$. The force of gravity on the weight is represented by $\vec F_g = -25\vec j$. The direction and magnitude of the vector representing the force on the chain are both unknown. We represent this force with 
 \[
 \vec F_c = m\la \cos\varphi,\sin\varphi\ra = m\cos\varphi\, \vec i + m\sin\varphi\,\vec j
 \]
 for some magnitude $m$ and some angle with the horizontal $\varphi$. (Note: $\theta$ is the angle the chain makes with the \emph{vertical}; $\varphi$ is the angle with the \emph{horizontal}.)
+
+\mfigure{.4}{A figure of a weight being pushed by the wind in Example \ref{ex_vect8}.}{fig:vect8}{figures/figvect8}
 
 As the weight is at equilibrium, the sum of the forces is $\vec0$:
 \begin{align*}

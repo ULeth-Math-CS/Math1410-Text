@@ -63,30 +63,21 @@ There are two key points to notice about the product defined in Definition \ref{
 
 \medskip
 
-\example{ex_vector_multiplication}{Multiplying row and column vectors}{Let \[
+\example{ex_vector_multiplication}{Multiplying row and column vectors}{
+Let \[
 \vu = \bmx{ccc}1&2&3\emx,\ \vv = \bmx{cccc}2&0&1&-1\emx,\ \vx = \bmx{c}-2\\4\\3\emx,\ \vy = \bmx{c} 1\\2\\5\\0\emx.
 \]
 Find the following products. 
-
-%\enlargethispage{1\baselineskip}
-
-\begin{center}
-\begin{minipage}{100pt}
+\begin{multicols}{3}
 \begin{enumerate}
 	\item	\vu\vx
 	\item	\vv\vy
-\end{enumerate}
-\end{minipage}\begin{minipage}{100pt}
-\begin{enumerate}\addtocounter{enumi}{2}
 	\item	\vu\vy
 	\item	\vu\vv
-\end{enumerate}
-\end{minipage}\begin{minipage}{100pt}
-\begin{enumerate}\addtocounter{enumi}{4}
 	\item	\vx\vu
 \end{enumerate}
-\end{minipage}
-\end{center}}
+\end{multicols}
+}
 {\begin{enumerate}
 \item	$\vu\vx = \bmx{ccc}1&2&3\emx\bmx{c}-2\\4\\3\emx = 1(-2)+2(4)+3(3) = 15$
 \item	$\vv\vy = \bmx{cccc}2&0&1&-1\emx\bmx{c}1\\2\\5\\0\emx = 2(1)+0(2)+1(5)-1(0) = 7$
@@ -94,18 +85,14 @@ Find the following products.
 \item	\vu\vv\ is not defined; we only know how to multipy row vectors by column vectors. We haven't defined how to multiply two row vectors (in general, it can't be done).
 \item	The product \vx\vu\ \textit{is} defined, but we don't know how to do it yet. Right now, we only know how to multiply a row vector times a column vector; we don't know how to multiply a column vector times a row vector. (That's right: $\vu\vx \neq \vx\vu!$)
 \end{enumerate}
-\vskip -\topsep \vskip -\baselineskip}
-
-\medskip
+}\\
 
 Now that we understand how to multiply a row vector by a column vector, we are ready to define matrix multiplication. 
 
 \smallskip
 
 \definition{def:matrix_multiply}{Matrix Multiplication}{\index{matrix!multiplication}
-Let \tta\ be an $m\times r$ matrix, and let \ttb\ be an $r\times n$ matrix. The \sword{matrix product of \tta\ and \ttb}, denoted $\tta\cdot\ttb$, or simply \tta\ttb, is the $m\times n$ matrix \ttm\ whose entry in the $i^{\text{th}}$ row and $j^{\text{th}}$ column is the product of the $i^{\text{th}}$ row of \tta\ and the $j^{\text{th}}$ column of \ttb.}
-
-\smallskip
+Let \tta\ be an $m\times r$ matrix, and let \ttb\ be an $r\times n$ matrix. The \sword{matrix product of \tta\ and \ttb}, denoted $\tta\cdot\ttb$, or simply \tta\ttb, is the $m\times n$ matrix \ttm\ whose entry in the $i^{\text{th}}$ row and $j^{\text{th}}$ column is the product of the $i^{\text{th}}$ row of \tta\ and the $j^{\text{th}}$ column of \ttb.}\\
 
 It may help to illustrate it in this way. Let matrix \tta\ have rows $\vect{a_1}$, $\vect{a_2}$, $\cdots$, $\vect{a_m}$ and let \ttb\ have columns  $\vect{b_1}$, $\vect{b_2}$, $\cdots$, $\vect{b_n}$. Thus \tta\ looks like 
 \[
@@ -128,10 +115,12 @@ Of course, this will make much more sense when we see an example.
 
 \medskip
 
-\example{ex_matrix_multiply_1}{A more general matrix product}{Revisit the matrix product we saw at the beginning of this section; multiply 
+\example{ex_matrix_multiply_1}{A more general matrix product}{
+Revisit the matrix product we saw at the beginning of this section; multiply 
 \[
 \bmx{cc}1&2\\3&4\emx\bmx{ccc}1&-1&0\\2&2&-1\emx.
-\]}
+\]
+}
 {Let's call our first matrix \tta\ and the second \ttb. We should first check to see that we can actually perform this multiplication. Matrix \tta\ is $2\times 2$ and \ttb\ is $2\times 3$. The ``inner'' dimensions match up, so we can compute the product; the ``outer'' dimensions tell us that the product will be $2\times 3$. Let 
 \[
 \tta\ttb = \bmx{ccc}m_{11} & m_{12} & m_{13}\\m_{21} & m_{22} & m_{23}\emx.
@@ -168,15 +157,11 @@ m_{23} &= \bmx{cc}3&4\emx\bmx{c}0\\-1\emx = -4.
 Thus
 \[
 \tta\ttb = \bmx{cc}1&2\\3&4\emx\bmx{ccc}1&-1&0\\2&2&-1\emx = \bmx{ccc}5 & 3 & -2\\11 & 5 & -4\emx.
-\]\ }
+\]
+}\\
 
-\medskip
-
-%\enlargethispage{3\baselineskip}
-
-\medskip
-
-\example{ex_matrix_multiply_2}{Multiplying matrices}{Multiply 
+\example{ex_matrix_multiply_2}{Multiplying matrices}{
+Multiply 
 \[
 \bmx{cc} 1&-1\\5&2\\-2&3\emx\bmx{cccc}1&1&1&1\\2&6&7&9\emx.
 \]}
@@ -204,21 +189,18 @@ So far, we've computed this much of \tta\ttb:
 The final product is 
 \[
 \tta\ttb = \bmx{cccc}-1&-5&-6&-8\\ 9&17&19&23\\4&16&19&25\emx.
-\] \ }
+\]
+}\\
 
-\medskip
-
-\example{ex_matrix_multiply_3}{An undefined product}{Multiply, if possible, 
+\example{ex_matrix_multiply_3}{An undefined product}{
+Multiply, if possible, 
 \[
 \bmx{ccc}2&3&4\\9&8&7\emx\bmx{cc}3&6\\5&-1\emx.
 \]}
-{Again, we'll call the first matrix \tta\ and the second \ttb. Checking the dimensions of each matrix, we see that \tta\ is a $2\times 3$ matrix, whereas \ttb\ is a $2\times2$ matrix. The inner dimensions do not match, therefore this multiplication is not defined.}
+{Again, we'll call the first matrix \tta\ and the second \ttb. Checking the dimensions of each matrix, we see that \tta\ is a $2\times 3$ matrix, whereas \ttb\ is a $2\times2$ matrix. The inner dimensions do not match, therefore this multiplication is not defined.}\\
 
-\medskip
-
-%\enlargethispage{5\baselineskip}
-
-\example{ex_matrix_multiply_4}{A vector product revisited}{In Example \ref{ex_vector_multiplication}, we were told that the product \vx\vu\ was defined, where 
+\example{ex_matrix_multiply_4}{A vector product revisited}{
+In Example \ref{ex_vector_multiplication}, we were told that the product \vx\vu\ was defined, where 
 \[
 \vx =\bmx{c}-2\\4\\3\emx \quad \text{and} \quad \vu = \bmx{ccc}1&2&3\emx,
 \]
@@ -246,15 +228,16 @@ So far we have computed
 After performing all 9 multiplications, we find 
 \[
 \vx\vu = \bmx{ccc}-2&-4&-6\\ 4&8&12\\3&6&9\emx.
-\] \ \vskip -\baselineskip}
+\]
+\vskip -\baselineskip}\\
 
 \medskip
 
 In this last example, we saw a ``nonstandard'' multiplication (at least, it felt nonstandard). Studying the entries of this matrix, it seems that there are several different patterns that can be seen amongst the entries. (Remember that mathematicians like to look for patterns. Also remember that we often guess wrong at first; don't be scared and try to identify some patterns.)\\
 
-In Section \ref{sec:matrix_arithmetic_1}, we identified the zero matrix \tto\ that had a nice property in relation to matrix addition (i.e., $\tta+\tto = \tta$ for any matrix \tta). In the following example we'll identify a matrix that works well with multiplication as well as some multiplicative properties. For instance, we've learned how $1\cdot\tta = \tta$; is there a \textit{matrix} that acts like the number 1? That is, can we find a matrix $\ttx$ where $\ttx\cdot\tta=\tta$? (We made a guess in Section \ref{sec:matrix_arithmetic_1} that maybe a matrix of all 1s would work, but you can probably already see that this guess is doomed to failure.)
+In Section \ref{sec:matrix_arithmetic_1}, we identified the zero matrix \tto\ that had a nice property in relation to matrix addition (i.e., $\tta+\tto = \tta$ for any matrix \tta). In the following example we'll identify a matrix that works well with multiplication as well as some multiplicative properties. For instance, we've learned how $1\cdot\tta = \tta$; is there a \textit{matrix} that acts like the number 1? That is, can we find a matrix $\ttx$ where $\ttx\cdot\tta=\tta$? (We made a guess in Section \ref{sec:matrix_arithmetic_1} that maybe a matrix of all 1s would work, but you can probably already see that this guess is doomed to failure.)\\
 
-\pagebreak
+%\pagebreak
 
 %\enlargethispage{3\baselineskip}
 \example{ex_identity}{Computing matrix products}{Let 
@@ -264,32 +247,18 @@ In Section \ref{sec:matrix_arithmetic_1}, we identified the zero matrix \tto\ th
 \end{align*}
 Find the following products.
 
-\begin{center}\begin{minipage}{50pt}
+\begin{multicols}{4}
 \begin{enumerate}
 	\item	\tta\ttb
 	\item	\ttb\tta
-\end{enumerate}
-\end{minipage}
-\begin{minipage}{55pt}
-\begin{enumerate}\addtocounter{enumi}{2}
-		\item	$\tta\tto_{3\times4}$
-		\item	$\tta\tti$
-	
-\end{enumerate}
-\end{minipage}
-\begin{minipage}{50pt}
-\begin{enumerate}\addtocounter{enumi}{4}
+	\item	$\tta\tto_{3\times4}$
+	\item	$\tta\tti$
 	\item	\tti\tta
 	\item	$\tti^2$
-\end{enumerate}
-\end{minipage}
-\begin{minipage}{50pt}
-\begin{enumerate}\addtocounter{enumi}{6}
 	\item	\ttb\ttc
 	\item	$\ttb^2$
 \end{enumerate}
-\end{minipage}
-\end{center}
+\end{multicols}
 }
 {We will find each product, but we leave the details of each computation to the reader.
 
@@ -313,7 +282,7 @@ Find the following products.
 
 \item		$\ttb^2 = \ttb\ttb = \bmx{ccc}1&1&1\\1&1&1\\1&1&1\emx\bmx{ccc}1&1&1\\1&1&1\\1&1&1\emx=\bmx{ccc}3&3&3\\3&3&3\\3&3&3\emx$
 \end{enumerate}
-\ } 
+}\\ 
 
 \medskip
 
@@ -335,19 +304,14 @@ Matrix multiplication is turning out to be a very strange operation. We are very
 \tta = \bmx{cc}1&2\\3&4\emx,\quad \ttb = \bmx{cc}1&1\\1&-1\emx \quad \text{and} \quad \ttc=\bmx{cc}2&1\\1&2\emx.
 \]
 Find the following:
-\begin{center}\begin{minipage}{100pt}
+\begin{multicols}{2}
 \begin{enumerate}
 	\item	$\tta(\ttb+\ttc)$
 	\item	$\tta\ttb+\tta\ttc$
+	\item	$\tta(\ttb\ttc)$
+	\item	$(\tta\ttb)\ttc$
 \end{enumerate}
-\end{minipage}
-\begin{minipage}{100pt}
-\begin{enumerate}\addtocounter{enumi}{2}
-		\item	$\tta(\ttb\ttc)$
-		\item	$(\tta\ttb)\ttc$
-\end{enumerate}
-\end{minipage}
-\end{center}
+\end{multicols}
 }
 {We'll compute each of these without showing all the intermediate steps. Keep in mind order of operations: things that appear inside of parentheses are computed first.
 

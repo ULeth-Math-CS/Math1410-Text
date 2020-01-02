@@ -169,10 +169,8 @@ Of course, this works in general. For any $t$, we have
 \[
 \bmx{cc}1&4\\2&3\emx\left(t\bmx{c} 1\\1\emx\right) = t\left(\bmx{cc} 1&4\\2&3\emx\bmx{c}1\\1\emx\right) = t\left(5\bmx{c}1\\1\emx\right) = 5\left(t\bmx{c}1\\1\emx\right).
 \]
-\vskip-\baselineskip
-}
- 
-\pagebreak
+%\vskip-\baselineskip
+}\\
 
  %\enlargethispage\baselineskip %\eexset
 
@@ -199,7 +197,7 @@ Let \tta\ be an $n\times n$ matrix.
 \end{enumerate}
 }
 
-\medskip
+\pagebreak
 
 \example{ex_eigen1}{Computing eigenvalues and eigenvectors}{Find the eigenvalues of \tta, and for each eigenvalue, find an eigenvector where 
 \[
@@ -271,9 +269,9 @@ We should take a moment and check our work: is it true that $\tta\vx[1] = \lambd
 						=	\lambda_1\vx[1].
 \]
 Yes; it appears we have truly found an \el/\ev\ pair for the matrix $A$.
-} 
+}\\ 
 
-\pagebreak
+%\pagebreak
 
 %Let's try another example. 
 
@@ -304,7 +302,7 @@ Again, we can pick any nonzero value for $t$; a nice choice would eliminate the 
 \vx[1] = \bmx{c} -4\\5\emx.
 \]
 
-\enlargethispage{2\baselineskip}
+%\enlargethispage{2\baselineskip}
 
 Finding an \ev\ for $\lambda_2$:
 
@@ -331,9 +329,7 @@ and
 \[
 \text{\el\ } \lambda_2 = 1 \text{ with \ev\ } \vx[2] = \bmx{c}0\\1\emx.
 \]
-}
-
-\pagebreak
+}\\
 
 Notice that in both of our examples so far, we were able to completely factor the characteristic polynomial and obtain two distinct eigenvalues. For $2\times 2$ matrices, the characteristic polynomial will always be quadratic, and we know that finding roots of quadratic polynomials falls into three categories: those with two distinct roots, like in the examples above, those with one repeated root (for example, $x^2-2x+1=(x-1)^2$), and those with no real roots (for example, $x^2+1$). In the case of a repeated root, we will have only one eigenvalue. Will we have only one eigenvector, or could there be two? (We'll have more to say about this later.) What if there are no real roots? Then there are no (real) eigenvalues, so presumably there are no eigenvectors, either. What if we allow for complex roots? Let's look at some examples.
 
@@ -425,7 +421,7 @@ Setting $s=1$ and $t=0$ gives us the eigenvector $\ven{1}$, and setting $s=0$, $
 
 We mentioned above that another possibility is that the characteristic polynomial has no real zeros at all, in which case our matrix has no (real) eigenvalues. Let's see what we can say in such a situation.
 
-\pagebreak
+%\pagebreak
 
 \example{ex_complex_roots}{A matrix with complex eigenvalues}{
 Find the eigenvalues and eigenvectors of the matrix
@@ -487,7 +483,7 @@ In this context we're free to chose any complex value for $t$. Choosing $t=i$ gi
 
 \medskip
 
-Our last few examples provided interesting departures from the earlier ones where we had two distinct eigenvalues; they also provided examples where we were able to analyze the situation geometrically, by considering the linear transformations defined by the matrix. \ifthenelse{\boolean{colour}}{The reader is encouraged to consider the other examples of transformations given in Section \ref{sec:geom_3} and attempt a similar analysis.}{}
+Our last few examples provided interesting departures from the earlier ones where we had two distinct eigenvalues; they also provided examples where we were able to analyze the situation geometrically, by considering the linear transformations defined by the matrix. The reader is encouraged to consider the other examples of transformations given in Section \ref{sec:geom_3} and attempt a similar analysis.
 
 So far, our examples have involved $2\times 2$ matrices. Let's do an example with a $3\times 3$ matrix. The only real additional complication here is that our characteristic polynomial will now be a \textit{cubic} polynomial, so factoring it is going to take some more work.
 
@@ -498,8 +494,6 @@ So far, our examples have involved $2\times 2$ matrices. Let's do an example wit
 \tta = \bmx{ccc}-7 & -2 & 10\\ -3 & 2 & 3 \\ -6 & -2 & 9 \emx.
 \]}
 {We first compute the characteristic polynomial, set it equal to 0, then solve for \lda. A warning: this process is rather long. We'll use cofactor expansion along the first row; don't get bogged down with the arithmetic that comes from each step; just try to get the basic idea of what was done from step to step.
-
-
 
 \begin{align*}
 \det(\tta-\lambda\tti) &= \bdt{ccc} -7-\lda & -2 & 10 \\-3 & 2-\lda & 3\\ -6 & -2 & 9-\lda \edt \\
@@ -577,7 +571,8 @@ To summarize, we have the following \el/\ev\ pairs:
 \text{\el\ } \lda_2 & = 2 \text{ with \ev\ } \vx[2] = \bmx{c}2\\1\\2\emx\\
 \text{\el\ } \lda_3 = 3 \text{ with \ev\ } \vx[3] = \bmx{c}1\\0\\1\emx
 \end{align*}
-\vskip -\baselineskip}
+%\vskip -\baselineskip
+}
 %\\ %\eexset
 
 \medskip
@@ -598,6 +593,8 @@ To summarize, we have the following \el/\ev\ pairs:
 Notice that while the characteristic polynomial is cubic, we never actually saw a cubic; we never distributed the $(2-\lda)$ across the quadratic. Instead, we realized that this was a factor of the cubic, and just factored the remaining quadratic. (This makes this example quite a bit simpler than the previous example.)
 
 Our \el s are $\lda_1 = -2$, $\lda_2 = 2$ and $\lda_3 = 7$. We now find corresponding \ev s.\\
+
+\drawexampleline
 
 For $\lda_1 = -2$:\\
 
@@ -632,7 +629,7 @@ This looks funny, so we'll look remind ourselves how to solve this. The first tw
 \vx = x_1\bmx{c} 1\\0\\0\emx.
 \]
 
-\ifthenelse{\boolean{colour}}{\drawexampleline}{}
+%\ifthenelse{\boolean{colour}}{\drawexampleline}{}
 
 We can pick any nonzero value for $x_1$; an easy choice is $x_1 = 1$ and choose $\vx[2]=\bmx{c} 1\\0\\0\emx$ as our \ev.\\
 
@@ -640,7 +637,7 @@ For $\lda_3 = 7$:\\
 
 We need to solve the equation $(\tta - 7\tti)\vx = \zero$. To do this, we form the appropriate augmented matrix and put it into \rref.
 
-\ifthenelse{\boolean{colour}}{}{\enlargethispage{\baselineskip}}
+%\ifthenelse{\boolean{colour}}{}{\enlargethispage{\baselineskip}}
 \[
 \bmx{cccc} -5&-1&1&0\\ 0&-6&6&0 \\ 0&3&-3&0  \emx \quad \overrightarrow{\text{rref}} \quad \bmx{cccc} 1&0&0&0\\0&1&-1&0\\0&0&0&0\emx
 \]
@@ -661,7 +658,7 @@ To summarize, we have the following \el/\ev\ pairs:
 \end{align*}
 }
 
-\ifthenelse{\boolean{colour}}{\medskip}{\pagebreak}
+%\ifthenelse{\boolean{colour}}{\medskip}{\pagebreak}
 
 In this section we have learned about a new concept: given a matrix \tta\ we can find certain values \lda\ and vectors \vx\ where $\tta\vx =\lda\vx$. In the next section we will continue to the pattern we have established in this text: after learning a new concept, we see how it interacts with other concepts we know about. That is, we'll look for connections between \el s and \ev s and things like the inverse, determinants, the trace, the transpose, etc.
 

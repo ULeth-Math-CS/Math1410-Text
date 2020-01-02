@@ -28,32 +28,27 @@
 \ifthenelse{\boolean{xetex}}{\renewcommand{\C}{\mathbb{C}}}{\newcommand{\C}{\mathbb{C}}}
 \newcommand{\R}{\mathbb{R}}
 
-\ifthenelse{\boolean{xetex}}%
-	{\sffamily
+%\ifthenelse{\boolean{xetex}}%
+%	{\sffamily
 	%%\usepackage{fontspec}
-	\usepackage{mathspec}
-	\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
-	\setsansfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
-	\setmathsfont(Greek){[cmmi10]}}
-	{\usepackage[sfdefault,lf]{carlito}
+%	\usepackage{mathspec}
+%	\setallmainfonts[Mapping=tex-text]{Calibri}
+%	\setmainfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+%	\setsansfont[Mapping=tex-text,Ligatures=NoCommon]{Calibri}
+%	\setmathsfont(Greek){[cmmi10]}}
+%	{\usepackage[sfdefault,lf]{carlito}
 %% The 'lf' option for lining figures
 %% The 'sfdefault' option to make the base font sans serif
 %\usepackage[T1]{fontenc}
-\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
-	
-	\ifthenelse{\boolean{luatex}}%
-	{\sffamily
-	\usepackage{fontspec}
-	\usepackage{unicode-math}
-	%\usepackage{mathspec}
-	%\setallmainfonts[Mapping=tex-text]{Calibri}
-	\setmainfont{Calibri}
-	%\setsansfont[Mapping=tex-text]{Calibri}
-	\setmathfont[range=\mathup]{Calibri}
-	\setmathfont[range=\mathit]{Calibri Italic}
-	}
-	{}
+%\renewcommand*\oldstylenums[1]{\carlitoOsF #1}}
+
+\usepackage[sfdefault,lf]{carlito}
+%\usepackage{mathspec}
+%% The 'lf' option for lining figures
+%% The 'sfdefault' option to make the base font sans serif
+%\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{\carlitoOsF #1}	
+
 \DeclareMathOperator{\tr}{tr}
 
 \makeindex
